@@ -1,11 +1,26 @@
 package edofro.tutorialomatic
 
-import org.freeplane.core.ui.components.UITools as ui
-import org.freeplane.core.util.MenuUtils        as menuUtils
+import org.freeplane.core.ui.components.UITools         as ui
+import org.freeplane.core.util.MenuUtils                as menuUtils
+import org.freeplane.core.util.TextUtils                as textUtils
+import org.freeplane.core.util.HtmlUtils                as htmlUtils
+import org.freeplane.plugin.script.proxy.ScriptUtils
 
 class ToM_actions{
+    // region: definitions
     
-    // ----------------------- execute actions ----------------------
+    static final c = ScriptUtils.c()
+    static final name = 'tutorialOMatic'
+    static final actionInstruction1 = "addons.${name}.ActionInstruction1"
+    static final actionInstruction2 = "addons.${name}.ActionInstruction2"
+    
+    
+    // end: definitions
+    
+    
+    // ----------------- Methods -------------------------------------
+    
+    // region: ------ execute actions ----------------------
     
     def static execute(String accion){
         def acciones =[] + accion
@@ -16,11 +31,13 @@ class ToM_actions{
         menuUtils.executeMenuItems(acciones)
     }
 
-    // ---------------- getting label / keyStroke / toolTipText from menuEntry -------------------
+    // end:
+    
+    // region: ----- getting label / keyStroke / toolTipText from menuEntry -------------------
 
     def static getKeyStroke(myMenuEntry){
         def kS = myMenuEntry.keyStroke
-        return kS?menuUtils.formatKeyStroke(kS):null
+        return kS?menuUtils.formatKeyStroke(kS).replace('+',' + '):null
     }
 
     def static getLabel(mME){
@@ -31,19 +48,27 @@ class ToM_actions{
         mME.toolTipText
     }
 
-    // ------------- obtener texto de acción ----------------------------
+    // end:
+    
+    // region: ----- getting instructions for action ----------------------------
 
     def static getActionInstructions(accion){
-        def miPath = getMenuEntryPath(accion)
-        def menuPath = miPath[1..-2]*.label.join("' > '")
+        def miPath    = getMenuEntryPath(accion)
+        def menuPath  = miPath[1..-2]*.label.join("'>'")
         def keyStroke = getKeyStroke(miPath[-1])
-        def label = getLabel(miPath[-1])
-        def instr1 = "In submenu \n   '${menuPath}'\nclick on \n   '${label}'"
-        def instr2 = keyStroke?"\n\nYou can also use de keyboard shortcut '${keyStroke}' for this command":""
-        return instr1 + instr2
-    }    
+        def label     = getLabel(miPath[-1])
+        def instr1    = textUtils.format(actionInstruction1, apos(menuPath), apos(label))
+        def instr2    = keyStroke?textUtils.format(actionInstruction2, apos(keyStroke)):""
+        return htmlUtils.join(instr1,"", instr2).replace('\n','')
+    }
     
-    // ----- getting actions from nodes ----------------------
+    def static apos(String texto){
+        return "\'" + texto + "\'"
+    }
+    
+    // end:
+    
+    // region: ----- getting actions from nodes ----------------------
     def static action(n){
         return (n.link?.uri?.scheme == 'menuitem')?n.link.uri.schemeSpecificPart.drop(1):null
     }
@@ -52,7 +77,9 @@ class ToM_actions{
         return (n.link?.uri?.scheme == 'menuitem')
     }
     
-    // --- getting MenuEntryTree -------------------
+    // end:
+    
+    // region: ----- getting MenuEntryTree -------------------
     
     def static getMenuEntryPath(miAccion){
         return getMenuEntryPath(getMenuEntryTree(), miAccion)
@@ -96,7 +123,9 @@ class ToM_actions{
         return null
     }
     
-    // ------------------- displaying menu --------------------
+    // end:
+    
+    // region: ----- displaying submenus --------------------
     
     def static openMenus(accion, timeLapse){
         timeLapse = timeLapse<25?25:timeLapse>3000?3000:timeLapse
@@ -144,5 +173,32 @@ class ToM_actions{
         return componentes
     }
     
+    // end:
+    
+    // region: ----- working with nodes ---------------------
+    
+    def static simulateTextInputInNode(nodo, texto, timeLapse, step){  //TODO: find a way that doesn't fire listener until the end
+        def timer = new Timer()
+        c.select(nodo)              //TODO: what if nodo is not visible?
+        for(def i = 0 ; i <= texto.size() + step; i += step){
+            def subTexto = texto.take(i)
+            timer.runAfter(i * timeLapse) {
+                nodo.text = subTexto
+            }
+        }
+        timer.runAfter((texto.size()/step * timeLapse) as int) {
+            c.select(nodo)
+        }
+    }
+    
+    // end:
+    
+    // region: 
+    
+    // end:
+    
+    // region: 
+    
+    // end:
     
 }

@@ -329,8 +329,10 @@
 </html>
 </richcontent>
 <node TEXT="en" ID="ID_1998059292">
-<attribute_layout NAME_WIDTH="84 pt" VALUE_WIDTH="85.5 pt"/>
+<attribute_layout NAME_WIDTH="162 pt" VALUE_WIDTH="281.24999 pt"/>
 <attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
+<attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;In submenu  &lt;b&gt;{0}&lt;/b&gt; &lt;br&gt;click on  &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
+<attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;You can also use de keyboard shortcut &lt;b&gt;{0}&lt;/b&gt; for this command&lt;/html&gt;"/>
 </node>
 </node>
 <node TEXT="deinstall" POSITION="left" ID="ID_378917294">
