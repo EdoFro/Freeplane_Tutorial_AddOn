@@ -1,6 +1,6 @@
 <map version="freeplane 1.9.8">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Tutorial-o-Matic" FOLDED="false" ID="ID_696401721" LINK="https://github.com/EdoFro/Freeplane_Tutorial-o-Matic" BACKGROUND_COLOR="#97c7dc">
+<node TEXT="Tutorial-o-Matic" FOLDED="false" ID="ID_696401721" CREATED="1632150064080" MODIFIED="1632151614538" LINK="https://github.com/EdoFro/Freeplane_Tutorial-o-Matic" BACKGROUND_COLOR="#97c7dc">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <attribute_layout NAME_WIDTH="111.75 pt" VALUE_WIDTH="165.75 pt"/>
 <attribute NAME="name" VALUE="tutorialOMatic"/>
@@ -130,7 +130,7 @@
 </map_styles>
 </hook>
 <hook NAME="AutomaticEdgeColor" COUNTER="13" RULE="ON_BRANCH_CREATION"/>
-<node TEXT="description" POSITION="left" ID="ID_1678998363">
+<node TEXT="description" POSITION="left" ID="ID_1678998363" CREATED="1632150064153" MODIFIED="1632151614580">
 <edge COLOR="#ff0000"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -150,9 +150,9 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="Tutorial-o-Matic for Freeplane!!&#xa;Tutorial-o-Matic is an AddOn for Freeplane that gives the user the possibility to create his/her own tutorials." ID="ID_1642042079"/>
+<node TEXT="Tutorial-o-Matic for Freeplane!!&#xa;Tutorial-o-Matic is an AddOn for Freeplane that gives the user the possibility to create his/her own tutorials." ID="ID_1642042079" CREATED="1632150064153" MODIFIED="1632150064153"/>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_461119253">
+<node TEXT="changes" POSITION="left" ID="ID_461119253" CREATED="1632150064153" MODIFIED="1632151614582">
 <edge COLOR="#0000ff"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -167,7 +167,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795">
+<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795" CREATED="1632150064154" MODIFIED="1632151614583">
 <edge COLOR="#00ff00"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -187,7 +187,7 @@
   </body>
 </html>
 </richcontent>
-<node ID="ID_444630498"><richcontent TYPE="NODE">
+<node ID="ID_444630498" CREATED="1632150064156" MODIFIED="1632150064156"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -262,7 +262,7 @@
 </richcontent>
 </node>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_1967714695">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_1967714695" CREATED="1632150064157" MODIFIED="1632151614586">
 <edge COLOR="#ff00ff"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -280,7 +280,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_1398497950">
+<node TEXT="default.properties" POSITION="left" ID="ID_1398497950" CREATED="1632150064157" MODIFIED="1632151614588">
 <edge COLOR="#00ffff"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -303,7 +303,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_546877695">
+<node TEXT="translations" POSITION="left" ID="ID_546877695" CREATED="1632150064157" MODIFIED="1632151614590">
 <edge COLOR="#7c0000"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -328,14 +328,14 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="en" ID="ID_1998059292">
+<node TEXT="en" ID="ID_1998059292" CREATED="1632150064157" MODIFIED="1632150064157">
 <attribute_layout NAME_WIDTH="162 pt" VALUE_WIDTH="281.24999 pt"/>
 <attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
 <attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;In submenu  &lt;b&gt;{0}&lt;/b&gt; &lt;br&gt;click on  &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
 <attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;You can also use de keyboard shortcut &lt;b&gt;{0}&lt;/b&gt; for this command&lt;/html&gt;"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_378917294">
+<node TEXT="deinstall" POSITION="left" ID="ID_378917294" CREATED="1632150064157" MODIFIED="1632151614592">
 <edge COLOR="#00007c"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -352,8 +352,10 @@
 <attribute_layout NAME_WIDTH="42.75 pt" VALUE_WIDTH="207.74999 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/Tutorial-o-Matic.jar"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/markedj-1.0.16.jar"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/jsoup-1.10.2.jar"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1037882722">
+<node TEXT="scripts" POSITION="right" ID="ID_1037882722" CREATED="1632150064158" MODIFIED="1632151614598">
 <edge COLOR="#007c00"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -473,7 +475,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_1814812956">
+<node TEXT="lib" POSITION="right" ID="ID_1814812956" CREATED="1632150064158" MODIFIED="1632151614659">
 <edge COLOR="#7c007c"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -511,9 +513,11 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="Tutorial-o-Matic.jar" ID="ID_1864463328"/>
+<node TEXT="Tutorial-o-Matic.jar" ID="ID_1864463328" CREATED="1632150064158" MODIFIED="1632150064158"/>
+<node TEXT="markedj-1.0.16.jar" ID="ID_1060333872" CREATED="1632150064158" MODIFIED="1632150064158"/>
+<node TEXT="jsoup-1.10.2.jar" ID="ID_1151792763" CREATED="1632150064158" MODIFIED="1632150064158"/>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_1623122610">
+<node TEXT="zips" POSITION="right" ID="ID_1623122610" CREATED="1632150064158" MODIFIED="1632151614672">
 <edge COLOR="#007c7c"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -551,11 +555,11 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="doc" ID="ID_281158802"/>
-<node TEXT="icons" ID="ID_211861022"/>
-<node TEXT="templates" ID="ID_553385296"/>
+<node TEXT="doc" ID="ID_281158802" CREATED="1632150064158" MODIFIED="1632150064158"/>
+<node TEXT="icons" ID="ID_211861022" CREATED="1632150064158" MODIFIED="1632150064158"/>
+<node TEXT="templates" ID="ID_553385296" CREATED="1632150064158" MODIFIED="1632150064158"/>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_1856886559">
+<node TEXT="images" POSITION="right" ID="ID_1856886559" CREATED="1632150064158" MODIFIED="1632151614689">
 <edge COLOR="#7c7c00"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -590,12 +594,12 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="DevTools - MoM" POSITION="right" ID="ID_989188638">
+<node TEXT="DevTools - MoM" POSITION="right" ID="ID_989188638" CREATED="1632150064159" MODIFIED="1632150064159">
 <edge COLOR="#ff0000"/>
-<node TEXT="Build add-on" ID="ID_1016684737" LINK="menuitem:_addons.devtools.checkAddOn_on_single_node">
+<node TEXT="Build add-on" ID="ID_1016684737" CREATED="1632150064159" MODIFIED="1632150064159" LINK="menuitem:_addons.devtools.checkAddOn_on_single_node">
 <icon BUILTIN="emoji-1F527"/>
 </node>
-<node TEXT="Package add-on for publication" ID="ID_806418866" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node">
+<node TEXT="Package add-on for publication" ID="ID_806418866" CREATED="1632150064159" MODIFIED="1632150064159" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node">
 <icon BUILTIN="emoji-1F5DC"/>
 </node>
 </node>
