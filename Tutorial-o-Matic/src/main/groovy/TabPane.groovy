@@ -6,6 +6,7 @@ import org.freeplane.core.util.MenuUtils        as menuUtils
 class TabPane{
     def static tabPane = ui.freeplaneTabbedPanel
 
+
     def static removeTab(String tabName){
         def index   = tabPane.indexOfTab(tabName)
         //eliminar
@@ -32,5 +33,22 @@ class TabPane{
         tabPane.addTab(tabName, componente)
     }
     
+    def static hasTab(String tabName){
+        def index = tabPane.indexOfTab(tabName)
+        return ( index >= 0 )
+    }
     
+    def static getTab(String tabName){
+        def index = tabPane.indexOfTab(tabName)
+        if (index>=0) {
+            return tabPane.getComponentAt(index)
+        } else {
+            return null
+        }
+    }
+    
+    def static repaint(){
+        tabPane.repaint()
+    }
+
 }
