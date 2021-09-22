@@ -9,12 +9,12 @@ import java.awt.Font
 import java.awt.Insets
 import java.awt.GridBagConstraints
 import java.awt.Dimension
-//import java.awt.* //Insets
 import java.awt.GridBagLayout
 
 // import javax.swing.*
 import javax.swing.border.EmptyBorder
-import javax.swing.border.LineBorder;
+import javax.swing.border.LineBorder
+import javax.swing.border.CompoundBorder
 
 import groovy.swing.SwingBuilder
 
@@ -25,9 +25,26 @@ import io.github.gitbucket.markedj.Marked
 
 class ToM_ui{
 
-    static final myPaneName   = 'PanelDeContenido'
-    static SwingBuilder swing = new SwingBuilder()
+    static final int minContentPaneWidth  = 408
+    static final int maxContentPaneHeigth = 50000
+    static final String myPaneName        = 'PanelDeContenido'
 
+    static SwingBuilder swing      = new SwingBuilder()
+
+    // info: https://docs.oracle.com/javase/7/docs/api/java/awt/GridBagConstraints.html
+    static GridBagConstraints GBC = new GridBagConstraints(
+        gridx      : 0,                               //  0 -> allways first cell in a row
+        gridy      : GridBagConstraints.RELATIVE,     //  Relative -> The value RELATIVE specifies that the component be placed just below the component that was added to the container just before this component was added.
+        gridwidth  : 1,                               //  Specifies the number of cells in a row for the component's display area.
+        gridheight : 1,                               //  Specifies the number of cells in a column for the component's display area.
+        weightx    : 1,                               //  Specifies how to distribute extra horizontal space.
+        weighty    : 1,                               //  Specifies how to distribute extra vertical space.
+        anchor     : GridBagConstraints.PAGE_START,   //  This field is used when the component is smaller than its display area. It determines where, within the display area, to place the component.
+        fill       : GridBagConstraints.HORIZONTAL,   //  This field is used when the component's display area is larger than the component's requested size. It determines whether to resize the component, and if so, how.
+        insets     : new Insets(5,2,5,2),             //  This field specifies the external padding of the component, the minimum amount of space between the component and the edges of its display area.
+        ipadx      : 0,                               //  This field specifies the internal padding of the component, how much space to add to the minimum width of the component. The width of the component is at least its minimum width plus ipadx pixels.
+        ipady      : 0                                //  This field specifies the internal padding, that is, how much space to add to the minimum height of the component. The height of the component is at least its minimum height plus ipady pixels.
+    )
 
     def static showTextMessage(msg, lapseTime){
         def win = swing.dialog(
@@ -54,20 +71,6 @@ class ToM_ui{
         }
         win.setVisible( true )
     }
-    
-    def static getContainerGBC(){
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = GridBagConstraints.RELATIVE ;
-        gbc.weighty = 1;
-        gbc.weightx = 1;  //  <----------------
-        gbc.fill = GridBagConstraints.HORIZONTAL; //  <----------------
-        gbc.anchor = GridBagConstraints.PAGE_START // FIRST_LINE_START // PAGE_START
-        //gbc.ipadx = 50
-        //gbc.ipady = 50
-        gbc.insets = new Insets(10,2,0,2)
-        return gbc
-    }    
 
     def static getHtmlFromNote(nodo){
         def noteType = nodo.noteContentType
@@ -96,29 +99,40 @@ class ToM_ui{
             contentType : "text/html",
             text        : html,
             //margin      : new Insets(30,10,30,10),
-            border      : new EmptyBorder(6, 10, 6, 10), //new LineBorder(Color.black, 1),
-            //preferredSize: new Dimension(408, 500),
+            //border      : new EmptyBorder(6, 10, 6, 10), //new LineBorder(Color.black, 1),
+            border      : new CompoundBorder(new LineBorder(Color.gray, 1),new EmptyBorder(5, 10, 5, 10))
+            //preferredSize: new Dimension(minContentPaneWidth, 500),
             //lineWrap    : true
         )
     }
 
-    def static resizeContentPanel(com, H){
-        com.parent.preferredSize = new Dimension(408, H)
+    def static resizeContentPanel(comp, height){
+        comp.parent.preferredSize = new Dimension(minContentPaneWidth, height)
     }
 
-    def static getTabContentPane(tabName,gbCons){
+
+    def static adjustHeight(comp){
+        TabPane.repaint()
+        def timer = new Timer()
+        timer.runAfter(1000) {
+            resizeContentPanel(comp, comp.height + 200)
+            TabPane.repaint()
+        }
+    }
+
+    def static getTabContentPane(tabName){
         def contentPane
         if( !TabPane.hasTab(tabName)) {
             contentPane = swing.panel(
                     name: myPaneName,
                     layout: new GridBagLayout(),
-                    background: Color.gray
+                    // background: Color.gray
                 ){}
             def panel =  swing.panel(
                     layout: new GridBagLayout(),
-                    preferredSize: new Dimension(408, 50000),
+                    preferredSize: new Dimension(minContentPaneWidth, maxContentPaneHeigth),
                 ){}
-            panel.add(contentPane,gbCons)
+            panel.add(contentPane,GBC)
             def sp = swing.scrollPane(){}
             sp.viewport.add(panel)
             TabPane.addTab(tabName, sp)
@@ -126,6 +140,60 @@ class ToM_ui{
             contentPane = TabPane.getTab(tabName)?.viewport.components[0].components.find{it.name == myPaneName}
         }
         return contentPane
+    }
+
+    def static getContentPaneFromMyTab(myTabName, doClear){
+        def cPane =  ToM_ui.getTabContentPane(myTabName)
+        if(doClear) cPane.removeAll() //eliminar contenido existente en el panel
+        TabPane.showTab(myTabName)
+        ToM_ui.resizeContentPanel(cPane,maxContentPaneHeigth)
+        return cPane
+    }
+
+// genera panel con botón
+    def static getButtonPanel(htmlMsg, buttonLabel, buttonToolTip, buttonAction, boolean isToggleButton = false){
+        def panel = swing.panel(
+            border      : new LineBorder(Color.gray, 1)
+        ) {
+              borderLayout()
+              editorPane(
+                    editable    : false,
+                    contentType : "text/html",
+                    text        : htmlMsg,
+                    margin      : new Insets(30,10,30,10),
+                    border      : new EmptyBorder(5, 10, 5, 10),  // <------- éste
+                    //border: new CompoundBorder(new LineBorder(Color.green, 1),new EmptyBorder(5, 10, 5, 10)),  // éste es de prueba poder ver el borde
+                    constraints : CENTER,
+              )
+              vbox(constraints:SOUTH) {
+                    panel(
+                           // border      : new LineBorder(Color.black, 1),
+                            border      : new EmptyBorder(5, 10, 5, 10),  // <------- éste
+                            //border: new CompoundBorder(new LineBorder(Color.red, 1),new EmptyBorder(5, 10, 5, 10))  // éste es de prueba poder ver el borde
+                            //insets      : new Insets(30,10,30,10),
+                        ) {
+                            borderLayout()
+                            if (isToggleButton){
+                                toggleButton(
+                                    label       : buttonLabel,
+                                    constraints : EAST,
+                                    margin      : new Insets(10,15,10,15),
+                                    toolTipText : buttonToolTip,
+                                    actionPerformed : buttonAction,
+                                )
+                            } else {
+                                button(
+                                    label       : buttonLabel,
+                                    constraints : EAST,
+                                    margin      : new Insets(10,15,10,15),
+                                    toolTipText : buttonToolTip,
+                                    actionPerformed : buttonAction,
+                                )
+                            }
+                        }
+              }
+        }
+        return panel
     }
 
 }
