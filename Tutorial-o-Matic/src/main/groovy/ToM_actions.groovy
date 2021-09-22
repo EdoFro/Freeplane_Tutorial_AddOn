@@ -54,7 +54,7 @@ class ToM_actions{
 
     def static getActionInstructions(accion){
         def miPath    = getMenuEntryPath(accion)
-        def menuPath  = miPath[1..-2]*.label.join("'>'")
+        def menuPath  = miPath[1..-2]*.label.join("'->'")
         def keyStroke = getKeyStroke(miPath[-1])
         def label     = getLabel(miPath[-1])
         def instr1    = textUtils.format(actionInstruction1, apos(menuPath), apos(label))
