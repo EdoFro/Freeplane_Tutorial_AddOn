@@ -1,5 +1,7 @@
 package edofro.tutorialomatic
 
+//import edofro.tutorialomatic.ToM_ui
+
 import org.freeplane.core.ui.components.UITools         as ui
 import org.freeplane.core.util.MenuUtils                as menuUtils
 import org.freeplane.core.util.TextUtils                as textUtils
@@ -13,6 +15,10 @@ class ToM_actions{
     static final name = 'tutorialOMatic'
     static final actionInstruction1 = "addons.${name}.ActionInstruction1"
     static final actionInstruction2 = "addons.${name}.ActionInstruction2"
+    static final enum ex{
+        muted, showHotKeys, showMenu
+    }
+    static final int pausa = 400
     
     
     // end: definitions
@@ -30,6 +36,31 @@ class ToM_actions{
     def static execute(java.util.ArrayList acciones){
         menuUtils.executeMenuItems(acciones)
     }
+    
+    def static executeAction(infoAccion , how){
+        switch(how){
+            case ex.muted       :
+                execute(infoAccion.action)
+                break
+            case ex.showHotKeys :
+                //looks if it has defined hotKeys
+                if(infoAccion.keyStroke){
+                    ToM_ui.showTextMessage("${infoAccion.keyStroke} : ${infoAccion.label}".toString(),3000)
+                    execute(infoAccion.action)
+                    break // break is here, because if the action has not defined Hotkeys then it should show the menu way
+                }
+            case ex.showMenu    :
+                closeMenus(infoAccion.action)
+                openMenus(infoAccion.action, pausa)
+                def timer = new Timer()
+                def espera = (infoAccion.path.size()*2 + 1)*pausa
+                timer.runAfter(espera){
+                    execute(infoAccion.action)
+                    closeMenus(infoAccion.action)
+                }
+                break
+        }
+    }    
 
     // end:
     
@@ -47,20 +78,45 @@ class ToM_actions{
     def static getToolTip(mME){
         mME.toolTipText
     }
+    
+    def static getMenuPath(path){
+        path[1..-2]*.label.join("'->'")
+    }
 
     // end:
     
     // region: ----- getting instructions for action ----------------------------
-
-    def static getActionInstructions(accion){
-        def miPath    = getMenuEntryPath(accion)
-        def menuPath  = miPath[1..-2]*.label.join("'->'")
-        def keyStroke = getKeyStroke(miPath[-1])
-        def label     = getLabel(miPath[-1])
-        def instr1    = textUtils.format(actionInstruction1, apos(menuPath), apos(label))
-        def instr2    = keyStroke?textUtils.format(actionInstruction2, apos(keyStroke)):""
-        return htmlUtils.join(instr1,"", instr2).replace('\n','')
+    
+    def static getActionInfoMap(org.freeplane.plugin.script.proxy.NodeProxy nodo){
+        def accion = action(nodo)
+        getActionInfoMap(accion)
     }
+
+    def static getActionInfoMap(String accion){
+        def miPath    = getMenuEntryPath(accion)
+        Map myAction = [:]
+        myAction 
+                 << [ action     : accion                        ]                 
+                 << [ path       : miPath                        ]
+                 << [ keyStroke  : getKeyStroke(miPath[-1])      ]
+                 << [ label      : getLabel(miPath[-1])          ]
+                 << [ menuPath   : getMenuPath(miPath)           ]
+                 << [ toolTip    : getToolTip(miPath[-1])        ]
+        def instr1    = textUtils.format(actionInstruction1, apos(myAction.menuPath), apos(myAction.label))
+        def instr2    = myAction.keyStroke?textUtils.format(actionInstruction2, apos(myAction.keyStroke)):""
+        myAction << [ instructions : instr2?htmlUtils.join(instr1,"", instr2).replace('\n',''):instr1 ]
+        return myAction
+    }    
+
+    // def static getActionInstructions(accion){
+        // def miPath    = getMenuEntryPath(accion)
+        // def menuPath  = getMenuPath(miPath)
+        // def keyStroke = getKeyStroke(miPath[-1])
+        // def label     = getLabel(miPath[-1])
+        // def instr1    = textUtils.format(actionInstruction1, apos(menuPath), apos(label))
+        // def instr2    = keyStroke?textUtils.format(actionInstruction2, apos(keyStroke)):""
+        // return htmlUtils.join(instr1,"", instr2).replace('\n','')
+    // }
     
     def static apos(String texto){
         return "\'" + texto + "\'"
@@ -141,7 +197,7 @@ class ToM_actions{
                     subMenu = subMenu.menuComponents.find{it.hasProperty('text') && it.text == menuItem}
                 }
                 sleep(timeLapse)
-                subMenu.armed = true
+                subMenu?.armed = true
             }
         }
     }
