@@ -108,16 +108,6 @@ class ToM_actions{
         return myAction
     }    
 
-    // def static getActionInstructions(accion){
-        // def miPath    = getMenuEntryPath(accion)
-        // def menuPath  = getMenuPath(miPath)
-        // def keyStroke = getKeyStroke(miPath[-1])
-        // def label     = getLabel(miPath[-1])
-        // def instr1    = textUtils.format(actionInstruction1, apos(menuPath), apos(label))
-        // def instr2    = keyStroke?textUtils.format(actionInstruction2, apos(keyStroke)):""
-        // return htmlUtils.join(instr1,"", instr2).replace('\n','')
-    // }
-    
     def static apos(String texto){
         return "\'" + texto + "\'"
     }
