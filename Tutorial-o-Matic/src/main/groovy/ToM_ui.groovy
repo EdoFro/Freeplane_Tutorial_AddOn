@@ -15,6 +15,7 @@ import java.awt.GridBagLayout
 import javax.swing.border.EmptyBorder
 import javax.swing.border.LineBorder
 import javax.swing.border.CompoundBorder
+import javax.swing.SwingUtilities as SU
 
 import groovy.swing.SwingBuilder
 
@@ -27,7 +28,8 @@ class ToM_ui{
 
     static final int minContentPaneWidth  = 408
     static final int maxContentPaneHeigth = 50000
-    static final String myPaneName        = 'PanelDeContenido'
+    static final String myPaneName        = 'myContentPanel'
+    static final String myButtonPanelName = 'aButtonPane'
 
     static SwingBuilder swing      = new SwingBuilder()
 
@@ -120,7 +122,15 @@ class ToM_ui{
         }
     }
 
-    def static getTabContentPane(tabName){
+    def static getButtonPanel(javax.swing.JComponent comp){
+        return SU.getAncestorNamed(myButtonPanelName, comp)
+    }
+
+    def static getTabContentPane(javax.swing.JComponent comp){
+        return SU.getAncestorNamed(myPaneName, comp)
+    }
+
+    def static getTabContentPane(String tabName){
         def contentPane
         if( !TabPane.hasTab(tabName)) {
             contentPane = swing.panel(
@@ -142,7 +152,7 @@ class ToM_ui{
         return contentPane
     }
 
-    def static getContentPaneFromMyTab(myTabName, doClear){
+    def static getContentPaneFromMyTab(String myTabName, boolean doClear){
         def cPane =  ToM_ui.getTabContentPane(myTabName)
         if(doClear) cPane.removeAll() //eliminar contenido existente en el panel
         TabPane.showTab(myTabName)
@@ -153,7 +163,8 @@ class ToM_ui{
 // genera panel con botón
     def static getButtonPanel(htmlMsg, buttonLabel, buttonToolTip, buttonAction, boolean isToggleButton = false){
         def panel = swing.panel(
-            border      : new LineBorder(Color.gray, 1)
+            border      : new LineBorder(Color.gray, 1),
+            name        : myButtonPanelName,
         ) {
               borderLayout()
               editorPane(
