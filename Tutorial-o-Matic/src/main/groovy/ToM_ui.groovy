@@ -206,5 +206,40 @@ class ToM_ui{
         }
         return panel
     }
+    
+// genera panel close - next page
+        //nextButtonAction == null --> no 'Next page' button
+    def static getNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip, nextButtonAction ){
+        def panel = swing.panel(
+            border      : new LineBorder(Color.gray, 1),
+            name        : myButtonPanelName,
+        ) {
+                borderLayout()
+                panel( 
+                        border      : new EmptyBorder(5, 10, 5, 10),  // <------- éste
+                        constraints : NORTH
+                    ) {
+                        borderLayout()
+                        button(
+                            label       : closeLabel,
+                            constraints : WEST,
+                            margin      : new Insets(10,15,10,15),
+                            toolTipText : closeToolTip,
+                            actionPerformed : {TabPane.removeTab(tabName)},
+                        )
+                        if(nextButtonAction){
+                            button(
+                                label       : nextLabel,
+                                constraints : EAST,
+                                margin      : new Insets(10,15,10,15),
+                                toolTipText : nextToolTip,
+                                actionPerformed : nextButtonAction,
+                            )
+                        }
+                    }
+        }
+        return panel
+    }
+
 
 }
