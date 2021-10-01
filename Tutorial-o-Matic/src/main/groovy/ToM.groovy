@@ -37,9 +37,10 @@ class ToM{
     // end:
     
     // region: loop fill contentPane
-    def static fillContentPane(myPanel, nextTutNodes){
+    def static fillContentPane(myPanel, nextTutNodes, boolean doClear = true){
         def interruptLoop = false
-        // loop TutNodes
+        if(doClear) myPanel.removeAll()
+        tomui.resizeContentPanel(myPanel,tomui.maxContentPaneHeigth)
         for (tutNode in nextTutNodes){
             switch(tutNode.style.name){
                 case styles.note:
@@ -59,7 +60,7 @@ class ToM{
             if(interruptLoop) break
         }
         if(!interruptLoop) addNextPagePane(myPanel, null)
-        tomui.adjustHeight(myPanel)
+        tomui.adjustHeight(myPanel, doClear)
     }
     
     // end:
@@ -80,9 +81,8 @@ class ToM{
         def nextLabel    = 'Next page'
         def nextToolTip  = 'Click to continue to the next page of the tutorial'
         def bttnAction   = lastNode?{ e ->
-                myP.removeAll()
                 def nextNodes = getNextTutNodes(lastNode)
-                fillContentPane(myP, nextNodes)
+                fillContentPane(myP, nextNodes, true)
             }:null
         def nextButtonPanel = tomui.getNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip , bttnAction)
         myP.add(nextButtonPanel, tomui.GBC)
@@ -97,16 +97,21 @@ class ToM{
             def bttnAction  = { e ->
                     def bttn = e.source
                     def sel = bttn.isSelected()
+                    def bttnPanel = tomui.getButtonPanel(bttn)
+                    bttnPanel.pending = sel
                     toma.closeMenus(infoAccion.action)
                     if (sel) {
                         toma.openMenus(infoAccion.action, 400)
                         bttn.label = 'Close menu'
+                        tomui.setNextPagePanelEnabled(myP, false)
                     } else {
                         bttn.label = 'Show me'
+                        if(! tomui.anyCompPending(myP) ) tomui.setNextPagePanelEnabled(myP, true)
                     }
                 }
             
             def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, true)
+            buttonPanel.metaClass.pending = false
             myP.add(buttonPanel, tomui.GBC)
         }
     }    

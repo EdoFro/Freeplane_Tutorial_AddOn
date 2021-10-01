@@ -10,12 +10,14 @@ import java.awt.Insets
 import java.awt.GridBagConstraints
 import java.awt.Dimension
 import java.awt.GridBagLayout
+import java.awt.Point
 
 // import javax.swing.*
 import javax.swing.border.EmptyBorder
 import javax.swing.border.LineBorder
 import javax.swing.border.CompoundBorder
 import javax.swing.SwingUtilities as SU
+import javax.swing.JPanel
 
 import groovy.swing.SwingBuilder
 
@@ -30,6 +32,7 @@ class ToM_ui{
     static final int maxContentPaneHeigth = 50000
     static final String myPaneName        = 'myContentPanel'
     static final String myButtonPanelName = 'aButtonPane'
+    static final String myNextPanelName   = 'nextPane'
 
     static SwingBuilder swing      = new SwingBuilder()
 
@@ -113,11 +116,14 @@ class ToM_ui{
     }
 
 
-    def static adjustHeight(comp){
+    def static adjustHeight(comp, boolean backToTop = false){
+        if (backToTop) scrollContentPaneBackToTop(comp)
         TabPane.repaint()
         def timer = new Timer()
         timer.runAfter(1000) {
             resizeContentPanel(comp, comp.height + 200)
+            if (backToTop) scrollContentPaneBackToTop(comp)
+            // TabPane.revalidate() <--- no funciona
             TabPane.repaint()
         }
     }
@@ -212,7 +218,7 @@ class ToM_ui{
     def static getNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip, nextButtonAction ){
         def panel = swing.panel(
             border      : new LineBorder(Color.gray, 1),
-            name        : myButtonPanelName,
+            name        : myNextPanelName,
         ) {
                 borderLayout()
                 panel( 
@@ -242,4 +248,34 @@ class ToM_ui{
     }
 
 
+    def static getNextButtonPanel(myP){
+        return myP.components.find{it.name == myNextPanelName}
+    }
+    
+    def static setNextPagePanelEnabled(JPanel myP, boolean isEnabled){
+        setPanelEnabled(getNextButtonPanel(myP), isEnabled)
+    }
+    
+    def static setPanelEnabled(JPanel panel, boolean isEnabled) {
+        panel.setEnabled(isEnabled)
+
+        panel.components.each{ comp ->
+            if (comp instanceof JPanel) {
+                setPanelEnabled(comp, isEnabled)
+            }
+            comp.setEnabled(isEnabled)
+        }
+    }
+
+    def static anyCompPending(myP){
+        return myP.components.any{it.hasProperty('pending') && it.pending}
+    }
+// scrollPane
+    def static getScrollPaneViewport(comp){
+        return SU.getAncestorOfClass(javax.swing.JViewport, comp)   
+    }
+
+    def static scrollContentPaneBackToTop(comp){
+        getScrollPaneViewport(comp).setViewPosition(new Point(0,0))
+    }
 }
