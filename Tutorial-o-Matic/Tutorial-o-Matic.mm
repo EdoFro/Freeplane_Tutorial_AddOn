@@ -1,6 +1,6 @@
 <map version="freeplane 1.9.8">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Tutorial-o-Matic" FOLDED="false" ID="ID_696401721" LINK="https://github.com/EdoFro/Freeplane_Tutorial-o-Matic" BACKGROUND_COLOR="#97c7dc">
+<node TEXT="Tutorial-o-Matic" FOLDED="false" ID="ID_696401721" LINK="https://github.com/EdoFro/Freeplane_Tutorial_AddOn" BACKGROUND_COLOR="#97c7dc">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <attribute_layout NAME_WIDTH="111.75 pt" VALUE_WIDTH="165.75 pt"/>
 <attribute NAME="name" VALUE="tutorialOMatic"/>
@@ -8,7 +8,7 @@
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.0"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
-<attribute NAME="updateUrl" VALUE="https://github.com/EdoFro/Freeplane_Tutorial-o-Matic/releases/latest"/>
+<attribute NAME="updateUrl" VALUE="https://github.com/EdoFro/Freeplane_Tutorial_AddOn/releases/latest"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -42,8 +42,7 @@
       </li>
     </ul>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <hook NAME="MapStyle" background="#f9f9f8">
     <properties mapUsesOwnSaveOptions="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" save_folding="save_folding_if_map_is_changed" associatedTemplateLocation="file:/C:/Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/Menu-o-Matic/Menu-o-Matic.mm" fit_to_viewport="false" save_modification_times="false" save_last_visited_node="default" show_note_icons="true"/>
 
@@ -164,6 +163,9 @@
     </p>
   </body>
 </html></richcontent>
+<node TEXT="v0.0.1" ID="ID_1147464075">
+<node TEXT="Demo version" ID="ID_1739689712"/>
+</node>
 </node>
 <node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795">
 <edge COLOR="#00ff00"/>
