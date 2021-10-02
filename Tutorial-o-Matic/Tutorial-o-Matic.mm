@@ -148,8 +148,7 @@
       To translate the description you have to define a translation for the key 'addons.${name}.description'.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="Tutorial-o-Matic for Freeplane!!&#xa;Tutorial-o-Matic is an AddOn for Freeplane that gives the user the possibility to create his/her own tutorials." ID="ID_1642042079"/>
 </node>
 <node TEXT="changes" POSITION="left" ID="ID_461119253">
@@ -164,8 +163,7 @@
       Change log of this add-on: append one node for each noteworthy version and put the details for each version into a child node.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795">
 <edge COLOR="#00ff00"/>
@@ -185,8 +183,7 @@
       The License text has to be entered as a child of the <i>'license'</i>&nbsp;node, either as plain text or as HTML.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node ID="ID_444630498"><richcontent TYPE="NODE">
 
 <html>
@@ -277,8 +274,7 @@
       <font color="#000000" face="SansSerif, sans-serif">Every property in the configuration should receive a default value in <i>default.properties</i>&nbsp;node.</font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="default.properties" POSITION="left" ID="ID_1398497950">
 <edge COLOR="#00ffff"/>
@@ -300,8 +296,7 @@
       </li>
     </ul>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="translations" POSITION="left" ID="ID_546877695">
 <edge COLOR="#7c0000"/>
@@ -326,13 +321,14 @@
       </li>
     </ul>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="en" ID="ID_1998059292">
 <attribute_layout NAME_WIDTH="162 pt" VALUE_WIDTH="281.24999 pt"/>
 <attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
 <attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;In submenu  &lt;b&gt;{0}&lt;/b&gt; &lt;br&gt;click on  &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
 <attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;You can also use de keyboard shortcut &lt;b&gt;{0}&lt;/b&gt; for this command&lt;/html&gt;"/>
+<attribute NAME="addons.${name}.executeTutorial" VALUE="execute Demo tutorial"/>
+<attribute NAME="addons.${name}.openDemoMap" VALUE="open Demo map"/>
 </node>
 </node>
 <node TEXT="deinstall" POSITION="left" ID="ID_378917294">
@@ -347,13 +343,15 @@
       List of files and/or directories to remove on uninstall
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <attribute_layout NAME_WIDTH="42.75 pt" VALUE_WIDTH="207.74999 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/Tutorial-o-Matic.jar"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/markedj-1.0.16.jar"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/jsoup-1.10.2.jar"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/executeTutorial.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/openDemoMap.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/Tutorial Sample.mm"/>
 </node>
 <node TEXT="scripts" POSITION="right" ID="ID_1037882722">
 <edge COLOR="#007c00"/>
@@ -472,8 +470,31 @@
       &nbsp;&nbsp;- In any case set execute_scripts_without_asking to true unless you want to annoy users.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
+<node TEXT="executeTutorial.groovy" ID="ID_420702224">
+<attribute_layout NAME_WIDTH="200.24999 pt" VALUE_WIDTH="200.24999 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.executeTutorial"/>
+<attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+</node>
+<node TEXT="openDemoMap.groovy" ID="ID_1629939217">
+<attribute_layout NAME_WIDTH="200.24999 pt" VALUE_WIDTH="200.24999 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.openDemoMap"/>
+<attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+</node>
 </node>
 <node TEXT="lib" POSITION="right" ID="ID_1814812956">
 <edge COLOR="#7c007c"/>
@@ -511,8 +532,7 @@
       &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="Tutorial-o-Matic.jar" ID="ID_1864463328"/>
 <node TEXT="markedj-1.0.16.jar" ID="ID_1060333872"/>
 <node TEXT="jsoup-1.10.2.jar" ID="ID_1151792763"/>
@@ -553,8 +573,7 @@
       &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="doc" ID="ID_281158802"/>
 <node TEXT="icons" ID="ID_211861022"/>
 <node TEXT="templates" ID="ID_553385296"/>
@@ -591,8 +610,7 @@
       Images can be added automatically by releaseAddOn.groovy or must be uploaded into the map via the script <i>Tools-&gt;Scripts-&gt;Insert Binary</i>&nbsp;since they have to be (base64) encoded as simple strings.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="DevTools - MoM" POSITION="right" ID="ID_989188638">
 <edge COLOR="#ff0000"/>

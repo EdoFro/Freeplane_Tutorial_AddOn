@@ -120,8 +120,8 @@ class ToM_ui{
         if (backToTop) scrollContentPaneBackToTop(comp)
         TabPane.repaint()
         def timer = new Timer()
-        timer.runAfter(1000) {
-            resizeContentPanel(comp, comp.height + 200)
+        timer.runAfter(3000) {
+            resizeContentPanel(comp, comp.height + 500)
             if (backToTop) scrollContentPaneBackToTop(comp)
             // TabPane.revalidate() <--- no funciona
             TabPane.repaint()
