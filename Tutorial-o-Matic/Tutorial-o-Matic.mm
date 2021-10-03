@@ -4,9 +4,9 @@
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <attribute_layout NAME_WIDTH="111.75 pt" VALUE_WIDTH="165.75 pt"/>
 <attribute NAME="name" VALUE="tutorialOMatic"/>
-<attribute NAME="version" VALUE="v0.0.1"/>
+<attribute NAME="version" VALUE="v0.0.2"/>
 <attribute NAME="author" VALUE="EdoFro"/>
-<attribute NAME="freeplaneVersionFrom" VALUE="v1.9.0"/>
+<attribute NAME="freeplaneVersionFrom" VALUE="v1.9.9"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
 <attribute NAME="updateUrl" VALUE="https://github.com/EdoFro/Freeplane_Tutorial_AddOn/releases/latest"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -42,7 +42,8 @@
       </li>
     </ul>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <hook NAME="MapStyle" background="#f9f9f8">
     <properties mapUsesOwnSaveOptions="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" save_folding="save_folding_if_map_is_changed" associatedTemplateLocation="file:/C:/Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/Menu-o-Matic/Menu-o-Matic.mm" fit_to_viewport="false" save_modification_times="false" save_last_visited_node="default" show_note_icons="true"/>
 
@@ -147,7 +148,8 @@
       To translate the description you have to define a translation for the key 'addons.${name}.description'.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="Tutorial-o-Matic for Freeplane!!&#xa;Tutorial-o-Matic is an AddOn for Freeplane that gives the user the possibility to create his/her own tutorials." ID="ID_1642042079"/>
 </node>
 <node TEXT="changes" POSITION="left" ID="ID_461119253">
@@ -162,12 +164,16 @@
       Change log of this add-on: append one node for each noteworthy version and put the details for each version into a child node.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="v0.0.1" ID="ID_1147464075">
 <node TEXT="Demo version" ID="ID_1739689712"/>
 </node>
+<node TEXT="v0.0.2" ID="ID_945484309">
+<node TEXT="Bugs corrections:&#xa;- License as plain text&#xa;- Updated version of Demo map" ID="ID_621408353"/>
 </node>
-<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795">
+</node>
+<node TEXT="license" POSITION="left" ID="ID_624388795">
 <edge COLOR="#00ff00"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -185,81 +191,9 @@
       The License text has to be entered as a child of the <i>'license'</i>&nbsp;node, either as plain text or as HTML.
     </p>
   </body>
-</html></richcontent>
-<node ID="ID_444630498"><richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      MIT License
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      Copyright (c) 2021 Eduardo Frohlich.
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      Permission is hereby granted, free of charge, to any person obtaining a copy
-    </p>
-    <p>
-      of this software and associated documentation files (the &quot;Software&quot;), to deal
-    </p>
-    <p>
-      in the Software without restriction, including without limitation the rights
-    </p>
-    <p>
-      to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    </p>
-    <p>
-      copies of the Software, and to permit persons to whom the Software is
-    </p>
-    <p>
-      furnished to do so, subject to the following conditions:
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      The above copyright notice and this permission notice shall be included in all
-    </p>
-    <p>
-      copies or substantial portions of the Software.
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    </p>
-    <p>
-      IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    </p>
-    <p>
-      FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    </p>
-    <p>
-      AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    </p>
-    <p>
-      LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    </p>
-    <p>
-      OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    </p>
-    <p>
-      SOFTWARE.
-    </p>
-  </body>
 </html>
 </richcontent>
-</node>
+<node TEXT="MIT License&#xa;&#xa;Copyright (c) 2021 Eduardo Frohlich.&#xa;&#xa;Permission is hereby granted, free of charge, to any person obtaining a copy&#xa;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xa;in the Software without restriction, including without limitation the rights&#xa;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xa;copies of the Software, and to permit persons to whom the Software is&#xa;furnished to do so, subject to the following conditions:&#xa;&#xa;The above copyright notice and this permission notice shall be included in all&#xa;copies or substantial portions of the Software.&#xa;&#xa;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xa;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xa;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xa;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xa;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xa;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE&#xa;SOFTWARE." ID="ID_444630498"/>
 </node>
 <node TEXT="preferences.xml" POSITION="left" ID="ID_1967714695">
 <edge COLOR="#ff00ff"/>
@@ -276,7 +210,8 @@
       <font color="#000000" face="SansSerif, sans-serif">Every property in the configuration should receive a default value in <i>default.properties</i>&nbsp;node.</font>
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 <node TEXT="default.properties" POSITION="left" ID="ID_1398497950">
 <edge COLOR="#00ffff"/>
@@ -298,7 +233,8 @@
       </li>
     </ul>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 <node TEXT="translations" POSITION="left" ID="ID_546877695">
 <edge COLOR="#7c0000"/>
@@ -323,7 +259,8 @@
       </li>
     </ul>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="en" ID="ID_1998059292">
 <attribute_layout NAME_WIDTH="162 pt" VALUE_WIDTH="281.24999 pt"/>
 <attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
@@ -345,7 +282,8 @@
       List of files and/or directories to remove on uninstall
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute_layout NAME_WIDTH="42.75 pt" VALUE_WIDTH="207.74999 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/Tutorial-o-Matic.jar"/>
@@ -472,7 +410,8 @@
       &nbsp;&nbsp;- In any case set execute_scripts_without_asking to true unless you want to annoy users.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="executeTutorial.groovy" ID="ID_420702224">
 <attribute_layout NAME_WIDTH="200.24999 pt" VALUE_WIDTH="200.24999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.executeTutorial"/>
@@ -534,7 +473,8 @@
       &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="Tutorial-o-Matic.jar" ID="ID_1864463328"/>
 <node TEXT="markedj-1.0.16.jar" ID="ID_1060333872"/>
 <node TEXT="jsoup-1.10.2.jar" ID="ID_1151792763"/>
@@ -575,7 +515,8 @@
       &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="doc" ID="ID_281158802"/>
 <node TEXT="icons" ID="ID_211861022"/>
 <node TEXT="templates" ID="ID_553385296"/>
@@ -612,7 +553,8 @@
       Images can be added automatically by releaseAddOn.groovy or must be uploaded into the map via the script <i>Tools-&gt;Scripts-&gt;Insert Binary</i>&nbsp;since they have to be (base64) encoded as simple strings.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 <node TEXT="DevTools - MoM" POSITION="right" ID="ID_989188638">
 <edge COLOR="#ff0000"/>

@@ -3,7 +3,7 @@
 <node TEXT="Tutorial Sample" FOLDED="false" ID="ID_452131666" STYLE="oval">
 <font SIZE="18"/>
 <hook NAME="MapStyle">
-    <properties save_modification_times="false" save_last_visited_node="default" mapUsesOwnSaveOptions="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="default" show_icon_for_attributes="true"/>
+    <properties save_modification_times="false" save_last_visited_node="default" mapUsesOwnSaveOptions="true" fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="default"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1611611797" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -82,8 +82,7 @@
       uses HTML
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1123043625">
 <node TEXT="hi! this is a demo" ID="ID_1188290578"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -101,7 +100,59 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="in the next pages" ID="ID_1864028535"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="Attention!" ID="ID_702695013"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body style="font-size: 20; font-family: Calibri">
+    <h1>
+      Attention!
+    </h1>
+    <p>
+      This demo still has some errors (bugs), none of them are critical for Freeplane, but you will see some bug reports. Just click in &quot;<b>don't send</b>&quot; and continue
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      The bugs are:
+    </p>
+    <ul>
+      <li>
+        Some images load with no problem from the web, but others don't. It throws an error dialog. Just click in &quot;don't send&quot; to continue.<br/>I have to correct this in the future versions.
+      </li>
+      <li>
+        The &quot;next page&quot; button is allways in the bottom of the panel. Sometimes, if the images take much time to load, the button panel is not visible. Just use the mouse to click on the panel's edge and make it wider.<br/>If this doesn't help, just click on the 'execute Demo tutorial' again and it will restart.
+      </li>
+    </ul>
+    <p>
+      
+    </p>
+    <p>
+      If you know how to correct this bugs please let me know!!!
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Click next page" ID="ID_1743184147"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body style="font-size: 20; font-family: Calibri">
+    <p>
+      Click the &quot;<u>Next page</u>&quot; button to go to continue:
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_1881451090"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1694131550">
+<node TEXT="in the next pages" ID="ID_1081584542"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -124,7 +175,7 @@
         </ul>
       </li>
       <li>
-        The third page has three markdown examples with animated gif, code block and a table with images
+        The page after that has three markdown examples with animated gif, code block and a table with images
 
         <ul>
           <li>
@@ -133,17 +184,17 @@
         </ul>
       </li>
       <li>
-        The fourth page has an example about teaching how to make some format modifications to a selected node
+        The next section has pages with examples about teaching how to make some format modifications to a selected node and other Freeplane tips
       </li>
       <li>
-        The fifth page shows a list of &quot;next steps&quot; and &quot;nice to haves&quot; for this AddOn
+        The last page shows a list of &quot;next steps&quot; and &quot;nice to haves&quot; for this AddOn
       </li>
     </ul>
   </body>
 </html>
 </richcontent>
 </node>
-<node TEXT="tutorial content is taken from THIS map" ID="ID_65077467"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="tutorial content is taken from THIS map" ID="ID_1780665321"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -159,10 +210,9 @@
       If you modify it and relaunch the tutorial it will include those changes.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Click next page" ID="ID_1743184147"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="Click next page" ID="ID_1369073016"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -175,7 +225,7 @@
 </html></richcontent>
 </node>
 </node>
-<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_1881451090"/>
+<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_42748761"/>
 </node>
 <node TEXT="example: using Markdown" ID="ID_989725315">
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_410426435">
@@ -345,8 +395,7 @@ For more information look: [Freeplane Homepage](https://www.freeplane.org/wiki/i
       Some <font color="red" face="Bauhaus 93">FREEPLANE</font>&nbsp;tips
     </h1>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="view" ID="ID_43965285"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>## Menu View&#xd;
@@ -393,6 +442,7 @@ Some of the commands can be called by clicking in the manu but also by using Hot
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_124470599">
 <node TEXT="Bold" ID="ID_1621149588" LINK="menuitem:_BoldAction"/>
 </node>
+<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_1913819240"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_152574428">
 <node TEXT="tutorIAL STYLES" ID="ID_1860950120"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>## How to add more pages to the tutorial?&#xd;
@@ -418,6 +468,40 @@ in Freeplane&apos;s user directory.
 <node TEXT="Open user directory" ID="ID_1141020905" LINK="menuitem:_OpenUserDirAction"/>
 </node>
 <node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_997137504"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1844482738">
+<node TEXT="adding icons" ID="ID_432545995"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>## Showing Menu Commands
+
+If you look the map, the &quot;show menu commands&quot; has childnodes with hyperlinks to the menu actions.
+
+It automatically builds the menu route and knows how to get to this comands in the menu
+
+### Some examples with &quot;adding icons&quot; actions:</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1873024763">
+<node TEXT="fox" ID="ID_1707465355" LINK="menuitem:_IconAction.emoji-1F98A"/>
+</node>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_873100354">
+<node TEXT="adding icons" ID="ID_1401154656"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>## But ...
+
+I still don&apos;t know how to show commnads that are in larger menus and are not visible in the first page.
+
+### For example the icon of the skunk:
+
+Try first to get manually to the icon, so you can see where it is.
+
+Then click the &apos;Show me&apos; button. You will see that it won&apos;t be able to show the skunk icon.
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_718600942">
+<node TEXT="skunk" ID="ID_1556281748" LINK="menuitem:_IconAction.emoji-1F9A8"/>
+</node>
+<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_1930361476"/>
 </node>
 <node TEXT="TODOs" ID="ID_418119278">
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_416147866">
@@ -429,7 +513,11 @@ in Freeplane&apos;s user directory.
 * select defined nodes (30%)&#xd;
 * execute a script on the selected nodes&#xd;
 * open a new map to use for the example&#xd;
-</text>
+* improve &apos;show menu commands&apos; so it can get to icons that are in other *pages*&#xd;
+* add a Tab Panel with buttons that help building new Tutorials (kind of *MarkDownHelper* dialog)&#xd;
+* add a listener to resize height of content panel when tabpanel width changes&#xd;
+* add a listener that resize height of content panel when an image is loaded and the content gets bigger&#xd;
+* discover why it loads some images but others don&apos;t</text>
 </richcontent>
 </node>
 <node TEXT="nice to haves" ID="ID_1246354378"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
@@ -463,8 +551,7 @@ in Freeplane&apos;s user directory.
       edo
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
