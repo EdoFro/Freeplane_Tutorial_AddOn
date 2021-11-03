@@ -76,8 +76,8 @@ class ToM{
     }
 
     def static addNextPagePane(myP, lastNode){
-        def closeLabel   = 'Close tutorial'
-        def closeToolTip = 'Click to exit the tutorial and close the tutorial tab'
+        def closeLabel   = 'Stop tutorial'
+        def closeToolTip = 'Click to stop the tutorial and close the tutorial tab'
         def nextLabel    = 'Next page'
         def nextToolTip  = 'Click to continue to the next page of the tutorial'
         def bttnAction   = lastNode?{ e ->
@@ -91,28 +91,33 @@ class ToM{
     def static addShowMenuItemPane(myP, nodos){
         nodos.findAll{n -> toma.hasAction(n)}.each{nodo ->
             def infoAccion  = toma.getActionInfoMap(nodo)
-            def msgHtml     = infoAccion.instructions
-            def bttnText    = 'Show me'
-            def bttnToolTip = "Click to see where is ${toma.apos(infoAccion.label)} in Freeplane Menu"
-            def bttnAction  = { e ->
-                    def bttn = e.source
-                    def sel = bttn.isSelected()
-                    def bttnPanel = tomui.getButtonPanel(bttn)
-                    bttnPanel.pending = sel
-                    toma.closeMenus(infoAccion.action)
-                    if (sel) {
-                        toma.openMenus(infoAccion.action, 400)
-                        bttn.label = 'Close menu'
-                        tomui.setNextPagePanelEnabled(myP, false)
-                    } else {
-                        bttn.label = 'Show me'
-                        if(! tomui.anyCompPending(myP) ) tomui.setNextPagePanelEnabled(myP, true)
+            if (infoAccion){
+                def msgHtml     = infoAccion.instructions
+                def bttnText    = 'Show me'
+                def bttnToolTip = "Click to see where is ${toma.apos(infoAccion.label)} in Freeplane Menu"
+                def bttnAction  = { e ->
+                        def bttn = e.source
+                        def sel = bttn.isSelected()
+                        def bttnPanel = tomui.getButtonPanel(bttn)
+                        bttnPanel.pending = sel
+                        toma.closeMenus(infoAccion.action)
+                        if (sel) {
+                            toma.openMenus(infoAccion.action, 400)
+                            bttn.label = 'Close menu'
+                            tomui.setNextPagePanelEnabled(myP, false)
+                        } else {
+                            bttn.label = 'Show me'
+                            if(! tomui.anyCompPending(myP) ) tomui.setNextPagePanelEnabled(myP, true)
+                        }
                     }
-                }
-            
-            def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, true)
-            buttonPanel.metaClass.pending = false
-            myP.add(buttonPanel, tomui.GBC)
+                
+                def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, true)
+                buttonPanel.metaClass.pending = false
+                myP.add(buttonPanel, tomui.GBC)
+            } else {
+                def textoHtml = '<html><body><p>Command not encountered in Menu for active map</p></body></html>'
+                myP.add(tomui.createInstructionsPane(textoHtml), tomui.GBC)
+            }
         }
     }    
     
