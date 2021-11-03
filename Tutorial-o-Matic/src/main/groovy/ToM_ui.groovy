@@ -150,6 +150,7 @@ class ToM_ui{
                 ){}
             panel.add(contentPane,GBC)
             def sp = swing.scrollPane(){}
+            sp.verticalScrollBar.unitIncrement = 16  //.getVerticalScrollBar().setUnitIncrement(16)
             sp.viewport.add(panel)
             TabPane.addTab(tabName, sp)
         } else {
