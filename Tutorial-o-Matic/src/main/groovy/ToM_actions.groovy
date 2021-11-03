@@ -94,6 +94,7 @@ class ToM_actions{
 
     def static getActionInfoMap(String accion){
         def miPath    = getMenuEntryPath(accion)
+        if (!miPath) { return null }
         Map myAction = [:]
         myAction 
                  << [ action     : accion                        ]                 
@@ -184,7 +185,15 @@ class ToM_actions{
             timer.runAfter(2 * (i + 1) * timeLapse) {
                 if(subMenu instanceof javax.swing.JMenu){
                     subMenu.popupMenuVisible = true
-                    subMenu = subMenu.menuComponents.find{it.hasProperty('text') && it.text == menuItem}
+                    def tempMenu = subMenu.menuComponents.find{it.hasProperty('text') && it.text == menuItem}
+                    def max = 0
+                    while (!tempMenu && max <15) {
+                        subMenu = subMenu.menuComponents.find{it.hasProperty('text') && it.text == ' '}
+                        subMenu.popupMenuVisible = true
+                        tempMenu = subMenu.menuComponents.find{it.hasProperty('text') && it.text == menuItem}
+                        max++
+                    }
+                    subMenu = tempMenu
                 }
                 sleep(timeLapse)
                 subMenu?.armed = true
