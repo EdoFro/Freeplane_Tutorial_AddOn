@@ -15,15 +15,17 @@ class ToM{
         ini       : 'ToM_'         ,
         note      : 'ToM_note'     ,
         nextPage  : 'ToM_nextPage' ,
+        newPage   : 'ToM_newPage'  ,
         showMenu  : 'ToM_showMenu' ,
     ]
     
     // region: getting tutorial components nodes
 
-    def static getNextTutNodes(n){
+    def static getNextTutNodes(n, boolean included = false){
         def tutNodes  = getTutNodes(getTutorialNode(n))
         def pos = tutNodes.indexOf(n)
-        return tutNodes.drop(pos + 1)
+        def t = included?0:1
+        return tutNodes.drop(pos + t)
     }
 
     def static getTutNodes(nTutorial){
@@ -33,12 +35,17 @@ class ToM{
     def static getTutorialNode(n){
         return n.pathToRoot.find{it.style.name == styles.tutorial}
     }
+
+    def static getNewPageNodes(nTutorial){
+        return nTutorial.find{it.style.name == styles.newPage}
+    }
     
     // end:
     
     // region: loop fill contentPane
     def static fillContentPane(myPanel, nextTutNodes, boolean doClear = true){
         def interruptLoop = false
+        def startingNewPage = true
         if(doClear) myPanel.removeAll()
         tomui.resizeContentPanel(myPanel,tomui.maxContentPaneHeigth)
         for (tutNode in nextTutNodes){
@@ -47,8 +54,16 @@ class ToM{
                     addNotes(myPanel, tutNode.children)
                     break
                 case styles.nextPage:
-                    addNextPagePane(myPanel, tutNode)
+                    addNextPagePane(myPanel, tutNode, false)
                     interruptLoop = true
+                    break
+                case styles.newPage:
+                    if (startingNewPage){
+                        addPageTitle(myPanel, tutNode)
+                    } else {
+                        addNextPagePane(myPanel, tutNode, true)
+                        interruptLoop = true
+                    }
                     break
                 case styles.showMenu:
                     addShowMenuItemPane(myPanel, tutNode.children)
@@ -57,6 +72,7 @@ class ToM{
                     ui.informationMessage('node style not defined')
                     break
             }
+            startingNewPage = false
             if(interruptLoop) break
         }
         if(!interruptLoop) addNextPagePane(myPanel, null)
@@ -74,8 +90,15 @@ class ToM{
             }
         }
     }
+    
+    def static addPageTitle(myP,nodo){
+        //TODO: agregar título
+        def html = "<html><style>h1 {color: rgb(240, 240, 240);background-color: rgb(100, 100, 150);display: block;padding: 10px;}</style><body><h1>${nodo.text}</h1></body></html>"
+        myP.add(tomui.createInstructionsPane(html), tomui.GBC)
+    
+    }
 
-    def static addNextPagePane(myP, lastNode){
+    def static addNextPagePane(myP, lastNode, boolean included = false){
         def closeLabel   = 'Stop tutorial'
         def closeToolTip = 'Click to stop the tutorial and close the tutorial tab'
         def nextLabel    = 'Next page'
@@ -85,8 +108,15 @@ class ToM{
                 fillContentPane(myP, nextNodes, true)
             }:null
         def nextButtonPanel = tomui.getNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip , bttnAction)
+        def bttnAction   = lastNode? { e -> fillPage(myP, lastNode, included, true) } : null
         myP.add(nextButtonPanel, tomui.GBC)
     }
+    
+    def static fillPage(myP, nodo, included, doClear){
+        def nextNodes = getNextTutNodes(nodo, included)
+        fillContentPane(myP, nextNodes, doClear)
+    }
+    
 
     def static addShowMenuItemPane(myP, nodos){
         nodos.findAll{n -> toma.hasAction(n)}.each{nodo ->
