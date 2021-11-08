@@ -57,7 +57,7 @@ class ToM_ui{
         ipadx      : 0,                               //  This field specifies the internal padding of the component, how much space to add to the minimum width of the component. The width of the component is at least its minimum width plus ipadx pixels.
         ipady      : 0                                //  This field specifies the internal padding, that is, how much space to add to the minimum height of the component. The height of the component is at least its minimum height plus ipady pixels.
     )
-
+    
     def static showTextMessage(msg, lapseTime){
         def win = swing.dialog(
             undecorated        : true,
@@ -138,8 +138,8 @@ class ToM_ui{
         if (backToTop) scrollContentPaneBackToTop(comp)
         TabPane.repaint()
         def timer = new Timer()
-        timer.runAfter(3000) {
-            resizeContentPanel(comp, comp.height + 500)
+        timer.runAfter(100) {
+            resizeContentPanel(comp, comp.height + 100)
             if (backToTop) scrollContentPaneBackToTop(comp)
             // TabPane.revalidate() <--- no funciona
             TabPane.repaint()
@@ -205,7 +205,7 @@ class ToM_ui{
               vbox(constraints:SOUTH) {
                     panel(
                            // border      : new LineBorder(Color.black, 1),
-                            border      : new EmptyBorder(5, 10, 5, 10),  // <------- éste
+                            border      : new EmptyBorder(2, 10, 2, 10),  // <------- éste
                             //border: new CompoundBorder(new LineBorder(Color.red, 1),new EmptyBorder(5, 10, 5, 10))  // éste es de prueba poder ver el borde
                             //insets      : new Insets(30,10,30,10),
                         ) {
@@ -235,14 +235,14 @@ class ToM_ui{
     
 // genera panel close - next page
         //nextButtonAction == null --> no 'Next page' button
-    def static getNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip, nextButtonAction ){
+    def static getNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip, nextButtonAction, tocLabel = '', tocToolTip = '', tocButtonAction = null ){
         def panel = swing.panel(
             border      : new LineBorder(Color.gray, 1),
             name        : myNextPanelName,
         ) {
                 borderLayout()
                 panel( 
-                        border      : new EmptyBorder(5, 10, 5, 10),  // <------- éste
+                        border      : new EmptyBorder(2, 10, 2, 10),  // <------- éste
                         constraints : NORTH
                     ) {
                         borderLayout()
@@ -253,6 +253,15 @@ class ToM_ui{
                             toolTipText : closeToolTip,
                             actionPerformed : {TabPane.removeTab(tabName)},
                         )
+                        if(tocButtonAction && nextButtonAction){
+                            button(
+                                label       : tocLabel,
+                                constraints : CENTER,
+                                margin      : new Insets(10,15,10,15),
+                                toolTipText : tocToolTip,
+                                actionPerformed : tocButtonAction,
+                            )
+                        }
                         if(nextButtonAction){
                             button(
                                 label       : nextLabel,
@@ -297,5 +306,21 @@ class ToM_ui{
 
     def static scrollContentPaneBackToTop(comp){
         getScrollPaneViewport(comp).setViewPosition(new Point(0,0))
+    }
+    
+    def static createEmptyGridBagPanel(){
+        return swing.panel(
+                    layout: new GridBagLayout(),
+                    border      : new EmptyBorder(2, 10, 2, 0), //new LineBorder(Color.black, 1),
+                    // background: Color.gray
+                ){}
+    }
+    
+    def static createButton(title, bttnAction){
+        return swing.button(
+                    label       : title,
+                    margin      : new Insets(10,15,10,15),
+                    actionPerformed : bttnAction,
+                )    
     }
 }

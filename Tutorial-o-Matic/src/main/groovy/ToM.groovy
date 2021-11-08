@@ -17,6 +17,7 @@ class ToM{
         nextPage  : 'ToM_nextPage' ,
         newPage   : 'ToM_newPage'  ,
         showMenu  : 'ToM_showMenu' ,
+        toc       : 'ToM_TOC'      ,
     ]
     
     // region: getting tutorial components nodes
@@ -68,6 +69,9 @@ class ToM{
                 case styles.showMenu:
                     addShowMenuItemPane(myPanel, tutNode.children)
                     break
+                case styles.toc:
+                    addTOCPane(myPanel, tutNode)
+                    break
                 default:
                     ui.informationMessage('node style not defined')
                     break
@@ -109,6 +113,11 @@ class ToM{
             }:null
         def nextButtonPanel = tomui.getNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip , bttnAction)
         def bttnAction   = lastNode? { e -> fillPage(myP, lastNode, included, true) } : null
+        def tocLabel    = 'Table of Contents'
+        def tocToolTip  = 'Click to show the Table of Contents of the tutorial'
+        def tocBttnAction   = { e -> showTOC(myP,lastNode) }
+            
+        def nextButtonPanel = tomui.getNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip , bttnAction, tocLabel, tocToolTip, tocBttnAction)
         myP.add(nextButtonPanel, tomui.GBC)
     }
     
@@ -117,6 +126,13 @@ class ToM{
         fillContentPane(myP, nextNodes, doClear)
     }
     
+    
+    def static showTOC(myP,nodo){
+        myP.removeAll()
+        tomui.resizeContentPanel(myP,tomui.maxContentPaneHeigth)
+        addTOCPane(myP,nodo)
+        tomui.adjustHeight(myP, true)   
+    }
 
     def static addShowMenuItemPane(myP, nodos){
         nodos.findAll{n -> toma.hasAction(n)}.each{nodo ->
@@ -150,6 +166,18 @@ class ToM{
             }
         }
     }    
+    
+    def static addTOCPane(myP,nodo){
+        def titleNodes  = getNewPageNodes(getTutorialNode(nodo))
+        def pane = tomui.createEmptyGridBagPanel()
+        titleNodes.each{ tn ->
+            def title = tn.text
+            def bttnAction   = { e -> fillPage(myP, tn, true, true) }
+            def button = tomui.createButton(title, bttnAction)
+            pane.add(button, tomui.GBC)
+        }
+        myP.add(pane, tomui.GBC)
+    }
     
     // end:
     
