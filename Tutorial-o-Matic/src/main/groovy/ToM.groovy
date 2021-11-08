@@ -19,7 +19,10 @@ class ToM{
         showMenu  : 'ToM_showMenu' ,
         toc       : 'ToM_TOC'      ,
         goto      : 'ToM_goto'     ,
+        action    : 'ToM_menuAction',
     ]
+    
+    static final exeHowIcons = ['emoji-1F507', 'emoji-2328', 'emoji-1F5B1']
     
     // region: getting tutorial components nodes
 
@@ -75,6 +78,9 @@ class ToM{
                     break
                 case styles.goto:
                     addGotoPane(myPanel, tutNode.children)
+                    break
+                case styles.action:
+                    addActionPane(myPanel, tutNode)
                     break
                 default:
                     ui.informationMessage('node style not defined')
@@ -190,6 +196,44 @@ class ToM{
         }
     }
     
+    def static addActionPane(myP, nodo){
+        def infoAcciones = []
+        nodo.children.findAll{n -> toma.hasAction(n)}.each{n ->
+            def infoAccion = toma.getActionInfoMap(n)
+            infoAcciones << infoAccion        
+        }
+        def msgHtml = nodo.note?tomui.getHtmlFromNote(nodo):null
+        def bttnText    = 'Execute'
+        def bttnToolTip =  "Click to execute the command on the selected nodes"
+        def enabled = enableBttn(nodo)
+        def exeHow  = exeActionsHow(nodo)
+        def bttnAction = { e ->
+                def bttn = e.source
+                bttn.setEnabled(enabled)
+                toma.executeActions(infoAcciones, exeHow)
+            }
+
+        def buttonPanel = ToM_ui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+        myP.add(buttonPanel, tomui.GBC)
+    }
+    
+    def static exeActionsHow(nodo){
+        def iconos = nodo.icons.icons
+        def iconitos = iconos.intersect(exeHowIcons)
+        if(iconitos){ 
+            def index = exeHowIcons.indexOf(iconitos[0])
+            return toma.ex.values()[index]
+        } else {
+            return toma.ex.showHotKeys
+        }
+    }
+    
+    def static enableBttn(nodo){
+        def iconos = nodo.icons.icons
+        return !iconos.contains('emoji-1F56F')
+    }
+
+
     // end:
     
 }
