@@ -12,6 +12,7 @@ import java.awt.GridBagConstraints
 import java.awt.Dimension
 import java.awt.GridBagLayout
 import java.awt.Point
+import java.awt.event.*
 
 // import javax.swing.*
 import javax.swing.border.EmptyBorder
@@ -19,6 +20,11 @@ import javax.swing.border.LineBorder
 import javax.swing.border.CompoundBorder
 import javax.swing.SwingUtilities as SU
 import javax.swing.JPanel
+
+
+import java.awt.Desktop
+import javax.swing.event.HyperlinkEvent
+import javax.swing.event.HyperlinkListener
 
 import groovy.swing.SwingBuilder
 
@@ -100,16 +106,27 @@ class ToM_ui{
     }
 
     def static createInstructionsPane(String html){
-        swing.editorPane(
+        def editor = swing.editorPane(
             editable    : false,
             contentType : "text/html",
             text        : html,
             //margin      : new Insets(30,10,30,10),
-            //border      : new EmptyBorder(6, 10, 6, 10), //new LineBorder(Color.black, 1),
-            border      : new CompoundBorder(new LineBorder(Color.gray, 1),new EmptyBorder(5, 10, 5, 10))
+            border      : new EmptyBorder(2, 10, 2, 0), //new LineBorder(Color.black, 1),
+            //border      : new CompoundBorder(new LineBorder(Color.gray, 1),new EmptyBorder(5, 10, 5, 10))
             //preferredSize: new Dimension(minContentPaneWidth, 500),
             //lineWrap    : true
         )
+        editor.addHyperlinkListener(e -> {
+            if (HyperlinkEvent.EventType.ACTIVATED.equals(e.getEventType())) {
+                Desktop desktop = Desktop.getDesktop();
+                try {
+                    desktop.browse(e.getURL().toURI());
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        })
+        return editor
     }
 
     def static resizeContentPanel(comp, height){
