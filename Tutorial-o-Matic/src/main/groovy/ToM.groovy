@@ -18,6 +18,7 @@ class ToM{
         newPage   : 'ToM_newPage'  ,
         showMenu  : 'ToM_showMenu' ,
         toc       : 'ToM_TOC'      ,
+        goto      : 'ToM_goto'     ,
     ]
     
     // region: getting tutorial components nodes
@@ -72,6 +73,9 @@ class ToM{
                 case styles.toc:
                     addTOCPane(myPanel, tutNode)
                     break
+                case styles.goto:
+                    addGotoPane(myPanel, tutNode.children)
+                    break
                 default:
                     ui.informationMessage('node style not defined')
                     break
@@ -107,11 +111,6 @@ class ToM{
         def closeToolTip = 'Click to stop the tutorial and close the tutorial tab'
         def nextLabel    = 'Next page'
         def nextToolTip  = 'Click to continue to the next page of the tutorial'
-        def bttnAction   = lastNode?{ e ->
-                def nextNodes = getNextTutNodes(lastNode)
-                fillContentPane(myP, nextNodes, true)
-            }:null
-        def nextButtonPanel = tomui.getNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip , bttnAction)
         def bttnAction   = lastNode? { e -> fillPage(myP, lastNode, included, true) } : null
         def tocLabel    = 'Table of Contents'
         def tocToolTip  = 'Click to show the Table of Contents of the tutorial'
@@ -177,6 +176,18 @@ class ToM{
             pane.add(button, tomui.GBC)
         }
         myP.add(pane, tomui.GBC)
+    }
+    
+    def static addGotoPane(myP, nodos){
+        nodos.findAll{n -> n.link.node?true:false}.each{nodo ->
+                def targetNode  = nodo.link.node
+                def msgHtml     = nodo.note?tomui.getHtmlFromNote(nodo):null
+                def bttnText    = nodo.text
+                def bttnToolTip = "Click to go to '${bttnText}' section"
+                def bttnAction  = { e -> fillPage(myP, targetNode, true, true) }
+            def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+            myP.add(buttonPanel, tomui.GBC)
+        }
     }
     
     // end:
