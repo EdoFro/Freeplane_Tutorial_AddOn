@@ -114,11 +114,13 @@ class ToM{
         }
     }
     
-    def static addPageTitle(myP,nodo){
-        //TODO: agregar título
-        def html = "<html><style>h1 {color: rgb(240, 240, 240);background-color: rgb(100, 100, 150);display: block;padding: 10px;}</style><body><h1>${nodo.text}</h1></body></html>"
+    def static addPageTitle(myP, String texto){
+        def html = "<html><style>h1 {color: rgb(240, 240, 240);background-color: rgb(100, 100, 150);display: block;padding: 10px;}</style><body><h1>${texto}</h1></body></html>"
         myP.add(tomui.createInstructionsPane(html), tomui.GBC)
-    
+    }
+
+    def static addPageTitle(myP, nodo){
+        addPageTitle(myP, nodo.text)
     }
 
     def static addNextPagePane(myP, lastNode, boolean included = false){
@@ -141,13 +143,6 @@ class ToM{
     }
     
     
-    def static showTOC(myP,nodo){
-        myP.removeAll()
-        tomui.resizeContentPanel(myP,tomui.maxContentPaneHeigth)
-        addTOCPane(myP,nodo)
-        tomui.adjustHeight(myP, true)   
-    }
-
     def static addShowMenuItemPane(myP, nodos){
         nodos.findAll{n -> toma.hasAction(n)}.each{nodo ->
             def infoAccion  = toma.getActionInfoMap(nodo)
@@ -181,6 +176,13 @@ class ToM{
         }
     }    
     
+    def static showTOC(myP,nodo){
+        myP.removeAll()
+        tomui.resizeContentPanel(myP,tomui.maxContentPaneHeigth)
+        addTOCPane(myP,nodo)
+        tomui.adjustHeight(myP, true)   
+    }
+
     def static addTOCPane(myP,nodo){
         def titleNodes  = getNewPageNodes(getTutorialNode(nodo))
         def pane = tomui.createEmptyGridBagPanel()
@@ -191,6 +193,48 @@ class ToM{
             pane.add(button, tomui.GBC)
         }
         myP.add(pane, tomui.GBC)
+    }
+    
+    def static showTutorials(mapa){
+        def myP = tomui.getContentPaneFromMyTab(tabName, true) 
+        myP.removeAll()
+        tomui.resizeContentPanel(myP,tomui.maxContentPaneHeigth)
+        addTutorialsPane(myP, mapa)
+        tomui.adjustHeight(myP, true)   
+    }
+
+    def static addTutorialsPane(myP, mapa){
+        def nodosTutoriales = mapa.root.find{it.style.name == styles.tutorial}
+        if ( nodosTutoriales.size() > 1 ){
+            def pane = tomui.createEmptyGridBagPanel()
+            addPageTitle(myP, "Tutorials present in '${mapa.name}' map".toString())
+            nodosTutoriales.each{ nT ->
+                def title = nT.text
+                def bttnAction   = { e -> 
+                    def tutNodes = getTutNodes(nT)
+                    if(tutNodes) {
+                        fillContentPane(myP, tutNodes)
+                    } else {
+                        ui.informationMessage( "no tutorial components(nodes) found for tutorial '${nT.text}'".toString() )
+                    }
+                }
+                def button = tomui.createButton(title, bttnAction)
+                pane.add(button, tomui.GBC)
+            }
+            def stopButton = tomui.createButton('Exit tutorial', {tomui.closeTab(tabName)})
+            pane.add(stopButton, tomui.GBC)
+            myP.add(pane, tomui.GBC)
+        } else if ( nodosTutoriales.size() == 1 ) {
+            def nT = nodosTutoriales[0]
+            def tutNodes = getTutNodes(nT)
+            if(tutNodes) {
+                fillContentPane(myP, tutNodes)
+            } else {
+                ui.informationMessage( "no tutorial components(nodes) found for tutorial '${nT.text}'".toString() )
+            }
+        } else {
+            ui.informationMessage( "no tutorial found in '${mapa.name}' map".toString())
+        }
     }
     
     def static addGotoPane(myP, nodos){
@@ -268,6 +312,15 @@ class ToM{
         return !iconos.contains('emoji-1F56F')
     }
 
+    def static getMapFromPath(filePath, withView){
+        if(exists(filePath)){
+            def m = c.mapLoader(filePath)
+            if(withView) m.withView()
+            return m.load()
+        }
+    }
+
+    def static exists(String path){new File(path).isFile()}
 
     // end:
     
