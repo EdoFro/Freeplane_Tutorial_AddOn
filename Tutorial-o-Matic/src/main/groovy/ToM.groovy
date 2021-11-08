@@ -26,6 +26,8 @@ class ToM{
         goto      : 'ToM_goto'     ,
         action    : 'ToM_menuAction',
         groovy    : 'ToM_groovy'    ,
+        copyPaste : 'ToM_copy'      ,
+        select    : 'ToM_select'    ,
     ]
     
     static final exeHowIcons = ['emoji-1F507', 'emoji-2328', 'emoji-1F5B1']
@@ -91,6 +93,12 @@ class ToM{
                 case styles.groovy:
                     addGroovyPane(myPanel, tutNode)
                     break
+                case styles.copyPaste:
+                    addPastePane(myPanel, tutNode)
+                    break
+                case styles.select:
+                    addSelectPane(myPanel, tutNode)
+                    break
                 default:
                     ui.informationMessage('node style not defined')
                     break
@@ -102,9 +110,14 @@ class ToM{
         tomui.adjustHeight(myPanel, doClear)
     }
     
+    def static fillPage(myP, nodo, included, doClear){
+        def nextNodes = getNextTutNodes(nodo, included)
+        fillContentPane(myP, nextNodes, doClear)
+    }
+    
     // end:
     
-    // region: component node to tutorial
+    // region: components nodes to tutorial
     
     def static addNotes(myP, nodos){
         nodos.each{n ->
@@ -136,12 +149,6 @@ class ToM{
         def nextButtonPanel = tomui.getNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip , bttnAction, tocLabel, tocToolTip, tocBttnAction)
         myP.add(nextButtonPanel, tomui.GBC)
     }
-    
-    def static fillPage(myP, nodo, included, doClear){
-        def nextNodes = getNextTutNodes(nodo, included)
-        fillContentPane(myP, nextNodes, doClear)
-    }
-    
     
     def static addShowMenuItemPane(myP, nodos){
         nodos.findAll{n -> toma.hasAction(n)}.each{nodo ->
@@ -249,8 +256,7 @@ class ToM{
     }
     
     def static addGroovyPane(myP, nodoT){
-        //TODO: addGroovyPane
-        def enabled = enableBttn(nodoT)
+        def enabled = !disableBttn(nodoT)
         nodoT.children.findAll{n -> WSE.isGroovyNode(n)}.each{nodo ->
             def script = WSE.scriptFromNode(nodo)
             if (script){
@@ -283,7 +289,7 @@ class ToM{
         def msgHtml = nodo.note?tomui.getHtmlFromNote(nodo):null
         def bttnText    = 'Execute'
         def bttnToolTip =  "Click to execute the command on the selected nodes"
-        def enabled = enableBttn(nodo)
+        def enabled = !disableBttn(nodo)
         def exeHow  = exeActionsHow(nodo)
         def bttnAction = { e ->
                 def bttn = e.source
@@ -306,10 +312,73 @@ class ToM{
         }
     }
     
-    def static enableBttn(nodo){
+    def static disableBttn(nodo){
         def iconos = nodo.icons.icons
-        return !iconos.contains('emoji-1F56F')
+        return iconos.contains('emoji-1F56F')
     }
+
+    def static addPastePane(myP, nodoSource){
+        def enabled     = !disableBttn(nodoSource)
+        def msgHtml     = "Click to paste the example nodes to the selected node"
+        def bttnText    = "Insert nodes"
+        def bttnToolTip = "Click to paste the example nodes to the selected node"
+        def bttnAction  = { e ->
+            def bttn = e.source
+            bttn.setEnabled(enabled)
+            def nodoTarget = c.selected
+            nodoSource.children.each{n ->
+                nodoTarget.appendBranch(n)
+            }
+            def idSource = ( nodoSource.findAll() - nodoSource )*.id
+            def idTarget = ( nodoTarget.findAll() - nodoTarget )*.id
+            for (def i = 0; i < idSource.size() ; i++){
+                myP.idDictionary[ idSource[i] ] = idTarget[i]
+            }
+        }
+        def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+        myP.add(buttonPanel, tomui.GBC)
+    }
+
+    def static addSelectPane(myP, nodo){
+        def enabled     = !disableBttn(nodo)
+        def msgHtml     = "Click to select the node(s)"
+        def bttnText    = "Select node(s)"
+        def bttnToolTip = "Click to select the nodes"
+        def bttnAction  = { e ->
+            def bttn = e.source
+            bttn.setEnabled(enabled)
+            def nodos = []
+            (nodo.findAll()- nodo).each{ n ->
+                //get list of clones ids
+                uiMsg("n.Id ${n.id}")
+                def clonesIds = n.getNodesSharingContent()*.id
+                uiMsg("clonesIds $clonesIds")
+                //intersect with list of dist.keySet
+                def keySet = myP.idDictionary.keySet()
+                uiMsg("keySet $keySet")
+                def sourceId = keySet.intersect(clonesIds)
+                uiMsg("sourceId $sourceId")
+                //get Target id 
+                def targetId = sourceId?myP.idDictionary[ sourceId[0] ]:null
+                uiMsg("targetId $targetId")
+                //get node
+                def targetNode = targetId?c.selected.map.node(targetId):null
+                uiMsg("targetNode $targetNode")
+                //add node to nodes list
+                if(targetNode) nodos += targetNode
+                uiMsg("nodos $nodos")
+            }
+            //select nodes list
+            uiMsg("nodos $nodos")
+            c.select(nodos)
+        }
+        def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+        myP.add(buttonPanel, tomui.GBC)
+    }
+
+    // end:
+
+    // region: Getting map
 
     def static getMapFromPath(filePath, withView){
         if(exists(filePath)){
@@ -323,4 +392,13 @@ class ToM{
 
     // end:
     
+    // region: help / debug
+    
+    def static uiMsg(texto){
+       // ui.informationMessage(texto.toString())
+    }
+
+    // end:
+
+
 }
