@@ -3,11 +3,16 @@ package edofro.tutorialomatic
 import edofro.tutorialomatic.ToM_ui      as tomui
 import edofro.tutorialomatic.ToM_actions as toma
 
+import edofro.menuomatic.WSE_redux              as WSE
+
 import org.freeplane.core.ui.components.UITools as ui
+import org.freeplane.plugin.script.proxy.ScriptUtils
+
 
 
 class ToM{
 
+    static final c                     = ScriptUtils.c()
     static final String tabName        = 'Tutorial'
 
     static final Map styles = [
@@ -20,6 +25,7 @@ class ToM{
         toc       : 'ToM_TOC'      ,
         goto      : 'ToM_goto'     ,
         action    : 'ToM_menuAction',
+        groovy    : 'ToM_groovy'    ,
     ]
     
     static final exeHowIcons = ['emoji-1F507', 'emoji-2328', 'emoji-1F5B1']
@@ -81,6 +87,9 @@ class ToM{
                     break
                 case styles.action:
                     addActionPane(myPanel, tutNode)
+                    break
+                case styles.groovy:
+                    addGroovyPane(myPanel, tutNode)
                     break
                 default:
                     ui.informationMessage('node style not defined')
@@ -193,6 +202,32 @@ class ToM{
                 def bttnAction  = { e -> fillPage(myP, targetNode, true, true) }
             def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
             myP.add(buttonPanel, tomui.GBC)
+        }
+    }
+    
+    def static addGroovyPane(myP, nodoT){
+        //TODO: addGroovyPane
+        def enabled = enableBttn(nodoT)
+        nodoT.children.findAll{n -> WSE.isGroovyNode(n)}.each{nodo ->
+            def script = WSE.scriptFromNode(nodo)
+            if (script){
+                def scrText     = script + "\n c.statusInfo = '---- script executed ----'".toString()
+                def msgHtml     = nodo.text //TODO: mejorar texto
+                def bttnText    = 'Execute script'
+                def bttnToolTip = "Click to execute script on selected nodes"
+                def bttnAction  = { e ->
+                        def bttn = e.source
+                        bttn.setEnabled(enabled)
+                        c.script(scrText, "groovy").executeOn(c.selected)
+                    }
+                
+                def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+                buttonPanel.metaClass.pending = false
+                myP.add(buttonPanel, tomui.GBC)
+            } else {
+                def textoHtml = '<html><body><p>Command not encountered in Menu for active map</p></body></html>'
+                myP.add(tomui.createInstructionsPane(textoHtml), tomui.GBC)
+            }
         }
     }
     

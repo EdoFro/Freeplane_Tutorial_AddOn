@@ -92,7 +92,26 @@ class ToM_ui{
                 html = nodo.plainNote.startsWith('=')?nodo.note.plain:nodo.note.html
                 break
             case 'markdown':
-                html = "<html> ${Marked.marked(nodo.note.plain)} </html>"
+                //html = "<html> ${Marked.marked(nodo.note.plain)} </html>"
+                html = """<html>
+                            <style>
+                                table {border: 0; border-spacing: 0;}
+                                th, td {border: 1px solid;}
+                                pre {
+                                    background-color: rgb(230, 230, 230);
+                                    border: 1px solid rgb(0, 0, 0);
+                                    display: block;
+                                    padding: 10px;
+                                }
+                                code {
+                                    font-family: Consolas,"courier new";
+                                    color: rgb(0, 80, 0);
+                                }
+                            </style>
+                            <body>
+                                ${Marked.marked(nodo.note.plain)} 
+                            </body>
+                        </html>"""                
                 break
             default:
                 html = "Node's note not recognized"
@@ -237,7 +256,7 @@ class ToM_ui{
         //nextButtonAction == null --> no 'Next page' button
     def static getNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip, nextButtonAction, tocLabel = '', tocToolTip = '', tocButtonAction = null ){
         def panel = swing.panel(
-            border      : new LineBorder(Color.gray, 1),
+            //border      : new LineBorder(Color.gray, 1),
             name        : myNextPanelName,
         ) {
                 borderLayout()
