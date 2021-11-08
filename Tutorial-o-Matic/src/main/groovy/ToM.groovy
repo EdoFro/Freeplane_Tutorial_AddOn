@@ -205,9 +205,10 @@ class ToM{
 
     def static addTutorialsPane(myP, mapa){
         def nodosTutoriales = mapa.root.find{it.style.name == styles.tutorial}
-        if ( nodosTutoriales.size() > 1 ){
+        if ( nodosTutoriales.size() != 1 ){
             def pane = tomui.createEmptyGridBagPanel()
-            addPageTitle(myP, "Tutorials present in '${mapa.name}' map".toString())
+            def pre  = nodosTutoriales.size() == 0 ? "No t" : "T"
+            addPageTitle(myP, "${pre}utorials present in '${mapa.name}' map".toString())
             nodosTutoriales.each{ nT ->
                 def title = nT.text
                 def bttnAction   = { e -> 
@@ -224,7 +225,7 @@ class ToM{
             def stopButton = tomui.createButton('Exit tutorial', {tomui.closeTab(tabName)})
             pane.add(stopButton, tomui.GBC)
             myP.add(pane, tomui.GBC)
-        } else if ( nodosTutoriales.size() == 1 ) {
+        } else {
             def nT = nodosTutoriales[0]
             def tutNodes = getTutNodes(nT)
             if(tutNodes) {
@@ -232,8 +233,6 @@ class ToM{
             } else {
                 ui.informationMessage( "no tutorial components(nodes) found for tutorial '${nT.text}'".toString() )
             }
-        } else {
-            ui.informationMessage( "no tutorial found in '${mapa.name}' map".toString())
         }
     }
     
