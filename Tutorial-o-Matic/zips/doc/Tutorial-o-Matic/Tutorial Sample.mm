@@ -1,9 +1,9 @@
 <map version="freeplane 1.9.8">
-<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Tutorial Sample" FOLDED="false" ID="ID_452131666" STYLE="oval">
 <font SIZE="18"/>
 <hook NAME="MapStyle">
-    <properties save_modification_times="false" save_last_visited_node="default" mapUsesOwnSaveOptions="true" fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="default"/>
+    <properties mapUsesOwnSaveOptions="true" save_last_visited_node="default" save_modification_times="false" show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="default"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1611611797" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -31,17 +31,37 @@
 <stylenode TEXT="ToM-Tutorial" ID="ID_1317696283" ICON_SIZE="20 pt" BACKGROUND_COLOR="#f3d0c5" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 </stylenode>
-<stylenode TEXT="ToM_note" ID="ID_1031812973" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
+<stylenode TEXT="ToM_TOC" ID="ID_1160910212" ICON_SIZE="12 pt" BACKGROUND_COLOR="#f5ff95" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
-<icon BUILTIN="emoji-1F4F0"/>
+<icon BUILTIN="emoji-25B6"/>
+</stylenode>
+<stylenode TEXT="ToM_newPage" ID="ID_1643366420" ICON_SIZE="12 pt" BACKGROUND_COLOR="#95d9ff" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="emoji-25B6"/>
 </stylenode>
 <stylenode TEXT="ToM_nextPage" ID="ID_318145687" ICON_SIZE="12 pt" BACKGROUND_COLOR="#ff9595" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="emoji-25B6"/>
 </stylenode>
+<stylenode TEXT="ToM_note" ID="ID_1031812973" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="emoji-1F4F0"/>
+</stylenode>
 <stylenode TEXT="ToM_showMenu" ID="ID_723735694" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="emoji-1F5B1"/>
+</stylenode>
+<stylenode TEXT="ToM_goto" ID="ID_1953218925" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="emoji-2197"/>
+</stylenode>
+<stylenode TEXT="ToM_menuAction" ID="ID_1981660950" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="emoji-1F525"/>
+</stylenode>
+<stylenode TEXT="ToM_groovy" ID="ID_1578586059" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="emoji-1F951"/>
 </stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
@@ -83,6 +103,7 @@
     </p>
   </body>
 </html></richcontent>
+<node TEXT="Welcome" STYLE_REF="ToM_newPage" ID="ID_577559944"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1123043625">
 <node TEXT="hi! this is a demo" ID="ID_1188290578"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -97,8 +118,7 @@
       This is a first <b>demo version </b>of an addon that can be used to build tutorials in <strong style="font-size: x-large; text-decoration: underline"><font size="x-large"><u>Freeplane</u></font></strong>.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="Attention!" ID="ID_702695013"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -133,8 +153,7 @@
       If you know how to correct this bugs please let me know!!!
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="Click next page" ID="ID_1743184147"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -143,14 +162,15 @@
   </head>
   <body style="font-size: 20; font-family: Calibri">
     <p>
-      Click the &quot;<u>Next page</u>&quot; button to go to continue:
+      Click the &quot;<u>Next page</u>&quot; button to continue:
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
-<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_1881451090"/>
+<node TEXT="In this tutorial" STYLE_REF="ToM_newPage" ID="ID_512380014"/>
+<node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_1629678071"/>
+<node TEXT="Introduction" STYLE_REF="ToM_newPage" ID="ID_1881451090"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1694131550">
 <node TEXT="in the next pages" ID="ID_1081584542"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -191,8 +211,7 @@
       </li>
     </ul>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="tutorial content is taken from THIS map" ID="ID_1780665321"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -225,9 +244,9 @@
 </html></richcontent>
 </node>
 </node>
-<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_42748761"/>
 </node>
 <node TEXT="example: using Markdown" ID="ID_989725315">
+<node TEXT="Calvin and Hobbes example" STYLE_REF="ToM_newPage" ID="ID_42748761"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_410426435">
 <node TEXT="calvin and hobbes" ID="ID_1103693889"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text># Calvin and Hobbes
@@ -327,9 +346,9 @@ An officially licensed children&apos;s textbook entitled [Teaching with Calvin a
 </richcontent>
 </node>
 </node>
-<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_1331328100"/>
 </node>
 <node TEXT="example: using Markdown 2" ID="ID_468555699">
+<node TEXT="Other examples" STYLE_REF="ToM_newPage" ID="ID_1331328100"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_684915663">
 <node TEXT="text with animated gif" ID="ID_738762762"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>## How to xxxx&#xd;
@@ -381,9 +400,324 @@ For more information look: [Freeplane Homepage](https://www.freeplane.org/wiki/i
 </richcontent>
 </node>
 </node>
-<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_1895824317"/>
+<node TEXT="GOTO" STYLE_REF="ToM_goto" ID="ID_1817922386">
+<node TEXT="User directory" ID="ID_1220004211" LINK="#ID_1462257095"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      For more information about where the user directory is located click on the button bellow:
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node TEXT="example: applying actions on selected nodes" ID="ID_1394638331">
+<node TEXT="Executing actions on selected nodes" STYLE_REF="ToM_newPage" ID="ID_992755103"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_396028817">
+<node TEXT="execute actions" ID="ID_1314388407"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Here are some example on how you can apply some menu actions on the selected nodes:
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="example with menu" STYLE_REF="ToM_menuAction" ID="ID_1636577936">
+<icon BUILTIN="emoji-1F56F"/>
+<icon BUILTIN="emoji-1F5B1"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This example shows some menu actions applied using the menus
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="New child node" ID="ID_621052079" LINK="menuitem:_NewChildAction"/>
+<node TEXT="I am happy" ID="ID_105632108" LINK="menuitem:_IconAction.ksmiletris"/>
+</node>
+<node TEXT="example with keyboard" STYLE_REF="ToM_menuAction" ID="ID_422759127">
+<icon BUILTIN="emoji-1F56F"/>
+<icon BUILTIN="emoji-2328"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This example shows some actions applied using hot Keys (or the menus commands)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="Bold" ID="ID_960114216" LINK="menuitem:_BoldAction"/>
+<node TEXT="Filter toolbar" ID="ID_566550762" LINK="menuitem:_ShowFilterToolbarAction"/>
+<node TEXT="Map overview" ID="ID_929348152" LINK="menuitem:_ToggleMapOverviewAction"/>
+</node>
+<node TEXT="example muted" STYLE_REF="ToM_menuAction" ID="ID_126976753">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This example shows some actions applied without showing any message (muted)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="Map overview" ID="ID_1163331539" LINK="menuitem:_ToggleMapOverviewAction"/>
+</node>
+</node>
+<node TEXT="example scripts" ID="ID_951603887">
+<node TEXT="Executing Scripts on selected nodes" STYLE_REF="ToM_newPage" ID="ID_1823886459"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1988369690">
+<node TEXT="execute actions" ID="ID_501440926"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Here are some example on how you can apply some scripts on the selected node:
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1613048778">
+<icon BUILTIN="emoji-1F56F"/>
+<node TEXT="Ejemplo optionPane.groovy" ID="ID_600525754"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      import groovy.swing.SwingBuilder
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      import javax.swing.*
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def swingBuilder = new SwingBuilder()
+    </p>
+    <p>
+      def options = ['1995', '2003', '2007']
+    </p>
+    <p>
+      def pane = swingBuilder.optionPane(message:'Groovy starts in ', selectionValues:options, optionType:JOptionPane.CLOSED_OPTION)
+    </p>
+    <p>
+      def dialog = pane.createDialog(null, 'worthless message')
+    </p>
+    <p>
+      def a=dialog.show()
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //pane.properties.findAll{it.value.toString().contains('2003')}
+    </p>
+    <p>
+      ui.informationMessage(&quot;the selected string was: '${pane.inputValue}'&quot;.toString())
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="reverse node&apos;s text" ID="ID_1686194177"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      def texto = node.text
+    </p>
+    <p>
+      node.text = texto.reverse()
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1161008987">
+<node TEXT="Ejemplo optionPane.groovy" ID="ID_536747131"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      import groovy.swing.SwingBuilder
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      import javax.swing.*
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def swingBuilder = new SwingBuilder()
+    </p>
+    <p>
+      def options = ['1995', '2003', '2007']
+    </p>
+    <p>
+      def pane = swingBuilder.optionPane(message:'Groovy starts in ', selectionValues:options, optionType:JOptionPane.CLOSED_OPTION)
+    </p>
+    <p>
+      def dialog = pane.createDialog(null, 'worthless message')
+    </p>
+    <p>
+      def a=dialog.show()
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //pane.properties.findAll{it.value.toString().contains('2003')}
+    </p>
+    <p>
+      ui.informationMessage(&quot;the selected string was: '${pane.inputValue}'&quot;.toString())
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="reverse node&apos;s text (all selected nodes)" ID="ID_1219798653"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      c.selecteds.each{nodo -&gt;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def texto = nodo.text
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;nodo.text = texto.reverse()
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html>
+</richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="ejemplo" ID="ID_464031118"/>
+<node TEXT="eduardo" ID="ID_1278090560"/>
+<node TEXT="script de prueba que requiere permiso readingFiles" ID="ID_917088007"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      def nodo = node.createChild(&quot;node with link to user directory&quot;)
+    </p>
+    <p>
+      nodo.link.file = c.userDirectory
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="node with link to user directory" ID="ID_677602751"/>
+</node>
+</node>
 </node>
 <node TEXT="example: how to node format tips" ID="ID_752161007">
+<node TEXT="Showing menu commands" STYLE_REF="ToM_newPage" ID="ID_1895824317"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1590490702">
 <node TEXT="Some FREEPLANE tips" ID="ID_963405561"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -501,9 +835,9 @@ Then click the &apos;Show me&apos; button. You will see that it won&apos;t be ab
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_718600942">
 <node TEXT="skunk" ID="ID_1556281748" LINK="menuitem:_IconAction.emoji-1F9A8"/>
 </node>
-<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_1930361476"/>
 </node>
-<node TEXT="TODOs" ID="ID_418119278">
+<node TEXT="TODOs" FOLDED="true" ID="ID_418119278">
+<node TEXT="Next steps" STYLE_REF="ToM_newPage" ID="ID_1930361476"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_416147866">
 <node TEXT="next steps" ID="ID_1596967423"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>## Next steps&#xd;
@@ -528,9 +862,9 @@ Then click the &apos;Show me&apos; button. You will see that it won&apos;t be ab
 </richcontent>
 </node>
 </node>
-<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_948535523"/>
 </node>
-<node TEXT="Bye" ID="ID_1830010611">
+<node TEXT="Bye" FOLDED="true" ID="ID_1830010611">
+<node TEXT="Bye!!" STYLE_REF="ToM_newPage" ID="ID_948535523"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1602449098">
 <node TEXT="bye" ID="ID_188196774"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -552,6 +886,112 @@ Then click the &apos;Show me&apos; button. You will see that it won&apos;t be ab
     </p>
   </body>
 </html></richcontent>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="ToM Builder" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_815218670">
+<node TEXT="Bienvenida" ID="ID_1556820541">
+<node TEXT="Tutorial-o-Matic Builder" STYLE_REF="ToM_newPage" ID="ID_1622725650"/>
+<node TEXT="Introduction" STYLE_REF="ToM_note" ID="ID_1952124688">
+<node TEXT="agregar texto" ID="ID_1300647360" BACKGROUND_COLOR="#ffff00">
+<icon BUILTIN="emoji-1F532"/>
+</node>
+</node>
+<node TEXT="Table of Contents" STYLE_REF="ToM_TOC" ID="ID_1950219903"/>
+</node>
+<node TEXT="Iniciar mapa" ID="ID_344188292">
+<node TEXT="Map Set Up" STYLE_REF="ToM_newPage" ID="ID_1020906955"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1392318595">
+<node TEXT="agregar texto" ID="ID_1101054363" BACKGROUND_COLOR="#ffff00">
+<icon BUILTIN="emoji-1F532"/>
+</node>
+</node>
+<node TEXT="Action" ID="ID_804030771" BACKGROUND_COLOR="#00ff00">
+<node TEXT="crea mapa nuevo" ID="ID_1404510554" BACKGROUND_COLOR="#ffff00">
+<icon BUILTIN="emoji-1F532"/>
+</node>
+<node TEXT="importa estilos" ID="ID_1217513951" BACKGROUND_COLOR="#ffff00">
+<icon BUILTIN="emoji-1F532"/>
+</node>
+<node TEXT="crea nodo principal de Tutorial" ID="ID_1006736708" BACKGROUND_COLOR="#ffff00">
+<icon BUILTIN="emoji-1F532"/>
+</node>
+</node>
+</node>
+<node TEXT="Tutorial Guiado" ID="ID_1030751858">
+<node TEXT="info" ID="ID_475304501"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      tutorial paso a paso que permite ir creando un tutorial de ejemplo
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="tutorial de una página y sólo con texto" ID="ID_679702643" BACKGROUND_COLOR="#ffff00"/>
+<node TEXT="multipaginas sin títulos" ID="ID_792762417" BACKGROUND_COLOR="#ffff00"/>
+<node TEXT="multipáginas con títulos" ID="ID_1869447329" BACKGROUND_COLOR="#ffff00"/>
+<node TEXT="tutorial de una página con mostrar menu" ID="ID_1289859933" BACKGROUND_COLOR="#ffff00"/>
+<node TEXT="etc" ID="ID_1006431132"/>
+</node>
+<node TEXT="Panel Tutorial-o-Matic" ID="ID_454234813">
+<node TEXT="Tutorial-o-Matic" STYLE_REF="ToM_newPage" ID="ID_1996803461"/>
+<node TEXT="Panel con botones" ID="ID_753427824" BACKGROUND_COLOR="#00ff00">
+<node TEXT="botones a tipos de nodo" ID="ID_1380421725" BACKGROUND_COLOR="#ffff00"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      action
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="botones de ayuda que llaman a explicación en tutorial" ID="ID_936858261" BACKGROUND_COLOR="#ffff00"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      go
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node TEXT="Explicación cada botón" ID="ID_1034502703">
+<node TEXT="por cada botón" ID="ID_1850029380">
+<node TEXT="título botón" STYLE_REF="ToM_newPage" ID="ID_651312727"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_813390568">
+<node TEXT="agregar texto" ID="ID_259110913" BACKGROUND_COLOR="#ffff00">
+<icon BUILTIN="emoji-1F532"/>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      explicación con imágenes y todo
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="ver como usar imágenes en disco" ID="ID_1381233703" BACKGROUND_COLOR="#ffff00"/>
+</node>
+</node>
+<node TEXT="inserta ejemplo" ID="ID_1737687396" BACKGROUND_COLOR="#ffff00"/>
+<node TEXT="botón acción" ID="ID_970502233" BACKGROUND_COLOR="#ffff00"/>
+<node TEXT="botón preview" ID="ID_1733504062" BACKGROUND_COLOR="#00ff00"/>
+<node TEXT="botón Go" ID="ID_223976735" BACKGROUND_COLOR="#00ff00">
+<node TEXT="a panel ToM" ID="ID_772384215"/>
 </node>
 </node>
 </node>
