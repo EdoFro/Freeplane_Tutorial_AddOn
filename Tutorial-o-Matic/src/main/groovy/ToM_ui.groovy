@@ -270,7 +270,7 @@ class ToM_ui{
                             constraints : WEST,
                             margin      : new Insets(10,15,10,15),
                             toolTipText : closeToolTip,
-                            actionPerformed : {TabPane.removeTab(tabName)},
+                            actionPerformed : {closeTab(tabName)},
                         )
                         if(tocButtonAction && nextButtonAction){
                             button(
@@ -293,6 +293,10 @@ class ToM_ui{
                     }
         }
         return panel
+    }
+
+    def static closeTab(tabName) {
+        TabPane.removeTab(tabName)
     }
 
 
