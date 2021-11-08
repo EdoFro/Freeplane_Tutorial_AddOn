@@ -3,7 +3,7 @@
 <node TEXT="Tutorial Sample" FOLDED="false" ID="ID_452131666" STYLE="oval">
 <font NAME="SansSerif" SIZE="18"/>
 <hook NAME="MapStyle">
-    <properties save_modification_times="false" save_last_visited_node="default" mapUsesOwnSaveOptions="true" fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="default"/>
+    <properties mapUsesOwnSaveOptions="true" save_last_visited_node="default" save_modification_times="false" show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="default"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1611611797" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -63,6 +63,14 @@
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="emoji-1F951"/>
 </stylenode>
+<stylenode TEXT="ToM_copy" ID="ID_691299161" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="emoji-1F4CB"/>
+</stylenode>
+<stylenode TEXT="ToM_select" ID="ID_1792407381" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="emoji-2B55"/>
+</stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000" STYLE="oval" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="10 pt">
@@ -104,6 +112,7 @@
     </p>
   </body>
 </html></richcontent>
+<font NAME="SansSerif"/>
 <node TEXT="Welcome" STYLE_REF="ToM_newPage" ID="ID_577559944"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1123043625">
 <node TEXT="hi! this is a demo" ID="ID_1188290578"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -244,6 +253,247 @@
   </body>
 </html></richcontent>
 </node>
+</node>
+<node TEXT="copiar" STYLE_REF="ToM_copy" ID="ID_1811804685">
+<icon BUILTIN="emoji-1F56F"/>
+<font NAME="SansSerif"/>
+<node TEXT="in the next pages" ID="ID_223053380"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body style="font-size: 20; font-family: Calibri">
+    <p>
+      In the next pages you will see:
+    </p>
+    <ul>
+      <li>
+        An example of a note in markdown that includes tables and images
+
+        <ul>
+          <li>
+            It has also links to webpages, but I don't know how to make them work
+          </li>
+          <li>
+            The content is just a demo markdown document I made a time ago about the &quot;Calvin and Hobbes&quot; comic strip. It has no relation with Freeplane, but it helps to see what can be shown
+          </li>
+        </ul>
+      </li>
+      <li>
+        The page after that has three markdown examples with animated gif, code block and a table with images
+
+        <ul>
+          <li>
+            I don't know why (at least in my computer) I can see the images in the nodes notes but they are not shown in the Tutorial panel
+          </li>
+        </ul>
+      </li>
+      <li>
+        The next section has pages with examples about teaching how to make some format modifications to a selected node and other Freeplane tips
+      </li>
+      <li>
+        The last page shows a list of &quot;next steps&quot; and &quot;nice to haves&quot; for this AddOn
+      </li>
+    </ul>
+  </body>
+</html></richcontent>
+<node TEXT="tutorial content is taken from THIS map" ID="ID_1608091268">
+<icon BUILTIN="very_positive"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body style="font-size: 20; font-family: Calibri">
+    <p>
+      The whole information shown in this tutorial is taken from the &quot;Tutorial Sample&quot; mindmap.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      If you modify it and relaunch the tutorial it will include those changes.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="text with code" ID="ID_1639145388" BACKGROUND_COLOR="#ff6666"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>## a codeBlock example&#xd;
+&#xd;
+Code: **&apos;pasar texto a nota e indicar formato Markdown&apos;**&#xd;
+&#xd;
+```groovy&#xd;
+// import org.freeplane.features.text.TextController&#xd;
+import org.freeplane.features.note.NoteController&#xd;
+&#xd;
+&#xd;
+def nodos = c.selecteds&#xd;
+&#xd;
+nodos.each{nodo -&gt;&#xd;
+    nodo.note = nodo.text&#xd;
+    setNoteMarkdown(nodo)&#xd;
+}&#xd;
+&#xd;
+def setNoteMarkdown(n){&#xd;
+    return NoteController.getController().setNoteContentType(n.delegate, &apos;markdown&apos;)&#xd;
+}&#xd;
+```&#xd;
+</text>
+</richcontent>
+<node TEXT="I am happy" ID="ID_1382141800" LINK="menuitem:_IconAction.ksmiletris"/>
+<node TEXT="Bold" ID="ID_74137496" LINK="menuitem:_BoldAction"/>
+</node>
+</node>
+<node TEXT="Click next page" ID="ID_983101556">
+<icon BUILTIN="very_positive"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body style="font-size: 20; font-family: Calibri">
+    <p>
+      Click the &quot;<u>Next page</u>&quot; button to go to the first example
+    </p>
+  </body>
+</html></richcontent>
+<font NAME="SansSerif"/>
+<node TEXT="Map overview" ID="ID_1589911673" LINK="menuitem:_ToggleMapOverviewAction"/>
+</node>
+</node>
+<node TEXT="Seleccionar" STYLE_REF="ToM_select" ID="ID_192914920">
+<icon BUILTIN="emoji-1F56F"/>
+<node ID="ID_1147779139" CONTENT_ID="ID_1589911673"/>
+</node>
+<node TEXT="copiar" STYLE_REF="ToM_copy" ID="ID_825992979">
+<icon BUILTIN="emoji-1F56F"/>
+<font NAME="SansSerif"/>
+<node TEXT="Ejemplo optionPane.groovy" ID="ID_1333234167"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      import groovy.swing.SwingBuilder
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      import javax.swing.*
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def swingBuilder = new SwingBuilder()
+    </p>
+    <p>
+      def options = ['1995', '2003', '2007']
+    </p>
+    <p>
+      def pane = swingBuilder.optionPane(message:'Groovy starts in ', selectionValues:options, optionType:JOptionPane.CLOSED_OPTION)
+    </p>
+    <p>
+      def dialog = pane.createDialog(null, 'worthless message')
+    </p>
+    <p>
+      def a=dialog.show()
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //pane.properties.findAll{it.value.toString().contains('2003')}
+    </p>
+    <p>
+      ui.informationMessage(&quot;the selected string was: '${pane.inputValue}'&quot;.toString())
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="reverse node&apos;s text" ID="ID_1301471763"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      def texto = node.text
+    </p>
+    <p>
+      node.text = texto.reverse()
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="script de prueba que requiere permiso readingFiles" ID="ID_482887649"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      def nodo = node.createChild(&quot;node with link to user directory&quot;)
+    </p>
+    <p>
+      nodo.link.file = c.userDirectory
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="node with link to user directory" ID="ID_1387619438"/>
+</node>
+</node>
+<node TEXT="Seleccionar" STYLE_REF="ToM_select" ID="ID_1094496450">
+<icon BUILTIN="emoji-1F56F"/>
+<node ID="ID_617706768" CONTENT_ID="ID_1382141800"/>
+<node ID="ID_738970261" CONTENT_ID="ID_1301471763"/>
+<node ID="ID_909404740" CONTENT_ID="ID_482887649"/>
+</node>
+<node TEXT="formatear" STYLE_REF="ToM_menuAction" ID="ID_1916604268">
+<icon BUILTIN="emoji-1F56F"/>
+<node TEXT="Bold" ID="ID_442086162" LINK="menuitem:_BoldAction"/>
+<node TEXT="Strike through" ID="ID_481864643" LINK="menuitem:_StrikeThroughAction"/>
+<node TEXT="Larger font" ID="ID_1400386391" LINK="menuitem:_IncreaseNodeFontAction"/>
+<node TEXT="Narrow hexagon" ID="ID_745613829" LINK="menuitem:_NodeShapeAction.narrow_hexagon"/>
+<node TEXT="robot" ID="ID_61882060" LINK="menuitem:_IconAction.emoji-1F916"/>
 </node>
 </node>
 <node TEXT="example: using Markdown" ID="ID_989725315">
@@ -993,8 +1243,379 @@ Then click the &apos;Show me&apos; button. You will see that it won&apos;t be ab
 </node>
 </node>
 </node>
-<node TEXT="otro vacío" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_346385320">
+<node TEXT="otro vacío" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_346385320">
 <font NAME="SansSerif"/>
+<node TEXT="in the next pages" ID="ID_1307765764"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body style="font-size: 20; font-family: Calibri">
+    <p>
+      In the next pages you will see:
+    </p>
+    <ul>
+      <li>
+        An example of a note in markdown that includes tables and images
+
+        <ul>
+          <li>
+            It has also links to webpages, but I don't know how to make them work
+          </li>
+          <li>
+            The content is just a demo markdown document I made a time ago about the &quot;Calvin and Hobbes&quot; comic strip. It has no relation with Freeplane, but it helps to see what can be shown
+          </li>
+        </ul>
+      </li>
+      <li>
+        The page after that has three markdown examples with animated gif, code block and a table with images
+
+        <ul>
+          <li>
+            I don't know why (at least in my computer) I can see the images in the nodes notes but they are not shown in the Tutorial panel
+          </li>
+        </ul>
+      </li>
+      <li>
+        The next section has pages with examples about teaching how to make some format modifications to a selected node and other Freeplane tips
+      </li>
+      <li>
+        The last page shows a list of &quot;next steps&quot; and &quot;nice to haves&quot; for this AddOn
+      </li>
+    </ul>
+  </body>
+</html></richcontent>
+<node TEXT="tutorial content is taken from THIS map" ID="ID_869565862">
+<icon BUILTIN="very_positive"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body style="font-size: 20; font-family: Calibri">
+    <p>
+      The whole information shown in this tutorial is taken from the &quot;Tutorial Sample&quot; mindmap.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      If you modify it and relaunch the tutorial it will include those changes.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="text with code" ID="ID_1618936837" BACKGROUND_COLOR="#ff6666"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>## a codeBlock example&#xd;
+&#xd;
+Code: **&apos;pasar texto a nota e indicar formato Markdown&apos;**&#xd;
+&#xd;
+```groovy&#xd;
+// import org.freeplane.features.text.TextController&#xd;
+import org.freeplane.features.note.NoteController&#xd;
+&#xd;
+&#xd;
+def nodos = c.selecteds&#xd;
+&#xd;
+nodos.each{nodo -&gt;&#xd;
+    nodo.note = nodo.text&#xd;
+    setNoteMarkdown(nodo)&#xd;
+}&#xd;
+&#xd;
+def setNoteMarkdown(n){&#xd;
+    return NoteController.getController().setNoteContentType(n.delegate, &apos;markdown&apos;)&#xd;
+}&#xd;
+```&#xd;
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="Click next page" ID="ID_976338645">
+<icon BUILTIN="very_positive"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body style="font-size: 20; font-family: Calibri">
+    <p>
+      Click the &quot;<u>Next page</u>&quot; button to go to the first example
+    </p>
+  </body>
+</html></richcontent>
+<font NAME="SansSerif"/>
+</node>
+</node>
+<node TEXT="scripts apoyo" POSITION="right" ID="ID_874667707">
+<node TEXT="prueba metaClass" ID="ID_556782223"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      import edofro.tutorialomatic.ToM_ui as tomui
+    </p>
+    <p>
+      import edofro.tutorialomatic.ToM&nbsp;&nbsp;&nbsp;&nbsp;as tom
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def p = tomui.getTabContentPane(tom.tabName)
+    </p>
+    <p>
+      return p.idDictionary //.keySet()&nbsp;&nbsp;&nbsp;&nbsp;//.values()
+    </p>
+  </body>
+</html>
+</richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="SansSerif"/>
+</node>
+<node TEXT="xx" ID="ID_1188620330">
+<font NAME="SansSerif"/>
+<node TEXT="in the next pages" ID="ID_1168202419"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body style="font-size: 20; font-family: Calibri">
+    <p>
+      In the next pages you will see:
+    </p>
+    <ul>
+      <li>
+        An example of a note in markdown that includes tables and images
+
+        <ul>
+          <li>
+            It has also links to webpages, but I don't know how to make them work
+          </li>
+          <li>
+            The content is just a demo markdown document I made a time ago about the &quot;Calvin and Hobbes&quot; comic strip. It has no relation with Freeplane, but it helps to see what can be shown
+          </li>
+        </ul>
+      </li>
+      <li>
+        The page after that has three markdown examples with animated gif, code block and a table with images
+
+        <ul>
+          <li>
+            I don't know why (at least in my computer) I can see the images in the nodes notes but they are not shown in the Tutorial panel
+          </li>
+        </ul>
+      </li>
+      <li>
+        The next section has pages with examples about teaching how to make some format modifications to a selected node and other Freeplane tips
+      </li>
+      <li>
+        The last page shows a list of &quot;next steps&quot; and &quot;nice to haves&quot; for this AddOn
+      </li>
+    </ul>
+  </body>
+</html></richcontent>
+<node TEXT="tutorial content is taken from THIS map" ID="ID_263115753">
+<icon BUILTIN="very_positive"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body style="font-size: 20; font-family: Calibri">
+    <p>
+      The whole information shown in this tutorial is taken from the &quot;Tutorial Sample&quot; mindmap.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      If you modify it and relaunch the tutorial it will include those changes.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="text with code" ID="ID_185758512" BACKGROUND_COLOR="#ff6666"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>## a codeBlock example&#xd;
+&#xd;
+Code: **&apos;pasar texto a nota e indicar formato Markdown&apos;**&#xd;
+&#xd;
+```groovy&#xd;
+// import org.freeplane.features.text.TextController&#xd;
+import org.freeplane.features.note.NoteController&#xd;
+&#xd;
+&#xd;
+def nodos = c.selecteds&#xd;
+&#xd;
+nodos.each{nodo -&gt;&#xd;
+    nodo.note = nodo.text&#xd;
+    setNoteMarkdown(nodo)&#xd;
+}&#xd;
+&#xd;
+def setNoteMarkdown(n){&#xd;
+    return NoteController.getController().setNoteContentType(n.delegate, &apos;markdown&apos;)&#xd;
+}&#xd;
+```&#xd;
+</text>
+</richcontent>
+<node TEXT="I am happy" ID="ID_807390466" LINK="menuitem:_IconAction.ksmiletris" STYLE="narrow_hexagon">
+<icon BUILTIN="emoji-1F916"/>
+<font SIZE="11" BOLD="true" STRIKETHROUGH="true"/>
+</node>
+<node TEXT="Bold" ID="ID_672731287" LINK="menuitem:_BoldAction"/>
+</node>
+</node>
+<node TEXT="Click next page" ID="ID_1723364892">
+<icon BUILTIN="very_positive"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body style="font-size: 20; font-family: Calibri">
+    <p>
+      Click the &quot;<u>Next page</u>&quot; button to go to the first example
+    </p>
+  </body>
+</html></richcontent>
+<font NAME="SansSerif"/>
+<node TEXT="Map overview" ID="ID_1151601939" LINK="menuitem:_ToggleMapOverviewAction">
+<node TEXT="Ejemplo optionPane.groovy" ID="ID_1722592545"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      import groovy.swing.SwingBuilder
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      import javax.swing.*
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def swingBuilder = new SwingBuilder()
+    </p>
+    <p>
+      def options = ['1995', '2003', '2007']
+    </p>
+    <p>
+      def pane = swingBuilder.optionPane(message:'Groovy starts in ', selectionValues:options, optionType:JOptionPane.CLOSED_OPTION)
+    </p>
+    <p>
+      def dialog = pane.createDialog(null, 'worthless message')
+    </p>
+    <p>
+      def a=dialog.show()
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //pane.properties.findAll{it.value.toString().contains('2003')}
+    </p>
+    <p>
+      ui.informationMessage(&quot;the selected string was: '${pane.inputValue}'&quot;.toString())
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="reverse node&apos;s text" ID="ID_621423925" STYLE="narrow_hexagon">
+<icon BUILTIN="emoji-1F916"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      def texto = node.text
+    </p>
+    <p>
+      node.text = texto.reverse()
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+<font SIZE="11" BOLD="true" STRIKETHROUGH="true"/>
+</node>
+<node TEXT="script de prueba que requiere permiso readingFiles" ID="ID_1735219007" STYLE="narrow_hexagon">
+<icon BUILTIN="emoji-1F916"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      def nodo = node.createChild(&quot;node with link to user directory&quot;)
+    </p>
+    <p>
+      nodo.link.file = c.userDirectory
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+<font SIZE="11" BOLD="true" STRIKETHROUGH="true"/>
+<node TEXT="node with link to user directory" ID="ID_977344324"/>
+</node>
+</node>
+</node>
+</node>
 </node>
 </node>
 </map>
