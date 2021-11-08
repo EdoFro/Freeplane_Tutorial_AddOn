@@ -1,8 +1,12 @@
 import edofro.tutorialomatic.ToM_ui as tomui
 import edofro.tutorialomatic.ToM    as tom
 
+
+//acceder mapa
+def mapa = node.map
+
 //saca listado de tutotiales de mapa
-def nodosTutoriales = node.map.root.find{it.style.name == tom.styles.tutorial}
+def nodosTutoriales = mapa.root.find{it.style.name == tom.styles.tutorial}
 
 // se elige tutorial
     //TODO: hacer que usuario elija tutorial a realizar
