@@ -20,6 +20,8 @@ class ToM_actions{
     }
     static final int pausa = 400
     
+    static boolean waiting = false
+    
     
     // end: definitions
     
@@ -38,29 +40,52 @@ class ToM_actions{
     }
     
     def static executeAction(infoAccion , how){
+        waiting = true
         switch(how){
             case ex.muted       :
                 execute(infoAccion.action)
+                waiting = false
                 break
             case ex.showHotKeys :
                 //looks if it has defined hotKeys
                 if(infoAccion.keyStroke){
-                    ToM_ui.showTextMessage("${infoAccion.keyStroke} : ${infoAccion.label}".toString(),3000)
+                    def msgDisplayTime = 3000
+                    ToM_ui.showTextMessage("${infoAccion.keyStroke} : ${infoAccion.label}".toString(),msgDisplayTime)
                     execute(infoAccion.action)
+                    sleep(msgDisplayTime)
+                    waiting = false
                     break // break is here, because if the action has not defined Hotkeys then it should show the menu way
                 }
             case ex.showMenu    :
                 closeMenus(infoAccion.action)
                 openMenus(infoAccion.action, pausa)
                 def timer = new Timer()
-                def espera = (infoAccion.path.size()*2 + 1)*pausa
+                def espera = (infoAccion.path.size()*2)*pausa
                 timer.runAfter(espera){
                     execute(infoAccion.action)
                     closeMenus(infoAccion.action)
+                    waiting = false
                 }
                 break
         }
     }    
+
+    def static executeActions(infoAccions , how){
+        if(infoAccions){
+            if(!waiting){
+                def infoAccion = infoAccions[0]
+                executeAction(infoAccion , how)
+                executeActions(infoAccions.drop(1) , how)
+            } else {
+                def timer = new Timer()
+                timer.runAfter(200){
+                    executeActions(infoAccions , how)
+                }
+            }
+        }
+    }
+
+
 
     // end:
     
