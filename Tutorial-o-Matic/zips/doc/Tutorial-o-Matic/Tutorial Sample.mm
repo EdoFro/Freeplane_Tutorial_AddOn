@@ -1,7 +1,7 @@
 <map version="freeplane 1.9.8">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Tutorial Sample" FOLDED="false" ID="ID_452131666" STYLE="oval">
-<font SIZE="18"/>
+<font NAME="SansSerif" SIZE="18"/>
 <hook NAME="MapStyle">
     <properties mapUsesOwnSaveOptions="true" save_last_visited_node="default" save_modification_times="false" show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="default"/>
 
@@ -92,6 +92,7 @@
 </map_styles>
 </hook>
 <node TEXT="demo tutorial" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_8892147">
+<font NAME="SansSerif"/>
 <node TEXT="Greetings" ID="ID_1062081666"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -428,8 +429,7 @@ For more information look: [Freeplane Homepage](https://www.freeplane.org/wiki/i
       Here are some example on how you can apply some menu actions on the selected nodes:
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="example with menu" STYLE_REF="ToM_menuAction" ID="ID_1636577936">
@@ -445,8 +445,7 @@ For more information look: [Freeplane Homepage](https://www.freeplane.org/wiki/i
       This example shows some menu actions applied using the menus
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="New child node" ID="ID_621052079" LINK="menuitem:_NewChildAction"/>
 <node TEXT="I am happy" ID="ID_105632108" LINK="menuitem:_IconAction.ksmiletris"/>
 </node>
@@ -463,8 +462,7 @@ For more information look: [Freeplane Homepage](https://www.freeplane.org/wiki/i
       This example shows some actions applied using hot Keys (or the menus commands)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="Bold" ID="ID_960114216" LINK="menuitem:_BoldAction"/>
 <node TEXT="Filter toolbar" ID="ID_566550762" LINK="menuitem:_ShowFilterToolbarAction"/>
 <node TEXT="Map overview" ID="ID_929348152" LINK="menuitem:_ToggleMapOverviewAction"/>
@@ -481,12 +479,12 @@ For more information look: [Freeplane Homepage](https://www.freeplane.org/wiki/i
       This example shows some actions applied without showing any message (muted)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="Map overview" ID="ID_1163331539" LINK="menuitem:_ToggleMapOverviewAction"/>
 </node>
 </node>
 <node TEXT="example scripts" ID="ID_951603887">
+<font NAME="SansSerif"/>
 <node TEXT="Executing Scripts on selected nodes" STYLE_REF="ToM_newPage" ID="ID_1823886459"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1988369690">
 <node TEXT="execute actions" ID="ID_501440926"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -499,8 +497,7 @@ For more information look: [Freeplane Homepage](https://www.freeplane.org/wiki/i
       Here are some example on how you can apply some scripts on the selected node:
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1613048778">
@@ -670,8 +667,7 @@ For more information look: [Freeplane Homepage](https://www.freeplane.org/wiki/i
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -682,8 +678,7 @@ For more information look: [Freeplane Homepage](https://www.freeplane.org/wiki/i
       .groovy
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="ejemplo" ID="ID_464031118"/>
 <node TEXT="eduardo" ID="ID_1278090560"/>
@@ -812,6 +807,7 @@ It automatically builds the menu route and knows how to get to this comands in t
 
 ### Some examples with &quot;adding icons&quot; actions:</text>
 </richcontent>
+<font NAME="SansSerif"/>
 </node>
 </node>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1873024763">
@@ -891,6 +887,7 @@ Then click the &apos;Show me&apos; button. You will see that it won&apos;t be ab
 </node>
 </node>
 <node TEXT="ToM Builder" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_815218670">
+<font NAME="SansSerif"/>
 <node TEXT="Bienvenida" ID="ID_1556820541">
 <node TEXT="Tutorial-o-Matic Builder" STYLE_REF="ToM_newPage" ID="ID_1622725650"/>
 <node TEXT="Introduction" STYLE_REF="ToM_note" ID="ID_1952124688">
@@ -995,6 +992,9 @@ Then click the &apos;Show me&apos; button. You will see that it won&apos;t be ab
 </node>
 </node>
 </node>
+</node>
+<node TEXT="otro vacío" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_346385320">
+<font NAME="SansSerif"/>
 </node>
 </node>
 </map>
