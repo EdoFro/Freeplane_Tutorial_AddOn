@@ -1,6 +1,7 @@
 package edofro.tutorialomatic
 
 import edofro.tutorialomatic.TabPane
+import edofro.tutorialomatic.CustomComponentListener
 
 import java.util.Timer
 
@@ -144,6 +145,7 @@ class ToM_ui{
                     layout: new GridBagLayout(),
                     // background: Color.gray
                 ){}
+            contentPane.addComponentListener(new CustomComponentListener())
             def panel =  swing.panel(
                     layout: new GridBagLayout(),
                     preferredSize: new Dimension(minContentPaneWidth, maxContentPaneHeigth),
