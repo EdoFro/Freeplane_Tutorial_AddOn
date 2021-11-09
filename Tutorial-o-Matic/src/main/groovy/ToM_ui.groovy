@@ -40,6 +40,22 @@ class ToM_ui{
     static final String myPaneName        = 'myContentPanel'
     static final String myButtonPanelName = 'aButtonPane'
     static final String myNextPanelName   = 'nextPane'
+    static final String htmlStyle         =
+        """
+            table {border: 0; border-spacing: 0;}
+            th, td {border: 1px solid;}
+            pre {
+                background-color: rgb(230, 230, 230);
+                border: 1px solid rgb(0, 0, 0);
+                display: block;
+                padding: 10px;
+            }
+            code {
+                font-family: Consolas,"courier new";
+                color: rgb(0, 80, 0);
+            }
+        """
+    
 
     static SwingBuilder swing      = new SwingBuilder()
 
@@ -95,20 +111,7 @@ class ToM_ui{
             case 'markdown':
                 //html = "<html> ${Marked.marked(nodo.note.plain)} </html>"
                 html = """<html>
-                            <style>
-                                table {border: 0; border-spacing: 0;}
-                                th, td {border: 1px solid;}
-                                pre {
-                                    background-color: rgb(230, 230, 230);
-                                    border: 1px solid rgb(0, 0, 0);
-                                    display: block;
-                                    padding: 10px;
-                                }
-                                code {
-                                    font-family: Consolas,"courier new";
-                                    color: rgb(0, 80, 0);
-                                }
-                            </style>
+                            <style>${htmlStyle}</style>
                             <body>
                                 ${Marked.marked(nodo.note.plain)} 
                             </body>

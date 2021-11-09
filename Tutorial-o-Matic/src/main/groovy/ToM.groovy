@@ -264,9 +264,9 @@ class ToM{
         nodoT.children.findAll{n -> WSE.isGroovyNode(n)}.each{nodo ->
             def script = WSE.scriptFromNode(nodo)
             if (script){
-                def scrText     = script + "\n c.statusInfo = '---- script executed ----'".toString()
-                def msgHtml     = nodo.text //TODO: mejorar texto
-                def bttnText    = 'Execute script'
+                def scrText     = script + "\n c.statusInfo = '---- ready ----'".toString()
+                def msgHtml     = getGroovyHtml(nodo, script)
+                def bttnText    = 'Execute'
                 def bttnToolTip = "Click to execute script on selected nodes"
                 def bttnAction  = { e ->
                         def bttn = e.source
@@ -282,6 +282,14 @@ class ToM{
                 myP.add(tomui.createInstructionsPane(textoHtml), tomui.GBC)
             }
         }
+    }
+    
+    def static getGroovyHtml(nodo, script){
+        def showScript = nodo.icons.icons.contains('emoji-1F50D')
+        uiMsg("showScript ${showScript}")
+        def html = showScript? tomui.getHtmlFromGroovyNode(nodo, script) : nodo.text
+        uiMsg("html ${html}")
+        return html
     }
     
     def static addActionPane(myP, nodo){
