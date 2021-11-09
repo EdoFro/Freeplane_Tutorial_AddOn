@@ -71,6 +71,10 @@
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="emoji-2B55"/>
 </stylenode>
+<stylenode TEXT="ToM_openMap" ID="ID_323134366" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="mindmap"/>
+</stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000" STYLE="oval" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="10 pt">
@@ -99,7 +103,41 @@
 </stylenode>
 </map_styles>
 </hook>
-<node TEXT="demo tutorial" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_8892147">
+<node TEXT="simple demo" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_390003608">
+<node TEXT="saludo" ID="ID_1291836139">
+<node TEXT="saludo" ID="ID_659572764"/>
+<node TEXT="TOC" ID="ID_498725985"/>
+</node>
+<node TEXT="paseo por los menus" ID="ID_1953517318"/>
+<node TEXT="ejercicio" ID="ID_1944709931">
+<node TEXT="abre mapa" ID="ID_1243214202"/>
+<node TEXT="inserta nodos" ID="ID_1052437245"/>
+<node TEXT="" ID="ID_1449361805">
+<hook NAME="FirstGroupNode"/>
+</node>
+<node TEXT="demostración" ID="ID_108693422"/>
+<node TEXT="ejercicio" ID="ID_1429160710"/>
+<node TEXT="" ID="ID_700165305">
+<hook NAME="SummaryNode"/>
+<hook NAME="AlwaysUnfoldedNode"/>
+<node TEXT="mover nodos con las teclas" STYLE_REF="ToM_menuAction" ID="ID_700174756">
+<node TEXT="Move node to the left" ID="ID_1549563237" LINK="menuitem:_ChangeNodeLevelLeftsAction"/>
+<node TEXT="Move node to the left" ID="ID_183714741" LINK="menuitem:_ChangeNodeLevelLeftsAction"/>
+<node TEXT="Move node (Sibling up)" ID="ID_809434446" LINK="menuitem:_NodeUpAction"/>
+<node TEXT="Move node (Sibling up)" ID="ID_342761788" LINK="menuitem:_NodeUpAction"/>
+<node TEXT="Move node to the right" ID="ID_1729071430" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
+<node TEXT="Move node (Sibling up)" ID="ID_918305880" LINK="menuitem:_NodeUpAction"/>
+<node TEXT="Move node to the right" ID="ID_715151251" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
+</node>
+<node TEXT="agregar iconos" ID="ID_1772640273"/>
+</node>
+</node>
+<node TEXT="demostración de un script" ID="ID_1342520583">
+<node TEXT="reverse text" ID="ID_200168991"/>
+</node>
+<node TEXT="volver al inicio" ID="ID_664966603"/>
+</node>
+<node TEXT="demo tutorial" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_8892147">
 <font NAME="SansSerif"/>
 <node TEXT="Greetings" ID="ID_1062081666"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
@@ -254,6 +292,15 @@
 </html></richcontent>
 </node>
 </node>
+</node>
+<node TEXT="opening exercizing map" ID="ID_1269733715">
+<node TEXT="opening exercising map" STYLE_REF="ToM_newPage" ID="ID_353029437"/>
+<node TEXT="openMap" STYLE_REF="ToM_openMap" ID="ID_1551297927">
+<node TEXT="ExercisingMap.mm" ID="ID_1748635039"/>
+</node>
+</node>
+<node TEXT="Example: inserting and selecting example branchs" ID="ID_1208866469">
+<node TEXT="Example: inserting and selecting example branchs" STYLE_REF="ToM_newPage" ID="ID_1367020438"/>
 <node TEXT="copiar" STYLE_REF="ToM_copy" ID="ID_1811804685">
 <icon BUILTIN="emoji-1F56F"/>
 <font NAME="SansSerif"/>
@@ -752,7 +799,10 @@ For more information look: [Freeplane Homepage](https://www.freeplane.org/wiki/i
 </node>
 <node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1613048778">
 <icon BUILTIN="emoji-1F56F"/>
-<node TEXT="Ejemplo optionPane.groovy" ID="ID_600525754"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<font NAME="SansSerif"/>
+<node TEXT="Ejemplo optionPane.groovy" ID="ID_600525754">
+<icon BUILTIN="emoji-1F50D"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -780,7 +830,19 @@ For more information look: [Freeplane Homepage](https://www.freeplane.org/wiki/i
       def options = ['1995', '2003', '2007']
     </p>
     <p>
-      def pane = swingBuilder.optionPane(message:'Groovy starts in ', selectionValues:options, optionType:JOptionPane.CLOSED_OPTION)
+      def pane = swingBuilder.optionPane(
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message:'Groovy starts in ',
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selectionValues:options,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;optionType:JOptionPane.CLOSED_OPTION
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
     </p>
     <p>
       def dialog = pane.createDialog(null, 'worthless message')
@@ -811,7 +873,9 @@ For more information look: [Freeplane Homepage](https://www.freeplane.org/wiki/i
   </body>
 </html></richcontent>
 </node>
-<node TEXT="reverse node&apos;s text" ID="ID_1686194177"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="reverse node&apos;s text" ID="ID_1686194177">
+<icon BUILTIN="emoji-1F50D"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -839,7 +903,7 @@ For more information look: [Freeplane Homepage](https://www.freeplane.org/wiki/i
 </node>
 </node>
 <node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1161008987">
-<node TEXT="Ejemplo optionPane.groovy" ID="ID_536747131"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="Ejemplo optionPane.groovy" ID="ID_857704270"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -867,7 +931,19 @@ For more information look: [Freeplane Homepage](https://www.freeplane.org/wiki/i
       def options = ['1995', '2003', '2007']
     </p>
     <p>
-      def pane = swingBuilder.optionPane(message:'Groovy starts in ', selectionValues:options, optionType:JOptionPane.CLOSED_OPTION)
+      def pane = swingBuilder.optionPane(
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message:'Groovy starts in ',
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selectionValues:options,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;optionType:JOptionPane.CLOSED_OPTION
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
     </p>
     <p>
       def dialog = pane.createDialog(null, 'worthless message')
@@ -929,10 +1005,15 @@ For more information look: [Freeplane Homepage](https://www.freeplane.org/wiki/i
     </p>
   </body>
 </html></richcontent>
+<font NAME="SansSerif"/>
 </node>
-<node TEXT="ejemplo" ID="ID_464031118"/>
+<node TEXT="ejemplo" ID="ID_464031118">
+<icon BUILTIN="emoji-1F50D"/>
+</node>
 <node TEXT="eduardo" ID="ID_1278090560"/>
-<node TEXT="script de prueba que requiere permiso readingFiles" ID="ID_917088007"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="script de prueba que requiere permiso readingFiles" ID="ID_917088007">
+<icon BUILTIN="emoji-1F50D"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -1243,7 +1324,7 @@ Then click the &apos;Show me&apos; button. You will see that it won&apos;t be ab
 </node>
 </node>
 </node>
-<node TEXT="otro vacío" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_346385320">
+<node TEXT="An empty tutorial" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_346385320">
 <font NAME="SansSerif"/>
 <node TEXT="in the next pages" ID="ID_1307765764"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -1346,7 +1427,7 @@ def setNoteMarkdown(n){&#xd;
 <font NAME="SansSerif"/>
 </node>
 </node>
-<node TEXT="scripts apoyo" POSITION="right" ID="ID_874667707">
+<node TEXT="scripts apoyo" POSITION="right" ID="ID_874667707" VGAP_QUANTITY="2 pt">
 <node TEXT="prueba metaClass" ID="ID_556782223"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -1372,8 +1453,7 @@ def setNoteMarkdown(n){&#xd;
       return p.idDictionary //.keySet()&nbsp;&nbsp;&nbsp;&nbsp;//.values()
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -1384,73 +1464,10 @@ def setNoteMarkdown(n){&#xd;
       .groovy
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif"/>
 </node>
-<node TEXT="xx" ID="ID_1188620330">
-<font NAME="SansSerif"/>
-<node TEXT="in the next pages" ID="ID_1168202419"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body style="font-size: 20; font-family: Calibri">
-    <p>
-      In the next pages you will see:
-    </p>
-    <ul>
-      <li>
-        An example of a note in markdown that includes tables and images
-
-        <ul>
-          <li>
-            It has also links to webpages, but I don't know how to make them work
-          </li>
-          <li>
-            The content is just a demo markdown document I made a time ago about the &quot;Calvin and Hobbes&quot; comic strip. It has no relation with Freeplane, but it helps to see what can be shown
-          </li>
-        </ul>
-      </li>
-      <li>
-        The page after that has three markdown examples with animated gif, code block and a table with images
-
-        <ul>
-          <li>
-            I don't know why (at least in my computer) I can see the images in the nodes notes but they are not shown in the Tutorial panel
-          </li>
-        </ul>
-      </li>
-      <li>
-        The next section has pages with examples about teaching how to make some format modifications to a selected node and other Freeplane tips
-      </li>
-      <li>
-        The last page shows a list of &quot;next steps&quot; and &quot;nice to haves&quot; for this AddOn
-      </li>
-    </ul>
-  </body>
-</html></richcontent>
-<node TEXT="tutorial content is taken from THIS map" ID="ID_263115753">
-<icon BUILTIN="very_positive"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body style="font-size: 20; font-family: Calibri">
-    <p>
-      The whole information shown in this tutorial is taken from the &quot;Tutorial Sample&quot; mindmap.
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      If you modify it and relaunch the tutorial it will include those changes.
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="text with code" ID="ID_185758512" BACKGROUND_COLOR="#ff6666"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+<node TEXT="text with code" ID="ID_51086870"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>## a codeBlock example&#xd;
 &#xd;
 Code: **&apos;pasar texto a nota e indicar formato Markdown&apos;**&#xd;
@@ -1473,148 +1490,38 @@ def setNoteMarkdown(n){&#xd;
 ```&#xd;
 </text>
 </richcontent>
-<node TEXT="I am happy" ID="ID_807390466" LINK="menuitem:_IconAction.ksmiletris" STYLE="narrow_hexagon">
-<icon BUILTIN="emoji-1F916"/>
-<font SIZE="11" BOLD="true" STRIKETHROUGH="true"/>
 </node>
-<node TEXT="Bold" ID="ID_672731287" LINK="menuitem:_BoldAction"/>
-</node>
-</node>
-<node TEXT="Click next page" ID="ID_1723364892">
-<icon BUILTIN="very_positive"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body style="font-size: 20; font-family: Calibri">
-    <p>
-      Click the &quot;<u>Next page</u>&quot; button to go to the first example
-    </p>
-  </body>
-</html></richcontent>
-<font NAME="SansSerif"/>
-<node TEXT="Map overview" ID="ID_1151601939" LINK="menuitem:_ToggleMapOverviewAction">
-<node TEXT="Ejemplo optionPane.groovy" ID="ID_1722592545"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="tex" ID="ID_813396053"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
   </head>
   <body>
+    <h1>
+      a codeBlock example
+    </h1>
     <p>
-      import groovy.swing.SwingBuilder
+      Code: 'just an old script'
     </p>
     <p>
       
     </p>
-    <p>
-      import javax.swing.*
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      def swingBuilder = new SwingBuilder()
-    </p>
-    <p>
-      def options = ['1995', '2003', '2007']
-    </p>
-    <p>
-      def pane = swingBuilder.optionPane(message:'Groovy starts in ', selectionValues:options, optionType:JOptionPane.CLOSED_OPTION)
-    </p>
-    <p>
-      def dialog = pane.createDialog(null, 'worthless message')
-    </p>
-    <p>
-      def a=dialog.show()
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //pane.properties.findAll{it.value.toString().contains('2003')}
-    </p>
-    <p>
-      ui.informationMessage(&quot;the selected string was: '${pane.inputValue}'&quot;.toString())
-    </p>
+    <pre><code>// import org.freeplane.features.text.TextController
+import org.freeplane.features.note.NoteController
+
+
+def nodos = c.selecteds
+
+nodos.each{nodo -&gt;
+    nodo.note = nodo.text
+    setNoteMarkdown(nodo)
+}
+
+def setNoteMarkdown(n){
+    return NoteController.getController().setNoteContentType(n.delegate, 'markdown')
+}</code></pre>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      .groovy
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="reverse node&apos;s text" ID="ID_621423925" STYLE="narrow_hexagon">
-<icon BUILTIN="emoji-1F916"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      def texto = node.text
-    </p>
-    <p>
-      node.text = texto.reverse()
-    </p>
-  </body>
-</html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      .groovy
-    </p>
-  </body>
-</html></richcontent>
-<font SIZE="11" BOLD="true" STRIKETHROUGH="true"/>
-</node>
-<node TEXT="script de prueba que requiere permiso readingFiles" ID="ID_1735219007" STYLE="narrow_hexagon">
-<icon BUILTIN="emoji-1F916"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      def nodo = node.createChild(&quot;node with link to user directory&quot;)
-    </p>
-    <p>
-      nodo.link.file = c.userDirectory
-    </p>
-  </body>
-</html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      .groovy
-    </p>
-  </body>
-</html></richcontent>
-<font SIZE="11" BOLD="true" STRIKETHROUGH="true"/>
-<node TEXT="node with link to user directory" ID="ID_977344324"/>
-</node>
-</node>
-</node>
 </node>
 </node>
 </node>
