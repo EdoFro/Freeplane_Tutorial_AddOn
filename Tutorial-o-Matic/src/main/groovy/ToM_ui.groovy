@@ -85,6 +85,7 @@ class ToM_ui{
     }
 
     def static getHtmlFromNote(nodo){
+        if(!nodo.note) return null
         def noteType = nodo.noteContentType
         def html
         switch (noteType){

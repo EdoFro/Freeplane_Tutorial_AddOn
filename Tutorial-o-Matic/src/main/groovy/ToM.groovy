@@ -11,19 +11,21 @@ import org.freeplane.plugin.script.proxy.ScriptUtils
 
 
 class ToM{
-
+    
+    // region: properties
+    
     static final c                     = ScriptUtils.c()
     static final String tabName        = 'Tutorial'
 
     static final Map styles = [
-        tutorial  : 'ToM-Tutorial' ,
-        ini       : 'ToM_'         ,
-        note      : 'ToM_note'     ,
-        nextPage  : 'ToM_nextPage' ,
-        newPage   : 'ToM_newPage'  ,
-        showMenu  : 'ToM_showMenu' ,
-        toc       : 'ToM_TOC'      ,
-        goto      : 'ToM_goto'     ,
+        tutorial  : 'ToM-Tutorial'  ,
+        ini       : 'ToM_'          ,
+        note      : 'ToM_note'      ,
+        nextPage  : 'ToM_nextPage'  ,
+        newPage   : 'ToM_newPage'   ,
+        showMenu  : 'ToM_showMenu'  ,
+        toc       : 'ToM_TOC'       ,
+        goto      : 'ToM_goto'      ,
         action    : 'ToM_menuAction',
         groovy    : 'ToM_groovy'    ,
         copyPaste : 'ToM_copy'      ,
@@ -31,6 +33,8 @@ class ToM{
     ]
     
     static final exeHowIcons = ['emoji-1F507', 'emoji-2328', 'emoji-1F5B1']
+    
+    // end:
     
     // region: getting tutorial components nodes
 
