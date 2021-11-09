@@ -123,6 +123,17 @@ class ToM_ui{
         }
         return html
     }
+    
+    def static getHtmlFromGroovyNode(nodo, script){
+        def html = """<html>
+                            <style>${htmlStyle}</style>
+                            <body>
+                                <h3>${nodo.text}</h3>
+                                <pre><code>${script}</code></pre>
+                            </body>
+                        </html>"""
+        return html    
+    }
 
     def static createInstructionsPane(nodo){
         return createInstructionsPane(getHtmlFromNote(nodo))

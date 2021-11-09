@@ -278,7 +278,7 @@ class ToM{
                 buttonPanel.metaClass.pending = false
                 myP.add(buttonPanel, tomui.GBC)
             } else {
-                def textoHtml = '<html><body><p>Command not encountered in Menu for active map</p></body></html>'
+                def textoHtml = '<html><body><p>No script encountered in tutorial node</p></body></html>'
                 myP.add(tomui.createInstructionsPane(textoHtml), tomui.GBC)
             }
         }
