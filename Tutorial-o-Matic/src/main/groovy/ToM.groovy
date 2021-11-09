@@ -30,6 +30,7 @@ class ToM{
         groovy    : 'ToM_groovy'    ,
         copyPaste : 'ToM_copy'      ,
         select    : 'ToM_select'    ,
+        openMap   : 'ToM_openMap'   ,
     ]
     
     static final exeHowIcons = ['emoji-1F507', 'emoji-2328', 'emoji-1F5B1']
@@ -102,6 +103,9 @@ class ToM{
                     break
                 case styles.select:
                     addSelectPane(myPanel, tutNode)
+                    break
+                case styles.openMap:
+                    addOpenMapPane(myPanel, tutNode)
                     break
                 default:
                     ui.informationMessage('node style not defined')
@@ -383,6 +387,25 @@ class ToM{
             //select nodes list
             uiMsg("nodos $nodos")
             c.select(nodos)
+        }
+        def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+        myP.add(buttonPanel, tomui.GBC)
+    }
+
+    def static addOpenMapPane(myP, tutNode){
+        def sep         = File.separator
+        def nodoMapa    = tutNode.children.find{it.text.endsWith('.mm')}
+        def mapFileName = nodoMapa?.text
+        def Dir         = tutNode.map.file.parent
+        def pathName    = Dir + sep + mapFileName
+        def enabled     = !disableBttn(tutNode)
+        def msgHtml     = tomui.getHtmlFromNote(nodoMapa)?:"Click to open '${mapFileName}'"
+        def bttnText    = "Open map '${mapFileName}'"
+        def bttnToolTip = "Click to open '${mapFileName}'"
+        def bttnAction  = { e ->
+            def bttn = e.source
+            bttn.setEnabled(enabled)
+            def mapa = getMapFromPath(pathName, true) //usar mapa indicado (pero oculto)
         }
         def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
         myP.add(buttonPanel, tomui.GBC)
