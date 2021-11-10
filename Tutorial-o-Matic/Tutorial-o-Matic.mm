@@ -299,6 +299,7 @@
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/ToMDemo.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/ExersizingMap.mm"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/ExercisingMap.mm"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/SimpleTutorialSample.mm"/>
 </node>
 <node TEXT="scripts" POSITION="right" ID="ID_1037882722">
 <edge COLOR="#007c00"/>
@@ -419,18 +420,6 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="executeTutorial.groovy" ID="ID_420702224">
-<attribute_layout NAME_WIDTH="200.24999 pt" VALUE_WIDTH="200.24999 pt"/>
-<attribute NAME="menuTitleKey" VALUE="addons.${name}.executeTutorial"/>
-<attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
-<attribute NAME="executionMode" VALUE="on_single_node"/>
-<attribute NAME="keyboardShortcut" VALUE=""/>
-<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
-<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
-<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
-<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
-<attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
-</node>
 <node TEXT="openDemoMap.groovy" ID="ID_1629939217">
 <attribute_layout NAME_WIDTH="200.24999 pt" VALUE_WIDTH="200.24999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.openDemoMap"/>

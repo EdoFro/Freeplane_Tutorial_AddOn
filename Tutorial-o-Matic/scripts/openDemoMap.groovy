@@ -1,6 +1,6 @@
 //opens demo map
 
-def mapFile = "Tutorial Sample.mm"
+def mapFile = "SimpleTutorialSample.mm"
 def dir = c.userDirectory.path
 def sep = File.separator
 def helpFile = "Tutorial-o-Matic" + sep + mapFile
