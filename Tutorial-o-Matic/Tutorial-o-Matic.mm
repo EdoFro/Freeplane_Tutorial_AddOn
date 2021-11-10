@@ -1,6 +1,6 @@
 <map version="freeplane 1.9.8">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
-<node TEXT="Tutorial-o-Matic" FOLDED="false" ID="ID_696401721" CREATED="1636492385138" MODIFIED="1636495490127" LINK="https://github.com/EdoFro/Freeplane_Tutorial_AddOn" BACKGROUND_COLOR="#97c7dc">
+<node TEXT="Tutorial-o-Matic" FOLDED="false" ID="ID_696401721" LINK="https://github.com/EdoFro/Freeplane_Tutorial_AddOn" BACKGROUND_COLOR="#97c7dc">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <attribute_layout NAME_WIDTH="111.75 pt" VALUE_WIDTH="165.75 pt"/>
 <attribute NAME="name" VALUE="tutorialOMatic"/>
@@ -130,7 +130,7 @@
 </map_styles>
 </hook>
 <hook NAME="AutomaticEdgeColor" COUNTER="13" RULE="ON_BRANCH_CREATION"/>
-<node TEXT="description" POSITION="left" ID="ID_1678998363" CREATED="1636492385138" MODIFIED="1636495490142">
+<node TEXT="description" POSITION="left" ID="ID_1678998363">
 <edge COLOR="#ff0000"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -150,9 +150,9 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="Tutorial-o-Matic for Freeplane!!&#xa;Tutorial-o-Matic is an AddOn for Freeplane that gives the user the possibility to create his/her own tutorials." ID="ID_1642042079" CREATED="1636492385138" MODIFIED="1636492385138"/>
+<node TEXT="Tutorial-o-Matic for Freeplane!!&#xa;Tutorial-o-Matic is an AddOn for Freeplane that gives the user the possibility to create his/her own tutorials." ID="ID_1642042079"/>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_461119253" CREATED="1636492385138" MODIFIED="1636495490142">
+<node TEXT="changes" POSITION="left" ID="ID_461119253">
 <edge COLOR="#0000ff"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -166,17 +166,17 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="v0.0.1" ID="ID_1147464075" CREATED="1636492385138" MODIFIED="1636492385138">
-<node TEXT="Demo version" ID="ID_1739689712" CREATED="1636492385138" MODIFIED="1636492385138"/>
+<node TEXT="v0.0.1" ID="ID_1147464075">
+<node TEXT="Demo version" ID="ID_1739689712"/>
 </node>
-<node TEXT="v0.0.2" ID="ID_945484309" CREATED="1636492385138" MODIFIED="1636492385138">
-<node TEXT="Bugs corrections:&#xa;- License as plain text&#xa;- Updated version of Demo map" ID="ID_621408353" CREATED="1636492385138" MODIFIED="1636492385138"/>
+<node TEXT="v0.0.2" ID="ID_945484309">
+<node TEXT="Bugs corrections:&#xa;- License as plain text&#xa;- Updated version of Demo map" ID="ID_621408353"/>
 </node>
-<node TEXT="v0.0.3" ID="ID_1106405456" CREATED="1636492385138" MODIFIED="1636492385138">
-<node TEXT="- scrollspeed&#xa;- message when command no present in Menu for active map&#xa;- added execute_scripts_without_network_restriction: true so web images could be loaded&#xa;- improved showMenu to show actions in extended submenus&#xa;- changed &apos;Close tutorial&apos; to &apos;Stop tutorial&apos;&#xa;- tables have now black borders&#xa;- Codeblocks have special style in EditorPanes&#xa;- links in EditorPanes are now clickeable and open the default web browser&#xa;- added a listener to resize height of content panel when tabpanel width changes&#xa;- added newPage styles and functionality&#xa;- added Table of Contents styles and functionality&#xa;- added Table of Contents button to &apos;next page&apos; panel&#xa;- added GOTO style and its functionality&#xa;- added Action style and its functionality&#xa;- added groovy style and its functionality&#xa;- enables multiple tutorials in one map&#xa;- added &apos;copy&apos; style and its functionality&#xa;- added &apos;select&apos; style and its functionality" ID="ID_1550125378" CREATED="1636492385138" MODIFIED="1636492385138"/>
+<node TEXT="v0.0.3" ID="ID_1106405456">
+<node TEXT="- scrollspeed&#xa;- message when command no present in Menu for active map&#xa;- added execute_scripts_without_network_restriction: true so web images could be loaded&#xa;- improved showMenu to show actions in extended submenus&#xa;- changed &apos;Close tutorial&apos; to &apos;Stop tutorial&apos;&#xa;- tables have now black borders&#xa;- Codeblocks have special style in EditorPanes&#xa;- links in EditorPanes are now clickeable and open the default web browser&#xa;- added a listener to resize height of content panel when tabpanel width changes&#xa;- added newPage styles and functionality&#xa;- added Table of Contents styles and functionality&#xa;- added Table of Contents button to &apos;next page&apos; panel&#xa;- added GOTO style and its functionality&#xa;- added Action style and its functionality&#xa;- added groovy style and its functionality&#xa;- enables multiple tutorials in one map&#xa;- added &apos;copy&apos; style and its functionality&#xa;- added &apos;select&apos; style and its functionality&#xa;- added &apos;openMap&apos; style and its functionality" ID="ID_1550125378"/>
 </node>
 </node>
-<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795" CREATED="1636492385138" MODIFIED="1636495490142">
+<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795">
 <edge COLOR="#00ff00"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -196,9 +196,9 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="MIT License&#xa;&#xa;Copyright (c) 2021 Eduardo Frohlich.&#xa;&#xa;Permission is hereby granted, free of charge, to any person obtaining a copy&#xa;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xa;in the Software without restriction, including without limitation the rights&#xa;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xa;copies of the Software, and to permit persons to whom the Software is&#xa;furnished to do so, subject to the following conditions:&#xa;&#xa;The above copyright notice and this permission notice shall be included in all&#xa;copies or substantial portions of the Software.&#xa;&#xa;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xa;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xa;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xa;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xa;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xa;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE&#xa;SOFTWARE." ID="ID_444630498" CREATED="1636492385138" MODIFIED="1636492385138"/>
+<node TEXT="MIT License&#xa;&#xa;Copyright (c) 2021 Eduardo Frohlich.&#xa;&#xa;Permission is hereby granted, free of charge, to any person obtaining a copy&#xa;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xa;in the Software without restriction, including without limitation the rights&#xa;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xa;copies of the Software, and to permit persons to whom the Software is&#xa;furnished to do so, subject to the following conditions:&#xa;&#xa;The above copyright notice and this permission notice shall be included in all&#xa;copies or substantial portions of the Software.&#xa;&#xa;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xa;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xa;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xa;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xa;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xa;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE&#xa;SOFTWARE." ID="ID_444630498"/>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_1967714695" CREATED="1636492385138" MODIFIED="1636495490158">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_1967714695">
 <edge COLOR="#ff00ff"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -216,7 +216,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_1398497950" CREATED="1636492385138" MODIFIED="1636495490158">
+<node TEXT="default.properties" POSITION="left" ID="ID_1398497950">
 <edge COLOR="#00ffff"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -239,7 +239,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_546877695" CREATED="1636492385138" MODIFIED="1636495490158">
+<node TEXT="translations" POSITION="left" ID="ID_546877695">
 <edge COLOR="#7c0000"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -264,7 +264,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="en" ID="ID_1998059292" CREATED="1636492385138" MODIFIED="1636492385138">
+<node TEXT="en" ID="ID_1998059292">
 <attribute_layout NAME_WIDTH="162 pt" VALUE_WIDTH="281.24999 pt"/>
 <attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
 <attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;In submenu  &lt;b&gt;{0}&lt;/b&gt; &lt;br&gt;click on  &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
@@ -274,7 +274,7 @@
 <attribute NAME="addons.${name}.ToMDemo" VALUE="Tutorial-o-Matic Demo"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_378917294" CREATED="1636492385138" MODIFIED="1636496556005">
+<node TEXT="deinstall" POSITION="left" ID="ID_378917294">
 <edge COLOR="#00007c"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -300,7 +300,7 @@
 <attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/ExersizingMap.mm"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/ExercisingMap.mm"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1037882722" CREATED="1636492385138" MODIFIED="1636495490174">
+<node TEXT="scripts" POSITION="right" ID="ID_1037882722">
 <edge COLOR="#007c00"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -419,7 +419,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="executeTutorial.groovy" ID="ID_420702224" CREATED="1636492385138" MODIFIED="1636492385138">
+<node TEXT="executeTutorial.groovy" ID="ID_420702224">
 <attribute_layout NAME_WIDTH="200.24999 pt" VALUE_WIDTH="200.24999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.executeTutorial"/>
 <attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
@@ -431,7 +431,7 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
-<node TEXT="openDemoMap.groovy" ID="ID_1629939217" CREATED="1636492385138" MODIFIED="1636492385138">
+<node TEXT="openDemoMap.groovy" ID="ID_1629939217">
 <attribute_layout NAME_WIDTH="200.24999 pt" VALUE_WIDTH="200.24999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.openDemoMap"/>
 <attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
@@ -443,7 +443,7 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="ToMDemo.groovy" ID="ID_513310589" CREATED="1636492385138" MODIFIED="1636492385138">
+<node TEXT="ToMDemo.groovy" ID="ID_513310589">
 <attribute_layout NAME_WIDTH="200.24999 pt" VALUE_WIDTH="200.24999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.ToMDemo"/>
 <attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
@@ -456,7 +456,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_1814812956" CREATED="1636492385138" MODIFIED="1636495490205">
+<node TEXT="lib" POSITION="right" ID="ID_1814812956">
 <edge COLOR="#7c007c"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -494,11 +494,11 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="Tutorial-o-Matic.jar" ID="ID_1864463328" CREATED="1636492385138" MODIFIED="1636492385138"/>
-<node TEXT="markedj-1.0.16.jar" ID="ID_1060333872" CREATED="1636492385138" MODIFIED="1636492385138"/>
-<node TEXT="jsoup-1.10.2.jar" ID="ID_1151792763" CREATED="1636492385138" MODIFIED="1636492385138"/>
+<node TEXT="Tutorial-o-Matic.jar" ID="ID_1864463328"/>
+<node TEXT="markedj-1.0.16.jar" ID="ID_1060333872"/>
+<node TEXT="jsoup-1.10.2.jar" ID="ID_1151792763"/>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_1623122610" CREATED="1636492385138" MODIFIED="1636495490221" VGAP_QUANTITY="2 px">
+<node TEXT="zips" POSITION="right" ID="ID_1623122610" VGAP_QUANTITY="2 px">
 <edge COLOR="#007c7c"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -536,11 +536,11 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="doc" ID="ID_281158802" CREATED="1636492385138" MODIFIED="1636492385138"/>
-<node TEXT="icons" ID="ID_211861022" CREATED="1636492385138" MODIFIED="1636492385138"/>
-<node TEXT="templates" ID="ID_553385296" CREATED="1636492385138" MODIFIED="1636492385138"/>
+<node TEXT="doc" ID="ID_281158802"/>
+<node TEXT="icons" ID="ID_211861022"/>
+<node TEXT="templates" ID="ID_553385296"/>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_1856886559" CREATED="1636492385138" MODIFIED="1636495490236">
+<node TEXT="images" POSITION="right" ID="ID_1856886559">
 <edge COLOR="#7c7c00"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -575,15 +575,54 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="DevTools - MoM" POSITION="right" ID="ID_989188638" CREATED="1636492385138" MODIFIED="1636492385138">
+<node TEXT="shortcuts" POSITION="right" ID="ID_989188638">
 <edge COLOR="#ff0000"/>
-<node TEXT="Build add-on" ID="ID_1016684737" CREATED="1636492385138" MODIFIED="1636492385138" LINK="menuitem:_addons.devtools.checkAddOn_on_single_node">
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      some nodes to build AddOn and test changes easily and fast
+    </p>
+  </body>
+</html>
+</richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Edo
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="Build add-on" ID="ID_1016684737" LINK="menuitem:_addons.devtools.checkAddOn_on_single_node">
 <icon BUILTIN="emoji-1F527"/>
 </node>
-<node TEXT="Package add-on for publication" ID="ID_806418866" CREATED="1636492385138" MODIFIED="1636492385138" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node">
+<node TEXT="Package add-on for publication" ID="ID_806418866" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node">
 <icon BUILTIN="emoji-1F5DC"/>
 </node>
-<node TEXT="Tutorial-o-Matic-v0.0.3.addon.mm" ID="ID_1586148750" CREATED="1636492385138" MODIFIED="1636492385138" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/Tutorial-o-Matic-v0.0.3.addon.mm"/>
+<node TEXT="Tutorial-o-Matic-v0.0.3.addon.mm" ID="ID_1586148750" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/Tutorial-o-Matic-v0.0.3.addon.mm"/>
+<node TEXT="loadAndExecuteTutorial.groovy" ID="ID_1523867671" LINK="menuitem:_ExecuteScriptForSelectionAction"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+<attribute_layout VALUE_WIDTH="115.5 pt"/>
+<attribute NAME="script1" VALUE="import edofro.tutorialomatic.ToM_ui as tomui&#xa;import edofro.tutorialomatic.ToM    as tom&#xa;&#xa;//opens demo map&#xa;def mapFileName = node.children[0].text&#xa;&#xa;//para que use el que estoy modificando&#xa;pathName=&quot;C:\\Users\\Edo\\Documents\\GitHub\\Freeplane_Tutorial_AddOn\\Tutorial-o-Matic\\zips\\doc\\Tutorial-o-Matic\\${mapFileName}&quot;&#xa;&#xa;//def mapa = node.map //usar mapa activo&#xa;def mapa    = tom.getMapFromPath(pathName, true) //usar mapa indicado (true: visible, false: oculto)&#xa;&#xa;tom.showTutorials( mapa )&#xa;&#xa;return &apos;tutorial started&apos;"/>
+<node TEXT="Tutorial Sample.mm" ID="ID_1495047992"/>
+</node>
 </node>
 </node>
 </map>
