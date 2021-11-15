@@ -51,10 +51,10 @@ class ToM_actions{
             case ex.showHotKeys :
                 //looks if it has defined hotKeys
                 if(infoAccion.keyStroke){
-                    def msgDisplayTime = 3000
+                    def msgDisplayTime = 1000
                     ToM_ui.showTextMessage("${infoAccion.keyStroke} : ${infoAccion.label}".toString(),msgDisplayTime)
                     execute(infoAccion.action)
-                    timer.runAfter(msgDisplayTime){
+                    timer.runAfter(msgDisplayTime + 50){
                         waiting = false
                     }
                     break // break is here, because if the action has not defined Hotkeys then it should show the menu way
