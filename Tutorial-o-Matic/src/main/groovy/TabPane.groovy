@@ -7,11 +7,14 @@ class TabPane{
     def static tabPane = ui.freeplaneTabbedPanel
 
 
-    def static removeTab(String tabName){
+    def static removeTab(String tabName, boolean hideTabPane = false){
         def index   = tabPane.indexOfTab(tabName)
         //eliminar
         if (index >= 0) {
             tabPane.removeTabAt(index)
+            if(hideTabPane && tabPane.isShowing()) {
+                menuUtils.executeMenuItems(['ShowFormatPanel'])
+            }
             return true
         } else return false
     }

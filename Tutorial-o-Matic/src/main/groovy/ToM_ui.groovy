@@ -314,8 +314,8 @@ class ToM_ui{
         return panel
     }
 
-    def static closeTab(tabName) {
-        TabPane.removeTab(tabName)
+    def static closeTab(tabName, boolean hideTabPane = false) {
+        TabPane.removeTab(tabName, hideTabPane)
     }
 
 
