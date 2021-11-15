@@ -12,6 +12,9 @@ class TabPane{
         //eliminar
         if (index >= 0) {
             tabPane.removeTabAt(index)
+            def previousTab = tabPane.hasProperty('previousTab')? tabPane.previousTab : 0
+            previousTab = previousTab >= tabPane.tabCount? 0 : previousTab
+            tabPane.setSelectedIndex(previousTab)
             if(hideTabPane && tabPane.isShowing()) {
                 menuUtils.executeMenuItems(['ShowFormatPanel'])
             }
@@ -24,6 +27,13 @@ class TabPane{
         if(!tabPane.isShowing()) {
             menuUtils.executeMenuItems(['ShowFormatPanel'])
         }
+        // remembers selected tab number
+        def previousTab = tabPane.selectedIndex
+        if (tabPane.hasProperty('previousTab')){
+            tabPane.previousTab = previousTab
+        } else {
+            tabPane.metaClass.previousTab = previousTab
+        }        
         // look if tab exists
         def index = tabPane.indexOfTab(tabName)
         if (index>=0) {
