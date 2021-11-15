@@ -163,7 +163,7 @@ class ToM{
             def infoAccion  = toma.getActionInfoMap(nodo)
             if (infoAccion){
                 def msgHtml     = infoAccion.instructions
-                def bttnText    = 'Show me'
+                def bttnText    = 'Show it in the menu'
                 def bttnToolTip = "Click to see where is ${toma.apos(infoAccion.label)} in Freeplane Menu"
                 def bttnAction  = { e ->
                         def bttn = e.source
@@ -342,11 +342,12 @@ class ToM{
             def bttn = e.source
             bttn.setEnabled(enabled)
             def nodoTarget = c.selected
+            def existentesNodoTarget = nodoTarget.findAll()
             nodoSource.children.each{n ->
                 nodoTarget.appendBranch(n)
             }
             def idSource = ( nodoSource.findAll() - nodoSource )*.id
-            def idTarget = ( nodoTarget.findAll() - nodoTarget )*.id
+            def idTarget = ( nodoTarget.findAll() - existentesNodoTarget )*.id
             for (def i = 0; i < idSource.size() ; i++){
                 myP.idDictionary[ idSource[i] ] = idTarget[i]
             }
@@ -430,7 +431,7 @@ class ToM{
     // region: help / debug
     
     def static uiMsg(texto){
-       // ui.informationMessage(texto.toString())
+       //ui.informationMessage(texto.toString())
     }
 
     // end:
