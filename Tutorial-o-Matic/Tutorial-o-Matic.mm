@@ -288,16 +288,13 @@
   </body>
 </html>
 </richcontent>
-<attribute_layout NAME_WIDTH="42.75 pt" VALUE_WIDTH="207.74999 pt"/>
+<attribute_layout NAME_WIDTH="42.75 pt" VALUE_WIDTH="295.49999 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/Tutorial-o-Matic.jar"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/markedj-1.0.16.jar"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/jsoup-1.10.2.jar"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/executeTutorial.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/openDemoMap.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/Tutorial Sample.mm"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/ToMDemo.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/ExersizingMap.mm"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/ExercisingMap.mm"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/SimpleTutorialSample.mm"/>
 </node>
@@ -576,8 +573,7 @@
       some nodes to build AddOn and test changes easily and fast
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -588,8 +584,7 @@
       Edo
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="Build add-on" ID="ID_1016684737" LINK="menuitem:_addons.devtools.checkAddOn_on_single_node">
 <icon BUILTIN="emoji-1F527"/>
 </node>
@@ -606,10 +601,14 @@
     <p>
       .groovy
     </p>
+    <p>
+      abre tutorial indicado en primer nodo hijo
+    </p>
   </body>
 </html></richcontent>
 <attribute_layout VALUE_WIDTH="115.5 pt"/>
-<attribute NAME="script1" VALUE="import edofro.tutorialomatic.ToM_ui as tomui&#xa;import edofro.tutorialomatic.ToM    as tom&#xa;&#xa;//opens demo map&#xa;def mapFileName = node.children[0].text&#xa;&#xa;//para que use el que estoy modificando&#xa;pathName=&quot;C:\\Users\\Edo\\Documents\\GitHub\\Freeplane_Tutorial_AddOn\\Tutorial-o-Matic\\zips\\doc\\Tutorial-o-Matic\\${mapFileName}&quot;&#xa;&#xa;//def mapa = node.map //usar mapa activo&#xa;def mapa    = tom.getMapFromPath(pathName, true) //usar mapa indicado (true: visible, false: oculto)&#xa;&#xa;tom.showTutorials( mapa )&#xa;&#xa;return &apos;tutorial started&apos;"/>
+<attribute NAME="script1" VALUE="import edofro.tutorialomatic.ToM    as tom&#xa;&#xa;//opens demo map&#xa;def mapFileName = node.children[0].text&#xa;&#xa;//para que use el que estoy modificando&#xa;pathName=&quot;C:\\Users\\Edo\\Documents\\GitHub\\Freeplane_Tutorial_AddOn\\Tutorial-o-Matic\\zips\\doc\\Tutorial-o-Matic\\${mapFileName}&quot;&#xa;&#xa;//def mapa = node.map //usar mapa activo&#xa;def mapa    = tom.getMapFromPath(pathName, true) //usar mapa indicado (true: visible, false: oculto)&#xa;&#xa;tom.showTutorials( mapa )&#xa;&#xa;return &apos;tutorial started&apos;"/>
+<node TEXT="SimpleTutorialSample.mm" ID="ID_1123728779"/>
 <node TEXT="Tutorial Sample.mm" ID="ID_1495047992"/>
 </node>
 </node>
