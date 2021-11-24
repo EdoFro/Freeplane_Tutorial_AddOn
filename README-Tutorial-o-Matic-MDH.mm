@@ -1,16 +1,16 @@
 <map version="freeplane 1.9.8">
-<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node LOCALIZED_TEXT="new_mindmap" FOLDED="false" ID="ID_696401721" STYLE="oval">
 <font SIZE="18"/>
 <hook NAME="MapStyle">
-    <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_note_icons="true" associatedTemplateLocation="template:/MarkdownHelper/MarkdownHelper%20template.mm" mapUsesOwnSaveOptions="true" save_folding="default" save_last_visited_node="default" save_modification_times="false"/>
+    <properties mapUsesOwnSaveOptions="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" save_folding="default" associatedTemplateLocation="template:/MarkdownHelper/MarkdownHelper%20template.mm" save_modification_times="false" fit_to_viewport="false" save_last_visited_node="default" show_note_icons="true"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1758066171" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_271890427" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#000000" BACKGROUND_COLOR="#ffffff" STYLE="fork" NUMBERED="false" FORMAT="STANDARD_FORMAT" TEXT_ALIGN="DEFAULT" MAX_WIDTH="10 cm" MIN_WIDTH="0 cm" VGAP_QUANTITY="2 pt" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1 px" BORDER_COLOR_LIKE_EDGE="true" BORDER_COLOR="#808080" BORDER_DASH_LIKE_EDGE="false" BORDER_DASH="SOLID">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_271890427" STARTINCLINATION="65.25 pt;-33 pt;" ENDINCLINATION="55.5 pt;18.75 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_271890427" STARTINCLINATION="65.25 pt;-32.25 pt;" ENDINCLINATION="55.5 pt;18.75 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="SansSerif" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/auto"/>
@@ -69,7 +69,7 @@
 <attribute_layout NAME_WIDTH="135 pt" VALUE_WIDTH="135 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
-<attribute NAME="headerNumbering" VALUE="true"/>
+<attribute NAME="headerNumbering" VALUE="false"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
 <attribute NAME="fileLinksRelative" VALUE="false"/>
@@ -92,8 +92,7 @@
       = edofro.MarkDownHelper.MDH.textBlock(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="description" ID="ID_723426932"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -118,18 +117,6 @@
     <p>
       
     </p>
-    <p>
-      
-    </p>
-    <p>
-      Bye,
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      edo
-    </p>
   </body>
 </html>
 </richcontent>
@@ -143,8 +130,7 @@
       = edofro.MarkDownHelper.MDH.webLink(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="Freeplane AddOn" ID="ID_1481337960" LINK="https://www.freeplane.org/wiki/index.php/Add-ons_(install)"/>
 </node>
 <node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_1051472494"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -174,6 +160,29 @@
 <node TEXT="Releases" ID="ID_1483002666" LINK="https://github.com/EdoFro/Freeplane_Tutorial_AddOn/releases"/>
 </node>
 </node>
+</node>
+<node TEXT="Instructions:" ID="ID_719440148">
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1803918266">
+<icon BUILTIN="emoji-1F522"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.list(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="Download the addon.mm file, open it in Freeplane and install it." ID="ID_757042021"/>
+<node TEXT="Relaunch Freeplane" ID="ID_1084220841"/>
+<node TEXT="go to menu Edo Tools/Tutorial-o-Matic and click on &apos;Tutorial-o-Matic Demo&apos;" ID="ID_1043324219"/>
+</node>
+<node TEXT="enjoy the demo!" ID="ID_1570156462"/>
+<node TEXT="Bye," ID="ID_883396362"/>
+<node TEXT="edo" ID="ID_828515413"/>
 </node>
 </node>
 </node>

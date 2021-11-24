@@ -6,11 +6,11 @@ It is in "work in progress" state, but I loaded a first addOn version that shows
 
 Look under [Releases](https://github.com/EdoFro/Freeplane_Tutorial_AddOn/releases) in this repository.
 
-Instructions:
+## Instructions:
+
 1. Download the addon.mm file, open it in Freeplane and install it.
-2. Relaunch Freeplane
-3. go to menu Edo Tools/Tutorial-o-Matic and click on 'open Demo Map'
-4. go to menu Edo Tools/Tutorial-o-Matic and click on 'execute Demo Tutorial'
+1. Relaunch Freeplane
+1. go to menu Edo Tools/Tutorial-o-Matic and click on 'Tutorial-o-Matic Demo'
 
 enjoy the demo!
 
