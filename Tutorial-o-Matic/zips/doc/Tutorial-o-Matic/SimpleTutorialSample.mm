@@ -1,7 +1,7 @@
 <map version="freeplane 1.9.8">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Simple Tutorial Sample" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_258304564"><hook NAME="MapStyle" background="#c4e1ff">
-    <properties save_modification_times="false" save_last_visited_node="default" mapUsesOwnSaveOptions="true" fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="default"/>
+    <properties mapUsesOwnSaveOptions="true" save_last_visited_node="default" save_modification_times="false" show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="default"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1611611797" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -23,9 +23,13 @@
 <edge STYLE="hide_edge"/>
 <cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="defaultstyle.selection" BACKGROUND_COLOR="#4e85f8" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#4e85f8"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.selection" ID="ID_1654866931" BACKGROUND_COLOR="#4e85f8" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#4e85f8"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" ID="ID_1129636135" STYLE="bubble">
+<stylenode TEXT="markdownNote" ID="ID_151639309" BORDER_COLOR="#808080">
+<icon BUILTIN="edit"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+</stylenode>
 <stylenode TEXT="ToM-Tutorial" ID="ID_1317696283" ICON_SIZE="20 pt" BACKGROUND_COLOR="#f3d0c5" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 </stylenode>
@@ -73,9 +77,9 @@
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="mindmap"/>
 </stylenode>
-<stylenode TEXT="markdownNote" ID="ID_151639309" BORDER_COLOR="#808080">
-<icon BUILTIN="edit"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+<stylenode TEXT="ToM_openTutMap" ID="ID_255978903" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="links/file/freeplane_mindmap"/>
 </stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
@@ -105,7 +109,18 @@
 </stylenode>
 </map_styles>
 </hook>
-<node TEXT="simple demo" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_390003608">
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Tutorial-o-Matic gets the tutorial information by looking at the styles of the nodes and in some cases by their additional icons.
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="SIMPLE DEMO" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_390003608">
 <node TEXT="greetings" ID="ID_659572764">
 <node TEXT="Welcome to the Tutorial-o-Matic Simple Tutorial Demo!" STYLE_REF="ToM_newPage" ID="ID_577559944"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1123043625">
@@ -160,7 +175,7 @@ You can watch the original video in YouTube by clicking in the following picture
 </node>
 </node>
 </node>
-<node TEXT="Open exercise map" ID="ID_921379372">
+<node TEXT="Open exercise map" FOLDED="true" ID="ID_921379372">
 <node TEXT="OK! Let&apos;s start" STYLE_REF="ToM_newPage" ID="ID_353029437"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_903674748">
 <node TEXT="in this tutorial" STYLE_REF="markdownNote" ID="ID_765297069"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
@@ -178,7 +193,7 @@ For this tutorial I prepared a **special map** to do all the exercises and tests
 <node TEXT="ExercisingMap.mm" ID="ID_1748635039"/>
 </node>
 </node>
-<node TEXT="creating new nodes" ID="ID_1259754211">
+<node TEXT="creating new nodes" FOLDED="true" ID="ID_1259754211" VGAP_QUANTITY="2 pt">
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_210172010">
 <node TEXT="To create a new node:" STYLE_REF="markdownNote" ID="ID_1056518153"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text># 2. Insert new node&#xd;
@@ -235,7 +250,7 @@ As you can see the nodes have been inserted as a childs of the same parent node.
 </node>
 </node>
 </node>
-<node TEXT="navigating" ID="ID_1466696527">
+<node TEXT="navigating" FOLDED="true" ID="ID_1466696527">
 <node TEXT="Navigating" STYLE_REF="ToM_newPage" ID="ID_1208967040"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_687406637">
 <node TEXT="To navigate nodes use ARROW-KEYS." STYLE_REF="markdownNote" ID="ID_779855945"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
@@ -277,264 +292,30 @@ the example nodes and then click the following button:
 </node>
 </node>
 <node TEXT="example nodes for navigating" STYLE_REF="ToM_copy" ID="ID_743649520">
-<node TEXT="Madagascar" ID="ID_1880702833"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1880702833
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="main" ID="ID_1518147033"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1518147033
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Alex" ID="ID_1773054193"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1773054193
-    </p>
-  </body>
-</html>
-</richcontent>
+<node TEXT="Madagascar" ID="ID_1880702833">
+<node TEXT="main" ID="ID_1518147033">
+<node TEXT="Alex" ID="ID_1773054193"/>
+<node TEXT="Marty the Zebra" ID="ID_615407808"/>
+<node TEXT="Melman the Giraffe" ID="ID_376526691"/>
+<node TEXT="Gloria the Hippo" ID="ID_585287498"/>
 </node>
-<node TEXT="Marty the Zebra" ID="ID_615407808"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_615407808
-    </p>
-  </body>
-</html>
-</richcontent>
+<node TEXT="Penguins" ID="ID_340926616">
+<node TEXT="Skipper" ID="ID_422760260"/>
+<node TEXT="Private" ID="ID_686206171"/>
+<node TEXT="Kowalski" ID="ID_433246335"/>
+<node TEXT="Rico" ID="ID_1461578761"/>
 </node>
-<node TEXT="Melman the Giraffe" ID="ID_376526691"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_376526691
-    </p>
-  </body>
-</html>
-</richcontent>
+<node TEXT="Lemurs" ID="ID_625370253">
+<node TEXT="Julien" ID="ID_1259243838"/>
+<node TEXT="Maurice" ID="ID_901971718"/>
+<node TEXT="Mort" ID="ID_258433372"/>
+<node TEXT="Willie" ID="ID_1542772091"/>
 </node>
-<node TEXT="Gloria the Hippo" ID="ID_585287498"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_585287498
-    </p>
-  </body>
-</html>
-</richcontent>
+<node TEXT="Antagonists" ID="ID_1760799099">
+<node TEXT="Fossa" ID="ID_319250824"/>
 </node>
-</node>
-<node TEXT="Penguins" ID="ID_340926616"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_340926616
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Skipper" ID="ID_422760260"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_422760260
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Private" ID="ID_686206171"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_686206171
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Kowalski" ID="ID_433246335"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_433246335
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Rico" ID="ID_1461578761"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1461578761
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node TEXT="Lemurs" ID="ID_625370253"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_625370253
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Julien" ID="ID_1259243838"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1259243838
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Maurice" ID="ID_901971718"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_901971718
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Mort" ID="ID_258433372"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_258433372
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Willie" ID="ID_1542772091"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1542772091
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node TEXT="Antagonists" ID="ID_1760799099"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1760799099
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Fossa" ID="ID_319250824"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_319250824
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node TEXT="Others" ID="ID_1309053336"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1309053336
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Mason" ID="ID_1559270601"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1559270601
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
+<node TEXT="Others" ID="ID_1309053336">
+<node TEXT="Mason" ID="ID_1559270601"/>
 </node>
 </node>
 </node>
@@ -572,7 +353,7 @@ To delete a node you have select it and:
 <node TEXT="Remove node" ID="ID_444118342" LINK="menuitem:_DeleteAction"/>
 </node>
 </node>
-<node TEXT="folding" ID="ID_1467984513">
+<node TEXT="folding" FOLDED="true" ID="ID_1467984513">
 <node TEXT="Folding and unfolding nodes" STYLE_REF="ToM_newPage" ID="ID_72403665"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_849975097">
 <node TEXT="To fold/unfold" STYLE_REF="markdownNote" ID="ID_120269046"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
@@ -587,913 +368,102 @@ I prepared a little example you can use to practice folding and unfolding:
 </node>
 </node>
 <node TEXT="example nodes for fold/unfold" STYLE_REF="ToM_copy" ID="ID_1986175322">
-<node TEXT="List of DreamWorks Animation productions" ID="ID_1235139852"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1235139852
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="1995 to 2000" FOLDED="true" ID="ID_1596341422"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1596341422
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="1998" ID="ID_744684303"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_744684303
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Antz" ID="ID_1649158465"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1649158465
-    </p>
-  </body>
-</html>
-</richcontent>
+<node TEXT="List of DreamWorks Animation productions" ID="ID_1235139852">
+<node TEXT="1995 to 2000" ID="ID_1596341422">
+<node TEXT="1998" ID="ID_744684303">
+<node TEXT="Antz" ID="ID_1649158465"/>
+<node TEXT="The Prince of Egypt" ID="ID_46055509"/>
 </node>
-<node TEXT="The Prince of Egypt" ID="ID_46055509"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_46055509
-    </p>
-  </body>
-</html>
-</richcontent>
 </node>
+<node TEXT="2000 to 2005" ID="ID_1322738624">
+<node TEXT="2000" ID="ID_316178896">
+<node TEXT="The Road to El Dorado" ID="ID_1283859713"/>
+<node TEXT="Chicken Run" ID="ID_362385190"/>
 </node>
+<node TEXT="2001" ID="ID_1305264689">
+<node TEXT="Shrek" ID="ID_892037000"/>
 </node>
-<node TEXT="2000 to 2005" FOLDED="true" ID="ID_1322738624"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1322738624
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="2000" ID="ID_316178896"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_316178896
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="The Road to El Dorado" ID="ID_1283859713"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1283859713
-    </p>
-  </body>
-</html>
-</richcontent>
+<node TEXT="2002" ID="ID_671312758">
+<node TEXT="Spirit: Stallion of the Cimarron" ID="ID_1080612868"/>
 </node>
-<node TEXT="Chicken Run" ID="ID_362385190"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_362385190
-    </p>
-  </body>
-</html>
-</richcontent>
+<node TEXT="2003" ID="ID_410310377">
+<node TEXT="Sinbad: Legend of the Seven Seas" ID="ID_1981641927"/>
 </node>
+<node TEXT="2004" ID="ID_901667389">
+<node TEXT="Shark Tale" ID="ID_967991282"/>
+<node TEXT="Shrek 2" ID="ID_1603433156"/>
 </node>
-<node TEXT="2001" ID="ID_1305264689"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1305264689
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Shrek" ID="ID_892037000"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_892037000
-    </p>
-  </body>
-</html>
-</richcontent>
 </node>
+<node TEXT="2005 to 2010" ID="ID_453044518">
+<node TEXT="2005" ID="ID_1783904854">
+<node TEXT="Madagascar" ID="ID_710330649"/>
+<node TEXT="Wallace &amp; Gromit: The Curse of the Were-Rabbit" ID="ID_970306816"/>
 </node>
-<node TEXT="2002" ID="ID_671312758"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_671312758
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Spirit: Stallion of the Cimarron" ID="ID_1080612868"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1080612868
-    </p>
-  </body>
-</html>
-</richcontent>
+<node TEXT="2006" ID="ID_1802972300">
+<node TEXT="Flushed Away" ID="ID_571312244"/>
+<node TEXT="Over the Hedge" ID="ID_377204564"/>
 </node>
+<node TEXT="2007" ID="ID_1821965437">
+<node TEXT="Bee Movie" ID="ID_564329496"/>
+<node TEXT="Shrek the Third" ID="ID_1139181505"/>
 </node>
-<node TEXT="2003" ID="ID_410310377"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_410310377
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Sinbad: Legend of the Seven Seas" ID="ID_1981641927"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1981641927
-    </p>
-  </body>
-</html>
-</richcontent>
+<node TEXT="2008" ID="ID_221192183">
+<node TEXT="Kung Fu Panda" ID="ID_538169038"/>
+<node TEXT="Madagascar: Escape 2 Africa" ID="ID_1733318333"/>
 </node>
+<node TEXT="2009" ID="ID_239989714">
+<node TEXT="Monsters vs. Aliens" ID="ID_1841851082"/>
 </node>
-<node TEXT="2004" ID="ID_901667389"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_901667389
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Shark Tale" ID="ID_967991282"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_967991282
-    </p>
-  </body>
-</html>
-</richcontent>
 </node>
-<node TEXT="Shrek 2" ID="ID_1603433156"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1603433156
-    </p>
-  </body>
-</html>
-</richcontent>
+<node TEXT="2010 to 2015" ID="ID_1461280944">
+<node TEXT="2010" ID="ID_1453016285">
+<node TEXT="How to Train Your Dragon" ID="ID_1126366466"/>
+<node TEXT="Megamind" ID="ID_501596288"/>
+<node TEXT="Shrek Forever After" ID="ID_1458557055"/>
 </node>
+<node TEXT="2011" ID="ID_424921636">
+<node TEXT="Kung Fu Panda 2" ID="ID_1843801851"/>
+<node TEXT="Puss in Boots" ID="ID_789616545"/>
 </node>
+<node TEXT="2012" ID="ID_1221140059">
+<node TEXT="Madagascar 3: Europe&apos;s Most Wanted" ID="ID_584720952"/>
+<node TEXT="Rise of the Guardians" ID="ID_1508063547"/>
 </node>
-<node TEXT="2005 to 2010" ID="ID_453044518"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_453044518
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="2005" ID="ID_1783904854"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1783904854
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Madagascar" ID="ID_710330649"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_710330649
-    </p>
-  </body>
-</html>
-</richcontent>
+<node TEXT="2013" ID="ID_320063981">
+<node TEXT="The Croods" ID="ID_132068561"/>
+<node TEXT="Turbo" ID="ID_583713997"/>
 </node>
-<node TEXT="Wallace &amp; Gromit: The Curse of the Were-Rabbit" ID="ID_970306816"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_970306816
-    </p>
-  </body>
-</html>
-</richcontent>
+<node TEXT="2014" ID="ID_358862020">
+<node TEXT="How to Train Your Dragon 2" ID="ID_431893089"/>
+<node TEXT="Mr. Peabody &amp; Sherman" ID="ID_1736616962"/>
+<node TEXT="Penguins of Madagascar" ID="ID_745157585"/>
 </node>
 </node>
-<node TEXT="2006" FOLDED="true" ID="ID_1802972300"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1802972300
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Flushed Away" ID="ID_571312244"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_571312244
-    </p>
-  </body>
-</html>
-</richcontent>
+<node TEXT="2015 to 2020" ID="ID_1833672555">
+<node TEXT="2015" ID="ID_1058440308">
+<node TEXT="Home" ID="ID_1547908725"/>
 </node>
-<node TEXT="Over the Hedge" ID="ID_377204564"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_377204564
-    </p>
-  </body>
-</html>
-</richcontent>
+<node TEXT="2016" ID="ID_1244027219">
+<node TEXT="Kung Fu Panda 3" ID="ID_1876024786"/>
+<node TEXT="Trolls" ID="ID_157184668"/>
 </node>
+<node TEXT="2017" ID="ID_789084212">
+<node TEXT="Captain Underpants: The First Epic Movie" ID="ID_1876237737"/>
+<node TEXT="The Boss Baby" ID="ID_1470134385"/>
 </node>
-<node TEXT="2007" FOLDED="true" ID="ID_1821965437"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1821965437
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Bee Movie" ID="ID_564329496"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_564329496
-    </p>
-  </body>
-</html>
-</richcontent>
+<node TEXT="2019" ID="ID_668225534">
+<node TEXT="Abominable" ID="ID_1899332565"/>
+<node TEXT="How to Train Your Dragon: The Hidden World" ID="ID_973295145"/>
 </node>
-<node TEXT="Shrek the Third" ID="ID_1139181505"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1139181505
-    </p>
-  </body>
-</html>
-</richcontent>
 </node>
+<node TEXT="2020 to 2025" ID="ID_38300043">
+<node TEXT="2020" ID="ID_1903995872">
+<node TEXT="The Croods: A New Age" ID="ID_1464775133"/>
+<node TEXT="Trolls World Tour" ID="ID_359163446"/>
 </node>
-<node TEXT="2008" ID="ID_221192183"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_221192183
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Kung Fu Panda" ID="ID_538169038"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_538169038
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Madagascar: Escape 2 Africa" ID="ID_1733318333"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1733318333
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node TEXT="2009" FOLDED="true" ID="ID_239989714"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_239989714
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Monsters vs. Aliens" ID="ID_1841851082"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1841851082
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-</node>
-<node TEXT="2010 to 2015" FOLDED="true" ID="ID_1461280944"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1461280944
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="2010" ID="ID_1453016285"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1453016285
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="How to Train Your Dragon" ID="ID_1126366466"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1126366466
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Megamind" ID="ID_501596288"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_501596288
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Shrek Forever After" ID="ID_1458557055"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1458557055
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node TEXT="2011" ID="ID_424921636"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_424921636
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Kung Fu Panda 2" ID="ID_1843801851"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1843801851
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Puss in Boots" ID="ID_789616545"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_789616545
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node TEXT="2012" ID="ID_1221140059"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1221140059
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Madagascar 3: Europe&apos;s Most Wanted" ID="ID_584720952"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_584720952
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Rise of the Guardians" ID="ID_1508063547"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1508063547
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node TEXT="2013" ID="ID_320063981"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_320063981
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="The Croods" ID="ID_132068561"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_132068561
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Turbo" ID="ID_583713997"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_583713997
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node TEXT="2014" ID="ID_358862020"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_358862020
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="How to Train Your Dragon 2" ID="ID_431893089"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_431893089
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Mr. Peabody &amp; Sherman" ID="ID_1736616962"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1736616962
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Penguins of Madagascar" ID="ID_745157585"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_745157585
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-</node>
-<node TEXT="2015 to 2020" FOLDED="true" ID="ID_1833672555"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1833672555
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="2015" ID="ID_1058440308"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1058440308
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Home" ID="ID_1547908725"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1547908725
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node TEXT="2016" ID="ID_1244027219"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1244027219
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Kung Fu Panda 3" ID="ID_1876024786"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1876024786
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Trolls" ID="ID_157184668"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_157184668
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node TEXT="2017" ID="ID_789084212"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_789084212
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Captain Underpants: The First Epic Movie" ID="ID_1876237737"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1876237737
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="The Boss Baby" ID="ID_1470134385"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1470134385
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node TEXT="2019" ID="ID_668225534"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_668225534
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Abominable" ID="ID_1899332565"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1899332565
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="How to Train Your Dragon: The Hidden World" ID="ID_973295145"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_973295145
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-</node>
-<node TEXT="2020 to 2025" FOLDED="true" ID="ID_38300043"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_38300043
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="2020" ID="ID_1903995872"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1903995872
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="The Croods: A New Age" ID="ID_1464775133"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1464775133
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Trolls World Tour" ID="ID_359163446"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_359163446
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node TEXT="2021" ID="ID_528560619"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_528560619
-    </p>
-  </body>
-</html>
-</richcontent>
-<node TEXT="Spirit Untamed" ID="ID_939187668"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_939187668
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="The Boss Baby: Family Business" ID="ID_1957430787"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      ID_1957430787
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
+<node TEXT="2021" ID="ID_528560619">
+<node TEXT="Spirit Untamed" ID="ID_939187668"/>
+<node TEXT="The Boss Baby: Family Business" ID="ID_1957430787"/>
 </node>
 </node>
 </node>
@@ -1585,178 +555,6 @@ If you don&apos;t remember them you can click the following buttons:&#xd;
 <node TEXT="Unfold one level" ID="ID_667596230" LINK="menuitem:_UnfoldOneLevelAction"/>
 <node TEXT="Fold one level" ID="ID_346521081" LINK="menuitem:_FoldOneLevelAction"/>
 <node TEXT="(Un)fold children" ID="ID_1900785130" LINK="menuitem:_ToggleChildrenFoldedAction"/>
-</node>
-</node>
-<node TEXT="move nodes" FOLDED="true" ID="ID_935288940">
-<node TEXT="Moving nodes" STYLE_REF="ToM_newPage" ID="ID_1277437434"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_440177109">
-<node TEXT="to move nodes, drag and drop them with the mouse" STYLE_REF="markdownNote" ID="ID_1650251687"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>to move nodes,
-
-- you can **drag and drop** them with the **mouse**
-- or you can move them with the **keyboard**
-
-  
-
-To move the selected node with the Keyboard 
-you have to press the CONTROL key while using the 
-ARROW keys to move the node.  
-  
-I prepared a little example. 
-Please select the node where you want 
-to insert the example nodes.</text>
-</richcontent>
-<font BOLD="false"/>
-</node>
-</node>
-<node TEXT="move example nodes" STYLE_REF="ToM_copy" ID="ID_1178388673">
-<node TEXT="Kung Fu Panda" ID="ID_1748112706"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      2008 movie
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="Cartoon Characters" ID="ID_1706014544">
-<node TEXT="Master Monkey" ID="ID_657675037"/>
-<node TEXT="Oogway" ID="ID_1537888277"/>
-<node TEXT="Master Viper" ID="ID_337678330"/>
-<node TEXT="Po" ID="ID_348506382"/>
-<node TEXT="Master Crane" ID="ID_1742467944"/>
-<node TEXT="Master Tigress" ID="ID_1868248941"/>
-<node TEXT="Shifu" ID="ID_1083179020"/>
-<node TEXT="Master Mantis" ID="ID_1227840559"/>
-<node TEXT="main" ID="ID_1834330934" BACKGROUND_COLOR="#99ff33" STYLE="bubble"/>
-<node TEXT="kung fu senior masters" ID="ID_948185235" BACKGROUND_COLOR="#99ff33" STYLE="bubble"/>
-<node TEXT="Furious Five" ID="ID_1315518988" BACKGROUND_COLOR="#99ff33" STYLE="bubble"/>
-<node TEXT="villains" ID="ID_342101636" BACKGROUND_COLOR="#99ff33" STYLE="bubble">
-<node TEXT="Tai Lung" ID="ID_1927953685"/>
-</node>
-<node TEXT="others" ID="ID_1509362375" BACKGROUND_COLOR="#99ff33" STYLE="bubble">
-<node TEXT="Commander Vachir" ID="ID_1632108314"/>
-<node TEXT="Zeng" ID="ID_27747225"/>
-<node TEXT="Mr. Ping" ID="ID_169482165"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="select root" LOCALIZED_STYLE_REF="default" ID="ID_1793164194">
-<node ID="ID_67864121" CONTENT_ID="ID_1748112706"/>
-</node>
-<node TEXT="unfold all" LOCALIZED_STYLE_REF="default" ID="ID_452065185">
-<icon BUILTIN="emoji-1F56F"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>First Step: Let&apos;s **unfold** the whole branch.</text>
-</richcontent>
-<node TEXT="Unfold all" ID="ID_244862129" LINK="menuitem:_UnfoldAllAction"/>
-</node>
-<node TEXT="let&apos;s see" STYLE_REF="ToM_note" ID="ID_1708979415">
-<node TEXT="as next" STYLE_REF="markdownNote" ID="ID_1791107705"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>Now we can see that the nodes contains the names of the Characters of the &quot;KungFu Panda&quot; movie.&#xd;
-&#xd;
-Some of them are allready grouped but others are still not classified. &#xd;
-&#xd;
-      &#xd;
-Let&apos;s classify them, beginning with **Po** as the **main character**&#xd;
-</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="select Po" STYLE_REF="ToM_select" ID="ID_1318107269">
-<node ID="ID_404884047" TREE_ID="ID_348506382"/>
-</node>
-<node TEXT="move po to main" STYLE_REF="ToM_menuAction" ID="ID_1347577958">
-<icon BUILTIN="emoji-1F56F"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      First we will move the 'Po' node into the 'main' node
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="Move node (Sibling down)" ID="ID_960252906" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_1489296727" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_976742944" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_697423881" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_104790125" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node to the right" ID="ID_984466973" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
-</node>
-<node TEXT="next step" STYLE_REF="ToM_note" ID="ID_1978680162">
-<node TEXT="as next" STYLE_REF="markdownNote" ID="ID_1686208429"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>Now let&apos;s move both kung fu masters (Oogway and Shifu) to the masters node.&#xd;
-</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="select" STYLE_REF="ToM_select" ID="ID_271689094">
-<node ID="ID_1414524459" CONTENT_ID="ID_1537888277"/>
-<node ID="ID_1314878308" CONTENT_ID="ID_1083179020"/>
-</node>
-<node TEXT="move them together" STYLE_REF="ToM_menuAction" ID="ID_305434084">
-<icon BUILTIN="emoji-1F56F"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>**&apos;Shifu&apos;** and **&apos;Oogway&apos;** nodes are not together, so we are going to move them to the right first and then back to the left. This way they get together.
-</text>
-</richcontent>
-<node TEXT="Move node to the right" ID="ID_216360233" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
-<node TEXT="Move node to the left" ID="ID_686083742" LINK="menuitem:_ChangeNodeLevelLeftsAction"/>
-</node>
-<node TEXT="move them to kung fu masters" STYLE_REF="ToM_menuAction" ID="ID_1037503919">
-<icon BUILTIN="emoji-1F56F"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>Now we will move the **&apos;Shifu&apos;** and **&apos;Oogway&apos;** nodes into the **&apos;kung fu masters&apos;** node.
-</text>
-</richcontent>
-<node TEXT="Move node (Sibling down)" ID="ID_902830163" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_1861218880" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_96926168" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_459176777" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_1708644021" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_1939034761" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node to the right" ID="ID_1537443714" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
-</node>
-<node TEXT="next step" STYLE_REF="ToM_note" ID="ID_35115412">
-<node TEXT="as next" STYLE_REF="markdownNote" ID="ID_177324546"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>Now let&apos;s move the **Furious Five** to their node.&#xd;
-</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="select" STYLE_REF="ToM_select" ID="ID_1620590356">
-<node ID="ID_1420677614" TREE_ID="ID_657675037"/>
-<node ID="ID_956047396" TREE_ID="ID_337678330"/>
-<node ID="ID_832745370" TREE_ID="ID_1742467944"/>
-<node ID="ID_1804779487" TREE_ID="ID_1868248941"/>
-<node ID="ID_983955739" TREE_ID="ID_1227840559"/>
-</node>
-<node TEXT="move them to Furious Five" STYLE_REF="ToM_menuAction" ID="ID_1905132220">
-<icon BUILTIN="emoji-1F56F"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>Now we will move the nodes into the **&apos;Furious Five&apos;** node.
-</text>
-</richcontent>
-<node TEXT="Move node (Sibling down)" ID="ID_636850219" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_449849093" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_1019965305" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node to the right" ID="ID_1175391830" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
-</node>
-<node TEXT="next step" STYLE_REF="ToM_note" ID="ID_140041765">
-<node TEXT="as next" STYLE_REF="markdownNote" ID="ID_1949455174"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>## Now is your turn!!&#xd;
-&#xd;
-1. **Insert the example nodes** again &#xd;
-1. and try to do the classification yourself **moving the nodes** with **CONTROL and ARROW** keys!!&#xd;
-</text>
-</richcontent>
-</node>
 </node>
 </node>
 <node TEXT="modifying texts" FOLDED="true" ID="ID_191774228">
@@ -1871,7 +669,7 @@ You can find more information about this in the following links:
 </node>
 </node>
 </node>
-<node TEXT="TOC" ID="ID_498725985">
+<node TEXT="TOC" FOLDED="true" ID="ID_498725985">
 <node TEXT="Topics seen in this tutorial" STYLE_REF="ToM_newPage" ID="ID_374851820"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1770015991">
 <node TEXT="here is a list ..." ID="ID_1557602658"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -1893,7 +691,7 @@ You can find more information about this in the following links:
 <node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_1629678071"/>
 </node>
 </node>
-<node TEXT="Bye" ID="ID_1830010611">
+<node TEXT="Bye" FOLDED="true" ID="ID_1830010611">
 <node TEXT="Bye!!" STYLE_REF="ToM_newPage" ID="ID_948535523"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1602449098">
 <node TEXT="bye" ID="ID_188196774"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -1931,6 +729,1815 @@ You can find more information about this in the following links:
 </node>
 </node>
 </node>
-<node TEXT="Tutorial Sample.mm" POSITION="left" ID="ID_640803167" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/ignoredByGitHub/Tutorial%20Sample.mm"/>
+<node TEXT="Current features" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_1118821725">
+<node TEXT="Introduction" FOLDED="true" ID="ID_1042686150">
+<node TEXT="Introduction" STYLE_REF="ToM_newPage" ID="ID_1727993127">
+<node TEXT="nodes with style newPage defines the title for the page and indicates where the page starts" ID="ID_1377188476"/>
+</node>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1894984288">
+<node TEXT="intro" STYLE_REF="markdownNote" ID="ID_148001089"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>In the following pages you can see the different content that the **Tutorial-o-Matic(ToM)** AddOn can show.
+
+New features may be added in the future.</text>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="markdown note" FOLDED="true" ID="ID_1476835349">
+<node TEXT="Markdown content examples" STYLE_REF="ToM_newPage" ID="ID_207140003"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_928588147">
+<node TEXT="calvin and hobbes" ID="ID_1660497594"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text># Calvin and Hobbes
+
+-----
+
+## 1. Preface
+
+-----
+
+I made this markdown document and its source mindmap as an example to show how the **Markdown Helper AddOn** works and to show some of its features.
+
+This document isn&apos;t an official source of information about the **Calvin and Hobbes** comic strip. I made this document about it because I like **Mr. Watterson** work very much and I think that any extra showroom for it is well deserved.
+
+All information in this document comes from the [&apos;Calvin and Hobbes&apos; wiki page available in FANDOM.com](https://calvinandhobbes.fandom.com/wiki/Main_Page)
+
+Please look in there if you want to know more about **Calvin and Hobbes**.
+
+## 2. Content
+
+-----
+
+[Calvin and Hobbes](#Calvin-and-Hobbes)
+
+[1. Preface](#1-Preface)
+
+[2. Content](#2-Content)
+
+[3. Story Arcs](#3-Story-Arcs)
+
+[4. Characters](#4-Characters)
+
+[5. Watterson](#5-Watterson)
+
+[6. Books](#6-Books)
+
+## 3. Story Arcs
+
+-----
+
+In [Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Calvin_and_Hobbes), story arcs are a theme or plotline that lasts longer than a day. They can range from a few days to a month, such as the arc with [Calvin](https://calvinandhobbes.fandom.com/wiki/Calvin) accidentally pushing [his parents&apos; car](https://calvinandhobbes.fandom.com/wiki/Car) into a ditch.
+
+Generally, the strip had week-long story arcs for the first couple of years and had its longest arcs in the middle of the its life. Later on, the arcs became fewer and farther between as [Bill Watterson](https://calvinandhobbes.fandom.com/wiki/Bill_Watterson) focused more on [Sunday strips](https://calvinandhobbes.fandom.com/wiki/Sunday_comics).
+
+Story arcs are used mainly to develop characters, introduce new devices, or investigate new artistic directions.
+
+## 4. Characters
+
+-----
+
+The principal characters of this strip are the followings:
+
+|Name|Image|Link|Description|
+|----|:----:|:----:|----|
+|Calvin|![https://static.wikia.nocookie.net/candh/images/7/78/Image.jpg/revision/latest/scale-to-width-down/139?cb=20130902154949](https://static.wikia.nocookie.net/candh/images/7/78/Image.jpg/revision/latest/scale-to-width-down/139?cb=20130902154949)|[Calvin](https://calvinandhobbes.fandom.com/wiki/Calvin)|
+|Hobbes|![https://static.wikia.nocookie.net/candh/images/3/36/61D_hobbes.jpg/revision/latest/scale-to-width-down/133?cb=20121112232636](https://static.wikia.nocookie.net/candh/images/3/36/61D_hobbes.jpg/revision/latest/scale-to-width-down/133?cb=20121112232636)|[Hobbes](https://calvinandhobbes.fandom.com/wiki/Hobbes)|
+|Susie Derkins|![https://static.wikia.nocookie.net/candh/images/a/a4/Susie_lalal.jpg/revision/latest/scale-to-width-down/140?cb=20130902161428](https://static.wikia.nocookie.net/candh/images/a/a4/Susie_lalal.jpg/revision/latest/scale-to-width-down/140?cb=20130902161428)|[Susie Derkins](https://calvinandhobbes.fandom.com/wiki/Susie_Derkins)|
+|Calvin&apos;s mother|![https://static.wikia.nocookie.net/candh/images/3/32/Cmom_mainpage.jpeg/revision/latest/scale-to-width-down/150?cb=20170703031759](https://static.wikia.nocookie.net/candh/images/3/32/Cmom_mainpage.jpeg/revision/latest/scale-to-width-down/150?cb=20170703031759)|[Calvin&apos;s mother](https://calvinandhobbes.fandom.com/wiki/Calvin%27s_mother)|
+|Calvin&apos;s father|![https://static.wikia.nocookie.net/candh/images/c/ca/Dad.jpg/revision/latest/scale-to-width-down/150?cb=20200108212915](https://static.wikia.nocookie.net/candh/images/c/ca/Dad.jpg/revision/latest/scale-to-width-down/150?cb=20200108212915)|[Calvin&apos;s father](https://calvinandhobbes.fandom.com/wiki/Calvin%27s_father)|
+|Rosalyn|![https://static.wikia.nocookie.net/candh/images/2/20/Rosalyn.png/revision/latest/scale-to-width-down/49?cb=20200108212824](https://static.wikia.nocookie.net/candh/images/2/20/Rosalyn.png/revision/latest/scale-to-width-down/49?cb=20200108212824)|[Rosalyn](https://calvinandhobbes.fandom.com/wiki/Rosalyn)|
+|Moe|![https://static.wikia.nocookie.net/candh/images/8/81/Moe.jpg/revision/latest/scale-to-width-down/150?cb=20090401050911](https://static.wikia.nocookie.net/candh/images/8/81/Moe.jpg/revision/latest/scale-to-width-down/150?cb=20090401050911)|[Moe](https://calvinandhobbes.fandom.com/wiki/Moe)|
+|Miss Wormwood|![https://static.wikia.nocookie.net/candh/images/7/79/Wormwoodmainpagepic.png/revision/latest/scale-to-width-down/121?cb=20170713194559](https://static.wikia.nocookie.net/candh/images/7/79/Wormwoodmainpagepic.png/revision/latest/scale-to-width-down/121?cb=20170713194559)|[Miss Wormwood](https://calvinandhobbes.fandom.com/wiki/Miss_Wormwood)|
+|Alter Egos|![https://static.wikia.nocookie.net/candh/images/e/e7/Unknown-5.jpeg/revision/latest/scale-to-width-down/111?cb=20110320025133](https://static.wikia.nocookie.net/candh/images/e/e7/Unknown-5.jpeg/revision/latest/scale-to-width-down/111?cb=20110320025133)|[Alter Egos](https://calvinandhobbes.fandom.com/wiki/Category:Alter_egos)|
+
+## 5. Watterson
+
+-----
+
+William Boyd &quot;Bill&quot; Watterson II (born July 5, 1958) is the author of [Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Calvin_and_Hobbes). He was author and artist during the strip&apos;s decade-long run. Calvin and Hobbes abruptly ceased publication in 1995, when Watterson decided to retire. He is now removed completely from the public eye, and is reluctant to take interviews, preferring to let his work speak for itself. He drew Calvin&apos;s father to look exactly like himself, for symbolism. Bill is currently 62 years old.
+
+## 6. Books
+
+-----
+
+Despite [ Bill Watterson](https://calvinandhobbes.fandom.com/wiki/Bill_Watterson)&apos;s reluctance to sell [merchandise](https://calvinandhobbes.fandom.com/wiki/Licensing) based on [merchandise](https://calvinandhobbes.fandom.com/wiki/Licensing) or its characters, he still allowed some merchandise to reach the public, one of the few was books. There have so far been eighteen books (including one three-volume set) published in the United States.
+
+The books, referred to as &quot;Collections&quot;, form a complete archive of the newspaper strips, except for a [single daily strip](https://calvinandhobbes.fandom.com/wiki/Alternate_strip) from November 28, 1985 (The collections do contain a strip for this date, but it is not the same strip that appeared in some newspapers). &quot;Treasuries&quot; combine the two preceding collections with bonus material and include color reprints of Sunday comics, and irregular printed collections reprint already published comics with a particular intent, such as providing original sketches or commentary.
+
+A complete collection of Calvin and Hobbes strips, in three hardcover volumes, with a total 1440 pages, was released on October 4, 2005, by [Andrews &amp; McMeel](https://calvinandhobbes.fandom.com/wiki/Andrews_%26_McMeel) Publishing. It also includes color prints of the art used on paperback covers, the Treasuries&apos; extra illustrated stories and poems, and an original 14-page introduction by Bill Watterson. Unfortunately, the alternate 1985 strip is still omitted, and two other strips (January 7, 1987, and November 25, 1988) have altered dialogue.
+
+To celebrate the release, Calvin and Hobbes reruns were made available to newspapers from Sunday, September 4, 2005, through Saturday, December 31, 2005, and Bill Watterson answered a select dozen questions submitted by readers. ([[1]](http://www.amuniversal.com/ups/features/thereturn/) [[2]](http://www.andrewsmcmeel.com/calvinandhobbes/returning.html)) Like current contemporary strips, weekday Calvin and Hobbes strips now appear in color print when available, instead of black and white as in their first run.
+
+|Title|Cover|Date|ISBN|Notes|
+|----|----|:----:|----|----|
+|[Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Calvin_and_Hobbes_(book))|![https://static.wikia.nocookie.net/candh/images/b/b2/Calvin_and_Hobbes_Original.png/revision/latest/scale-to-width-down/100?cb=20060314024407](https://static.wikia.nocookie.net/candh/images/b/b2/Calvin_and_Hobbes_Original.png/revision/latest/scale-to-width-down/100?cb=20060314024407)|April 1987|ISBN 0836220889|Collection covering strips from first strip on Nov 18, 1985 to Aug 17, 1986. Original content: Foreword by [Garry Trudeau](http://en.wikipedia.org/wiki/Garry_Trudeau).|
+|[Something Under the Bed Is Drooling](https://calvinandhobbes.fandom.com/wiki/Something_Under_the_Bed_Is_Drooling)|![https://static.wikia.nocookie.net/candh/images/2/24/Something_Under_the_Bed_Is_Drooling.jpg/revision/latest/scale-to-width-down/100?cb=20060316165419](https://static.wikia.nocookie.net/candh/images/2/24/Something_Under_the_Bed_Is_Drooling.jpg/revision/latest/scale-to-width-down/100?cb=20060316165419)|April 1988|ISBN 0836218256|Collection covering strips from Aug 18, 1986 to May 22, 1987. Original content: Foreword by [Pat Oliphant](http://en.wikipedia.org/wiki/Pat_Oliphant).|
+|[The Essential Calvin and Hobbes: A Calvin and Hobbes Treasury](https://calvinandhobbes.fandom.com/wiki/The_Essential_Calvin_and_Hobbes)|![https://static.wikia.nocookie.net/candh/images/d/dd/The_Essential_Calvin_and_Hobbes.png/revision/latest/scale-to-width-down/100?cb=20060316165656](https://static.wikia.nocookie.net/candh/images/d/dd/The_Essential_Calvin_and_Hobbes.png/revision/latest/scale-to-width-down/100?cb=20060316165656)|September 1988|ISBN 0836218051|Treasury including cartoons from Calvin and Hobbes, Something Under the Bed is Drooling, &amp; a strip from May 23, 1987 not published in Drooling. Original content: Foreword by [Charles M. Schulz](http://en.wikipedia.org/wiki/Charles_M._Schulz), original illustrated poem &quot;[A Nauseous Nocturne](https://calvinandhobbes.fandom.com/wiki/A_Nauseous_Nocturne)&quot; and artwork on back cover of a giant rampaging Calvin.|
+|....|....|....|....|....|
+|....|....|....|
+
+Early books were printed in a smaller format, and the Sunday strips appeared in black and white. They were then reprinted, in color for the Sundays, in the three &quot;Treasuries&quot; (Essential, Authoritative, and Indispensable). The contents of Attack of the Deranged Mutant Killer Monster Snow Goons were not reprinted, and its Sunday comics were in black and white. As a result, those Sunday strips were never reprinted in color until the Complete collection was published in 2005. Every book since Snow Goons had been printed in a larger format with Sundays in color and weekday and Saturday strips larger than they appeared in most newspapers.
+
+Remaining books do contain some additional content; for instance, The Calvin and Hobbes Lazy Sunday Book contains a long watercolor Spaceman Spiff epic not seen elsewhere until Complete, and The Calvin and Hobbes Tenth Anniversary Book contains much original commentary from Watterson. Calvin and Hobbes: Sunday Pages 1985-1995 contains 36 Sunday strips in color alongside Watterson&apos;s original sketches, prepared for an exhibition at The Ohio State University Cartoon Research Library.
+
+An officially licensed children&apos;s textbook entitled [Teaching with Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Teaching_with_Calvin_and_Hobbes) ([ISBN 1878849158](https://calvinandhobbes.fandom.com/wiki/ISBN_1878849158?action=edit&amp;redlink=1)) was published in 1993. It reprints 57 comic strips comprising 5 [story arcs](https://calvinandhobbes.fandom.com/wiki/Story_arcs).
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="more Markdown examples" STYLE_REF="ToM_newPage" ID="ID_378617313"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1780563592">
+<node TEXT="text with animated gif" ID="ID_516166101"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>## How to xxxx&#xd;
+&#xd;
+Sopose this is an introductio paragraph that explains a problem and next it comes an explanation of the possible solution:&#xd;
+&#xd;
+In the following animation you can see how this can be done:&#xd;
+&#xd;
+### my animated webimage&#xd;
+&#xd;
+*(I just took any image. I think for this kind of tutorials you should include smaller ones (not so wide)) *&#xd;
+&#xd;
+![https://github.com/EdoFro/hello-world/raw/master/testFormulaNodeChange.gif](https://github.com/EdoFro/hello-world/raw/master/testFormulaNodeChange.gif)&#xd;
+</text>
+</richcontent>
+</node>
+<node TEXT="MD-ex01_03.md" ID="ID_1558955205"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text># My Document
+
+## Introduction
+
+This is just a test
+
+I don`t have much more to say
+
+## List examples
+
+### Simple list
+
+1. apples
+1. bananas
+1. oranges
+1. lettuce
+1. cucumber
+1. tomatos
+1. carrots
+
+1. apples
+1. bananas
+1. oranges
+1. lettuce
+1. cucumber
+1. tomatos
+1. carrots
+
+### Structured list
+
+1. fruits
+   1. apples
+   1. bananas
+   1. oranges
+   1. tomatoes
+1. salats
+   * lettuce
+   * cucumber
+   * tomatoes
+   * carrots
+
+### List with links
+
+* links
+   * [Freeplane Homepage](https://www.freeplane.org/wiki/index.php/Home)
+   * [MarkdownHelper-icon.svg](file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper-icon.svg)
+* images
+   * ![What is Mindmapping (thumb)](https://www.freeplane.org/wiki/images/thumb/7/7b/WhatIsMindMapping.jpg/300px-WhatIsMindMapping.jpg)
+   * ![Corgi.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png)
+
+## My plain task list
+
+- [x] walk the dog
+- [x] do the dishes
+- [ ] cancer cure
+- [ ] laundry
+
+## Structured tasks lists
+
+They work the same as plain tasks lists, but they can see subtasks inside of tasks.
+
+- [ ] task 1
+- [ ] task 2
+   - [x] task 2.1
+   - [ ] task 2.2
+- [x] task 3
+   - [x] subtask 3.1
+
+## Table example
+
+|Name|this is the Age column|Badge|
+|----|:----:|----|
+|Piotr|25|![Corgi.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png)|
+|Maria|33|![Deer.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Deer.png)|
+|Alex|45|![Bear.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Bear.png)|
+
+## Code block
+
+Code: **&apos;example code&apos;**
+
+```groovy
+// example code
+// the node&apos;s details must start with a dot and then the language of the code
+
+def text = node.text
+
+def msg = &quot;the text of the selected node is ${text}&quot;
+
+ui.informationMessage(msg.toString())
+```
+
+## Text block
+
+The ![Bear.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Bear.png), the ![Corgi.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png) and the ![Deer.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Deer.png) are from **[Graphic Burger](https://graphicburger.com/)** and can be found [here](https://graphicburger.com/71-free-animal-icons/).
+
+## Comment
+
+&gt; Anything inside this node gets commented
+&gt;
+&gt; The ![Bear.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Bear.png), the ![Corgi.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png) and the ![Deer.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Deer.png) are from **[Graphic Burger](https://graphicburger.com/)** and can be found [here](https://graphicburger.com/71-free-animal-icons/).
+&gt;
+&gt;
+&gt;
+&gt; |Name|this is the Age column|Badge|
+&gt; |----|:----:|----|
+&gt; |Piotr|25|![Corgi.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png)|
+&gt; |Maria|33|![Deer.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Deer.png)|
+&gt; |Alex|45|![Bear.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Bear.png)|
+&gt;
+&gt;
+
+## Conclusions
+
+Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blablah  blah, Blah  blah blablah blablablah blablah. Blablah  blablah blablablah blah blablah blablablah blablablah blablablah.</text>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="html note" FOLDED="true" ID="ID_119868581"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+<node TEXT="HTML example" STYLE_REF="ToM_newPage" ID="ID_1823082437"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1323947649">
+<node TEXT="hi! this is a demo" ID="ID_492205689"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body style="font-size: 20; font-family: Calibri">
+    <h1>
+      Welcome to the <u><font color="red" face="Elephant">Tutorial-o-Matic</font></u>&nbsp;demo!!
+    </h1>
+    <p>
+      This is a <b>demo version </b>of an addon that can be used to build tutorials in <strong style="font-size: x-large; text-decoration: underline"><font size="x-large"><u>Freeplane</u></font></strong>.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node TEXT="menu show" FOLDED="true" ID="ID_254021615">
+<node TEXT="Show menu comands" STYLE_REF="ToM_newPage" ID="ID_466777016"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1362724111">
+<node TEXT="feature &quot;show menu&quot;" STYLE_REF="markdownNote" ID="ID_1703775557"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can make that **ToM** shows where in the menu the user can find a specific command.
+
+  
+Here are some examples:</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_144202026">
+<node TEXT="Bold" ID="ID_1864965740" LINK="menuitem:_BoldAction"/>
+<node TEXT="elephant" ID="ID_769768215" LINK="menuitem:_IconAction.emoji-1F418"/>
+</node>
+</node>
+<node TEXT="menu action" FOLDED="true" ID="ID_1961064109">
+<node TEXT="Executing actions on selected nodes" STYLE_REF="ToM_newPage" ID="ID_1326854347"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_904121337">
+<node TEXT="execute actions" ID="ID_1270423480"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Here are some example on how you can apply some menu actions on the selected nodes:
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node TEXT="example with menu" STYLE_REF="ToM_menuAction" ID="ID_332913214">
+<icon BUILTIN="emoji-1F56F"/>
+<icon BUILTIN="emoji-1F5B1"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This example shows some menu actions applied using the menus:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      it creates a new child node and it adds an icon to it
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      added icons:
+    </p>
+    <p>
+      candle: indicates it executes only one time and get disabled
+    </p>
+    <p>
+      mouse: should show the menu location
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="New child node" ID="ID_270468047" LINK="menuitem:_NewChildAction"/>
+<node TEXT="I am happy" ID="ID_1851402163" LINK="menuitem:_IconAction.ksmiletris"/>
+</node>
+<node TEXT="example with keyboard" STYLE_REF="ToM_menuAction" ID="ID_1811491607">
+<icon BUILTIN="emoji-1F56F"/>
+<icon BUILTIN="emoji-2328"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This example shows some actions applied using Hotkeys (or the menus commands):
+    </p>
+    <p>
+      
+    </p>
+    <ol>
+      <li>
+        applies BOLD to selected node
+      </li>
+      <li>
+        shows(or hides) the Filter Toolbar
+      </li>
+    </ol>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      keyboard icon (or no icon) indicates it should show the Hotkeys (if it hasn't a defined hotkey, then it shows the menu position)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Bold" ID="ID_1268497175" LINK="menuitem:_BoldAction"/>
+<node TEXT="Filter toolbar" ID="ID_808838378" LINK="menuitem:_ShowFilterToolbarAction"/>
+</node>
+<node TEXT="example muted" STYLE_REF="ToM_menuAction" ID="ID_1144874815">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This example shows some actions applied without showing any message (muted):
+    </p>
+    <p>
+      
+    </p>
+    <ul>
+      <li>
+        shows/hides the &quot;map overview&quot; window
+      </li>
+    </ul>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      muted icon indicates it should execute the command without showing menus or hotkeys
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Map overview" ID="ID_1546319421" LINK="menuitem:_ToggleMapOverviewAction"/>
+</node>
+</node>
+<node TEXT="TOC" FOLDED="true" ID="ID_1316498950">
+<node TEXT="Table of Content" STYLE_REF="ToM_newPage" ID="ID_1113604691"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1429376364">
+<node TEXT="TOC example" STYLE_REF="markdownNote" ID="ID_615277253"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>**ToM** builds automatically the tutorial&apos;s table of content using the titles of each new page
+
+  
+Here is the current tutorial&apos;s TOC:</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_1798970949"/>
+</node>
+<node TEXT="goto" FOLDED="true" ID="ID_450207715">
+<node TEXT="Linking other Tutorial&apos;s pages" STYLE_REF="ToM_newPage" ID="ID_487634563"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1081829880">
+<node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_1294401049"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add  buttons to jump to other tutorial pages
+
+  
+Here is an example:</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="GOTO" STYLE_REF="ToM_goto" ID="ID_1892721742">
+<node TEXT="HTML example" STYLE_REF="markdownNote" ID="ID_1376459415" LINK="#ID_1823082437"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      To jump to the **'HTML example'** page click on the button bellow:
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node TEXT="example scripts" FOLDED="true" ID="ID_192065243">
+<font NAME="SansSerif"/>
+<node TEXT="page 1" FOLDED="true" ID="ID_1609042150">
+<node TEXT="Executing Scripts on selected nodes" STYLE_REF="ToM_newPage" ID="ID_579678731"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_11309586">
+<node TEXT="execute actions" STYLE_REF="markdownNote" ID="ID_1344677856"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Here are some examples of **groovy scripts** as part of the tutorial
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="one time vs multiple times execution" STYLE_REF="markdownNote" ID="ID_1518028432"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>The first example shows two times the same groovy script.
+
+  
+This script will reverse the text of the selected node.
+
+  
+The difference between both scripts is that after clicking the button, the first one will disable itself (one time execution) and the second button will stay enabled (for multiple time uses)
+
+  
+Select a node with a text and try them.
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_116816777">
+<icon BUILTIN="emoji-1F56F"/>
+<font NAME="SansSerif"/>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      candle indicates that executes only one time (then button gets disabled)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="reverse node&apos;s text" ID="ID_899678699">
+<icon BUILTIN="emoji-1F50D"/>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+    <p>
+      magnifier icon indicates that the script code must be shown in the tutorial
+    </p>
+  </body>
+</html></richcontent>
+<attribute NAME="script1" VALUE="def texto = node.text&#xa;node.text = texto.reverse()"/>
+</node>
+</node>
+<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_730816410">
+<font NAME="SansSerif"/>
+<node TEXT="reverse node&apos;s text" ID="ID_426655557">
+<icon BUILTIN="emoji-1F50D"/>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+<attribute NAME="script1" VALUE="def texto = node.text&#xa;node.text = texto.reverse()"/>
+</node>
+</node>
+</node>
+<node TEXT="page 2" FOLDED="true" ID="ID_1294827098">
+<font NAME="SansSerif"/>
+<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_1864780595">
+<node TEXT="nodes with style nextPage indicates where a new page starts, but don´t define a new title. It means that the new page is part of the previous section." ID="ID_1016217412"/>
+</node>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_603268734">
+<node TEXT="showing the code" STYLE_REF="markdownNote" ID="ID_723143822"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>This example shows also two times the same groovy script.
+
+  
+This script will show a dialog and ask the user to pick an option and show it. That&apos;s all.
+
+  
+The difference between both panels is that one shows the groovy script and the other doesn&apos;t.
+
+  
+Try them.
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1494580712">
+<font NAME="SansSerif"/>
+<node TEXT="displaying an optionPane in groovy" ID="ID_535064399">
+<icon BUILTIN="emoji-1F50D"/>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+    <p>
+      magnifier icon indicates that the script code must be shown in the tutorial
+    </p>
+  </body>
+</html></richcontent>
+<attribute NAME="script1" VALUE="import groovy.swing.SwingBuilder&#xa;&#xa;import javax.swing.*&#xa;&#xa;&#xa;def swingBuilder = new SwingBuilder()&#xa;def options = [&apos;Kung Fu Panda&apos;, &apos;Madagascar&apos;, &apos;Shrek&apos;, &apos;How to Train Your Dragon&apos;,&apos;The Croods&apos;,&apos;Trolls&apos;,&apos;The Boss Baby&apos;].sort()&#xa;def pane = swingBuilder.optionPane(&#xa;                            message:&apos;Which Dreamworks movie franchise like you most: &apos;,&#xa;                            selectionValues:options,&#xa;                            optionType:JOptionPane.CLOSED_OPTION&#xa;                        )&#xa;def dialog = pane.createDialog(ui.frame, &apos;Tutorial-o-Matic&apos;)&#xa;dialog.show()&#xa;&#xa;ui.informationMessage(&quot;the selected string was: &apos;${pane.inputValue}&apos;&quot;.toString())"/>
+</node>
+<node TEXT="displaying an optionPane in groovy" ID="ID_1876349419"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+<attribute NAME="script1" VALUE="import groovy.swing.SwingBuilder&#xa;&#xa;import javax.swing.*&#xa;&#xa;&#xa;def swingBuilder = new SwingBuilder()&#xa;def options = [&apos;Kung Fu Panda&apos;, &apos;Madagascar&apos;, &apos;Shrek&apos;, &apos;How to Train Your Dragon&apos;,&apos;The Croods&apos;,&apos;Trolls&apos;,&apos;The Boss Baby&apos;].sort()&#xa;def pane = swingBuilder.optionPane(&#xa;                            message:&apos;Which Dreamworks movie franchise like you most: &apos;,&#xa;                            selectionValues:options,&#xa;                            optionType:JOptionPane.CLOSED_OPTION&#xa;                        )&#xa;def dialog = pane.createDialog(ui.frame, &apos;Tutorial-o-Matic&apos;)&#xa;dialog.show()&#xa;&#xa;ui.informationMessage(&quot;the selected string was: &apos;${pane.inputValue}&apos;&quot;.toString())"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="copy/paste" FOLDED="true" ID="ID_820133815">
+<node TEXT="Inserting example nodes" STYLE_REF="ToM_newPage" ID="ID_1575942659"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1110366880">
+<node TEXT="inserting nodes" STYLE_REF="markdownNote" ID="ID_1362808732"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>When building a tutorial you can add nodes that the user can insert in his/her own map.&#xd;
+&#xd;
+  &#xd;
+Select a node in your map and click the button to insert a branch containing the &quot;Madagascar characters&quot;.</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="insert Madagascar characters" STYLE_REF="ToM_copy" ID="ID_835652050">
+<node TEXT="Madagascar" ID="ID_396510469">
+<node TEXT="main" ID="ID_484087720">
+<node TEXT="Alex" ID="ID_1937688049"/>
+<node TEXT="Marty the Zebra" ID="ID_532268628"/>
+<node TEXT="Melman the Giraffe" ID="ID_566683842"/>
+<node TEXT="Gloria the Hippo" ID="ID_1824318693"/>
+</node>
+<node TEXT="Penguins" ID="ID_717646164">
+<node TEXT="Skipper" ID="ID_263167159"/>
+<node TEXT="Private" ID="ID_1052150504"/>
+<node TEXT="Kowalski" ID="ID_420676948"/>
+<node TEXT="Rico" ID="ID_1125383509"/>
+</node>
+<node TEXT="Lemurs" ID="ID_1552214909">
+<node TEXT="Julien" ID="ID_1152340168"/>
+<node TEXT="Maurice" ID="ID_1121060773"/>
+<node TEXT="Mort" ID="ID_756852835"/>
+<node TEXT="Willie" ID="ID_539673618"/>
+</node>
+<node TEXT="Antagonists" ID="ID_1639272744">
+<node TEXT="Fossa" ID="ID_1009452075"/>
+</node>
+<node TEXT="Others" ID="ID_269596407">
+<node TEXT="Mason" ID="ID_513042645"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="select" FOLDED="true" ID="ID_985006709">
+<node TEXT="Selecting example nodes" STYLE_REF="ToM_newPage" ID="ID_167785468"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_355357590">
+<node TEXT="selecting nodes" STYLE_REF="markdownNote" ID="ID_1958257873"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>After inserting an example branch, you can have a button that selects the nodes that you want so the user can easily go further with the tutorial.&#xd;
+&#xd;
+&#xd;
+In this example I added a button that selects the nodes &quot;Alex&quot;, &quot;Kowalski&quot; and &quot;Julien&quot;.&#xd;
+&#xd;
+Click the button to see how the selection changes:&#xd;
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="select" STYLE_REF="ToM_select" ID="ID_1884219610"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      to indicate which are the nodes you want to select just paste clones of them here as childs
+    </p>
+  </body>
+</html></richcontent>
+<node ID="ID_1586173303" CONTENT_ID="ID_1937688049"/>
+<node ID="ID_106315566" CONTENT_ID="ID_420676948"/>
+<node ID="ID_1431206192" CONTENT_ID="ID_1152340168"/>
+</node>
+<node TEXT="example muted" STYLE_REF="ToM_menuAction" ID="ID_306649517">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Now we can apply them some command, like
+    </p>
+    <ul>
+      <li>
+        &quot;Blinking node&quot; + &quot;Bold&quot;
+      </li>
+    </ul>
+    <p>
+      click again to turn it on/off
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Blinking node" ID="ID_1127818017" LINK="menuitem:_BlinkingNodeHookAction"/>
+<node TEXT="Bold" ID="ID_1479820671" LINK="menuitem:_BoldAction"/>
+</node>
+</node>
+<node TEXT="openMap" FOLDED="true" ID="ID_1074669360">
+<node TEXT="Open another Mindmap" STYLE_REF="ToM_newPage" ID="ID_1369303093"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_634621430">
+<node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_25527076"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add a button to open other maps needed for the tutorial.
+
+Currently that map must be in the same directory as the tutorial map
+  
+  
+**Open the ExercisingMap.mm** by clicking the following button
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="openMap" STYLE_REF="ToM_openMap" ID="ID_185964011">
+<node TEXT="ExercisingMap.mm" ID="ID_1051753819"/>
+</node>
+</node>
+<node TEXT="inspect" FOLDED="true" ID="ID_1861234056">
+<node TEXT="Inspecting the tutorial map" STYLE_REF="ToM_newPage" ID="ID_1130451496"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_697584694">
+<node TEXT="inspecting" STYLE_REF="markdownNote" ID="ID_1574327682"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>I added a button to directly go to the map that contains the tutorial information and select the node that defines the current page.  
+  
+Click the following button to go to the node that has this page information:
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_323764920">
+<font NAME="SansSerif"/>
+</node>
+</node>
+<node TEXT="Bye" FOLDED="true" ID="ID_1419449785">
+<node TEXT="Bye!!" STYLE_REF="ToM_newPage" ID="ID_36395868"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_224912928">
+<node TEXT="bye" ID="ID_1318489932"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body style="font-size: 20; font-family: Calibri">
+    <p>
+      Ok. that was the features demo.
+    </p>
+    <p>
+      I hope you enjoyed it. bye!
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      edo
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Some bugs I don&apos;t know how to correct yet" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_1169068254">
+<node TEXT="Bug intro" FOLDED="true" ID="ID_854641336">
+<node TEXT="Bug when executing menuaction &quot;Move node&quot;" STYLE_REF="ToM_newPage" ID="ID_1135172702"/>
+<node TEXT="Text" STYLE_REF="ToM_note" ID="ID_1474091942">
+<node TEXT="explaination about bug" STYLE_REF="markdownNote" ID="ID_1721677108"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>In the following page it&apos;s a demo tutorial about moving nodes with keyboard commands.&#xd;
+&#xd;
+It works *mostly* as expected, but when clicking in the buttons it will throw an error while it&apos;s moving the nodes.&#xd;
+&#xd;
+  &#xd;
+I don&apos;t know why this is happening. If somebody has an idea, please post it in the Freeplane forum.&#xd;
+&#xd;
+  &#xd;
+Please try it. It may open a bug report, but it will not freeze Freeplane or something like that.</text>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="move nodes" FOLDED="true" ID="ID_935288940">
+<node TEXT="Moving nodes" STYLE_REF="ToM_newPage" ID="ID_1277437434"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_440177109">
+<node TEXT="to move nodes, drag and drop them with the mouse" STYLE_REF="markdownNote" ID="ID_1650251687"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>to move nodes,
+
+- you can **drag and drop** them with the **mouse**
+- or you can move them with the **keyboard**
+
+  
+
+To move the selected node with the Keyboard 
+you have to press the CONTROL key while using the 
+ARROW keys to move the node.  
+  
+I prepared a little example. 
+Please select the node where you want 
+to insert the example nodes.</text>
+</richcontent>
+<font BOLD="false"/>
+</node>
+</node>
+<node TEXT="move example nodes" STYLE_REF="ToM_copy" ID="ID_1178388673">
+<node TEXT="Kung Fu Panda" ID="ID_1748112706"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      2008 movie
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Cartoon Characters" ID="ID_1706014544">
+<node TEXT="Master Monkey" ID="ID_657675037"/>
+<node TEXT="Oogway" ID="ID_1537888277"/>
+<node TEXT="Master Viper" ID="ID_337678330"/>
+<node TEXT="Po" ID="ID_348506382"/>
+<node TEXT="Master Crane" ID="ID_1742467944"/>
+<node TEXT="Master Tigress" ID="ID_1868248941"/>
+<node TEXT="Shifu" ID="ID_1083179020"/>
+<node TEXT="Master Mantis" ID="ID_1227840559"/>
+<node TEXT="main" ID="ID_1834330934" BACKGROUND_COLOR="#99ff33" STYLE="bubble"/>
+<node TEXT="kung fu senior masters" ID="ID_948185235" BACKGROUND_COLOR="#99ff33" STYLE="bubble"/>
+<node TEXT="Furious Five" ID="ID_1315518988" BACKGROUND_COLOR="#99ff33" STYLE="bubble"/>
+<node TEXT="villains" ID="ID_342101636" BACKGROUND_COLOR="#99ff33" STYLE="bubble">
+<node TEXT="Tai Lung" ID="ID_1927953685"/>
+</node>
+<node TEXT="others" ID="ID_1509362375" BACKGROUND_COLOR="#99ff33" STYLE="bubble">
+<node TEXT="Commander Vachir" ID="ID_1632108314"/>
+<node TEXT="Zeng" ID="ID_27747225"/>
+<node TEXT="Mr. Ping" ID="ID_169482165"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="moving Po" ID="ID_589163673">
+<node TEXT="let&apos;s see" STYLE_REF="ToM_note" ID="ID_1708979415">
+<node TEXT="as next" STYLE_REF="markdownNote" ID="ID_1791107705"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>Now we can see that the nodes contains the names of the Characters of the &quot;KungFu Panda&quot; movie.&#xd;
+&#xd;
+Some of them are allready grouped but others are still not classified. &#xd;
+&#xd;
+      &#xd;
+Let&apos;s classify them, beginning with **Po** as the **main character**&#xd;
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="select Po" STYLE_REF="ToM_select" ID="ID_1318107269">
+<node ID="ID_404884047" TREE_ID="ID_348506382"/>
+</node>
+<node TEXT="move po to main" STYLE_REF="ToM_menuAction" ID="ID_1347577958">
+<icon BUILTIN="emoji-1F56F"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      First we will move the 'Po' node into the 'main' node
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Move node (Sibling down)" ID="ID_960252906" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_1489296727" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_976742944" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_697423881" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_104790125" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node to the right" ID="ID_984466973" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
+</node>
+</node>
+<node TEXT="moving masters" ID="ID_12050691">
+<node TEXT="next step" STYLE_REF="ToM_note" ID="ID_1978680162">
+<node TEXT="as next" STYLE_REF="markdownNote" ID="ID_1686208429"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>Now let&apos;s move both kung fu masters (Oogway and Shifu) to the masters node.&#xd;
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="select" STYLE_REF="ToM_select" ID="ID_271689094">
+<node ID="ID_1414524459" CONTENT_ID="ID_1537888277"/>
+<node ID="ID_1314878308" CONTENT_ID="ID_1083179020"/>
+</node>
+<node TEXT="move them together" STYLE_REF="ToM_menuAction" ID="ID_305434084">
+<icon BUILTIN="emoji-1F56F"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>**&apos;Shifu&apos;** and **&apos;Oogway&apos;** nodes are not together, so we are going to move them to the right first and then back to the left. This way they get together.
+</text>
+</richcontent>
+<node TEXT="Move node to the right" ID="ID_216360233" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
+<node TEXT="Move node to the left" ID="ID_686083742" LINK="menuitem:_ChangeNodeLevelLeftsAction"/>
+</node>
+<node TEXT="move them to kung fu masters" STYLE_REF="ToM_menuAction" ID="ID_1037503919">
+<icon BUILTIN="emoji-1F56F"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>Now we will move the **&apos;Shifu&apos;** and **&apos;Oogway&apos;** nodes into the **&apos;kung fu masters&apos;** node.
+</text>
+</richcontent>
+<node TEXT="Move node (Sibling down)" ID="ID_902830163" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_1861218880" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_96926168" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_459176777" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_1708644021" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_1939034761" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node to the right" ID="ID_1537443714" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
+</node>
+</node>
+<node TEXT="moving Furious Five" ID="ID_750281851">
+<node TEXT="next step" STYLE_REF="ToM_note" ID="ID_35115412">
+<node TEXT="as next" STYLE_REF="markdownNote" ID="ID_177324546"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>Now let&apos;s move the **Furious Five** to their node.&#xd;
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="select" STYLE_REF="ToM_select" ID="ID_1620590356">
+<node ID="ID_1420677614" TREE_ID="ID_657675037"/>
+<node ID="ID_956047396" TREE_ID="ID_337678330"/>
+<node ID="ID_832745370" TREE_ID="ID_1742467944"/>
+<node ID="ID_1804779487" TREE_ID="ID_1868248941"/>
+<node ID="ID_983955739" TREE_ID="ID_1227840559"/>
+</node>
+<node TEXT="move them to Furious Five" STYLE_REF="ToM_menuAction" ID="ID_1905132220">
+<icon BUILTIN="emoji-1F56F"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>Now we will move the nodes into the **&apos;Furious Five&apos;** node.
+</text>
+</richcontent>
+<node TEXT="Move node (Sibling down)" ID="ID_636850219" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_449849093" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_1019965305" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node to the right" ID="ID_1175391830" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
+</node>
+</node>
+<node TEXT="next step" STYLE_REF="ToM_note" ID="ID_140041765">
+<node TEXT="as next" STYLE_REF="markdownNote" ID="ID_1949455174"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>## Now is your turn!!&#xd;
+&#xd;
+1. **Insert the example nodes** again &#xd;
+1. and try to do the classification yourself **moving the nodes** with **CONTROL and ARROW** keys!!&#xd;
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_26078656">
+<font NAME="SansSerif"/>
+</node>
+</node>
+</node>
+<node TEXT="An empty tutorial" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_346385320">
+<font NAME="SansSerif"/>
+<node TEXT="Madagascar" FOLDED="true" ID="ID_581007689">
+<edge COLOR="#ff0000"/>
+<node TEXT="main" ID="ID_1056414760">
+<node TEXT="Alex" ID="ID_1323247747">
+<font BOLD="false"/>
+</node>
+<node TEXT="Marty the Zebra" ID="ID_126336185"/>
+<node TEXT="Melman the Giraffe" ID="ID_1610995624"/>
+<node TEXT="Gloria the Hippo" ID="ID_792003684"/>
+</node>
+<node TEXT="Penguins" ID="ID_941420831">
+<node TEXT="Skipper" ID="ID_394059212"/>
+<node TEXT="Private" ID="ID_1228380064"/>
+<node TEXT="Kowalski" ID="ID_611585697">
+<font BOLD="false"/>
+</node>
+<node TEXT="Rico" ID="ID_1124919425"/>
+</node>
+<node TEXT="Lemurs" ID="ID_448188166">
+<node TEXT="Julien" ID="ID_491053192">
+<font BOLD="false"/>
+</node>
+<node TEXT="Maurice" ID="ID_1466073742"/>
+<node TEXT="Mort" ID="ID_1136267153"/>
+<node TEXT="Willie" ID="ID_260497542"/>
+</node>
+<node TEXT="Antagonists" ID="ID_1440606603">
+<font BOLD="true"/>
+<node TEXT="Fossa" ID="ID_1817450722"/>
+<node TEXT="Madagascar" ID="ID_647025802">
+<node TEXT="main" ID="ID_612228690">
+<node TEXT="Alex" ID="ID_1780111932">
+<font BOLD="false"/>
+</node>
+<node TEXT="Marty the Zebra" ID="ID_672742288"/>
+<node TEXT="Melman the Giraffe" ID="ID_1475271827"/>
+<node TEXT="Gloria the Hippo" ID="ID_1191786414"/>
+</node>
+<node TEXT="Penguins" ID="ID_47747750">
+<node TEXT="Skipper" ID="ID_1080549490"/>
+<node TEXT="Private" ID="ID_1483096968"/>
+<node TEXT="Kowalski" ID="ID_1884234078">
+<font BOLD="false"/>
+</node>
+<node TEXT="Rico" ID="ID_1481729911"/>
+</node>
+<node TEXT="Lemurs" ID="ID_1045746563">
+<node TEXT="Julien" ID="ID_133408055">
+<font BOLD="false"/>
+</node>
+<node TEXT="Maurice" ID="ID_1104781501"/>
+<node TEXT="Mort" ID="ID_1108515888"/>
+<node TEXT="Willie" ID="ID_633505832"/>
+</node>
+<node TEXT="Antagonists" ID="ID_1929451167">
+<node TEXT="Fossa" ID="ID_1751824319"/>
+</node>
+<node TEXT="Others" ID="ID_1363704502">
+<node TEXT="Mason" ID="ID_1555305020"/>
+</node>
+</node>
+</node>
+<node TEXT="Others" ID="ID_100522924">
+<node TEXT="Mason" ID="ID_1261901069"/>
+<node TEXT="" ID="ID_1133418174">
+<icon BUILTIN="ksmiletris"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Copy of &quot;Current features&quot; +  inspection button in each page" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_759535321">
+<node TEXT="Introduction" FOLDED="true" ID="ID_791969447">
+<node TEXT="Introduction" STYLE_REF="ToM_newPage" ID="ID_615110223">
+<node TEXT="nodes with style newPage defines the title for the page and indicates where the page starts" ID="ID_963032450"/>
+</node>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_137035593">
+<node TEXT="intro" STYLE_REF="markdownNote" ID="ID_382044586"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>In the following pages you can see the different content that the **Tutorial-o-Matic(ToM)** AddOn can show.
+
+New features may be added in the future.</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1352028422">
+<font NAME="SansSerif"/>
+</node>
+</node>
+<node TEXT="markdown note" FOLDED="true" ID="ID_1010028624">
+<node TEXT="Markdown content examples" STYLE_REF="ToM_newPage" ID="ID_921291072"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1280186470">
+<node TEXT="calvin and hobbes" ID="ID_953339948"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text># Calvin and Hobbes
+
+-----
+
+## 1. Preface
+
+-----
+
+I made this markdown document and its source mindmap as an example to show how the **Markdown Helper AddOn** works and to show some of its features.
+
+This document isn&apos;t an official source of information about the **Calvin and Hobbes** comic strip. I made this document about it because I like **Mr. Watterson** work very much and I think that any extra showroom for it is well deserved.
+
+All information in this document comes from the [&apos;Calvin and Hobbes&apos; wiki page available in FANDOM.com](https://calvinandhobbes.fandom.com/wiki/Main_Page)
+
+Please look in there if you want to know more about **Calvin and Hobbes**.
+
+## 2. Content
+
+-----
+
+[Calvin and Hobbes](#Calvin-and-Hobbes)
+
+[1. Preface](#1-Preface)
+
+[2. Content](#2-Content)
+
+[3. Story Arcs](#3-Story-Arcs)
+
+[4. Characters](#4-Characters)
+
+[5. Watterson](#5-Watterson)
+
+[6. Books](#6-Books)
+
+## 3. Story Arcs
+
+-----
+
+In [Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Calvin_and_Hobbes), story arcs are a theme or plotline that lasts longer than a day. They can range from a few days to a month, such as the arc with [Calvin](https://calvinandhobbes.fandom.com/wiki/Calvin) accidentally pushing [his parents&apos; car](https://calvinandhobbes.fandom.com/wiki/Car) into a ditch.
+
+Generally, the strip had week-long story arcs for the first couple of years and had its longest arcs in the middle of the its life. Later on, the arcs became fewer and farther between as [Bill Watterson](https://calvinandhobbes.fandom.com/wiki/Bill_Watterson) focused more on [Sunday strips](https://calvinandhobbes.fandom.com/wiki/Sunday_comics).
+
+Story arcs are used mainly to develop characters, introduce new devices, or investigate new artistic directions.
+
+## 4. Characters
+
+-----
+
+The principal characters of this strip are the followings:
+
+|Name|Image|Link|Description|
+|----|:----:|:----:|----|
+|Calvin|![https://static.wikia.nocookie.net/candh/images/7/78/Image.jpg/revision/latest/scale-to-width-down/139?cb=20130902154949](https://static.wikia.nocookie.net/candh/images/7/78/Image.jpg/revision/latest/scale-to-width-down/139?cb=20130902154949)|[Calvin](https://calvinandhobbes.fandom.com/wiki/Calvin)|
+|Hobbes|![https://static.wikia.nocookie.net/candh/images/3/36/61D_hobbes.jpg/revision/latest/scale-to-width-down/133?cb=20121112232636](https://static.wikia.nocookie.net/candh/images/3/36/61D_hobbes.jpg/revision/latest/scale-to-width-down/133?cb=20121112232636)|[Hobbes](https://calvinandhobbes.fandom.com/wiki/Hobbes)|
+|Susie Derkins|![https://static.wikia.nocookie.net/candh/images/a/a4/Susie_lalal.jpg/revision/latest/scale-to-width-down/140?cb=20130902161428](https://static.wikia.nocookie.net/candh/images/a/a4/Susie_lalal.jpg/revision/latest/scale-to-width-down/140?cb=20130902161428)|[Susie Derkins](https://calvinandhobbes.fandom.com/wiki/Susie_Derkins)|
+|Calvin&apos;s mother|![https://static.wikia.nocookie.net/candh/images/3/32/Cmom_mainpage.jpeg/revision/latest/scale-to-width-down/150?cb=20170703031759](https://static.wikia.nocookie.net/candh/images/3/32/Cmom_mainpage.jpeg/revision/latest/scale-to-width-down/150?cb=20170703031759)|[Calvin&apos;s mother](https://calvinandhobbes.fandom.com/wiki/Calvin%27s_mother)|
+|Calvin&apos;s father|![https://static.wikia.nocookie.net/candh/images/c/ca/Dad.jpg/revision/latest/scale-to-width-down/150?cb=20200108212915](https://static.wikia.nocookie.net/candh/images/c/ca/Dad.jpg/revision/latest/scale-to-width-down/150?cb=20200108212915)|[Calvin&apos;s father](https://calvinandhobbes.fandom.com/wiki/Calvin%27s_father)|
+|Rosalyn|![https://static.wikia.nocookie.net/candh/images/2/20/Rosalyn.png/revision/latest/scale-to-width-down/49?cb=20200108212824](https://static.wikia.nocookie.net/candh/images/2/20/Rosalyn.png/revision/latest/scale-to-width-down/49?cb=20200108212824)|[Rosalyn](https://calvinandhobbes.fandom.com/wiki/Rosalyn)|
+|Moe|![https://static.wikia.nocookie.net/candh/images/8/81/Moe.jpg/revision/latest/scale-to-width-down/150?cb=20090401050911](https://static.wikia.nocookie.net/candh/images/8/81/Moe.jpg/revision/latest/scale-to-width-down/150?cb=20090401050911)|[Moe](https://calvinandhobbes.fandom.com/wiki/Moe)|
+|Miss Wormwood|![https://static.wikia.nocookie.net/candh/images/7/79/Wormwoodmainpagepic.png/revision/latest/scale-to-width-down/121?cb=20170713194559](https://static.wikia.nocookie.net/candh/images/7/79/Wormwoodmainpagepic.png/revision/latest/scale-to-width-down/121?cb=20170713194559)|[Miss Wormwood](https://calvinandhobbes.fandom.com/wiki/Miss_Wormwood)|
+|Alter Egos|![https://static.wikia.nocookie.net/candh/images/e/e7/Unknown-5.jpeg/revision/latest/scale-to-width-down/111?cb=20110320025133](https://static.wikia.nocookie.net/candh/images/e/e7/Unknown-5.jpeg/revision/latest/scale-to-width-down/111?cb=20110320025133)|[Alter Egos](https://calvinandhobbes.fandom.com/wiki/Category:Alter_egos)|
+
+## 5. Watterson
+
+-----
+
+William Boyd &quot;Bill&quot; Watterson II (born July 5, 1958) is the author of [Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Calvin_and_Hobbes). He was author and artist during the strip&apos;s decade-long run. Calvin and Hobbes abruptly ceased publication in 1995, when Watterson decided to retire. He is now removed completely from the public eye, and is reluctant to take interviews, preferring to let his work speak for itself. He drew Calvin&apos;s father to look exactly like himself, for symbolism. Bill is currently 62 years old.
+
+## 6. Books
+
+-----
+
+Despite [ Bill Watterson](https://calvinandhobbes.fandom.com/wiki/Bill_Watterson)&apos;s reluctance to sell [merchandise](https://calvinandhobbes.fandom.com/wiki/Licensing) based on [merchandise](https://calvinandhobbes.fandom.com/wiki/Licensing) or its characters, he still allowed some merchandise to reach the public, one of the few was books. There have so far been eighteen books (including one three-volume set) published in the United States.
+
+The books, referred to as &quot;Collections&quot;, form a complete archive of the newspaper strips, except for a [single daily strip](https://calvinandhobbes.fandom.com/wiki/Alternate_strip) from November 28, 1985 (The collections do contain a strip for this date, but it is not the same strip that appeared in some newspapers). &quot;Treasuries&quot; combine the two preceding collections with bonus material and include color reprints of Sunday comics, and irregular printed collections reprint already published comics with a particular intent, such as providing original sketches or commentary.
+
+A complete collection of Calvin and Hobbes strips, in three hardcover volumes, with a total 1440 pages, was released on October 4, 2005, by [Andrews &amp; McMeel](https://calvinandhobbes.fandom.com/wiki/Andrews_%26_McMeel) Publishing. It also includes color prints of the art used on paperback covers, the Treasuries&apos; extra illustrated stories and poems, and an original 14-page introduction by Bill Watterson. Unfortunately, the alternate 1985 strip is still omitted, and two other strips (January 7, 1987, and November 25, 1988) have altered dialogue.
+
+To celebrate the release, Calvin and Hobbes reruns were made available to newspapers from Sunday, September 4, 2005, through Saturday, December 31, 2005, and Bill Watterson answered a select dozen questions submitted by readers. ([[1]](http://www.amuniversal.com/ups/features/thereturn/) [[2]](http://www.andrewsmcmeel.com/calvinandhobbes/returning.html)) Like current contemporary strips, weekday Calvin and Hobbes strips now appear in color print when available, instead of black and white as in their first run.
+
+|Title|Cover|Date|ISBN|Notes|
+|----|----|:----:|----|----|
+|[Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Calvin_and_Hobbes_(book))|![https://static.wikia.nocookie.net/candh/images/b/b2/Calvin_and_Hobbes_Original.png/revision/latest/scale-to-width-down/100?cb=20060314024407](https://static.wikia.nocookie.net/candh/images/b/b2/Calvin_and_Hobbes_Original.png/revision/latest/scale-to-width-down/100?cb=20060314024407)|April 1987|ISBN 0836220889|Collection covering strips from first strip on Nov 18, 1985 to Aug 17, 1986. Original content: Foreword by [Garry Trudeau](http://en.wikipedia.org/wiki/Garry_Trudeau).|
+|[Something Under the Bed Is Drooling](https://calvinandhobbes.fandom.com/wiki/Something_Under_the_Bed_Is_Drooling)|![https://static.wikia.nocookie.net/candh/images/2/24/Something_Under_the_Bed_Is_Drooling.jpg/revision/latest/scale-to-width-down/100?cb=20060316165419](https://static.wikia.nocookie.net/candh/images/2/24/Something_Under_the_Bed_Is_Drooling.jpg/revision/latest/scale-to-width-down/100?cb=20060316165419)|April 1988|ISBN 0836218256|Collection covering strips from Aug 18, 1986 to May 22, 1987. Original content: Foreword by [Pat Oliphant](http://en.wikipedia.org/wiki/Pat_Oliphant).|
+|[The Essential Calvin and Hobbes: A Calvin and Hobbes Treasury](https://calvinandhobbes.fandom.com/wiki/The_Essential_Calvin_and_Hobbes)|![https://static.wikia.nocookie.net/candh/images/d/dd/The_Essential_Calvin_and_Hobbes.png/revision/latest/scale-to-width-down/100?cb=20060316165656](https://static.wikia.nocookie.net/candh/images/d/dd/The_Essential_Calvin_and_Hobbes.png/revision/latest/scale-to-width-down/100?cb=20060316165656)|September 1988|ISBN 0836218051|Treasury including cartoons from Calvin and Hobbes, Something Under the Bed is Drooling, &amp; a strip from May 23, 1987 not published in Drooling. Original content: Foreword by [Charles M. Schulz](http://en.wikipedia.org/wiki/Charles_M._Schulz), original illustrated poem &quot;[A Nauseous Nocturne](https://calvinandhobbes.fandom.com/wiki/A_Nauseous_Nocturne)&quot; and artwork on back cover of a giant rampaging Calvin.|
+|....|....|....|....|....|
+|....|....|....|
+
+Early books were printed in a smaller format, and the Sunday strips appeared in black and white. They were then reprinted, in color for the Sundays, in the three &quot;Treasuries&quot; (Essential, Authoritative, and Indispensable). The contents of Attack of the Deranged Mutant Killer Monster Snow Goons were not reprinted, and its Sunday comics were in black and white. As a result, those Sunday strips were never reprinted in color until the Complete collection was published in 2005. Every book since Snow Goons had been printed in a larger format with Sundays in color and weekday and Saturday strips larger than they appeared in most newspapers.
+
+Remaining books do contain some additional content; for instance, The Calvin and Hobbes Lazy Sunday Book contains a long watercolor Spaceman Spiff epic not seen elsewhere until Complete, and The Calvin and Hobbes Tenth Anniversary Book contains much original commentary from Watterson. Calvin and Hobbes: Sunday Pages 1985-1995 contains 36 Sunday strips in color alongside Watterson&apos;s original sketches, prepared for an exhibition at The Ohio State University Cartoon Research Library.
+
+An officially licensed children&apos;s textbook entitled [Teaching with Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Teaching_with_Calvin_and_Hobbes) ([ISBN 1878849158](https://calvinandhobbes.fandom.com/wiki/ISBN_1878849158?action=edit&amp;redlink=1)) was published in 1993. It reprints 57 comic strips comprising 5 [story arcs](https://calvinandhobbes.fandom.com/wiki/Story_arcs).
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_211797316">
+<font NAME="SansSerif"/>
+</node>
+<node TEXT="more Markdown examples" STYLE_REF="ToM_newPage" ID="ID_1249506511"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1761773516">
+<node TEXT="text with animated gif" ID="ID_1072030700"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>## How to xxxx&#xd;
+&#xd;
+Sopose this is an introductio paragraph that explains a problem and next it comes an explanation of the possible solution:&#xd;
+&#xd;
+In the following animation you can see how this can be done:&#xd;
+&#xd;
+### my animated webimage&#xd;
+&#xd;
+*(I just took any image. I think for this kind of tutorials you should include smaller ones (not so wide)) *&#xd;
+&#xd;
+![https://github.com/EdoFro/hello-world/raw/master/testFormulaNodeChange.gif](https://github.com/EdoFro/hello-world/raw/master/testFormulaNodeChange.gif)&#xd;
+</text>
+</richcontent>
+</node>
+<node TEXT="MD-ex01_03.md" ID="ID_419715138"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text># My Document
+
+## Introduction
+
+This is just a test
+
+I don`t have much more to say
+
+## List examples
+
+### Simple list
+
+1. apples
+1. bananas
+1. oranges
+1. lettuce
+1. cucumber
+1. tomatos
+1. carrots
+
+1. apples
+1. bananas
+1. oranges
+1. lettuce
+1. cucumber
+1. tomatos
+1. carrots
+
+### Structured list
+
+1. fruits
+   1. apples
+   1. bananas
+   1. oranges
+   1. tomatoes
+1. salats
+   * lettuce
+   * cucumber
+   * tomatoes
+   * carrots
+
+### List with links
+
+* links
+   * [Freeplane Homepage](https://www.freeplane.org/wiki/index.php/Home)
+   * [MarkdownHelper-icon.svg](file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper-icon.svg)
+* images
+   * ![What is Mindmapping (thumb)](https://www.freeplane.org/wiki/images/thumb/7/7b/WhatIsMindMapping.jpg/300px-WhatIsMindMapping.jpg)
+   * ![Corgi.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png)
+
+## My plain task list
+
+- [x] walk the dog
+- [x] do the dishes
+- [ ] cancer cure
+- [ ] laundry
+
+## Structured tasks lists
+
+They work the same as plain tasks lists, but they can see subtasks inside of tasks.
+
+- [ ] task 1
+- [ ] task 2
+   - [x] task 2.1
+   - [ ] task 2.2
+- [x] task 3
+   - [x] subtask 3.1
+
+## Table example
+
+|Name|this is the Age column|Badge|
+|----|:----:|----|
+|Piotr|25|![Corgi.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png)|
+|Maria|33|![Deer.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Deer.png)|
+|Alex|45|![Bear.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Bear.png)|
+
+## Code block
+
+Code: **&apos;example code&apos;**
+
+```groovy
+// example code
+// the node&apos;s details must start with a dot and then the language of the code
+
+def text = node.text
+
+def msg = &quot;the text of the selected node is ${text}&quot;
+
+ui.informationMessage(msg.toString())
+```
+
+## Text block
+
+The ![Bear.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Bear.png), the ![Corgi.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png) and the ![Deer.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Deer.png) are from **[Graphic Burger](https://graphicburger.com/)** and can be found [here](https://graphicburger.com/71-free-animal-icons/).
+
+## Comment
+
+&gt; Anything inside this node gets commented
+&gt;
+&gt; The ![Bear.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Bear.png), the ![Corgi.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png) and the ![Deer.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Deer.png) are from **[Graphic Burger](https://graphicburger.com/)** and can be found [here](https://graphicburger.com/71-free-animal-icons/).
+&gt;
+&gt;
+&gt;
+&gt; |Name|this is the Age column|Badge|
+&gt; |----|:----:|----|
+&gt; |Piotr|25|![Corgi.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png)|
+&gt; |Maria|33|![Deer.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Deer.png)|
+&gt; |Alex|45|![Bear.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Bear.png)|
+&gt;
+&gt;
+
+## Conclusions
+
+Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blablah  blah, Blah  blah blablah blablablah blablah. Blablah  blablah blablablah blah blablah blablablah blablablah blablablah.</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1630186512">
+<font NAME="SansSerif"/>
+</node>
+</node>
+<node TEXT="html note" FOLDED="true" ID="ID_1092689747"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+<node TEXT="HTML example" STYLE_REF="ToM_newPage" ID="ID_1391525027"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_774731236">
+<node TEXT="hi! this is a demo" ID="ID_968392070"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body style="font-size: 20; font-family: Calibri">
+    <h1>
+      Welcome to the <u><font color="red" face="Elephant">Tutorial-o-Matic</font></u>&nbsp;demo!!
+    </h1>
+    <p>
+      This is a <b>demo version </b>of an addon that can be used to build tutorials in <strong style="font-size: x-large; text-decoration: underline"><font size="x-large"><u>Freeplane</u></font></strong>.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1220641384">
+<font NAME="SansSerif"/>
+</node>
+</node>
+<node TEXT="menu show" FOLDED="true" ID="ID_497849919">
+<node TEXT="Show menu comands" STYLE_REF="ToM_newPage" ID="ID_1893827717"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1872906921">
+<node TEXT="feature &quot;show menu&quot;" STYLE_REF="markdownNote" ID="ID_487821147"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can make that **ToM** shows where in the menu the user can find a specific command.
+
+  
+Here are some examples:</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_103528684">
+<node TEXT="Bold" ID="ID_71518855" LINK="menuitem:_BoldAction"/>
+<node TEXT="elephant" ID="ID_130921367" LINK="menuitem:_IconAction.emoji-1F418"/>
+</node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_43370195">
+<font NAME="SansSerif"/>
+</node>
+</node>
+<node TEXT="menu action" FOLDED="true" ID="ID_68931919">
+<node TEXT="Executing actions on selected nodes" STYLE_REF="ToM_newPage" ID="ID_651572577"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_453526600">
+<node TEXT="execute actions" ID="ID_305144913"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Here are some example on how you can apply some menu actions on the selected nodes:
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node TEXT="example with menu" STYLE_REF="ToM_menuAction" ID="ID_579985305">
+<icon BUILTIN="emoji-1F56F"/>
+<icon BUILTIN="emoji-1F5B1"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This example shows some menu actions applied using the menus:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      it creates a new child node and it adds an icon to it
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      added icons:
+    </p>
+    <p>
+      candle: indicates it executes only one time and get disabled
+    </p>
+    <p>
+      mouse: should show the menu location
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="New child node" ID="ID_324247474" LINK="menuitem:_NewChildAction"/>
+<node TEXT="I am happy" ID="ID_1611890492" LINK="menuitem:_IconAction.ksmiletris"/>
+</node>
+<node TEXT="example with keyboard" STYLE_REF="ToM_menuAction" ID="ID_301177281">
+<icon BUILTIN="emoji-1F56F"/>
+<icon BUILTIN="emoji-2328"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This example shows some actions applied using Hotkeys (or the menus commands):
+    </p>
+    <p>
+      
+    </p>
+    <ol>
+      <li>
+        applies BOLD to selected node
+      </li>
+      <li>
+        shows(or hides) the Filter Toolbar
+      </li>
+    </ol>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      keyboard icon (or no icon) indicates it should show the Hotkeys (if it hasn't a defined hotkey, then it shows the menu position)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Bold" ID="ID_656336114" LINK="menuitem:_BoldAction"/>
+<node TEXT="Filter toolbar" ID="ID_1230352676" LINK="menuitem:_ShowFilterToolbarAction"/>
+</node>
+<node TEXT="example muted" STYLE_REF="ToM_menuAction" ID="ID_1620605763">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This example shows some actions applied without showing any message (muted):
+    </p>
+    <p>
+      
+    </p>
+    <ul>
+      <li>
+        shows/hides the &quot;map overview&quot; window
+      </li>
+    </ul>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      muted icon indicates it should execute the command without showing menus or hotkeys
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="Map overview" ID="ID_731370847" LINK="menuitem:_ToggleMapOverviewAction"/>
+</node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_4950536">
+<font NAME="SansSerif"/>
+</node>
+</node>
+<node TEXT="TOC" FOLDED="true" ID="ID_1287893974">
+<node TEXT="Table of Content" STYLE_REF="ToM_newPage" ID="ID_317005214"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_313629830">
+<node TEXT="TOC example" STYLE_REF="markdownNote" ID="ID_858995451"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>**ToM** builds automatically the tutorial&apos;s table of content using the titles of each new page
+
+  
+Here is the current tutorial&apos;s TOC:</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_322671847"/>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_166002131">
+<font NAME="SansSerif"/>
+</node>
+</node>
+<node TEXT="goto" FOLDED="true" ID="ID_484246232">
+<node TEXT="Linking other Tutorial&apos;s pages" STYLE_REF="ToM_newPage" ID="ID_1997494948"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1158810723">
+<node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_1509887457"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add  buttons to jump to other tutorial pages
+
+  
+Here is an example:</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="GOTO" STYLE_REF="ToM_goto" ID="ID_907987260">
+<node TEXT="HTML example" STYLE_REF="markdownNote" ID="ID_30588849" LINK="#ID_1391525027"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      To jump to the **'HTML example'** page click on the button bellow:
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_608124255">
+<font NAME="SansSerif"/>
+</node>
+</node>
+<node TEXT="example scripts" FOLDED="true" ID="ID_50552230">
+<font NAME="SansSerif"/>
+<node TEXT="page 1" FOLDED="true" ID="ID_572001331">
+<node TEXT="Executing Scripts on selected nodes" STYLE_REF="ToM_newPage" ID="ID_1109424992"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1966749824">
+<node TEXT="execute actions" STYLE_REF="markdownNote" ID="ID_105315653"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Here are some examples of **groovy scripts** as part of the tutorial
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="one time vs multiple times execution" STYLE_REF="markdownNote" ID="ID_825444908"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>The first example shows two times the same groovy script.
+
+  
+This script will reverse the text of the selected node.
+
+  
+The difference between both scripts is that after clicking the button, the first one will disable itself (one time execution) and the second button will stay enabled (for multiple time uses)
+
+  
+Select a node with a text and try them.
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1638935334">
+<icon BUILTIN="emoji-1F56F"/>
+<font NAME="SansSerif"/>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      candle indicates that executes only one time (then button gets disabled)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="reverse node&apos;s text" ID="ID_944865147">
+<icon BUILTIN="emoji-1F50D"/>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+    <p>
+      magnifier icon indicates that the script code must be shown in the tutorial
+    </p>
+  </body>
+</html>
+</richcontent>
+<attribute NAME="script1" VALUE="def texto = node.text&#xa;node.text = texto.reverse()"/>
+</node>
+</node>
+<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1280809414">
+<font NAME="SansSerif"/>
+<node TEXT="reverse node&apos;s text" ID="ID_1364715204">
+<icon BUILTIN="emoji-1F50D"/>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+<attribute NAME="script1" VALUE="def texto = node.text&#xa;node.text = texto.reverse()"/>
+</node>
+</node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1121250811">
+<font NAME="SansSerif"/>
+</node>
+</node>
+<node TEXT="page 2" FOLDED="true" ID="ID_472679117">
+<font NAME="SansSerif"/>
+<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_1567350639">
+<node TEXT="nodes with style nextPage indicates where a new page starts, but don´t define a new title. It means that the new page is part of the previous section." ID="ID_279341226"/>
+</node>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_651902817">
+<node TEXT="showing the code" STYLE_REF="markdownNote" ID="ID_146747072"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>This example shows also two times the same groovy script.
+
+  
+This script will show a dialog and ask the user to pick an option and show it. That&apos;s all.
+
+  
+The difference between both panels is that one shows the groovy script and the other doesn&apos;t.
+
+  
+Try them.
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1076249595">
+<font NAME="SansSerif"/>
+<node TEXT="displaying an optionPane in groovy" ID="ID_14983481">
+<icon BUILTIN="emoji-1F50D"/>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+    <p>
+      magnifier icon indicates that the script code must be shown in the tutorial
+    </p>
+  </body>
+</html>
+</richcontent>
+<attribute NAME="script1" VALUE="import groovy.swing.SwingBuilder&#xa;&#xa;import javax.swing.*&#xa;&#xa;&#xa;def swingBuilder = new SwingBuilder()&#xa;def options = [&apos;Kung Fu Panda&apos;, &apos;Madagascar&apos;, &apos;Shrek&apos;, &apos;How to Train Your Dragon&apos;,&apos;The Croods&apos;,&apos;Trolls&apos;,&apos;The Boss Baby&apos;].sort()&#xa;def pane = swingBuilder.optionPane(&#xa;                            message:&apos;Which Dreamworks movie franchise like you most: &apos;,&#xa;                            selectionValues:options,&#xa;                            optionType:JOptionPane.CLOSED_OPTION&#xa;                        )&#xa;def dialog = pane.createDialog(ui.frame, &apos;Tutorial-o-Matic&apos;)&#xa;dialog.show()&#xa;&#xa;ui.informationMessage(&quot;the selected string was: &apos;${pane.inputValue}&apos;&quot;.toString())"/>
+</node>
+<node TEXT="displaying an optionPane in groovy" ID="ID_142016258"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+<attribute NAME="script1" VALUE="import groovy.swing.SwingBuilder&#xa;&#xa;import javax.swing.*&#xa;&#xa;&#xa;def swingBuilder = new SwingBuilder()&#xa;def options = [&apos;Kung Fu Panda&apos;, &apos;Madagascar&apos;, &apos;Shrek&apos;, &apos;How to Train Your Dragon&apos;,&apos;The Croods&apos;,&apos;Trolls&apos;,&apos;The Boss Baby&apos;].sort()&#xa;def pane = swingBuilder.optionPane(&#xa;                            message:&apos;Which Dreamworks movie franchise like you most: &apos;,&#xa;                            selectionValues:options,&#xa;                            optionType:JOptionPane.CLOSED_OPTION&#xa;                        )&#xa;def dialog = pane.createDialog(ui.frame, &apos;Tutorial-o-Matic&apos;)&#xa;dialog.show()&#xa;&#xa;ui.informationMessage(&quot;the selected string was: &apos;${pane.inputValue}&apos;&quot;.toString())"/>
+</node>
+</node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1800606673">
+<font NAME="SansSerif"/>
+</node>
+</node>
+</node>
+<node TEXT="copy/paste" FOLDED="true" ID="ID_1094483965">
+<node TEXT="Inserting example nodes" STYLE_REF="ToM_newPage" ID="ID_511628636"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_9035295">
+<node TEXT="inserting nodes" STYLE_REF="markdownNote" ID="ID_32974307"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>When building a tutorial you can add nodes that the user can insert in his/her own map.&#xd;
+&#xd;
+  &#xd;
+Select a node in your map and click the button to insert a branch containing the &quot;Madagascar characters&quot;.</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="insert Madagascar characters" STYLE_REF="ToM_copy" ID="ID_594844887">
+<node TEXT="Madagascar" ID="ID_1938489976">
+<node TEXT="main" ID="ID_1116200239">
+<node TEXT="Alex" ID="ID_1713074567"/>
+<node TEXT="Marty the Zebra" ID="ID_1090784618"/>
+<node TEXT="Melman the Giraffe" ID="ID_1149630126"/>
+<node TEXT="Gloria the Hippo" ID="ID_1623227187"/>
+</node>
+<node TEXT="Penguins" ID="ID_796806180">
+<node TEXT="Skipper" ID="ID_1891351713"/>
+<node TEXT="Private" ID="ID_817305983"/>
+<node TEXT="Kowalski" ID="ID_414651683"/>
+<node TEXT="Rico" ID="ID_1166475951"/>
+</node>
+<node TEXT="Lemurs" ID="ID_77212927">
+<node TEXT="Julien" ID="ID_1588546276"/>
+<node TEXT="Maurice" ID="ID_36310164"/>
+<node TEXT="Mort" ID="ID_1910496616"/>
+<node TEXT="Willie" ID="ID_1660745815"/>
+</node>
+<node TEXT="Antagonists" ID="ID_982868346">
+<node TEXT="Fossa" ID="ID_18706179"/>
+</node>
+<node TEXT="Others" ID="ID_1703138904">
+<node TEXT="Mason" ID="ID_1789336025"/>
+</node>
+</node>
+</node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1267778794">
+<font NAME="SansSerif"/>
+</node>
+</node>
+<node TEXT="select" FOLDED="true" ID="ID_1935443905">
+<node TEXT="Selecting example nodes" STYLE_REF="ToM_newPage" ID="ID_1908012538"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1065287558">
+<node TEXT="selecting nodes" STYLE_REF="markdownNote" ID="ID_615540997"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>After inserting an example branch, you can have a button that selects the nodes that you want so the user can easily go further with the tutorial.&#xd;
+&#xd;
+&#xd;
+In this example I added a button that selects the nodes &quot;Alex&quot;, &quot;Kowalski&quot; and &quot;Julien&quot;.&#xd;
+&#xd;
+Click the button to see how the selection changes:&#xd;
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="select" STYLE_REF="ToM_select" ID="ID_628254330"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      to indicate which are the nodes you want to select just paste clones of them here as childs
+    </p>
+  </body>
+</html>
+</richcontent>
+<node ID="ID_1375639542" CONTENT_ID="ID_1713074567"/>
+<node ID="ID_1328739290" CONTENT_ID="ID_414651683"/>
+<node ID="ID_1277707261" CONTENT_ID="ID_1588546276"/>
+</node>
+<node TEXT="example muted" STYLE_REF="ToM_menuAction" ID="ID_382731363">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Now we can apply them some command, like
+    </p>
+    <ul>
+      <li>
+        &quot;Blinking node&quot; + &quot;Bold&quot;
+      </li>
+    </ul>
+    <p>
+      click again to turn it on/off
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Blinking node" ID="ID_610073096" LINK="menuitem:_BlinkingNodeHookAction"/>
+<node TEXT="Bold" ID="ID_1616783604" LINK="menuitem:_BoldAction"/>
+</node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1528663286">
+<font NAME="SansSerif"/>
+</node>
+</node>
+<node TEXT="openMap" FOLDED="true" ID="ID_1262554737">
+<node TEXT="Open another Mindmap" STYLE_REF="ToM_newPage" ID="ID_290935296"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1077909247">
+<node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_162869244"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add a button to open other maps needed for the tutorial.
+
+Currently that map must be in the same directory as the tutorial map
+  
+  
+**Open the ExercisingMap.mm** by clicking the following button
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="openMap" STYLE_REF="ToM_openMap" ID="ID_1521222289">
+<node TEXT="ExercisingMap.mm" ID="ID_409802639"/>
+</node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1664613524">
+<font NAME="SansSerif"/>
+</node>
+</node>
+<node TEXT="inspect" FOLDED="true" ID="ID_1583607778">
+<node TEXT="Inspecting the tutorial map" STYLE_REF="ToM_newPage" ID="ID_864051170"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1060242433">
+<node TEXT="inspecting" STYLE_REF="markdownNote" ID="ID_1135096340"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>I added a button to directly go to the map that contains the tutorial information and select the node that defines the current page.  
+  
+Click the following button to go to the node that has this page information:
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_394691885">
+<font NAME="SansSerif"/>
+</node>
+</node>
+<node TEXT="Bye" FOLDED="true" ID="ID_228475519">
+<node TEXT="Bye!!" STYLE_REF="ToM_newPage" ID="ID_1454993384"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1876121346">
+<node TEXT="bye" ID="ID_614851129"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body style="font-size: 20; font-family: Calibri">
+    <p>
+      Ok. that was the features demo.
+    </p>
+    <p>
+      I hope you enjoyed it. bye!
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      edo
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_641648320">
+<font NAME="SansSerif"/>
+</node>
+</node>
+</node>
 </node>
 </map>
