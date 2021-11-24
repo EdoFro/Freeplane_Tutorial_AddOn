@@ -31,6 +31,7 @@ class ToM{
         copyPaste : 'ToM_copy'      ,
         select    : 'ToM_select'    ,
         openMap   : 'ToM_openMap'   ,
+        openTutMap: 'ToM_openTutMap',
     ]
     
     static final exeHowIcons = ['emoji-1F507', 'emoji-2328', 'emoji-1F5B1']
@@ -107,6 +108,9 @@ class ToM{
                 case styles.openMap:
                     addOpenMapPane(myPanel, tutNode)
                     break
+                case styles.openTutMap:
+                    addInspectPane(myPanel, tutNode)
+                    break
                 default:
                     ui.informationMessage('node style not defined')
                     break
@@ -114,7 +118,7 @@ class ToM{
             startingNewPage = false
             if(interruptLoop) break
         }
-        if(!interruptLoop) addNextPagePane(myPanel, null)
+        if(!interruptLoop) addNextPagePane(myPanel, nextTutNodes[-1], false, false)
         tomui.adjustHeight(myPanel, doClear)
     }
     
@@ -144,14 +148,14 @@ class ToM{
         addPageTitle(myP, nodo.text)
     }
 
-    def static addNextPagePane(myP, lastNode, boolean included = false){
+    def static addNextPagePane(myP, lastNode, boolean included = false, boolean showNextButton = true){
         def closeLabel   = 'Stop tutorial'
         def closeToolTip = 'Click to stop the tutorial and close the tutorial tab'
         def nextLabel    = 'Next page'
         def nextToolTip  = 'Click to continue to the next page of the tutorial'
-        def bttnAction   = lastNode? { e -> fillPage(myP, lastNode, included, true) } : null
-        def tocLabel    = 'Table of Contents'
-        def tocToolTip  = 'Click to show the Table of Contents of the tutorial'
+        def bttnAction   = showNextButton? { e -> fillPage(myP, lastNode, included, true) } : null
+        def tocLabel     = 'Table of Contents'
+        def tocToolTip   = 'Click to show the Table of Contents of the tutorial'
         def tocBttnAction   = { e -> showTOC(myP,lastNode) }
             
         def nextButtonPanel = tomui.getNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip , bttnAction, tocLabel, tocToolTip, tocBttnAction)
@@ -411,6 +415,22 @@ class ToM{
         def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
         myP.add(buttonPanel, tomui.GBC)
     }
+
+    def static addInspectPane(myP, nodo){
+        def msgHtml     = "Click to inspect this page in the tutorial map"
+        def bttnText    = "inspect"
+        def bttnToolTip = "Click to select the page's source nodes"
+        def bttnAction  = { e ->
+            def pageNode = nodo.parent
+            def m = c.mapLoader(nodo.map.file).withView()//.selectNodeById(pageNodeId)
+            m.load()
+            pageNode.pathToRoot*.folded = false
+            c.select(pageNode)
+        }
+        def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+        myP.add(buttonPanel, tomui.GBC)
+    }
+
 
     // end:
 

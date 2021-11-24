@@ -291,7 +291,7 @@ class ToM_ui{
                             toolTipText : closeToolTip,
                             actionPerformed : {closeTab(tabName)},
                         )
-                        if(tocButtonAction && nextButtonAction){
+                        if(tocButtonAction /* && nextButtonAction */ ){
                             button(
                                 label       : tocLabel,
                                 constraints : CENTER,
