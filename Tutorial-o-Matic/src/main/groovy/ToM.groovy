@@ -13,6 +13,7 @@ import org.freeplane.plugin.script.proxy.ScriptUtils
 class ToM{
     
     // region: properties
+        // this region has all the properties for the ToM class
     
     static final c                     = ScriptUtils.c()
     static final String tabName        = 'Tutorial'
@@ -39,6 +40,7 @@ class ToM{
     // end:
     
     // region: getting tutorial components nodes
+        //The methods in this region get the nodes from the mindmap that contain the information needed to build the tutorial
 
     def static getNextTutNodes(n, boolean included = false){
         def tutNodes  = getTutNodes(getTutorialNode(n))
@@ -62,6 +64,8 @@ class ToM{
     // end:
     
     // region: loop fill contentPane
+        // this region contains the methods that loop over the "tutorial nodes" and builds a tutorial page 
+    
     def static fillContentPane(myPanel, nextTutNodes, boolean doClear = true){
         def interruptLoop = false
         def startingNewPage = true
@@ -129,7 +133,8 @@ class ToM{
     
     // end:
     
-    // region: components nodes to tutorial
+    // region: adding tutorial components nodes as contentPanes to tutorial tab
+        //methods that create the contentPanes used to build a tutorial page
     
     def static addNotes(myP, nodos){
         nodos.each{n ->
@@ -195,66 +200,6 @@ class ToM{
         }
     }    
     
-    def static showTOC(myP,nodo){
-        myP.removeAll()
-        tomui.resizeContentPanel(myP,tomui.maxContentPaneHeigth)
-        addTOCPane(myP,nodo)
-        tomui.adjustHeight(myP, true)   
-    }
-
-    def static addTOCPane(myP,nodo){
-        def titleNodes  = getNewPageNodes(getTutorialNode(nodo))
-        def pane = tomui.createEmptyGridBagPanel()
-        titleNodes.each{ tn ->
-            def title = tn.text
-            def bttnAction   = { e -> fillPage(myP, tn, true, true) }
-            def button = tomui.createButton(title, bttnAction)
-            pane.add(button, tomui.GBC)
-        }
-        myP.add(pane, tomui.GBC)
-    }
-    
-    def static showTutorials(mapa){
-        def myP = tomui.getContentPaneFromMyTab(tabName, true) 
-        myP.removeAll()
-        tomui.resizeContentPanel(myP,tomui.maxContentPaneHeigth)
-        addTutorialsPane(myP, mapa)
-        tomui.adjustHeight(myP, true)   
-    }
-
-    def static addTutorialsPane(myP, mapa){
-        def nodosTutoriales = mapa.root.find{it.style.name == styles.tutorial}
-        if ( nodosTutoriales.size() != 1 ){
-            def pane = tomui.createEmptyGridBagPanel()
-            def pre  = nodosTutoriales.size() == 0 ? "No t" : "T"
-            addPageTitle(myP, "${pre}utorials present in '${mapa.name}' map".toString())
-            nodosTutoriales.each{ nT ->
-                def title = nT.text
-                def bttnAction   = { e -> 
-                    def tutNodes = getTutNodes(nT)
-                    if(tutNodes) {
-                        fillContentPane(myP, tutNodes)
-                    } else {
-                        ui.informationMessage( "no tutorial components(nodes) found for tutorial '${nT.text}'".toString() )
-                    }
-                }
-                def button = tomui.createButton(title, bttnAction)
-                pane.add(button, tomui.GBC)
-            }
-            def stopButton = tomui.createButton('Exit tutorial', {tomui.closeTab(tabName)})
-            pane.add(stopButton, tomui.GBC)
-            myP.add(pane, tomui.GBC)
-        } else {
-            def nT = nodosTutoriales[0]
-            def tutNodes = getTutNodes(nT)
-            if(tutNodes) {
-                fillContentPane(myP, tutNodes)
-            } else {
-                ui.informationMessage( "no tutorial components(nodes) found for tutorial '${nT.text}'".toString() )
-            }
-        }
-    }
-    
     def static addGotoPane(myP, nodos){
         nodos.findAll{n -> n.link.node?true:false}.each{nodo ->
                 def targetNode  = nodo.link.node
@@ -292,13 +237,13 @@ class ToM{
         }
     }
     
-    def static getGroovyHtml(nodo, script){
-        def showScript = nodo.icons.icons.contains('emoji-1F50D')
-        uiMsg("showScript ${showScript}")
-        def html = showScript? tomui.getHtmlFromGroovyNode(nodo, script) : nodo.text
-        uiMsg("html ${html}")
-        return html
-    }
+     def static getGroovyHtml(nodo, script){
+         def showScript = nodo.icons.icons.contains('emoji-1F50D')
+         uiMsg("showScript ${showScript}")
+         def html = showScript? tomui.getHtmlFromGroovyNode(nodo, script) : nodo.text
+         uiMsg("html ${html}")
+         return html
+     }
     
     def static addActionPane(myP, nodo){
         def infoAcciones = []
@@ -321,21 +266,21 @@ class ToM{
         myP.add(buttonPanel, tomui.GBC)
     }
     
-    def static exeActionsHow(nodo){
-        def iconos = nodo.icons.icons
-        def iconitos = iconos.intersect(exeHowIcons)
-        if(iconitos){ 
-            def index = exeHowIcons.indexOf(iconitos[0])
-            return toma.ex.values()[index]
-        } else {
-            return toma.ex.showHotKeys
-        }
-    }
-    
-    def static disableBttn(nodo){
-        def iconos = nodo.icons.icons
-        return iconos.contains('emoji-1F56F')
-    }
+     def static exeActionsHow(nodo){
+         def iconos = nodo.icons.icons
+         def iconitos = iconos.intersect(exeHowIcons)
+         if(iconitos){ 
+             def index = exeHowIcons.indexOf(iconitos[0])
+             return toma.ex.values()[index]
+         } else {
+             return toma.ex.showHotKeys
+         }
+     }
+     
+     def static disableBttn(nodo){
+         def iconos = nodo.icons.icons
+         return iconos.contains('emoji-1F56F')
+     }
 
     def static addPastePane(myP, nodoSource){
         def enabled     = !disableBttn(nodoSource)
@@ -431,10 +376,76 @@ class ToM{
         myP.add(buttonPanel, tomui.GBC)
     }
 
+    def static addTOCPane(myP,nodo){
+        def titleNodes  = getNewPageNodes(getTutorialNode(nodo))
+        def pane = tomui.createEmptyGridBagPanel()
+        titleNodes.each{ tn ->
+            def title = tn.text
+            def bttnAction   = { e -> fillPage(myP, tn, true, true) }
+            def button = tomui.createButton(title, bttnAction)
+            pane.add(button, tomui.GBC)
+        }
+        myP.add(pane, tomui.GBC)
+    }
+    
+    def static addTutorialsPane(myP, mapa){
+        def nodosTutoriales = mapa.root.find{it.style.name == styles.tutorial}
+        if ( nodosTutoriales.size() != 1 ){
+            def pane = tomui.createEmptyGridBagPanel()
+            def pre  = nodosTutoriales.size() == 0 ? "No t" : "T"
+            addPageTitle(myP, "${pre}utorials present in '${mapa.name}' map".toString())
+            nodosTutoriales.each{ nT ->
+                def title = nT.text
+                def bttnAction   = { e -> 
+                    def tutNodes = getTutNodes(nT)
+                    if(tutNodes) {
+                        fillContentPane(myP, tutNodes)
+                    } else {
+                        ui.informationMessage( "no tutorial components(nodes) found for tutorial '${nT.text}'".toString() )
+                    }
+                }
+                def button = tomui.createButton(title, bttnAction)
+                pane.add(button, tomui.GBC)
+            }
+            def stopButton = tomui.createButton('Exit tutorial', {tomui.closeTab(tabName)})
+            pane.add(stopButton, tomui.GBC)
+            myP.add(pane, tomui.GBC)
+        } else {
+            def nT = nodosTutoriales[0]
+            def tutNodes = getTutNodes(nT)
+            if(tutNodes) {
+                fillContentPane(myP, tutNodes)
+            } else {
+                ui.informationMessage( "no tutorial components(nodes) found for tutorial '${nT.text}'".toString() )
+            }
+        }
+    }
+    
+    // end:
+
+    // region: showing other content in Tutorial Tab
+        //this region contains the methods that uses the tab to show other content leaving the Tutorial itself
+
+    def static showTOC(myP,nodo){
+        myP.removeAll()
+        tomui.resizeContentPanel(myP,tomui.maxContentPaneHeigth)
+        addTOCPane(myP,nodo)
+        tomui.adjustHeight(myP, true)   
+    }
+
+    def static showTutorials(mapa){
+        def myP = tomui.getContentPaneFromMyTab(tabName, true) 
+        myP.removeAll()
+        tomui.resizeContentPanel(myP,tomui.maxContentPaneHeigth)
+        addTutorialsPane(myP, mapa)
+        tomui.adjustHeight(myP, true)   
+    }
+
 
     // end:
 
     // region: Getting map
+        //this region contains the methods used to open mindmaps
 
     def static getMapFromPath(filePath, withView){
         if(exists(filePath)){
