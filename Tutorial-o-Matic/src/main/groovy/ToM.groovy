@@ -15,6 +15,7 @@ class ToM{
     // region: properties
         // this region has all the properties for the ToM class
     
+    static final String version        = '0.0.4'
     static final c                     = ScriptUtils.c()
     static final String tabName        = 'Tutorial'
 
