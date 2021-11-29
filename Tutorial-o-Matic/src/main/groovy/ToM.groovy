@@ -97,7 +97,7 @@ class ToM{
                     addTOCPane(myPanel, tutNode)
                     break
                 case styles.goto:
-                    addGotoPane(myPanel, tutNode.children)
+                    addGotoPane(myPanel, tutNode.children, nextTutNodes[0])
                     break
                 case styles.action:
                     addActionPane(myPanel, tutNode)
@@ -202,16 +202,32 @@ class ToM{
         }
     }
 
-    def static addGotoPane(myP, nodos){
+    def static addGotoPane(myP, nodos, backNode){
         nodos.findAll{n -> n.link.node?true:false}.each{nodo ->
-                def targetNode  = nodo.link.node
-                def msgHtml     = nodo.note?tomui.getHtmlFromNote(nodo):null
-                def bttnText    = nodo.text
-                def bttnToolTip = "Click to go to '${bttnText}' section"
-                def bttnAction  = { e -> fillPage(myP, targetNode, true, true) }
+            def targetNode  = nodo.link.node
+            def msgHtml     = nodo.note?tomui.getHtmlFromNote(nodo):null
+            def bttnText    = nodo.text
+            def bttnToolTip = "Click to go to '${bttnText}' section"
+            def bttnAction  = { e -> gotoAction(myP, targetNode, backNode) }
             def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
             myP.add(buttonPanel, tomui.GBC)
         }
+    }
+    
+    def static gotoAction(myP,targetNode, backNode){
+        myP.removeAll()
+        addReturnPane(myP, backNode)
+        fillPage(myP, targetNode, true, false)
+        addReturnPane(myP, backNode)
+    }
+    
+    def static addReturnPane(myP, backNode){
+        def msgHtml     = "Return to '${backNode.text}' page"
+        def bttnText    = 'go back'
+        def bttnToolTip = "Click to go to '${backNode.text}' section"
+        def bttnAction  = { e -> fillPage(myP, backNode, true, true)}
+        def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+        myP.add(buttonPanel, tomui.GBC)
     }
 
     def static addGroovyPane(myP, nodoT){
