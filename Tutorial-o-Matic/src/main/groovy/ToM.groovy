@@ -165,7 +165,7 @@ class ToM{
         def tocToolTip   = 'Click to show the Table of Contents of the tutorial'
         def tocBttnAction   = { e -> showTOC(myP,lastNode) }
 
-        def nextButtonPanel = tomui.getNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip , bttnAction, tocLabel, tocToolTip, tocBttnAction)
+        def nextButtonPanel = tomui.createNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip , bttnAction, tocLabel, tocToolTip, tocBttnAction)
         myP.add(nextButtonPanel, tomui.GBC)
     }
 
@@ -192,7 +192,7 @@ class ToM{
                         }
                     }
 
-                def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, true)
+                def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, true)
                 buttonPanel.metaClass.pending = false
                 myP.add(buttonPanel, tomui.GBC)
             } else {
@@ -209,7 +209,7 @@ class ToM{
                 def bttnText    = nodo.text
                 def bttnToolTip = "Click to go to '${bttnText}' section"
                 def bttnAction  = { e -> fillPage(myP, targetNode, true, true) }
-            def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+            def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
             myP.add(buttonPanel, tomui.GBC)
         }
     }
@@ -229,7 +229,7 @@ class ToM{
                         c.script(scrText, "groovy").executeOn(c.selected)
                     }
 
-                def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+                def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
                 buttonPanel.metaClass.pending = false
                 myP.add(buttonPanel, tomui.GBC)
             } else {
@@ -264,7 +264,7 @@ class ToM{
                 toma.executeActions(infoAcciones, exeHow)
             }
 
-        def buttonPanel = ToM_ui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+        def buttonPanel = ToM_ui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
         myP.add(buttonPanel, tomui.GBC)
     }
 
@@ -309,7 +309,7 @@ class ToM{
             //guarda idDictionary en mapa
             setIdDictionary(mapa, idDictionary)
         }
-        def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+        def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
         myP.add(buttonPanel, tomui.GBC)
     }
 
@@ -349,7 +349,7 @@ class ToM{
             uiMsg("nodos $nodos")
             c.select(nodos)
         }
-        def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+        def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
         myP.add(buttonPanel, tomui.GBC)
     }
 
@@ -388,7 +388,7 @@ class ToM{
             bttn.setEnabled(enabled)
             def mapa = getMapFromPath(pathName, true) //usar mapa indicado (pero oculto)
         }
-        def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+        def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
         myP.add(buttonPanel, tomui.GBC)
     }
 
@@ -403,7 +403,7 @@ class ToM{
             pageNode.pathToRoot*.folded = false
             c.select(pageNode)
         }
-        def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+        def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
         myP.add(buttonPanel, tomui.GBC)
     }
 

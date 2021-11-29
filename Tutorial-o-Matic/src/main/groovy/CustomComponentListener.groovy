@@ -1,12 +1,9 @@
 package edofro.tutorialomatic
 
-//import edofro.tutorialomatic.TabPane
 import edofro.tutorialomatic.ToM_ui      as tomui
-
 import java.awt.event.*
 
-
-
+// Listener for Tutorial Tab pane so it gets resized (enough length) each time its width gets modified
 class CustomComponentListener implements ComponentListener {
     public void componentResized(ComponentEvent e) { //https://docs.oracle.com/javase/8/docs/api/java/awt/event/ComponentEvent.html
         def comp = e.component
@@ -18,7 +15,7 @@ class CustomComponentListener implements ComponentListener {
     public void componentMoved(ComponentEvent e) {
         // e.source.title =  " moved. "
     }
-    public void componentShown(ComponentEvent e) {      
+    public void componentShown(ComponentEvent e) {
         // e.source.title =  " shown. "
     }
     public void componentHidden(ComponentEvent e) {
