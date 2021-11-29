@@ -15,9 +15,7 @@ class ToM_actions{
     static final name = 'tutorialOMatic'
     static final actionInstruction1 = "addons.${name}.ActionInstruction1"
     static final actionInstruction2 = "addons.${name}.ActionInstruction2"
-    static final enum ex{
-        muted, showHotKeys, showMenu
-    }
+    static final enum ex{ muted, showHotKeys, showMenu }
     static final int pausa = 400
     
     static boolean waiting = false

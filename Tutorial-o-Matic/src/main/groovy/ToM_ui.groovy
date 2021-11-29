@@ -200,7 +200,6 @@ class ToM_ui{
                     // background: Color.gray
                 ){}
             contentPane.addComponentListener(new CustomComponentListener())
-            contentPane.metaClass.idDictionary = [:]
             def panel =  swing.panel(
                     layout: new GridBagLayout(),
                     preferredSize: new Dimension(minContentPaneWidth, maxContentPaneHeigth),

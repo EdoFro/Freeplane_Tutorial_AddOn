@@ -11,13 +11,14 @@ import org.freeplane.plugin.script.proxy.ScriptUtils
 
 
 class ToM{
-    
+
     // region: properties
         // this region has all the properties for the ToM class
-    
+
     static final String version        = '0.0.4'
     static final c                     = ScriptUtils.c()
     static final String tabName        = 'Tutorial'
+    static final String idDictStorage  = 'ToM_idDictionary'
 
     static final Map styles = [
         tutorial  : 'ToM-Tutorial'  ,
@@ -35,11 +36,11 @@ class ToM{
         openMap   : 'ToM_openMap'   ,
         openTutMap: 'ToM_openTutMap',
     ]
-    
+
     static final exeHowIcons = ['emoji-1F507', 'emoji-2328', 'emoji-1F5B1']
-    
+
     // end:
-    
+
     // region: getting tutorial components nodes
         //The methods in this region get the nodes from the mindmap that contain the information needed to build the tutorial
 
@@ -61,12 +62,12 @@ class ToM{
     def static getNewPageNodes(nTutorial){
         return nTutorial.find{it.style.name == styles.newPage}
     }
-    
+
     // end:
-    
+
     // region: loop fill contentPane
-        // this region contains the methods that loop over the "tutorial nodes" and builds a tutorial page 
-    
+        // this region contains the methods that loop over the "tutorial nodes" and builds a tutorial page
+
     def static fillContentPane(myPanel, nextTutNodes, boolean doClear = true){
         def interruptLoop = false
         def startingNewPage = true
@@ -126,17 +127,17 @@ class ToM{
         if(!interruptLoop) addNextPagePane(myPanel, nextTutNodes[-1], false, false)
         tomui.adjustHeight(myPanel, doClear)
     }
-    
+
     def static fillPage(myP, nodo, included, doClear){
         def nextNodes = getNextTutNodes(nodo, included)
         fillContentPane(myP, nextNodes, doClear)
     }
-    
+
     // end:
-    
+
     // region: adding tutorial components nodes as contentPanes to tutorial tab
         //methods that create the contentPanes used to build a tutorial page
-    
+
     def static addNotes(myP, nodos){
         nodos.each{n ->
             if(n.note) {
@@ -144,7 +145,7 @@ class ToM{
             }
         }
     }
-    
+
     def static addPageTitle(myP, String texto){
         def html = "<html><style>h1 {color: rgb(240, 240, 240);background-color: rgb(100, 100, 150);display: block;padding: 10px;}</style><body><h1>${texto}</h1></body></html>"
         myP.add(tomui.createInstructionsPane(html), tomui.GBC)
@@ -163,11 +164,11 @@ class ToM{
         def tocLabel     = 'Table of Contents'
         def tocToolTip   = 'Click to show the Table of Contents of the tutorial'
         def tocBttnAction   = { e -> showTOC(myP,lastNode) }
-            
+
         def nextButtonPanel = tomui.getNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip , bttnAction, tocLabel, tocToolTip, tocBttnAction)
         myP.add(nextButtonPanel, tomui.GBC)
     }
-    
+
     def static addShowMenuItemPane(myP, nodos){
         nodos.findAll{n -> toma.hasAction(n)}.each{nodo ->
             def infoAccion  = toma.getActionInfoMap(nodo)
@@ -190,7 +191,7 @@ class ToM{
                             if(! tomui.anyCompPending(myP) ) tomui.setNextPagePanelEnabled(myP, true)
                         }
                     }
-                
+
                 def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, true)
                 buttonPanel.metaClass.pending = false
                 myP.add(buttonPanel, tomui.GBC)
@@ -199,8 +200,8 @@ class ToM{
                 myP.add(tomui.createInstructionsPane(textoHtml), tomui.GBC)
             }
         }
-    }    
-    
+    }
+
     def static addGotoPane(myP, nodos){
         nodos.findAll{n -> n.link.node?true:false}.each{nodo ->
                 def targetNode  = nodo.link.node
@@ -212,7 +213,7 @@ class ToM{
             myP.add(buttonPanel, tomui.GBC)
         }
     }
-    
+
     def static addGroovyPane(myP, nodoT){
         def enabled = !disableBttn(nodoT)
         nodoT.children.findAll{n -> WSE.isGroovyNode(n)}.each{nodo ->
@@ -227,7 +228,7 @@ class ToM{
                         bttn.setEnabled(enabled)
                         c.script(scrText, "groovy").executeOn(c.selected)
                     }
-                
+
                 def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
                 buttonPanel.metaClass.pending = false
                 myP.add(buttonPanel, tomui.GBC)
@@ -237,7 +238,7 @@ class ToM{
             }
         }
     }
-    
+
      def static getGroovyHtml(nodo, script){
          def showScript = nodo.icons.icons.contains('emoji-1F50D')
          uiMsg("showScript ${showScript}")
@@ -245,12 +246,12 @@ class ToM{
          uiMsg("html ${html}")
          return html
      }
-    
+
     def static addActionPane(myP, nodo){
         def infoAcciones = []
         nodo.children.findAll{n -> toma.hasAction(n)}.each{n ->
             def infoAccion = toma.getActionInfoMap(n)
-            infoAcciones << infoAccion        
+            infoAcciones << infoAccion
         }
         def msgHtml = nodo.note?tomui.getHtmlFromNote(nodo):null
         def bttnText    = 'Execute'
@@ -266,18 +267,18 @@ class ToM{
         def buttonPanel = ToM_ui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
         myP.add(buttonPanel, tomui.GBC)
     }
-    
+
      def static exeActionsHow(nodo){
          def iconos = nodo.icons.icons
          def iconitos = iconos.intersect(exeHowIcons)
-         if(iconitos){ 
+         if(iconitos){
              def index = exeHowIcons.indexOf(iconitos[0])
              return toma.ex.values()[index]
          } else {
              return toma.ex.showHotKeys
          }
      }
-     
+
      def static disableBttn(nodo){
          def iconos = nodo.icons.icons
          return iconos.contains('emoji-1F56F')
@@ -298,9 +299,15 @@ class ToM{
             }
             def idSource = ( nodoSource.findAll() - nodoSource )*.id
             def idTarget = ( nodoTarget.findAll() - existentesNodoTarget )*.id
+            //carga idDictionary desde mapa.storage
+            def mapa = nodoTarget.map
+            def idDictionary = getIdDictionary(mapa)
+            //actualiza idDictionary
             for (def i = 0; i < idSource.size() ; i++){
-                myP.idDictionary[ idSource[i] ] = idTarget[i]
+                idDictionary[ idSource[i] ] = idTarget[i]
             }
+            //guarda idDictionary en mapa
+            setIdDictionary(mapa, idDictionary)
         }
         def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
         myP.add(buttonPanel, tomui.GBC)
@@ -314,6 +321,9 @@ class ToM{
         def bttnAction  = { e ->
             def bttn = e.source
             bttn.setEnabled(enabled)
+            //carga idDictionary desde mapa.storage
+            def mapa = c.selected.map
+            def idDictionary = getIdDictionary(mapa)
             def nodos = []
             (nodo.findAll()- nodo).each{ n ->
                 //get list of clones ids
@@ -321,15 +331,15 @@ class ToM{
                 def clonesIds = n.getNodesSharingContent()*.id
                 uiMsg("clonesIds $clonesIds")
                 //intersect with list of dist.keySet
-                def keySet = myP.idDictionary.keySet()
+                def keySet = idDictionary.keySet()
                 uiMsg("keySet $keySet")
                 def sourceId = keySet.intersect(clonesIds)
                 uiMsg("sourceId $sourceId")
-                //get Target id 
-                def targetId = sourceId?myP.idDictionary[ sourceId[0] ]:null
+                //get Target id
+                def targetId = sourceId?idDictionary[ sourceId[0] ]:null
                 uiMsg("targetId $targetId")
                 //get node
-                def targetNode = targetId?c.selected.map.node(targetId):null
+                def targetNode = targetId?mapa.node(targetId):null
                 uiMsg("targetNode $targetNode")
                 //add node to nodes list
                 if(targetNode) nodos += targetNode
@@ -342,6 +352,26 @@ class ToM{
         def buttonPanel = tomui.getButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
         myP.add(buttonPanel, tomui.GBC)
     }
+
+     def static getIdDictionary(mapa){
+         def dict = [:]
+         def textoDict = mapa.storage[idDictStorage]
+         if(textoDict){
+             textoDict.toString().split(';').each{e ->
+                 def (k,v) = e.split(':')
+                 dict[k] = v
+             }
+         }
+         return dict
+     }
+
+     def static setIdDictionary(mapa, dict){
+         def texto = new StringBuilder()
+         dict.each{k,v ->
+             texto << "${k}:${v};"
+         }
+         mapa.storage[idDictStorage] = texto
+     }
 
     def static addOpenMapPane(myP, tutNode){
         def sep         = File.separator
@@ -388,7 +418,7 @@ class ToM{
         }
         myP.add(pane, tomui.GBC)
     }
-    
+
     def static addTutorialsPane(myP, mapa){
         def nodosTutoriales = mapa.root.find{it.style.name == styles.tutorial}
         if ( nodosTutoriales.size() != 1 ){
@@ -397,7 +427,7 @@ class ToM{
             addPageTitle(myP, "${pre}utorials present in '${mapa.name}' map".toString())
             nodosTutoriales.each{ nT ->
                 def title = nT.text
-                def bttnAction   = { e -> 
+                def bttnAction   = { e ->
                     def tutNodes = getTutNodes(nT)
                     if(tutNodes) {
                         fillContentPane(myP, tutNodes)
@@ -421,7 +451,7 @@ class ToM{
             }
         }
     }
-    
+
     // end:
 
     // region: showing other content in Tutorial Tab
@@ -431,15 +461,15 @@ class ToM{
         myP.removeAll()
         tomui.resizeContentPanel(myP,tomui.maxContentPaneHeigth)
         addTOCPane(myP,nodo)
-        tomui.adjustHeight(myP, true)   
+        tomui.adjustHeight(myP, true)
     }
 
     def static showTutorials(mapa){
-        def myP = tomui.getContentPaneFromMyTab(tabName, true) 
+        def myP = tomui.getContentPaneFromMyTab(tabName, true)
         myP.removeAll()
         tomui.resizeContentPanel(myP,tomui.maxContentPaneHeigth)
         addTutorialsPane(myP, mapa)
-        tomui.adjustHeight(myP, true)   
+        tomui.adjustHeight(myP, true)
     }
 
 
@@ -459,9 +489,9 @@ class ToM{
     def static exists(String path){new File(path).isFile()}
 
     // end:
-    
+
     // region: help / debug
-    
+
     def static uiMsg(texto){
        //ui.informationMessage(texto.toString())
     }
