@@ -148,7 +148,8 @@
       To translate the description you have to define a translation for the key 'addons.${name}.description'.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="Tutorial-o-Matic for Freeplane!!&#xa;Tutorial-o-Matic is an AddOn for Freeplane that gives the user the possibility to create his/her own tutorials." ID="ID_1642042079"/>
 </node>
 <node TEXT="changes" POSITION="left" ID="ID_461119253">
@@ -163,7 +164,8 @@
       Change log of this add-on: append one node for each noteworthy version and put the details for each version into a child node.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="v0.0.1" FOLDED="true" ID="ID_1147464075">
 <node TEXT="Demo version" ID="ID_1739689712"/>
 </node>
@@ -174,7 +176,7 @@
 <node TEXT="- better scrollspeed&#xa;- message when command no present in Menu for active map&#xa;- added execute_scripts_without_network_restriction: true so web images could be loaded&#xa;- improved showMenu to show actions in extended submenus&#xa;- changed &apos;Close tutorial&apos; to &apos;Stop tutorial&apos;&#xa;- tables have now black borders&#xa;- Codeblocks have special style in EditorPanes&#xa;- links in EditorPanes are now clickeable and open the default web browser&#xa;- added a listener to resize height of content panel when tabpanel width changes&#xa;- added newPage styles and functionality&#xa;- added Table of Contents styles and functionality&#xa;- added Table of Contents button to &apos;next page&apos; panel&#xa;- added GOTO style and its functionality&#xa;- added Action style and its functionality&#xa;- added groovy style and its functionality&#xa;- enables multiple tutorials in one map&#xa;- added &apos;copy&apos; style and its functionality&#xa;- added &apos;select&apos; style and its functionality&#xa;- added &apos;openMap&apos; style and its functionality&#xa;- added &apos;inspect tutorial map&apos; functionality" ID="ID_1550125378"/>
 </node>
 <node TEXT="v0.0.4" ID="ID_1654795865">
-<node TEXT="- corrected link to version.properties&#xa;- information of pasted nodes now is saved in each map for later exersizes and multiple exercizing maps&#xa;- added &apos;go back&apos; when using &apos;GOTO&apos; panes" ID="ID_312985717"/>
+<node TEXT="- corrected link to version.properties&#xa;- information of pasted nodes now is saved in each map for later exersizes and multiple exercizing maps&#xa;- added &apos;go back&apos; when using &apos;GOTO&apos; panes&#xa;- added &apos;show node from map&apos;" ID="ID_312985717"/>
 </node>
 </node>
 <node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795">
@@ -195,7 +197,8 @@
       The License text has to be entered as a child of the <i>'license'</i>&nbsp;node, either as plain text or as HTML.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="MIT License&#xa;&#xa;Copyright (c) 2021 Eduardo Frohlich.&#xa;&#xa;Permission is hereby granted, free of charge, to any person obtaining a copy&#xa;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xa;in the Software without restriction, including without limitation the rights&#xa;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xa;copies of the Software, and to permit persons to whom the Software is&#xa;furnished to do so, subject to the following conditions:&#xa;&#xa;The above copyright notice and this permission notice shall be included in all&#xa;copies or substantial portions of the Software.&#xa;&#xa;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xa;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xa;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xa;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xa;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xa;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE&#xa;SOFTWARE." ID="ID_444630498"/>
 </node>
 <node TEXT="preferences.xml" POSITION="left" ID="ID_1967714695">
@@ -213,7 +216,8 @@
       <font color="#000000" face="SansSerif, sans-serif">Every property in the configuration should receive a default value in <i>default.properties</i>&nbsp;node.</font>
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 <node TEXT="default.properties" POSITION="left" ID="ID_1398497950">
 <edge COLOR="#00ffff"/>
@@ -235,7 +239,8 @@
       </li>
     </ul>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 <node TEXT="translations" POSITION="left" ID="ID_546877695">
 <edge COLOR="#7c0000"/>
@@ -260,7 +265,8 @@
       </li>
     </ul>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="en" ID="ID_1998059292">
 <attribute_layout NAME_WIDTH="162 pt" VALUE_WIDTH="281.24999 pt"/>
 <attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
@@ -283,7 +289,8 @@
       List of files and/or directories to remove on uninstall
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute_layout NAME_WIDTH="42.75 pt" VALUE_WIDTH="295.49999 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/Tutorial-o-Matic.jar"/>
@@ -293,6 +300,9 @@
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/ToMDemo.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/ExercisingMap.mm"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/SimpleTutorialSample.mm"/>
+<attribute NAME="delete" VALUE="${installationbase}/resources/images/tutorialOMatic.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/resources/images/tutorialOMatic-icon.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/resources/images/tutorialOMatic-screenshot-1.png"/>
 </node>
 <node TEXT="scripts" POSITION="right" ID="ID_1037882722">
 <edge COLOR="#007c00"/>
@@ -411,7 +421,8 @@
       &nbsp;&nbsp;- In any case set execute_scripts_without_asking to true unless you want to annoy users.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="openDemoMap.groovy" ID="ID_1629939217">
 <attribute_layout NAME_WIDTH="200.24999 pt" VALUE_WIDTH="200.24999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.openDemoMap"/>
@@ -473,7 +484,8 @@
       &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="Tutorial-o-Matic.jar" ID="ID_1864463328"/>
 <node TEXT="markedj-1.0.16.jar" ID="ID_1060333872"/>
 <node TEXT="jsoup-1.10.2.jar" ID="ID_1151792763"/>
@@ -514,7 +526,8 @@
       &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="doc" ID="ID_281158802"/>
 <node TEXT="icons" ID="ID_211861022"/>
 <node TEXT="templates" ID="ID_553385296"/>
@@ -551,7 +564,11 @@
       Images can be added automatically by releaseAddOn.groovy or must be uploaded into the map via the script <i>Tools-&gt;Scripts-&gt;Insert Binary</i>&nbsp;since they have to be (base64) encoded as simple strings.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
+<node TEXT="tutorialOMatic.svg" ID="ID_863225553"/>
+<node TEXT="tutorialOMatic-icon.svg" ID="ID_1901205001"/>
+<node TEXT="tutorialOMatic-screenshot-1.png" ID="ID_791135029"/>
 </node>
 <node TEXT="shortcuts" POSITION="right" ID="ID_989188638">
 <edge COLOR="#ff0000"/>
