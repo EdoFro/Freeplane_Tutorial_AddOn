@@ -35,6 +35,7 @@ class ToM{
         select    : 'ToM_select'    ,
         openMap   : 'ToM_openMap'   ,
         openTutMap: 'ToM_openTutMap',
+        showNode  : 'ToM_showNode'  ,
     ]
 
     static final exeHowIcons = ['emoji-1F507', 'emoji-2328', 'emoji-1F5B1']
@@ -116,6 +117,9 @@ class ToM{
                     break
                 case styles.openTutMap:
                     addInspectPane(myPanel, tutNode)
+                    break
+                case styles.showNode:
+                    addShowNodePane(myPanel, tutNode)
                     break
                 default:
                     ui.informationMessage('node style not defined')
@@ -214,12 +218,12 @@ class ToM{
         }
     }
     
-    def static gotoAction(myP,targetNode, backNode){
-        myP.removeAll()
-        addReturnPane(myP, backNode)
-        fillPage(myP, targetNode, true, false)
-        addReturnPane(myP, backNode)
-    }
+     def static gotoAction(myP,targetNode, backNode){
+         myP.removeAll()
+         addReturnPane(myP, backNode)
+         fillPage(myP, targetNode, true, false)
+         addReturnPane(myP, backNode)
+     }
     
     def static addReturnPane(myP, backNode){
         def msgHtml     = "Return to '${backNode.text}' page"
@@ -421,6 +425,39 @@ class ToM{
         }
         def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
         myP.add(buttonPanel, tomui.GBC)
+    }
+
+    def static addShowNodePane(myP, nodo){
+        def nodos = nodo.children.findAll{ n -> n.link && (n.link.node || (!n.link.node && !n.link.file && n.link.uri.scheme == 'file'))}
+        nodos.each{ n ->
+            def msgHtml     = "Click to show ${n.text}"
+            def bttnText    = "goto Node"
+            def bttnToolTip = "Click to show ${n.text}"
+            def bttnAction  
+            if(n.link.node){
+                bttnAction = { e ->
+                    def tNode = n.link.node
+                    def m = c.mapLoader(tNode.map.file).withView()//.selectNodeById(pageNodeId)
+                    m.load()
+                    tNode.pathToRoot*.folded = false
+                    c.select(tNode)
+                    c.centerOnNode(tNode)
+                }
+            } else {
+                bttnAction = { e ->
+                    def path = n.link.uri.path.drop(1)
+                    def id = n.link.uri.fragment
+                    def m = c.mapLoader(path).withView()//.selectNodeById(pageNodeId)
+                    m.load()
+                    def tNode = m.mindMap.node(id)
+                    tNode.pathToRoot*.folded = false
+                    c.select(tNode)
+                    c.centerOnNode(tNode)
+                }
+            }
+            def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+            myP.add(buttonPanel, tomui.GBC)
+        }
     }
 
     def static addTOCPane(myP,nodo){

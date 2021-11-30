@@ -1,7 +1,7 @@
 <map version="freeplane 1.9.8">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Simple Tutorial Sample" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_258304564"><hook NAME="MapStyle" background="#c4e1ff">
-    <properties save_modification_times="false" save_last_visited_node="default" mapUsesOwnSaveOptions="true" fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="default"/>
+    <properties mapUsesOwnSaveOptions="true" save_last_visited_node="default" save_modification_times="false" show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="default"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1611611797" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -80,6 +80,10 @@
 <stylenode TEXT="ToM_openTutMap" ID="ID_255978903" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="links/file/freeplane_mindmap"/>
+</stylenode>
+<stylenode TEXT="ToM_showNode" ID="ID_1304839137" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="emoji-1F517"/>
 </stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
@@ -1190,6 +1194,22 @@ Here is an example:</text>
 To jump to the **&apos;SimpleDemo&apos;s TOC page&apos;** page click on the button bellow:</text>
 </richcontent>
 </node>
+</node>
+</node>
+<node TEXT="show Node from Map" FOLDED="true" ID="ID_474896897">
+<node TEXT="show Node from Map" STYLE_REF="ToM_newPage" ID="ID_1073584612"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_907476785">
+<node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_1824304681"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add  buttons to jump to other nodes (in this or other mindmap)
+
+  
+Here is an example:</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="select" STYLE_REF="ToM_showNode" ID="ID_1873597517">
+<node TEXT="&apos;caso USS&apos; en mapa scripts" STYLE_REF="Organizador" ID="ID_975705067" LINK="file:/C:/Respaldo%20EF/ef/Documentos%20con%20macros/08%20Freemind%20Groovy/scripts/Scripts%20Groovy%20v1.9.mm#ID_975705067"/>
+<node TEXT="node &apos;GOTO example&apos; in tutorial map" ID="ID_498715353" LINK="#ID_1294401049"/>
 </node>
 </node>
 <node TEXT="example scripts" FOLDED="true" ID="ID_192065243">
