@@ -162,9 +162,9 @@ class ToM{
     def static addNextPagePane(myP, lastNode, boolean included = false, boolean showNextButton = true){
         def closeLabel   = 'Stop tutorial'
         def closeToolTip = 'Click to stop the tutorial and close the tutorial tab'
-        def nextLabel    = 'Next page'
-        def nextToolTip  = 'Click to continue to the next page of the tutorial'
-        def bttnAction   = showNextButton? { e -> fillPage(myP, lastNode, included, true) } : null
+        def nextLabel    = showNextButton?'Next page':'Show tutorials'
+        def nextToolTip  = showNextButton?'Click to continue to the next page of the tutorial':'Click to see the list of tutorials'
+        def bttnAction   = showNextButton? { e -> fillPage(myP, lastNode, included, true) } : { e -> showTutorials(lastNode.mindMap) } 
         def tocLabel     = 'Table of Contents'
         def tocToolTip   = 'Click to show the Table of Contents of the tutorial'
         def tocBttnAction   = { e -> showTOC(myP,lastNode) }

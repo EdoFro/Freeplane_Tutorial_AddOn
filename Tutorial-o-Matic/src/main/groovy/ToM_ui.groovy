@@ -2,7 +2,7 @@ package edofro.tutorialomatic
 
 //region: imports
 import edofro.tutorialomatic.TabPane
-import edofro.tutorialomatic.CustomComponentListener
+//import edofro.tutorialomatic.CustomComponentListener
 
 import java.util.Timer
 
@@ -185,6 +185,12 @@ class ToM_ui{
                 layout: new GridBagLayout(),
                 // background: Color.gray
             ){}
+        def sp = createScrollPaneForContentPane(contentPane)
+        TabPane.addTab(tabName, sp)
+        return contentPane
+    }
+    
+    def static createScrollPaneForContentPane(contentPane){
         contentPane.addComponentListener(new CustomComponentListener())
         def panel =  swing.panel(
                 layout: new GridBagLayout(),
@@ -194,8 +200,7 @@ class ToM_ui{
         def sp = swing.scrollPane(){}
         sp.verticalScrollBar.unitIncrement = 16  //.getVerticalScrollBar().setUnitIncrement(16)
         sp.viewport.add(panel)
-        TabPane.addTab(tabName, sp)
-        return contentPane
+        return sp
     }
 
 // genera panel con botón
@@ -396,4 +401,28 @@ class ToM_ui{
 
     //end:
 
+
+    //region: Listeners
+    
+    // Listener for Tutorial Tab pane so it gets resized (enough length) each time its width gets modified
+    static class CustomComponentListener implements ComponentListener {
+        public void componentResized(ComponentEvent e) { //https://docs.oracle.com/javase/8/docs/api/java/awt/event/ComponentEvent.html
+            def comp = e.component
+            //ToM_ui.resizeContentPanel(comp, tomui.maxContentPaneHeigth)
+            sleep(100)
+            ToM_ui.resizeContentPanel(comp, comp.height + 500)
+          //  TabPane.repaint()
+        }
+        public void componentMoved(ComponentEvent e) {
+            // e.source.title =  " moved. "
+        }
+        public void componentShown(ComponentEvent e) {
+            // e.source.title =  " shown. "
+        }
+        public void componentHidden(ComponentEvent e) {
+            // e.getSource().title =  " hidden. "
+        }
+    }
+    
+    //end:
 }
