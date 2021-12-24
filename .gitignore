@@ -24,3 +24,5 @@ gradle-app.setting
 
 # ignore some folders
 ignoredByGitHub/
+delete/
+
