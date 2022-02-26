@@ -70,6 +70,7 @@ class ToM{
         // this region contains the methods that loop over the "tutorial nodes" and builds a tutorial page
 
     def static fillContentPane(myPanel, nextTutNodes, boolean doClear = true){
+        def options = tomui.tomMarkedjOptions()
         def interruptLoop = false
         def startingNewPage = true
         if(doClear) myPanel.removeAll()
@@ -77,7 +78,7 @@ class ToM{
         for (tutNode in nextTutNodes){
             switch(tutNode.style.name){
                 case styles.note:
-                    addNotes(myPanel, tutNode.children)
+                    addNotes(myPanel, tutNode.children, options)
                     break
                 case styles.nextPage:
                     addNextPagePane(myPanel, tutNode, false)
@@ -98,10 +99,10 @@ class ToM{
                     addTOCPane(myPanel, tutNode)
                     break
                 case styles.goto:
-                    addGotoPane(myPanel, tutNode.children, nextTutNodes[0])
+                    addGotoPane(myPanel, tutNode.children, nextTutNodes[0], options)
                     break
                 case styles.action:
-                    addActionPane(myPanel, tutNode)
+                    addActionPane(myPanel, tutNode, options)
                     break
                 case styles.groovy:
                     addGroovyPane(myPanel, tutNode)
@@ -113,7 +114,7 @@ class ToM{
                     addSelectPane(myPanel, tutNode)
                     break
                 case styles.openMap:
-                    addOpenMapPane(myPanel, tutNode)
+                    addOpenMapPane(myPanel, tutNode, options)
                     break
                 case styles.openTutMap:
                     addInspectPane(myPanel, tutNode)
@@ -142,10 +143,10 @@ class ToM{
     // region: adding tutorial components nodes as contentPanes to tutorial tab
         //methods that create the contentPanes used to build a tutorial page
 
-    def static addNotes(myP, nodos){
+    def static addNotes(myP, nodos, options){
         nodos.each{n ->
             if(n.note) {
-                myP.add(tomui.createInstructionsPane(n), tomui.GBC)
+                myP.add(tomui.createInstructionsPane(n, options), tomui.GBC)
             }
         }
     }
@@ -206,10 +207,10 @@ class ToM{
         }
     }
 
-    def static addGotoPane(myP, nodos, backNode){
+    def static addGotoPane(myP, nodos, backNode, options){
         nodos.findAll{n -> n.link.node?true:false}.each{nodo ->
             def targetNode  = nodo.link.node
-            def msgHtml     = nodo.note?tomui.getHtmlFromNote(nodo):null
+            def msgHtml     = nodo.note?tomui.getHtmlFromNote(nodo, options):null
             def bttnText    = nodo.text
             def bttnToolTip = "Click to go to '${bttnText}' section"
             def bttnAction  = { e -> gotoAction(myP, targetNode, backNode) }
@@ -267,13 +268,13 @@ class ToM{
          return html
      }
 
-    def static addActionPane(myP, nodo){
+    def static addActionPane(myP, nodo, options){
         def infoAcciones = []
         nodo.children.findAll{n -> toma.hasAction(n)}.each{n ->
             def infoAccion = toma.getActionInfoMap(n)
             infoAcciones << infoAccion
         }
-        def msgHtml = nodo.note?tomui.getHtmlFromNote(nodo):null
+        def msgHtml = nodo.note?tomui.getHtmlFromNote(nodo, options):null
         def bttnText    = 'Execute'
         def bttnToolTip =  "Click to execute the command on the selected nodes"
         def enabled = !disableBttn(nodo)
@@ -393,14 +394,14 @@ class ToM{
          mapa.storage[idDictStorage] = texto
      }
 
-    def static addOpenMapPane(myP, tutNode){
+    def static addOpenMapPane(myP, tutNode, options){
         def sep         = File.separator
         def nodoMapa    = tutNode.children.find{it.text.endsWith('.mm')}
         def mapFileName = nodoMapa?.text
         def Dir         = tutNode.map.file.parent
         def pathName    = Dir + sep + mapFileName
         def enabled     = !disableBttn(tutNode)
-        def msgHtml     = tomui.getHtmlFromNote(nodoMapa)?:"Click to open '${mapFileName}'"
+        def msgHtml     = tomui.getHtmlFromNote(nodoMapa, options)?:"Click to open '${mapFileName}'"
         def bttnText    = "Open map '${mapFileName}'"
         def bttnToolTip = "Click to open '${mapFileName}'"
         def bttnAction  = { e ->

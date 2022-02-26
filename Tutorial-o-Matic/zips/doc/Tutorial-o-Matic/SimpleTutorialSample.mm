@@ -1,7 +1,7 @@
 <map version="freeplane 1.9.8">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Simple Tutorial Sample" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_258304564"><hook NAME="MapStyle" background="#c4e1ff">
-    <properties mapUsesOwnSaveOptions="true" save_last_visited_node="default" save_modification_times="false" show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="default"/>
+    <properties save_modification_times="false" save_last_visited_node="default" mapUsesOwnSaveOptions="true" fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="default"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1611611797" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -14,12 +14,23 @@
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/auto"/>
 <edge STYLE="bezier" COLOR="#808080" WIDTH="1" DASH="SOLID"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="defaultstyle.details"/>
-<stylenode LOCALIZED_TEXT="defaultstyle.attributes">
+<stylenode LOCALIZED_TEXT="defaultstyle.details" ID="ID_331961473"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.attributes" ID="ID_1845319120">
 <font SIZE="9"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="defaultstyle.note" COLOR="#000000" BACKGROUND_COLOR="#ffffff" TEXT_ALIGN="LEFT"/>
-<stylenode LOCALIZED_TEXT="defaultstyle.floating">
+<stylenode LOCALIZED_TEXT="defaultstyle.note" ID="ID_1290407541" COLOR="#000000" BACKGROUND_COLOR="#ffffff" TEXT_ALIGN="LEFT">
+<hook NAME="NodeCss">pre {
+    background-color: rgb(230, 230, 230);
+    border: 1px solid rgb(0, 0, 0);
+    display: block;
+    padding: 10px;
+}
+code {
+    font-family: Consolas,&quot;courier new&quot;;
+    color: rgb(0, 80, 0);
+}</hook>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.floating" ID="ID_1578041471">
 <edge STYLE="hide_edge"/>
 <cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
 </stylenode>
@@ -747,7 +758,7 @@ New features may be added in the future.</text>
 </node>
 </node>
 </node>
-<node TEXT="markdown note" FOLDED="true" ID="ID_1476835349">
+<node TEXT="markdown note" ID="ID_1476835349">
 <node TEXT="Markdown content examples" STYLE_REF="ToM_newPage" ID="ID_207140003"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_928588147">
 <node TEXT="calvin and hobbes" ID="ID_1660497594"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">

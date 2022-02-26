@@ -33,6 +33,7 @@ import org.freeplane.core.ui.components.UITools as ui
 // import org.freeplane.core.util.MenuUtils        as menuUtils
 
 import io.github.gitbucket.markedj.Marked
+import io.github.gitbucket.markedj.Options
 //end:
 
 class ToM_ui{
@@ -111,8 +112,14 @@ class ToM_ui{
     //end:
 
     //region: getting html
+    
+    def static tomMarkedjOptions(){
+        Options options         = new Options()
+        options.getWhitelist().addProtocols("img", "src", "http", "https", "file")
+        return options
+    }
 
-    def static getHtmlFromNote(nodo){
+    def static getHtmlFromNote(nodo, options){
         if(!nodo.note) return null
         def noteType = nodo.noteContentType
         def html
@@ -121,11 +128,11 @@ class ToM_ui{
                 html = nodo.plainNote.startsWith('=')?nodo.note.plain:nodo.note.html
                 break
             case 'markdown':
-                //html = "<html> ${Marked.marked(nodo.note.plain)} </html>"
+                //html = "<html> ${Marked.marked(nodo.note.plain, options))} </html>"
                 html = """<html>
                             <style>${htmlStyle}</style>
                             <body>
-                                ${Marked.marked(nodo.note.plain)}
+                                ${Marked.marked(nodo.note.plain, options)}
                             </body>
                         </html>"""
                 break
@@ -151,8 +158,8 @@ class ToM_ui{
 
     //region: creating panes
 
-    def static createInstructionsPane(nodo){
-        return createInstructionsPane(getHtmlFromNote(nodo))
+    def static createInstructionsPane(nodo, options){
+        return createInstructionsPane(getHtmlFromNote(nodo, options))
     }
 
     def static createInstructionsPane(String html){
