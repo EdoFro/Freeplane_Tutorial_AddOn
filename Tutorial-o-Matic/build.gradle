@@ -1,10 +1,12 @@
+//Tutorial-o-Matic
+
 apply plugin: 'groovy'
 
 targetCompatibility='1.8'
 
 libsDirName = "${rootDir}/lib"
 //clean.doFirst { delete "${rootDir}/lib" } // para eliminar todas las .jar
-clean.doFirst { delete "${rootDir}/lib/Tutorial-o-Matic.jar" } //para eliminar sÛlo una de las .jar y que no me borrara markedj ni jsoup
+clean.doFirst { delete "${rootDir}/lib/Tutorial-o-Matic.jar" } //para eliminar s√≥lo una de las .jar y que no me borrara markedj ni jsoup
 
 repositories {
     mavenCentral()
@@ -14,16 +16,16 @@ repositories {
         "C:/Program Files/Freeplane/core/org.freeplane.core/lib",
         "C:/Program Files/Freeplane/plugins/org.freeplane.plugin.script/lib",
         // "C:/Program Files/Freeplane/plugins/org.freeplane.plugin.markdown/lib", // para incluir markedj.jar
-        "${rootDir}/lib" //ahÌ puse markedj y jsoup
+        "${rootDir}/lib" //ah√≠ puse markedj y jsoup
     ]
     
 
-    // AsÌ para cuando Freeplane est· en Portable Apps
+    // As√≠ para cuando Freeplane est√° en Portable Apps
         // dirs: [
         // "C:/PortableApps/FreeplanePortable/App/Freeplane",
         // "C:/PortableApps/FreeplanePortable/App/Freeplane/core/org.freeplane.core/lib",
         // "C:/PortableApps/FreeplanePortable/App/Freeplane/plugins/org.freeplane.plugin.script/lib",
-        // "${rootDir}/lib" //asÌ lo usÈ en wikdshellext, porque ahÌ puse WikdShell.jar
+        // "${rootDir}/lib" //as√≠ lo us√© en wikdshellext, porque ah√≠ puse WikdShell.jar
         // ]
 }
 

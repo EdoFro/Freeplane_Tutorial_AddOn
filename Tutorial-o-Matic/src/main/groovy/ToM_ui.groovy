@@ -1,7 +1,8 @@
 package edofro.tutorialomatic
 
+//region: imports
 import edofro.tutorialomatic.TabPane
-import edofro.tutorialomatic.CustomComponentListener
+//import edofro.tutorialomatic.CustomComponentListener
 
 import java.util.Timer
 
@@ -32,9 +33,12 @@ import org.freeplane.core.ui.components.UITools as ui
 // import org.freeplane.core.util.MenuUtils        as menuUtils
 
 import io.github.gitbucket.markedj.Marked
+import io.github.gitbucket.markedj.Options
+//end:
 
 class ToM_ui{
 
+    //region: definitions
     static final int minContentPaneWidth  = 408
     static final int maxContentPaneHeigth = 50000
     static final String myPaneName        = 'myContentPanel'
@@ -55,7 +59,6 @@ class ToM_ui{
                 color: rgb(0, 80, 0);
             }
         """
-    
 
     static SwingBuilder swing      = new SwingBuilder()
 
@@ -73,7 +76,10 @@ class ToM_ui{
         ipadx      : 0,                               //  This field specifies the internal padding of the component, how much space to add to the minimum width of the component. The width of the component is at least its minimum width plus ipadx pixels.
         ipady      : 0                                //  This field specifies the internal padding, that is, how much space to add to the minimum height of the component. The height of the component is at least its minimum height plus ipady pixels.
     )
-    
+    //end:
+
+    //region: Text Message in transparent dialog
+
     def static showTextMessage(msg, lapseTime){
         def win
         swing.edt{
@@ -103,7 +109,17 @@ class ToM_ui{
         win.setVisible( true )
     }
 
-    def static getHtmlFromNote(nodo){
+    //end:
+
+    //region: getting html
+    
+    def static tomMarkedjOptions(){
+        Options options         = new Options()
+        options.getWhitelist().addProtocols("img", "src", "http", "https", "file")
+        return options
+    }
+
+    def static getHtmlFromNote(nodo, options){
         if(!nodo.note) return null
         def noteType = nodo.noteContentType
         def html
@@ -112,13 +128,13 @@ class ToM_ui{
                 html = nodo.plainNote.startsWith('=')?nodo.note.plain:nodo.note.html
                 break
             case 'markdown':
-                //html = "<html> ${Marked.marked(nodo.note.plain)} </html>"
+                //html = "<html> ${Marked.marked(nodo.note.plain, options))} </html>"
                 html = """<html>
                             <style>${htmlStyle}</style>
                             <body>
-                                ${Marked.marked(nodo.note.plain)} 
+                                ${Marked.marked(nodo.note.plain, options)}
                             </body>
-                        </html>"""                
+                        </html>"""
                 break
             default:
                 html = "Node's note not recognized"
@@ -126,7 +142,7 @@ class ToM_ui{
         }
         return html
     }
-    
+
     def static getHtmlFromGroovyNode(nodo, script){
         def html = """<html>
                             <style>${htmlStyle}</style>
@@ -135,11 +151,15 @@ class ToM_ui{
                                 <pre><code>${script}</code></pre>
                             </body>
                         </html>"""
-        return html    
+        return html
     }
 
-    def static createInstructionsPane(nodo){
-        return createInstructionsPane(getHtmlFromNote(nodo))
+    //end:
+
+    //region: creating panes
+
+    def static createInstructionsPane(nodo, options){
+        return createInstructionsPane(getHtmlFromNote(nodo, options))
     }
 
     def static createInstructionsPane(String html){
@@ -166,66 +186,32 @@ class ToM_ui{
         return editor
     }
 
-    def static resizeContentPanel(comp, height){
-        comp.parent.preferredSize = new Dimension(minContentPaneWidth, height)
-    }
-
-
-    def static adjustHeight(comp, boolean backToTop = false){
-        if (backToTop) scrollContentPaneBackToTop(comp)
-        TabPane.repaint()
-        def timer = new Timer()
-        timer.runAfter(100) {
-            resizeContentPanel(comp, comp.height + 100)
-            if (backToTop) scrollContentPaneBackToTop(comp)
-            // TabPane.revalidate() <--- no funciona
-            TabPane.repaint()
-        }
-    }
-
-    def static getButtonPanel(javax.swing.JComponent comp){
-        return SU.getAncestorNamed(myButtonPanelName, comp)
-    }
-
-    def static getTabContentPane(javax.swing.JComponent comp){
-        return SU.getAncestorNamed(myPaneName, comp)
-    }
-
-    def static getTabContentPane(String tabName){
-        def contentPane
-        if( !TabPane.hasTab(tabName)) {
-            contentPane = swing.panel(
-                    name: myPaneName,
-                    layout: new GridBagLayout(),
-                    // background: Color.gray
-                ){}
-            contentPane.addComponentListener(new CustomComponentListener())
-            contentPane.metaClass.idDictionary = [:]
-            def panel =  swing.panel(
-                    layout: new GridBagLayout(),
-                    preferredSize: new Dimension(minContentPaneWidth, maxContentPaneHeigth),
-                ){}
-            panel.add(contentPane,GBC)
-            def sp = swing.scrollPane(){}
-            sp.verticalScrollBar.unitIncrement = 16  //.getVerticalScrollBar().setUnitIncrement(16)
-            sp.viewport.add(panel)
-            TabPane.addTab(tabName, sp)
-        } else {
-            contentPane = TabPane.getTab(tabName)?.viewport.components[0].components.find{it.name == myPaneName}
-        }
+    def static createTabContentPane(String tabName){
+        def contentPane = swing.panel(
+                name: myPaneName,
+                layout: new GridBagLayout(),
+                // background: Color.gray
+            ){}
+        def sp = createScrollPaneForContentPane(contentPane)
+        TabPane.addTab(tabName, sp)
         return contentPane
     }
-
-    def static getContentPaneFromMyTab(String myTabName, boolean doClear){
-        def cPane =  ToM_ui.getTabContentPane(myTabName)
-        if(doClear) cPane.removeAll() //eliminar contenido existente en el panel
-        TabPane.showTab(myTabName)
-        ToM_ui.resizeContentPanel(cPane,maxContentPaneHeigth)
-        return cPane
+    
+    def static createScrollPaneForContentPane(contentPane){
+        contentPane.addComponentListener(new CustomComponentListener())
+        def panel =  swing.panel(
+                layout: new GridBagLayout(),
+                preferredSize: new Dimension(minContentPaneWidth, maxContentPaneHeigth),
+            ){}
+        panel.add(contentPane,GBC)
+        def sp = swing.scrollPane(){}
+        sp.verticalScrollBar.unitIncrement = 16  //.getVerticalScrollBar().setUnitIncrement(16)
+        sp.viewport.add(panel)
+        return sp
     }
 
 // genera panel con botón
-    def static getButtonPanel(htmlMsg, buttonLabel, buttonToolTip, buttonAction, boolean isToggleButton = false){
+    def static createButtonPanel(htmlMsg, buttonLabel, buttonToolTip, buttonAction, boolean isToggleButton = false){
         def panel = swing.panel(
             border      : new LineBorder(Color.gray, 1),
             name        : myButtonPanelName,
@@ -270,16 +256,16 @@ class ToM_ui{
         }
         return panel
     }
-    
+
 // genera panel close - next page
         //nextButtonAction == null --> no 'Next page' button
-    def static getNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip, nextButtonAction, tocLabel = '', tocToolTip = '', tocButtonAction = null ){
+    def static createNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip, nextButtonAction, tocLabel = '', tocToolTip = '', tocButtonAction = null ){
         def panel = swing.panel(
             //border      : new LineBorder(Color.gray, 1),
             name        : myNextPanelName,
         ) {
                 borderLayout()
-                panel( 
+                panel(
                         border      : new EmptyBorder(2, 10, 2, 10),  // <------- éste
                         constraints : NORTH
                     ) {
@@ -314,19 +300,93 @@ class ToM_ui{
         return panel
     }
 
-    def static closeTab(tabName, boolean hideTabPane = false) {
-        TabPane.removeTab(tabName, hideTabPane)
+    def static createEmptyGridBagPanel(){
+        return swing.panel(
+                    layout: new GridBagLayout(),
+                    border      : new EmptyBorder(2, 10, 2, 0), //new LineBorder(Color.black, 1),
+                    // background: Color.gray
+                ){}
     }
 
+    def static createButton(title, bttnAction){
+        return swing.button(
+                    label       : title,
+                    margin      : new Insets(10,15,10,15),
+                    actionPerformed : bttnAction,
+                )
+    }
+
+
+    //end:
+
+    //region: resizing panes
+
+    def static resizeContentPanel(comp, height){
+        comp.parent.preferredSize = new Dimension(minContentPaneWidth, height)
+    }
+
+    def static adjustHeight(comp, boolean backToTop = false){
+        if (backToTop) scrollContentPaneBackToTop(comp)
+        TabPane.repaint()
+        def timer = new Timer()
+        timer.runAfter(100) {
+            resizeContentPanel(comp, comp.height + 100)
+            if (backToTop) scrollContentPaneBackToTop(comp)
+            // TabPane.revalidate() <--- no funciona
+            TabPane.repaint()
+        }
+    }
+
+    //end:
+
+    //region: getting existing panes
+
+    def static getButtonPanel(javax.swing.JComponent comp){
+        return SU.getAncestorNamed(myButtonPanelName, comp)
+    }
+
+    def static getTabContentPane(javax.swing.JComponent comp){
+        return SU.getAncestorNamed(myPaneName, comp)
+    }
+
+    def static getTabContentPane(String tabName){
+        def contentPane
+        if( !TabPane.hasTab(tabName)) {
+            contentPane = createTabContentPane(tabName)
+        } else {
+            contentPane = TabPane.getTab(tabName)?.viewport.components[0].components.find{it.name == myPaneName}
+        }
+        return contentPane
+    }
+
+    def static getContentPaneFromMyTab(String myTabName, boolean doClear){
+        def cPane =  ToM_ui.getTabContentPane(myTabName)
+        if(doClear) cPane.removeAll() //eliminar contenido existente en el panel
+        TabPane.showTab(myTabName)
+        ToM_ui.resizeContentPanel(cPane,maxContentPaneHeigth)
+        return cPane
+    }
 
     def static getNextButtonPanel(myP){
         return myP.components.find{it.name == myNextPanelName}
     }
-    
+
+    def static getScrollPaneViewport(comp){
+        return SU.getAncestorOfClass(javax.swing.JViewport, comp)
+    }
+
+    //end:
+
+    //region: other methods
+
+    def static closeTab(tabName, boolean hideTabPane = false) {
+        TabPane.removeTab(tabName, hideTabPane)
+    }
+
     def static setNextPagePanelEnabled(JPanel myP, boolean isEnabled){
         setPanelEnabled(getNextButtonPanel(myP), isEnabled)
     }
-    
+
     def static setPanelEnabled(JPanel panel, boolean isEnabled) {
         panel.setEnabled(isEnabled)
 
@@ -341,28 +401,35 @@ class ToM_ui{
     def static anyCompPending(myP){
         return myP.components.any{it.hasProperty('pending') && it.pending}
     }
-// scrollPane
-    def static getScrollPaneViewport(comp){
-        return SU.getAncestorOfClass(javax.swing.JViewport, comp)   
-    }
 
     def static scrollContentPaneBackToTop(comp){
         getScrollPaneViewport(comp).setViewPosition(new Point(0,0))
     }
+
+    //end:
+
+
+    //region: Listeners
     
-    def static createEmptyGridBagPanel(){
-        return swing.panel(
-                    layout: new GridBagLayout(),
-                    border      : new EmptyBorder(2, 10, 2, 0), //new LineBorder(Color.black, 1),
-                    // background: Color.gray
-                ){}
+    // Listener for Tutorial Tab pane so it gets resized (enough length) each time its width gets modified
+    static class CustomComponentListener implements ComponentListener {
+        public void componentResized(ComponentEvent e) { //https://docs.oracle.com/javase/8/docs/api/java/awt/event/ComponentEvent.html
+            def comp = e.component
+            //ToM_ui.resizeContentPanel(comp, tomui.maxContentPaneHeigth)
+            sleep(100)
+            ToM_ui.resizeContentPanel(comp, comp.height + 500)
+          //  TabPane.repaint()
+        }
+        public void componentMoved(ComponentEvent e) {
+            // e.source.title =  " moved. "
+        }
+        public void componentShown(ComponentEvent e) {
+            // e.source.title =  " shown. "
+        }
+        public void componentHidden(ComponentEvent e) {
+            // e.getSource().title =  " hidden. "
+        }
     }
     
-    def static createButton(title, bttnAction){
-        return swing.button(
-                    label       : title,
-                    margin      : new Insets(10,15,10,15),
-                    actionPerformed : bttnAction,
-                )    
-    }
+    //end:
 }

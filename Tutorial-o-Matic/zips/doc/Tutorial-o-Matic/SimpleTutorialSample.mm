@@ -1,7 +1,7 @@
 <map version="freeplane 1.9.8">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Simple Tutorial Sample" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_258304564"><hook NAME="MapStyle" background="#c4e1ff">
-    <properties mapUsesOwnSaveOptions="true" save_last_visited_node="default" save_modification_times="false" show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="default"/>
+    <properties save_modification_times="false" save_last_visited_node="default" mapUsesOwnSaveOptions="true" fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="default"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1611611797" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -14,12 +14,23 @@
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/auto"/>
 <edge STYLE="bezier" COLOR="#808080" WIDTH="1" DASH="SOLID"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="defaultstyle.details"/>
-<stylenode LOCALIZED_TEXT="defaultstyle.attributes">
+<stylenode LOCALIZED_TEXT="defaultstyle.details" ID="ID_331961473"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.attributes" ID="ID_1845319120">
 <font SIZE="9"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="defaultstyle.note" COLOR="#000000" BACKGROUND_COLOR="#ffffff" TEXT_ALIGN="LEFT"/>
-<stylenode LOCALIZED_TEXT="defaultstyle.floating">
+<stylenode LOCALIZED_TEXT="defaultstyle.note" ID="ID_1290407541" COLOR="#000000" BACKGROUND_COLOR="#ffffff" TEXT_ALIGN="LEFT">
+<hook NAME="NodeCss">pre {
+    background-color: rgb(230, 230, 230);
+    border: 1px solid rgb(0, 0, 0);
+    display: block;
+    padding: 10px;
+}
+code {
+    font-family: Consolas,&quot;courier new&quot;;
+    color: rgb(0, 80, 0);
+}</hook>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.floating" ID="ID_1578041471">
 <edge STYLE="hide_edge"/>
 <cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
 </stylenode>
@@ -80,6 +91,10 @@
 <stylenode TEXT="ToM_openTutMap" ID="ID_255978903" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="links/file/freeplane_mindmap"/>
+</stylenode>
+<stylenode TEXT="ToM_showNode" ID="ID_1304839137" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="emoji-1F517"/>
 </stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
@@ -743,7 +758,7 @@ New features may be added in the future.</text>
 </node>
 </node>
 </node>
-<node TEXT="markdown note" FOLDED="true" ID="ID_1476835349">
+<node TEXT="markdown note" ID="ID_1476835349">
 <node TEXT="Markdown content examples" STYLE_REF="ToM_newPage" ID="ID_207140003"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_928588147">
 <node TEXT="calvin and hobbes" ID="ID_1660497594"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
@@ -1183,6 +1198,29 @@ Here is an example:</text>
   </body>
 </html></richcontent>
 </node>
+<node TEXT="TOC in Simple Demo" STYLE_REF="markdownNote" ID="ID_937044893" LINK="#ID_374851820"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can also jump to another tutorial&apos;s page.
+
+  
+To jump to the **&apos;SimpleDemo&apos;s TOC page&apos;** page click on the button bellow:</text>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="show Node from Map" FOLDED="true" ID="ID_474896897">
+<node TEXT="show Node from Map" STYLE_REF="ToM_newPage" ID="ID_1073584612"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_907476785">
+<node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_1824304681"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add  buttons to jump to other nodes (in this or other mindmap)
+
+  
+Here is an example:</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="select" STYLE_REF="ToM_showNode" ID="ID_1873597517">
+<node TEXT="&apos;caso USS&apos; en mapa scripts" STYLE_REF="Organizador" ID="ID_975705067" LINK="file:/C:/Respaldo%20EF/ef/Documentos%20con%20macros/08%20Freemind%20Groovy/scripts/Scripts%20Groovy%20v1.9.mm#ID_975705067"/>
+<node TEXT="node &apos;GOTO example&apos; in tutorial map" ID="ID_498715353" LINK="#ID_1294401049"/>
 </node>
 </node>
 <node TEXT="example scripts" FOLDED="true" ID="ID_192065243">
@@ -2170,8 +2208,7 @@ Here are some examples:</text>
       muted icon indicates it should execute the command without showing menus or hotkeys
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="Map overview" ID="ID_731370847" LINK="menuitem:_ToggleMapOverviewAction"/>
 </node>
 <node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_4950536">
@@ -2217,6 +2254,13 @@ Here is an example:</text>
     </p>
   </body>
 </html></richcontent>
+</node>
+<node TEXT="TOC in Simple Demo" STYLE_REF="markdownNote" ID="ID_1473049471" LINK="#ID_374851820"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can also jump to another tutorial&apos;s page.
+
+  
+To jump to the **&apos;SimpleDemo&apos;s TOC page&apos;** page click on the button bellow:</text>
+</richcontent>
 </node>
 </node>
 <node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_608124255">
@@ -2284,8 +2328,7 @@ Select a node with a text and try them.
       magnifier icon indicates that the script code must be shown in the tutorial
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <attribute NAME="script1" VALUE="def texto = node.text&#xa;node.text = texto.reverse()"/>
 </node>
 </node>
@@ -2349,8 +2392,7 @@ Try them.
       magnifier icon indicates that the script code must be shown in the tutorial
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <attribute NAME="script1" VALUE="import groovy.swing.SwingBuilder&#xa;&#xa;import javax.swing.*&#xa;&#xa;&#xa;def swingBuilder = new SwingBuilder()&#xa;def options = [&apos;Kung Fu Panda&apos;, &apos;Madagascar&apos;, &apos;Shrek&apos;, &apos;How to Train Your Dragon&apos;,&apos;The Croods&apos;,&apos;Trolls&apos;,&apos;The Boss Baby&apos;].sort()&#xa;def pane = swingBuilder.optionPane(&#xa;                            message:&apos;Which Dreamworks movie franchise like you most: &apos;,&#xa;                            selectionValues:options,&#xa;                            optionType:JOptionPane.CLOSED_OPTION&#xa;                        )&#xa;def dialog = pane.createDialog(ui.frame, &apos;Tutorial-o-Matic&apos;)&#xa;dialog.show()&#xa;&#xa;ui.informationMessage(&quot;the selected string was: &apos;${pane.inputValue}&apos;&quot;.toString())"/>
 </node>
 <node TEXT="displaying an optionPane in groovy" ID="ID_142016258"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
@@ -2439,8 +2481,7 @@ Click the button to see how the selection changes:&#xd;
       to indicate which are the nodes you want to select just paste clones of them here as childs
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node ID="ID_1375639542" CONTENT_ID="ID_1713074567"/>
 <node ID="ID_1328739290" CONTENT_ID="ID_414651683"/>
 <node ID="ID_1277707261" CONTENT_ID="ID_1588546276"/>

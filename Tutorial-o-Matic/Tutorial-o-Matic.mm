@@ -1,14 +1,14 @@
-<map version="freeplane 1.9.8">
+<map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Tutorial-o-Matic" FOLDED="false" ID="ID_696401721" LINK="https://github.com/EdoFro/Freeplane_Tutorial_AddOn" BACKGROUND_COLOR="#97c7dc">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <attribute_layout NAME_WIDTH="111.75 pt" VALUE_WIDTH="165.75 pt"/>
 <attribute NAME="name" VALUE="tutorialOMatic"/>
-<attribute NAME="version" VALUE="v0.0.3"/>
+<attribute NAME="version" VALUE="v0.0.4"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.9"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
-<attribute NAME="updateUrl" VALUE="https://github.com/EdoFro/Freeplane_Tutorial_AddOn/releases/latest"/>
+<attribute NAME="updateUrl" VALUE="https://github.com/EdoFro/Freeplane_Tutorial_AddOn/raw/main/Tutorial-o-Matic/version.properties"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -44,7 +44,7 @@
   </body>
 </html></richcontent>
 <hook NAME="MapStyle" background="#f9f9f8">
-    <properties mapUsesOwnSaveOptions="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" save_folding="save_folding_if_map_is_changed" associatedTemplateLocation="file:/C:/Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/Menu-o-Matic/Menu-o-Matic.mm" fit_to_viewport="false" save_modification_times="false" save_last_visited_node="default" show_note_icons="true"/>
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" associatedTemplateLocation="file:/C:/Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/Menu-o-Matic/Menu-o-Matic.mm" show_note_icons="true" save_folding="save_folding_if_map_is_changed" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -163,14 +163,17 @@
     </p>
   </body>
 </html></richcontent>
-<node TEXT="v0.0.1" ID="ID_1147464075">
+<node TEXT="v0.0.1" FOLDED="true" ID="ID_1147464075">
 <node TEXT="Demo version" ID="ID_1739689712"/>
 </node>
-<node TEXT="v0.0.2" ID="ID_945484309">
+<node TEXT="v0.0.2" FOLDED="true" ID="ID_945484309">
 <node TEXT="Bugs corrections:&#xa;- License as plain text&#xa;- Updated version of Demo map" ID="ID_621408353"/>
 </node>
-<node TEXT="v0.0.3" ID="ID_1106405456">
+<node TEXT="v0.0.3" FOLDED="true" ID="ID_1106405456">
 <node TEXT="- better scrollspeed&#xa;- message when command no present in Menu for active map&#xa;- added execute_scripts_without_network_restriction: true so web images could be loaded&#xa;- improved showMenu to show actions in extended submenus&#xa;- changed &apos;Close tutorial&apos; to &apos;Stop tutorial&apos;&#xa;- tables have now black borders&#xa;- Codeblocks have special style in EditorPanes&#xa;- links in EditorPanes are now clickeable and open the default web browser&#xa;- added a listener to resize height of content panel when tabpanel width changes&#xa;- added newPage styles and functionality&#xa;- added Table of Contents styles and functionality&#xa;- added Table of Contents button to &apos;next page&apos; panel&#xa;- added GOTO style and its functionality&#xa;- added Action style and its functionality&#xa;- added groovy style and its functionality&#xa;- enables multiple tutorials in one map&#xa;- added &apos;copy&apos; style and its functionality&#xa;- added &apos;select&apos; style and its functionality&#xa;- added &apos;openMap&apos; style and its functionality&#xa;- added &apos;inspect tutorial map&apos; functionality" ID="ID_1550125378"/>
+</node>
+<node TEXT="v0.0.4" ID="ID_1654795865">
+<node TEXT="- corrected link to version.properties&#xa;- information of pasted nodes now is saved in each map for later exercises and multiple exercising maps&#xa;- added &apos;go back&apos; when using &apos;GOTO&apos; panes&#xa;- added &apos;show node from map&apos;&#xa;- added &apos;Show Tutorials&apos; in tutorial&apos;s last page&#xa;- added markedj.Options for Markdown" ID="ID_312985717"/>
 </node>
 </node>
 <node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795">
@@ -289,6 +292,9 @@
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/ToMDemo.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/ExercisingMap.mm"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/SimpleTutorialSample.mm"/>
+<attribute NAME="delete" VALUE="${installationbase}/resources/images/tutorialOMatic.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/resources/images/tutorialOMatic-icon.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/resources/images/tutorialOMatic-screenshot-1.png"/>
 </node>
 <node TEXT="scripts" POSITION="right" ID="ID_1037882722">
 <edge COLOR="#007c00"/>
@@ -548,6 +554,9 @@
     </p>
   </body>
 </html></richcontent>
+<node TEXT="tutorialOMatic.svg" ID="ID_863225553"/>
+<node TEXT="tutorialOMatic-icon.svg" ID="ID_1901205001"/>
+<node TEXT="tutorialOMatic-screenshot-1.png" ID="ID_791135029"/>
 </node>
 <node TEXT="shortcuts" POSITION="right" ID="ID_989188638">
 <edge COLOR="#ff0000"/>
@@ -579,7 +588,7 @@
 <node TEXT="Package add-on for publication" ID="ID_806418866" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node">
 <icon BUILTIN="emoji-1F5DC"/>
 </node>
-<node TEXT="Tutorial-o-Matic-v0.0.3.addon.mm" ID="ID_1586148750" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/Tutorial-o-Matic-v0.0.3.addon.mm"/>
+<node TEXT="Tutorial-o-Matic-v0.0.4.addon.mm" ID="ID_819625175" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/Tutorial-o-Matic-v0.0.4.addon.mm"/>
 <node TEXT="loadAndExecuteTutorial.groovy" ID="ID_1523867671" LINK="menuitem:_ExecuteScriptForSelectionAction"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -590,10 +599,11 @@
       .groovy
     </p>
     <p>
-      abre tutorial indicado en primer nodo hijo
+      opens tutorial defined in first child node
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute_layout VALUE_WIDTH="115.5 pt"/>
 <attribute NAME="script1" VALUE="import edofro.tutorialomatic.ToM    as tom&#xa;&#xa;//opens demo map&#xa;def mapFileName = node.children[0].text&#xa;&#xa;//para que use el que estoy modificando&#xa;pathName=&quot;C:\\Users\\Edo\\Documents\\GitHub\\Freeplane_Tutorial_AddOn\\Tutorial-o-Matic\\zips\\doc\\Tutorial-o-Matic\\${mapFileName}&quot;&#xa;&#xa;//def mapa = node.map //usar mapa activo&#xa;def mapa    = tom.getMapFromPath(pathName, true) //usar mapa indicado (true: visible, false: oculto)&#xa;&#xa;tom.showTutorials( mapa )&#xa;&#xa;return &apos;tutorial started&apos;"/>
 <node TEXT="SimpleTutorialSample.mm" ID="ID_1123728779"/>
