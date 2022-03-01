@@ -21,6 +21,7 @@ import javax.swing.border.LineBorder
 import javax.swing.border.CompoundBorder
 import javax.swing.SwingUtilities as SU
 import javax.swing.JPanel
+import javax.swing.JEditorPane
 
 
 import java.awt.Desktop
@@ -172,6 +173,7 @@ class ToM_ui{
             //border      : new CompoundBorder(new LineBorder(Color.gray, 1),new EmptyBorder(5, 10, 5, 10))
             //preferredSize: new Dimension(minContentPaneWidth, 500),
             //lineWrap    : true
+            clientProperties: [(JEditorPane.HONOR_DISPLAY_PROPERTIES):true]
         )
         editor.addHyperlinkListener(e -> {
             if (HyperlinkEvent.EventType.ACTIVATED.equals(e.getEventType())) {
@@ -225,6 +227,7 @@ class ToM_ui{
                     border      : new EmptyBorder(5, 10, 5, 10),  // <------- éste
                     //border: new CompoundBorder(new LineBorder(Color.green, 1),new EmptyBorder(5, 10, 5, 10)),  // éste es de prueba poder ver el borde
                     constraints : CENTER,
+                    clientProperties: [(JEditorPane.HONOR_DISPLAY_PROPERTIES):true]
               )
               vbox(constraints:SOUTH) {
                     panel(
