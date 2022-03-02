@@ -4,7 +4,7 @@
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <attribute_layout NAME_WIDTH="111.75 pt" VALUE_WIDTH="165.75 pt"/>
 <attribute NAME="name" VALUE="tutorialOMatic"/>
-<attribute NAME="version" VALUE="v0.0.4"/>
+<attribute NAME="version" VALUE="v0.0.5"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.9"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -172,8 +172,11 @@
 <node TEXT="v0.0.3" FOLDED="true" ID="ID_1106405456">
 <node TEXT="- better scrollspeed&#xa;- message when command no present in Menu for active map&#xa;- added execute_scripts_without_network_restriction: true so web images could be loaded&#xa;- improved showMenu to show actions in extended submenus&#xa;- changed &apos;Close tutorial&apos; to &apos;Stop tutorial&apos;&#xa;- tables have now black borders&#xa;- Codeblocks have special style in EditorPanes&#xa;- links in EditorPanes are now clickeable and open the default web browser&#xa;- added a listener to resize height of content panel when tabpanel width changes&#xa;- added newPage styles and functionality&#xa;- added Table of Contents styles and functionality&#xa;- added Table of Contents button to &apos;next page&apos; panel&#xa;- added GOTO style and its functionality&#xa;- added Action style and its functionality&#xa;- added groovy style and its functionality&#xa;- enables multiple tutorials in one map&#xa;- added &apos;copy&apos; style and its functionality&#xa;- added &apos;select&apos; style and its functionality&#xa;- added &apos;openMap&apos; style and its functionality&#xa;- added &apos;inspect tutorial map&apos; functionality" ID="ID_1550125378"/>
 </node>
-<node TEXT="v0.0.4" ID="ID_1654795865">
+<node TEXT="v0.0.4" FOLDED="true" ID="ID_1654795865">
 <node TEXT="- corrected link to version.properties&#xa;- information of pasted nodes now is saved in each map for later exercises and multiple exercising maps&#xa;- added &apos;go back&apos; when using &apos;GOTO&apos; panes&#xa;- added &apos;show node from map&apos;&#xa;- added &apos;Show Tutorials&apos; in tutorial&apos;s last page&#xa;- added markedj.Options for Markdown" ID="ID_312985717"/>
+</node>
+<node TEXT="v0.0.5" ID="ID_1381773414">
+<node TEXT="- use look and feel specific colors (dpolivaev)" ID="ID_1429862191"/>
 </node>
 </node>
 <node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795">
@@ -602,8 +605,7 @@
       opens tutorial defined in first child node
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <attribute_layout VALUE_WIDTH="115.5 pt"/>
 <attribute NAME="script1" VALUE="import edofro.tutorialomatic.ToM    as tom&#xa;&#xa;//opens demo map&#xa;def mapFileName = node.children[0].text&#xa;&#xa;//para que use el que estoy modificando&#xa;pathName=&quot;C:\\Users\\Edo\\Documents\\GitHub\\Freeplane_Tutorial_AddOn\\Tutorial-o-Matic\\zips\\doc\\Tutorial-o-Matic\\${mapFileName}&quot;&#xa;&#xa;//def mapa = node.map //usar mapa activo&#xa;def mapa    = tom.getMapFromPath(pathName, true) //usar mapa indicado (true: visible, false: oculto)&#xa;&#xa;tom.showTutorials( mapa )&#xa;&#xa;return &apos;tutorial started&apos;"/>
 <node TEXT="SimpleTutorialSample.mm" ID="ID_1123728779"/>
