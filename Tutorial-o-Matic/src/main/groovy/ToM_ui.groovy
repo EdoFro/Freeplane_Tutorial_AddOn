@@ -211,7 +211,40 @@ class ToM_ui{
         sp.viewport.add(panel)
         return sp
     }
-
+    
+    def static createPageTitlePane(String htmlMsg, bttnText1, bttnToolTip1,bttnAction1,bttnText2,bttnToolTip2,bttnAction2){
+        def panel = swing.panel() {
+            borderLayout()
+            editorPane(
+                editable    : false,
+                contentType : "text/html",
+                text        : htmlMsg,
+                margin      : new Insets(30,10,30,10),
+                border      : new EmptyBorder(5, 10, 5, 10),  // <------- éste
+                //border: new CompoundBorder(new LineBorder(Color.green, 1),new EmptyBorder(5, 10, 5, 10)),  // éste es de prueba poder ver el borde
+                constraints : CENTER,
+                clientProperties: [(JEditorPane.HONOR_DISPLAY_PROPERTIES):true]
+            )
+            vbox(constraints:WEST) {
+                button(
+                    label       : bttnText1,
+                    // constraints : WEST,
+                    // margin      : new Insets(10,15,10,15),
+                    toolTipText : bttnToolTip1,
+                    actionPerformed : bttnAction1,
+                )
+                button(
+                    label       : bttnText2,
+                    // constraints : EAST,
+                    // margin      : new Insets(10,15,10,15),
+                    toolTipText : bttnToolTip2,
+                    actionPerformed : bttnAction2,
+                )
+            }
+        }
+        return panel
+    }
+    
 // genera panel con botón
     def static createButtonPanel(htmlMsg, buttonLabel, buttonToolTip, buttonAction, boolean isToggleButton = false){
         def panel = swing.panel(

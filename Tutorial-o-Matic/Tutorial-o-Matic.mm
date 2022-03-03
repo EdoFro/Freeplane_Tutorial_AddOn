@@ -2,9 +2,9 @@
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Tutorial-o-Matic" FOLDED="false" ID="ID_696401721" LINK="https://github.com/EdoFro/Freeplane_Tutorial_AddOn" BACKGROUND_COLOR="#97c7dc">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
-<attribute_layout NAME_WIDTH="112.5 pt" VALUE_WIDTH="434.24999 pt"/>
+<attribute_layout NAME_WIDTH="127.5 pt" VALUE_WIDTH="449.24999 pt"/>
 <attribute NAME="name" VALUE="tutorialOMatic"/>
-<attribute NAME="version" VALUE="v0.0.5"/>
+<attribute NAME="version" VALUE="v0.0.6"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.9"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -138,10 +138,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="14" RULE="ON_BRANCH_CREATION"/>
-<node TEXT="description" POSITION="left" ID="ID_1678998363">
-<edge COLOR="#ff0000"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="description" POSITION="left" ID="ID_1678998363"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -161,9 +158,7 @@
 </richcontent>
 <node TEXT="Tutorial-o-Matic for Freeplane!!&#xa;Tutorial-o-Matic is an AddOn for Freeplane that gives the user the possibility to create his/her own tutorials." ID="ID_1642042079"/>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_461119253">
-<edge COLOR="#0000ff"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="changes" POSITION="left" ID="ID_461119253"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -187,14 +182,15 @@
 <node TEXT="v0.0.4" FOLDED="true" ID="ID_1654795865">
 <node TEXT="- corrected link to version.properties&#xa;- information of pasted nodes now is saved in each map for later exercises and multiple exercising maps&#xa;- added &apos;go back&apos; when using &apos;GOTO&apos; panes&#xa;- added &apos;show node from map&apos;&#xa;- added &apos;Show Tutorials&apos; in tutorial&apos;s last page&#xa;- added markedj.Options for Markdown" ID="ID_312985717"/>
 </node>
-<node TEXT="v0.0.5" ID="ID_1381773414">
+<node TEXT="v0.0.5" FOLDED="true" ID="ID_1381773414">
 <node TEXT="- use look and feel specific colors (dpolivaev)" ID="ID_1429862191"/>
+</node>
+<node TEXT="v0.0.6" ID="ID_1444474192">
 <node TEXT="using devtools v0.9.30" ID="ID_1084561560"/>
+<node TEXT="added &quot;editing status&quot; to tutorial node (crayon icon)" ID="ID_710909877"/>
 </node>
 </node>
-<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795">
-<edge COLOR="#00ff00"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -214,9 +210,7 @@
 </richcontent>
 <node TEXT="MIT License&#xa;&#xa;Copyright (c) 2021 Eduardo Frohlich.&#xa;&#xa;Permission is hereby granted, free of charge, to any person obtaining a copy&#xa;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xa;in the Software without restriction, including without limitation the rights&#xa;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xa;copies of the Software, and to permit persons to whom the Software is&#xa;furnished to do so, subject to the following conditions:&#xa;&#xa;The above copyright notice and this permission notice shall be included in all&#xa;copies or substantial portions of the Software.&#xa;&#xa;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xa;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xa;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xa;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xa;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xa;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE&#xa;SOFTWARE." ID="ID_444630498"/>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_1967714695">
-<edge COLOR="#ff00ff"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_1967714695"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -325,9 +319,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_1398497950">
-<edge COLOR="#00ffff"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="default.properties" POSITION="left" ID="ID_1398497950"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -348,9 +340,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_546877695">
-<edge COLOR="#7c0000"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="translations" POSITION="left" ID="ID_546877695"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -373,20 +363,26 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="en" ID="ID_1998059292">
-<attribute_layout NAME_WIDTH="166.5 pt" VALUE_WIDTH="269.24999 pt"/>
-<attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
+<node TEXT="en" ID="ID_1258736997">
+<attribute_layout NAME_WIDTH="181.49999 pt" VALUE_WIDTH="284.24999 pt"/>
 <attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;In submenu  &lt;b&gt;{0}&lt;/b&gt; &lt;br&gt;click on  &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
+<attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
 <attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;You can also use de keyboard shortcut &lt;b&gt;{0}&lt;/b&gt; for this command&lt;/html&gt;"/>
-<attribute NAME="addons.${name}.executeTutorial" VALUE="execute Demo tutorial"/>
 <attribute NAME="addons.${name}.openDemoMap" VALUE="open Demo map"/>
 <attribute NAME="addons.${name}.ToMDemo" VALUE="Tutorial-o-Matic Demo"/>
+<attribute NAME="addons.${name}.executeTutorial" VALUE="execute Demo tutorial"/>
 </node>
-<node TEXT="es" ID="ID_1519178718"/>
+<node TEXT="es" ID="ID_1964613511">
+<attribute_layout NAME_WIDTH="188.24999 pt" VALUE_WIDTH="248.24999 pt"/>
+<attribute NAME="﻿addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;En submenu  &lt;b&gt;{0}&lt;/b&gt; &lt;br&gt;has click en  &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
+<attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
+<attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;Puedes usar también el atajo &lt;b&gt;{0}&lt;/b&gt; para este comando&lt;/html&gt;"/>
+<attribute NAME="addons.${name}.openDemoMap" VALUE="abrir mapa demo"/>
+<attribute NAME="addons.${name}.ToMDemo" VALUE="Tutorial-o-Matic Demo"/>
+<attribute NAME="addons.${name}.executeTutorial" VALUE="ejecutar Demo tutorial"/>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_378917294">
-<edge COLOR="#00007c"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+</node>
+<node TEXT="deinstall" POSITION="left" ID="ID_378917294"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -411,9 +407,7 @@
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/tutorialOMatic-icon.svg"/>
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/tutorialOMatic-screenshot-1.png"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1037882722">
-<edge COLOR="#007c00"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="scripts" POSITION="right" ID="ID_1037882722"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -531,7 +525,7 @@
 </html>
 </richcontent>
 <node TEXT="openDemoMap.groovy" ID="ID_1629939217">
-<attribute_layout NAME_WIDTH="209.24999 pt" VALUE_WIDTH="156.75 pt"/>
+<attribute_layout NAME_WIDTH="224.24999 pt" VALUE_WIDTH="171.74999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.openDemoMap"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -543,7 +537,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 <node TEXT="ToMDemo.groovy" ID="ID_513310589">
-<attribute_layout NAME_WIDTH="209.24999 pt" VALUE_WIDTH="156.75 pt"/>
+<attribute_layout NAME_WIDTH="224.24999 pt" VALUE_WIDTH="171.74999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.ToMDemo"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -555,9 +549,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_1814812956">
-<edge COLOR="#7c007c"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="lib" POSITION="right" ID="ID_1814812956"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -597,9 +589,7 @@
 <node TEXT="markedj-1.0.16.jar" ID="ID_1060333872"/>
 <node TEXT="jsoup-1.10.2.jar" ID="ID_1151792763"/>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_1623122610" VGAP_QUANTITY="2 px">
-<edge COLOR="#007c7c"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="zips" POSITION="right" ID="ID_1623122610" VGAP_QUANTITY="2 px"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -639,9 +629,7 @@
 <node TEXT="icons" ID="ID_211861022"/>
 <node TEXT="templates" ID="ID_553385296"/>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_1856886559">
-<edge COLOR="#7c7c00"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="images" POSITION="right" ID="ID_1856886559"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -677,9 +665,7 @@
 <node TEXT="tutorialOMatic-icon.svg" ID="ID_1901205001"/>
 <node TEXT="tutorialOMatic-screenshot-1.png" ID="ID_791135029"/>
 </node>
-<node TEXT="actions" POSITION="right" ID="ID_742010356">
-<edge COLOR="#00ff00"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="actions" POSITION="right" ID="ID_742010356"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     

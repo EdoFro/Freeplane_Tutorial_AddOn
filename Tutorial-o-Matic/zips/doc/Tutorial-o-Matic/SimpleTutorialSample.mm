@@ -1,7 +1,7 @@
-<map version="freeplane 1.9.8">
+<map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Simple Tutorial Sample" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_258304564"><hook NAME="MapStyle" background="#c4e1ff">
-    <properties save_modification_times="false" save_last_visited_node="default" mapUsesOwnSaveOptions="true" fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="default"/>
+    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" save_folding="default" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1611611797" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -135,7 +135,7 @@ code {
     </p>
   </body>
 </html></richcontent>
-<node TEXT="SIMPLE DEMO" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_390003608">
+<node TEXT="SIMPLE DEMO" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_390003608">
 <node TEXT="greetings" ID="ID_659572764">
 <node TEXT="Welcome to the Tutorial-o-Matic Simple Tutorial Demo!" STYLE_REF="ToM_newPage" ID="ID_577559944"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1123043625">
@@ -744,7 +744,7 @@ You can find more information about this in the following links:
 </node>
 </node>
 </node>
-<node TEXT="Current features" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_1118821725">
+<node TEXT="Current features" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_1118821725">
 <node TEXT="Introduction" FOLDED="true" ID="ID_1042686150">
 <node TEXT="Introduction" STYLE_REF="ToM_newPage" ID="ID_1727993127">
 <node TEXT="nodes with style newPage defines the title for the page and indicates where the page starts" ID="ID_1377188476"/>
@@ -758,7 +758,7 @@ New features may be added in the future.</text>
 </node>
 </node>
 </node>
-<node TEXT="markdown note" ID="ID_1476835349">
+<node TEXT="markdown note" FOLDED="true" ID="ID_1476835349">
 <node TEXT="Markdown content examples" STYLE_REF="ToM_newPage" ID="ID_207140003"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_928588147">
 <node TEXT="calvin and hobbes" ID="ID_1660497594"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
@@ -1476,7 +1476,7 @@ Currently that map must be in the same directory as the tutorial map
 <node TEXT="ExercisingMap.mm" ID="ID_1051753819"/>
 </node>
 </node>
-<node TEXT="inspect" FOLDED="true" ID="ID_1861234056">
+<node TEXT="inspect" ID="ID_1861234056">
 <node TEXT="Inspecting the tutorial map" STYLE_REF="ToM_newPage" ID="ID_1130451496"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_697584694">
 <node TEXT="inspecting" STYLE_REF="markdownNote" ID="ID_1574327682"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
@@ -1780,7 +1780,23 @@ Let&apos;s classify them, beginning with **Po** as the **main character**&#xd;
 </node>
 </node>
 </node>
-<node TEXT="Copy of &quot;Current features&quot; +  inspection button in each page" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_759535321">
+<node TEXT="Copy of &quot;Current features&quot; in editing / inspection mode" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_759535321">
+<icon BUILTIN="emoji-1F58D"/>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      the &quot;crayon&quot; icon indicates that this tutorial is beeing edited.
+    </p>
+    <p>
+      Buttons &quot;inspect&quot; and &quot;reload&quot; appear on page's top.
+    </p>
+  </body>
+</html>
+</richcontent>
 <node TEXT="Introduction" FOLDED="true" ID="ID_791969447">
 <node TEXT="Introduction" STYLE_REF="ToM_newPage" ID="ID_615110223">
 <node TEXT="nodes with style newPage defines the title for the page and indicates where the page starts" ID="ID_963032450"/>
@@ -1792,9 +1808,6 @@ Let&apos;s classify them, beginning with **Po** as the **main character**&#xd;
 New features may be added in the future.</text>
 </richcontent>
 </node>
-</node>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1352028422">
-<font NAME="SansSerif"/>
 </node>
 </node>
 <node TEXT="markdown note" FOLDED="true" ID="ID_1010028624">
@@ -1897,9 +1910,6 @@ An officially licensed children&apos;s textbook entitled [Teaching with Calvin a
 </text>
 </richcontent>
 </node>
-</node>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_211797316">
-<font NAME="SansSerif"/>
 </node>
 <node TEXT="more Markdown examples" STYLE_REF="ToM_newPage" ID="ID_1249506511"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1761773516">
@@ -2036,9 +2046,6 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </richcontent>
 </node>
 </node>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1630186512">
-<font NAME="SansSerif"/>
-</node>
 </node>
 <node TEXT="html note" FOLDED="true" ID="ID_1092689747"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
 <node TEXT="HTML example" STYLE_REF="ToM_newPage" ID="ID_1391525027"/>
@@ -2059,9 +2066,6 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </html></richcontent>
 </node>
 </node>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1220641384">
-<font NAME="SansSerif"/>
-</node>
 </node>
 <node TEXT="menu show" FOLDED="true" ID="ID_497849919">
 <node TEXT="Show menu comands" STYLE_REF="ToM_newPage" ID="ID_1893827717"/>
@@ -2077,9 +2081,6 @@ Here are some examples:</text>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_103528684">
 <node TEXT="Bold" ID="ID_71518855" LINK="menuitem:_BoldAction"/>
 <node TEXT="elephant" ID="ID_130921367" LINK="menuitem:_IconAction.emoji-1F418"/>
-</node>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_43370195">
-<font NAME="SansSerif"/>
 </node>
 </node>
 <node TEXT="menu action" FOLDED="true" ID="ID_68931919">
@@ -2211,9 +2212,6 @@ Here are some examples:</text>
 </html></richcontent>
 <node TEXT="Map overview" ID="ID_731370847" LINK="menuitem:_ToggleMapOverviewAction"/>
 </node>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_4950536">
-<font NAME="SansSerif"/>
-</node>
 </node>
 <node TEXT="TOC" FOLDED="true" ID="ID_1287893974">
 <node TEXT="Table of Content" STYLE_REF="ToM_newPage" ID="ID_317005214"/>
@@ -2227,9 +2225,6 @@ Here is the current tutorial&apos;s TOC:</text>
 </node>
 </node>
 <node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_322671847"/>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_166002131">
-<font NAME="SansSerif"/>
-</node>
 </node>
 <node TEXT="goto" FOLDED="true" ID="ID_484246232">
 <node TEXT="Linking other Tutorial&apos;s pages" STYLE_REF="ToM_newPage" ID="ID_1997494948"/>
@@ -2262,9 +2257,6 @@ Here is an example:</text>
 To jump to the **&apos;SimpleDemo&apos;s TOC page&apos;** page click on the button bellow:</text>
 </richcontent>
 </node>
-</node>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_608124255">
-<font NAME="SansSerif"/>
 </node>
 </node>
 <node TEXT="example scripts" FOLDED="true" ID="ID_50552230">
@@ -2350,9 +2342,6 @@ Select a node with a text and try them.
 <attribute NAME="script1" VALUE="def texto = node.text&#xa;node.text = texto.reverse()"/>
 </node>
 </node>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1121250811">
-<font NAME="SansSerif"/>
-</node>
 </node>
 <node TEXT="page 2" FOLDED="true" ID="ID_472679117">
 <font NAME="SansSerif"/>
@@ -2409,9 +2398,6 @@ Try them.
 <attribute NAME="script1" VALUE="import groovy.swing.SwingBuilder&#xa;&#xa;import javax.swing.*&#xa;&#xa;&#xa;def swingBuilder = new SwingBuilder()&#xa;def options = [&apos;Kung Fu Panda&apos;, &apos;Madagascar&apos;, &apos;Shrek&apos;, &apos;How to Train Your Dragon&apos;,&apos;The Croods&apos;,&apos;Trolls&apos;,&apos;The Boss Baby&apos;].sort()&#xa;def pane = swingBuilder.optionPane(&#xa;                            message:&apos;Which Dreamworks movie franchise like you most: &apos;,&#xa;                            selectionValues:options,&#xa;                            optionType:JOptionPane.CLOSED_OPTION&#xa;                        )&#xa;def dialog = pane.createDialog(ui.frame, &apos;Tutorial-o-Matic&apos;)&#xa;dialog.show()&#xa;&#xa;ui.informationMessage(&quot;the selected string was: &apos;${pane.inputValue}&apos;&quot;.toString())"/>
 </node>
 </node>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1800606673">
-<font NAME="SansSerif"/>
-</node>
 </node>
 </node>
 <node TEXT="copy/paste" FOLDED="true" ID="ID_1094483965">
@@ -2452,9 +2438,6 @@ Select a node in your map and click the button to insert a branch containing the
 <node TEXT="Mason" ID="ID_1789336025"/>
 </node>
 </node>
-</node>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1267778794">
-<font NAME="SansSerif"/>
 </node>
 </node>
 <node TEXT="select" FOLDED="true" ID="ID_1935443905">
@@ -2510,9 +2493,6 @@ Click the button to see how the selection changes:&#xd;
 <node TEXT="Blinking node" ID="ID_610073096" LINK="menuitem:_BlinkingNodeHookAction"/>
 <node TEXT="Bold" ID="ID_1616783604" LINK="menuitem:_BoldAction"/>
 </node>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1528663286">
-<font NAME="SansSerif"/>
-</node>
 </node>
 <node TEXT="openMap" FOLDED="true" ID="ID_1262554737">
 <node TEXT="Open another Mindmap" STYLE_REF="ToM_newPage" ID="ID_290935296"/>
@@ -2531,9 +2511,6 @@ Currently that map must be in the same directory as the tutorial map
 <node TEXT="openMap" STYLE_REF="ToM_openMap" ID="ID_1521222289">
 <node TEXT="ExercisingMap.mm" ID="ID_409802639"/>
 </node>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1664613524">
-<font NAME="SansSerif"/>
-</node>
 </node>
 <node TEXT="inspect" FOLDED="true" ID="ID_1583607778">
 <node TEXT="Inspecting the tutorial map" STYLE_REF="ToM_newPage" ID="ID_864051170"/>
@@ -2545,9 +2522,6 @@ Click the following button to go to the node that has this page information:
 </text>
 </richcontent>
 </node>
-</node>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_394691885">
-<font NAME="SansSerif"/>
 </node>
 </node>
 <node TEXT="Bye" FOLDED="true" ID="ID_228475519">
@@ -2574,9 +2548,6 @@ Click the following button to go to the node that has this page information:
   </body>
 </html></richcontent>
 </node>
-</node>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_641648320">
-<font NAME="SansSerif"/>
 </node>
 </node>
 </node>

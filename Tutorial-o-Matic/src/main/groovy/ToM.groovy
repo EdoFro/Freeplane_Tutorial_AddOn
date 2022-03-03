@@ -63,6 +63,11 @@ class ToM{
     def static getNewPageNodes(nTutorial){
         return nTutorial.find{it.style.name == styles.newPage}
     }
+    
+    def static isEditingMode(n){
+        def nodo = getTutorialNode(n)
+        return nodo.icons.contains('emoji-1F58D')
+    }
 
     // end:
 
@@ -151,14 +156,38 @@ class ToM{
         }
     }
 
-    def static addPageTitle(myP, String texto){
-        def html = "<html><style>h1 {color: rgb(240, 240, 240);background-color: rgb(100, 100, 150);display: block;padding: 10px;}</style><body><h1>${texto}</h1></body></html>"
-        myP.add(tomui.createInstructionsPane(html), tomui.GBC)
+    def static htmlTitle(String texto){
+        return "<html><style>h1 {color: rgb(240, 240, 240);background-color: rgb(100, 100, 150);display: block;padding: 10px;}</style><body><h1>${texto}</h1></body></html>"
     }
 
-    def static addPageTitle(myP, nodo){
-        addPageTitle(myP, nodo.text)
+    def static addPageTitle(myP, String texto){
+        def html = htmlTitle(texto)
+        myP.add(tomui.createInstructionsPane(html), tomui.GBC)
     }
+        
+    def static addPageTitle(myP, nodo){
+        if (isEditingMode(nodo)) {
+            def html = htmlTitle(nodo.text)
+            def bttnText1    = "inspect"
+            def bttnToolTip1 = "Click to select the page's source nodes"
+            def bttnAction1  = { e ->
+                def pageNode = nodo   //.parent
+                def m = c.mapLoader(nodo.map.file).withView()//.selectNodeById(pageNodeId)
+                m.load()
+                pageNode.pathToRoot*.folded = false
+                c.select(pageNode)
+            }
+            def bttnText2    = 'reload'
+            def bttnToolTip2 = "Click to reload '${nodo.text}' section"
+            def bttnAction2  = { e -> fillPage(myP, nodo, true, true)}
+            myP.add(tomui.createPageTitlePane(html, bttnText1, bttnToolTip1,bttnAction1,bttnText2,bttnToolTip2,bttnAction2), tomui.GBC)
+        } else {
+            addPageTitle(myP, nodo.text)
+        }
+    }
+    
+
+
 
     def static addNextPagePane(myP, lastNode, boolean included = false, boolean showNextButton = true){
         def closeLabel   = 'Stop tutorial'
