@@ -135,6 +135,8 @@ code {
     </p>
   </body>
 </html></richcontent>
+<attribute_layout NAME_WIDTH="86.25 pt" VALUE_WIDTH="87 pt"/>
+<attribute NAME="ToM_TabLabel" VALUE="ToM - Samples"/>
 <node TEXT="SIMPLE DEMO" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_390003608">
 <node TEXT="greetings" ID="ID_659572764">
 <node TEXT="Welcome to the Tutorial-o-Matic Simple Tutorial Demo!" STYLE_REF="ToM_newPage" ID="ID_577559944"/>
@@ -1794,9 +1796,19 @@ Let&apos;s classify them, beginning with **Po** as the **main character**&#xd;
     <p>
       Buttons &quot;inspect&quot; and &quot;reload&quot; appear on page's top.
     </p>
+    <p>
+      
+    </p>
+    <p>
+      the attribute &quot;ToM_TabLabel&quot; indicates which Tab should the tutorial be shown in.
+    </p>
+    <p>
+      If not present -&gt; default is &quot;Tutorial&quot;
+    </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
+<attribute_layout NAME_WIDTH="86.25 pt" VALUE_WIDTH="66.75 pt"/>
+<attribute NAME="ToM_TabLabel" VALUE="in new tab"/>
 <node TEXT="Introduction" FOLDED="true" ID="ID_791969447">
 <node TEXT="Introduction" STYLE_REF="ToM_newPage" ID="ID_615110223">
 <node TEXT="nodes with style newPage defines the title for the page and indicates where the page starts" ID="ID_963032450"/>

@@ -295,7 +295,7 @@ class ToM_ui{
 
 // genera panel close - next page
         //nextButtonAction == null --> no 'Next page' button
-    def static createNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip, nextButtonAction, tocLabel = '', tocToolTip = '', tocButtonAction = null ){
+    def static createNextButtonPanel(closeLabel, closeToolTip, nextLabel, nextToolTip, nextButtonAction, tocLabel = '', tocToolTip = '', tocButtonAction = null ){
         def panel = swing.panel(
             //border      : new LineBorder(Color.gray, 1),
             name        : myNextPanelName,
@@ -311,7 +311,7 @@ class ToM_ui{
                             constraints : WEST,
                             margin      : new Insets(10,15,10,15),
                             toolTipText : closeToolTip,
-                            actionPerformed : {closeTab(tabName)},
+                            actionPerformed : { e -> closeTab(e.source) },
                         )
                         if(tocButtonAction /* && nextButtonAction */ ){
                             button(
@@ -415,8 +415,15 @@ class ToM_ui{
 
     //region: other methods
 
-    def static closeTab(tabName, boolean hideTabPane = false) {
+    def static closeTab(String tabName, boolean hideTabPane = false) {
         TabPane.removeTab(tabName, hideTabPane)
+    }
+
+    def static closeTab(javax.swing.JComponent comp, boolean hideTabPane = false) {
+        //msg(comp.class)
+        def componente = getScrollPaneViewport(comp).parent
+        //msg(componente.class)
+        TabPane.removeTab(componente, hideTabPane)
     }
 
     def static setNextPagePanelEnabled(JPanel myP, boolean isEnabled){
@@ -442,6 +449,10 @@ class ToM_ui{
         getScrollPaneViewport(comp).setViewPosition(new Point(0,0))
     }
 
+    def static msg(texto){
+        ui.informationMessage(texto.toString())
+    }
+    
     //end:
 
 

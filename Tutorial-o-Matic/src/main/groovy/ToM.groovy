@@ -15,10 +15,13 @@ class ToM{
     // region: properties
         // this region has all the properties for the ToM class
 
-    static final String version        = '0.0.4'
-    static final c                     = ScriptUtils.c()
-    static final String tabName        = 'Tutorial'
-    static final String idDictStorage  = 'ToM_idDictionary'
+    static final String version           = '0.0.6'
+    static final c                        = ScriptUtils.c()
+    static final String idDictStorage     = 'ToM_idDictionary'
+    static final String attributeTabLabel = 'ToM_TabLabel'
+    static final String defaultTabLabel   = 'Tutorial'
+    static final String defaultMapTutorialsTabLabel = 'Tutorials'
+
 
     static final Map styles = [
         tutorial  : 'ToM-Tutorial'  ,
@@ -199,7 +202,7 @@ class ToM{
         def tocToolTip   = 'Click to show the Table of Contents of the tutorial'
         def tocBttnAction   = { e -> showTOC(myP,lastNode) }
 
-        def nextButtonPanel = tomui.createNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip , bttnAction, tocLabel, tocToolTip, tocBttnAction)
+        def nextButtonPanel = tomui.createNextButtonPanel(closeLabel, closeToolTip, nextLabel, nextToolTip , bttnAction, tocLabel, tocToolTip, tocBttnAction)
         myP.add(nextButtonPanel, tomui.GBC)
     }
 
@@ -513,7 +516,9 @@ class ToM{
                 def bttnAction   = { e ->
                     def tutNodes = getTutNodes(nT)
                     if(tutNodes) {
-                        fillContentPane(myP, tutNodes)
+                        def tutorialTabName = nT[attributeTabLabel] ?: defaultTabLabel
+                        def myP_thisTutorial = tomui.getContentPaneFromMyTab(tutorialTabName.toString(), true)
+                        fillContentPane(myP_thisTutorial, tutNodes)
                     } else {
                         ui.informationMessage( "no tutorial components(nodes) found for tutorial '${nT.text}'".toString() )
                     }
@@ -521,7 +526,7 @@ class ToM{
                 def button = tomui.createButton(title, bttnAction)
                 pane.add(button, tomui.GBC)
             }
-            def stopButton = tomui.createButton('Exit tutorial', {tomui.closeTab(tabName)})
+            def stopButton = tomui.createButton('CLOSE', { e -> tomui.closeTab(e.source)})
             pane.add(stopButton, tomui.GBC)
             myP.add(pane, tomui.GBC)
         } else {
@@ -548,7 +553,8 @@ class ToM{
     }
 
     def static showTutorials(mapa){
-        def myP = tomui.getContentPaneFromMyTab(tabName, true)
+        def tutorialTabName = mapa.root[attributeTabLabel] ?: defaultMapTutorialsTabLabel
+        def myP = tomui.getContentPaneFromMyTab(tutorialTabName.toString(), true)
         myP.removeAll()
         tomui.resizeContentPanel(myP,tomui.maxContentPaneHeigth)
         addTutorialsPane(myP, mapa)
