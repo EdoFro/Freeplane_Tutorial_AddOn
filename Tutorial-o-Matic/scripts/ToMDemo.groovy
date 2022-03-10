@@ -1,4 +1,3 @@
-import edofro.tutorialomatic.ToM_ui as tomui
 import edofro.tutorialomatic.ToM    as tom
 
 //region: opens tutorial map
@@ -10,7 +9,5 @@ import edofro.tutorialomatic.ToM    as tom
     def tutMap      = tom.getMapFromPath(pathName, false) //usar mapa indicado (pero oculto)
 
     tom.showTutorials( tutMap )
-
-    return 'tutorial started'
 
 //end:

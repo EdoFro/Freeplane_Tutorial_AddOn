@@ -6,6 +6,8 @@
 * added "editing status" to tutorial node (crayon icon)
 * Added command "get menu command"
 * Tab name can be set for each tutorial individually
+* List of Tutorials in Map can be shown in its own Tab. Its text can be set as a root node attribute.
+* Added command: "Show tutorials from active map"
 
 ## v0.0.5
 
