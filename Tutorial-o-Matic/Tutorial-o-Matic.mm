@@ -208,41 +208,41 @@
 </node>
 <node TEXT="v0.0.2" FOLDED="true" ID="ID_945484309">
 <node TEXT="Bugs corrections:" ID="ID_621408353"/>
-<node TEXT="- License as plain text" ID="ID_1923412145"/>
-<node TEXT="- Updated version of Demo map" ID="ID_555307095"/>
+<node TEXT="License as plain text" ID="ID_1923412145"/>
+<node TEXT="Updated version of Demo map" ID="ID_555307095"/>
 </node>
 <node TEXT="v0.0.3" FOLDED="true" ID="ID_1106405456">
-<node TEXT="- better scrollspeed" ID="ID_1550125378"/>
-<node TEXT="- message when command no present in Menu for active map" ID="ID_626495090"/>
-<node TEXT="- added execute_scripts_without_network_restriction: true so web images could be loaded" ID="ID_1874391134"/>
-<node TEXT="- improved showMenu to show actions in extended submenus" ID="ID_303812795"/>
-<node TEXT="- changed &apos;Close tutorial&apos; to &apos;Stop tutorial&apos;" ID="ID_1486491261"/>
-<node TEXT="- tables have now black borders" ID="ID_9530218"/>
-<node TEXT="- Codeblocks have special style in EditorPanes" ID="ID_56423716"/>
-<node TEXT="- links in EditorPanes are now clickeable and open the default web browser" ID="ID_1062322075"/>
-<node TEXT="- added a listener to resize height of content panel when tabpanel width changes" ID="ID_1925205902"/>
-<node TEXT="- added newPage styles and functionality" ID="ID_1487877110"/>
-<node TEXT="- added Table of Contents styles and functionality" ID="ID_1255937279"/>
-<node TEXT="- added Table of Contents button to &apos;next page&apos; panel" ID="ID_466351229"/>
-<node TEXT="- added GOTO style and its functionality" ID="ID_675441735"/>
-<node TEXT="- added Action style and its functionality" ID="ID_85218736"/>
-<node TEXT="- added groovy style and its functionality" ID="ID_450544179"/>
-<node TEXT="- enables multiple tutorials in one map" ID="ID_1662787389"/>
-<node TEXT="- added &apos;copy&apos; style and its functionality" ID="ID_397511938"/>
-<node TEXT="- added &apos;select&apos; style and its functionality" ID="ID_219465291"/>
-<node TEXT="- added &apos;openMap&apos; style and its functionality" ID="ID_1187322608"/>
-<node TEXT="- added &apos;inspect tutorial map&apos; functionality" ID="ID_1384096554"/>
+<node TEXT="better scrollspeed" ID="ID_1550125378"/>
+<node TEXT="message when command no present in Menu for active map" ID="ID_626495090"/>
+<node TEXT="added execute_scripts_without_network_restriction: true so web images could be loaded" ID="ID_1874391134"/>
+<node TEXT="improved showMenu to show actions in extended submenus" ID="ID_303812795"/>
+<node TEXT="changed &apos;Close tutorial&apos; to &apos;Stop tutorial&apos;" ID="ID_1486491261"/>
+<node TEXT="tables have now black borders" ID="ID_9530218"/>
+<node TEXT="Codeblocks have special style in EditorPanes" ID="ID_56423716"/>
+<node TEXT="links in EditorPanes are now clickeable and open the default web browser" ID="ID_1062322075"/>
+<node TEXT="added a listener to resize height of content panel when tabpanel width changes" ID="ID_1925205902"/>
+<node TEXT="added newPage styles and functionality" ID="ID_1487877110"/>
+<node TEXT="added Table of Contents styles and functionality" ID="ID_1255937279"/>
+<node TEXT="added Table of Contents button to &apos;next page&apos; panel" ID="ID_466351229"/>
+<node TEXT="added GOTO style and its functionality" ID="ID_675441735"/>
+<node TEXT="added Action style and its functionality" ID="ID_85218736"/>
+<node TEXT="added groovy style and its functionality" ID="ID_450544179"/>
+<node TEXT="enables multiple tutorials in one map" ID="ID_1662787389"/>
+<node TEXT="added &apos;copy&apos; style and its functionality" ID="ID_397511938"/>
+<node TEXT="added &apos;select&apos; style and its functionality" ID="ID_219465291"/>
+<node TEXT="added &apos;openMap&apos; style and its functionality" ID="ID_1187322608"/>
+<node TEXT="added &apos;inspect tutorial map&apos; functionality" ID="ID_1384096554"/>
 </node>
 <node TEXT="v0.0.4" FOLDED="true" ID="ID_1654795865">
-<node TEXT="- corrected link to version.properties" ID="ID_312985717"/>
-<node TEXT="- information of pasted nodes now is saved in each map for later exercises and multiple exercising maps" ID="ID_1625675097"/>
-<node TEXT="- added &apos;go back&apos; when using &apos;GOTO&apos; panes" ID="ID_1206483462"/>
-<node TEXT="- added &apos;show node from map&apos;" ID="ID_1070307973"/>
-<node TEXT="- added &apos;Show Tutorials&apos; in tutorial&apos;s last page" ID="ID_1065728970"/>
-<node TEXT="- added markedj.Options for Markdown" ID="ID_1245727594"/>
+<node TEXT="corrected link to version.properties" ID="ID_312985717"/>
+<node TEXT="information of pasted nodes now is saved in each map for later exercises and multiple exercising maps" ID="ID_1625675097"/>
+<node TEXT="added &apos;go back&apos; when using &apos;GOTO&apos; panes" ID="ID_1206483462"/>
+<node TEXT="added &apos;show node from map&apos;" ID="ID_1070307973"/>
+<node TEXT="added &apos;Show Tutorials&apos; in tutorial&apos;s last page" ID="ID_1065728970"/>
+<node TEXT="added markedj.Options for Markdown" ID="ID_1245727594"/>
 </node>
 <node TEXT="v0.0.5" FOLDED="true" ID="ID_1381773414">
-<node TEXT="- use look and feel specific colors (dpolivaev)" ID="ID_1429862191"/>
+<node TEXT="use look and feel specific colors (dpolivaev)" ID="ID_1429862191"/>
 </node>
 <node TEXT="v0.0.6" ID="ID_1444474192">
 <node TEXT="using devtools v0.9.31" ID="ID_1084561560"/>
