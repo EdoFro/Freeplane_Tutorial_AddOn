@@ -268,23 +268,29 @@ class ToM{
     }
 
     def static addGroovyPane(myP, nodoT){
-        def enabled = !disableBttn(nodoT)
+        def parentEnabled = !disableBttn(nodoT)
+        def parentReadOnly = isReadOnly(nodoT)
         nodoT.children.findAll{n -> WSE.isGroovyNode(n)}.each{nodo ->
+            def enabled = parentEnabled && !disableBttn(nodo)
+            def readOnly = parentReadOnly || isReadOnly(nodo)
             def script = WSE.scriptFromNode(nodo)
             if (script){
                 def scrText     = script + "\n c.statusInfo = '---- ready ----'".toString()
                 def msgHtml     = getGroovyHtml(nodo, script)
-                def bttnText    = 'Execute'
-                def bttnToolTip = "Click to execute script on selected nodes"
-                def bttnAction  = { e ->
-                        def bttn = e.source
-                        bttn.setEnabled(enabled)
-                        c.script(scrText, "groovy").executeOn(c.selected)
-                    }
-
-                def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
-                buttonPanel.metaClass.pending = false
-                myP.add(buttonPanel, tomui.GBC)
+                if(readOnly){
+                    myP.add(tomui.createInstructionsPane(msgHtml), tomui.GBC)
+                } else {
+                    def bttnText    = enabled ? 'Execute' : 'Execute 1 time'
+                    def bttnToolTip = "Click to execute script on selected nodes"
+                    def bttnAction  = { e ->
+                            def bttn = e.source
+                            bttn.setEnabled(enabled)
+                            c.script(scrText, "groovy").executeOn(c.selected)
+                        }
+                    def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+                    buttonPanel.metaClass.pending = false
+                    myP.add(buttonPanel, tomui.GBC)
+                }
             } else {
                 def textoHtml = '<html><body><p>No script encountered in tutorial node</p></body></html>'
                 myP.add(tomui.createInstructionsPane(textoHtml), tomui.GBC)
@@ -293,7 +299,7 @@ class ToM{
     }
 
      def static getGroovyHtml(nodo, script){
-         def showScript = nodo.icons.icons.contains('emoji-1F50D')
+         def showScript = nodo.icons.icons.contains('emoji-1F50D')  ||  nodo.icons.icons.contains('emoji-1F453') 
          uiMsg("showScript ${showScript}")
          def html = showScript? tomui.getHtmlFromGroovyNode(nodo, script) : nodo.text
          uiMsg("html ${html}")
@@ -335,6 +341,11 @@ class ToM{
      def static disableBttn(nodo){
          def iconos = nodo.icons.icons
          return iconos.contains('emoji-1F56F')
+     }
+     
+     def static isReadOnly(nodo){
+         def iconos = nodo.icons.icons
+         return iconos.contains('emoji-1F453')
      }
 
     def static addPastePane(myP, nodoSource){
