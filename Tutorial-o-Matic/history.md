@@ -8,6 +8,8 @@
 * Tab name can be set for each tutorial individually
 * List of Tutorials in Map can be shown in its own Tab. Its text can be set as a root node attribute.
 * Added command: "Show tutorials from active map"
+* Added command: "Create new tutorial mind map"
+*  addGroovyPane method updated
 
 ## v0.0.5
 

@@ -251,6 +251,8 @@
 <node TEXT="Tab name can be set for each tutorial individually" ID="ID_1916947069"/>
 <node TEXT="List of Tutorials in Map can be shown in its own Tab. Its text can be set as a root node attribute." ID="ID_1159122569"/>
 <node TEXT="Added command: &quot;Show tutorials from active map&quot;" ID="ID_624798635"/>
+<node TEXT="Added command: &quot;Create new tutorial mind map&quot;" ID="ID_977756201"/>
+<node TEXT=" addGroovyPane method updated" ID="ID_1786257563"/>
 </node>
 </node>
 <node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -435,8 +437,9 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="en" ID="ID_867038336">
+<node TEXT="en" ID="ID_1734971964">
 <attribute_layout NAME_WIDTH="209.99999 pt" VALUE_WIDTH="269.24999 pt"/>
+<attribute NAME="addons.${name}.createNewTutorialMindMap" VALUE="Create new tutorial mind map"/>
 <attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;In submenu  &lt;b&gt;{0}&lt;/b&gt; &lt;br&gt;click on  &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
 <attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
 <attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;You can also use de keyboard shortcut &lt;b&gt;{0}&lt;/b&gt; for this command&lt;/html&gt;"/>
@@ -446,8 +449,9 @@
 <attribute NAME="addons.${name}.ToMDemo" VALUE="Tutorial-o-Matic Demo"/>
 <attribute NAME="addons.${name}.executeTutorial" VALUE="execute Demo tutorial"/>
 </node>
-<node TEXT="es" ID="ID_673322434">
+<node TEXT="es" ID="ID_732687859">
 <attribute_layout NAME_WIDTH="209.99999 pt" VALUE_WIDTH="233.24999 pt"/>
+<attribute NAME="addons.${name}.createNewTutorialMindMap" VALUE="Crear nuevo mapa para tutoriales"/>
 <attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;En submenu  &lt;b&gt;{0}&lt;/b&gt; &lt;br&gt;has click en  &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
 <attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
 <attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;Puedes usar también el atajo &lt;b&gt;{0}&lt;/b&gt; para este comando&lt;/html&gt;"/>
@@ -485,6 +489,7 @@
 <attribute NAME="delete" VALUE="${installationbase}/templates/Tutorial-o-Matic/tutorial_styles_template.mm"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/getMenuCommand.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/showTutorialsFromActiveMap.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/createNewTutorialMindMap.groovy"/>
 </node>
 <node TEXT="scripts" POSITION="right" ID="ID_1037882722"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -650,6 +655,18 @@
 <attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
+</node>
+<node TEXT="createNewTutorialMindMap.groovy" ID="ID_1471194194">
+<attribute_layout NAME_WIDTH="209.24999 pt" VALUE_WIDTH="201.74999 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.createNewTutorialMindMap"/>
+<attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 </node>
 <node TEXT="lib" POSITION="right" ID="ID_1814812956"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
