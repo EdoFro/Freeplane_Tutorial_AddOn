@@ -137,7 +137,7 @@ code {
 </html></richcontent>
 <attribute_layout NAME_WIDTH="86.25 pt" VALUE_WIDTH="87 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE="ToM - Samples"/>
-<node TEXT="SIMPLE DEMO" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_390003608">
+<node TEXT="SIMPLE DEMO" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_390003608">
 <node TEXT="greetings" ID="ID_659572764">
 <node TEXT="Welcome to the Tutorial-o-Matic Simple Tutorial Demo!" STYLE_REF="ToM_newPage" ID="ID_577559944"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1123043625">
@@ -746,7 +746,7 @@ You can find more information about this in the following links:
 </node>
 </node>
 </node>
-<node TEXT="Current features" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_1118821725">
+<node TEXT="Current features" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_1118821725">
 <node TEXT="Introduction" FOLDED="true" ID="ID_1042686150">
 <node TEXT="Introduction" STYLE_REF="ToM_newPage" ID="ID_1727993127">
 <node TEXT="nodes with style newPage defines the title for the page and indicates where the page starts" ID="ID_1377188476"/>
@@ -1478,7 +1478,7 @@ Currently that map must be in the same directory as the tutorial map
 <node TEXT="ExercisingMap.mm" ID="ID_1051753819"/>
 </node>
 </node>
-<node TEXT="inspect" ID="ID_1861234056">
+<node TEXT="inspect" FOLDED="true" ID="ID_1861234056">
 <node TEXT="Inspecting the tutorial map" STYLE_REF="ToM_newPage" ID="ID_1130451496"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_697584694">
 <node TEXT="inspecting" STYLE_REF="markdownNote" ID="ID_1574327682"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
@@ -1516,268 +1516,6 @@ Click the following button to go to the node that has this page information:
     </p>
   </body>
 </html></richcontent>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="Some bugs I don&apos;t know how to correct yet" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_1169068254">
-<node TEXT="Bug intro" FOLDED="true" ID="ID_854641336">
-<node TEXT="Bug when executing menuaction &quot;Move node&quot;" STYLE_REF="ToM_newPage" ID="ID_1135172702"/>
-<node TEXT="Text" STYLE_REF="ToM_note" ID="ID_1474091942">
-<node TEXT="explaination about bug" STYLE_REF="markdownNote" ID="ID_1721677108"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>In the following page it&apos;s a demo tutorial about moving nodes with keyboard commands.&#xd;
-&#xd;
-It works *mostly* as expected, but when clicking in the buttons it will throw an error while it&apos;s moving the nodes.&#xd;
-&#xd;
-  &#xd;
-I don&apos;t know why this is happening. If somebody has an idea, please post it in the Freeplane forum.&#xd;
-&#xd;
-  &#xd;
-Please try it. It may open a bug report, but it will not freeze Freeplane or something like that.</text>
-</richcontent>
-</node>
-</node>
-</node>
-<node TEXT="move nodes" FOLDED="true" ID="ID_935288940">
-<node TEXT="Moving nodes" STYLE_REF="ToM_newPage" ID="ID_1277437434"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_440177109">
-<node TEXT="to move nodes, drag and drop them with the mouse" STYLE_REF="markdownNote" ID="ID_1650251687"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>to move nodes,
-
-- you can **drag and drop** them with the **mouse**
-- or you can move them with the **keyboard**
-
-  
-
-To move the selected node with the Keyboard 
-you have to press the CONTROL key while using the 
-ARROW keys to move the node.  
-  
-I prepared a little example. 
-Please select the node where you want 
-to insert the example nodes.</text>
-</richcontent>
-<font BOLD="false"/>
-</node>
-</node>
-<node TEXT="move example nodes" STYLE_REF="ToM_copy" ID="ID_1178388673">
-<node TEXT="Kung Fu Panda" ID="ID_1748112706"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      2008 movie
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="Cartoon Characters" ID="ID_1706014544">
-<node TEXT="Master Monkey" ID="ID_657675037"/>
-<node TEXT="Oogway" ID="ID_1537888277"/>
-<node TEXT="Master Viper" ID="ID_337678330"/>
-<node TEXT="Po" ID="ID_348506382"/>
-<node TEXT="Master Crane" ID="ID_1742467944"/>
-<node TEXT="Master Tigress" ID="ID_1868248941"/>
-<node TEXT="Shifu" ID="ID_1083179020"/>
-<node TEXT="Master Mantis" ID="ID_1227840559"/>
-<node TEXT="main" ID="ID_1834330934" BACKGROUND_COLOR="#99ff33" STYLE="bubble"/>
-<node TEXT="kung fu senior masters" ID="ID_948185235" BACKGROUND_COLOR="#99ff33" STYLE="bubble"/>
-<node TEXT="Furious Five" ID="ID_1315518988" BACKGROUND_COLOR="#99ff33" STYLE="bubble"/>
-<node TEXT="villains" ID="ID_342101636" BACKGROUND_COLOR="#99ff33" STYLE="bubble">
-<node TEXT="Tai Lung" ID="ID_1927953685"/>
-</node>
-<node TEXT="others" ID="ID_1509362375" BACKGROUND_COLOR="#99ff33" STYLE="bubble">
-<node TEXT="Commander Vachir" ID="ID_1632108314"/>
-<node TEXT="Zeng" ID="ID_27747225"/>
-<node TEXT="Mr. Ping" ID="ID_169482165"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="moving Po" ID="ID_589163673">
-<node TEXT="let&apos;s see" STYLE_REF="ToM_note" ID="ID_1708979415">
-<node TEXT="as next" STYLE_REF="markdownNote" ID="ID_1791107705"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>Now we can see that the nodes contains the names of the Characters of the &quot;KungFu Panda&quot; movie.&#xd;
-&#xd;
-Some of them are allready grouped but others are still not classified. &#xd;
-&#xd;
-      &#xd;
-Let&apos;s classify them, beginning with **Po** as the **main character**&#xd;
-</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="select Po" STYLE_REF="ToM_select" ID="ID_1318107269">
-<node ID="ID_404884047" TREE_ID="ID_348506382"/>
-</node>
-<node TEXT="move po to main" STYLE_REF="ToM_menuAction" ID="ID_1347577958">
-<icon BUILTIN="emoji-1F56F"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      First we will move the 'Po' node into the 'main' node
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="Move node (Sibling down)" ID="ID_960252906" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_1489296727" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_976742944" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_697423881" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_104790125" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node to the right" ID="ID_984466973" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
-</node>
-</node>
-<node TEXT="moving masters" ID="ID_12050691">
-<node TEXT="next step" STYLE_REF="ToM_note" ID="ID_1978680162">
-<node TEXT="as next" STYLE_REF="markdownNote" ID="ID_1686208429"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>Now let&apos;s move both kung fu masters (Oogway and Shifu) to the masters node.&#xd;
-</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="select" STYLE_REF="ToM_select" ID="ID_271689094">
-<node ID="ID_1414524459" CONTENT_ID="ID_1537888277"/>
-<node ID="ID_1314878308" CONTENT_ID="ID_1083179020"/>
-</node>
-<node TEXT="move them together" STYLE_REF="ToM_menuAction" ID="ID_305434084">
-<icon BUILTIN="emoji-1F56F"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>**&apos;Shifu&apos;** and **&apos;Oogway&apos;** nodes are not together, so we are going to move them to the right first and then back to the left. This way they get together.
-</text>
-</richcontent>
-<node TEXT="Move node to the right" ID="ID_216360233" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
-<node TEXT="Move node to the left" ID="ID_686083742" LINK="menuitem:_ChangeNodeLevelLeftsAction"/>
-</node>
-<node TEXT="move them to kung fu masters" STYLE_REF="ToM_menuAction" ID="ID_1037503919">
-<icon BUILTIN="emoji-1F56F"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>Now we will move the **&apos;Shifu&apos;** and **&apos;Oogway&apos;** nodes into the **&apos;kung fu masters&apos;** node.
-</text>
-</richcontent>
-<node TEXT="Move node (Sibling down)" ID="ID_902830163" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_1861218880" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_96926168" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_459176777" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_1708644021" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_1939034761" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node to the right" ID="ID_1537443714" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
-</node>
-</node>
-<node TEXT="moving Furious Five" ID="ID_750281851">
-<node TEXT="next step" STYLE_REF="ToM_note" ID="ID_35115412">
-<node TEXT="as next" STYLE_REF="markdownNote" ID="ID_177324546"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>Now let&apos;s move the **Furious Five** to their node.&#xd;
-</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="select" STYLE_REF="ToM_select" ID="ID_1620590356">
-<node ID="ID_1420677614" TREE_ID="ID_657675037"/>
-<node ID="ID_956047396" TREE_ID="ID_337678330"/>
-<node ID="ID_832745370" TREE_ID="ID_1742467944"/>
-<node ID="ID_1804779487" TREE_ID="ID_1868248941"/>
-<node ID="ID_983955739" TREE_ID="ID_1227840559"/>
-</node>
-<node TEXT="move them to Furious Five" STYLE_REF="ToM_menuAction" ID="ID_1905132220">
-<icon BUILTIN="emoji-1F56F"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>Now we will move the nodes into the **&apos;Furious Five&apos;** node.
-</text>
-</richcontent>
-<node TEXT="Move node (Sibling down)" ID="ID_636850219" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_449849093" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node (Sibling down)" ID="ID_1019965305" LINK="menuitem:_NodeDownAction"/>
-<node TEXT="Move node to the right" ID="ID_1175391830" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
-</node>
-</node>
-<node TEXT="next step" STYLE_REF="ToM_note" ID="ID_140041765">
-<node TEXT="as next" STYLE_REF="markdownNote" ID="ID_1949455174"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>## Now is your turn!!&#xd;
-&#xd;
-1. **Insert the example nodes** again &#xd;
-1. and try to do the classification yourself **moving the nodes** with **CONTROL and ARROW** keys!!&#xd;
-</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_26078656">
-<font NAME="SansSerif"/>
-</node>
-</node>
-</node>
-<node TEXT="An empty tutorial" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_346385320">
-<font NAME="SansSerif"/>
-<node TEXT="Madagascar" FOLDED="true" ID="ID_581007689">
-<edge COLOR="#ff0000"/>
-<node TEXT="main" ID="ID_1056414760">
-<node TEXT="Alex" ID="ID_1323247747">
-<font BOLD="false"/>
-</node>
-<node TEXT="Marty the Zebra" ID="ID_126336185"/>
-<node TEXT="Melman the Giraffe" ID="ID_1610995624"/>
-<node TEXT="Gloria the Hippo" ID="ID_792003684"/>
-</node>
-<node TEXT="Penguins" ID="ID_941420831">
-<node TEXT="Skipper" ID="ID_394059212"/>
-<node TEXT="Private" ID="ID_1228380064"/>
-<node TEXT="Kowalski" ID="ID_611585697">
-<font BOLD="false"/>
-</node>
-<node TEXT="Rico" ID="ID_1124919425"/>
-</node>
-<node TEXT="Lemurs" ID="ID_448188166">
-<node TEXT="Julien" ID="ID_491053192">
-<font BOLD="false"/>
-</node>
-<node TEXT="Maurice" ID="ID_1466073742"/>
-<node TEXT="Mort" ID="ID_1136267153"/>
-<node TEXT="Willie" ID="ID_260497542"/>
-</node>
-<node TEXT="Antagonists" ID="ID_1440606603">
-<font BOLD="true"/>
-<node TEXT="Fossa" ID="ID_1817450722"/>
-<node TEXT="Madagascar" ID="ID_647025802">
-<node TEXT="main" ID="ID_612228690">
-<node TEXT="Alex" ID="ID_1780111932">
-<font BOLD="false"/>
-</node>
-<node TEXT="Marty the Zebra" ID="ID_672742288"/>
-<node TEXT="Melman the Giraffe" ID="ID_1475271827"/>
-<node TEXT="Gloria the Hippo" ID="ID_1191786414"/>
-</node>
-<node TEXT="Penguins" ID="ID_47747750">
-<node TEXT="Skipper" ID="ID_1080549490"/>
-<node TEXT="Private" ID="ID_1483096968"/>
-<node TEXT="Kowalski" ID="ID_1884234078">
-<font BOLD="false"/>
-</node>
-<node TEXT="Rico" ID="ID_1481729911"/>
-</node>
-<node TEXT="Lemurs" ID="ID_1045746563">
-<node TEXT="Julien" ID="ID_133408055">
-<font BOLD="false"/>
-</node>
-<node TEXT="Maurice" ID="ID_1104781501"/>
-<node TEXT="Mort" ID="ID_1108515888"/>
-<node TEXT="Willie" ID="ID_633505832"/>
-</node>
-<node TEXT="Antagonists" ID="ID_1929451167">
-<node TEXT="Fossa" ID="ID_1751824319"/>
-</node>
-<node TEXT="Others" ID="ID_1363704502">
-<node TEXT="Mason" ID="ID_1555305020"/>
-</node>
-</node>
-</node>
-<node TEXT="Others" ID="ID_100522924">
-<node TEXT="Mason" ID="ID_1261901069"/>
-<node TEXT="" ID="ID_1133418174">
-<icon BUILTIN="ksmiletris"/>
 </node>
 </node>
 </node>
@@ -1822,6 +1560,7 @@ New features may be added in the future.</text>
 </node>
 </node>
 </node>
+<node TEXT="information" ID="ID_1980982395">
 <node TEXT="markdown note" FOLDED="true" ID="ID_1010028624">
 <node TEXT="Markdown content examples" STYLE_REF="ToM_newPage" ID="ID_921291072"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1280186470">
@@ -2079,7 +1818,22 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 </node>
 </node>
-<node TEXT="menu show" FOLDED="true" ID="ID_497849919">
+<node TEXT="TOC" FOLDED="true" ID="ID_1287893974">
+<node TEXT="Table of Content" STYLE_REF="ToM_newPage" ID="ID_317005214"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_313629830">
+<node TEXT="TOC example" STYLE_REF="markdownNote" ID="ID_858995451"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>**ToM** builds automatically the tutorial&apos;s table of content using the titles of each new page
+
+  
+Here is the current tutorial&apos;s TOC:</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_322671847"/>
+</node>
+</node>
+<node TEXT="Actions" ID="ID_999105259">
+<node TEXT="menu show" ID="ID_497849919">
 <node TEXT="Show menu comands" STYLE_REF="ToM_newPage" ID="ID_1893827717"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1872906921">
 <node TEXT="feature &quot;show menu&quot;" STYLE_REF="markdownNote" ID="ID_487821147"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
@@ -2095,7 +1849,7 @@ Here are some examples:</text>
 <node TEXT="elephant" ID="ID_130921367" LINK="menuitem:_IconAction.emoji-1F418"/>
 </node>
 </node>
-<node TEXT="menu action" FOLDED="true" ID="ID_68931919">
+<node TEXT="menu action" ID="ID_68931919">
 <node TEXT="Executing actions on selected nodes" STYLE_REF="ToM_newPage" ID="ID_651572577"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_453526600">
 <node TEXT="execute actions" ID="ID_305144913"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -2225,19 +1979,6 @@ Here are some examples:</text>
 <node TEXT="Map overview" ID="ID_731370847" LINK="menuitem:_ToggleMapOverviewAction"/>
 </node>
 </node>
-<node TEXT="TOC" FOLDED="true" ID="ID_1287893974">
-<node TEXT="Table of Content" STYLE_REF="ToM_newPage" ID="ID_317005214"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_313629830">
-<node TEXT="TOC example" STYLE_REF="markdownNote" ID="ID_858995451"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>**ToM** builds automatically the tutorial&apos;s table of content using the titles of each new page
-
-  
-Here is the current tutorial&apos;s TOC:</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_322671847"/>
-</node>
 <node TEXT="goto" FOLDED="true" ID="ID_484246232">
 <node TEXT="Linking other Tutorial&apos;s pages" STYLE_REF="ToM_newPage" ID="ID_1997494948"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1158810723">
@@ -2271,9 +2012,9 @@ To jump to the **&apos;SimpleDemo&apos;s TOC page&apos;** page click on the butt
 </node>
 </node>
 </node>
-<node TEXT="example scripts" FOLDED="true" ID="ID_50552230">
+<node TEXT="example scripts" ID="ID_50552230">
 <font NAME="SansSerif"/>
-<node TEXT="page 1" FOLDED="true" ID="ID_572001331">
+<node TEXT="page 1" ID="ID_572001331">
 <node TEXT="Executing Scripts on selected nodes" STYLE_REF="ToM_newPage" ID="ID_1109424992"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1966749824">
 <node TEXT="execute actions" STYLE_REF="markdownNote" ID="ID_105315653"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -2289,10 +2030,34 @@ To jump to the **&apos;SimpleDemo&apos;s TOC page&apos;** page click on the butt
 </html></richcontent>
 </node>
 <node TEXT="one time vs multiple times execution" STYLE_REF="markdownNote" ID="ID_825444908"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>The first example shows two times the same groovy script.
-
-  
-This script will reverse the text of the selected node.
+    <text>The first example shows two times the following groovy script:
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1532900946">
+<font NAME="SansSerif"/>
+<node TEXT="Groovy script: reverse node&apos;s text" FOLDED="true" ID="ID_1885028087">
+<icon BUILTIN="emoji-1F453"/>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html>
+</richcontent>
+<attribute NAME="script1" VALUE="def texto = node.text&#xa;node.text = texto.reverse()"/>
+<node TEXT="the glasses icon indicates that the groovy script is to be seen, but it can&apos;t be executed (no button)" ID="ID_1213214637"/>
+</node>
+</node>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_435897808">
+<node TEXT="one time vs multiple times execution" STYLE_REF="markdownNote" ID="ID_1820999570"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>This script will reverse the text of the selected node.
 
   
 The difference between both scripts is that after clicking the button, the first one will disable itself (one time execution) and the second button will stay enabled (for multiple time uses)
@@ -2317,7 +2082,7 @@ Select a node with a text and try them.
     </p>
   </body>
 </html></richcontent>
-<node TEXT="reverse node&apos;s text" ID="ID_944865147">
+<node TEXT="Groovy script: reverse node&apos;s text" ID="ID_944865147">
 <icon BUILTIN="emoji-1F50D"/>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
@@ -2338,7 +2103,7 @@ Select a node with a text and try them.
 </node>
 <node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1280809414">
 <font NAME="SansSerif"/>
-<node TEXT="reverse node&apos;s text" ID="ID_1364715204">
+<node TEXT="Groovy script: reverse node&apos;s text" ID="ID_1364715204">
 <icon BUILTIN="emoji-1F50D"/>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
@@ -2355,7 +2120,7 @@ Select a node with a text and try them.
 </node>
 </node>
 </node>
-<node TEXT="page 2" FOLDED="true" ID="ID_472679117">
+<node TEXT="page 2" ID="ID_472679117">
 <font NAME="SansSerif"/>
 <node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_1567350639">
 <node TEXT="nodes with style nextPage indicates where a new page starts, but don´t define a new title. It means that the new page is part of the previous section." ID="ID_279341226"/>
@@ -2524,6 +2289,7 @@ Currently that map must be in the same directory as the tutorial map
 <node TEXT="ExercisingMap.mm" ID="ID_409802639"/>
 </node>
 </node>
+</node>
 <node TEXT="inspect" FOLDED="true" ID="ID_1583607778">
 <node TEXT="Inspecting the tutorial map" STYLE_REF="ToM_newPage" ID="ID_864051170"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1060242433">
@@ -2559,6 +2325,546 @@ Click the following button to go to the node that has this page information:
     </p>
   </body>
 </html></richcontent>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="How to create a tutorial" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_899848243">
+<icon BUILTIN="emoji-1F58D"/>
+<font NAME="SansSerif"/>
+<attribute NAME="ToM_TabLabel" VALUE=" ToM - How to"/>
+<node TEXT="greetings" ID="ID_26985145">
+<node TEXT="How to use Tutorial-o-Matic v0.0.6 to create a Tutorial" STYLE_REF="ToM_newPage" ID="ID_1522236279"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_365713608">
+<node TEXT="Hi" STYLE_REF="markdownNote" ID="ID_683860354"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>## Hi!!
+
+In this tutorial I will try to show you how to create your own tutorials.</text>
+</richcontent>
+</node>
+<node TEXT="This tut .." STYLE_REF="markdownNote" ID="ID_1457460843"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This tutorial is for users that have some experience using Freeplane.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="bye" STYLE_REF="markdownNote" ID="ID_1162775021"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>I hope you enjoy this!
+
+  
+### Edo
+</text>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="Map" ID="ID_428964073">
+<node TEXT="Preparing the Map" STYLE_REF="ToM_newPage" ID="ID_1755629514"/>
+<node TEXT="create new map" ID="ID_987697295">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_498738696">
+<node TEXT="bla" ID="ID_998082200"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      bla bla bla
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1638139424">
+<node TEXT="Create new tutorial mind map" ID="ID_678489987" LINK="menuitem:_addons.tutorialOMatic.createNewTutorialMindMap_on_single_node"/>
+</node>
+<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_570554045">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      crear **mapa** nuevo
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Create new tutorial mind map" ID="ID_808483344" LINK="menuitem:_addons.tutorialOMatic.createNewTutorialMindMap_on_single_node"/>
+</node>
+</node>
+<node TEXT="what&apos;s different: Styles" ID="ID_1035852810">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_868537680">
+<node TEXT="bla" ID="ID_1743430155"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      bla bla bla
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_399360723">
+<node TEXT="Edit styles" ID="ID_543660174" LINK="menuitem:_EditStylesAction"/>
+</node>
+<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_175803796">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>revisar estilos de nuevo mapa
+</text>
+</richcontent>
+<node TEXT="Edit styles" ID="ID_1202505687" LINK="menuitem:_EditStylesAction"/>
+</node>
+</node>
+<node TEXT="alternative 1: new map using template" ID="ID_1431796937">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1017184644">
+<node TEXT="bla" ID="ID_1232873551"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      bla bla bla
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1732138663">
+<node TEXT="New map from template…" ID="ID_500023793" LINK="menuitem:_new_map_from_user_templates"/>
+</node>
+</node>
+<node TEXT="alternative 2: existing map" ID="ID_228734099">
+<node TEXT="copying styles from template" ID="ID_1767464751">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1257563799">
+<node TEXT="bla" ID="ID_633620711"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      bla bla bla
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_47769102">
+<node TEXT="Copy map styles from…" ID="ID_1740589456" LINK="menuitem:_CopyMapStylesAction"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Adding new Tutorial" ID="ID_1243748269">
+<node TEXT="Adding a new tutorial to your map" STYLE_REF="ToM_newPage" ID="ID_647708941"/>
+<node TEXT="adding new node" ID="ID_1508408787">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1627078388">
+<node TEXT="bla" ID="ID_908418458"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      bla bla bla
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node TEXT="test &quot;show map tutorials&quot;" ID="ID_823012059">
+<node TEXT="--&gt; no tutorials in map" ID="ID_1264068751"/>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_295321199">
+<node TEXT="Show tutorials from active map" ID="ID_128257230" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node"/>
+</node>
+<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1371811719"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>bla bla bla
+</text>
+</richcontent>
+<node TEXT="Show tutorials from active map" ID="ID_13410215" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node"/>
+</node>
+</node>
+<node TEXT="style" ID="ID_1056492663">
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1161167463">
+<node TEXT="ToM-Tutorial" ID="ID_1678784758" LINK="menuitem:_AssignStyleAction.ToM-Tutorial"/>
+</node>
+<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_324469049"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>bla bla bla
+</text>
+</richcontent>
+<node TEXT="ToM-Tutorial" ID="ID_5923853" LINK="menuitem:_AssignStyleAction.ToM-Tutorial"/>
+</node>
+</node>
+<node TEXT="test &quot;show map tutorials&quot;" ID="ID_1311987078">
+<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_352636602"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>bla bla bla
+</text>
+</richcontent>
+<node TEXT="Show tutorials from active map" ID="ID_1201969307" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node"/>
+</node>
+<node TEXT="--&gt; now shows" ID="ID_1511932642"/>
+<node TEXT="but no content in tutorial" ID="ID_1568665099"/>
+</node>
+</node>
+<node TEXT="First tutorial to create:" ID="ID_992458093"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Information
+    </p>
+    <p>
+      One page
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Adding content" ID="ID_504737716">
+<node TEXT="text" ID="ID_1289880689">
+<node TEXT="Adding a text tom node" ID="ID_1839811522"/>
+<node TEXT="adding a child" ID="ID_1839797198"/>
+<node TEXT="using the note&apos;s panel" ID="ID_1992349296"/>
+<node TEXT="plain" ID="ID_530909850">
+<node TEXT="single child" ID="ID_1519407966"/>
+</node>
+</node>
+</node>
+<node TEXT="using crayon" ID="ID_723858661"/>
+<node TEXT="Adding content" ID="ID_6046814">
+<node TEXT="text" ID="ID_1881671144">
+<node TEXT="plain" ID="ID_664244403">
+<node TEXT="multiple childs" ID="ID_1088944615"/>
+</node>
+<node TEXT="HTML" ID="ID_335918225"/>
+<node TEXT="Markdown" ID="ID_241499732"/>
+</node>
+</node>
+<node TEXT="Changing tutorials Tab" ID="ID_662986118">
+<node TEXT="note that tutorial Tab is &quot;Tutorial&quot;" ID="ID_1683158991"/>
+<node TEXT="Stop Tutorial" ID="ID_1133628303"/>
+<node TEXT="add attribute in Tutorials node" ID="ID_1411285992">
+<node TEXT="and add value" ID="ID_74973349"/>
+</node>
+<node TEXT="test &quot;show map tutorials&quot;" ID="ID_1184523339">
+<node TEXT="now new tab text" ID="ID_1596207225"/>
+</node>
+</node>
+</node>
+<node TEXT="second tutorial" ID="ID_168997337"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      information
+    </p>
+    <p>
+      multiple pages
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="inserts example node" ID="ID_172850433">
+<node TEXT="add a new Tutorial node" ID="ID_1709360018"/>
+<node TEXT="change tutorials tab" ID="ID_738150415"/>
+<node TEXT="inserts example Tom Text nodes" ID="ID_1350622851"/>
+</node>
+<node TEXT="test &quot;show map tutorials&quot;" ID="ID_62778532">
+<node TEXT="--&gt; looooong panel ---&gt; new pages!!" ID="ID_1846650812"/>
+</node>
+<node TEXT="user inserts new pages" ID="ID_728549756"/>
+<node TEXT="tests" ID="ID_1167506653"/>
+<node TEXT="TOC" ID="ID_880677163"/>
+<node TEXT="new pages vs next pages" ID="ID_1446789719"/>
+<node TEXT="tests" ID="ID_4750947"/>
+</node>
+<node TEXT="Third tutorial" ID="ID_591282400"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      actions
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="inserts branch like previous result" ID="ID_1378956267"/>
+</node>
+</node>
+<node TEXT="Some bugs I don&apos;t know how to correct yet" STYLE_REF="ToM-Tutorial" POSITION="left" ID="ID_1169068254">
+<node TEXT="Bug intro" FOLDED="true" ID="ID_854641336">
+<node TEXT="Bug when executing menuaction &quot;Move node&quot;" STYLE_REF="ToM_newPage" ID="ID_1135172702"/>
+<node TEXT="Text" STYLE_REF="ToM_note" ID="ID_1474091942">
+<node TEXT="explaination about bug" STYLE_REF="markdownNote" ID="ID_1721677108"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>In the following page it&apos;s a demo tutorial about moving nodes with keyboard commands.&#xd;
+&#xd;
+It works *mostly* as expected, but when clicking in the buttons it will throw an error while it&apos;s moving the nodes.&#xd;
+&#xd;
+  &#xd;
+I don&apos;t know why this is happening. If somebody has an idea, please post it in the Freeplane forum.&#xd;
+&#xd;
+  &#xd;
+Please try it. It may open a bug report, but it will not freeze Freeplane or something like that.</text>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="move nodes" FOLDED="true" ID="ID_935288940">
+<node TEXT="Moving nodes" STYLE_REF="ToM_newPage" ID="ID_1277437434"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_440177109">
+<node TEXT="to move nodes, drag and drop them with the mouse" STYLE_REF="markdownNote" ID="ID_1650251687"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>to move nodes,
+
+- you can **drag and drop** them with the **mouse**
+- or you can move them with the **keyboard**
+
+  
+
+To move the selected node with the Keyboard 
+you have to press the CONTROL key while using the 
+ARROW keys to move the node.  
+  
+I prepared a little example. 
+Please select the node where you want 
+to insert the example nodes.</text>
+</richcontent>
+<font BOLD="false"/>
+</node>
+</node>
+<node TEXT="move example nodes" STYLE_REF="ToM_copy" ID="ID_1178388673">
+<node TEXT="Kung Fu Panda" ID="ID_1748112706"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      2008 movie
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Cartoon Characters" ID="ID_1706014544">
+<node TEXT="Master Monkey" ID="ID_657675037"/>
+<node TEXT="Oogway" ID="ID_1537888277"/>
+<node TEXT="Master Viper" ID="ID_337678330"/>
+<node TEXT="Po" ID="ID_348506382"/>
+<node TEXT="Master Crane" ID="ID_1742467944"/>
+<node TEXT="Master Tigress" ID="ID_1868248941"/>
+<node TEXT="Shifu" ID="ID_1083179020"/>
+<node TEXT="Master Mantis" ID="ID_1227840559"/>
+<node TEXT="main" ID="ID_1834330934" BACKGROUND_COLOR="#99ff33" STYLE="bubble"/>
+<node TEXT="kung fu senior masters" ID="ID_948185235" BACKGROUND_COLOR="#99ff33" STYLE="bubble"/>
+<node TEXT="Furious Five" ID="ID_1315518988" BACKGROUND_COLOR="#99ff33" STYLE="bubble"/>
+<node TEXT="villains" ID="ID_342101636" BACKGROUND_COLOR="#99ff33" STYLE="bubble">
+<node TEXT="Tai Lung" ID="ID_1927953685"/>
+</node>
+<node TEXT="others" ID="ID_1509362375" BACKGROUND_COLOR="#99ff33" STYLE="bubble">
+<node TEXT="Commander Vachir" ID="ID_1632108314"/>
+<node TEXT="Zeng" ID="ID_27747225"/>
+<node TEXT="Mr. Ping" ID="ID_169482165"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="moving Po" ID="ID_589163673">
+<node TEXT="let&apos;s see" STYLE_REF="ToM_note" ID="ID_1708979415">
+<node TEXT="as next" STYLE_REF="markdownNote" ID="ID_1791107705"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>Now we can see that the nodes contains the names of the Characters of the &quot;KungFu Panda&quot; movie.&#xd;
+&#xd;
+Some of them are allready grouped but others are still not classified. &#xd;
+&#xd;
+      &#xd;
+Let&apos;s classify them, beginning with **Po** as the **main character**&#xd;
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="select Po" STYLE_REF="ToM_select" ID="ID_1318107269">
+<node ID="ID_404884047" TREE_ID="ID_348506382"/>
+</node>
+<node TEXT="move po to main" STYLE_REF="ToM_menuAction" ID="ID_1347577958">
+<icon BUILTIN="emoji-1F56F"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      First we will move the 'Po' node into the 'main' node
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Move node (Sibling down)" ID="ID_960252906" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_1489296727" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_976742944" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_697423881" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_104790125" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node to the right" ID="ID_984466973" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
+</node>
+</node>
+<node TEXT="moving masters" ID="ID_12050691">
+<node TEXT="next step" STYLE_REF="ToM_note" ID="ID_1978680162">
+<node TEXT="as next" STYLE_REF="markdownNote" ID="ID_1686208429"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>Now let&apos;s move both kung fu masters (Oogway and Shifu) to the masters node.&#xd;
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="select" STYLE_REF="ToM_select" ID="ID_271689094">
+<node ID="ID_1414524459" CONTENT_ID="ID_1537888277"/>
+<node ID="ID_1314878308" CONTENT_ID="ID_1083179020"/>
+</node>
+<node TEXT="move them together" STYLE_REF="ToM_menuAction" ID="ID_305434084">
+<icon BUILTIN="emoji-1F56F"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>**&apos;Shifu&apos;** and **&apos;Oogway&apos;** nodes are not together, so we are going to move them to the right first and then back to the left. This way they get together.
+</text>
+</richcontent>
+<node TEXT="Move node to the right" ID="ID_216360233" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
+<node TEXT="Move node to the left" ID="ID_686083742" LINK="menuitem:_ChangeNodeLevelLeftsAction"/>
+</node>
+<node TEXT="move them to kung fu masters" STYLE_REF="ToM_menuAction" ID="ID_1037503919">
+<icon BUILTIN="emoji-1F56F"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>Now we will move the **&apos;Shifu&apos;** and **&apos;Oogway&apos;** nodes into the **&apos;kung fu masters&apos;** node.
+</text>
+</richcontent>
+<node TEXT="Move node (Sibling down)" ID="ID_902830163" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_1861218880" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_96926168" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_459176777" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_1708644021" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_1939034761" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node to the right" ID="ID_1537443714" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
+</node>
+</node>
+<node TEXT="moving Furious Five" ID="ID_750281851">
+<node TEXT="next step" STYLE_REF="ToM_note" ID="ID_35115412">
+<node TEXT="as next" STYLE_REF="markdownNote" ID="ID_177324546"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>Now let&apos;s move the **Furious Five** to their node.&#xd;
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="select" STYLE_REF="ToM_select" ID="ID_1620590356">
+<node ID="ID_1420677614" TREE_ID="ID_657675037"/>
+<node ID="ID_956047396" TREE_ID="ID_337678330"/>
+<node ID="ID_832745370" TREE_ID="ID_1742467944"/>
+<node ID="ID_1804779487" TREE_ID="ID_1868248941"/>
+<node ID="ID_983955739" TREE_ID="ID_1227840559"/>
+</node>
+<node TEXT="move them to Furious Five" STYLE_REF="ToM_menuAction" ID="ID_1905132220">
+<icon BUILTIN="emoji-1F56F"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>Now we will move the nodes into the **&apos;Furious Five&apos;** node.
+</text>
+</richcontent>
+<node TEXT="Move node (Sibling down)" ID="ID_636850219" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_449849093" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node (Sibling down)" ID="ID_1019965305" LINK="menuitem:_NodeDownAction"/>
+<node TEXT="Move node to the right" ID="ID_1175391830" LINK="menuitem:_ChangeNodeLevelRightsAction"/>
+</node>
+</node>
+<node TEXT="next step" STYLE_REF="ToM_note" ID="ID_140041765">
+<node TEXT="as next" STYLE_REF="markdownNote" ID="ID_1949455174"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>## Now is your turn!!&#xd;
+&#xd;
+1. **Insert the example nodes** again &#xd;
+1. and try to do the classification yourself **moving the nodes** with **CONTROL and ARROW** keys!!&#xd;
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_26078656">
+<font NAME="SansSerif"/>
+</node>
+</node>
+</node>
+<node TEXT="An empty tutorial" STYLE_REF="ToM-Tutorial" POSITION="left" ID="ID_346385320">
+<font NAME="SansSerif"/>
+<node TEXT="Madagascar" FOLDED="true" ID="ID_581007689">
+<edge COLOR="#ff0000"/>
+<node TEXT="main" ID="ID_1056414760">
+<node TEXT="Alex" ID="ID_1323247747">
+<font BOLD="false"/>
+</node>
+<node TEXT="Marty the Zebra" ID="ID_126336185"/>
+<node TEXT="Melman the Giraffe" ID="ID_1610995624"/>
+<node TEXT="Gloria the Hippo" ID="ID_792003684"/>
+</node>
+<node TEXT="Penguins" ID="ID_941420831">
+<node TEXT="Skipper" ID="ID_394059212"/>
+<node TEXT="Private" ID="ID_1228380064"/>
+<node TEXT="Kowalski" ID="ID_611585697">
+<font BOLD="false"/>
+</node>
+<node TEXT="Rico" ID="ID_1124919425"/>
+</node>
+<node TEXT="Lemurs" ID="ID_448188166">
+<node TEXT="Julien" ID="ID_491053192">
+<font BOLD="false"/>
+</node>
+<node TEXT="Maurice" ID="ID_1466073742"/>
+<node TEXT="Mort" ID="ID_1136267153"/>
+<node TEXT="Willie" ID="ID_260497542"/>
+</node>
+<node TEXT="Antagonists" ID="ID_1440606603">
+<font BOLD="true"/>
+<node TEXT="Fossa" ID="ID_1817450722"/>
+<node TEXT="Madagascar" ID="ID_647025802">
+<node TEXT="main" ID="ID_612228690">
+<node TEXT="Alex" ID="ID_1780111932">
+<font BOLD="false"/>
+</node>
+<node TEXT="Marty the Zebra" ID="ID_672742288"/>
+<node TEXT="Melman the Giraffe" ID="ID_1475271827"/>
+<node TEXT="Gloria the Hippo" ID="ID_1191786414"/>
+</node>
+<node TEXT="Penguins" ID="ID_47747750">
+<node TEXT="Skipper" ID="ID_1080549490"/>
+<node TEXT="Private" ID="ID_1483096968"/>
+<node TEXT="Kowalski" ID="ID_1884234078">
+<font BOLD="false"/>
+</node>
+<node TEXT="Rico" ID="ID_1481729911"/>
+</node>
+<node TEXT="Lemurs" ID="ID_1045746563">
+<node TEXT="Julien" ID="ID_133408055">
+<font BOLD="false"/>
+</node>
+<node TEXT="Maurice" ID="ID_1104781501"/>
+<node TEXT="Mort" ID="ID_1108515888"/>
+<node TEXT="Willie" ID="ID_633505832"/>
+</node>
+<node TEXT="Antagonists" ID="ID_1929451167">
+<node TEXT="Fossa" ID="ID_1751824319"/>
+</node>
+<node TEXT="Others" ID="ID_1363704502">
+<node TEXT="Mason" ID="ID_1555305020"/>
+</node>
+</node>
+</node>
+<node TEXT="Others" ID="ID_100522924">
+<node TEXT="Mason" ID="ID_1261901069"/>
+<node TEXT="" ID="ID_1133418174">
+<icon BUILTIN="ksmiletris"/>
 </node>
 </node>
 </node>
