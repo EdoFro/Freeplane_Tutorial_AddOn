@@ -10,6 +10,7 @@
 * Added command: "Show tutorials from active map"
 * Added command: "Create new tutorial mind map"
 *  addGroovyPane method updated
+* Added command "import Tutorial-o-Matic Styles"
 
 ## v0.0.5
 
