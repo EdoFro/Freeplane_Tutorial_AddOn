@@ -1,7 +1,7 @@
 <map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Simple Tutorial Sample" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_258304564"><hook NAME="MapStyle" background="#c4e1ff">
-    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" save_folding="default" fit_to_viewport="false"/>
+    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" save_folding="save_folding_if_map_is_changed" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1611611797" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -137,8 +137,8 @@ code {
 </html></richcontent>
 <attribute_layout NAME_WIDTH="86.25 pt" VALUE_WIDTH="87 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE="ToM - Samples"/>
-<node TEXT="SIMPLE DEMO" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_390003608">
-<node TEXT="greetings" ID="ID_659572764">
+<node TEXT="SIMPLE DEMO" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_390003608">
+<node TEXT="greetings" FOLDED="true" ID="ID_659572764">
 <node TEXT="Welcome to the Tutorial-o-Matic Simple Tutorial Demo!" STYLE_REF="ToM_newPage" ID="ID_577559944"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1123043625">
 <node TEXT="" ID="ID_1222666660">
@@ -175,8 +175,8 @@ code {
 </node>
 </node>
 </node>
-<node TEXT="demo Tutorial" ID="ID_428700784">
-<node TEXT="Tutorial Greeting" ID="ID_1655811769">
+<node TEXT="demo Tutorial" FOLDED="true" ID="ID_428700784">
+<node TEXT="Tutorial Greeting" FOLDED="true" ID="ID_1655811769">
 <node TEXT="Freeplane Basics!!" STYLE_REF="ToM_newPage" ID="ID_1283868783"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_950027502">
 <node TEXT="in this tutorial" STYLE_REF="markdownNote" ID="ID_587298050"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
@@ -746,7 +746,7 @@ You can find more information about this in the following links:
 </node>
 </node>
 </node>
-<node TEXT="Current features" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_1118821725">
+<node TEXT="Current features" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_1118821725">
 <node TEXT="Introduction" FOLDED="true" ID="ID_1042686150">
 <node TEXT="Introduction" STYLE_REF="ToM_newPage" ID="ID_1727993127">
 <node TEXT="nodes with style newPage defines the title for the page and indicates where the page starts" ID="ID_1377188476"/>
@@ -1546,12 +1546,69 @@ Click the following button to go to the node that has this page information:
   </body>
 </html></richcontent>
 <attribute_layout NAME_WIDTH="86.25 pt" VALUE_WIDTH="66.75 pt"/>
-<attribute NAME="ToM_TabLabel" VALUE="in new tab"/>
+<attribute NAME="ToM_TabLabel" VALUE="Crayon mode"/>
+<node TEXT="Crayon Mode" ID="ID_1549930271">
+<node TEXT="Crayon Mode" STYLE_REF="ToM_newPage" ID="ID_67374880">
+<font BOLD="false"/>
+</node>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1290058360">
+<node TEXT="inspect and reload" STYLE_REF="markdownNote" ID="ID_1182302370"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>This tutorial is the same as the previous &quot;Current features&quot;,
+ but as you can see, there are two new buttons left from the title of the page:
+
+- **inspect**:
+  - it shows you the map that is beeing used as source information for this tutorial
+  - and it selects the node that defines the title of the current tutorial page
+
+- **reload**:
+  - it reloads the information from the mindmap and builds this page again
+
+This way you can go to the map by clicking **inspect**, 
+make some changes and then **reload** the page to look how the changes work.</text>
+</richcontent>
+</node>
+<node TEXT="Crayon" STYLE_REF="markdownNote" ID="ID_504376254"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>Any tutorial can be seen in this &quot;***Editing Mode***&quot;.
+
+You just need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
+
+Click **inspect** to look into the mind map and see the icon in the Tutorial node (the one in *salmon-pink* color).</text>
+</richcontent>
+</node>
+<node TEXT="change the text in the note of this node to see how it works" STYLE_REF="markdownNote" ID="ID_1109468299" BACKGROUND_COLOR="#ffff00"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>Do the following steps to test these features:&#xd;
+&#xd;
+- Click **inspect**&#xd;
+- Select the yellow node next to the currently selected node&#xd;
+- Change the text in its note&#xd;
+- Change the order of the nodes inside the &quot;Text&quot; node&#xd;
+- Click **reload**</text>
+</richcontent>
+</node>
+<node TEXT="Now: Current Features" STYLE_REF="markdownNote" ID="ID_1359555247"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>Now you can click &quot;**Next page**&quot; and look how the different Tutorial pages &#xd;
+and their features have been configured in the MindMap.&#xd;
+&#xd;
+There are also comments in the map that explain some of the configuration options.</text>
+</richcontent>
+</node>
+</node>
+</node>
 <node TEXT="Introduction" FOLDED="true" ID="ID_791969447">
 <node TEXT="Introduction" STYLE_REF="ToM_newPage" ID="ID_615110223">
 <node TEXT="nodes with style newPage defines the title for the page and indicates where the page starts" ID="ID_963032450"/>
 </node>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_137035593">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_137035593"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      nodes with style ToM_Note look at the notes of their children to build text panes
+    </p>
+  </body>
+</html></richcontent>
 <node TEXT="intro" STYLE_REF="markdownNote" ID="ID_382044586"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>In the following pages you can see the different content that the **Tutorial-o-Matic(ToM)** AddOn can show.
 
@@ -1560,7 +1617,7 @@ New features may be added in the future.</text>
 </node>
 </node>
 </node>
-<node TEXT="information" ID="ID_1980982395">
+<node TEXT="information" FOLDED="true" ID="ID_1980982395" VGAP_QUANTITY="3 cm">
 <node TEXT="markdown note" FOLDED="true" ID="ID_1010028624">
 <node TEXT="Markdown content examples" STYLE_REF="ToM_newPage" ID="ID_921291072"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1280186470">
@@ -1798,7 +1855,9 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 </node>
 </node>
-<node TEXT="html note" FOLDED="true" ID="ID_1092689747"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+<node TEXT="html note" FOLDED="true" ID="ID_1092689747">
+<arrowlink COLOR="#cc0000" WIDTH="6" TRANSPARENCY="255" DESTINATION="ID_1287893974" MIDDLE_LABEL="Change their order &#xa;and reload the page &#xa;to see how the TOC updates" STARTINCLINATION="195.74999 pt;6.75 pt;" ENDINCLINATION="188.99999 pt;-48 pt;" STARTARROW="DEFAULT" ENDARROW="DEFAULT"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
 <node TEXT="HTML example" STYLE_REF="ToM_newPage" ID="ID_1391525027"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_774731236">
 <node TEXT="hi! this is a demo" ID="ID_968392070"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -1833,7 +1892,7 @@ Here is the current tutorial&apos;s TOC:</text>
 </node>
 </node>
 <node TEXT="Actions" ID="ID_999105259">
-<node TEXT="menu show" ID="ID_497849919">
+<node TEXT="menu show" FOLDED="true" ID="ID_497849919">
 <node TEXT="Show menu comands" STYLE_REF="ToM_newPage" ID="ID_1893827717"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1872906921">
 <node TEXT="feature &quot;show menu&quot;" STYLE_REF="markdownNote" ID="ID_487821147"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
@@ -1849,7 +1908,7 @@ Here are some examples:</text>
 <node TEXT="elephant" ID="ID_130921367" LINK="menuitem:_IconAction.emoji-1F418"/>
 </node>
 </node>
-<node TEXT="menu action" ID="ID_68931919">
+<node TEXT="menu action" FOLDED="true" ID="ID_68931919">
 <node TEXT="Executing actions on selected nodes" STYLE_REF="ToM_newPage" ID="ID_651572577"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_453526600">
 <node TEXT="execute actions" ID="ID_305144913"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -1986,11 +2045,13 @@ Here are some examples:</text>
     <text>You can add  buttons to jump to other tutorial pages
 
   
-Here is an example:</text>
+Here are two examples with option &quot;goBack&quot; selected 
+that adds a &quot;return panel&quot; to the visited page:</text>
 </richcontent>
 </node>
 </node>
 <node TEXT="GOTO" STYLE_REF="ToM_goto" ID="ID_907987260">
+<icon BUILTIN="emoji-1F519"/>
 <node TEXT="HTML example" STYLE_REF="markdownNote" ID="ID_30588849" LINK="#ID_1391525027"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -2011,8 +2072,30 @@ To jump to the **&apos;SimpleDemo&apos;s TOC page&apos;** page click on the butt
 </richcontent>
 </node>
 </node>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_105473316">
+<node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_180933093"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>  
+Here is the same first example without option &quot;goBack&quot; selected:
+</text>
+</richcontent>
 </node>
-<node TEXT="example scripts" ID="ID_50552230">
+</node>
+<node TEXT="GOTO" STYLE_REF="ToM_goto" ID="ID_870922428">
+<node TEXT="HTML example" STYLE_REF="markdownNote" ID="ID_1923396828" LINK="#ID_1391525027"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      To jump to the **'HTML example'** page click on the button bellow:
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node TEXT="example scripts" FOLDED="true" ID="ID_50552230">
 <font NAME="SansSerif"/>
 <node TEXT="page 1" ID="ID_572001331">
 <node TEXT="Executing Scripts on selected nodes" STYLE_REF="ToM_newPage" ID="ID_1109424992"/>
@@ -2037,7 +2120,7 @@ To jump to the **&apos;SimpleDemo&apos;s TOC page&apos;** page click on the butt
 </node>
 <node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1532900946">
 <font NAME="SansSerif"/>
-<node TEXT="Groovy script: reverse node&apos;s text" FOLDED="true" ID="ID_1885028087">
+<node TEXT="Groovy script: reverse node&apos;s text" ID="ID_1885028087">
 <icon BUILTIN="emoji-1F453"/>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
@@ -2049,8 +2132,7 @@ To jump to the **&apos;SimpleDemo&apos;s TOC page&apos;** page click on the butt
       .groovy
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <attribute NAME="script1" VALUE="def texto = node.text&#xa;node.text = texto.reverse()"/>
 <node TEXT="the glasses icon indicates that the groovy script is to be seen, but it can&apos;t be executed (no button)" ID="ID_1213214637"/>
 </node>
@@ -2241,7 +2323,8 @@ Click the button to see how the selection changes:&#xd;
       to indicate which are the nodes you want to select just paste clones of them here as childs
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node ID="ID_1375639542" CONTENT_ID="ID_1713074567"/>
 <node ID="ID_1328739290" CONTENT_ID="ID_414651683"/>
 <node ID="ID_1277707261" CONTENT_ID="ID_1588546276"/>
@@ -2271,7 +2354,7 @@ Click the button to see how the selection changes:&#xd;
 <node TEXT="Bold" ID="ID_1616783604" LINK="menuitem:_BoldAction"/>
 </node>
 </node>
-<node TEXT="openMap" FOLDED="true" ID="ID_1262554737">
+<node TEXT="openMap" ID="ID_1262554737">
 <node TEXT="Open another Mindmap" STYLE_REF="ToM_newPage" ID="ID_290935296"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1077909247">
 <node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_162869244"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
@@ -2289,8 +2372,24 @@ Currently that map must be in the same directory as the tutorial map
 <node TEXT="ExercisingMap.mm" ID="ID_409802639"/>
 </node>
 </node>
+<node TEXT="showNode" ID="ID_1112845607">
+<node TEXT="Show specific node in the same or another MindMap" STYLE_REF="ToM_newPage" ID="ID_834518884"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_547205938">
+<node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_1625216932"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add a button to show nodes in the same or in another MindMaps.
+
+It may be any node. It doesn&apos;t need to be in a tutorial.
+
+</text>
+</richcontent>
 </node>
-<node TEXT="inspect" FOLDED="true" ID="ID_1583607778">
+</node>
+<node TEXT="showNode" STYLE_REF="ToM_showNode" ID="ID_1798961377">
+<node TEXT="los datos de mami" ID="ID_632024907" LINK="file:/C:/Users/Edo/Documents/Mochila/Freeplane/Mochila.mm#ID_632024907"/>
+</node>
+</node>
+</node>
+<node TEXT="inspect" ID="ID_1583607778">
 <node TEXT="Inspecting the tutorial map" STYLE_REF="ToM_newPage" ID="ID_864051170"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1060242433">
 <node TEXT="inspecting" STYLE_REF="markdownNote" ID="ID_1135096340"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
@@ -2301,6 +2400,7 @@ Click the following button to go to the node that has this page information:
 </richcontent>
 </node>
 </node>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1484510128"/>
 </node>
 <node TEXT="Bye" FOLDED="true" ID="ID_228475519">
 <node TEXT="Bye!!" STYLE_REF="ToM_newPage" ID="ID_1454993384"/>
@@ -2329,285 +2429,79 @@ Click the following button to go to the node that has this page information:
 </node>
 </node>
 </node>
-<node TEXT="How to create a tutorial" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_899848243">
-<icon BUILTIN="emoji-1F58D"/>
+<node TEXT="An empty tutorial" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_346385320">
 <font NAME="SansSerif"/>
-<attribute NAME="ToM_TabLabel" VALUE=" ToM - How to"/>
-<node TEXT="greetings" ID="ID_26985145">
-<node TEXT="How to use Tutorial-o-Matic v0.0.6 to create a Tutorial" STYLE_REF="ToM_newPage" ID="ID_1522236279"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_365713608">
-<node TEXT="Hi" STYLE_REF="markdownNote" ID="ID_683860354"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>## Hi!!
-
-In this tutorial I will try to show you how to create your own tutorials.</text>
-</richcontent>
+<node TEXT="Madagascar" FOLDED="true" ID="ID_581007689">
+<edge COLOR="#ff0000"/>
+<node TEXT="main" ID="ID_1056414760">
+<node TEXT="Alex" ID="ID_1323247747">
+<font BOLD="false"/>
 </node>
-<node TEXT="This tut .." STYLE_REF="markdownNote" ID="ID_1457460843"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      This tutorial is for users that have some experience using Freeplane.
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="Marty the Zebra" ID="ID_126336185"/>
+<node TEXT="Melman the Giraffe" ID="ID_1610995624"/>
+<node TEXT="Gloria the Hippo" ID="ID_792003684"/>
 </node>
-<node TEXT="bye" STYLE_REF="markdownNote" ID="ID_1162775021"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>I hope you enjoy this!
-
-  
-### Edo
-</text>
-</richcontent>
+<node TEXT="Penguins" ID="ID_941420831">
+<node TEXT="Skipper" ID="ID_394059212"/>
+<node TEXT="Private" ID="ID_1228380064"/>
+<node TEXT="Kowalski" ID="ID_611585697">
+<font BOLD="false"/>
 </node>
+<node TEXT="Rico" ID="ID_1124919425"/>
 </node>
+<node TEXT="Lemurs" ID="ID_448188166">
+<node TEXT="Julien" ID="ID_491053192">
+<font BOLD="false"/>
 </node>
-<node TEXT="Map" ID="ID_428964073">
-<node TEXT="Preparing the Map" STYLE_REF="ToM_newPage" ID="ID_1755629514"/>
-<node TEXT="create new map" ID="ID_987697295">
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_498738696">
-<node TEXT="bla" ID="ID_998082200"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      bla bla bla
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="Maurice" ID="ID_1466073742"/>
+<node TEXT="Mort" ID="ID_1136267153"/>
+<node TEXT="Willie" ID="ID_260497542"/>
 </node>
+<node TEXT="Antagonists" ID="ID_1440606603">
+<font BOLD="true"/>
+<node TEXT="Fossa" ID="ID_1817450722"/>
+<node TEXT="Madagascar" ID="ID_647025802">
+<node TEXT="main" ID="ID_612228690">
+<node TEXT="Alex" ID="ID_1780111932">
+<font BOLD="false"/>
 </node>
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1638139424">
-<node TEXT="Create new tutorial mind map" ID="ID_678489987" LINK="menuitem:_addons.tutorialOMatic.createNewTutorialMindMap_on_single_node"/>
+<node TEXT="Marty the Zebra" ID="ID_672742288"/>
+<node TEXT="Melman the Giraffe" ID="ID_1475271827"/>
+<node TEXT="Gloria the Hippo" ID="ID_1191786414"/>
 </node>
-<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_570554045">
-<icon BUILTIN="emoji-1F507"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      crear **mapa** nuevo
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="Create new tutorial mind map" ID="ID_808483344" LINK="menuitem:_addons.tutorialOMatic.createNewTutorialMindMap_on_single_node"/>
+<node TEXT="Penguins" ID="ID_47747750">
+<node TEXT="Skipper" ID="ID_1080549490"/>
+<node TEXT="Private" ID="ID_1483096968"/>
+<node TEXT="Kowalski" ID="ID_1884234078">
+<font BOLD="false"/>
+</node>
+<node TEXT="Rico" ID="ID_1481729911"/>
+</node>
+<node TEXT="Lemurs" ID="ID_1045746563">
+<node TEXT="Julien" ID="ID_133408055">
+<font BOLD="false"/>
+</node>
+<node TEXT="Maurice" ID="ID_1104781501"/>
+<node TEXT="Mort" ID="ID_1108515888"/>
+<node TEXT="Willie" ID="ID_633505832"/>
+</node>
+<node TEXT="Antagonists" ID="ID_1929451167">
+<node TEXT="Fossa" ID="ID_1751824319"/>
+</node>
+<node TEXT="Others" ID="ID_1363704502">
+<node TEXT="Mason" ID="ID_1555305020"/>
 </node>
 </node>
-<node TEXT="what&apos;s different: Styles" ID="ID_1035852810">
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_868537680">
-<node TEXT="bla" ID="ID_1743430155"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      bla bla bla
-    </p>
-  </body>
-</html></richcontent>
 </node>
-</node>
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_399360723">
-<node TEXT="Edit styles" ID="ID_543660174" LINK="menuitem:_EditStylesAction"/>
-</node>
-<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_175803796">
-<icon BUILTIN="emoji-1F507"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>revisar estilos de nuevo mapa
-</text>
-</richcontent>
-<node TEXT="Edit styles" ID="ID_1202505687" LINK="menuitem:_EditStylesAction"/>
-</node>
-</node>
-<node TEXT="alternative 1: new map using template" ID="ID_1431796937">
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1017184644">
-<node TEXT="bla" ID="ID_1232873551"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      bla bla bla
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1732138663">
-<node TEXT="New map from template…" ID="ID_500023793" LINK="menuitem:_new_map_from_user_templates"/>
-</node>
-</node>
-<node TEXT="alternative 2: existing map" ID="ID_228734099">
-<node TEXT="copying styles from template" ID="ID_1767464751">
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1257563799">
-<node TEXT="bla" ID="ID_633620711"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      bla bla bla
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_47769102">
-<node TEXT="Copy map styles from…" ID="ID_1740589456" LINK="menuitem:_CopyMapStylesAction"/>
+<node TEXT="Others" ID="ID_100522924">
+<node TEXT="Mason" ID="ID_1261901069"/>
+<node TEXT="" ID="ID_1133418174">
+<icon BUILTIN="ksmiletris"/>
 </node>
 </node>
 </node>
 </node>
-<node TEXT="Adding new Tutorial" ID="ID_1243748269">
-<node TEXT="Adding a new tutorial to your map" STYLE_REF="ToM_newPage" ID="ID_647708941"/>
-<node TEXT="adding new node" ID="ID_1508408787">
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1627078388">
-<node TEXT="bla" ID="ID_908418458"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      bla bla bla
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-</node>
-<node TEXT="test &quot;show map tutorials&quot;" ID="ID_823012059">
-<node TEXT="--&gt; no tutorials in map" ID="ID_1264068751"/>
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_295321199">
-<node TEXT="Show tutorials from active map" ID="ID_128257230" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node"/>
-</node>
-<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1371811719"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>bla bla bla
-</text>
-</richcontent>
-<node TEXT="Show tutorials from active map" ID="ID_13410215" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node"/>
-</node>
-</node>
-<node TEXT="style" ID="ID_1056492663">
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1161167463">
-<node TEXT="ToM-Tutorial" ID="ID_1678784758" LINK="menuitem:_AssignStyleAction.ToM-Tutorial"/>
-</node>
-<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_324469049"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>bla bla bla
-</text>
-</richcontent>
-<node TEXT="ToM-Tutorial" ID="ID_5923853" LINK="menuitem:_AssignStyleAction.ToM-Tutorial"/>
-</node>
-</node>
-<node TEXT="test &quot;show map tutorials&quot;" ID="ID_1311987078">
-<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_352636602"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>bla bla bla
-</text>
-</richcontent>
-<node TEXT="Show tutorials from active map" ID="ID_1201969307" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node"/>
-</node>
-<node TEXT="--&gt; now shows" ID="ID_1511932642"/>
-<node TEXT="but no content in tutorial" ID="ID_1568665099"/>
-</node>
-</node>
-<node TEXT="First tutorial to create:" ID="ID_992458093"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Information
-    </p>
-    <p>
-      One page
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="Adding content" ID="ID_504737716">
-<node TEXT="text" ID="ID_1289880689">
-<node TEXT="Adding a text tom node" ID="ID_1839811522"/>
-<node TEXT="adding a child" ID="ID_1839797198"/>
-<node TEXT="using the note&apos;s panel" ID="ID_1992349296"/>
-<node TEXT="plain" ID="ID_530909850">
-<node TEXT="single child" ID="ID_1519407966"/>
-</node>
-</node>
-</node>
-<node TEXT="using crayon" ID="ID_723858661"/>
-<node TEXT="Adding content" ID="ID_6046814">
-<node TEXT="text" ID="ID_1881671144">
-<node TEXT="plain" ID="ID_664244403">
-<node TEXT="multiple childs" ID="ID_1088944615"/>
-</node>
-<node TEXT="HTML" ID="ID_335918225"/>
-<node TEXT="Markdown" ID="ID_241499732"/>
-</node>
-</node>
-<node TEXT="Changing tutorials Tab" ID="ID_662986118">
-<node TEXT="note that tutorial Tab is &quot;Tutorial&quot;" ID="ID_1683158991"/>
-<node TEXT="Stop Tutorial" ID="ID_1133628303"/>
-<node TEXT="add attribute in Tutorials node" ID="ID_1411285992">
-<node TEXT="and add value" ID="ID_74973349"/>
-</node>
-<node TEXT="test &quot;show map tutorials&quot;" ID="ID_1184523339">
-<node TEXT="now new tab text" ID="ID_1596207225"/>
-</node>
-</node>
-</node>
-<node TEXT="second tutorial" ID="ID_168997337"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      information
-    </p>
-    <p>
-      multiple pages
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="inserts example node" ID="ID_172850433">
-<node TEXT="add a new Tutorial node" ID="ID_1709360018"/>
-<node TEXT="change tutorials tab" ID="ID_738150415"/>
-<node TEXT="inserts example Tom Text nodes" ID="ID_1350622851"/>
-</node>
-<node TEXT="test &quot;show map tutorials&quot;" ID="ID_62778532">
-<node TEXT="--&gt; looooong panel ---&gt; new pages!!" ID="ID_1846650812"/>
-</node>
-<node TEXT="user inserts new pages" ID="ID_728549756"/>
-<node TEXT="tests" ID="ID_1167506653"/>
-<node TEXT="TOC" ID="ID_880677163"/>
-<node TEXT="new pages vs next pages" ID="ID_1446789719"/>
-<node TEXT="tests" ID="ID_4750947"/>
-</node>
-<node TEXT="Third tutorial" ID="ID_591282400"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      actions
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="inserts branch like previous result" ID="ID_1378956267"/>
-</node>
-</node>
-<node TEXT="Some bugs I don&apos;t know how to correct yet" STYLE_REF="ToM-Tutorial" POSITION="left" ID="ID_1169068254">
+<node TEXT="Some bugs I don&apos;t know how to correct yet" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_1169068254">
 <node TEXT="Bug intro" FOLDED="true" ID="ID_854641336">
 <node TEXT="Bug when executing menuaction &quot;Move node&quot;" STYLE_REF="ToM_newPage" ID="ID_1135172702"/>
 <node TEXT="Text" STYLE_REF="ToM_note" ID="ID_1474091942">
@@ -2794,78 +2688,6 @@ Let&apos;s classify them, beginning with **Po** as the **main character**&#xd;
 </node>
 <node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_26078656">
 <font NAME="SansSerif"/>
-</node>
-</node>
-</node>
-<node TEXT="An empty tutorial" STYLE_REF="ToM-Tutorial" POSITION="left" ID="ID_346385320">
-<font NAME="SansSerif"/>
-<node TEXT="Madagascar" FOLDED="true" ID="ID_581007689">
-<edge COLOR="#ff0000"/>
-<node TEXT="main" ID="ID_1056414760">
-<node TEXT="Alex" ID="ID_1323247747">
-<font BOLD="false"/>
-</node>
-<node TEXT="Marty the Zebra" ID="ID_126336185"/>
-<node TEXT="Melman the Giraffe" ID="ID_1610995624"/>
-<node TEXT="Gloria the Hippo" ID="ID_792003684"/>
-</node>
-<node TEXT="Penguins" ID="ID_941420831">
-<node TEXT="Skipper" ID="ID_394059212"/>
-<node TEXT="Private" ID="ID_1228380064"/>
-<node TEXT="Kowalski" ID="ID_611585697">
-<font BOLD="false"/>
-</node>
-<node TEXT="Rico" ID="ID_1124919425"/>
-</node>
-<node TEXT="Lemurs" ID="ID_448188166">
-<node TEXT="Julien" ID="ID_491053192">
-<font BOLD="false"/>
-</node>
-<node TEXT="Maurice" ID="ID_1466073742"/>
-<node TEXT="Mort" ID="ID_1136267153"/>
-<node TEXT="Willie" ID="ID_260497542"/>
-</node>
-<node TEXT="Antagonists" ID="ID_1440606603">
-<font BOLD="true"/>
-<node TEXT="Fossa" ID="ID_1817450722"/>
-<node TEXT="Madagascar" ID="ID_647025802">
-<node TEXT="main" ID="ID_612228690">
-<node TEXT="Alex" ID="ID_1780111932">
-<font BOLD="false"/>
-</node>
-<node TEXT="Marty the Zebra" ID="ID_672742288"/>
-<node TEXT="Melman the Giraffe" ID="ID_1475271827"/>
-<node TEXT="Gloria the Hippo" ID="ID_1191786414"/>
-</node>
-<node TEXT="Penguins" ID="ID_47747750">
-<node TEXT="Skipper" ID="ID_1080549490"/>
-<node TEXT="Private" ID="ID_1483096968"/>
-<node TEXT="Kowalski" ID="ID_1884234078">
-<font BOLD="false"/>
-</node>
-<node TEXT="Rico" ID="ID_1481729911"/>
-</node>
-<node TEXT="Lemurs" ID="ID_1045746563">
-<node TEXT="Julien" ID="ID_133408055">
-<font BOLD="false"/>
-</node>
-<node TEXT="Maurice" ID="ID_1104781501"/>
-<node TEXT="Mort" ID="ID_1108515888"/>
-<node TEXT="Willie" ID="ID_633505832"/>
-</node>
-<node TEXT="Antagonists" ID="ID_1929451167">
-<node TEXT="Fossa" ID="ID_1751824319"/>
-</node>
-<node TEXT="Others" ID="ID_1363704502">
-<node TEXT="Mason" ID="ID_1555305020"/>
-</node>
-</node>
-</node>
-<node TEXT="Others" ID="ID_100522924">
-<node TEXT="Mason" ID="ID_1261901069"/>
-<node TEXT="" ID="ID_1133418174">
-<icon BUILTIN="ksmiletris"/>
-</node>
 </node>
 </node>
 </node>

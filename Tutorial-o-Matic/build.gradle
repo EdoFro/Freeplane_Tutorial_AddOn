@@ -41,7 +41,7 @@ dependencies {
     implementation name : 'freeplanelauncher'
     implementation name : 'freeplaneviewer'
     implementation group: 'org.freeplane.core',   name: 'freeplaneeditor', version:"+"
-    implementation group: 'org.freeplane.script', name: 'plugin', version: '+'
+    implementation group: 'org.freeplane.script', name: 'plugin', version: '+' 
     implementation name : 'markedj', version: '+' //<---- para markedj
     implementation name : 'jsoup'  , version: '+' //<---- para jsoup
     //Freeplane now comes with groovy 3.0.8
