@@ -123,7 +123,7 @@ class ToM{
                     addTOCPane(myPanel, tutNode)
                     break
                 case styles.goto:
-                    addGotoPane(myPanel, tutNode.children, nextTutNodes[0], options)
+                    addGotoPane(myPanel, tutNode, nextTutNodes[0], options)
                     break
                 case styles.action:
                     addActionPane(myPanel, tutNode, options)
@@ -283,23 +283,38 @@ class ToM{
         }
     }
 
-    def static addGotoPane(myP, nodos, backNode, options){
+    def static addGotoPane(myP, ApiNode tNode, ApiNode backNode, options){
+        backNode = withGoBack(tNode)?backNode:null
+        def nodos = tNode.children
         nodos.findAll{n -> n.link.node?true:false}.each{nodo ->
             def targetNode  = nodo.link.node
             def msgHtml     = nodo.note?tomui.getHtmlFromNote(nodo, options):null
             def bttnText    = nodo.text
             def bttnToolTip = "Click to go to '${bttnText}' section"
-            def bttnAction  = { e -> gotoAction(myP, targetNode, backNode) }
-            def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+            def bttnAction  = { e -> 
+                if(targetNode.style.name == styles.tutorial){
+                    def tutorialTabName = targetNode[attributeTabLabel] ?: defaultTabLabel
+                    def myP_thisTutorial = tomui.getContentPaneFromMyTab(tutorialTabName.toString(), true)
+                    gotoAction(myP_thisTutorial, targetNode, null) 
+                } else {
+                    gotoAction(myP, targetNode, backNode) 
+                }            
+             }
+            def buttonPanel = tomui.createButtonPanel(msgHtml, bttnText, bttnToolTip, bttnAction, false)
             myP.add(buttonPanel, tomui.GBC)
         }
     }
     
+    def static withGoBack( ApiNode nodo){
+         def iconos = nodo.icons.icons
+         return iconos.contains('emoji-1F519')
+     }
+    
      def static gotoAction(myP, ApiNode targetNode, ApiNode backNode){
          myP.removeAll()
-         addReturnPane(myP, backNode)
+         if (backNode) addReturnPane(myP, backNode)
          fillPage(myP, targetNode, true, false)
-         addReturnPane(myP, backNode)
+         if (backNode) addReturnPane(myP, backNode)
      }
     
     def static addReturnPane(myP,  ApiNode backNode){
