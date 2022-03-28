@@ -24,7 +24,7 @@ class ToM{
     static final String attributeTabLabel = 'ToM_TabLabel'
     static final String defaultTabLabel   = 'Tutorial'
     static final String defaultMapTutorialsTabLabel = 'Tutorials'
-
+    static final String attributeNewPageLink        = 'ToM_LinkToPage'
 
     static final Map styles = [
         tutorial  : 'ToM-Tutorial'  ,
@@ -604,6 +604,61 @@ class ToM{
 
     // end:
 
+    // region: Linking tutorial pages from other mindmaps
+    
+    def static openTutorialPage(nodeDirection , ApiMindMap mapa = null){
+        if(nodeDirection instanceof java.net.URI) {
+            return openTutorialPageUri(nodeDirection, mapa)
+        }
+        if(nodeDirection instanceof java.lang.String) {
+            return openTutorialPageString(nodeDirection, mapa)
+        }
+        if(nodeDirection instanceof ApiNode) {
+            def newPageUri = nodeDirection[attributeNewPageLink].uri ?: nodeDirection.link?.uri // TODO: probar que tome link de nodo si no existe el del attributo
+            mapa           = mapa ?: nodeDirection.map
+            return openTutorialPage(newPageUri, mapa)
+        }
+        return 'No tutorial node found'
+    }
+
+
+    def static openTutorialPageUri(URI uri, ApiMindMap mapa){
+    //    if(!uri) return null
+        def isMindmap =  uri.scheme in ['file','tutorial']  && uri.path.endsWith('.mm')
+        def nodeId = (!uri.scheme || isMindmap) && uri.fragment?.startsWith('ID_')?
+                        uri.fragment
+                        : null
+        // if (!nodeId) return 'No node ID defined in URI'
+        def tutMapPath = /* nodeId && */ isMindmap ?
+                            uri.path.drop(1)
+                            :null
+        def tutMap = tutMapPath ?
+                        getMapFromPath(tutMapPath, false)    //open mind map not visible
+                        : mapa
+        openTutorialPageString(nodeId, tutMap)
+    }
+
+
+    def static openTutorialPageString(String nodeId, ApiMindMap tutMap){
+        if(!tutMap) return 'No tutorial mindmap defined'
+        def targetNode = nodeId ? tutMap.node(nodeId) : null
+        // if(!targetNode) return 'No tutorial node found'
+
+        if(targetNode){
+            if(!(isTutNode(targetNode) || isTutorialNode(targetNode) )) return 'Indicated node is not part of a tutorial'
+            def tutorialTabName = getTutorialNode(targetNode)[attributeTabLabel] ?: tutMap.root[attributeTabLabel] ?: defaultMapTutorialsTabLabel
+            //uiMsg(tutorialTabName)
+            def myP = tomui.getContentPaneFromMyTab(tutorialTabName.toString(), true)
+            fillPage(myP, targetNode, true, true)
+        } else {
+            showTutorials(tutMap)
+        }
+        return 'tutorial displayed'
+    }
+        
+    
+    // end:
+    
     // region: help / debug
 
     def static uiMsg(texto){

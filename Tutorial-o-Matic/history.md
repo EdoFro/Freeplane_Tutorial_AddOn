@@ -11,6 +11,7 @@
 * Added command: "Create new tutorial mind map"
 *  addGroovyPane method updated
 * Added command "import Tutorial-o-Matic Styles"
+* Added command "Open tutorial page from link"
 
 ## v0.0.5
 
