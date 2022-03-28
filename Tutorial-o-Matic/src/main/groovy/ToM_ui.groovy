@@ -212,7 +212,7 @@ class ToM_ui{
         return sp
     }
     
-    def static createPageTitlePane(String htmlMsg, bttnText1, bttnToolTip1,bttnAction1,bttnText2,bttnToolTip2,bttnAction2){
+    def static createPageTitlePane(String htmlMsg, botones){
         def panel = swing.panel() {
             borderLayout()
             editorPane(
@@ -225,21 +225,26 @@ class ToM_ui{
                 constraints : CENTER,
                 clientProperties: [(JEditorPane.HONOR_DISPLAY_PROPERTIES):true]
             )
-            vbox(constraints:WEST) {
-                button(
-                    label       : bttnText1,
-                    // constraints : WEST,
-                    // margin      : new Insets(10,15,10,15),
-                    toolTipText : bttnToolTip1,
-                    actionPerformed : bttnAction1,
-                )
-                button(
-                    label       : bttnText2,
-                    // constraints : EAST,
-                    // margin      : new Insets(10,15,10,15),
-                    toolTipText : bttnToolTip2,
-                    actionPerformed : bttnAction2,
-                )
+            if(botones.size()>0){
+                vbox(constraints:WEST) {
+                    botones.each{b ->
+                        button(
+                            label           : b[0],
+                            // constraints : WEST,
+                            margin          : new Insets(0,2,0,2),
+                            toolTipText     : b[1],
+                            actionPerformed : b[2],
+                            icon            : b[3],
+                        )
+                    }
+                    // button(
+                        // label       : bttnText2,
+                        // // constraints : EAST,
+                        // // margin      : new Insets(10,15,10,15),
+                        // toolTipText : bttnToolTip2,
+                        // actionPerformed : bttnAction2,
+                    // )
+                }
             }
         }
         return panel
