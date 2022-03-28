@@ -7,6 +7,7 @@ import edofro.menuomatic.WSE_redux              as WSE
 
 import org.freeplane.core.ui.components.UITools as ui
 import org.freeplane.plugin.script.proxy.ScriptUtils
+import org.freeplane.core.util.MenuUtils            as menuUtils
 
 
 import org.freeplane.api.Node as ApiNode
@@ -184,26 +185,55 @@ class ToM{
     }
         
     def static addPageTitle(myP,  ApiNode nodo){
+        def html = htmlTitle(nodo.text)
+        def bttnText   
+        def bttnToolTip
+        def bttnAction 
+        def bttnIcon
+        def botones = []
+
+        bttnText    = null //'link'
+        bttnToolTip = "Click to insert node with link to '${nodo.text}' section"
+        bttnAction  = { e -> 
+            def newPageNode = nodo
+            def selectedNode = c.selected
+            def linkNode = selectedNode.createChild(newPageNode.text)
+            linkNode[attributeNewPageLink] = getUriFromNode(newPageNode)
+            linkNode.link.uri = new URI('menuitem:_addons.tutorialOMatic.openTutorialPageFromLink_on_single_node')
+        }
+        bttnIcon    = menuUtils.getMenuItemIcon('IconAction.emoji-1F517')
+        botones << [bttnText, bttnToolTip, bttnAction, bttnIcon]
+        
         if (isEditingMode(nodo)) {
-            def html = htmlTitle(nodo.text)
-            def bttnText1    = "inspect"
-            def bttnToolTip1 = "Click to select the page's source nodes"
-            def bttnAction1  = { e ->
+            bttnText    = null //"inspect"
+            bttnToolTip = "Click to select the page's source nodes"
+            bttnAction  = { e ->
                 def pageNode = nodo   //.parent
                 def m = c.mapLoader(nodo.map.file).withView()//.selectNodeById(pageNodeId)
                 m.load()
                 pageNode.pathToRoot*.folded = false
                 c.select(pageNode)
             }
-            def bttnText2    = 'reload'
-            def bttnToolTip2 = "Click to reload '${nodo.text}' section"
-            def bttnAction2  = { e -> fillPage(myP, nodo, true, true)}
-            myP.add(tomui.createPageTitlePane(html, bttnText1, bttnToolTip1,bttnAction1,bttnText2,bttnToolTip2,bttnAction2), tomui.GBC)
-        } else {
-            addPageTitle(myP, nodo.text)
-        }
+            bttnIcon    = menuUtils.getMenuItemIcon('IconAction.emoji-1F52C')
+            botones << [bttnText, bttnToolTip, bttnAction, bttnIcon]
+            
+            bttnText    = null //'reload'
+            bttnToolTip = "Click to reload '${nodo.text}' section"
+            bttnAction  = { e -> fillPage(myP, nodo, true, true)}
+            bttnIcon    = menuUtils.getMenuItemIcon('IconAction.emoji-1F504')
+            botones << [bttnText, bttnToolTip, bttnAction, bttnIcon]
+        } 
+        // else {
+            // addPageTitle(myP, nodo.text)
+        // }
+        myP.add(tomui.createPageTitlePane(html, botones), tomui.GBC)
     }
     
+    def static getUriFromNode(ApiNode nodo, String sch = 'tutorial'){
+        def ssp = nodo.map.file.toURI().schemeSpecificPart
+        def frg = nodo.id
+        return new URI(sch, ssp, frg)
+    }
 
 
     def static addNextPagePane(myP, ApiNode lastNode, boolean included = false, boolean showNextButton = true){
@@ -600,7 +630,13 @@ class ToM{
         }
     }
 
-    def static exists(String path){new File(path).isFile()}
+    def static exists(String path){
+        exists(new File(path))
+    }
+
+    def static exists(File file){
+        file.isFile()
+    }
 
     // end:
 
@@ -662,7 +698,7 @@ class ToM{
     // region: help / debug
 
     def static uiMsg(texto){
-       //ui.informationMessage(texto.toString())
+        // ui.informationMessage(texto.toString())
     }
 
     // end:
