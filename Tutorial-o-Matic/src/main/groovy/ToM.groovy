@@ -9,6 +9,9 @@ import org.freeplane.core.ui.components.UITools as ui
 import org.freeplane.plugin.script.proxy.ScriptUtils
 
 
+import org.freeplane.api.Node as ApiNode
+import org.freeplane.api.MindMap as ApiMindMap
+
 
 class ToM{
 
@@ -48,26 +51,38 @@ class ToM{
     // region: getting tutorial components nodes
         //The methods in this region get the nodes from the mindmap that contain the information needed to build the tutorial
 
-    def static getNextTutNodes(n, boolean included = false){
+    def static getNextTutNodes( n, boolean included = false){
         def tutNodes  = getTutNodes(getTutorialNode(n))
         def pos = tutNodes.indexOf(n)
         def t = included?0:1
         return tutNodes.drop(pos + t)
     }
 
-    def static getTutNodes(nTutorial){
-        return nTutorial.find{it.style.name?.startsWith(styles.ini)?:false}
-    }
-
-    def static getTutorialNode(n){
-        return n.pathToRoot.find{it.style.name == styles.tutorial}
-    }
-
-    def static getNewPageNodes(nTutorial){
-        return nTutorial.find{it.style.name == styles.newPage}
+    def static getTutNodes( nTutorial){
+        return nTutorial.find{isTutNode(it)}
     }
     
-    def static isEditingMode(n){
+    def static isTutNode( n){
+        return n?.style?.name?.startsWith(styles.ini)?:false
+    }
+
+    def static getTutorialNode( n){
+        return n.pathToRoot.find{isTutorialNode(it)}
+    }
+
+    def static isTutorialNode( n){
+        return n.style.name == styles.tutorial
+    }
+
+    def static getNewPageNodes( nTutorial){
+        return nTutorial.find{isNewPageNode(it)}
+    }
+    
+    def static isNewPageNode( n){
+        return n.style.name == styles.newPage
+    }
+
+    def static isEditingMode( n){
         def nodo = getTutorialNode(n)
         return nodo.icons.contains('emoji-1F58D')
     }
@@ -141,7 +156,7 @@ class ToM{
         tomui.adjustHeight(myPanel, doClear)
     }
 
-    def static fillPage(myP, nodo, included, doClear){
+    def static fillPage(myP,  nodo, boolean included, boolean doClear){
         def nextNodes = getNextTutNodes(nodo, included)
         fillContentPane(myP, nextNodes, doClear)
     }
@@ -168,7 +183,7 @@ class ToM{
         myP.add(tomui.createInstructionsPane(html), tomui.GBC)
     }
         
-    def static addPageTitle(myP, nodo){
+    def static addPageTitle(myP,  ApiNode nodo){
         if (isEditingMode(nodo)) {
             def html = htmlTitle(nodo.text)
             def bttnText1    = "inspect"
@@ -191,8 +206,7 @@ class ToM{
     
 
 
-
-    def static addNextPagePane(myP, lastNode, boolean included = false, boolean showNextButton = true){
+    def static addNextPagePane(myP, ApiNode lastNode, boolean included = false, boolean showNextButton = true){
         def closeLabel   = 'Stop tutorial'
         def closeToolTip = 'Click to stop the tutorial and close the tutorial tab'
         def nextLabel    = showNextButton?'Next page':'Show tutorials'
@@ -251,14 +265,14 @@ class ToM{
         }
     }
     
-     def static gotoAction(myP,targetNode, backNode){
+     def static gotoAction(myP, ApiNode targetNode, ApiNode backNode){
          myP.removeAll()
          addReturnPane(myP, backNode)
          fillPage(myP, targetNode, true, false)
          addReturnPane(myP, backNode)
      }
     
-    def static addReturnPane(myP, backNode){
+    def static addReturnPane(myP,  ApiNode backNode){
         def msgHtml     = "Return to '${backNode.text}' page"
         def bttnText    = 'go back'
         def bttnToolTip = "Click to go to '${backNode.text}' section"
@@ -267,7 +281,7 @@ class ToM{
         myP.add(buttonPanel, tomui.GBC)
     }
 
-    def static addGroovyPane(myP, nodoT){
+    def static addGroovyPane(myP, ApiNode nodoT){
         def parentEnabled = !disableBttn(nodoT)
         def parentReadOnly = isReadOnly(nodoT)
         nodoT.children.findAll{n -> WSE.isGroovyNode(n)}.each{nodo ->
@@ -298,7 +312,7 @@ class ToM{
         }
     }
 
-     def static getGroovyHtml(nodo, script){
+     def static getGroovyHtml( ApiNode nodo, script){
          def showScript = nodo.icons.icons.contains('emoji-1F50D')  ||  nodo.icons.icons.contains('emoji-1F453') 
          uiMsg("showScript ${showScript}")
          def html = showScript? tomui.getHtmlFromGroovyNode(nodo, script) : nodo.text
@@ -306,7 +320,7 @@ class ToM{
          return html
      }
 
-    def static addActionPane(myP, nodo, options){
+    def static addActionPane(myP, ApiNode nodo, options){
         def infoAcciones = []
         nodo.children.findAll{n -> toma.hasAction(n)}.each{n ->
             def infoAccion = toma.getActionInfoMap(n)
@@ -327,7 +341,7 @@ class ToM{
         myP.add(buttonPanel, tomui.GBC)
     }
 
-     def static exeActionsHow(nodo){
+     def static exeActionsHow( ApiNode nodo){
          def iconos = nodo.icons.icons
          def iconitos = iconos.intersect(exeHowIcons)
          if(iconitos){
@@ -338,17 +352,17 @@ class ToM{
          }
      }
 
-     def static disableBttn(nodo){
+     def static disableBttn( ApiNode nodo){
          def iconos = nodo.icons.icons
          return iconos.contains('emoji-1F56F')
      }
      
-     def static isReadOnly(nodo){
+     def static isReadOnly( ApiNode nodo){
          def iconos = nodo.icons.icons
          return iconos.contains('emoji-1F453')
      }
 
-    def static addPastePane(myP, nodoSource){
+    def static addPastePane(myP, ApiNode nodoSource){
         def enabled     = !disableBttn(nodoSource)
         def msgHtml     = "Click to paste the example nodes to the selected node"
         def bttnText    = "Insert nodes"
@@ -377,7 +391,7 @@ class ToM{
         myP.add(buttonPanel, tomui.GBC)
     }
 
-    def static addSelectPane(myP, nodo){
+    def static addSelectPane(myP, ApiNode nodo){
         def enabled     = !disableBttn(nodo)
         def msgHtml     = "Click to select the node(s)"
         def bttnText    = "Select node(s)"
@@ -417,7 +431,7 @@ class ToM{
         myP.add(buttonPanel, tomui.GBC)
     }
 
-     def static getIdDictionary(mapa){
+     def static getIdDictionary(ApiMindMap mapa){
          def dict = [:]
          def textoDict = mapa.storage[idDictStorage]
          if(textoDict){
@@ -429,7 +443,7 @@ class ToM{
          return dict
      }
 
-     def static setIdDictionary(mapa, dict){
+     def static setIdDictionary(ApiMindMap mapa, dict){
          def texto = new StringBuilder()
          dict.each{k,v ->
              texto << "${k}:${v};"
@@ -437,7 +451,7 @@ class ToM{
          mapa.storage[idDictStorage] = texto
      }
 
-    def static addOpenMapPane(myP, tutNode, options){
+    def static addOpenMapPane(myP,  ApiNode tutNode, options){
         def sep         = File.separator
         def nodoMapa    = tutNode.children.find{it.text.endsWith('.mm')}
         def mapFileName = nodoMapa?.text
@@ -456,7 +470,7 @@ class ToM{
         myP.add(buttonPanel, tomui.GBC)
     }
 
-    def static addInspectPane(myP, nodo){
+    def static addInspectPane(myP,  ApiNode nodo){
         def msgHtml     = "Click to inspect this page in the tutorial map"
         def bttnText    = "inspect"
         def bttnToolTip = "Click to select the page's source nodes"
@@ -471,7 +485,7 @@ class ToM{
         myP.add(buttonPanel, tomui.GBC)
     }
 
-    def static addShowNodePane(myP, nodo){
+    def static addShowNodePane(myP, ApiNode nodo){
         def nodos = nodo.children.findAll{ n -> n.link && (n.link.node || (!n.link.node && !n.link.file && n.link.uri.scheme == 'file'))}
         nodos.each{ n ->
             def msgHtml     = "Click to show ${n.text}"
@@ -504,7 +518,7 @@ class ToM{
         }
     }
 
-    def static addTOCPane(myP,nodo){
+    def static addTOCPane(myP, ApiNode nodo){
         def titleNodes  = getNewPageNodes(getTutorialNode(nodo))
         def pane = tomui.createEmptyGridBagPanel()
         titleNodes.each{ tn ->
@@ -516,7 +530,7 @@ class ToM{
         myP.add(pane, tomui.GBC)
     }
 
-    def static addTutorialsPane(myP, mapa){
+    def static addTutorialsPane(myP, ApiMindMap mapa){
         def nodosTutoriales = mapa.root.find{it.style.name == styles.tutorial}
         if ( nodosTutoriales.size() != 1 ){
             def pane = tomui.createEmptyGridBagPanel()

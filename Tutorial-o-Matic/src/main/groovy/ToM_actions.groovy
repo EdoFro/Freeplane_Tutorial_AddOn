@@ -2,6 +2,7 @@ package edofro.tutorialomatic
 
 //import edofro.tutorialomatic.ToM_ui
 
+import org.freeplane.api.Node                           as ApiNode
 import org.freeplane.core.ui.components.UITools         as ui
 import org.freeplane.core.util.MenuUtils                as menuUtils
 import org.freeplane.core.util.TextUtils                as textUtils
@@ -122,7 +123,7 @@ class ToM_actions{
     // region: getting information for action
         // building a map [:] for each action with its information
 
-    def static getActionInfoMap(org.freeplane.plugin.script.proxy.NodeProxy nodo){
+    def static getActionInfoMap(ApiNode nodo){
         def accion = action(nodo)
         getActionInfoMap(accion)
     }
