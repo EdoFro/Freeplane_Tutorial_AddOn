@@ -110,6 +110,11 @@ code {
 <icon BUILTIN="emoji-1F517"/>
 <cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
+<stylenode TEXT="ToM_openTutPage" ID="ID_590356041" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="emoji-1F4D6"/>
+<cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
+</stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" ID="ID_1618325545" COLOR="#000000" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 pt" SHAPE_VERTICAL_MARGIN="10 pt" UNIFORM_SHAPE="true" MAX_WIDTH="4 cm" MIN_WIDTH="1 cm">

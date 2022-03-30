@@ -13,6 +13,9 @@
 * Added Tutorial-o-Matic How to
 * Added command "import Tutorial-o-Matic Styles"
 * Added command "Open tutorial page from link"
+* Added button that creates a link to current page
+* Updated gotoPane to open in corresponding Tab and use withGoBack modifier
+* Added openTutorialPage style and pane
 
 ## v0.0.5
 

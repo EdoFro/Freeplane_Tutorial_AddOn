@@ -43,6 +43,7 @@ class ToM{
         openMap   : 'ToM_openMap'   ,
         openTutMap: 'ToM_openTutMap',
         showNode  : 'ToM_showNode'  ,
+        openTutorialPage : 'ToM_openTutPage',
     ]
 
     static final exeHowIcons = ['emoji-1F507', 'emoji-2328', 'emoji-1F5B1']
@@ -124,6 +125,9 @@ class ToM{
                     break
                 case styles.goto:
                     addGotoPane(myPanel, tutNode, nextTutNodes[0], options)
+                    break
+                case styles.openTutorialPage:
+                    addOpenTutorialPage(myPanel, tutNode, options)
                     break
                 case styles.action:
                     addActionPane(myPanel, tutNode, options)
@@ -322,6 +326,20 @@ class ToM{
         def bttnAction  = { e -> fillPage(myP, backNode, true, true)}
         def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
         myP.add(buttonPanel, tomui.GBC)
+    }
+    
+    def static addOpenTutorialPage(myP, ApiNode tNode, options){
+        def nodos = tNode.children.findAll{ n -> isValidUri(n.link?.uri) || isValidUri(n[attributeNewPageLink].uri)}
+        nodos.each{nodo ->
+            def msgHtml     = nodo.note?tomui.getHtmlFromNote(nodo, options):null
+            def bttnText    = nodo.text
+            def bttnToolTip = "Click to go to '${bttnText}' section"
+            def bttnAction  = { e -> 
+                openTutorialPage(nodo)
+            }
+            def buttonPanel = tomui.createButtonPanel(msgHtml, bttnText, bttnToolTip, bttnAction, false)
+            myP.add(buttonPanel, tomui.GBC)
+        }
     }
 
     def static addGroovyPane(myP, ApiNode nodoT){
@@ -673,12 +691,12 @@ class ToM{
 
     def static openTutorialPageUri(URI uri, ApiMindMap mapa){
     //    if(!uri) return null
-        def isMindmap =  uri.scheme in ['file','tutorial']  && uri.path.endsWith('.mm')
-        def nodeId = (!uri.scheme || isMindmap) && uri.fragment?.startsWith('ID_')?
+        def isMM = isMindmap(uri)
+        def nodeId = (!uri.scheme || isMM) && uri.fragment?.startsWith('ID_')?
                         uri.fragment
                         : null
         // if (!nodeId) return 'No node ID defined in URI'
-        def tutMapPath = /* nodeId && */ isMindmap ?
+        def tutMapPath = /* nodeId && */ isMM ?
                             uri.path.drop(1)
                             :null
         def tutMap = tutMapPath ?
@@ -686,7 +704,14 @@ class ToM{
                         : mapa
         openTutorialPageString(nodeId, tutMap)
     }
+    
+    def static isMindmap(uri){
+        uri && uri.scheme in ['file','tutorial']  && uri.path.endsWith('.mm')
+    }
 
+    def static isValidUri(uri){
+        return uri && (!uri.scheme && uri.fragment?.startsWith('ID_') || isMindmap(uri)) 
+    }
 
     def static openTutorialPageString(String nodeId, ApiMindMap tutMap){
         if(!tutMap) return 'No tutorial mindmap defined'
