@@ -10,7 +10,7 @@
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_602083445" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#3c3836" BACKGROUND_COLOR="#fbf1c7" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="8 pt" SHAPE_VERTICAL_MARGIN="5 pt" NUMBERED="false" FORMAT="STANDARD_FORMAT" TEXT_ALIGN="DEFAULT" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="true" BORDER_COLOR="#f0f0f0" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="3 pt" MAX_WIDTH="10 cm" MIN_WIDTH="0 cm">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#a89984" WIDTH="2" TRANSPARENCY="255" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_602083445" STARTINCLINATION="102.75 pt;-18.75 pt;" ENDINCLINATION="102.75 pt;3 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#a89984" WIDTH="2" TRANSPARENCY="255" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_602083445" STARTINCLINATION="102.75 pt;-18 pt;" ENDINCLINATION="102.75 pt;3 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="SansSerif" SIZE="11" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="bezier" COLOR="#93a1a1" WIDTH="3" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -39,9 +39,9 @@
 </stylenode>
 <stylenode TEXT="ToM-Tutorial" ID="ID_737696442" ICON_SIZE="24 pt" COLOR="#000000" BACKGROUND_COLOR="#fbcbbc" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
-<cloud COLOR="#f2ded8" SHAPE="ROUND_RECT"/>
 <attribute_layout NAME_WIDTH="81.75 pt" VALUE_WIDTH="22.5 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE=" "/>
+<cloud COLOR="#f2ded8" SHAPE="ROUND_RECT"/>
 </stylenode>
 <stylenode TEXT="ToM_TOC" ICON_SIZE="16 pt" COLOR="#000000" BACKGROUND_COLOR="#f5ff95" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
@@ -105,6 +105,11 @@
 <icon BUILTIN="emoji-1F517"/>
 <cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
+<stylenode TEXT="ToM_openTutPage" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="emoji-1F4D6"/>
+<cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
+</stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#fdf6e3" BACKGROUND_COLOR="#282828" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="10 pt" BORDER_WIDTH="3.1 px" BORDER_COLOR_LIKE_EDGE="true" BORDER_COLOR="#2c2b29" BORDER_DASH_LIKE_EDGE="true">
@@ -145,7 +150,7 @@
 </map_styles>
 </hook>
 <font NAME="Harrington" SIZE="24" BOLD="true"/>
-<node TEXT="Introduction" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_839819820">
+<node TEXT="Introduction" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_839819820">
 <icon BUILTIN="emoji-1F58D"/>
 <attribute NAME="ToM_TabLabel" VALUE="Tutorial-o-Matic"/>
 <node TEXT="greetings" ID="ID_26985145">
@@ -180,7 +185,7 @@ In this tutorial I will try to show you how to create your own tutorials.</text>
 </node>
 </node>
 <node TEXT="about the tutorials" ID="ID_518514585">
-<node TEXT="GOTO" LOCALIZED_STYLE_REF="default" FOLDED="true" ID="ID_870922428">
+<node TEXT="GOTO" LOCALIZED_STYLE_REF="default" ID="ID_870922428">
 <icon BUILTIN="emoji-21A9"/>
 <node TEXT="link a nodo newPage" ID="ID_354838725">
 <node TEXT="arma esa página" ID="ID_278265160"/>
@@ -222,17 +227,18 @@ In this tutorial I will try to show you how to create your own tutorials.</text>
     </p>
   </body>
 </html></richcontent>
+<node TEXT="HowToTutorial-o-Matic.mm" ID="ID_60292439" LINK="file:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm"/>
 </node>
 <node TEXT="ToM commands" ID="ID_46524074"/>
 </node>
 </node>
 </node>
-<node TEXT="intro map" POSITION="right" ID="ID_876616596" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
-<node TEXT="simple demo" FOLDED="true" ID="ID_315880005" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
+<node TEXT="intro map" FOLDED="true" POSITION="right" ID="ID_876616596" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
+<node TEXT="simple demo" ID="ID_315880005" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
 <node TEXT="Introduction" ID="ID_150338109" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 <node TEXT="SIMPLE DEMO" ID="ID_1008824042" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 <node TEXT="Current features" ID="ID_17519392" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
-<node TEXT="Copy of &quot;Current features&quot; in editing / inspection mode" FOLDED="true" ID="ID_186278055" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
+<node TEXT="Copy of &quot;Current features&quot; in editing / inspection mode" ID="ID_186278055" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
 <node TEXT="the &quot;crayon&quot; icon indicates that this tutorial is beeing edited." ID="ID_536018864"/>
 <node TEXT="Buttons &quot;inspect&quot; and &quot;reload&quot; appear on page&apos;s top." ID="ID_507190450"/>
 <node TEXT="the attribute &quot;ToM_TabLabel&quot; indicates which Tab should the tutorial be shown in." ID="ID_746097339"/>
@@ -241,18 +247,18 @@ In this tutorial I will try to show you how to create your own tutorials.</text>
 <node TEXT="An empty tutorial" ID="ID_25875173" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 <node TEXT="Some bugs I don&apos;t know how to correct yet" ID="ID_1715422996" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 </node>
-<node TEXT="Tutorial-o-Matic Step by Step" FOLDED="true" ID="ID_1130541900" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
+<node TEXT="Tutorial-o-Matic Step by Step" ID="ID_1130541900" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
 <node TEXT="Introduction" ID="ID_1605015277" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 <node TEXT="Tutorial 1" ID="ID_391680928" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 <node TEXT="Tutorial 2" ID="ID_712937177" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 <node TEXT="Tutorial 3" ID="ID_1871327423" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 </node>
-<node TEXT="HowToTutorial-o-Matic.mm" FOLDED="true" ID="ID_1285182500" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
+<node TEXT="HowToTutorial-o-Matic.mm" ID="ID_1285182500" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
 <node TEXT="Introduction" ID="ID_496630218" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 <node TEXT="How to create a tutorial" ID="ID_419665435" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 <node TEXT="How to add actions to a tutorial" ID="ID_874687993" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 </node>
-<node TEXT="ToM commands" FOLDED="true" ID="ID_1498583442" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
+<node TEXT="ToM commands" ID="ID_1498583442" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
 <node TEXT="ToM commands" ID="ID_703218195" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
 <node TEXT="Styles" ID="ID_1833539966" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 <node TEXT="Commands I" ID="ID_1037123993" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>

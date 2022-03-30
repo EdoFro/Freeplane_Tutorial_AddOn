@@ -86,7 +86,7 @@
   </body>
 </html>
 </richcontent>
-<hook NAME="MapStyle" background="#f9f9f8" zoom="0.8">
+<hook NAME="MapStyle" background="#f9f9f8" zoom="0.9">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" associatedTemplateLocation="file:/C:/Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/Menu-o-Matic/Menu-o-Matic.mm" show_note_icons="true" save_folding="save_folding_if_map_is_changed" fit_to_viewport="false"/>
 
 <map_styles>
@@ -257,6 +257,8 @@
 <node TEXT="Added command &quot;import Tutorial-o-Matic Styles&quot;" ID="ID_1154840216"/>
 <node TEXT="Added command &quot;Open tutorial page from link&quot;" ID="ID_940962261"/>
 <node TEXT="Added button that creates a link to current page" ID="ID_698142202"/>
+<node TEXT="Updated gotoPane to open in corresponding Tab and use withGoBack modifier" ID="ID_1912254700"/>
+<node TEXT="Added openTutorialPage style and pane" ID="ID_1158869821"/>
 </node>
 </node>
 <node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">

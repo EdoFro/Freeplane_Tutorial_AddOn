@@ -195,7 +195,7 @@ In this tutorial I will try to show you how to create your own tutorials.</text>
 </node>
 </node>
 </node>
-<node TEXT="How to create a tutorial" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_899848243">
+<node TEXT="How to create a tutorial" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_899848243">
 <icon BUILTIN="emoji-1F58D"/>
 <font NAME="SansSerif"/>
 <attribute NAME="ToM_TabLabel" VALUE=" ToM - How to"/>
@@ -940,7 +940,7 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
 </node>
 </node>
 </node>
-<node TEXT="How to add actions to a tutorial" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_373851194">
+<node TEXT="How to add actions to a tutorial" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_373851194">
 <icon BUILTIN="emoji-1F58D"/>
 <font NAME="SansSerif"/>
 <attribute NAME="ToM_TabLabel" VALUE=" ToM - How to"/>
@@ -2322,6 +2322,25 @@ The steps are very similar to the &quot;goto&quot; case:&#xd;
 <attribute NAME="script1" VALUE="def nodo = node.createChild(&apos;showNode&apos;)&#xd;&#xa;nodo.style.name = &apos;ToM_showNode&apos;&#xd;&#xa;c.select(nodo)"/>
 </node>
 </node>
+</node>
+</node>
+<node TEXT="PENDIENTE!!!" ID="ID_29591071">
+<node TEXT="ToM_openTutPage" STYLE_REF="ToM_newPage" ID="ID_1482753376">
+<node TEXT="Text" STYLE_REF="ToM_note" ID="ID_1134453267">
+<node TEXT="pendiente" ID="ID_1563301334"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      PENDIENTE!!!!
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node TEXT="ToM_openTutPage" STYLE_REF="ToM_openTutPage" ID="ID_699720817"/>
 </node>
 </node>
 </node>

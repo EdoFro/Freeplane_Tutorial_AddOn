@@ -41,60 +41,77 @@ code {
 <icon BUILTIN="edit"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
 </stylenode>
-<stylenode TEXT="ToM-Tutorial" ID="ID_1317696283" ICON_SIZE="20 pt" BACKGROUND_COLOR="#f3d0c5" STYLE="rectangle" BORDER_WIDTH="3 px">
+<stylenode TEXT="ToM-Tutorial" ID="ID_1317696283" ICON_SIZE="24 pt" COLOR="#000000" BACKGROUND_COLOR="#fbcbbc" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
+<cloud COLOR="#f2ded8" SHAPE="ROUND_RECT"/>
+<attribute NAME="ToM_TabLabel" VALUE=" "/>
 </stylenode>
-<stylenode TEXT="ToM_TOC" ID="ID_1160910212" ICON_SIZE="12 pt" BACKGROUND_COLOR="#f5ff95" STYLE="rectangle" BORDER_WIDTH="3 px">
-<icon BUILTIN="emoji-1F989"/>
-<icon BUILTIN="emoji-25B6"/>
-</stylenode>
-<stylenode TEXT="ToM_newPage" ID="ID_1643366420" ICON_SIZE="12 pt" BACKGROUND_COLOR="#95d9ff" STYLE="rectangle" BORDER_WIDTH="3 px">
+<stylenode TEXT="ToM_TOC" ID="ID_1160910212" ICON_SIZE="16 pt" COLOR="#000000" BACKGROUND_COLOR="#f5ff95" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="emoji-25B6"/>
 </stylenode>
-<stylenode TEXT="ToM_nextPage" ID="ID_318145687" ICON_SIZE="12 pt" BACKGROUND_COLOR="#ff9595" STYLE="rectangle" BORDER_WIDTH="3 px">
+<stylenode TEXT="ToM_newPage" ID="ID_1643366420" ICON_SIZE="16 pt" COLOR="#000000" BACKGROUND_COLOR="#95d9ff" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="emoji-25B6"/>
+</stylenode>
+<stylenode TEXT="ToM_nextPage" ID="ID_318145687" ICON_SIZE="16 pt" COLOR="#000000" BACKGROUND_COLOR="#ff9595" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="emoji-25B6"/>
 </stylenode>
 <stylenode TEXT="ToM_note" ID="ID_1031812973" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="emoji-1F4F0"/>
+<cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
 <stylenode TEXT="ToM_showMenu" ID="ID_723735694" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="emoji-1F5B1"/>
+<cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
 <stylenode TEXT="ToM_goto" ID="ID_1953218925" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="emoji-2197"/>
+<cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
 <stylenode TEXT="ToM_menuAction" ID="ID_1981660950" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="emoji-1F525"/>
+<cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
 <stylenode TEXT="ToM_groovy" ID="ID_1578586059" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="emoji-1F951"/>
+<cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
 <stylenode TEXT="ToM_copy" ID="ID_691299161" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="emoji-1F4CB"/>
+<cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
 <stylenode TEXT="ToM_select" ID="ID_1792407381" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="emoji-2B55"/>
+<cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
 <stylenode TEXT="ToM_openMap" ID="ID_323134366" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="mindmap"/>
+<cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
 <stylenode TEXT="ToM_openTutMap" ID="ID_255978903" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="links/file/freeplane_mindmap"/>
+<cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
 <stylenode TEXT="ToM_showNode" ID="ID_1304839137" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
 <icon BUILTIN="emoji-1F517"/>
+<cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
+</stylenode>
+<stylenode TEXT="ToM_openTutPage" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="emoji-1F4D6"/>
+<cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
@@ -1617,7 +1634,7 @@ New features may be added in the future.</text>
 </node>
 </node>
 </node>
-<node TEXT="information" FOLDED="true" ID="ID_1980982395" VGAP_QUANTITY="3 cm">
+<node TEXT="information" ID="ID_1980982395" VGAP_QUANTITY="3 cm">
 <node TEXT="markdown note" FOLDED="true" ID="ID_1010028624">
 <node TEXT="Markdown content examples" STYLE_REF="ToM_newPage" ID="ID_921291072"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1280186470">
@@ -1855,8 +1872,8 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 </node>
 </node>
-<node TEXT="html note" FOLDED="true" ID="ID_1092689747">
-<arrowlink COLOR="#cc0000" WIDTH="6" TRANSPARENCY="255" DESTINATION="ID_1287893974" MIDDLE_LABEL="Change their order &#xa;and reload the page &#xa;to see how the TOC updates" STARTINCLINATION="195.74999 pt;6.75 pt;" ENDINCLINATION="188.99999 pt;-48 pt;" STARTARROW="DEFAULT" ENDARROW="DEFAULT"/>
+<node TEXT="html note" ID="ID_1092689747">
+<arrowlink COLOR="#cc0000" WIDTH="6" TRANSPARENCY="255" DESTINATION="ID_1287893974" MIDDLE_LABEL="Change their order &#xa;and reload the page &#xa;to see how the TOC updates" STARTINCLINATION="195.74999 pt;6.75 pt;" ENDINCLINATION="188.99999 pt;-47.25 pt;" STARTARROW="DEFAULT" ENDARROW="DEFAULT"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
 <node TEXT="HTML example" STYLE_REF="ToM_newPage" ID="ID_1391525027"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_774731236">
@@ -2038,7 +2055,7 @@ Here are some examples:</text>
 <node TEXT="Map overview" ID="ID_731370847" LINK="menuitem:_ToggleMapOverviewAction"/>
 </node>
 </node>
-<node TEXT="goto" FOLDED="true" ID="ID_484246232">
+<node TEXT="goto" ID="ID_484246232">
 <node TEXT="Linking other Tutorial&apos;s pages" STYLE_REF="ToM_newPage" ID="ID_1997494948"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1158810723">
 <node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_1509887457"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
@@ -2071,6 +2088,10 @@ that adds a &quot;return panel&quot; to the visited page:</text>
 To jump to the **&apos;SimpleDemo&apos;s TOC page&apos;** page click on the button bellow:</text>
 </richcontent>
 </node>
+<node TEXT="Current features" ID="ID_1694264341" LINK="#ID_1118821725"/>
+<node TEXT="HowToTutorial-o-Matic.mm" ID="ID_1220341838" LINK="file:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm"/>
+<node TEXT="tut intro" ID="ID_1111859697" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/Tutorial-o-Matic%20Intro.mm#ID_1522236279"/>
+<node TEXT="history.md" ID="ID_905757638" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/history.md"/>
 </node>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_105473316">
 <node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_180933093"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
@@ -2092,6 +2113,37 @@ Here is the same first example without option &quot;goBack&quot; selected:
     </p>
   </body>
 </html></richcontent>
+</node>
+</node>
+</node>
+<node TEXT="openTutPage" ID="ID_465839936">
+<node TEXT="Linking other Tutorial&apos;s pages (same or other maps)" STYLE_REF="ToM_newPage" ID="ID_1198131451"/>
+<node TEXT="ToM_openTutPage" STYLE_REF="ToM_openTutPage" ID="ID_1482753376">
+<node TEXT="HTML example" STYLE_REF="markdownNote" ID="ID_1859838036" LINK="#ID_1391525027"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      To jump to the **'HTML example'** page click on the button bellow:
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="TOC in Simple Demo" STYLE_REF="markdownNote" ID="ID_20134486" LINK="#ID_374851820"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can also jump to another tutorial&apos;s page.
+
+  
+To jump to the **&apos;SimpleDemo&apos;s TOC page&apos;** page click on the button bellow:</text>
+</richcontent>
+</node>
+<node TEXT="Current features" ID="ID_307404226" LINK="#ID_1118821725"/>
+<node TEXT="HowToTutorial-o-Matic.mm" ID="ID_9460935" LINK="file:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm"/>
+<node TEXT="tut intro" ID="ID_754880983" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/Tutorial-o-Matic%20Intro.mm#ID_1522236279"/>
+<node TEXT="history.md" ID="ID_713918886" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/history.md"/>
+<node TEXT="Add actions to a tutorial" ID="ID_444821637" LINK="menuitem:_addons.tutorialOMatic.openTutorialPageFromLink_on_single_node">
+<attribute NAME="ToM_LinkToPage" VALUE="tutorial:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm#ID_1128437346" OBJECT="java.net.URI|tutorial:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm#ID_1128437346"/>
 </node>
 </node>
 </node>
@@ -2323,8 +2375,7 @@ Click the button to see how the selection changes:&#xd;
       to indicate which are the nodes you want to select just paste clones of them here as childs
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node ID="ID_1375639542" CONTENT_ID="ID_1713074567"/>
 <node ID="ID_1328739290" CONTENT_ID="ID_414651683"/>
 <node ID="ID_1277707261" CONTENT_ID="ID_1588546276"/>
