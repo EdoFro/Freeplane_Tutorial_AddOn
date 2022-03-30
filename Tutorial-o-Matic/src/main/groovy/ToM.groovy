@@ -235,7 +235,6 @@ class ToM{
         return new URI(sch, ssp, frg)
     }
 
-
     def static addNextPagePane(myP, ApiNode lastNode, boolean included = false, boolean showNextButton = true){
         def closeLabel   = 'Stop tutorial'
         def closeToolTip = 'Click to stop the tutorial and close the tutorial tab'
@@ -295,7 +294,7 @@ class ToM{
                 if(targetNode.style.name == styles.tutorial){
                     def tutorialTabName = targetNode[attributeTabLabel] ?: defaultTabLabel
                     def myP_thisTutorial = tomui.getContentPaneFromMyTab(tutorialTabName.toString(), true)
-                    gotoAction(myP_thisTutorial, targetNode, null) 
+                    gotoAction(myP_thisTutorial, targetNode, myP.equals(myP_thisTutorial) ? backNode : null) 
                 } else {
                     gotoAction(myP, targetNode, backNode) 
                 }            
@@ -306,9 +305,8 @@ class ToM{
     }
     
     def static withGoBack( ApiNode nodo){
-         def iconos = nodo.icons.icons
-         return iconos.contains('emoji-1F519')
-     }
+        return nodo.icons.icons.contains('emoji-1F519')
+    }
     
      def static gotoAction(myP, ApiNode targetNode, ApiNode backNode){
          myP.removeAll()
