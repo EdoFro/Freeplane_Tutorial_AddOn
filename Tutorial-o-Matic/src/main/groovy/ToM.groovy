@@ -8,6 +8,7 @@ import edofro.menuomatic.WSE_redux              as WSE
 import org.freeplane.core.ui.components.UITools as ui
 import org.freeplane.plugin.script.proxy.ScriptUtils
 import org.freeplane.core.util.MenuUtils            as menuUtils
+//import org.freeplane.core.util.HtmlUtils            as htmlUtils
 
 
 import org.freeplane.api.Node as ApiNode
@@ -61,11 +62,15 @@ class ToM{
     }
 
     def static getTutNodes( nTutorial){
-        return nTutorial.find{isTutNode(it)}
+        return nTutorial.find{isTutNode(it) && !isBlocked(it)}
     }
     
     def static isTutNode( n){
         return n?.style?.name?.startsWith(styles.ini)?:false
+    }
+    
+    def static isBlocked(n){
+        return (n && (n.pathToRoot - n).any{it.icons.icons.contains('closed')})
     }
 
     def static getTutorialNode( n){
@@ -627,7 +632,7 @@ class ToM{
     }
 
     def static addTutorialsPane(myP, ApiMindMap mapa){
-        def nodosTutoriales = mapa.root.find{it.style.name == styles.tutorial}
+        def nodosTutoriales = mapa.root.find{it.style.name == styles.tutorial && !isBlocked(it) }
         if ( nodosTutoriales.size() != 1 ){
             def pane = tomui.createEmptyGridBagPanel()
             def pre  = nodosTutoriales.size() == 0 ? "No t" : "T"
