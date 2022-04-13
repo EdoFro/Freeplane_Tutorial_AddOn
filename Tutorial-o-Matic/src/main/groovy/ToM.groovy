@@ -721,7 +721,9 @@ class ToM{
             return openTutorialPageString(nodeDirection, mapa)
         }
         if(nodeDirection instanceof ApiNode) {
+            def newPageFile= nodeDirection.link?.file // TODO: probar que tome link de nodo si no existe el del attributo
             def newPageUri = nodeDirection[attributeNewPageLink].uri ?: nodeDirection.link?.uri // TODO: probar que tome link de nodo si no existe el del attributo
+            mapa           = mapa ?: (newPageFile && !newPageUri.absolute && !newPageUri.scheme && newPageUri.path.endsWith('.mm'))? getMapFromPath(newPageFile.path, false) : null
             mapa           = mapa ?: nodeDirection.map
             return openTutorialPage(newPageUri, mapa)
         }
@@ -750,7 +752,7 @@ class ToM{
     }
 
     def static isValidUri(uri){
-        return uri && (!uri.scheme && uri.fragment?.startsWith('ID_') || isMindmap(uri)) 
+        return uri && (!uri.scheme && (uri.fragment?.startsWith('ID_') || uri.path?.endsWith('.mm'))|| isMindmap(uri)) 
     }
 
     def static openTutorialPageString(String nodeId, ApiMindMap tutMap){
