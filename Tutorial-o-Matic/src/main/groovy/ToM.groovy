@@ -118,7 +118,7 @@ class ToM{
                     }
                     break
                 case styles.showMenu:
-                    addShowMenuItemPane(myPanel, tutNode.children)
+                    addShowMenuItemPane(myPanel, tutNode.children, options)
                     break
                 case styles.toc:
                     addTOCPane(myPanel, tutNode)
@@ -253,14 +253,22 @@ class ToM{
         myP.add(nextButtonPanel, tomui.GBC)
     }
 
-    def static addShowMenuItemPane(myP, nodos){
+    def static addShowMenuItemPane(myP, nodos, options){
         nodos.findAll{n -> toma.hasAction(n)}.each{nodo ->
             def infoAccion  = toma.getActionInfoMap(nodo)
             if (infoAccion){
-                def msgHtml     = infoAccion.instructions
-                def bttnText    = 'Show it in the menu'
-                def bttnToolTip = "Click to see where is ${toma.apos(infoAccion.label)} in Freeplane Menu"
-                def bttnAction  = { e ->
+                def msgHtmlA    = nodo.note?tomui.getHtmlFromNote(nodo, options):null
+                def msgHtmlB    = infoAccion.instructions
+                def msgHtml     = tomui.mergeHtml(msgHtmlA,msgHtmlB)
+                def botones = []
+                def bttnText    
+                def bttnToolTip 
+                def bttnAction  
+                def bttnIcon
+                
+                bttnText    = null //'Show me'
+                bttnToolTip = "Click to see where is ${toma.apos(infoAccion.label)} in Freeplane Menu"
+                bttnAction  = { e ->
                         def bttn = e.source
                         def sel = bttn.isSelected()
                         def bttnPanel = tomui.getButtonPanel(bttn)
@@ -271,12 +279,33 @@ class ToM{
                             bttn.label = 'Close menu'
                             tomui.setNextPagePanelEnabled(myP, false)
                         } else {
-                            bttn.label = 'Show me'
+                            bttn.label = null // 'Show me'
                             if(! tomui.anyCompPending(myP) ) tomui.setNextPagePanelEnabled(myP, true)
                         }
                     }
+                bttnIcon = menuUtils.getMenuItemIcon('IconAction.emoji-1F50D')
+                
+                botones << [bttnText, bttnToolTip, bttnAction, bttnIcon, true]
+                
+                if(withExecute(nodo)){
+                    def enabled = !disableBttn(nodo)
+                    def exeHow  = exeActionsHow(nodo)
+                    bttnText    = null // 'Execute'
+                    bttnToolTip =  "Click to execute the command on the selected nodes"
+                    bttnAction  = { e ->
+                            def bttn = e.source
+                            bttn.setEnabled(enabled)
+                            toma.executeActions([] << infoAccion, exeHow)
+                        }
+                    bttnIcon = menuUtils.getMenuItemIcon('IconAction.launch')
 
-                def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, true)
+                    botones << [bttnText, bttnToolTip, bttnAction, bttnIcon, true]
+                }
+
+                
+                def buttonPanel = tomui.createButtonPanel(msgHtml, botones)
+                
+                
                 buttonPanel.metaClass.pending = false
                 myP.add(buttonPanel, tomui.GBC)
             } else {
@@ -285,6 +314,12 @@ class ToM{
             }
         }
     }
+    
+    def static withExecute( ApiNode nodo){
+        return nodo.icons.icons.contains('emoji-1F525')
+    }
+    
+    
 
     def static addGotoPane(myP, ApiNode tNode, ApiNode backNode, options){
         backNode = withGoBack(tNode)?backNode:null

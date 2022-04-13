@@ -12,6 +12,7 @@ import java.awt.Insets
 import java.awt.GridBagConstraints
 import java.awt.Dimension
 import java.awt.GridBagLayout
+import java.awt.GridLayout
 import java.awt.Point
 import java.awt.event.*
 
@@ -263,7 +264,12 @@ class ToM_ui{
     }
     
 // genera panel con botón
-    def static createButtonPanel(htmlMsg, buttonLabel, buttonToolTip, buttonAction, boolean isToggleButton = false){
+    def static createButtonPanel(String htmlMsg, buttonLabel, buttonToolTip, buttonAction, boolean isToggleButton = false){
+        def botones = [] << [buttonLabel, buttonToolTip, buttonAction, null, isToggleButton]
+        createButtonPanel(htmlMsg, botones)
+    }
+
+    def static createButtonPanel(String htmlMsg, botones){
         def panel = swing.panel(
             border      : new LineBorder(Color.gray, 1),
             name        : myButtonPanelName,
@@ -279,33 +285,45 @@ class ToM_ui{
                     constraints : CENTER,
                     clientProperties: [(JEditorPane.HONOR_DISPLAY_PROPERTIES):true]
               )
-              vbox(constraints:SOUTH) {
+            if(botones.size()>0){
+                panel(
+                    constraints:EAST,
+                    background: Color.white,
+                ) {
+                    borderLayout()
                     panel(
-                           // border      : new LineBorder(Color.black, 1),
-                            border      : new EmptyBorder(2, 10, 2, 10),  // <------- éste
-                            //border: new CompoundBorder(new LineBorder(Color.red, 1),new EmptyBorder(5, 10, 5, 10))  // éste es de prueba poder ver el borde
-                            //insets      : new Insets(30,10,30,10),
-                        ) {
-                            borderLayout()
-                            if (isToggleButton){
+                        constraints:SOUTH,
+                        background: Color.white,
+                       // // border      : new LineBorder(Color.black, 1),
+                        border      : new EmptyBorder(2, 2, 2, 2),  // <------- éste
+                        // //border: new CompoundBorder(new LineBorder(Color.red, 1),new EmptyBorder(5, 10, 5, 10))  // éste es de prueba poder ver el borde
+                        // //insets      : new Insets(30,10,30,10),
+                    ) {
+                        gridLayout(new GridLayout(0,1))
+                        botones.each{ b ->
+                            if ( b[4] == true ){
                                 toggleButton(
-                                    label       : buttonLabel,
-                                    constraints : EAST,
-                                    margin      : new Insets(10,15,10,15),
-                                    toolTipText : buttonToolTip,
-                                    actionPerformed : buttonAction,
+                                    label       :  b[0],
+                                    // constraints : EAST,
+                                    margin      : new Insets(3,6,3,6),
+                                    toolTipText : b[1],
+                                    actionPerformed : b[2],
+                                    icon            : b[3],
                                 )
                             } else {
                                 button(
-                                    label       : buttonLabel,
-                                    constraints : EAST,
-                                    margin      : new Insets(10,15,10,15),
-                                    toolTipText : buttonToolTip,
-                                    actionPerformed : buttonAction,
+                                    label       : b[0],
+                                    // constraints : EAST,
+                                    margin      : new Insets(3,6,3,6),
+                                    toolTipText : b[1],
+                                    actionPerformed : b[2],
+                                    icon            : b[3],
                                 )
                             }
                         }
-              }
+                    }
+                }
+            }
         }
         return panel
     }
