@@ -1,5 +1,8 @@
 <map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
+<attribute_registry SHOW_ATTRIBUTES="selected">
+    <attribute_name VISIBLE="true" NAME="ToM_TabLabel"/>
+</attribute_registry>
 <node TEXT="Tutorial-o-Matic&#xa;How to&apos;s" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_258304564" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node" MAX_WIDTH="7 cm"><hook NAME="MapStyle" background="#c4e1ff">
     <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" save_folding="save_folding_if_map_is_changed" fit_to_viewport="false"/>
 
@@ -43,8 +46,8 @@ code {
 </stylenode>
 <stylenode TEXT="ToM-Tutorial" ID="ID_52754213" ICON_SIZE="24 pt" COLOR="#000000" BACKGROUND_COLOR="#fbcbbc" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
-<cloud COLOR="#f2ded8" SHAPE="ROUND_RECT"/>
 <attribute NAME="ToM_TabLabel" VALUE=" "/>
+<cloud COLOR="#f2ded8" SHAPE="ROUND_RECT"/>
 </stylenode>
 <stylenode TEXT="ToM_TOC" ID="ID_1160910212" ICON_SIZE="16 pt" COLOR="#000000" BACKGROUND_COLOR="#f5ff95" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
@@ -108,6 +111,60 @@ code {
 <icon BUILTIN="emoji-1F517"/>
 <cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
+<stylenode TEXT="MarkdownHelperNode" COLOR="#dbffdb" BACKGROUND_COLOR="#333333" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
+<icon BUILTIN="emoji-1F343"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+</stylenode>
+<stylenode TEXT="MarkdownHelperLink" COLOR="#dbffdb" BACKGROUND_COLOR="#4c4c7f" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
+<icon BUILTIN="emoji-1F517"/>
+</stylenode>
+<stylenode TEXT="MarkdownHelperPreview" COLOR="#333333" BACKGROUND_COLOR="#ffffff">
+<font NAME="Tahoma" SIZE="14"/>
+<hook NAME="NodeCss">pre {
+    background-color: #e5e7ff;
+    border-left: 5px solid #ccc;
+    display: block;
+    padding: 8px;
+    margin: 5px;
+}
+code {
+    font-family: Consolas,&quot;courier new&quot;;
+    font-size: 11px;
+    color: #999;
+}
+
+blockquote {
+    border-left: 5px solid #cccccc;
+    background-color: #eeeeee;
+    padding: 8px;
+}</hook>
+</stylenode>
+<stylenode TEXT="ToM_openTutPage" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="emoji-1F4D6"/>
+<cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
+</stylenode>
+<stylenode TEXT="nextTask" BACKGROUND_COLOR="#ffff33">
+<icon BUILTIN="yes"/>
+<icon BUILTIN="unchecked"/>
+</stylenode>
+<stylenode TEXT="pendingTask" BACKGROUND_COLOR="#99ffff">
+<icon BUILTIN="unchecked"/>
+</stylenode>
+<stylenode TEXT="completedTask" COLOR="#333333" BACKGROUND_COLOR="#cccccc">
+<icon BUILTIN="checked"/>
+<font ITALIC="true"/>
+</stylenode>
+<stylenode TEXT="discardedTask" COLOR="#666666" BACKGROUND_COLOR="#cccccc">
+<icon BUILTIN="Descartado"/>
+<font ITALIC="true"/>
+</stylenode>
+<stylenode TEXT="containsNextTasks" BACKGROUND_COLOR="#eaea86">
+<icon BUILTIN="emoji-1F7E5"/>
+</stylenode>
+<stylenode TEXT="containsPendingTasks" BACKGROUND_COLOR="#b5d7d7">
+<icon BUILTIN="emoji-23F9"/>
+</stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" ID="ID_1618325545" COLOR="#000000" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 pt" SHAPE_VERTICAL_MARGIN="10 pt" UNIFORM_SHAPE="true" MAX_WIDTH="4 cm" MIN_WIDTH="1 cm">
@@ -145,10 +202,35 @@ code {
 <node TEXT="greetings" ID="ID_26985145">
 <node TEXT="Welcome to Tutorial-o-Matic !!" STYLE_REF="ToM_newPage" ID="ID_1522236279"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_365713608">
+<node TEXT="welcome" STYLE_REF="MarkdownHelperNode" ID="ID_552233343">
+<attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
+<attribute NAME="hideFolded" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="true"/>
+<attribute NAME="topHeadersNumbered" VALUE="false"/>
+<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
+<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="lineOverHeader" VALUE="true"/>
+<attribute NAME="ignoreHeaderDetails" VALUE="true"/>
+<attribute NAME="ignoreHeaderNotes" VALUE="true"/>
+<attribute NAME="ignoreLeafDetails" VALUE="false"/>
+<attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.document(node)
+    </p>
+  </body>
+</html></richcontent>
 <node TEXT="Hi" STYLE_REF="markdownNote" ID="ID_683860354"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>## Hi!!
 
-In this tutorial I will try to show you how to create your own tutorials.</text>
+This guide contains brief **explanations of all commands and building blocks** you can use to build a Tutorial.
+
+I recommend you to do the **&quot;Step by Step&quot; tutorials first** and use this document as a guide afterwards.</text>
 </richcontent>
 </node>
 <node TEXT="This tut .." STYLE_REF="markdownNote" ID="ID_1457460843"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -173,9 +255,10 @@ In this tutorial I will try to show you how to create your own tutorials.</text>
 </node>
 </node>
 </node>
+</node>
 <node TEXT="about the tutorials" ID="ID_518514585">
 <node TEXT="GOTO" STYLE_REF="ToM_goto" ID="ID_1175739617">
-<node TEXT="How to create a tutorial" ID="ID_575735637" LINK="#ID_899848243">
+<node TEXT="How to create a tutorial" STYLE_REF="markdownNote" ID="ID_575735637" LINK="#ID_899848243">
 <font NAME="SansSerif"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -184,15 +267,15 @@ In this tutorial I will try to show you how to create your own tutorials.</text>
   </head>
   <body>
     <p>
-      In this section is a brief explanation about all the building components used to build tutorials with Tutorial-o-Matic.
-    </p>
-    <p>
-      I recommend to do the tutorials to fully understand this section.
+      In this section you can see the commands used to **create new tutorials** in a new or an existing mindmap.
     </p>
   </body>
 </html></richcontent>
 </node>
-<node TEXT="How to add actions to a tutorial" ID="ID_1124301748" LINK="#ID_373851194"/>
+<node TEXT="How to add actions to a tutorial" STYLE_REF="markdownNote" ID="ID_1124301748" LINK="#ID_373851194"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>In this section you can see the commands used to add new **actions** to your tutorials.</text>
+</richcontent>
+</node>
 </node>
 </node>
 </node>
@@ -202,57 +285,95 @@ In this tutorial I will try to show you how to create your own tutorials.</text>
 <attribute_layout NAME_WIDTH="81.75 pt" VALUE_WIDTH="89.25 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE=" ToM - How to (1)"/>
 <node TEXT="temas" ID="ID_1725860032">
-<node TEXT="General explanation" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_224410103">
+<node TEXT="General explanation" STYLE_REF="ToM_newPage" ID="ID_224410103">
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_581981021">
-<node TEXT="general explanation" ID="ID_787197159"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="general..." STYLE_REF="MarkdownHelperNode" ID="ID_986725795">
+<attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
+<attribute NAME="hideFolded" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="true"/>
+<attribute NAME="topHeadersNumbered" VALUE="false"/>
+<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
+<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="lineOverHeader" VALUE="true"/>
+<attribute NAME="ignoreHeaderDetails" VALUE="true"/>
+<attribute NAME="ignoreHeaderNotes" VALUE="true"/>
+<attribute NAME="ignoreLeafDetails" VALUE="false"/>
+<attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>=edofro.MarkDownHelper.MDH.document(node)</text>
+</richcontent>
+<node TEXT="How does ToM works?" ID="ID_729569121">
+<node TEXT="general explanation" STYLE_REF="markdownNote" ID="ID_787197159"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>**Tutorial-o-Matic** use mindmaps to store the tutorial&apos;s information.
+
+To understand how to display a tutorial and its structure **Tutorial-o-Matic** needs that the map has some _special user styles_.  
+It looks after the nodes that have such styles and builds the pages of the tutorials by using those nodes and their children information.
+
+All other nodes are ignored and you can use them to organize your tutorial, add notes and other information that won&apos;t be shown in the tutorial.
+</text>
+</richcontent>
+</node>
+<node TEXT="make a tutorial" STYLE_REF="markdownNote" ID="ID_1917166166"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>The best way to learn how to use this add-on is to make the **&apos;Step by step&apos; tutorial** by yourself.</text>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="good to know.." STYLE_REF="MarkdownHelperNode" ID="ID_1289826807">
+<attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
+<attribute NAME="hideFolded" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="true"/>
+<attribute NAME="topHeadersNumbered" VALUE="false"/>
+<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
+<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="lineOverHeader" VALUE="true"/>
+<attribute NAME="ignoreHeaderDetails" VALUE="true"/>
+<attribute NAME="ignoreHeaderNotes" VALUE="true"/>
+<attribute NAME="ignoreLeafDetails" VALUE="false"/>
+<attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>=edofro.MarkDownHelper.MDH.document(node)</text>
+</richcontent>
+<node TEXT="Good to know ..." ID="ID_654143594">
+<node TEXT="this is not a tutorial" STYLE_REF="markdownNote" ID="ID_19497864"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>This is not a real tutorial, it&apos;s more like a guide.&#xd;
+&#xd;
+For example, for each &quot;building block&quot;, there is a brief an explanation and **multiple buttons** with different actions.  &#xd;
+You **don&apos;t need to click on all** of them. More preciselly, you don&apos;t need to click any of them if you don&apos;t want to.  &#xd;
+They **are the different alternatives** you can use to insert those building blocks in a tutorial mindmap.&#xd;
+&#xd;
+For example, there are buttons to:</text>
+</richcontent>
+</node>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_244992465"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      <b>Tutorial-o-Matic</b>&nbsp;use mindmaps to store the tutorial's information.
-    </p>
-    <p>
-      To understand how to build a tutorial and its structure <b>Tutorial-o-Matic</b>&nbsp;needs that the map has some <u>special user styles.</u>
-    </p>
-    <p>
-      It looks after the nodes that have such styles and builds the pages of the tutorials by using those nodes and their children information.
-    </p>
-    <p>
-      All other nodes are ignorated and you can use them to organize your tutorial, add notes and other information that won't be shown in the tutorial.
+      = edofro.MarkDownHelper.MDH.list(node)
     </p>
   </body>
 </html></richcontent>
+<node TEXT="see where in Freeplane&apos;s menu you can find the command to apply that style" ID="ID_466963304"/>
+<node TEXT="apply the style directly to the currently selected node" ID="ID_1480527197"/>
+<node TEXT="insert a new node with that style as a child of the currently selected node.&#xa;The node has no text and it&apos;s ready to type in it." ID="ID_1680045334"/>
+<node TEXT="insert a new node with a predefined style and text as a child of the currently selected node" ID="ID_1281015374"/>
 </node>
-<node TEXT="make a tutorial" ID="ID_1917166166"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      The best way to learn how to use this add-on is to <b><u>make a tutorial by yourself</u></b>.
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="in the next pages ..." ID="ID_1069003121"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      In the <u>following pages</u>&nbsp;you can see a brief explanation about all the <u>building components</u>&nbsp;used to build tutorials with <b>Tutorial-o-Matic</b>.
-    </p>
-    <p>
-      
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="As you can see they are very similar and you can choose which is the one that matches you best." ID="ID_365725554"/>
 </node>
 </node>
+<node TEXT="in the next pages ..." STYLE_REF="markdownNote" ID="ID_1069003121"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>In the following pages you can see a brief explanation about how to create a tutorial with **Tutorial-o-Matic**.
+
+
+This guide&apos;s &quot;**Table of Contents**&quot; :
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_1564020664"/>
 </node>
 <node TEXT="Create a new mind map ready to contain tutorials" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_357294588">
 <node TEXT="create new map" ID="ID_987697295">
@@ -942,7 +1063,7 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
 </node>
 </node>
 </node>
-<node TEXT="How to add actions to a tutorial" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_373851194">
+<node TEXT="How to add actions to a tutorial" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_373851194">
 <icon BUILTIN="emoji-1F58D"/>
 <font NAME="SansSerif"/>
 <attribute_layout NAME_WIDTH="81.75 pt" VALUE_WIDTH="89.25 pt"/>
@@ -979,59 +1100,213 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
   </body>
 </html></richcontent>
 </node>
-<node TEXT="Add actions to a tutorial" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1128437346">
+<node TEXT=" Introduction: Adding actions to a tutorial" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1128437346">
 <node TEXT="Text" STYLE_REF="ToM_note" ID="ID_815866288">
-<node TEXT="actions" ID="ID_842946312"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="actions.md" STYLE_REF="MarkdownHelperNode" ID="ID_978048528">
+<attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
+<attribute NAME="hideFolded" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="true"/>
+<attribute NAME="topHeadersNumbered" VALUE="false"/>
+<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
+<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="lineOverHeader" VALUE="true"/>
+<attribute NAME="ignoreHeaderDetails" VALUE="true"/>
+<attribute NAME="ignoreHeaderNotes" VALUE="true"/>
+<attribute NAME="ignoreLeafDetails" VALUE="false"/>
+<attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.document(node) 
+</text>
+</richcontent>
+<node TEXT="Tutorial-o-Matic styles" ID="ID_1153430945">
+<node TEXT="actions" STYLE_REF="markdownNote" ID="ID_842946312"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add multiple **actions** to your tutorial by using the following **special styles**:  
+
+  </text>
+</richcontent>
+</node>
+<node TEXT="table" STYLE_REF="MarkdownHelperNode" ID="ID_1297900215"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      You can add multiple actions to your tutorial by using the following special styles:
+      = edofro.MarkDownHelper.MDH.table(node)
     </p>
-    <div style="background-color: #f9f9b9; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0">
-      <div style="background-color: #ffffff">
-        <ul>
-          <li>
-            ToM_showMenu
-          </li>
-          <li>
-            ToM_goto
-          </li>
-          <li>
-            ToM_groovy
-          </li>
-          <li>
-            ToM_menuAction
-          </li>
-          <li>
-            ToM_copy
-          </li>
-          <li>
-            ToM_select
-          </li>
-          <li>
-            ToM_openMap
-          </li>
-          <li>
-            ToM_openTutMap
-          </li>
-          <li>
-            ToM_showNode
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div style="background-color: #f9f9b9; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0">
-      <div style="background-color: #ffffff">
-        
-      </div>
-    </div>
   </body>
 </html></richcontent>
+<node TEXT="r" ID="ID_602684122">
+<node TEXT="Style" ID="ID_597857865"/>
+<node TEXT="tutorial &quot;action&quot;" ID="ID_680524461"/>
+</node>
+<node TEXT="r" ID="ID_921299367">
+<node TEXT="ToM_showMenu" ID="ID_1819341805"/>
+<node TEXT="feature &quot;show menu&quot;" STYLE_REF="markdownNote" ID="ID_638710714"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can make that **ToM** shows **where in the menu** the user can find a specific command.
+
+</text>
+</richcontent>
 </node>
 </node>
+<node TEXT="r" ID="ID_1896762528">
+<node TEXT="ToM_menuAction" ID="ID_1937098224"/>
+<node TEXT="execute actions" STYLE_REF="markdownNote" ID="ID_1584507220"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add to your tutorial buttons that **apply menu actions**.</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="r" ID="ID_1237778144">
+<node TEXT="ToM_groovy" ID="ID_261251084"/>
+<node TEXT="execute groovy" STYLE_REF="markdownNote" ID="ID_336467388"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add to your tutorial panels that show blocks of **groovy code ** 
+and / or 
+**buttons** that apply those **groovy scripts** to the selected nodes.</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="r" ID="ID_769957883">
+<node TEXT="ToM_goto" ID="ID_424346749"/>
+<node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_1257332542"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add  buttons to **jump to other tutorial pages** in the same mindmap (and jump back).
+
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="r" ID="ID_1950114815">
+<node TEXT="ToM_copy" ID="ID_97231973"/>
+<node TEXT="inserting nodes" STYLE_REF="markdownNote" ID="ID_1188842766"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add actions to **insert example nodes** or specific node structures **to the user&apos;s mindmap**.&#xd;
+&#xd;
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="r" ID="ID_1664111903">
+<node TEXT="ToM_select" ID="ID_485972385"/>
+<node TEXT="selecting nodes" STYLE_REF="markdownNote" ID="ID_51927362"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>After inserting an example branch, you can have a **button that selects the nodes** that you want so the user can easily go further with the tutorial.&#xd;
+&#xd;
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="r" ID="ID_460268070">
+<node TEXT="ToM_openMap" ID="ID_879401247"/>
+<node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_175852733"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add a button to **open other mindmaps** needed for the tutorial.
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="r" ID="ID_531219823">
+<node TEXT="ToM_openTutMap" ID="ID_1431500790"/>
+<node TEXT="inspecting" STYLE_REF="markdownNote" ID="ID_1190497955"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add an &quot;_**inspect**_&quot; button to the tutorial that directly goes to the map that 
+contains the current tutorial information and selects the node where the current page starts. 
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="r" ID="ID_1633680031">
+<node TEXT="ToM_showNode" ID="ID_579273354"/>
+<node TEXT="show nodes" STYLE_REF="markdownNote" ID="ID_1622854151"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add a button to **show nodes** in the same or in another MindMap.
+
+It may be any node. It doesn&apos;t need to be in a tutorial.
+
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="r" ID="ID_336322709">
+<node TEXT="ToM_openTutPage" ID="ID_562461514"/>
+<node TEXT="open tutorial pages" STYLE_REF="markdownNote" ID="ID_1823507517"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add buttons to **open other tutorials** or **tutorial&apos;s pages** from the same or another mindmap.
+
+</text>
+</richcontent>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="good to know.." STYLE_REF="MarkdownHelperNode" ID="ID_355332958">
+<attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
+<attribute NAME="hideFolded" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="true"/>
+<attribute NAME="topHeadersNumbered" VALUE="false"/>
+<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
+<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="lineOverHeader" VALUE="true"/>
+<attribute NAME="ignoreHeaderDetails" VALUE="true"/>
+<attribute NAME="ignoreHeaderNotes" VALUE="true"/>
+<attribute NAME="ignoreLeafDetails" VALUE="false"/>
+<attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>=edofro.MarkDownHelper.MDH.document(node)</text>
+</richcontent>
+<node TEXT="Good to know ..." FOLDED="true" ID="ID_482124360">
+<node TEXT="this is not a tutorial" STYLE_REF="markdownNote" ID="ID_555187326"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>This is not a real tutorial, it&apos;s more like a guide.&#xd;
+&#xd;
+For each &quot;action&quot;, there is a brief an explanation and **multiple buttons** with different actions.  &#xd;
+You **don&apos;t need to click on all** of them. More preciselly, you don&apos;t need to click any of them if you don&apos;t want to.  &#xd;
+They **are the different alternatives** you can use to insert those actions in a tutorial mindmap.&#xd;
+&#xd;
+For example, there are buttons to:</text>
+</richcontent>
+</node>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1042247494"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.list(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="see where in Freeplane&apos;s menu you can find the command to apply that style" ID="ID_1987540877"/>
+<node TEXT="apply the style directly to the currently selected node" ID="ID_1334229361"/>
+<node TEXT="insert a new node with that style as a child of the currently selected node.&#xa;The node has no text and it&apos;s ready to type in it." ID="ID_521828341"/>
+<node TEXT="insert a new node with a predefined style and text as a child of the currently selected node" ID="ID_587733230"/>
+</node>
+<node TEXT="As you can see they are very similar and you can choose which is the one that matches you best." ID="ID_246988689"/>
+</node>
+</node>
+<node TEXT="in the next pages ..." STYLE_REF="MarkdownHelperNode" ID="ID_565729330">
+<attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
+<attribute NAME="hideFolded" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="true"/>
+<attribute NAME="topHeadersNumbered" VALUE="false"/>
+<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
+<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="lineOverHeader" VALUE="true"/>
+<attribute NAME="ignoreHeaderDetails" VALUE="true"/>
+<attribute NAME="ignoreHeaderNotes" VALUE="true"/>
+<attribute NAME="ignoreLeafDetails" VALUE="false"/>
+<attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>=edofro.MarkDownHelper.MDH.document(node)</text>
+</richcontent>
+<node TEXT="In this guide ..." ID="ID_67690550">
+<node TEXT="in the next pages ..." STYLE_REF="markdownNote" ID="ID_1969988027"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>In the following pages, you can see a brief explanation about all the **building components** 
+used to **add actions** to your tutorials with **Tutorial-o-Matic**.
+
+
+This guide&apos;s &quot;**Table of Contents**&quot; :
+
+</text>
+</richcontent>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_1875841449"/>
 </node>
 <node TEXT="ToM_showMenu" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_984638726">
 <node TEXT="Text" STYLE_REF="ToM_note" ID="ID_1025712010">
@@ -1047,18 +1322,13 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
   </body>
 </html></richcontent>
 </node>
-<node TEXT="feature &quot;show menu&quot;" STYLE_REF="markdownNote" ID="ID_487821147"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can make that **ToM** shows where in the menu the user can find a specific command.
-
-</text>
-</richcontent>
-</node>
+<node ID="ID_487821147" CONTENT_ID="ID_638710714"/>
 <node TEXT="steps" STYLE_REF="markdownNote" ID="ID_260516548"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>## Steps&#xd;
 &#xd;
 * Add a node with style &quot;**ToM_showMenu**&quot;&#xd;
-* Add **child nodes** with **links to menu commands** you want to show&#xd;
-  * The text of that nodes are not used&#xd;
+* Add **child node(s)** with **link(s) to the menu command(s)** you want to show&#xd;
+  * The text of that nodes is not used&#xd;
 &#xd;
 </text>
 </richcontent>
@@ -1245,18 +1515,7 @@ Steps:&#xd;
   </body>
 </html></richcontent>
 </node>
-<node TEXT="execute actions" ID="ID_305144913"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      You can add to your tutorial buttons that apply menu actions.
-    </p>
-  </body>
-</html></richcontent>
-</node>
+<node ID="ID_305144913" CONTENT_ID="ID_1584507220"/>
 <node TEXT="steps" STYLE_REF="markdownNote" ID="ID_1636751547"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>## Steps&#xd;
 &#xd;
@@ -1438,12 +1697,7 @@ commands without showing menus or hotkeys&#xd;
   </body>
 </html></richcontent>
 </node>
-<node TEXT="execute groovy" STYLE_REF="markdownNote" ID="ID_910851138"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add to your tutorial panels that show blocks 
-of **groovy code ** and / or **buttons** that apply those
-**groovy scripts** to the selected nodes.</text>
-</richcontent>
-</node>
+<node ID="ID_910851138" CONTENT_ID="ID_336467388"/>
 <node TEXT="modifiers intro" STYLE_REF="markdownNote" ID="ID_1825677422"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>By using icons as modifiers you can get panels that:
 
@@ -1617,12 +1871,7 @@ gets disabled</text>
   </body>
 </html></richcontent>
 </node>
-<node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_1509887457"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add  buttons to jump to other tutorial pages
-
-</text>
-</richcontent>
-</node>
+<node ID="ID_1509887457" CONTENT_ID="ID_1257332542"/>
 <node TEXT="steps" STYLE_REF="markdownNote" ID="ID_1510539347"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>## Steps&#xd;
 &#xd;
@@ -1751,18 +2000,41 @@ modifiers&#xd;
   </body>
 </html></richcontent>
 </node>
+<node TEXT="TomCopy.md" STYLE_REF="MarkdownHelperNode" ID="ID_1245835898">
+<attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
+<attribute NAME="hideFolded" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="true"/>
+<attribute NAME="topHeadersNumbered" VALUE="false"/>
+<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
+<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="lineOverHeader" VALUE="true"/>
+<attribute NAME="ignoreHeaderDetails" VALUE="true"/>
+<attribute NAME="ignoreHeaderNotes" VALUE="true"/>
+<attribute NAME="ignoreLeafDetails" VALUE="false"/>
+<attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.document(node)
+    </p>
+  </body>
+</html></richcontent>
 <node TEXT="inserting nodes" STYLE_REF="markdownNote" ID="ID_32974307"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>When building a tutorial you can add predefined nodes &#xd;
-or branches of nodes&#xd;
-that the user can insert in his/her own map.&#xd;
-&#xd;
+    <text>When building a tutorial you can add **predefined nodes &#xd;
+or branches of nodes**&#xd;
+that the user can **insert in his/her own map**.&#xd;
   &#xd;
-The user can copy those nodes directly to his/her selected a node in his/her own map.&#xd;
+The user can copy those nodes directly to his/her own map as childs of the selected node.  &#xd;
 &#xd;
-It can be used to insert example nodes or specific node structures.&#xd;
-&#xd;
+In other words:&#xd;
 </text>
 </richcontent>
+</node>
+<node ID="ID_1752582852" CONTENT_ID="ID_1188842766"/>
 </node>
 <node TEXT="steps" STYLE_REF="markdownNote" ID="ID_1901791549"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>## Steps&#xd;
@@ -1841,14 +2113,7 @@ as descendants of that node&#xd;
   </body>
 </html></richcontent>
 </node>
-<node TEXT="selecting nodes" STYLE_REF="markdownNote" ID="ID_615540997"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>After inserting an example branch, you can have a &#xd;
-button that selects the nodes that you want so &#xd;
-the user can easily go further with the tutorial.&#xd;
-&#xd;
-</text>
-</richcontent>
-</node>
+<node ID="ID_615540997" CONTENT_ID="ID_51927362"/>
 <node TEXT="paste clones" STYLE_REF="markdownNote" ID="ID_611822269"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>To indicate **which** are the nodes 
 you want **to select**, just paste **clones 
@@ -2027,11 +2292,9 @@ as descendants of the &quot;ToM_select&quot; node&#xd;
   </body>
 </html></richcontent>
 </node>
-<node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_162869244"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add a button to open other maps needed 
-for the tutorial.
-
-Currently that map must be in the same 
+<node ID="ID_162869244" CONTENT_ID="ID_175852733"/>
+<node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_911299931"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>Currently that map must be in the same 
 directory as the tutorial map
   
   
@@ -2131,17 +2394,7 @@ the mindmap&apos;s name in its text&#xd;
   </body>
 </html></richcontent>
 </node>
-<node TEXT="inspecting" STYLE_REF="markdownNote" ID="ID_1135096340"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add a button to the tutorial to directly go 
-to the map that 
-contains the tutorial information and select 
-the node that defines the current page.  
-
-  
-  
-</text>
-</richcontent>
-</node>
+<node ID="ID_1135096340" CONTENT_ID="ID_1190497955"/>
 <node TEXT="steps" STYLE_REF="markdownNote" ID="ID_973307126"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>## Steps&#xd;
 &#xd;
@@ -2234,16 +2487,7 @@ the node that defines the current page.
   </body>
 </html></richcontent>
 </node>
-<node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_1625216932"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add a button to show nodes in the 
-same or in another MindMap.
-
-It may be any node. 
-It doesn&apos;t need to be in a tutorial.
-
-</text>
-</richcontent>
-</node>
+<node ID="ID_1625216932" CONTENT_ID="ID_1622854151"/>
 <node TEXT="steps" STYLE_REF="markdownNote" ID="ID_1262736479"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>## Steps&#xd;
 &#xd;
@@ -2327,23 +2571,168 @@ The steps are very similar to the &quot;goto&quot; case:&#xd;
 </node>
 </node>
 </node>
-<node TEXT="PENDIENTE!!!" ID="ID_29591071">
-<node TEXT="ToM_openTutPage" STYLE_REF="ToM_newPage" ID="ID_1482753376">
+<node TEXT="ToM_openTutPage" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1482753376">
 <node TEXT="Text" STYLE_REF="ToM_note" ID="ID_1134453267">
-<node TEXT="pendiente" ID="ID_1563301334"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="ToM_openTutPage" ID="ID_481817535"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      PENDIENTE!!!!
+      <font color="#ff0000" size="6"><b>ToM_openTutPage</b></font>
     </p>
   </body>
 </html></richcontent>
 </node>
+<node ID="ID_886740927" CONTENT_ID="ID_1823507517"/>
+<node TEXT="steps" STYLE_REF="markdownNote" ID="ID_1250372341"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>## Steps&#xd;
+&#xd;
+The steps are very similar to the &quot;goto&quot; case:&#xd;
+&#xd;
+* Add a node with style &quot;ToM_openTutPage&quot;&#xd;
+    * the text of this node, its note &#xd;
+    or details are not shown in the tutorial&#xd;
+    &#xd;
+* Add child nodes with links to other &#xd;
+ToM nodes in the same or to other Mindmaps&#xd;
+  * The text of that nodes are used as the texts &#xd;
+  of the buttons&#xd;
+  * The text of their notes are used as the &#xd;
+  texts of the panels&#xd;
+&#xd;
+  </text>
+</richcontent>
 </node>
-<node TEXT="ToM_openTutPage" STYLE_REF="ToM_openTutPage" ID="ID_699720817"/>
+<node TEXT="links examples" STYLE_REF="MarkdownHelperNode" ID="ID_942317416">
+<attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
+<attribute NAME="hideFolded" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="true"/>
+<attribute NAME="topHeadersNumbered" VALUE="false"/>
+<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
+<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="lineOverHeader" VALUE="true"/>
+<attribute NAME="ignoreHeaderDetails" VALUE="true"/>
+<attribute NAME="ignoreHeaderNotes" VALUE="true"/>
+<attribute NAME="ignoreLeafDetails" VALUE="false"/>
+<attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>=edofro.MarkDownHelper.MDH.document(node)</text>
+</richcontent>
+<node TEXT="Linking posibilities" FOLDED="true" ID="ID_1446549763">
+<node TEXT="You can add nodes with different types of links:" ID="ID_1271869781"/>
+<node TEXT="table" STYLE_REF="MarkdownHelperNode" ID="ID_1564836863"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.table(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="r" ID="ID_1112321625">
+<node TEXT="type of link" ID="ID_914702580"/>
+<node TEXT="target node" ID="ID_2926277"/>
+<node TEXT="example" ID="ID_955511252"/>
+<node TEXT="opens ..." ID="ID_767644946"/>
+</node>
+<node TEXT="r" ID="ID_44672110">
+<node TEXT="Absolute" ID="ID_1835410216"/>
+<node TEXT="no node" ID="ID_510316133"/>
+<node TEXT="file:/C:/myMaps/2022/myTutorial.mm" ID="ID_631669372"/>
+<node TEXT="panel with links to all tutorials present in myTutorial.mm" ID="ID_976796235"/>
+</node>
+<node TEXT="r" ID="ID_148292936">
+<node TEXT="Absolute" ID="ID_1531255396"/>
+<node TEXT=" a ToM-Tutorial node" ID="ID_864419249"/>
+<node TEXT="file:/C:/myMaps/2022/myTutorial.mm#ID_1531255396" ID="ID_1627959122"/>
+<node TEXT="first page of the selected tutorial in myTutorial.mm" ID="ID_165051209"/>
+</node>
+<node TEXT="r" ID="ID_429826086">
+<node TEXT="Absolute" ID="ID_488474069"/>
+<node TEXT=" a ToM_newPage node" ID="ID_968834400"/>
+<node TEXT="file:/C:/myMaps/2022/myTutorial.mm#ID_1531254444" ID="ID_208802726"/>
+<node TEXT="the selected page of myTutorial.mm" ID="ID_1290698033"/>
+</node>
+<node TEXT="r" ID="ID_1225133740">
+<node TEXT="Relative" ID="ID_952572742"/>
+<node TEXT="no node" ID="ID_561935425"/>
+<node TEXT="myTutorial.mm" ID="ID_1424598797"/>
+<node TEXT="panel with links to all tutorials present in myTutorial.mm&#xa;that is in the same directory of the active tutorial mindmap." ID="ID_228085370"/>
+</node>
+<node TEXT="r" ID="ID_1484161636">
+<node TEXT="Relative" ID="ID_1841879115"/>
+<node TEXT=" a ToM-Tutorial node" ID="ID_848784559"/>
+<node TEXT="myTutorial.mm#ID_1531255396" ID="ID_393896315"/>
+<node TEXT="first page of the selected tutorial in myTutorial.mm&#xa;(in the same directory)" ID="ID_1681650945"/>
+</node>
+<node TEXT="r" ID="ID_166910101">
+<node TEXT="Relative" ID="ID_928693674"/>
+<node TEXT=" a ToM_newPage node" ID="ID_699830770"/>
+<node TEXT="myTutorial.mm#ID_1531254444" ID="ID_1158826602"/>
+<node TEXT="the selected page of myTutorial.mm&#xa;(in the same directory)" ID="ID_1024762347"/>
+</node>
+<node TEXT="r" ID="ID_1254731917">
+<node TEXT="to the same map" ID="ID_1758294248"/>
+<node TEXT=" a ToM-Tutorial node" ID="ID_1543766330"/>
+<node TEXT="#ID_1531255223" ID="ID_1976048730"/>
+<node TEXT="the selected page of a tutorial from the same map" ID="ID_1981634544"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="create a ToM_openTutPage node" LOCALIZED_STYLE_REF="default" ID="ID_699720817">
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1943689326">
+<node TEXT="ToM_openTutPage" ID="ID_637621697" LINK="menuitem:_AssignStyleAction.ToM_openTutPage"/>
+</node>
+<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_688981874">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>= &quot;Assign **${node?.children[0]?.text}** style to selected node(s) directly&quot;.toString()</text>
+</richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &quot;Assign $0 style to selected node(s) directly&quot;
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="ToM_openTutPage" ID="ID_1416338353" LINK="menuitem:_AssignStyleAction.ToM_openTutPage"/>
+</node>
+<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1307758089">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>= &quot;Insert new **${node?.children[1]?.text}** node directly&quot;.toString()</text>
+</richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &quot;Insert new $1 node directly&quot;
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="New child node" ID="ID_718996803" LINK="menuitem:_NewChildAction"/>
+<node TEXT="ToM_openTutPage" ID="ID_1513443467" LINK="menuitem:_AssignStyleAction.ToM_openTutPage"/>
+<node TEXT="Edit node core in-line" ID="ID_1704407363" LINK="menuitem:_EditAction"/>
+</node>
+<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_411118002">
+<font NAME="SansSerif"/>
+<node TEXT="Insert new &apos;openTututorialPage&apos; node directly" ID="ID_1797437629">
+<attribute NAME="script1" VALUE="def nodo = node.createChild(&apos;openTutorialPage&apos;)&#xd;&#xa;nodo.style.name = &apos;ToM_openTutPage&apos;&#xd;&#xa;c.select(nodo)"/>
+</node>
+</node>
 </node>
 </node>
 </node>

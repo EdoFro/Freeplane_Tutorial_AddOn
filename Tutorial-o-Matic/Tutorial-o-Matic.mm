@@ -411,7 +411,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="translations" FOLDED="true" POSITION="left" ID="ID_546877695"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="translations" POSITION="left" ID="ID_546877695"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -446,7 +446,7 @@
 <node TEXT="en" ID="ID_835667055">
 <attribute_layout NAME_WIDTH="205.49999 pt" VALUE_WIDTH="264.74999 pt"/>
 <attribute NAME="addons.${name}.createNewTutorialMindMap" VALUE="Create new tutorial mind map"/>
-<attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;In submenu  &lt;b&gt;{0}&lt;/b&gt; &lt;br&gt;click on  &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
+<attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;&lt;h3&gt;Instructions:&lt;/h3&gt;In submenu &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;click on &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
 <attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
 <attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;You can also use de keyboard shortcut &lt;b&gt;{0}&lt;/b&gt; for this command&lt;/html&gt;"/>
 <attribute NAME="addons.${name}.openDemoMap" VALUE="open Demo map"/>
@@ -457,11 +457,24 @@
 <attribute NAME="addons.${name}.importToMStyles" VALUE="Import Tutorial-o-Matic Styles"/>
 <attribute NAME="addons.${name}.executeTutorial" VALUE="execute Demo tutorial"/>
 <attribute NAME="addons.${name}.openTutorialPageFromLink" VALUE="Open tutorial page from link"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <h3>
+      Instructions:
+    </h3>
+    In submenu <b>{0}</b><br/>click on <b>{1}</b>
+  </body>
+</html>
+</richcontent>
 </node>
 <node TEXT="es" ID="ID_370825255">
 <attribute_layout NAME_WIDTH="205.49999 pt" VALUE_WIDTH="228.74999 pt"/>
 <attribute NAME="addons.${name}.createNewTutorialMindMap" VALUE="Crear nuevo mapa para tutoriales"/>
-<attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;En submenu  &lt;b&gt;{0}&lt;/b&gt; &lt;br&gt;has click en  &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
+<attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;&lt;h3&gt;Instrucciones:&lt;/h3&gt;En submenu  &lt;b&gt;{0}&lt;/b&gt; &lt;br&gt;has click en  &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
 <attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
 <attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;Puedes usar también el atajo &lt;b&gt;{0}&lt;/b&gt; para este comando&lt;/html&gt;"/>
 <attribute NAME="addons.${name}.openDemoMap" VALUE="abrir mapa demo"/>

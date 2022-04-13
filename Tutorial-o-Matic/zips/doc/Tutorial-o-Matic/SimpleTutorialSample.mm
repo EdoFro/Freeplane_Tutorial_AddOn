@@ -113,6 +113,27 @@ code {
 <icon BUILTIN="emoji-1F4D6"/>
 <cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
+<stylenode TEXT="nextTask" BACKGROUND_COLOR="#ffff33">
+<icon BUILTIN="yes"/>
+<icon BUILTIN="unchecked"/>
+</stylenode>
+<stylenode TEXT="pendingTask" BACKGROUND_COLOR="#99ffff">
+<icon BUILTIN="unchecked"/>
+</stylenode>
+<stylenode TEXT="completedTask" COLOR="#333333" BACKGROUND_COLOR="#cccccc">
+<icon BUILTIN="checked"/>
+<font ITALIC="true"/>
+</stylenode>
+<stylenode TEXT="discardedTask" COLOR="#666666" BACKGROUND_COLOR="#cccccc">
+<icon BUILTIN="Descartado"/>
+<font ITALIC="true"/>
+</stylenode>
+<stylenode TEXT="containsNextTasks" BACKGROUND_COLOR="#eaea86">
+<icon BUILTIN="emoji-1F7E5"/>
+</stylenode>
+<stylenode TEXT="containsPendingTasks" BACKGROUND_COLOR="#b5d7d7">
+<icon BUILTIN="emoji-23F9"/>
+</stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" ID="ID_1618325545" COLOR="#000000" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 pt" SHAPE_VERTICAL_MARGIN="10 pt" UNIFORM_SHAPE="true" MAX_WIDTH="4 cm" MIN_WIDTH="1 cm">
@@ -1873,7 +1894,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 </node>
 <node TEXT="html note" ID="ID_1092689747">
-<arrowlink COLOR="#cc0000" WIDTH="6" TRANSPARENCY="255" DESTINATION="ID_1287893974" MIDDLE_LABEL="Change their order &#xa;and reload the page &#xa;to see how the TOC updates" STARTINCLINATION="195.74999 pt;6.75 pt;" ENDINCLINATION="188.99999 pt;-47.25 pt;" STARTARROW="DEFAULT" ENDARROW="DEFAULT"/>
+<arrowlink COLOR="#cc0000" WIDTH="6" TRANSPARENCY="255" DESTINATION="ID_1287893974" MIDDLE_LABEL="Change their order &#xa;and reload the page &#xa;to see how the TOC updates" STARTINCLINATION="195.74999 pt;6.75 pt;" ENDINCLINATION="188.99999 pt;-46.5 pt;" STARTARROW="DEFAULT" ENDARROW="DEFAULT"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
 <node TEXT="HTML example" STYLE_REF="ToM_newPage" ID="ID_1391525027"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_774731236">
