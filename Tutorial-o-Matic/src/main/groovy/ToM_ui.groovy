@@ -35,6 +35,10 @@ import org.freeplane.core.ui.components.UITools as ui
 
 import io.github.gitbucket.markedj.Marked
 import io.github.gitbucket.markedj.Options
+
+import org.jsoup.Jsoup
+import org.jsoup.nodes.Document
+
 //end:
 
 class ToM_ui{
@@ -155,6 +159,14 @@ class ToM_ui{
         return html
     }
 
+    def static mergeHtml(baseHtml, addedHtml){
+        if(!baseHtml) return addedHtml
+        if(!addedHtml) return baseHtml
+        Document doc = Jsoup.parse(baseHtml)
+        doc.body().append('<p/>').append(addedHtml)
+        return doc.html()        
+    }
+    
     //end:
 
     //region: creating panes
