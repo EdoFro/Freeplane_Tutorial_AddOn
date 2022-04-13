@@ -332,8 +332,8 @@ class ToM{
         nodos.findAll{n -> n.link.node?true:false}.each{nodo ->
             def targetNode  = nodo.link.node
             def msgHtml     = nodo.note?tomui.getHtmlFromNote(nodo, options):null
-            def bttnText    = nodo.text
-            def bttnToolTip = "Click to go to '${bttnText}' section"
+            def bttnText    = nodo.htmlText
+            def bttnToolTip = "Click to go to '${nodo.plainText.replace('\n',' ')}' section"
             def bttnAction  = { e -> 
                 if(targetNode.style.name == styles.tutorial){
                     def tutorialTabName = targetNode[attributeTabLabel] ?: defaultTabLabel
@@ -362,7 +362,7 @@ class ToM{
     def static addReturnPane(myP,  ApiNode backNode){
         def msgHtml     = "Return to '${backNode.text}' page"
         def bttnText    = 'go back'
-        def bttnToolTip = "Click to go to '${backNode.text}' section"
+        def bttnToolTip = "Click to go to '${backNode.plainText.replace('\n',' ')}' section"
         def bttnAction  = { e -> fillPage(myP, backNode, true, true)}
         def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
         myP.add(buttonPanel, tomui.GBC)
@@ -372,8 +372,8 @@ class ToM{
         def nodos = tNode.children.findAll{ n -> isValidUri(n.link?.uri) || isValidUri(n[attributeNewPageLink].uri)}
         nodos.each{nodo ->
             def msgHtml     = nodo.note?tomui.getHtmlFromNote(nodo, options):null
-            def bttnText    = nodo.text
-            def bttnToolTip = "Click to go to '${bttnText}' section"
+            def bttnText    = nodo.htmlText
+            def bttnToolTip = "Click to go to '${nodo.plainText.replace('\n',' ')}' section"
             def bttnAction  = { e -> 
                 openTutorialPage(nodo)
             }
@@ -416,7 +416,7 @@ class ToM{
      def static getGroovyHtml( ApiNode nodo, script){
          def showScript = nodo.icons.icons.contains('emoji-1F50D')  ||  nodo.icons.icons.contains('emoji-1F453') 
          uiMsg("showScript ${showScript}")
-         def html = showScript? tomui.getHtmlFromGroovyNode(nodo, script) : nodo.text
+         def html = showScript? tomui.getHtmlFromGroovyNode(nodo, script) : nodo.htmlText
          uiMsg("html ${html}")
          return html
      }
@@ -589,9 +589,9 @@ class ToM{
     def static addShowNodePane(myP, ApiNode nodo){
         def nodos = nodo.children.findAll{ n -> n.link && (n.link.node || (!n.link.node && !n.link.file && n.link.uri.scheme == 'file'))}
         nodos.each{ n ->
-            def msgHtml     = "Click to show ${n.text}"
+            def msgHtml     = "Click to show ${n.plainText.replace('\n',' ')}"
             def bttnText    = "goto Node"
-            def bttnToolTip = "Click to show ${n.text}"
+            def bttnToolTip = "Click to show ${n.plainText.replace('\n',' ')}"
             def bttnAction  
             if(n.link.node){
                 bttnAction = { e ->
@@ -623,7 +623,7 @@ class ToM{
         def titleNodes  = getNewPageNodes(getTutorialNode(nodo))
         def pane = tomui.createEmptyGridBagPanel()
         titleNodes.each{ tn ->
-            def title = tn.text
+            def title = tn.htmlText
             def bttnAction   = { e -> fillPage(myP, tn, true, true) }
             def button = tomui.createButton(title, bttnAction)
             pane.add(button, tomui.GBC)
@@ -638,7 +638,7 @@ class ToM{
             def pre  = nodosTutoriales.size() == 0 ? "No t" : "T"
             addPageTitle(myP, "${pre}utorials present in '${mapa.name}' map".toString())
             nodosTutoriales.each{ nT ->
-                def title = nT.text
+                def title = nT.htmlText
                 def bttnAction   = { e ->
                     def tutNodes = getTutNodes(nT)
                     if(tutNodes) {
