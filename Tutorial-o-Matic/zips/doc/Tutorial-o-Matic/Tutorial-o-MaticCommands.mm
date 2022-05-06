@@ -1,10 +1,13 @@
 <map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
+<attribute_registry SHOW_ATTRIBUTES="selected">
+    <attribute_name VISIBLE="true" NAME="ToM_TabLabel"/>
+</attribute_registry>
 <node TEXT="Tutorial-o-Matic&#xa;Commands" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_1090958577" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node">
 <hook NAME="accessories/plugins/AutomaticLayout.properties" VALUE="ALL"/>
 <font BOLD="true"/>
-<hook NAME="MapStyle" background="#eeeeee">
-    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" associatedTemplateLocation="template:/light_grey_straight_template.mm" save_folding="default" fit_to_viewport="false"/>
+<hook NAME="MapStyle" background="#eeeeee" zoom="0.681">
+    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" associatedTemplateLocation="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/Tutorial-o-MaticCommands.mm" save_folding="default" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1551512835" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -40,8 +43,8 @@
 </stylenode>
 <stylenode TEXT="ToM-Tutorial" ICON_SIZE="24 pt" COLOR="#000000" BACKGROUND_COLOR="#fbcbbc" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
-<cloud COLOR="#f2ded8" SHAPE="ROUND_RECT"/>
 <attribute NAME="ToM_TabLabel" VALUE=" "/>
+<cloud COLOR="#f2ded8" SHAPE="ROUND_RECT"/>
 </stylenode>
 <stylenode TEXT="ToM_TOC" ICON_SIZE="16 pt" COLOR="#000000" BACKGROUND_COLOR="#f5ff95" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
@@ -105,6 +108,11 @@
 <icon BUILTIN="emoji-1F517"/>
 <cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
+<stylenode TEXT="ToM_openTutPage" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="emoji-1F4D6"/>
+<cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
+</stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#ffffff" BACKGROUND_COLOR="#000000" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#2c2b29" BORDER_DASH_LIKE_EDGE="true">
@@ -148,7 +156,36 @@
 <icon BUILTIN="emoji-1F58D"/>
 <attribute_layout NAME_WIDTH="81.75 pt" VALUE_WIDTH="89.25 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE=" ToM commands"/>
-<node TEXT="Styles" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_665042163">
+<node TEXT="About this map" STYLE_REF="ToM_newPage" ID="ID_1470567500">
+<node TEXT="Text" STYLE_REF="ToM_note" ID="ID_100916579">
+<node TEXT="about this map" ID="ID_1649907760">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # About this map
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      This map is similar to the How To mindmap, but all explanations have been deleted
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_642163741"/>
+</node>
+<node TEXT="Assigning ToM Styles" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_665042163" VGAP_QUANTITY="3 pt">
 <node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_1267656230"/>
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_474679395">
 <icon BUILTIN="emoji-1F507"/>
@@ -402,8 +439,26 @@
 </html></richcontent>
 <node TEXT="ToM_showNode" ID="ID_1400165549" LINK="menuitem:_AssignStyleAction.ToM_showNode"/>
 </node>
+<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_688981874">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>= &quot;Assign **${node?.children[0]?.text}** style to selected node(s) directly&quot;.toString()</text>
+</richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &quot;Assign $0 style to selected node(s) directly&quot;
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="ToM_openTutPage" ID="ID_1416338353" LINK="menuitem:_AssignStyleAction.ToM_openTutPage"/>
 </node>
-<node TEXT="Commands I" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1624580076">
+</node>
+<node TEXT="&apos;Create tutorial&apos; commands" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1624580076">
 <node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_1904007365"/>
 <node TEXT="map" ID="ID_755446791">
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1119167868">
@@ -568,7 +623,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Commands II" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_115518663">
+<node TEXT="&apos;Add actions&apos; commands" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_115518663">
 <node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_1448072473"/>
 <node TEXT="actions" ID="ID_805258724">
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_834947210">
@@ -828,9 +883,29 @@
 <node TEXT="ToM_showNode" ID="ID_1606162394" LINK="menuitem:_AssignStyleAction.ToM_showNode"/>
 <node TEXT="Edit node core in-line" ID="ID_1358838826" LINK="menuitem:_EditAction"/>
 </node>
+<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1307758089">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>= &quot;Insert new **${node?.children[1]?.text}** node directly&quot;.toString()</text>
+</richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &quot;Insert new $1 node directly&quot;
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="New child node" ID="ID_718996803" LINK="menuitem:_NewChildAction"/>
+<node TEXT="ToM_openTutPage" ID="ID_1513443467" LINK="menuitem:_AssignStyleAction.ToM_openTutPage"/>
+<node TEXT="Edit node core in-line" ID="ID_1704407363" LINK="menuitem:_EditAction"/>
 </node>
 </node>
-<node TEXT="Commands III" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_534533837">
+</node>
+<node TEXT="&apos;Add action nodes with default text&apos; commands" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_534533837">
 <node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_945819159"/>
 <node TEXT="scripts" ID="ID_366076490">
 <node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_150505222">
@@ -885,6 +960,12 @@
 <font NAME="SansSerif"/>
 <node TEXT="Insert new &apos;showNode&apos; node directly" ID="ID_1374965678">
 <attribute NAME="script1" VALUE="def nodo = node.createChild(&apos;showNode&apos;)&#xd;&#xa;nodo.style.name = &apos;ToM_showNode&apos;&#xd;&#xa;c.select(nodo)"/>
+</node>
+</node>
+<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_411118002">
+<font NAME="SansSerif"/>
+<node TEXT="Insert new &apos;openTututorialPage&apos; node directly" ID="ID_1797437629">
+<attribute NAME="script1" VALUE="def nodo = node.createChild(&apos;openTutorialPage&apos;)&#xd;&#xa;nodo.style.name = &apos;ToM_openTutPage&apos;&#xd;&#xa;c.select(nodo)"/>
 </node>
 </node>
 </node>

@@ -4,17 +4,17 @@
     <attribute_name VISIBLE="true" NAME="ToM_LinkToPage"/>
     <attribute_name VISIBLE="true" NAME="ToM_TabLabel"/>
 </attribute_registry>
-<node TEXT="Tutorial-o-Matic" FOLDED="false" ID="ID_1090958577" CREATED="1651847434595" MODIFIED="1651847434595" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node" VGAP_QUANTITY="3 pt">
+<node TEXT="Tutorial-o-Matic" FOLDED="false" ID="ID_1090958577" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node" VGAP_QUANTITY="3 pt">
 <hook NAME="accessories/plugins/AutomaticLayout.properties" VALUE="ALL"/>
 <hook NAME="MapStyle" background="#3c3836" zoom="0.8">
-    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" mdhCleanMindmapPath="C:\Users\Edo\Documents\GitHub\Freeplane_Tutorial_AddOn\Tutorial-o-Matic\zips\doc\Tutorial-o-Matic\Tutorial-o-Matic Intro.mm" save_modification_times="false" mdhCleanMindmapExportDate="2022-05-06 10:39:48.070-0400" save_last_visited_node="default" show_note_icons="true" associatedTemplateLocation="template:/dark_gruvbox_template.mm" save_folding="default" fit_to_viewport="false"/>
+    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" mdhCleanMindmapPath="C:\Users\Edo\Documents\GitHub\Freeplane_Tutorial_AddOn\Tutorial-o-Matic\zips\doc\Tutorial-o-Matic\Tutorial-o-Matic Intro.mm" save_modification_times="false" mdhCleanMindmapExportDate="2022-05-06 11:27:20.384-0400" save_last_visited_node="default" show_note_icons="true" associatedTemplateLocation="template:/dark_gruvbox_template.mm" save_folding="default" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1012000487" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_602083445" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#3c3836" BACKGROUND_COLOR="#fbf1c7" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="8 pt" SHAPE_VERTICAL_MARGIN="5 pt" NUMBERED="false" FORMAT="STANDARD_FORMAT" TEXT_ALIGN="DEFAULT" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="true" BORDER_COLOR="#f0f0f0" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="3 pt" MAX_WIDTH="10 cm" MIN_WIDTH="0 cm">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#a89984" WIDTH="2" TRANSPARENCY="255" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_602083445" STARTINCLINATION="102.75 pt;-10.5 pt;" ENDINCLINATION="102.75 pt;3 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#a89984" WIDTH="2" TRANSPARENCY="255" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_602083445" STARTINCLINATION="102.75 pt;-7.5 pt;" ENDINCLINATION="102.75 pt;3 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="SansSerif" SIZE="11" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="bezier" COLOR="#93a1a1" WIDTH="3" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -205,13 +205,13 @@ blockquote {
 <font NAME="Harrington" SIZE="24" BOLD="true"/>
 <attribute_layout NAME_WIDTH="81.75 pt" VALUE_WIDTH="83.25 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE="Tutorial-o-Matic"/>
-<node TEXT="Introduction" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_839819820" CREATED="1651847434595" MODIFIED="1651847434595">
+<node TEXT="Introduction" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_839819820">
 <icon BUILTIN="emoji-1F58D"/>
 <attribute_layout NAME_WIDTH="91.5 pt" VALUE_WIDTH="132 pt"/>
-<node TEXT="greetings" ID="ID_26985145" CREATED="1651847434595" MODIFIED="1651847434595">
-<node TEXT="Welcome to Tutorial-o-Matic !!" STYLE_REF="ToM_newPage" ID="ID_1522236279" CREATED="1651847434595" MODIFIED="1651847434595"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_365713608" CREATED="1651847434595" MODIFIED="1651847434595">
-<node TEXT="Greetings" STYLE_REF="MarkdownHelperNode" ID="ID_1402723528" CREATED="1651847434595" MODIFIED="1651847434595">
+<node TEXT="greetings" ID="ID_26985145">
+<node TEXT="Welcome to Tutorial-o-Matic !!" STYLE_REF="ToM_newPage" ID="ID_1522236279"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_365713608">
+<node TEXT="Greetings" STYLE_REF="MarkdownHelperNode" ID="ID_1402723528">
 <attribute_layout NAME_WIDTH="135 pt" VALUE_WIDTH="40.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -235,7 +235,7 @@ blockquote {
     </p>
   </body>
 </html></richcontent>
-<node TEXT="Hi" STYLE_REF="markdownNote" ID="ID_683860354" CREATED="1651847434595" MODIFIED="1651847434595"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+<node TEXT="Hi" STYLE_REF="markdownNote" ID="ID_683860354"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>## Hi!!
 
 **Tutorial-o-Matic** is a Freeplane Add-on that helps you build tutorials 
@@ -243,14 +243,14 @@ for your mindmaps or your own add-ons.
 </text>
 </richcontent>
 </node>
-<node TEXT="This tut .." STYLE_REF="markdownNote" ID="ID_1457460843" CREATED="1651847434595" MODIFIED="1651847434595"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+<node TEXT="This tut .." STYLE_REF="markdownNote" ID="ID_1457460843"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>This very guide was created using this add-on.
 
 
 </text>
 </richcontent>
 </node>
-<node TEXT="bye" STYLE_REF="markdownNote" ID="ID_1162775021" CREATED="1651847434595" MODIFIED="1651847434595"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+<node TEXT="bye" STYLE_REF="markdownNote" ID="ID_1162775021"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>  
 I hope you enjoy this!
   
@@ -259,7 +259,7 @@ I hope you enjoy this!
 </richcontent>
 </node>
 </node>
-<node TEXT="Markdown document.md" STYLE_REF="MarkdownHelperNode" ID="ID_1968204511" CREATED="1651847434595" MODIFIED="1651847434595">
+<node TEXT="Markdown document.md" STYLE_REF="MarkdownHelperNode" ID="ID_1968204511">
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
@@ -274,17 +274,17 @@ I hope you enjoy this!
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>=edofro.MarkDownHelper.MDH.document(node)</text>
 </richcontent>
-<node TEXT="----" ID="ID_9872570" CREATED="1651847434595" MODIFIED="1651847434595"/>
-<node TEXT="Content" ID="ID_1146926472" CREATED="1651847434595" MODIFIED="1651847434595">
-<node TEXT="" STYLE_REF="markdownNote" ID="ID_1654820041" CREATED="1651847434595" MODIFIED="1651847434595"/>
+<node TEXT="----" ID="ID_9872570"/>
+<node TEXT="Content" ID="ID_1146926472">
+<node TEXT="" STYLE_REF="markdownNote" ID="ID_1654820041"/>
 </node>
-<node TEXT="----" ID="ID_1456524296" CREATED="1651847434595" MODIFIED="1651847434595"/>
+<node TEXT="----" ID="ID_1456524296"/>
 </node>
 </node>
 </node>
-<node TEXT="about the tutorials" ID="ID_518514585" CREATED="1651847434595" MODIFIED="1651847434595">
-<node TEXT="open Tutorial page" STYLE_REF="ToM_openTutPage" ID="ID_1175739617" CREATED="1651847434595" MODIFIED="1651847434595">
-<node STYLE_REF="MarkdownHelperNode" ID="ID_1051131428" CREATED="1651847434595" MODIFIED="1651847434595" LINK="Tutorial-o-MaticStepByStep.mm"><richcontent TYPE="NODE">
+<node TEXT="about the tutorials" ID="ID_518514585">
+<node TEXT="open Tutorial page" STYLE_REF="ToM_openTutPage" ID="ID_1175739617">
+<node STYLE_REF="MarkdownHelperNode" ID="ID_1051131428" LINK="Tutorial-o-MaticStepByStep.mm"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -314,9 +314,9 @@ I hope you enjoy this!
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>=edofro.MarkDownHelper.MDH.document(node)</text>
 </richcontent>
-<node TEXT="Tutorial-o-Matic Step by Step" ID="ID_927293905" CREATED="1651847434595" MODIFIED="1651847434595">
-<node TEXT="This guide contains step by step tutorials to learn hands on how to build tutorials using **Tutorial-o-Matic**" ID="ID_1640206453" CREATED="1651847434595" MODIFIED="1651847434595"/>
-<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_778182605" CREATED="1651847434595" MODIFIED="1651847434595">
+<node TEXT="Tutorial-o-Matic Step by Step" ID="ID_927293905">
+<node TEXT="This guide contains step by step tutorials to learn hands on how to build tutorials using **Tutorial-o-Matic**" ID="ID_1640206453"/>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_778182605">
 <icon BUILTIN="emoji-1F522"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -329,14 +329,14 @@ I hope you enjoy this!
     </p>
   </body>
 </html></richcontent>
-<node TEXT="new map with a basic tutorial" ID="ID_1603808704" CREATED="1651847434595" MODIFIED="1651847434595"/>
-<node TEXT="adding a tutorial to an existing map" ID="ID_1951675340" CREATED="1651847434595" MODIFIED="1651847434595"/>
-<node TEXT="a tutorial with multiple pages" ID="ID_1051360951" CREATED="1651847434595" MODIFIED="1651847434595"/>
-<node TEXT="adding acctions" ID="ID_546147165" CREATED="1651847434595" MODIFIED="1651847434595"/>
+<node TEXT="new map with a basic tutorial" ID="ID_1603808704"/>
+<node TEXT="adding a tutorial to an existing map" ID="ID_1951675340"/>
+<node TEXT="a tutorial with multiple pages" ID="ID_1051360951"/>
+<node TEXT="adding acctions" ID="ID_546147165"/>
 </node>
 </node>
 </node>
-<node TEXT="Tutorial 2" STYLE_REF="MarkdownHelperNode" ID="ID_1354819536" CREATED="1651847434595" MODIFIED="1651847434595">
+<node TEXT="Tutorial 2" STYLE_REF="MarkdownHelperNode" ID="ID_1354819536">
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="false"/>
@@ -359,9 +359,9 @@ I hope you enjoy this!
     </p>
   </body>
 </html></richcontent>
-<node TEXT="Tutorial 2" ID="ID_1658972090" CREATED="1651847434595" MODIFIED="1651847434595"/>
+<node TEXT="Tutorial 2" ID="ID_1658972090"/>
 </node>
-<node TEXT="Tutorial 3" STYLE_REF="MarkdownHelperNode" ID="ID_96154856" CREATED="1651847434595" MODIFIED="1651847434595">
+<node TEXT="Tutorial 3" STYLE_REF="MarkdownHelperNode" ID="ID_96154856">
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="false"/>
@@ -384,9 +384,9 @@ I hope you enjoy this!
     </p>
   </body>
 </html></richcontent>
-<node TEXT="Tutorial 3" ID="ID_1208564371" CREATED="1651847434595" MODIFIED="1651847434595"/>
+<node TEXT="Tutorial 3" ID="ID_1208564371"/>
 </node>
-<node STYLE_REF="MarkdownHelperNode" ID="ID_1882849769" CREATED="1651847434595" MODIFIED="1651847434595" LINK="HowToTutorial-o-Matic.mm"><richcontent TYPE="NODE">
+<node STYLE_REF="MarkdownHelperNode" ID="ID_1882849769" LINK="HowToTutorial-o-Matic.mm"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -416,8 +416,8 @@ I hope you enjoy this!
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>=edofro.MarkDownHelper.MDH.document(node)</text>
 </richcontent>
-<node TEXT="How to Tutorial-o-Matic" ID="ID_584573373" CREATED="1651847434595" MODIFIED="1651847434595">
-<node TEXT="How to (relative)" STYLE_REF="markdownNote" ID="ID_1788206043" CREATED="1651847434595" MODIFIED="1651847434595" LINK="HowToTutorial-o-Matic.mm">
+<node TEXT="How to Tutorial-o-Matic" ID="ID_584573373">
+<node TEXT="How to (relative)" STYLE_REF="markdownNote" ID="ID_1788206043" LINK="HowToTutorial-o-Matic.mm">
 <font NAME="SansSerif"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>This document contains **two guides** about the **building components** used to build tutorials with **Tutorial-o-Matic**:
@@ -430,7 +430,7 @@ I hope you enjoy this!
 </node>
 </node>
 </node>
-<node STYLE_REF="MarkdownHelperNode" ID="ID_1769844741" CREATED="1651847434595" MODIFIED="1651847434595" LINK="Tutorial-o-MaticCommands.mm"><richcontent TYPE="NODE">
+<node STYLE_REF="MarkdownHelperNode" ID="ID_1769844741" LINK="Tutorial-o-MaticCommands.mm"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -460,11 +460,11 @@ I hope you enjoy this!
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>= edofro.MarkDownHelper.MDH.document(node) </text>
 </richcontent>
-<node TEXT="ToM commands" ID="ID_46524074" CREATED="1651847434595" MODIFIED="1651847434595">
-<node TEXT="In this panel you can access all Tutorial-o-Matic commands." ID="ID_192757669" CREATED="1651847434595" MODIFIED="1651847434595"/>
-<node TEXT="There is **no explanation**. Just the commands." ID="ID_1752166884" CREATED="1651847434595" MODIFIED="1651847434595"/>
-<node TEXT="They are ordered into this titles:" ID="ID_1734134151" CREATED="1651847434595" MODIFIED="1651847434595"/>
-<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1537431376" CREATED="1651847434595" MODIFIED="1651847434595"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="ToM commands" ID="ID_46524074">
+<node TEXT="In this panel you can access all Tutorial-o-Matic commands." ID="ID_192757669"/>
+<node TEXT="There is **no explanation**. Just the commands." ID="ID_1752166884"/>
+<node TEXT="They are ordered into this titles:" ID="ID_1734134151"/>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1537431376"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -475,49 +475,49 @@ I hope you enjoy this!
     </p>
   </body>
 </html></richcontent>
-<node TEXT="Assigning ToM Styles" ID="ID_1342568112" CREATED="1651847434595" MODIFIED="1651847434595"/>
-<node TEXT="Tutorial&apos;s creation commands" ID="ID_186248619" CREATED="1651847434595" MODIFIED="1651847434595"/>
-<node TEXT="Adding action&apos;s commands" ID="ID_801323992" CREATED="1651847434595" MODIFIED="1651847434595"/>
-<node TEXT="Adding action nodes with default text&apos; commands" ID="ID_624937818" CREATED="1651847434595" MODIFIED="1651847434595"/>
-<node TEXT="Modifiers (icons)" ID="ID_1442289214" CREATED="1651847434595" MODIFIED="1651847434595"/>
+<node TEXT="Assigning ToM Styles" ID="ID_1342568112"/>
+<node TEXT="Tutorial&apos;s creation commands" ID="ID_186248619"/>
+<node TEXT="Adding action&apos;s commands" ID="ID_801323992"/>
+<node TEXT="Adding action nodes with default text&apos; commands" ID="ID_624937818"/>
+<node TEXT="Modifiers (icons)" ID="ID_1442289214"/>
 </node>
 </node>
 </node>
 </node>
 </node>
 </node>
-<node TEXT="intro map" FOLDED="true" POSITION="right" ID="ID_876616596" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
-<node TEXT="simple demo" FOLDED="true" ID="ID_315880005" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
-<node TEXT="Introduction" ID="ID_150338109" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
-<node TEXT="SIMPLE DEMO" ID="ID_1008824042" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
-<node TEXT="Current features" ID="ID_17519392" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
-<node TEXT="Copy of &quot;Current features&quot; in editing / inspection mode" ID="ID_186278055" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
-<node TEXT="the &quot;crayon&quot; icon indicates that this tutorial is beeing edited." ID="ID_536018864" CREATED="1651847434595" MODIFIED="1651847434595"/>
-<node TEXT="Buttons &quot;inspect&quot; and &quot;reload&quot; appear on page&apos;s top." ID="ID_507190450" CREATED="1651847434595" MODIFIED="1651847434595"/>
-<node TEXT="the attribute &quot;ToM_TabLabel&quot; indicates which Tab should the tutorial be shown in." ID="ID_746097339" CREATED="1651847434595" MODIFIED="1651847434595"/>
-<node TEXT="If not present -&gt; default is &quot;Tutorial&quot;" ID="ID_97222311" CREATED="1651847434595" MODIFIED="1651847434595"/>
+<node TEXT="intro map" FOLDED="true" POSITION="right" ID="ID_876616596" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
+<node TEXT="simple demo" FOLDED="true" ID="ID_315880005" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
+<node TEXT="Introduction" ID="ID_150338109" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
+<node TEXT="SIMPLE DEMO" ID="ID_1008824042" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
+<node TEXT="Current features" ID="ID_17519392" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
+<node TEXT="Copy of &quot;Current features&quot; in editing / inspection mode" ID="ID_186278055" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
+<node TEXT="the &quot;crayon&quot; icon indicates that this tutorial is beeing edited." ID="ID_536018864"/>
+<node TEXT="Buttons &quot;inspect&quot; and &quot;reload&quot; appear on page&apos;s top." ID="ID_507190450"/>
+<node TEXT="the attribute &quot;ToM_TabLabel&quot; indicates which Tab should the tutorial be shown in." ID="ID_746097339"/>
+<node TEXT="If not present -&gt; default is &quot;Tutorial&quot;" ID="ID_97222311"/>
 </node>
-<node TEXT="An empty tutorial" ID="ID_25875173" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
-<node TEXT="Some bugs I don&apos;t know how to correct yet" ID="ID_1715422996" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
+<node TEXT="An empty tutorial" ID="ID_25875173" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
+<node TEXT="Some bugs I don&apos;t know how to correct yet" ID="ID_1715422996" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 </node>
-<node TEXT="Tutorial-o-Matic Step by Step" ID="ID_1130541900" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
-<node TEXT="Introduction" ID="ID_1605015277" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
-<node TEXT="Tutorial 1" ID="ID_391680928" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
-<node TEXT="Tutorial 2" ID="ID_712937177" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
-<node TEXT="Tutorial 3" ID="ID_1871327423" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
+<node TEXT="Tutorial-o-Matic Step by Step" ID="ID_1130541900" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
+<node TEXT="Introduction" ID="ID_1605015277" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
+<node TEXT="Tutorial 1" ID="ID_391680928" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
+<node TEXT="Tutorial 2" ID="ID_712937177" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
+<node TEXT="Tutorial 3" ID="ID_1871327423" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 </node>
-<node TEXT="HowToTutorial-o-Matic.mm" ID="ID_1285182500" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
-<node TEXT="Introduction" ID="ID_496630218" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
-<node TEXT="How to create a tutorial" ID="ID_419665435" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
-<node TEXT="How to add actions to a tutorial" ID="ID_874687993" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
+<node TEXT="HowToTutorial-o-Matic.mm" ID="ID_1285182500" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
+<node TEXT="Introduction" ID="ID_496630218" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
+<node TEXT="How to create a tutorial" ID="ID_419665435" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
+<node TEXT="How to add actions to a tutorial" ID="ID_874687993" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 </node>
-<node TEXT="ToM commands" FOLDED="true" ID="ID_1498583442" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
-<node TEXT="ToM commands" ID="ID_703218195" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
-<node TEXT="Styles" ID="ID_1833539966" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
-<node TEXT="Commands I" ID="ID_1037123993" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
-<node TEXT="Commands II" ID="ID_593767556" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
-<node TEXT="Commands III" ID="ID_565980541" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
-<node TEXT="Modifiers (icons)" ID="ID_1187481530" CREATED="1651847434595" MODIFIED="1651847434595" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
+<node TEXT="ToM commands" FOLDED="true" ID="ID_1498583442" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
+<node TEXT="ToM commands" ID="ID_703218195" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
+<node TEXT="Styles" ID="ID_1833539966" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
+<node TEXT="Commands I" ID="ID_1037123993" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
+<node TEXT="Commands II" ID="ID_593767556" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
+<node TEXT="Commands III" ID="ID_565980541" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
+<node TEXT="Modifiers (icons)" ID="ID_1187481530" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 </node>
 </node>
 </node>

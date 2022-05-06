@@ -1,7 +1,10 @@
 <map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
+<attribute_registry SHOW_ATTRIBUTES="selected">
+    <attribute_name VISIBLE="true" NAME="ToM_TabLabel"/>
+</attribute_registry>
 <node TEXT="Tutorial-o-Matic&#xa;How to&apos;s" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_258304564" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node" MAX_WIDTH="7 cm"><hook NAME="MapStyle" background="#c4e1ff">
-    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" save_folding="save_folding_if_map_is_changed" fit_to_viewport="false"/>
+    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" save_folding="save_folding_if_map_is_changed" fit_to_viewport="false" associatedTemplateLocation="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/HowToTutorial-o-Matic.mm"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1611611797" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -43,8 +46,8 @@ code {
 </stylenode>
 <stylenode TEXT="ToM-Tutorial" ID="ID_52754213" ICON_SIZE="24 pt" COLOR="#000000" BACKGROUND_COLOR="#fbcbbc" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
-<cloud COLOR="#f2ded8" SHAPE="ROUND_RECT"/>
 <attribute NAME="ToM_TabLabel" VALUE=" "/>
+<cloud COLOR="#f2ded8" SHAPE="ROUND_RECT"/>
 </stylenode>
 <stylenode TEXT="ToM_TOC" ID="ID_1160910212" ICON_SIZE="16 pt" COLOR="#000000" BACKGROUND_COLOR="#f5ff95" STYLE="rectangle" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-1F989"/>
@@ -108,6 +111,32 @@ code {
 <icon BUILTIN="emoji-1F517"/>
 <cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
+<stylenode TEXT="ToM_openTutPage" ICON_SIZE="16 pt" STYLE="rectangle" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F989"/>
+<icon BUILTIN="emoji-1F4D6"/>
+<cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
+</stylenode>
+<stylenode TEXT="nextTask" BACKGROUND_COLOR="#ffff33">
+<icon BUILTIN="yes"/>
+<icon BUILTIN="unchecked"/>
+</stylenode>
+<stylenode TEXT="pendingTask" BACKGROUND_COLOR="#99ffff">
+<icon BUILTIN="unchecked"/>
+</stylenode>
+<stylenode TEXT="completedTask" COLOR="#333333" BACKGROUND_COLOR="#cccccc">
+<icon BUILTIN="checked"/>
+<font ITALIC="true"/>
+</stylenode>
+<stylenode TEXT="discardedTask" COLOR="#666666" BACKGROUND_COLOR="#cccccc">
+<icon BUILTIN="Descartado"/>
+<font ITALIC="true"/>
+</stylenode>
+<stylenode TEXT="containsNextTasks" BACKGROUND_COLOR="#eaea86">
+<icon BUILTIN="emoji-1F7E5"/>
+</stylenode>
+<stylenode TEXT="containsPendingTasks" BACKGROUND_COLOR="#b5d7d7">
+<icon BUILTIN="emoji-23F9"/>
+</stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" ID="ID_1618325545" COLOR="#000000" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 pt" SHAPE_VERTICAL_MARGIN="10 pt" UNIFORM_SHAPE="true" MAX_WIDTH="4 cm" MIN_WIDTH="1 cm">
@@ -145,37 +174,62 @@ code {
 <node TEXT="greetings" ID="ID_26985145">
 <node TEXT="Welcome to Tutorial-o-Matic !!" STYLE_REF="ToM_newPage" ID="ID_1522236279"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_365713608">
-<node TEXT="Hi" STYLE_REF="markdownNote" ID="ID_683860354"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>## Hi!!
-
-In this tutorial I will try to show you how to create your own tutorials.</text>
-</richcontent>
-</node>
-<node TEXT="This tut .." STYLE_REF="markdownNote" ID="ID_1457460843"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="welcome" LOCALIZED_STYLE_REF="default" ID="ID_552233343">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
   </head>
   <body>
     <p>
+      ## Hi!!
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      This guide contains brief **explanations of all commands and building blocks** you can use to build a Tutorial.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      I recommend you to do the **&quot;Step by Step&quot; tutorials first** and use this document as a guide afterwards.
+    </p>
+    <p>
+      
+    </p>
+    <p>
       This tutorial is for users that have some experience using Freeplane.
     </p>
+    <p>
+      
+    </p>
+    <p>
+      I hope you enjoy this!
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &nbsp;&nbsp;
+    </p>
+    <p>
+      ### Edo
+    </p>
+    <p>
+      
+    </p>
   </body>
-</html></richcontent>
-</node>
-<node TEXT="bye" STYLE_REF="markdownNote" ID="ID_1162775021"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>I hope you enjoy this!
-
-  
-### Edo
-</text>
+</html>
 </richcontent>
 </node>
 </node>
 </node>
 <node TEXT="about the tutorials" ID="ID_518514585">
 <node TEXT="GOTO" STYLE_REF="ToM_goto" ID="ID_1175739617">
-<node TEXT="How to create a tutorial" ID="ID_575735637" LINK="#ID_899848243">
+<node TEXT="How to create a tutorial" STYLE_REF="markdownNote" ID="ID_575735637" LINK="#ID_899848243">
 <font NAME="SansSerif"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -184,15 +238,15 @@ In this tutorial I will try to show you how to create your own tutorials.</text>
   </head>
   <body>
     <p>
-      In this section is a brief explanation about all the building components used to build tutorials with Tutorial-o-Matic.
-    </p>
-    <p>
-      I recommend to do the tutorials to fully understand this section.
+      In this section you can see the commands used to **create new tutorials** in a new or an existing mindmap.
     </p>
   </body>
 </html></richcontent>
 </node>
-<node TEXT="How to add actions to a tutorial" ID="ID_1124301748" LINK="#ID_373851194"/>
+<node TEXT="How to add actions to a tutorial" STYLE_REF="markdownNote" ID="ID_1124301748" LINK="#ID_373851194"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>In this section you can see the commands used to add new **actions** to your tutorials.</text>
+</richcontent>
+</node>
 </node>
 </node>
 </node>
@@ -202,57 +256,126 @@ In this tutorial I will try to show you how to create your own tutorials.</text>
 <attribute_layout NAME_WIDTH="81.75 pt" VALUE_WIDTH="89.25 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE=" ToM - How to (1)"/>
 <node TEXT="temas" ID="ID_1725860032">
-<node TEXT="General explanation" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_224410103">
+<node TEXT="General explanation" STYLE_REF="ToM_newPage" ID="ID_224410103">
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_581981021">
-<node TEXT="general explanation" ID="ID_787197159"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="general..." ID="ID_986725795">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      <b>Tutorial-o-Matic</b>&nbsp;use mindmaps to store the tutorial's information.
+      # How does ToM works?
     </p>
     <p>
-      To understand how to build a tutorial and its structure <b>Tutorial-o-Matic</b>&nbsp;needs that the map has some <u>special user styles.</u>
+      
+    </p>
+    <p>
+      **Tutorial-o-Matic** use mindmaps to store the tutorial's information.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      To understand how to display a tutorial and its structure **Tutorial-o-Matic** needs that the map has some _special user styles_.&nbsp;&nbsp;
     </p>
     <p>
       It looks after the nodes that have such styles and builds the pages of the tutorials by using those nodes and their children information.
     </p>
     <p>
-      All other nodes are ignorated and you can use them to organize your tutorial, add notes and other information that won't be shown in the tutorial.
+      
     </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="make a tutorial" ID="ID_1917166166"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
     <p>
-      The best way to learn how to use this add-on is to <b><u>make a tutorial by yourself</u></b>.
+      All other nodes are ignored and you can use them to organize your tutorial, add notes and other information that won't be shown in the tutorial.
     </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="in the next pages ..." ID="ID_1069003121"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
     <p>
-      In the <u>following pages</u>&nbsp;you can see a brief explanation about all the <u>building components</u>&nbsp;used to build tutorials with <b>Tutorial-o-Matic</b>.
+      
+    </p>
+    <p>
+      The best way to learn how to use this add-on is to make the **'Step by step' tutorial** by yourself.
     </p>
     <p>
       
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
+</node>
+<node TEXT="good to know.." ID="ID_1289826807">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Good to know ...
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      This is not a real tutorial, it's more like a guide.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      For example, for each &quot;building block&quot;, there is a brief an explanation and **multiple buttons** with different actions.&nbsp;&nbsp;
+    </p>
+    <p>
+      You **don't need to click on all** of them. More preciselly, you don't need to click any of them if you don't want to.&nbsp;&nbsp;
+    </p>
+    <p>
+      They **are the different alternatives** you can use to insert those building blocks in a tutorial mindmap.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      For example, there are buttons to:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      * see where in Freeplane's menu you can find the command to apply that style
+    </p>
+    <p>
+      * apply the style directly to the currently selected node
+    </p>
+    <p>
+      * insert a new node with that style as a child of the currently selected node.&lt;br&gt;The node has no text and it's ready to type in it.
+    </p>
+    <p>
+      * insert a new node with a predefined style and text as a child of the currently selected node
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      As you can see they are very similar and you can choose which is the one that matches you best.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="in the next pages ..." STYLE_REF="markdownNote" ID="ID_1069003121"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>In the following pages you can see a brief explanation about how to create a tutorial with **Tutorial-o-Matic**.
+
+
+This guide&apos;s &quot;**Table of Contents**&quot; :
+</text>
+</richcontent>
 </node>
 </node>
+<node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_1564020664"/>
 </node>
 <node TEXT="Create a new mind map ready to contain tutorials" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_357294588">
 <node TEXT="create new map" ID="ID_987697295">
@@ -942,7 +1065,7 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
 </node>
 </node>
 </node>
-<node TEXT="How to add actions to a tutorial" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_373851194">
+<node TEXT="How to add actions to a tutorial" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_373851194">
 <icon BUILTIN="emoji-1F58D"/>
 <font NAME="SansSerif"/>
 <attribute_layout NAME_WIDTH="81.75 pt" VALUE_WIDTH="89.25 pt"/>
@@ -979,59 +1102,175 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
   </body>
 </html></richcontent>
 </node>
-<node TEXT="Add actions to a tutorial" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1128437346">
+<node TEXT=" Introduction: Adding actions to a tutorial" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1128437346">
 <node TEXT="Text" STYLE_REF="ToM_note" ID="ID_815866288">
-<node TEXT="actions" ID="ID_842946312"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="actions.md" ID="ID_978048528">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      You can add multiple actions to your tutorial by using the following special styles:
+      # Tutorial-o-Matic styles
     </p>
-    <div style="background-color: #f9f9b9; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0">
-      <div style="background-color: #ffffff">
-        <ul>
-          <li>
-            ToM_showMenu
-          </li>
-          <li>
-            ToM_goto
-          </li>
-          <li>
-            ToM_groovy
-          </li>
-          <li>
-            ToM_menuAction
-          </li>
-          <li>
-            ToM_copy
-          </li>
-          <li>
-            ToM_select
-          </li>
-          <li>
-            ToM_openMap
-          </li>
-          <li>
-            ToM_openTutMap
-          </li>
-          <li>
-            ToM_showNode
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div style="background-color: #f9f9b9; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0">
-      <div style="background-color: #ffffff">
-        
-      </div>
-    </div>
+    <p>
+      
+    </p>
+    <p>
+      You can add multiple **actions** to your tutorial by using the following **special styles**:&nbsp;&nbsp;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &nbsp;&nbsp;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      |Style|tutorial &quot;action&quot;|
+    </p>
+    <p>
+      |----|----|
+    </p>
+    <p>
+      |ToM_showMenu|You can make that **ToM** shows **where in the menu** the user can find a specific command.|
+    </p>
+    <p>
+      |ToM_menuAction|You can add to your tutorial buttons that **apply menu actions**.|
+    </p>
+    <p>
+      |ToM_groovy|You can add to your tutorial panels that show blocks of **groovy code ** &lt;br&gt;and / or &lt;br&gt;**buttons** that apply those **groovy scripts** to the selected nodes.|
+    </p>
+    <p>
+      |ToM_goto|You can add&nbsp;&nbsp;buttons to **jump to other tutorial pages** in the same mindmap (and jump back).|
+    </p>
+    <p>
+      |ToM_copy|You can add actions to **insert example nodes** or specific node structures **to the user's mindmap**.|
+    </p>
+    <p>
+      |ToM_select|After inserting an example branch, you can have a **button that selects the nodes** that you want so the user can easily go further with the tutorial.|
+    </p>
+    <p>
+      |ToM_openMap|You can add a button to **open other mindmaps** needed for the tutorial|
+    </p>
+    <p>
+      |ToM_openTutMap|You can add an &quot;_**inspect**_&quot; button to the tutorial that directly goes to the map that &lt;br&gt;contains the current tutorial information and selects the node where the current page starts.|
+    </p>
+    <p>
+      |ToM_showNode|You can add a button to **show nodes** in the same or in another MindMap.&lt;br&gt;It may be any node. It doesn't need to be in a tutorial.|
+    </p>
+    <p>
+      |ToM_openTutPage|You can add buttons to **open other tutorials** or **tutorial's pages** from the same or another mindmap.|
+    </p>
+    <p>
+      
+    </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
+</node>
+<node TEXT="good to know.." ID="ID_355332958">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Good to know ...
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      This is not a real tutorial, it's more like a guide.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      For each &quot;action&quot;, there is a brief an explanation and **multiple buttons** with different actions.&nbsp;&nbsp;
+    </p>
+    <p>
+      You **don't need to click on all** of them. More preciselly, you don't need to click any of them if you don't want to.&nbsp;&nbsp;
+    </p>
+    <p>
+      They **are the different alternatives** you can use to insert those actions in a tutorial mindmap.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      For example, there are buttons to:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      * see where in Freeplane's menu you can find the command to apply that style
+    </p>
+    <p>
+      * apply the style directly to the currently selected node
+    </p>
+    <p>
+      * insert a new node with that style as a child of the currently selected node.&lt;br&gt;The node has no text and it's ready to type in it.
+    </p>
+    <p>
+      * insert a new node with a predefined style and text as a child of the currently selected node
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      As you can see they are very similar and you can choose which is the one that matches you best.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="in the next pages ..." ID="ID_565729330">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # In this guide ...
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      In the following pages, you can see a brief explanation about all the **building components**&nbsp;
+    </p>
+    <p>
+      used to **add actions** to your tutorials with **Tutorial-o-Matic**.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      This guide's &quot;**Table of Contents**&quot; :
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
 </node>
+<node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_1875841449"/>
 </node>
 <node TEXT="ToM_showMenu" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_984638726">
 <node TEXT="Text" STYLE_REF="ToM_note" ID="ID_1025712010">
@@ -1048,7 +1287,7 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
 </html></richcontent>
 </node>
 <node TEXT="feature &quot;show menu&quot;" STYLE_REF="markdownNote" ID="ID_487821147"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can make that **ToM** shows where in the menu the user can find a specific command.
+    <text>You can make that **ToM** shows **where in the menu** the user can find a specific command.
 
 </text>
 </richcontent>
@@ -1057,8 +1296,8 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
     <text>## Steps&#xd;
 &#xd;
 * Add a node with style &quot;**ToM_showMenu**&quot;&#xd;
-* Add **child nodes** with **links to menu commands** you want to show&#xd;
-  * The text of that nodes are not used&#xd;
+* Add **child node(s)** with **link(s) to the menu command(s)** you want to show&#xd;
+  * The text of that nodes is not used&#xd;
 &#xd;
 </text>
 </richcontent>
@@ -1245,17 +1484,9 @@ Steps:&#xd;
   </body>
 </html></richcontent>
 </node>
-<node TEXT="execute actions" ID="ID_305144913"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      You can add to your tutorial buttons that apply menu actions.
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="execute actions" STYLE_REF="markdownNote" ID="ID_305144913"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add to your tutorial buttons that **apply menu actions**.</text>
+</richcontent>
 </node>
 <node TEXT="steps" STYLE_REF="markdownNote" ID="ID_1636751547"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>## Steps&#xd;
@@ -1439,9 +1670,9 @@ commands without showing menus or hotkeys&#xd;
 </html></richcontent>
 </node>
 <node TEXT="execute groovy" STYLE_REF="markdownNote" ID="ID_910851138"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add to your tutorial panels that show blocks 
-of **groovy code ** and / or **buttons** that apply those
-**groovy scripts** to the selected nodes.</text>
+    <text>You can add to your tutorial panels that show blocks of **groovy code ** 
+and / or 
+**buttons** that apply those **groovy scripts** to the selected nodes.</text>
 </richcontent>
 </node>
 <node TEXT="modifiers intro" STYLE_REF="markdownNote" ID="ID_1825677422"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
@@ -1618,7 +1849,7 @@ gets disabled</text>
 </html></richcontent>
 </node>
 <node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_1509887457"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add  buttons to jump to other tutorial pages
+    <text>You can add  buttons to **jump to other tutorial pages** in the same mindmap (and jump back).
 
 </text>
 </richcontent>
@@ -1751,17 +1982,49 @@ modifiers&#xd;
   </body>
 </html></richcontent>
 </node>
-<node TEXT="inserting nodes" STYLE_REF="markdownNote" ID="ID_32974307"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>When building a tutorial you can add predefined nodes &#xd;
-or branches of nodes&#xd;
-that the user can insert in his/her own map.&#xd;
-&#xd;
-  &#xd;
-The user can copy those nodes directly to his/her selected a node in his/her own map.&#xd;
-&#xd;
-It can be used to insert example nodes or specific node structures.&#xd;
-&#xd;
-</text>
+<node TEXT="TomCopy.md" ID="ID_1245835898">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      When building a tutorial you can add **predefined nodes&nbsp;
+    </p>
+    <p>
+      or branches of nodes**
+    </p>
+    <p>
+      that the user can **insert in his/her own map**.
+    </p>
+    <p>
+      &nbsp;&nbsp;
+    </p>
+    <p>
+      The user can copy those nodes directly to his/her own map as childs of the selected node.&nbsp;&nbsp;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      In other words:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      You can add actions to **insert example nodes** or specific node structures **to the user's mindmap**.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
 </richcontent>
 </node>
 <node TEXT="steps" STYLE_REF="markdownNote" ID="ID_1901791549"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
@@ -1842,9 +2105,7 @@ as descendants of that node&#xd;
 </html></richcontent>
 </node>
 <node TEXT="selecting nodes" STYLE_REF="markdownNote" ID="ID_615540997"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>After inserting an example branch, you can have a &#xd;
-button that selects the nodes that you want so &#xd;
-the user can easily go further with the tutorial.&#xd;
+    <text>After inserting an example branch, you can have a **button that selects the nodes** that you want so the user can easily go further with the tutorial.&#xd;
 &#xd;
 </text>
 </richcontent>
@@ -2028,10 +2289,12 @@ as descendants of the &quot;ToM_select&quot; node&#xd;
 </html></richcontent>
 </node>
 <node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_162869244"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add a button to open other maps needed 
-for the tutorial.
-
-Currently that map must be in the same 
+    <text>You can add a button to **open other mindmaps** needed for the tutorial.
+</text>
+</richcontent>
+</node>
+<node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_911299931"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>Currently that map must be in the same 
 directory as the tutorial map
   
   
@@ -2132,13 +2395,8 @@ the mindmap&apos;s name in its text&#xd;
 </html></richcontent>
 </node>
 <node TEXT="inspecting" STYLE_REF="markdownNote" ID="ID_1135096340"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add a button to the tutorial to directly go 
-to the map that 
-contains the tutorial information and select 
-the node that defines the current page.  
-
-  
-  
+    <text>You can add an &quot;_**inspect**_&quot; button to the tutorial that directly goes to the map that 
+contains the current tutorial information and selects the node where the current page starts. 
 </text>
 </richcontent>
 </node>
@@ -2234,12 +2492,10 @@ the node that defines the current page.
   </body>
 </html></richcontent>
 </node>
-<node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_1625216932"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add a button to show nodes in the 
-same or in another MindMap.
+<node TEXT="show nodes" STYLE_REF="markdownNote" ID="ID_1625216932"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add a button to **show nodes** in the same or in another MindMap.
 
-It may be any node. 
-It doesn&apos;t need to be in a tutorial.
+It may be any node. It doesn&apos;t need to be in a tutorial.
 
 </text>
 </richcontent>
@@ -2327,23 +2583,148 @@ The steps are very similar to the &quot;goto&quot; case:&#xd;
 </node>
 </node>
 </node>
-<node TEXT="PENDIENTE!!!" ID="ID_29591071">
-<node TEXT="ToM_openTutPage" STYLE_REF="ToM_newPage" ID="ID_1482753376">
+<node TEXT="ToM_openTutPage" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1482753376">
 <node TEXT="Text" STYLE_REF="ToM_note" ID="ID_1134453267">
-<node TEXT="pendiente" ID="ID_1563301334"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="ToM_openTutPage" ID="ID_481817535"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      PENDIENTE!!!!
+      <font color="#ff0000" size="6"><b>ToM_openTutPage</b></font>
     </p>
   </body>
 </html></richcontent>
 </node>
+<node TEXT="open tutorial pages" STYLE_REF="markdownNote" ID="ID_886740927"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add buttons to **open other tutorials** or **tutorial&apos;s pages** from the same or another mindmap.
+
+</text>
+</richcontent>
 </node>
-<node TEXT="ToM_openTutPage" STYLE_REF="ToM_openTutPage" ID="ID_699720817"/>
+<node TEXT="steps" STYLE_REF="markdownNote" ID="ID_1250372341"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>## Steps&#xd;
+&#xd;
+The steps are very similar to the &quot;goto&quot; case:&#xd;
+&#xd;
+* Add a node with style &quot;ToM_openTutPage&quot;&#xd;
+    * the text of this node, its note &#xd;
+    or details are not shown in the tutorial&#xd;
+    &#xd;
+* Add child nodes with links to other &#xd;
+ToM nodes in the same or to other Mindmaps&#xd;
+  * The text of that nodes are used as the texts &#xd;
+  of the buttons&#xd;
+  * The text of their notes are used as the &#xd;
+  texts of the panels&#xd;
+&#xd;
+  </text>
+</richcontent>
+</node>
+<node TEXT="links examples" ID="ID_942317416">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Linking posibilities
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      You can add nodes with different types of links:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      |type of link|target node|example|opens ...|
+    </p>
+    <p>
+      |----|----|----|----|
+    </p>
+    <p>
+      |Absolute|no node|file:/C:/myMaps/2022/myTutorial.mm|panel with links to all tutorials present in myTutorial.mm|
+    </p>
+    <p>
+      |Absolute| a ToM-Tutorial node|file:/C:/myMaps/2022/myTutorial.mm#ID_1531255396|first page of the selected tutorial in myTutorial.mm|
+    </p>
+    <p>
+      |Absolute| a ToM_newPage node|file:/C:/myMaps/2022/myTutorial.mm#ID_1531254444|the selected page of myTutorial.mm|
+    </p>
+    <p>
+      |Relative|no node|myTutorial.mm|panel with links to all tutorials present in myTutorial.mm&lt;br&gt;that is in the same directory of the active tutorial mindmap.|
+    </p>
+    <p>
+      |Relative| a ToM-Tutorial node|myTutorial.mm#ID_1531255396|first page of the selected tutorial in myTutorial.mm&lt;br&gt;(in the same directory)|
+    </p>
+    <p>
+      |Relative| a ToM_newPage node|myTutorial.mm#ID_1531254444|the selected page of myTutorial.mm&lt;br&gt;(in the same directory)|
+    </p>
+    <p>
+      |to the same map| a ToM-Tutorial node|#ID_1531255223|the selected page of a tutorial from the same map|
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="create a ToM_openTutPage node" LOCALIZED_STYLE_REF="default" ID="ID_699720817">
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1943689326">
+<node TEXT="ToM_openTutPage" ID="ID_637621697" LINK="menuitem:_AssignStyleAction.ToM_openTutPage"/>
+</node>
+<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_688981874">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>= &quot;Assign **${node?.children[0]?.text}** style to selected node(s) directly&quot;.toString()</text>
+</richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &quot;Assign $0 style to selected node(s) directly&quot;
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="ToM_openTutPage" ID="ID_1416338353" LINK="menuitem:_AssignStyleAction.ToM_openTutPage"/>
+</node>
+<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1307758089">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>= &quot;Insert new **${node?.children[1]?.text}** node directly&quot;.toString()</text>
+</richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &quot;Insert new $1 node directly&quot;
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="New child node" ID="ID_718996803" LINK="menuitem:_NewChildAction"/>
+<node TEXT="ToM_openTutPage" ID="ID_1513443467" LINK="menuitem:_AssignStyleAction.ToM_openTutPage"/>
+<node TEXT="Edit node core in-line" ID="ID_1704407363" LINK="menuitem:_EditAction"/>
+</node>
+<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_411118002">
+<font NAME="SansSerif"/>
+<node TEXT="Insert new &apos;openTututorialPage&apos; node directly" ID="ID_1797437629">
+<attribute NAME="script1" VALUE="def nodo = node.createChild(&apos;openTutorialPage&apos;)&#xd;&#xa;nodo.style.name = &apos;ToM_openTutPage&apos;&#xd;&#xa;c.select(nodo)"/>
+</node>
+</node>
 </node>
 </node>
 </node>

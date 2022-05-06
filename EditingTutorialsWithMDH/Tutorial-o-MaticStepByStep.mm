@@ -4,7 +4,7 @@
     <attribute_name VISIBLE="true" NAME="ToM_TabLabel"/>
 </attribute_registry>
 <node TEXT="Tutorial-o-Matic&#xa;Step by Step" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_1090958577" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node"><hook NAME="MapStyle" background="#2e3440" zoom="0.75">
-    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" associatedTemplateLocation="template:/dark_nord_template.mm" save_folding="default" fit_to_viewport="false"/>
+    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" mdhCleanMindmapPath="C:\Users\Edo\Documents\GitHub\Freeplane_Tutorial_AddOn\Tutorial-o-Matic\zips\doc\Tutorial-o-Matic\Tutorial-o-MaticStepByStep.mm" save_modification_times="false" mdhCleanMindmapExportDate="2022-05-06 11:23:12.913-0400" save_last_visited_node="default" show_note_icons="true" associatedTemplateLocation="template:/dark_nord_template.mm" save_folding="default" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1059101550" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -212,6 +212,7 @@ blockquote {
 <attribute_layout NAME_WIDTH="84.75 pt" VALUE_WIDTH="88.5 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE="ToM Step by step"/>
 <node TEXT="greetings" ID="ID_26985145">
+<font SIZE="14"/>
 <node TEXT="Introduction" STYLE_REF="ToM_newPage" ID="ID_1522236279"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_365713608">
 <node TEXT="Markdown document.md" STYLE_REF="MarkdownHelperNode" ID="ID_1169231456">
