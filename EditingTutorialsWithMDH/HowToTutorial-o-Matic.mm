@@ -4,7 +4,7 @@
     <attribute_name VISIBLE="true" NAME="ToM_TabLabel"/>
 </attribute_registry>
 <node TEXT="Tutorial-o-Matic&#xa;How to&apos;s" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_258304564" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node" MAX_WIDTH="7 cm"><hook NAME="MapStyle" background="#c4e1ff">
-    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" mdhCleanMindmapPath="C:\Users\Edo\Documents\GitHub\Freeplane_Tutorial_AddOn\Tutorial-o-Matic\zips\doc\Tutorial-o-Matic\HowToTutorial-o-Matic.mm" save_modification_times="false" mdhCleanMindmapExportDate="2022-05-06 11:22:37.289-0400" save_last_visited_node="default" show_note_icons="true" save_folding="save_folding_if_map_is_changed" fit_to_viewport="false"/>
+    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" mdhCleanMindmapPath="C:\Users\Edo\Documents\GitHub\Freeplane_Tutorial_AddOn\Tutorial-o-Matic\zips\doc\Tutorial-o-Matic\HowToTutorial-o-Matic.mm" save_modification_times="false" mdhCleanMindmapExportDate="2022-05-06 11:54:47.655-0400" save_last_visited_node="default" show_note_icons="true" save_folding="save_folding_if_map_is_changed" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1611611797" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -1087,7 +1087,8 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
       }
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>

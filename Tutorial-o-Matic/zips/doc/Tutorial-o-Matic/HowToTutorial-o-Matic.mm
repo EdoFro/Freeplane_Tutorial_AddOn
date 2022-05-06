@@ -174,9 +174,9 @@ code {
 <node TEXT="greetings" ID="ID_26985145">
 <node TEXT="Welcome to Tutorial-o-Matic !!" STYLE_REF="ToM_newPage" ID="ID_1522236279"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_365713608">
-<node TEXT="welcome" LOCALIZED_STYLE_REF="default" ID="ID_552233343">
+<node TEXT="welcome" ID="ID_552233343">
 <icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
