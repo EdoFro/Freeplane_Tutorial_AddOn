@@ -4,7 +4,7 @@
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <attribute_layout NAME_WIDTH="108 pt" VALUE_WIDTH="262.49999 pt"/>
 <attribute NAME="name" VALUE="tutorialOMatic"/>
-<attribute NAME="version" VALUE="v0.0.6"/>
+<attribute NAME="version" VALUE="v0.0.7"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.9"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -86,7 +86,7 @@
   </body>
 </html>
 </richcontent>
-<hook NAME="MapStyle" background="#f9f9f8" zoom="0.9">
+<hook NAME="MapStyle" background="#f9f9f8" zoom="1.089">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" associatedTemplateLocation="file:/C:/Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/Menu-o-Matic/Menu-o-Matic.mm" show_note_icons="true" save_folding="save_folding_if_map_is_changed" fit_to_viewport="false"/>
 
 <map_styles>
@@ -260,6 +260,7 @@
 <node TEXT="Updated gotoPane to open in corresponding Tab and use withGoBack modifier" ID="ID_1912254700"/>
 <node TEXT="Added openTutorialPage style and pane" ID="ID_1158869821"/>
 </node>
+<node TEXT="v0.0.7" ID="ID_144067667"/>
 </node>
 <node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -450,7 +451,7 @@
 <attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
 <attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;You can also use de keyboard shortcut &lt;b&gt;{0}&lt;/b&gt; for this command&lt;/html&gt;"/>
 <attribute NAME="addons.${name}.openDemoMap" VALUE="open Demo map"/>
-<attribute NAME="addons.${name}.getMenuCommand" VALUE="Get menu command"/>
+<attribute NAME="addons.${name}.getMenuCommandToM" VALUE="Get menu command"/>
 <attribute NAME="addons.${name}.showTutorialsFromActiveMap" VALUE="Show tutorials from active map"/>
 <attribute NAME="addons.${name}.ToMDemo" VALUE="Tutorial-o-Matic Demo"/>
 <attribute NAME="addons.${name}.ToMTutorial" VALUE="Tutorial-o-Matic How to"/>
@@ -468,8 +469,7 @@
     </h3>
     In submenu <b>{0}</b><br/>click on <b>{1}</b>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="es" ID="ID_370825255">
 <attribute_layout NAME_WIDTH="205.49999 pt" VALUE_WIDTH="228.74999 pt"/>
@@ -478,7 +478,7 @@
 <attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
 <attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;Puedes usar también el atajo &lt;b&gt;{0}&lt;/b&gt; para este comando&lt;/html&gt;"/>
 <attribute NAME="addons.${name}.openDemoMap" VALUE="abrir mapa demo"/>
-<attribute NAME="addons.${name}.getMenuCommand" VALUE="Obtener comando desde el menú"/>
+<attribute NAME="addons.${name}.getMenuCommandToM" VALUE="Obtener comando desde el menú"/>
 <attribute NAME="addons.${name}.showTutorialsFromActiveMap" VALUE="Mostrar tutoriales de mapa activo"/>
 <attribute NAME="addons.${name}.ToMDemo" VALUE="Tutorial-o-Matic Demo"/>
 <attribute NAME="addons.${name}.ToMTutorial" VALUE="Como usar Tutorial-o-Matic"/>
@@ -521,6 +521,8 @@
 <attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/Tutorial-o-MaticCommands.mm"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/Tutorial-o-MaticStepByStep.mm"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/openTutorialPageFromLink.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/myExistingMindMap.mm"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/getMenuCommandToM.groovy"/>
 </node>
 <node TEXT="scripts" FOLDED="true" POSITION="right" ID="ID_1037882722"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -675,9 +677,9 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
-<node TEXT="getMenuCommand.groovy" ID="ID_863849079">
+<node TEXT="getMenuCommandToM.groovy" ID="ID_863849079">
 <attribute_layout NAME_WIDTH="204.74999 pt" VALUE_WIDTH="162 pt"/>
-<attribute NAME="menuTitleKey" VALUE="addons.${name}.getMenuCommand"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.getMenuCommandToM"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE="control shift F3"/>

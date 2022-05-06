@@ -50,28 +50,15 @@ dependencies {
     implementation name : 'markedj', version: '+' //<---- para markedj
     implementation name : 'jsoup'  , version: '+' //<---- para jsoup
     //Freeplane now comes with groovy 3.0.8
-    if(FPversion.startsWith('v10')){
-        implementation platform ("${groovyGroupId}:groovy-all:${groovyVersion}".toString()) {
-            exclude group:groovyGroupId, module:'groovy-test'
-            exclude group:groovyGroupId, module:'groovy-test-junit5'
-            exclude group:groovyGroupId, module:'groovy-testng'
-            exclude group:groovyGroupId, module:'groovy-ant'
-            exclude group:groovyGroupId, module:'groovy-docgenerator'
-            exclude group:groovyGroupId, module:'groovy-groovydoc'
-            exclude group:groovyGroupId, module:'groovy-cli-commons'
-            exclude group:groovyGroupId, module:'groovy-cli-picocli'
-        }
-    } else {
-        implementation ("${groovyGroupId}:groovy-all:${groovyVersion}".toString()) {
-            exclude group:groovyGroupId, module:'groovy-test'
-            exclude group:groovyGroupId, module:'groovy-test-junit5'
-            exclude group:groovyGroupId, module:'groovy-testng'
-            exclude group:groovyGroupId, module:'groovy-ant'
-            exclude group:groovyGroupId, module:'groovy-docgenerator'
-            exclude group:groovyGroupId, module:'groovy-groovydoc'
-            exclude group:groovyGroupId, module:'groovy-cli-commons'
-            exclude group:groovyGroupId, module:'groovy-cli-picocli'
-        }    
+    implementation ("${groovyGroupId}:groovy-all:${groovyVersion}".toString()) {
+        exclude group:groovyGroupId, module:'groovy-test'
+        exclude group:groovyGroupId, module:'groovy-test-junit5'
+        exclude group:groovyGroupId, module:'groovy-testng'
+        exclude group:groovyGroupId, module:'groovy-ant'
+        exclude group:groovyGroupId, module:'groovy-docgenerator'
+        exclude group:groovyGroupId, module:'groovy-groovydoc'
+        exclude group:groovyGroupId, module:'groovy-cli-commons'
+        exclude group:groovyGroupId, module:'groovy-cli-picocli'
     }
     implementation "${groovyGroupId}:groovy-dateutil:${groovyVersion}".toString()
 }

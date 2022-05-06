@@ -181,7 +181,8 @@ class ToM_actions{
         def path
 
         // ver si hijos leaf contiene accion
-        def menuCommand = mTree.children.findAll{it.leaf}?.find{it.userObject.key == miAccion}
+        //def menuCommand = mTree.children.findAll{it.leaf}?.find{it.userObject.key == miAccion}     //JAVA 8
+        def menuCommand = mTree.children().findAll{it.leaf}?.find{it.userObject.key == miAccion} //JAVA 17
         // alguno?
         if (menuCommand){
                 // devolver MenuEntry
@@ -190,7 +191,7 @@ class ToM_actions{
 
         // no
             // sacar lista hijos no leaf
-        def hijosNoLeaf = mTree.children.findAll{!it.leaf}
+        def hijosNoLeaf = mTree.children().findAll{!it.leaf}
         // si hay
         if (hijosNoLeaf){
             // recursivo

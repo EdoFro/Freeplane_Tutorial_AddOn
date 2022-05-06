@@ -207,7 +207,7 @@ blockquote {
 <font BOLD="true"/>
 <attribute_layout NAME_WIDTH="84.75 pt" VALUE_WIDTH="99 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE="ToM Step by step"/>
-<node TEXT="Introduction" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_839819820">
+<node TEXT="Introduction" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_839819820">
 <icon BUILTIN="emoji-1F58D"/>
 <attribute_layout NAME_WIDTH="84.75 pt" VALUE_WIDTH="88.5 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE="ToM Step by step"/>
@@ -573,8 +573,7 @@ Let&apos;s see our first tutorial!!&#xd;
       Apply the style to the node:
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="Show tutorials from active map" ID="ID_1087925679" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node">
 <icon BUILTIN="emoji-1F525"/>
@@ -673,8 +672,7 @@ Let&apos;s put some information in the tutorial now!!&#xd;
       </li>
     </ol>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="You can do those steps by yoursel and skip to the next page or" ID="ID_506987333"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -686,8 +684,7 @@ Let&apos;s put some information in the tutorial now!!&#xd;
       You can do those steps by yourself and skip to the next page or use the following buttons to let ToM do the steps for you.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="x" ID="ID_1376331876">
@@ -713,8 +710,7 @@ Let&apos;s put some information in the tutorial now!!&#xd;
       Ok. Let's apply the style to the node:
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="nodes to copy" STYLE_REF="ToM_copy" ID="ID_1622803215">
@@ -742,8 +738,7 @@ Let&apos;s put some information in the tutorial now!!&#xd;
       Write something and click <b>OK</b>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="Show tutorials from active map" ID="ID_1593510320" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node">
 <icon BUILTIN="emoji-1F525"/>
@@ -789,8 +784,7 @@ Let&apos;s see our first tutorial!!&#xd;
       The notes in the child nodes can be written using <b>plain text</b>, <b>Html</b>&nbsp;or <b>Markdown</b>, just as usual.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -869,8 +863,7 @@ Let&apos;s see our first tutorial!!&#xd;
       because it's not a direct child
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>The ![Bear.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Bear.png), the ![Corgi.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png) and the ![Deer.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Deer.png) are from **[Graphic Burger](https://graphicburger.com/)** and can be found [here](https://graphicburger.com/71-free-animal-icons/).</text>
 </richcontent>
@@ -972,8 +965,7 @@ Let&apos;s see our first tutorial!!&#xd;
       &quot;$0 &quot;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="Show tutorials from active map" ID="ID_115346832" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node">
 <icon BUILTIN="emoji-1F525"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
@@ -1089,8 +1081,7 @@ To close the **Styles manager** just press **escape** or click &quot;**OK**&quot
       OK. Let's import the <b><font color="#0000c0">Tutorial-o-Matic</font></b>&nbsp;styles
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1052702502">
@@ -1196,8 +1187,7 @@ In the following page we will add a sample tutorial, so we can see that it works
       Edo
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="markdown table" ID="ID_1729395353"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>## Table example&#xd;
@@ -1289,7 +1279,7 @@ Let&apos;s see our first tutorial!!&#xd;
 </node>
 </node>
 </node>
-<node TEXT="Tutorial 2" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_243365661">
+<node TEXT="Tutorial 3: organizing a tutorial in multiple pages" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_243365661">
 <icon BUILTIN="emoji-1F58D"/>
 <attribute NAME="ToM_TabLabel" VALUE=" ToM tut 2"/>
 <node TEXT="second tutorial" ID="ID_168997337"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
