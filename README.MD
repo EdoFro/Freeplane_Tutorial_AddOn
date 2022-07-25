@@ -27,6 +27,7 @@ nullPendientesnull
             - [ ] Crear mapa Tutorial-o-MaticStepByStepActions.mm
                - Tutoriale.acciones
                   - [ ] ToM_showMenu
+               - [x] Hacer que se copia a carpeta docs
             - [ ] script de ayuda que llame a funcionalidad MDH para copiar mapas MDH clean
                - [ ] *debe además quitar "Crayon" de mapa?*
                - [ ] *si mapa no tiene nodos MDH, debería copiarlo igualmente, para asegurar que todos los mapas que están en una carpeta se copian a la otra definitiva*
@@ -36,8 +37,23 @@ nullPendientesnull
                - [ ] Tutorial Crayon
                - [ ] **Tutorial : organizing a tutorial in multiple pages (working on it)**
                   - [ ] **Ojo:<br>puede ser que requiera que sea copiado pra poder usar opción "select node"**
+                  - [x] create example tutorial map one long page
+                     - [x] crear mapa nuevo
+                     - [x] agregarle ToM Styles
+                     - [x] copiarle Origami tut
+                     - [x] exportable a carpeta zip sin MDH
                - [ ] Link a tutoriales Acciones en WIP
+               - [x] Tutorial 1: one page tutorial in a new mindmap
+               - [x] Tutorial 2: one page tutorial in an existing mindmap
          - [ ] Mejorar ReadMe.MD
+         - ToM
+            - ToM addon
+               - [x] actualizar changeLog
+                  - [x] cambié getMenuCommandToM
+                  - [x] tuve que crear nueva versión para superar bug de children vs children()
+                     - [x] actualizar texto versiones en estos nodos
+            - build.gradle
+               - [x] usar build.gradle para java 17
    - ToM Future A
       - Freepla.Tutoria.Add.On
          - ToM
@@ -55,6 +71,7 @@ nullPendientesnull
                      - [ ] ToM_openMap: debe usar texto de la nota del nodo
                   - ToM_showNode
                      - [ ] ToM_showNode: se usa el texto de los nodo hijos para armar el texto del panel (REVISAR)
+                        - [ ] *<del>revisar</del>*
                   - ToM_openTutMap
                      - [ ] ToM_openTutMap: debería usar texto de nota y si no existe tirar el texto por default
                   - nuevas
