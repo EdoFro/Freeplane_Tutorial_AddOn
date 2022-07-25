@@ -2,6 +2,8 @@
 
 ## v0.0.7
 
+* getMenuCommand renamed to getMenuCommandToM.groovy
+* bugs fix
 
 ## v0.0.6
 

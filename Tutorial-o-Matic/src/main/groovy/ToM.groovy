@@ -631,8 +631,8 @@ class ToM{
         myP.add(pane, tomui.GBC)
     }
 
-    def static addTutorialsPane(myP, ApiMindMap mapa){
-        def nodosTutoriales = mapa.root.find{it.style.name == styles.tutorial && !isBlocked(it) }
+    def static addTutorialsPane(myP, ApiMindMap mapa, nodosTutoriales){
+        //def nodosTutoriales = mapa.root.find{it.style.name == styles.tutorial && !isBlocked(it) }
         if ( nodosTutoriales.size() != 1 ){
             def pane = tomui.createEmptyGridBagPanel()
             def pre  = nodosTutoriales.size() == 0 ? "No t" : "T"
@@ -679,11 +679,19 @@ class ToM{
     }
 
     def static showTutorials(mapa){
-        def tutorialTabName = mapa.root[attributeTabLabel] ?: defaultMapTutorialsTabLabel
+        def nodosTutoriales = mapa.root.find{it.style.name == styles.tutorial && !isBlocked(it) }
+        if (!nodosTutoriales){
+            ui.informationMessage( "no tutorials found for mindmap '${mapa.name}'".toString() )
+        }
+        def tutorialTabName
+        if ( nodosTutoriales.size()==1 ) {
+                tutorialTabName = nodosTutoriales[0][attributeTabLabel]
+        }
+        tutorialTabName ?= mapa.root[attributeTabLabel] ?: defaultMapTutorialsTabLabel
         def myP = tomui.getContentPaneFromMyTab(tutorialTabName.toString(), true)
         myP.removeAll()
         tomui.resizeContentPanel(myP,tomui.maxContentPaneHeigth)
-        addTutorialsPane(myP, mapa)
+        addTutorialsPane(myP, mapa, nodosTutoriales)
         tomui.adjustHeight(myP, true)
     }
 

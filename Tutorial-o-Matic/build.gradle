@@ -7,7 +7,7 @@ apply plugin: 'groovy'
 targetCompatibility='1.8'
 
 // 1. I have to define which freeplane version is going to be used to look at the libreries (freeplane and groovy)
-def FPversion = 'v9_15'
+def FPversion = 'v10_1'
 def freeplaneDirs = [
         instaled     : "C:/Program Files/Freeplane",
         protableApps : "C:/PortableApps/FreeplanePortable/App/Freeplane",
@@ -46,7 +46,7 @@ dependencies {
     implementation name : 'freeplanelauncher'
     implementation name : 'freeplaneviewer'
     implementation group: 'org.freeplane.core',   name: 'freeplaneeditor', version:"+"
-    implementation group: 'org.freeplane.script', name: 'plugin', version: '+' 
+    implementation group: 'org.freeplane.script', name: 'plugin', version: '+'
     implementation name : 'markedj', version: '+' //<---- para markedj
     implementation name : 'jsoup'  , version: '+' //<---- para jsoup
     //Freeplane now comes with groovy 3.0.8

@@ -4,7 +4,7 @@
     <attribute_name VISIBLE="true" NAME="ToM_TabLabel"/>
 </attribute_registry>
 <node TEXT="Tutorial-o-Matic&#xa;Step by Step" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_1090958577" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node"><hook NAME="MapStyle" background="#2e3440" zoom="0.75">
-    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" mdhCleanMindmapPath="C:\Users\Edo\Documents\GitHub\Freeplane_Tutorial_AddOn\Tutorial-o-Matic\zips\doc\Tutorial-o-Matic\Tutorial-o-MaticStepByStep.mm" save_modification_times="false" mdhCleanMindmapExportDate="2022-05-06 11:23:12.913-0400" save_last_visited_node="default" show_note_icons="true" associatedTemplateLocation="template:/dark_nord_template.mm" save_folding="default" fit_to_viewport="false"/>
+    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" mdhCleanMindmapPath="C:\Users\Edo\Documents\GitHub\Freeplane_Tutorial_AddOn\Tutorial-o-Matic\zips\doc\Tutorial-o-Matic\Tutorial-o-MaticStepByStep.mm" save_modification_times="false" mdhCleanMindmapExportDate="2022-05-14 13:16:38.541-0400" save_last_visited_node="default" show_note_icons="true" associatedTemplateLocation="template:/dark_nord_template.mm" save_folding="default" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1059101550" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -281,7 +281,7 @@ xx&#xd;
 </node>
 </node>
 </node>
-<node TEXT="Tutorial 1: one page tutorial in a new mindmap" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_511509268">
+<node TEXT="Tutorial 1: one page tutorial in a new mindmap" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_511509268">
 <icon BUILTIN="emoji-1F58D"/>
 <attribute NAME="ToM_TabLabel" VALUE=" ToM tut 1"/>
 <node TEXT="one page tutorial in a new mindmap" ID="ID_1377645550">
@@ -1283,6 +1283,95 @@ Let&apos;s see our first tutorial!!&#xd;
 <node TEXT="Tutorial 3: organizing a tutorial in multiple pages" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_243365661">
 <icon BUILTIN="emoji-1F58D"/>
 <attribute NAME="ToM_TabLabel" VALUE=" ToM tut 2"/>
+<node TEXT="Source" ID="ID_1059972748">
+<node TEXT="https://www.instructables.com/Cute-Origami-Bookmarks/" ID="ID_746617258" LINK="https://www.instructables.com/Cute-Origami-Bookmarks/"/>
+<node TEXT="Long Tutorial example" ID="ID_1524816866" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/LongTutorialExample.mm"/>
+<node TEXT="help scripts" ID="ID_607149913">
+<node TEXT="formatting web image links" ID="ID_817361496"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      def nodos = c.selecteds
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      nodos.each{n -&gt;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;n.text = 'image Origami Bookmarks'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;n.link.text = n.link.text.takeBefore('?') + '?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds'
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html>
+</richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="renaming the MDH nodes" ID="ID_1698589334"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      def nodos = node.find{n -&gt; n.style.name &amp;&amp; n.style.name == 'MarkdownHelperNode' &amp;&amp; n.text == 'Markdown document.md'}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //def n = node
+    </p>
+    <p>
+      nodos.each{ n -&gt;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;def newText = n.children.first().text.split(' ').take(5).join(' ') + ' ...'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;n.text = newText
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html>
+</richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
 <node TEXT="second tutorial" ID="ID_168997337"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -1297,11 +1386,7 @@ Let&apos;s see our first tutorial!!&#xd;
     </p>
   </body>
 </html></richcontent>
-<node TEXT="inserts example node" ID="ID_172850433">
-<node TEXT="add a new Tutorial node" ID="ID_1709360018"/>
-<node TEXT="change tutorials tab" ID="ID_738150415"/>
-<node TEXT="inserts example Tom Text nodes" ID="ID_1350622851"/>
-</node>
+<node TEXT="Opens example tutorial map" ID="ID_582237406"/>
 <node TEXT="test &quot;show map tutorials&quot;" ID="ID_62778532">
 <node TEXT="--&gt; looooong panel ---&gt; new pages!!" ID="ID_1846650812"/>
 </node>

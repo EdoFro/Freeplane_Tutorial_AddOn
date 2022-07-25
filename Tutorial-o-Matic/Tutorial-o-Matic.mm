@@ -244,7 +244,7 @@
 <node TEXT="v0.0.5" FOLDED="true" ID="ID_1381773414">
 <node TEXT="use look and feel specific colors (dpolivaev)" ID="ID_1429862191"/>
 </node>
-<node TEXT="v0.0.6" ID="ID_1444474192">
+<node TEXT="v0.0.6" FOLDED="true" ID="ID_1444474192">
 <node TEXT="using devtools v0.9.31" ID="ID_1084561560"/>
 <node TEXT="added &quot;editing status&quot; to tutorial node (crayon icon)" ID="ID_710909877"/>
 <node TEXT="Added command &quot;get menu command&quot;" ID="ID_498503125"/>
@@ -260,7 +260,10 @@
 <node TEXT="Updated gotoPane to open in corresponding Tab and use withGoBack modifier" ID="ID_1912254700"/>
 <node TEXT="Added openTutorialPage style and pane" ID="ID_1158869821"/>
 </node>
-<node TEXT="v0.0.7" ID="ID_144067667"/>
+<node TEXT="v0.0.7" ID="ID_144067667">
+<node TEXT="getMenuCommand renamed to getMenuCommandToM.groovy" ID="ID_1910643500"/>
+<node TEXT="bugs fix" ID="ID_1389797512"/>
+</node>
 </node>
 <node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -412,7 +415,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_546877695"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="translations" FOLDED="true" POSITION="left" ID="ID_546877695"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -523,6 +526,7 @@
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/openTutorialPageFromLink.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/myExistingMindMap.mm"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/getMenuCommandToM.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/LongTutorialExample.mm"/>
 </node>
 <node TEXT="scripts" FOLDED="true" POSITION="right" ID="ID_1037882722"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>

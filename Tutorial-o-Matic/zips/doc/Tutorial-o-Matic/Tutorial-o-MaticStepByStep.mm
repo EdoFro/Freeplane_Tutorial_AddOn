@@ -184,6 +184,7 @@
 <attribute_layout NAME_WIDTH="84.75 pt" VALUE_WIDTH="88.5 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE="ToM Step by step"/>
 <node TEXT="greetings" ID="ID_26985145">
+<font SIZE="14"/>
 <node TEXT="Introduction" STYLE_REF="ToM_newPage" ID="ID_1522236279"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_365713608">
 <node TEXT="Markdown document.md" ID="ID_1169231456">
@@ -1349,6 +1350,907 @@ Let&apos;s see our first tutorial!!&#xd;
 <node TEXT="Tutorial 3: organizing a tutorial in multiple pages" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_243365661">
 <icon BUILTIN="emoji-1F58D"/>
 <attribute NAME="ToM_TabLabel" VALUE=" ToM tut 2"/>
+<node TEXT="Source" ID="ID_1059972748">
+<node TEXT="https://www.instructables.com/Cute-Origami-Bookmarks/" ID="ID_746617258" LINK="https://www.instructables.com/Cute-Origami-Bookmarks/"/>
+<node TEXT="Cute Origami Bookmarks" ID="ID_688502853">
+<node TEXT="intro" STYLE_REF="ToM_newPage" ID="ID_1575387327"/>
+<node TEXT="introduction" STYLE_REF="ToM_note" ID="ID_263121425">
+<node TEXT="Markdown document.md" ID="ID_683250304">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Cute Origami Bookmarks
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="web Image" ID="ID_740204247">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      ![image Origami Bookmarks](https://content.instructables.com/ORIG/FEG/OIPK/L06PT77G/FEGOIPKL06PT77G.jpg?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds)
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Markdown document.md" ID="ID_963852895">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Hello internet people, today I will show you how to create corner bookmarks out of coloured paper. They always turn out really cute and they're perfect for giving as gifts :)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Markdown document.md" ID="ID_1406169313">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Although these are very easy and simple crafts, it can be hard to get some creative inspiration to figure out how you want to design them. I will also give some tips that I think will be helpful.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Markdown document.md" ID="ID_109121502">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      I made the bookmarks shown above earlier, but for this instructable I am going to make some new and fresh ones.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="Supplies" ID="ID_1686943517"/>
+<node TEXT="Supplies" STYLE_REF="ToM_note" ID="ID_1385038564">
+<node TEXT="# Supplies ..." ID="ID_1853123878">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Supplies
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="web Image" ID="ID_318833000">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      ![image Origami Bookmarks](https://content.instructables.com/ORIG/FDD/YAIK/L06PT6OG/FDDYAIKL06PT6OG.jpg?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds)
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="To make these bookmarks you ..." ID="ID_1922664816">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      To make these bookmarks you will need:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      - A ruler (at least 10cm or 4in)
+    </p>
+    <p>
+      - A pencil
+    </p>
+    <p>
+      - Scissors
+    </p>
+    <p>
+      - Paper or card (a few different colours)
+    </p>
+    <p>
+      - Glue stick or squeezy glue
+    </p>
+    <p>
+      - Some inspiration for bookmark designs
+    </p>
+    <p>
+      - A will to cut and stick paper
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Optional: ..." ID="ID_1673643812">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Optional:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      - Black pen
+    </p>
+    <p>
+      - Coloured pencils/markers
+    </p>
+    <p>
+      - Paper knife/cutter (for scoring card)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="Step 1: Decide Your Design" ID="ID_951257386">
+<node TEXT="Step 1: Decide Your Design" STYLE_REF="ToM_note" ID="ID_37098714">
+<node TEXT="# Step 1: Decide Your ..." ID="ID_390199617">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Step 1: Decide Your Design
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="First, decide what design you ..." ID="ID_1494000720">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      First, decide what design you would like to make: I mainly make different types of animals, but you could also make humans or your favourite (book) characters. However, if you are feeling spontaneous, it is perfectly fine to not plan any design at all!
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Make sure that you have ..." ID="ID_781344733">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Make sure that you have paper in the necessary colours and sizes to make your design, or you might become very disappointed when you realise you are missing something :/
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="Step 2: Measure and Cut Paper" ID="ID_28252139">
+<node TEXT="Step 2: Measure and Cut Paper" STYLE_REF="ToM_note" ID="ID_1292507038">
+<node TEXT="# Step 2: Measure and ..." ID="ID_496934883">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Step 2: Measure and Cut Paper
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="We are now going to ..." ID="ID_31704274">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      We are now going to make the base of the bookmark.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="To do this, you need ..." ID="ID_683632142">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      To do this, you need to measure out a square piece of paper that is (at least) 10cm each side -- a bookmark smaller than this will probably be difficult to fold and decorate. 10cm is roughly 4 inches.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Use your ruler to measure ..." ID="ID_1168372988">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Use your ruler to measure out 10cm from each side, then mark it with a pencil.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ![image Origami Bookmarks](https://content.instructables.com/ORIG/FE7/N8W6/L06PT6OX/FE7N8W6L06PT6OX.jpg?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds&amp;md=aaaf0b8a070a15f59177952615be4a7c)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Draw two faint lines connecting ..." ID="ID_179596623">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Draw two faint lines connecting the marks you made.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ![image Origami Bookmarks](https://content.instructables.com/ORIG/FOK/9C7Z/L06PT6OY/FOK9C7ZL06PT6OY.jpg?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds&amp;md=fd3e2ca353277244ec55143f1950ddd5)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Cut through the lines as ..." ID="ID_610056273">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Cut through the lines as accurately as you can.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ![image Origami Bookmarks](https://content.instructables.com/ORIG/F0D/OFSO/L06PT6OZ/F0DOFSOL06PT6OZ.jpg?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds&amp;md=04c3a616a3d7923f2a961440522628ca)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Realise that the end size ..." ID="ID_95682560">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Realise that the end size of the bookmark will be a quarter of the square's area... this can help you decide how big to cut your square. Also, if you already have a square piece of paper that is a suitable size for you, you can skip this step.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="Step 3: Fold Paper" ID="ID_800957929">
+<node TEXT="Fold Paper" STYLE_REF="ToM_note" ID="ID_1219511013">
+<node TEXT="# Fold Paper ..." ID="ID_331335372">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Step 3: Fold Paper
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="We now have to fold ..." ID="ID_1914437748">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      We now have to fold the paper to make it into a corner bookmark. It might be easier to take a look at the pictures above rather than trying to interpret the instructions.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Fold the square into quarters ..." ID="ID_1448411681">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Fold the square into quarters (fold once horizontally and once vertically.)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ![image Origami Bookmarks](https://content.instructables.com/ORIG/FL6/YUHP/L06PT6P9/FL6YUHPL06PT6P9.jpg?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds&amp;md=34132bf0e55a204f144a7a8a6acf9251)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Fold your paper diagonally once ..." ID="ID_166678504">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Fold your paper diagonally once to make a triangle. Rotate it so the base is facing upwards.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ![image Origami Bookmarks](https://content.instructables.com/ORIG/FAJ/5KUG/L06PT6PA/FAJ5KUGL06PT6PA.jpg?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds&amp;md=add530039e1b153ced492c86c31636fc)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Fold the bottom corner upwards ..." ID="ID_1941704684">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Fold the bottom corner upwards to make a little pocket (there are two layers -- only fold the top one.)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ![image Origami Bookmarks](https://content.instructables.com/ORIG/FHC/EW5L/L06PT6PB/FHCEW5LL06PT6PB.jpg?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds&amp;md=1f84256ea9c64323167933d3de92ec51)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Fold the left and right ..." ID="ID_94933072">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Fold the left and right corners downwards, to make a smaller square.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ![image Origami Bookmarks](https://content.instructables.com/ORIG/FTE/UEWE/L06PT6PC/FTEUEWEL06PT6PC.jpg?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds&amp;md=93246151a1a78bbc87006e2506bcbe2e)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Tuck the left and right ..." ID="ID_274473014">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Tuck the left and right corners underneath the little pocket you made, and then fold them. You now have the base of your bookmark!
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ![image Origami Bookmarks](https://content.instructables.com/ORIG/FE9/RLNT/L06PT6PD/FE9RLNTL06PT6PD.jpg?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds&amp;md=a88fad583bde511ee08844eb2e9f1676)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="If you are using card, ..." ID="ID_206258478">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      If you are using card, you probably need to score the card first in order to fold it neatly. Use a ruler and a paper knife or cutter to do this. Make sure you do it safely!
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="Step 4: Decorate Bookmark" ID="ID_1252874774">
+<node TEXT="Step 4: Decorate Bookmark" STYLE_REF="ToM_note" ID="ID_1901201606">
+<node TEXT="# Step 4: Decorate Bookmark ..." ID="ID_1590106780">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Step 4: Decorate Bookmark
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="web Image" ID="ID_1826203025">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      ![image Origami Bookmarks](https://content.instructables.com/ORIG/FMV/XRZC/L06PT9QS/FMVXRZCL06PT9QS.jpg?auto=webp&amp;frame=1&amp;fit=bounds&amp;md=d0b67e4507fddf246d311ff018cd22a8)
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="We have now reached the ..." ID="ID_1766164678">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      We have now reached the very fun part, which is decorating your bookmark. If you are a minimalist and/or very lazy, this step may not be necessary and your bookmark is now finished! :)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="As you can see, I ..." ID="ID_1537078655">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      As you can see, I turned the pink bookmark into a slightly creepy axolotl, by sticking some gills to the back and making blue eyes.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Tips for decorating your bookmarks: ..." ID="ID_1978243443">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Tips for decorating your bookmarks:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      - Cut out small details (eyes, noses, ears, hair, etc.) out of pieces of scrap paper and stick them on.
+    </p>
+    <p>
+      - Use a black pen/fineliner to make some details. It might also be easier to draw eyes with a pen than sticking paper.
+    </p>
+    <p>
+      - You could use coloured pencils/markers to draw on some designs (but this will only work if you draw on light-coloured paper.)
+    </p>
+    <p>
+      - Maybe add texture to spice it up a bit -- feathers and stickers and shiny stuff!
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="If you are adding extra ..." ID="ID_1438996820">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      If you are adding extra parts to your bookmark, keep in mind that some may stick out of the book a bit and maybe get damaged (like the gills on my axolotl.)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="Step 5: Voilà!" ID="ID_864777376">
+<node TEXT="Step 5: Voilà!" STYLE_REF="ToM_note" ID="ID_49219496">
+<node TEXT="# Step 5: Voilà! ..." ID="ID_220500083">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Step 5: Voilà!
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="web Image" ID="ID_1765689165">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      ![image Origami Bookmarks](https://content.instructables.com/ORIG/FTG/QP3N/L06PT76P/FTGQP3NL06PT76P.jpg?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds&amp;md=c7ed44f4d0772f0e72a8e37abc3e6924)
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Congratulations! You have created a ..." ID="ID_1269412138">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Congratulations! You have created a child!
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="I also made a fox ..." ID="ID_1690349168">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      I also made a fox and whale along with my axolotl :)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Now you could gift your ..." ID="ID_612634017">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Now you could gift your creation to anyone who likes to read books. It's also a good idea to make these for kids as they can encourage them to read more. Of course, there is also the option of keeping it for yourself :D
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Thanks for reading my instructable ..." ID="ID_1354090317">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Thanks for reading my instructable -- it is my first one and it has been very fun to make. I hope it was entertaining and somewhat helpful! And also please share some pictures of your children below!
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="help scripts" ID="ID_607149913">
+<node TEXT="formatting web image links" ID="ID_817361496"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      def nodos = c.selecteds
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      nodos.each{n -&gt;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;n.text = 'image Origami Bookmarks'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;n.link.text = n.link.text.takeBefore('?') + '?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds'
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="renaming the MDH nodes" ID="ID_1698589334"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      def nodos = node.find{n -&gt; n.style.name &amp;&amp; n.style.name == 'MarkdownHelperNode' &amp;&amp; n.text == 'Markdown document.md'}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //def n = node
+    </p>
+    <p>
+      nodos.each{ n -&gt;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;def newText = n.children.first().text.split(' ').take(5).join(' ') + ' ...'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;n.text = newText
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
 <node TEXT="second tutorial" ID="ID_168997337"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
