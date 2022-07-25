@@ -1,7 +1,7 @@
 <map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <attribute_registry SHOW_ATTRIBUTES="selected"/>
-<node TEXT="Tutorial-o-Matic" FOLDED="false" ID="ID_1356277378" CREATED="1658707941154" MODIFIED="1658708067553" LINK="file:/C:/Respaldo%20EF/ef/Documentos%20con%20macros/08%20Freemind%20Groovy/scripts/ScriptsEnComputadorYDesarrollosEdo%20v1.9.mm"><hook NAME="MapStyle" background="#f9f9f8" zoom="0.8">
+<node TEXT="Tutorial -o- Matic" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_1356277378" CREATED="1658707941154" MODIFIED="1658709260636" LINK="file:/C:/Respaldo%20EF/ef/Documentos%20con%20macros/08%20Freemind%20Groovy/scripts/ScriptsEnComputadorYDesarrollosEdo%20v1.9.mm" MAX_WIDTH="5.5 cm"><hook NAME="MapStyle" background="#f9f9f8" zoom="0.8">
     <conditional_styles>
         <conditional_style ACTIVE="true" STYLE_REF="file" LAST="false">
             <script_condition>
@@ -322,7 +322,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </stylenode>
 </map_styles>
 </hook>
-<node TEXT="Freeplane_Tutorial_AddOn" STYLE_REF="baseFolder" POSITION="right" ID="ID_1318548517" CREATED="1631470116662" MODIFIED="1658708576838" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/" VGAP_QUANTITY="2 px">
+<node TEXT="Freeplane_Tutorial_AddOn" STYLE_REF="baseFolder" POSITION="right" ID="ID_1318548517" CREATED="1631470116662" MODIFIED="1658710499875" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/" VGAP_QUANTITY="2 px">
 <icon BUILTIN="emoji-1F4B2"/>
 <attribute NAME="nameFilter" VALUE=""/>
 <attribute NAME="maxDepth" VALUE="-1" OBJECT="org.freeplane.features.format.FormattedNumber|-1|#0.####"/>
@@ -332,7 +332,6 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="lastAccessTime" VALUE="02-03-22 19:06" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-02T19:06-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:08" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:08-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
-<attribute NAME="projectCode" VALUE="Freepla.Tutoria.Add.On"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -1124,13 +1123,12 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="fileSize" VALUE="4.986" OBJECT="org.freeplane.features.format.FormattedNumber|4986|#,##0"/>
 </node>
 </node>
-<node TEXT="Tutorial-o-Matic" STYLE_REF="file_folder" ID="ID_198136364" CREATED="1631460354268" MODIFIED="1652109887805" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/">
+<node TEXT="Tutorial-o-Matic" STYLE_REF="file_folder" ID="ID_198136364" CREATED="1631460354268" MODIFIED="1658710562185" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/">
 <attribute NAME="script1" VALUE="def nodo = node&#xd;&#xa;def texto = nodo.text&#xd;&#xa;&#xd;&#xa;def nodos = nodo.find{it.text.contains(texto)}&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;def cambiarA = ui.showInputDialog(&#xd;&#xa;        nodo.delegate, &#xd;&#xa;        &apos;input new AddOn name (it will CamelCase it and delete spaces)&apos;, &#xd;&#xa;        &apos; my new add on example   &apos;&#xd;&#xa;    )?.trim()&#xd;&#xa;&#xd;&#xa;cambiarA = cambiarA.split(&apos; &apos;)*.capitalize().join()&#xd;&#xa;&#xd;&#xa;nodos.each{n -&gt;&#xd;&#xa;    n.text = n.text.replace(texto,cambiarA)&#xd;&#xa;}"/>
 <attribute NAME="lastModifiedTime" VALUE="08-03-22 22:20" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-08T22:20-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:29" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:29-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
-<attribute NAME="projectCode" VALUE="ToM"/>
 <node TEXT="lib" STYLE_REF="Organizador" ID="ID_1868195332" CREATED="1616167740217" MODIFIED="1652110003059">
 <attribute NAME="projectCode" VALUE="lib"/>
 <node TEXT="src" STYLE_REF="file_folder" ID="ID_776042065" CREATED="1616167740217" MODIFIED="1647876628272" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/src/">
@@ -1765,7 +1763,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="ToM_actions.groovy" FOLDED="true" ID="ID_974445068" CREATED="1631477100451" MODIFIED="1652110128791" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/src/main/groovy/ToM_actions.groovy">
+<node TEXT="ToM_actions.groovy" ID="ID_974445068" CREATED="1631477100451" MODIFIED="1652110128791" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/src/main/groovy/ToM_actions.groovy">
 <attribute NAME="lastModifiedTime" VALUE="29-11-21 11:23" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-29T11:23-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:33" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:33-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 17:06" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T17:06-0300|datetime"/>
@@ -3225,7 +3223,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="hola" ID="ID_502074405" CREATED="1636244589972" MODIFIED="1636244593297"/>
 </node>
 </node>
-<node TEXT="pends" FOLDED="true" ID="ID_1986977161" CREATED="1652108424163" MODIFIED="1652108426432">
+<node TEXT="pends" ID="ID_1986977161" CREATED="1652108424163" MODIFIED="1652108426432">
 <node TEXT="modificar" ID="ID_1679664642" CREATED="1652108705242" MODIFIED="1652150037995" VGAP_QUANTITY="2 px">
 <node TEXT="ToM Future B" STYLE_REF="milestone" ID="ID_372498707" CREATED="1652149747378" MODIFIED="1652396745012">
 <node TEXT="Manage errors (message)" STYLE_REF="pendingTask" FOLDED="true" ID="ID_141287878" CREATED="1636379994229" MODIFIED="1652109287356"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -3255,13 +3253,13 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="ToM_showMenu" FOLDED="true" ID="ID_1433447117" CREATED="1647780650523" MODIFIED="1652110409260">
+<node TEXT="ToM_showMenu" ID="ID_1433447117" CREATED="1647780650523" MODIFIED="1652110409260">
 <attribute NAME="projectCode" VALUE="ToM_showMenu"/>
 <node TEXT="ToM Future A" STYLE_REF="milestone" ID="ID_1453155829" CREATED="1652149710143" MODIFIED="1652396745215">
 <node TEXT="ToM_showMenu: tras un par de segundos debe desaparecer" STYLE_REF="pendingTask" ID="ID_55129515" CREATED="1647780678631" MODIFIED="1652103362364"/>
 </node>
 <node TEXT="ToM Future D" STYLE_REF="milestone" ID="ID_421000096" CREATED="1652149677471" MODIFIED="1652396745527">
-<node TEXT="si dos acciones seguidas coinciden en algún menu entonces no se cierra menu completamente" STYLE_REF="maybeTask" FOLDED="true" ID="ID_1993866284" CREATED="1636554516946" MODIFIED="1652059477770">
+<node TEXT="si dos acciones seguidas coinciden en algún menu entonces no se cierra menu completamente" STYLE_REF="maybeTask" ID="ID_1993866284" CREATED="1636554516946" MODIFIED="1652059477770">
 <node TEXT="cierra sólo submenus diferentes" ID="ID_121261361" CREATED="1636554571417" MODIFIED="1636554585302"/>
 <node TEXT="retoma desde submenu coincidente" ID="ID_1742198905" CREATED="1636554588510" MODIFIED="1636554599242"/>
 <node TEXT="ejemplo" ID="ID_626194542" CREATED="1636554611030" MODIFIED="1636555024799" VGAP_QUANTITY="30.75 pt">
@@ -10763,7 +10761,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 </node>
-<node TEXT="scripts" STYLE_REF="file_folder" FOLDED="true" ID="ID_1091793016" CREATED="1616167740367" MODIFIED="1652110009877" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/scripts/" VGAP_QUANTITY="2 px">
+<node TEXT="scripts" STYLE_REF="file_folder" ID="ID_1091793016" CREATED="1616167740367" MODIFIED="1652110009877" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/scripts/" VGAP_QUANTITY="2 px">
 <attribute NAME="lastModifiedTime" VALUE="20-03-22 22:16" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:16-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
@@ -15002,7 +15000,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 </node>
-<node TEXT="doc" STYLE_REF="file_folder" ID="ID_694658276" CREATED="1631461076561" MODIFIED="1652110020120" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="doc" STYLE_REF="file_folder" FOLDED="true" ID="ID_694658276" CREATED="1631461076561" MODIFIED="1652110020120" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
     
@@ -15191,7 +15189,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 <attribute NAME="fileSize" VALUE="42.757" OBJECT="org.freeplane.features.format.FormattedNumber|42757|#,##0"/>
 <attribute NAME="projectCode" VALUE="ToM addon"/>
 <node TEXT="ToM v0.0.7" STYLE_REF="milestone" ID="ID_3775285" CREATED="1652105687183" MODIFIED="1652396751698">
-<node TEXT="actualizar changeLog" STYLE_REF="completedTask" FOLDED="true" ID="ID_140318300" CREATED="1650460733063" MODIFIED="1652496095219" VGAP_QUANTITY="2 px">
+<node TEXT="actualizar changeLog" STYLE_REF="completedTask" ID="ID_140318300" CREATED="1650460733063" MODIFIED="1652496095219" VGAP_QUANTITY="2 px">
 <node TEXT="cambié getMenuCommandToM" STYLE_REF="completedTask" ID="ID_854905705" CREATED="1651505387174" MODIFIED="1652496039377"/>
 <node TEXT="tuve que crear nueva versión para superar bug de children vs children()" STYLE_REF="completedTask" ID="ID_779566366" CREATED="1650373678041" MODIFIED="1652496098872">
 <node TEXT="actualizar texto versiones en estos nodos" STYLE_REF="completedTask" ID="ID_1265053918" CREATED="1650381371484" MODIFIED="1650381600133"/>
@@ -15813,7 +15811,7 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="tareas" ID="ID_1212348476" CREATED="1647876918185" MODIFIED="1647876922180"/>
 </node>
-<node TEXT="Tutorial-o-MaticStepByStep.mm" ID="ID_575180318" CREATED="1649902117225" MODIFIED="1658579862435" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/Tutorial-o-MaticStepByStep.mm">
+<node TEXT="Tutorial-o-MaticStepByStep.mm" FOLDED="true" ID="ID_575180318" CREATED="1649902117225" MODIFIED="1658579862435" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/Tutorial-o-MaticStepByStep.mm">
 <attribute NAME="lastModifiedTime" VALUE="14-05-22 13:54" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-14T13:54-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="17-05-22 10:10" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-17T10:10-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="01-04-22 08:56" OBJECT="org.freeplane.features.format.FormattedDate|2022-04-01T08:56-0300|datetime"/>
@@ -15847,7 +15845,7 @@ contains the current tutorial information and selects the node where the current
 </node>
 </node>
 </node>
-<node TEXT="LongTutorialExample_MDH.mm" STYLE_REF="freshNew" ID="ID_290639313" CREATED="1652550449947" MODIFIED="1658579862461" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/LongTutorialExample_MDH.mm">
+<node TEXT="LongTutorialExample_MDH.mm" ID="ID_290639313" CREATED="1652550449947" MODIFIED="1658709414554" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/LongTutorialExample_MDH.mm">
 <attribute NAME="lastModifiedTime" VALUE="17-05-22 23:04" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-17T23:04-0400|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="19-05-22 16:11" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-19T16:11-0400|datetime"/>
 <attribute NAME="creationTime" VALUE="14-05-22 13:40" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-14T13:40-0400|datetime"/>
@@ -16046,7 +16044,7 @@ contains the current tutorial information and selects the node where the current
 <attribute NAME="fileSize" VALUE="32.790" OBJECT="org.freeplane.features.format.FormattedNumber|32790|#,##0"/>
 </node>
 </node>
-<node TEXT="README.MD" STYLE_REF="MarkdownHelperNode" ID="ID_634612698" CREATED="1658708288421" MODIFIED="1658708706326" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/README.MD">
+<node TEXT="README.MD" STYLE_REF="MarkdownHelperNode" ID="ID_634612698" CREATED="1658708288421" MODIFIED="1658710716730" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/README.MD">
 <edge COLOR="#00007c"/>
 <attribute_layout NAME_WIDTH="135 pt" VALUE_WIDTH="135 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -16180,6 +16178,250 @@ contains the current tutorial information and selects the node where the current
 </node>
 </node>
 </node>
+<node TEXT="Next tasks" ID="ID_1094884343" CREATED="1658709572973" MODIFIED="1658709598806">
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_660622649" CREATED="1658709607906" MODIFIED="1658709607906"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.list(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="Pendientes" STYLE_REF="tasksBucket" ID="ID_1288720582" CREATED="1651983139385" MODIFIED="1658710401298">
+<icon BUILTIN="emoji-1F648"/>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =
+    </p>
+    <p>
+      (node['tasksStyles']?:'pendingTask,nextTask').split(',').collect{st -&gt; &quot;${node.find{it.style.name == st}.size()}&nbsp;&nbsp;${st}(s)&quot;}.join('\n')
+    </p>
+  </body>
+</html></richcontent>
+<attribute NAME="tasksStyles" VALUE="nextTask,pendingTask,maybeTask,discardedTask,completedTask"/>
+<attribute NAME="WIP filter" VALUE="false"/>
+<node TEXT="ToM v0.0.7" FOLDED="true" ID="ID_566160916" CREATED="1658710576132" MODIFIED="1658710576148">
+<node TEXT="ToM addon" STYLE_REF="project" ID="ID_1517452760" CREATED="1658710576148" MODIFIED="1658710576179">
+<node ID="ID_1472049810" CONTENT_ID="ID_140318300">
+<node ID="ID_1389007247" CONTENT_ID="ID_854905705"/>
+<node ID="ID_1430119369" CONTENT_ID="ID_779566366">
+<node ID="ID_1346497535" CONTENT_ID="ID_1265053918"/>
+</node>
+</node>
+</node>
+<node TEXT="build.gradle" STYLE_REF="project" ID="ID_978918372" CREATED="1658710576241" MODIFIED="1658710576273">
+<node ID="ID_1963345564" CONTENT_ID="ID_550611630"/>
+</node>
+<node TEXT="Tuts w/ MDH" STYLE_REF="project" ID="ID_873988366" CREATED="1658710576382" MODIFIED="1658710576398">
+<node ID="ID_839875528" CONTENT_ID="ID_1416052075">
+<node TEXT="Tutoriale.acciones" STYLE_REF="project" ID="ID_877776240" CREATED="1658710576429" MODIFIED="1658710576445">
+<node ID="ID_383389836" CONTENT_ID="ID_1819341805"/>
+</node>
+<node ID="ID_562643997" CONTENT_ID="ID_1659076422"/>
+</node>
+<node ID="ID_1976618214" CONTENT_ID="ID_240259315">
+<node ID="ID_1378620167" CONTENT_ID="ID_478396405"/>
+<node ID="ID_1703227596" CONTENT_ID="ID_441168284"/>
+<node ID="ID_488882018" CONTENT_ID="ID_43682971"/>
+</node>
+<node ID="ID_1330625206" CONTENT_ID="ID_661597345"/>
+<node TEXT="hacer.tutoria.paso.paso" STYLE_REF="project" ID="ID_963668962" CREATED="1658710576750" MODIFIED="1658710576775">
+<node ID="ID_220466180" CONTENT_ID="ID_1629420773"/>
+<node ID="ID_671127403" CONTENT_ID="ID_1038231214"/>
+<node ID="ID_1095100491" CONTENT_ID="ID_32274263"/>
+<node ID="ID_1986995939" CONTENT_ID="ID_74602107">
+<node ID="ID_1546976818" CONTENT_ID="ID_945716565">
+<node ID="ID_1322626556" CONTENT_ID="ID_1052542168"/>
+<node ID="ID_820036375" CONTENT_ID="ID_1023627601"/>
+<node ID="ID_1183990003" CONTENT_ID="ID_274101553"/>
+<node ID="ID_1956124262" CONTENT_ID="ID_542934962"/>
+</node>
+<node ID="ID_620342336" CONTENT_ID="ID_338453155"/>
+</node>
+<node ID="ID_700106290" CONTENT_ID="ID_1114642776"/>
+</node>
+</node>
+<node ID="ID_808159114" CONTENT_ID="ID_1360342935"/>
+</node>
+<node TEXT="ToM Future A" FOLDED="true" ID="ID_960249244" CREATED="1658710574871" MODIFIED="1658710574871">
+<node TEXT="lib" STYLE_REF="project" ID="ID_757896216" CREATED="1658710574871" MODIFIED="1658710574887">
+<node TEXT="ToM_actions.groovy" STYLE_REF="project" ID="ID_1846099481" CREATED="1658710574887" MODIFIED="1658710574902">
+<node TEXT="ToM_showMenu" STYLE_REF="project" ID="ID_1478060106" CREATED="1658710574902" MODIFIED="1658710574918">
+<node ID="ID_1917526349" CONTENT_ID="ID_55129515"/>
+</node>
+<node TEXT="ToM_groovy" STYLE_REF="project" ID="ID_1614979105" CREATED="1658710575007" MODIFIED="1658710575023">
+<node ID="ID_50032792" CONTENT_ID="ID_164174875"/>
+</node>
+<node TEXT="ToM_copy" STYLE_REF="project" ID="ID_1284226600" CREATED="1658710575163" MODIFIED="1658710575179">
+<node ID="ID_1485487825" CONTENT_ID="ID_820486783"/>
+</node>
+<node TEXT="ToM_select" STYLE_REF="project" ID="ID_1438997340" CREATED="1658710575179" MODIFIED="1658710575195">
+<node ID="ID_1361069448" CONTENT_ID="ID_1466466101"/>
+</node>
+<node TEXT="ToM_openMap" STYLE_REF="project" ID="ID_1836874715" CREATED="1658710575210" MODIFIED="1658710575226">
+<node ID="ID_1107023229" CONTENT_ID="ID_205879366"/>
+</node>
+<node TEXT="ToM_showNode" STYLE_REF="project" ID="ID_65600730" CREATED="1658710575242" MODIFIED="1658710575257">
+<node ID="ID_1770692227" CONTENT_ID="ID_1862773774">
+<node ID="ID_732653198" CONTENT_ID="ID_1477223871"/>
+</node>
+</node>
+<node TEXT="ToM_openTutMap" STYLE_REF="project" ID="ID_535452092" CREATED="1658710575273" MODIFIED="1658710575288">
+<node ID="ID_1616920298" CONTENT_ID="ID_1678860903"/>
+</node>
+<node TEXT="nuevas" STYLE_REF="project" ID="ID_1260824763" CREATED="1658710575367" MODIFIED="1658710575382">
+<node ID="ID_1821635637" CONTENT_ID="ID_1806231140"/>
+</node>
+</node>
+</node>
+<node TEXT="icons" STYLE_REF="project" ID="ID_1777340040" CREATED="1658710576054" MODIFIED="1658710576070">
+<node ID="ID_1202125732" CONTENT_ID="ID_1895927375"/>
+</node>
+<node TEXT="Tuts w/ MDH" STYLE_REF="project" ID="ID_1786668763" CREATED="1658710576476" MODIFIED="1658710576507">
+<node ID="ID_909718285" CONTENT_ID="ID_366513202"/>
+</node>
+</node>
+<node TEXT="ToM Future B" FOLDED="true" ID="ID_160954057" CREATED="1658710574793" MODIFIED="1658710574809">
+<node TEXT="lib" STYLE_REF="project" ID="ID_1981764082" CREATED="1658710574809" MODIFIED="1658710574824">
+<node TEXT="ToM_actions.groovy" STYLE_REF="project" ID="ID_6583947" CREATED="1658710574824" MODIFIED="1658710574840">
+<node ID="ID_660391044" CONTENT_ID="ID_141287878">
+<node ID="ID_1654646146" CONTENT_ID="ID_1370914757"/>
+<node ID="ID_30107541" CONTENT_ID="ID_1129965019"/>
+<node ID="ID_1813587766" CONTENT_ID="ID_1107375440"/>
+<node ID="ID_1630911569" CONTENT_ID="ID_12760501"/>
+</node>
+<node TEXT="nuevas" STYLE_REF="project" ID="ID_709497469" CREATED="1658710575398" MODIFIED="1658710575413">
+<node ID="ID_770843558" CONTENT_ID="ID_762507140">
+<node ID="ID_743273680" CONTENT_ID="ID_1441007348"/>
+<node ID="ID_31860767" CONTENT_ID="ID_222865836"/>
+</node>
+<node ID="ID_809592863" CONTENT_ID="ID_1892592727"/>
+</node>
+</node>
+<node TEXT="ToM_ui.groovy" STYLE_REF="project" ID="ID_702566291" CREATED="1658710575882" MODIFIED="1658710575898">
+<node ID="ID_1656541038" CONTENT_ID="ID_46207761"/>
+</node>
+</node>
+<node TEXT="Tuts w/ MDH" STYLE_REF="project" ID="ID_1877853774" CREATED="1658710576663" MODIFIED="1658710576679">
+<node ID="ID_1678998486" CONTENT_ID="ID_1855496898"/>
+</node>
+<node TEXT="Apuntes" STYLE_REF="project" ID="ID_1730899611" CREATED="1658710576916" MODIFIED="1658710576932">
+<node TEXT="definir si un mapa para practica:&#xa;¿se permite sobreescribir (para guardar avance)?" STYLE_REF="pendingTask" ID="ID_199331389" CREATED="1648495345994" MODIFIED="1648495502903"/>
+<node TEXT="Funcionalidad MDH:&#xa;Comando para &apos;actualizar&apos; la nota a un nodo con link a un nodo MDH y copia su contenido" STYLE_REF="pendingTask" ID="ID_5148060" CREATED="1636486893897" MODIFIED="1636487019787"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      desde otro mapa
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node TEXT="ToM Future C" ID="ID_1840665364" CREATED="1658710575038" MODIFIED="1658710575038">
+<node TEXT="lib" STYLE_REF="project" ID="ID_1939705240" CREATED="1658710575054" MODIFIED="1658710575054">
+<node TEXT="ToM_actions.groovy" STYLE_REF="project" ID="ID_1683093881" CREATED="1658710575054" MODIFIED="1658710575070">
+<node TEXT="ToM_groovy" STYLE_REF="project" ID="ID_518538826" CREATED="1658710575085" MODIFIED="1658710575085">
+<node ID="ID_1599741231" CONTENT_ID="ID_1676865459">
+<node ID="ID_404644668" CONTENT_ID="ID_213521059"/>
+</node>
+<node ID="ID_1254458350" CONTENT_ID="ID_263975475"/>
+<node ID="ID_1899948721" CONTENT_ID="ID_229034055"/>
+<node ID="ID_1142708530" CONTENT_ID="ID_1165022650"/>
+<node ID="ID_950890708" CONTENT_ID="ID_1831666849"/>
+</node>
+<node TEXT="nuevas" STYLE_REF="project" ID="ID_1532948629" CREATED="1658710575445" MODIFIED="1658710575460">
+<node ID="ID_384038379" CONTENT_ID="ID_1414909465"/>
+<node ID="ID_1823789058" CONTENT_ID="ID_625624422">
+<node ID="ID_207327401" CONTENT_ID="ID_586109101"/>
+<node ID="ID_1863564921" CONTENT_ID="ID_930448750"/>
+<node ID="ID_1106146807" CONTENT_ID="ID_1344686640"/>
+</node>
+</node>
+</node>
+<node TEXT="ToM_ui.groovy" STYLE_REF="project" ID="ID_1492946905" CREATED="1658710575773" MODIFIED="1658710575788">
+<node ID="ID_1637871012" CONTENT_ID="ID_537401280"/>
+<node ID="ID_683463803" CONTENT_ID="ID_443917831"/>
+<node ID="ID_201986493" CONTENT_ID="ID_989055975"/>
+<node ID="ID_1033188381" CONTENT_ID="ID_505394382">
+<node ID="ID_298589102" CONTENT_ID="ID_137759576"/>
+<node ID="ID_1696549725" CONTENT_ID="ID_50355543"/>
+<node ID="ID_1491247101" CONTENT_ID="ID_751862218"/>
+</node>
+<node ID="ID_1550288838" CONTENT_ID="ID_1961264010"/>
+<node ID="ID_1244507455" CONTENT_ID="ID_1747412140"/>
+<node ID="ID_277664542" CONTENT_ID="ID_1801451672"/>
+<node ID="ID_1172032457" CONTENT_ID="ID_1403307952"/>
+</node>
+</node>
+<node TEXT="doc" STYLE_REF="project" ID="ID_242951716" CREATED="1658710576085" MODIFIED="1658710576116">
+<node ID="ID_293059311" CONTENT_ID="ID_1364359640"/>
+</node>
+<node TEXT="Tuts w/ MDH" STYLE_REF="project" ID="ID_130222874" CREATED="1658710576695" MODIFIED="1658710576710">
+<node ID="ID_1674406366" CONTENT_ID="ID_1608241677"/>
+</node>
+</node>
+<node TEXT="ToM Future D" FOLDED="true" ID="ID_836485024" CREATED="1658710574934" MODIFIED="1658710574934">
+<node TEXT="lib" STYLE_REF="project" ID="ID_312325809" CREATED="1658710574934" MODIFIED="1658710574960">
+<node TEXT="ToM_actions.groovy" STYLE_REF="project" ID="ID_1285204557" CREATED="1658710574960" MODIFIED="1658710574976">
+<node TEXT="ToM_showMenu" STYLE_REF="project" ID="ID_529148766" CREATED="1658710574976" MODIFIED="1658710574992">
+<node ID="ID_1371629657" CONTENT_ID="ID_1993866284"/>
+</node>
+<node TEXT="nuevas" STYLE_REF="project" ID="ID_1963487746" CREATED="1658710575507" MODIFIED="1658710575523">
+<node ID="ID_1996297467" CONTENT_ID="ID_800048399"/>
+<node ID="ID_1139800609" CONTENT_ID="ID_121918204"/>
+</node>
+</node>
+<node ID="ID_437383085" CONTENT_ID="ID_600379606"/>
+</node>
+<node TEXT="build.gradle" STYLE_REF="project" ID="ID_31823056" CREATED="1658710576304" MODIFIED="1658710576320">
+<node ID="ID_65060855" CONTENT_ID="ID_1363993016">
+<node ID="ID_1396858593" CONTENT_ID="ID_198568528"/>
+<node ID="ID_926638256" CONTENT_ID="ID_578653272"/>
+<node ID="ID_1368766885" CONTENT_ID="ID_857096425"/>
+</node>
+</node>
+<node TEXT="Apuntes" STYLE_REF="project" ID="ID_63032604" CREATED="1658710576947" MODIFIED="1658710576963">
+<node TEXT="hacer wiki?" STYLE_REF="maybeTask" ID="ID_1546576336" CREATED="1634908050046" MODIFIED="1652059219287"/>
+<node TEXT="Lastly, the only way to get proper feedback on this addon is to ask some people to actually use it to create tutorials for things. You might use it to try to create a tutorial for something that is *not* directly related to this addon, like a tutorial on how to change node width and save that change to the standard template. Only then will you get a sense of what this type of tool must be able to do." STYLE_REF="pendingTask" ID="ID_1154016032" CREATED="1634905019964" MODIFIED="1634905956204"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      feedback Quickfold
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node TEXT="ToM Future E" FOLDED="true" ID="ID_14171370" CREATED="1658710575554" MODIFIED="1658710575570">
+<node TEXT="lib" STYLE_REF="project" ID="ID_671965351" CREATED="1658710575570" MODIFIED="1658710575585">
+<node TEXT="ToM_actions.groovy" STYLE_REF="project" ID="ID_1724599650" CREATED="1658710575601" MODIFIED="1658710575617">
+<node TEXT="nuevas" STYLE_REF="project" ID="ID_934387940" CREATED="1658710575632" MODIFIED="1658710575648">
+<node ID="ID_1515549341" CONTENT_ID="ID_335359267"/>
+<node ID="ID_240002477" CONTENT_ID="ID_333961090"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
 </node>
 <node TEXT="LICENSE.md" ID="ID_1946703521" CREATED="1624997519282" MODIFIED="1647876631300" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/LICENSE.md">
 <attribute NAME="lastModifiedTime" VALUE="12-09-21 15:13" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:13-0300|datetime"/>
@@ -16297,6 +16539,23 @@ contains the current tutorial information and selects the node where the current
 </html></richcontent>
 </node>
 <node TEXT="Tutorial-o-Matic.mm" ID="ID_192796506" CREATED="1658708190543" MODIFIED="1658708209393" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic.mm"/>
+</node>
+<node TEXT="additional tasks" ID="ID_450197086" CREATED="1658711070591" MODIFIED="1658711092242">
+<node TEXT="eliminar tareas finalizadas antiguas" STYLE_REF="nextTask" ID="ID_1606888575" CREATED="1658711121412" MODIFIED="1658711142464"/>
+<node TEXT="translate tasks to english" STYLE_REF="nextTask" ID="ID_312032152" CREATED="1658711155366" MODIFIED="1658711292861"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      and make it easy understandable
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="filter maybe tasks from Readme file" STYLE_REF="pendingTask" ID="ID_400805" CREATED="1658711231824" MODIFIED="1658711259437"/>
 </node>
 <node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1957802391" CREATED="1631470152322" MODIFIED="1658708581541">
 <attribute NAME="log_MDI" VALUE="No"/>
@@ -18918,7 +19177,7 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="defniciones" STYLE_REF="Organizador" ID="ID_1567673732" CREATED="1652108576520" MODIFIED="1652108589029">
 <node TEXT="ToM Future B" STYLE_REF="milestone" ID="ID_1843564695" CREATED="1652150360220" MODIFIED="1652396755023">
-<node TEXT="definir si un mapa para practica:&#xa;¿se permite sobreescribir (para guardar avance)?" STYLE_REF="pendingTask" ID="ID_1067582345" CREATED="1648495345994" MODIFIED="1648495502903">
+<node ID="ID_1067582345" CONTENT_ID="ID_199331389">
 <node TEXT="para casos que no (sean tipo template):" ID="ID_798555155" CREATED="1648495405724" MODIFIED="1648495506673">
 <node TEXT="def myLoader = c.mapLoader(sourceFile)&#xa;def targetMap = myLoader.unsetMapLocation().withView().getMindMap()" ID="ID_1047640424" CREATED="1648495424028" MODIFIED="1648495428743"/>
 </node>
@@ -18926,7 +19185,7 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="ToM Future D" STYLE_REF="milestone" ID="ID_1883734927" CREATED="1652150376685" MODIFIED="1652396755351">
 <node TEXT="Documentación" ID="ID_713925516" CREATED="1634907963707" MODIFIED="1634907971440">
-<node TEXT="hacer wiki?" STYLE_REF="maybeTask" ID="ID_1797009914" CREATED="1634908050046" MODIFIED="1652059219287"/>
+<node ID="ID_1797009914" CONTENT_ID="ID_1546576336"/>
 </node>
 </node>
 </node>
@@ -20574,237 +20833,307 @@ def setNoteMarkdown(n){&#xd;
 </node>
 </node>
 <node TEXT="ToM Future D" STYLE_REF="milestone" ID="ID_103231955" CREATED="1652150401586" MODIFIED="1652396755679">
-<node TEXT="Lastly, the only way to get proper feedback on this addon is to ask some people to actually use it to create tutorials for things. You might use it to try to create a tutorial for something that is *not* directly related to this addon, like a tutorial on how to change node width and save that change to the standard template. Only then will you get a sense of what this type of tool must be able to do." STYLE_REF="pendingTask" ID="ID_838391552" CREATED="1634905019964" MODIFIED="1634905956204"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      feedback Quickfold
-    </p>
-  </body>
-</html></richcontent>
+<node ID="ID_838391552" CONTENT_ID="ID_1154016032">
 <node TEXT="Good idea. I&apos;m in the early steps of building the proper lego blocks yet, but you are right." ID="ID_591458383" CREATED="1634905019979" MODIFIED="1634905019979"/>
 </node>
 </node>
 <node TEXT="ToM Future B" STYLE_REF="milestone" ID="ID_614447178" CREATED="1652150438646" MODIFIED="1652396756008">
-<node TEXT="Funcionalidad MDH:&#xa;Comando para &apos;actualizar&apos; la nota a un nodo con link a un nodo MDH y copia su contenido" STYLE_REF="pendingTask" ID="ID_102311683" CREATED="1636486893897" MODIFIED="1636487019787"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      desde otro mapa
-    </p>
-  </body>
-</html></richcontent>
-</node>
+<node ID="ID_102311683" CONTENT_ID="ID_5148060"/>
 </node>
 <node TEXT="Ordenar tareas y asignar maybeTasks" STYLE_REF="completedTask" ID="ID_953120965" CREATED="1651983952229" MODIFIED="1652148819614">
 <icon BUILTIN="emoji-1F537"/>
 </node>
 <node TEXT="asignar milestones a tareas" STYLE_REF="completedTask" ID="ID_1945366163" CREATED="1652148761119" MODIFIED="1652150754307"/>
 </node>
-<node TEXT="Pendientes" STYLE_REF="tasksBucket" ID="ID_1190106509" CREATED="1651983139385" MODIFIED="1651983280133"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+</node>
+<node POSITION="right" ID="ID_1190106509" TREE_ID="ID_1288720582">
+<node ID="ID_229747895" TREE_ID="ID_566160916">
+<node ID="ID_1852666651" TREE_ID="ID_1517452760">
+<node ID="ID_22370595" CONTENT_ID="ID_140318300">
+<node ID="ID_425799817" CONTENT_ID="ID_854905705"/>
+<node ID="ID_1992599112" CONTENT_ID="ID_779566366">
+<node ID="ID_23445143" CONTENT_ID="ID_1265053918"/>
+</node>
+</node>
+</node>
+<node ID="ID_742556828" TREE_ID="ID_978918372">
+<node ID="ID_1731426229" CONTENT_ID="ID_550611630"/>
+</node>
+<node ID="ID_1638954263" TREE_ID="ID_873988366">
+<node ID="ID_665660458" CONTENT_ID="ID_1416052075">
+<node ID="ID_1889600333" TREE_ID="ID_877776240">
+<node ID="ID_1152310344" CONTENT_ID="ID_1819341805"/>
+</node>
+<node ID="ID_24412843" CONTENT_ID="ID_1659076422"/>
+</node>
+<node ID="ID_1065474744" CONTENT_ID="ID_240259315">
+<node ID="ID_1118262923" CONTENT_ID="ID_478396405"/>
+<node ID="ID_234011710" CONTENT_ID="ID_441168284"/>
+<node ID="ID_317275788" CONTENT_ID="ID_43682971"/>
+</node>
+<node ID="ID_1620284130" CONTENT_ID="ID_661597345"/>
+<node ID="ID_1599283203" TREE_ID="ID_963668962">
+<node ID="ID_261279360" CONTENT_ID="ID_1629420773"/>
+<node ID="ID_771670963" CONTENT_ID="ID_1038231214"/>
+<node ID="ID_132534299" CONTENT_ID="ID_32274263"/>
+<node ID="ID_1200171586" CONTENT_ID="ID_74602107">
+<node ID="ID_437636156" CONTENT_ID="ID_945716565">
+<node ID="ID_1440347885" CONTENT_ID="ID_1052542168"/>
+<node ID="ID_111319420" CONTENT_ID="ID_1023627601"/>
+<node ID="ID_1972311955" CONTENT_ID="ID_274101553"/>
+<node ID="ID_1944776091" CONTENT_ID="ID_542934962"/>
+</node>
+<node ID="ID_1528504283" CONTENT_ID="ID_338453155"/>
+</node>
+<node ID="ID_1731118480" CONTENT_ID="ID_1114642776"/>
+</node>
+</node>
+<node ID="ID_614354150" CONTENT_ID="ID_1360342935"/>
+</node>
+<node ID="ID_912709960" TREE_ID="ID_960249244">
+<node ID="ID_1104396154" TREE_ID="ID_757896216">
+<node ID="ID_684936975" TREE_ID="ID_1846099481">
+<node ID="ID_953832551" TREE_ID="ID_1478060106">
+<node ID="ID_1325447817" CONTENT_ID="ID_55129515"/>
+</node>
+<node ID="ID_1194263885" TREE_ID="ID_1614979105">
+<node ID="ID_1886417861" CONTENT_ID="ID_164174875"/>
+</node>
+<node ID="ID_498896828" TREE_ID="ID_1284226600">
+<node ID="ID_825737960" CONTENT_ID="ID_820486783"/>
+</node>
+<node ID="ID_1851010345" TREE_ID="ID_1438997340">
+<node ID="ID_123445138" CONTENT_ID="ID_1466466101"/>
+</node>
+<node ID="ID_441881564" TREE_ID="ID_1836874715">
+<node ID="ID_1809817356" CONTENT_ID="ID_205879366"/>
+</node>
+<node ID="ID_1626648477" TREE_ID="ID_65600730">
+<node ID="ID_1159808394" CONTENT_ID="ID_1862773774">
+<node ID="ID_692594823" CONTENT_ID="ID_1477223871"/>
+</node>
+</node>
+<node ID="ID_35068712" TREE_ID="ID_535452092">
+<node ID="ID_887934716" CONTENT_ID="ID_1678860903"/>
+</node>
+<node ID="ID_617605437" TREE_ID="ID_1260824763">
+<node ID="ID_953910629" CONTENT_ID="ID_1806231140"/>
+</node>
+</node>
+</node>
+<node ID="ID_1065776629" TREE_ID="ID_1777340040">
+<node ID="ID_66824968" CONTENT_ID="ID_1895927375"/>
+</node>
+<node ID="ID_1287338512" TREE_ID="ID_1786668763">
+<node ID="ID_859271139" CONTENT_ID="ID_366513202"/>
+</node>
+</node>
+<node ID="ID_1828615126" TREE_ID="ID_160954057">
+<node ID="ID_897623356" TREE_ID="ID_1981764082">
+<node ID="ID_1014121162" TREE_ID="ID_6583947">
+<node ID="ID_1020605396" CONTENT_ID="ID_141287878">
+<node ID="ID_1613355882" CONTENT_ID="ID_1370914757"/>
+<node ID="ID_1325301685" CONTENT_ID="ID_1129965019"/>
+<node ID="ID_1309789995" CONTENT_ID="ID_1107375440"/>
+<node ID="ID_218337497" CONTENT_ID="ID_12760501"/>
+</node>
+<node ID="ID_81240191" TREE_ID="ID_709497469">
+<node ID="ID_193020095" CONTENT_ID="ID_762507140">
+<node ID="ID_642533814" CONTENT_ID="ID_1441007348"/>
+<node ID="ID_1234065041" CONTENT_ID="ID_222865836"/>
+</node>
+<node ID="ID_1842890019" CONTENT_ID="ID_1892592727"/>
+</node>
+</node>
+<node ID="ID_1536324496" TREE_ID="ID_702566291">
+<node ID="ID_1384434052" CONTENT_ID="ID_46207761"/>
+</node>
+</node>
+<node ID="ID_1702398499" TREE_ID="ID_1877853774">
+<node ID="ID_1423734913" CONTENT_ID="ID_1855496898"/>
+</node>
+<node ID="ID_1048283871" TREE_ID="ID_1730899611">
+<node ID="ID_1005642408" TREE_ID="ID_199331389"/>
+<node ID="ID_152493196" TREE_ID="ID_5148060"/>
+</node>
+</node>
+<node ID="ID_1210400082" TREE_ID="ID_1840665364">
+<node ID="ID_298385687" TREE_ID="ID_1939705240">
+<node ID="ID_761912552" TREE_ID="ID_1683093881">
+<node ID="ID_751579411" TREE_ID="ID_518538826">
+<node ID="ID_1749026025" CONTENT_ID="ID_1676865459">
+<node ID="ID_1622963483" CONTENT_ID="ID_213521059"/>
+</node>
+<node ID="ID_670975380" CONTENT_ID="ID_263975475"/>
+<node ID="ID_1346868694" CONTENT_ID="ID_229034055"/>
+<node ID="ID_1503739641" CONTENT_ID="ID_1165022650"/>
+<node ID="ID_50664934" CONTENT_ID="ID_1831666849"/>
+</node>
+<node ID="ID_53321608" TREE_ID="ID_1532948629">
+<node ID="ID_1548206975" CONTENT_ID="ID_1414909465"/>
+<node ID="ID_115492403" CONTENT_ID="ID_625624422">
+<node ID="ID_1990707710" CONTENT_ID="ID_586109101"/>
+<node ID="ID_732287444" CONTENT_ID="ID_930448750"/>
+<node ID="ID_901380391" CONTENT_ID="ID_1344686640"/>
+</node>
+</node>
+</node>
+<node ID="ID_905866258" TREE_ID="ID_1492946905">
+<node ID="ID_1641691996" CONTENT_ID="ID_537401280"/>
+<node ID="ID_146724687" CONTENT_ID="ID_443917831"/>
+<node ID="ID_144338149" CONTENT_ID="ID_989055975"/>
+<node ID="ID_1138402146" CONTENT_ID="ID_505394382">
+<node ID="ID_1691828184" CONTENT_ID="ID_137759576"/>
+<node ID="ID_1551693288" CONTENT_ID="ID_50355543"/>
+<node ID="ID_139918072" CONTENT_ID="ID_751862218"/>
+</node>
+<node ID="ID_509727008" CONTENT_ID="ID_1961264010"/>
+<node ID="ID_351294816" CONTENT_ID="ID_1747412140"/>
+<node ID="ID_823574371" CONTENT_ID="ID_1801451672"/>
+<node ID="ID_1989500300" CONTENT_ID="ID_1403307952"/>
+</node>
+</node>
+<node ID="ID_1463945597" TREE_ID="ID_242951716">
+<node ID="ID_1976068053" CONTENT_ID="ID_1364359640"/>
+</node>
+<node ID="ID_901065505" TREE_ID="ID_130222874">
+<node ID="ID_566810412" CONTENT_ID="ID_1608241677"/>
+</node>
+</node>
+<node ID="ID_289404953" TREE_ID="ID_836485024">
+<node ID="ID_108616449" TREE_ID="ID_312325809">
+<node ID="ID_756996738" TREE_ID="ID_1285204557">
+<node ID="ID_1055013655" TREE_ID="ID_529148766">
+<node ID="ID_1738004933" CONTENT_ID="ID_1993866284"/>
+</node>
+<node ID="ID_1290332621" TREE_ID="ID_1963487746">
+<node ID="ID_583495481" CONTENT_ID="ID_800048399"/>
+<node ID="ID_883932641" CONTENT_ID="ID_121918204"/>
+</node>
+</node>
+<node ID="ID_1917899859" CONTENT_ID="ID_600379606"/>
+</node>
+<node ID="ID_1955544313" TREE_ID="ID_31823056">
+<node ID="ID_1834697996" CONTENT_ID="ID_1363993016">
+<node ID="ID_87421227" CONTENT_ID="ID_198568528"/>
+<node ID="ID_301383707" CONTENT_ID="ID_578653272"/>
+<node ID="ID_1987627173" CONTENT_ID="ID_857096425"/>
+</node>
+</node>
+<node ID="ID_44719581" TREE_ID="ID_63032604">
+<node ID="ID_1138372323" TREE_ID="ID_1546576336"/>
+<node ID="ID_1861458665" TREE_ID="ID_1154016032"/>
+</node>
+</node>
+<node ID="ID_1654164959" TREE_ID="ID_14171370">
+<node ID="ID_1118572611" TREE_ID="ID_671965351">
+<node ID="ID_511724001" TREE_ID="ID_1724599650">
+<node ID="ID_164027873" TREE_ID="ID_934387940">
+<node ID="ID_1914446070" CONTENT_ID="ID_335359267"/>
+<node ID="ID_1995881809" CONTENT_ID="ID_333961090"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="custom Menus" POSITION="left" ID="ID_303397654" CREATED="1625081149408" MODIFIED="1650382939869">
+<icon BUILTIN="emoji-1F4E6"/>
+<node TEXT="Packs Edo Básico" ID="ID_1019132272" CREATED="1624645062346" MODIFIED="1654612999925" LINK="menuitem:_addons.menuOMatic.launchDialogsFromBranch_on_single_node">
+<node TEXT="Menu-o-Matic" ID="ID_1360069954" CREATED="1628386061731" MODIFIED="1648668741199" LINK="menuitem:_addons.menuOMatic.launchCustomDialog_on_single_node">
+<attribute_layout NAME_WIDTH="85.78723 pt" VALUE_WIDTH="1598.55316 pt"/>
+<attribute NAME="tbActions" VALUE="[addons.menuOMatic.launchCustomDialog_on_single_node, addons.menuOMatic.packCustomMenu_on_single_node, addons.menuOMatic.unpackCustomMenu_on_single_node, addons.menuOMatic.lauchDialogFromNodes_on_single_node, addons.menuOMatic.launchDialogsFromBranch_on_single_node, addons.menuOMatic.listCustomDialogs_on_single_node, addons.menuOMatic.listCustomMenusFromMap_on_single_node]"/>
+<attribute NAME="tbIcons" VALUE="[IconAction.emoji-1F680, IconAction.emoji-1F4E6, IconAction.emoji-1F468-200D-1F527, IconAction.emoji-2728, IconAction.emoji-1F387, IconAction.list, IconAction.mindmap]"/>
+<attribute NAME="tbLabels" VALUE="[launch menu dialog, pack menu, unpack menu, launch directly, launch all, list menu dialogs, list menu packages from map]"/>
+<attribute NAME="tbMaxTextLength" VALUE="50" OBJECT="org.freeplane.features.format.FormattedNumber|50"/>
+<attribute NAME="tbShowIcons" VALUE="true"/>
+<attribute NAME="tbShowLabels" VALUE="false"/>
+<attribute NAME="tbFocusToMap" VALUE="true"/>
+<attribute NAME="tbTitle" VALUE="Menu-o-Matic"/>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      =
+      customMenu&nbsp;&nbsp;
     </p>
     <p>
-      (node['tasksStyles']?:'pendingTask,nextTask').split(',').collect{st -&gt; &quot;${node.find{it.style.name == st}.size()}&nbsp;&nbsp;${st}(s)&quot;}.join('\n')
+      &nbsp;&nbsp;- icons only
+    </p>
+    <p>
+      &nbsp;&nbsp;- return to mindmap
     </p>
   </body>
 </html></richcontent>
-<attribute NAME="tasksStyles" VALUE="nextTask,pendingTask,maybeTask"/>
-<attribute NAME="WIP filter" VALUE="false"/>
-<node TEXT="ToM v0.0.7" ID="ID_726267510" CREATED="1652396812914" MODIFIED="1652396812914">
-<node TEXT="ToM" STYLE_REF="project" ID="ID_511619460" CREATED="1652396812914" MODIFIED="1652396812934">
-<node TEXT="ToM addon" STYLE_REF="project" ID="ID_59833748" CREATED="1652396812934" MODIFIED="1652396812953">
-<node ID="ID_1441010740" CONTENT_ID="ID_140318300">
-<node ID="ID_482703959" CONTENT_ID="ID_854905705"/>
-<node ID="ID_1590661590" CONTENT_ID="ID_779566366">
-<node TEXT="actualizar en Github" STYLE_REF="maybeTask" ID="ID_242180201" CREATED="1650381272312" MODIFIED="1652103682335"/>
 </node>
+<node TEXT="Map-Drive-Inator" ID="ID_1592266574" CREATED="1626220851810" MODIFIED="1654611994995" LINK="menuitem:_addons.menuOMatic.launchCustomDialog_on_single_node">
+<attribute_layout NAME_WIDTH="85.78723 pt" VALUE_WIDTH="1094.55317 pt"/>
+<attribute NAME="tbActions" VALUE="[Map-Drive-Inator_on_single_node, DistributeNewNodes_on_single_node, GetFileTimestamps_on_selected_node, CreateFilesFromNotes_on_selected_node, UnmarkNewNodes_on_selected_node, UnmarkMovedOrRenamedNodes_on_selected_node, UnmarkModifiedFiles_on_selected_node]"/>
+<attribute NAME="tbIcons" VALUE="[IconAction.emoji-1F4BD, IconAction.emoji-23CF, IconAction.emoji-23F2, IconAction.emoji-1F4BE, IconAction.emoji-1F195, IconAction.emoji-1F500, IconAction.emoji-002A-20E3]"/>
+<attribute NAME="tbLabels" VALUE="[Map-Drive-Inator, Distribute New Nodes, Get File Timestamps, Create Files From Notes, Unmark New Nodes, Unmark Moved Or Renamed Nodes, Unmark Modified Files]"/>
+<attribute NAME="tbMaxTextLength" VALUE="50" OBJECT="org.freeplane.features.format.FormattedNumber|50"/>
+<attribute NAME="tbShowIcons" VALUE="true"/>
+<attribute NAME="tbShowLabels" VALUE="false"/>
+<attribute NAME="tbFocusToMap" VALUE="true"/>
+<attribute NAME="tbTitle" VALUE="Map-Drive-Inator"/>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      customMenu&nbsp;&nbsp;
+    </p>
+    <p>
+      &nbsp;&nbsp;- icons only
+    </p>
+    <p>
+      &nbsp;&nbsp;- return to mindmap
+    </p>
+  </body>
+</html></richcontent>
 </node>
-</node>
-</node>
-<node TEXT="Tuts w/ MDH" STYLE_REF="project" ID="ID_651863478" CREATED="1652396813070" MODIFIED="1652396813070">
-<node TEXT="hacer.tutoria.paso.paso" STYLE_REF="project" ID="ID_1870782377" CREATED="1652396813070" MODIFIED="1652396813085">
-<node ID="ID_1952775548" CONTENT_ID="ID_32274263"/>
-<node ID="ID_323272852" CONTENT_ID="ID_74602107"/>
-<node ID="ID_1532511643" CONTENT_ID="ID_1114642776"/>
-</node>
-<node ID="ID_1654265596" CONTENT_ID="ID_1416052075">
-<node TEXT="Tutoriale.acciones" STYLE_REF="project" ID="ID_248372649" CREATED="1652396813117" MODIFIED="1652396813117">
-<node ID="ID_1088571140" CONTENT_ID="ID_1819341805"/>
-</node>
-</node>
-<node ID="ID_242197413" CONTENT_ID="ID_240259315">
-<node ID="ID_740617335" CONTENT_ID="ID_478396405"/>
-<node ID="ID_1953395603" CONTENT_ID="ID_441168284"/>
-<node ID="ID_33220354" CONTENT_ID="ID_43682971"/>
-</node>
-<node ID="ID_1572859449" CONTENT_ID="ID_661597345"/>
-</node>
-<node ID="ID_1657615150" CONTENT_ID="ID_1360342935"/>
-</node>
-<node TEXT="ToM Future A" FOLDED="true" ID="ID_97284394" CREATED="1652396812259" MODIFIED="1652396812274">
-<node TEXT="ToM" STYLE_REF="project" ID="ID_85763139" CREATED="1652396812274" MODIFIED="1652396812290">
-<node TEXT="lib" STYLE_REF="project" ID="ID_1840323176" CREATED="1652396812290" MODIFIED="1652396812306">
-<node TEXT="ToM_actions.groovy" STYLE_REF="project" ID="ID_1518662807" CREATED="1652396812306" MODIFIED="1652396812321">
-<node TEXT="ToM_showMenu" STYLE_REF="project" ID="ID_688176340" CREATED="1652396812321" MODIFIED="1652396812321">
-<node ID="ID_1229532571" CONTENT_ID="ID_55129515"/>
-</node>
-<node TEXT="ToM_groovy" STYLE_REF="project" ID="ID_297515735" CREATED="1652396812368" MODIFIED="1652396812384">
-<node ID="ID_1322455723" CONTENT_ID="ID_164174875"/>
-</node>
-<node TEXT="ToM_copy" STYLE_REF="project" ID="ID_775840383" CREATED="1652396812462" MODIFIED="1652396812478">
-<node ID="ID_1433861578" CONTENT_ID="ID_820486783"/>
-</node>
-<node TEXT="ToM_select" STYLE_REF="project" ID="ID_745825252" CREATED="1652396812478" MODIFIED="1652396812493">
-<node ID="ID_1566993681" CONTENT_ID="ID_1466466101"/>
-</node>
-<node TEXT="ToM_openMap" STYLE_REF="project" ID="ID_888703591" CREATED="1652396812509" MODIFIED="1652396812509">
-<node ID="ID_844615329" CONTENT_ID="ID_205879366"/>
-</node>
-<node TEXT="ToM_showNode" STYLE_REF="project" ID="ID_94659429" CREATED="1652396812524" MODIFIED="1652396812524">
-<node ID="ID_482544514" CONTENT_ID="ID_1862773774"/>
-</node>
-<node TEXT="ToM_openTutMap" STYLE_REF="project" ID="ID_1766238106" CREATED="1652396812540" MODIFIED="1652396812556">
-<node ID="ID_1031880900" CONTENT_ID="ID_1678860903"/>
-</node>
-<node TEXT="nuevas" STYLE_REF="project" ID="ID_1771587833" CREATED="1652396812556" MODIFIED="1652396812571">
-<node ID="ID_1578694166" CONTENT_ID="ID_1806231140"/>
-</node>
-</node>
-</node>
-<node TEXT="icons" STYLE_REF="project" ID="ID_1438619165" CREATED="1652396812868" MODIFIED="1652396812883">
-<node ID="ID_1314936352" CONTENT_ID="ID_1895927375"/>
-</node>
-</node>
-<node TEXT="Tuts w/ MDH" STYLE_REF="project" ID="ID_1071792928" CREATED="1652396813132" MODIFIED="1652396813132">
-<node ID="ID_1000863523" CONTENT_ID="ID_366513202"/>
-</node>
-</node>
-<node TEXT="ToM Future B" FOLDED="true" ID="ID_625101919" CREATED="1652396812181" MODIFIED="1652396812196">
-<node TEXT="ToM" STYLE_REF="project" ID="ID_1591161227" CREATED="1652396812196" MODIFIED="1652396812196">
-<node TEXT="lib" STYLE_REF="project" ID="ID_1397219250" CREATED="1652396812196" MODIFIED="1652396812212">
-<node TEXT="ToM_actions.groovy" STYLE_REF="project" ID="ID_1016361991" CREATED="1652396812212" MODIFIED="1652396812228">
-<node ID="ID_1388432825" CONTENT_ID="ID_141287878">
-<node ID="ID_713177415" CONTENT_ID="ID_1370914757"/>
-<node ID="ID_1211488184" CONTENT_ID="ID_1129965019"/>
-<node ID="ID_1030660175" CONTENT_ID="ID_1107375440"/>
-<node ID="ID_1425593072" CONTENT_ID="ID_12760501"/>
-</node>
-<node TEXT="nuevas" STYLE_REF="project" ID="ID_1872071113" CREATED="1652396812571" MODIFIED="1652396812587">
-<node ID="ID_1482049861" CONTENT_ID="ID_762507140">
-<node ID="ID_1047294264" CONTENT_ID="ID_1441007348"/>
-<node ID="ID_1014894090" CONTENT_ID="ID_222865836"/>
-</node>
-<node ID="ID_606641710" CONTENT_ID="ID_1892592727"/>
-</node>
-</node>
-<node TEXT="ToM_ui.groovy" STYLE_REF="project" ID="ID_1352410188" CREATED="1652396812837" MODIFIED="1652396812853">
-<node ID="ID_13846794" CONTENT_ID="ID_46207761"/>
-</node>
-</node>
-</node>
-<node TEXT="Tuts w/ MDH" STYLE_REF="project" ID="ID_57355430" CREATED="1652396813035" MODIFIED="1652396813044">
-<node ID="ID_1078610692" CONTENT_ID="ID_1855496898"/>
-</node>
-<node TEXT="Apuntes" STYLE_REF="project" ID="ID_1573104190" CREATED="1652396813165" MODIFIED="1652396813175">
-<node ID="ID_510040649" CONTENT_ID="ID_1067582345"/>
-<node ID="ID_775369005" CONTENT_ID="ID_102311683"/>
-</node>
-</node>
-<node TEXT="ToM Future C" FOLDED="true" ID="ID_1411812410" CREATED="1652396812384" MODIFIED="1652396812384">
-<node TEXT="ToM" STYLE_REF="project" ID="ID_600016768" CREATED="1652396812384" MODIFIED="1652396812399">
-<node TEXT="lib" STYLE_REF="project" ID="ID_27254837" CREATED="1652396812399" MODIFIED="1652396812399">
-<node TEXT="ToM_actions.groovy" STYLE_REF="project" ID="ID_1143057180" CREATED="1652396812399" MODIFIED="1652396812415">
-<node TEXT="ToM_groovy" STYLE_REF="project" ID="ID_870558720" CREATED="1652396812415" MODIFIED="1652396812431">
-<node ID="ID_1068360503" CONTENT_ID="ID_1676865459">
-<node ID="ID_372316424" CONTENT_ID="ID_213521059"/>
-</node>
-<node ID="ID_904279686" CONTENT_ID="ID_263975475"/>
-<node ID="ID_1094800591" CONTENT_ID="ID_229034055"/>
-<node ID="ID_306321134" CONTENT_ID="ID_1165022650"/>
-<node ID="ID_728161395" CONTENT_ID="ID_1831666849"/>
-</node>
-<node TEXT="nuevas" STYLE_REF="project" ID="ID_555450973" CREATED="1652396812618" MODIFIED="1652396812618">
-<node ID="ID_1187295411" CONTENT_ID="ID_1414909465"/>
-<node ID="ID_158071717" CONTENT_ID="ID_625624422">
-<node ID="ID_790151679" CONTENT_ID="ID_586109101"/>
-<node ID="ID_718091613" CONTENT_ID="ID_930448750"/>
-<node ID="ID_457769038" CONTENT_ID="ID_1344686640"/>
-</node>
-</node>
-</node>
-<node TEXT="ToM_ui.groovy" STYLE_REF="project" ID="ID_346161781" CREATED="1652396812759" MODIFIED="1652396812759">
-<node ID="ID_1205552018" CONTENT_ID="ID_537401280"/>
-<node ID="ID_1668055720" CONTENT_ID="ID_443917831"/>
-<node ID="ID_426114992" CONTENT_ID="ID_989055975"/>
-<node ID="ID_1987654865" CONTENT_ID="ID_505394382">
-<node ID="ID_179302944" CONTENT_ID="ID_137759576"/>
-<node ID="ID_1648788879" CONTENT_ID="ID_50355543"/>
-<node ID="ID_1904506718" CONTENT_ID="ID_751862218"/>
-</node>
-<node ID="ID_461815391" CONTENT_ID="ID_1961264010"/>
-<node ID="ID_1004471170" CONTENT_ID="ID_1747412140"/>
-<node ID="ID_824725503" CONTENT_ID="ID_1801451672"/>
-<node ID="ID_425958261" CONTENT_ID="ID_1403307952"/>
-</node>
-</node>
-<node TEXT="doc" STYLE_REF="project" ID="ID_419035757" CREATED="1652396812883" MODIFIED="1652396812898">
-<node ID="ID_1461889887" CONTENT_ID="ID_1364359640"/>
-</node>
-</node>
-<node TEXT="Tuts w/ MDH" STYLE_REF="project" ID="ID_332739978" CREATED="1652396813053" MODIFIED="1652396813054">
-<node ID="ID_1511652073" CONTENT_ID="ID_1608241677"/>
-</node>
-</node>
-<node TEXT="ToM Future D" FOLDED="true" ID="ID_101011142" CREATED="1652396812337" MODIFIED="1652396812337">
-<node TEXT="ToM" STYLE_REF="project" ID="ID_1513699112" CREATED="1652396812337" MODIFIED="1652396812337">
-<node TEXT="lib" STYLE_REF="project" ID="ID_1463495005" CREATED="1652396812337" MODIFIED="1652396812353">
-<node TEXT="ToM_actions.groovy" STYLE_REF="project" ID="ID_486385353" CREATED="1652396812353" MODIFIED="1652396812353">
-<node TEXT="ToM_showMenu" STYLE_REF="project" ID="ID_643714303" CREATED="1652396812368" MODIFIED="1652396812368">
-<node ID="ID_652635330" CONTENT_ID="ID_1993866284"/>
-</node>
-<node TEXT="nuevas" STYLE_REF="project" ID="ID_1056533104" CREATED="1652396812649" MODIFIED="1652396812665">
-<node ID="ID_254748024" CONTENT_ID="ID_800048399"/>
-<node ID="ID_1823569379" CONTENT_ID="ID_121918204"/>
-</node>
-</node>
-<node ID="ID_1579873528" CONTENT_ID="ID_600379606"/>
-</node>
-<node TEXT="build.gradle" STYLE_REF="project" ID="ID_80138828" CREATED="1652396812992" MODIFIED="1652396812992">
-<node ID="ID_1119484947" CONTENT_ID="ID_1363993016">
-<node ID="ID_998545387" CONTENT_ID="ID_198568528"/>
-<node ID="ID_369065657" CONTENT_ID="ID_578653272"/>
-<node ID="ID_123985848" CONTENT_ID="ID_857096425"/>
-</node>
-</node>
-</node>
-<node TEXT="Apuntes" STYLE_REF="project" ID="ID_377291850" CREATED="1652396813188" MODIFIED="1652396813188">
-<node ID="ID_1236029244" CONTENT_ID="ID_1797009914"/>
-<node ID="ID_135213730" CONTENT_ID="ID_838391552"/>
-</node>
-</node>
-<node TEXT="ToM Future E" FOLDED="true" ID="ID_1188011793" CREATED="1652396812681" MODIFIED="1652396812681">
-<node TEXT="ToM" STYLE_REF="project" ID="ID_947027217" CREATED="1652396812681" MODIFIED="1652396812681">
-<node TEXT="lib" STYLE_REF="project" ID="ID_1682366694" CREATED="1652396812696" MODIFIED="1652396812696">
-<node TEXT="ToM_actions.groovy" STYLE_REF="project" ID="ID_1960067852" CREATED="1652396812696" MODIFIED="1652396812712">
-<node TEXT="nuevas" STYLE_REF="project" ID="ID_1163209303" CREATED="1652396812712" MODIFIED="1652396812728">
-<node ID="ID_117834316" CONTENT_ID="ID_335359267"/>
-<node ID="ID_890779957" CONTENT_ID="ID_333961090"/>
-</node>
-</node>
-</node>
+<node TEXT="taskmanager" ID="ID_1956032584" CREATED="1654613351845" MODIFIED="1654613360709">
+<node TEXT="Tasks" ID="ID_1056062812" CREATED="1652456503928" MODIFIED="1652456504474" LINK="menuitem:_addons.menuOMatic.launchCustomDialog_on_single_node">
+<attribute NAME="tbActions" VALUE="[_script1, _script2, _script3, _script4, _script5, _script6, _script7, _script8, _script9, _script10, IconProgressIconDownAction, IconProgressIconUpAction, _script11, _script12]"/>
+<attribute NAME="tbIcons" VALUE="[IconAction.emoji-1F40F, IconAction.emoji-1F4E5, IconAction.emoji-1F194, IconAction.emoji-1F5C3, IconAction.emoji-1F3A9, IconAction.emoji-1F7E5, IconAction.unchecked, IconAction.emoji-23FA, IconAction.Descartado, IconAction.checked, IconAction.0%, IconAction.75%, IconAction.emoji-1F6A9, IconAction.emoji-0023-20E3]"/>
+<attribute NAME="tbLabels" VALUE="[goto next clone, collect tasks into bucket, add &apos;projectCode&apos; attribute to node, add tasksBucket as child node, import tasks styles, apply nextTask style to selected node(s), apply pendingTask style to selected node(s), apply maybeTask style to selected node(s), apply discardedTask style to selected node(s), apply completedTask style to selected node(s), Progress down, Progress up, insert milestone as parent, insert sums node (it counts the tasks inside its parent node. Ignores tasks in tasksBuckets)]"/>
+<attribute NAME="tbMaxTextLength" VALUE="50" OBJECT="org.freeplane.features.format.FormattedNumber|50"/>
+<attribute NAME="tbShowIcons" VALUE="true"/>
+<attribute NAME="tbShowLabels" VALUE="false"/>
+<attribute NAME="tbFocusToMap" VALUE="true"/>
+<attribute NAME="tbTitle" VALUE="Tasks"/>
+<attribute NAME="_script1" VALUE="def nTask = node&#xa;&#xa;def clones = ([] + nTask.getNodesSharingContent() + nTask.getNodesSharingContentAndSubtree() + nTask).unique().sort{it.id}&#xa;//println clones*.id&#xa;&#xa;&#xa;if(clones.size()&gt;1) {&#xa;    def nPos = clones.indexOf(nTask)&#xa;    tgtPos = nPos &lt; clones.size()-1 ? nPos + 1 : 0&#xa;    get(clones[tgtPos])&#xa;}&#xa;&#xa;def get(n){&#xa;    n.pathToRoot*.folded = false&#xa;    c.centerOnNode(n)&#xa;    c.select(n)&#xa;}"/>
+<attribute NAME="_script2" VALUE="// OJO: lo cambié para que pudiera encontrar subcarpetas. No sé si es buena idea. marque las líneas con // OJO&#xa;import org.freeplane.view.swing.features.progress.mindmapmode.ProgressUtilities&#xa;&#xa;progUtil  = new ProgressUtilities()&#xa;&#xa;// region: properties&#xa;def attr = &apos;projectCode&apos;&#xa;projectStyle = &apos;project&apos;&#xa;bucketStyle  = &apos;tasksBucket&apos;&#xa;milestoneStyle = &apos;milestone&apos;&#xa;noMilestone = &apos;No milestone&apos;&#xa;defaultTasksStyles = &apos;pendingTask,nextTask&apos;&#xa;&#xa;//tasksStyles = &apos;pendingTask,nextTask&apos;.split(&apos;,&apos;)&#xa;stylesAttr = &apos;tasksStyles&apos;&#xa;wipAttr =&apos;WIP filter&apos;&#xa;&#xa;// end: properties&#xa;&#xa;def nodo = node&#xa;def nBuckets&#xa;&#xa;//1. search for tasksbuckets nodes (nBuckets). the closer to the selected node as possible&#xa;for (n in nodo.pathToRoot.reverse()){&#xa;    if( n.children.any{isBucket(it)}){&#xa;        nodo = n&#xa;        nBuckets = n.children.findAll{isBucket(it)}&#xa;        //println nBuckets&#xa;        break&#xa;    }&#xa;}&#xa;&#xa;&#xa;&#xa;if (!nBuckets){&#xa;    c.statusInfo = &quot;No &apos;tasks bucket&apos; found related to selected node&quot;&#xa;    return &apos;aborted&apos;&#xa;}&#xa;&#xa;//2. collects list of used milestones&#xa;def milestones = nodo.find{n -&gt; n.style.name == milestoneStyle}.collect{it.text}.unique() + noMilestone&#xa;&#xa;&#xa;//2. for each tasksBucket node&#xa;nBuckets.each{nBucket -&gt;&#xa;    tasksStyles = (nBucket[stylesAttr]?:defaultTasksStyles).split(&apos;,&apos;)&#xa;    // return tasksStyles&#xa;&#xa;    def nTasks = nodo.find{n -&gt; isTask(n) &amp;&amp; !n.pathToRoot.any{isBucket(it)}}&#xa;&#xa;    //println &quot;&quot;&#xa;    //println nTasks.size()&#xa;&#xa;    nTasks = nBucket[wipAttr].bool? nTasks.findAll{n -&gt; isWorkInProgress(n)} : nTasks&#xa;    //println nTasks.size()&#xa;&#xa;    nTasks.each{n-&gt;&#xa;        //println &quot;  isAnyClone:  $n --&gt; ${isAnyClone(nBucket, n)}&quot;&#xa;        if(!isAnyClone(nBucket, n)){&#xa;            //println &apos;         adding it&apos;&#xa;            //def projPath&#xa;            def milestoneNode = n.pathToRoot.reverse().find{it.style.name == milestoneStyle}&#xa;            def milestone = milestoneNode ? milestoneNode.text : noMilestone&#xa;            def nProjects = (n.pathToRoot - nodo.pathToRoot).findAll{it.attributes.containsKey(attr) || isTask(it) } - n&#xa;            def txtProjects = [milestone] + nProjects.collect{it.attributes.getFirst(attr)?:it.text}&#xa;            def styleProjects = [false] + nProjects.collect{it.attributes.containsKey(attr)}&#xa;            //println &quot;txtProjects  $txtProjects&quot;&#xa;            def nTarget = getTargetNode(nBucket , txtProjects, styleProjects)&#xa;            //println &quot;nTarget   $nTarget&quot;&#xa;            def taskClone = getCloneNode(nTarget, n)&#xa;            //println &quot;&quot;&#xa;        }&#xa;    }&#xa;}&#xa;&#xa;def nBucket = nBuckets[-1]&#xa;(nBucket.pathToRoot - nBucket)*.folded = false&#xa;//c.centerOnNode(nBucket)&#xa;c.select(nBucket)&#xa;&#xa;c.statusInfo = &apos;---------------- tasks collected! -----------------------&apos;&#xa;&#xa;&#xa;// region: -----------------------methods-----------------&#xa;&#xa;def isAnyClone(papa, nTask){&#xa;    def nClones = [] + nTask.getNodesSharingContent() + nTask.getNodesSharingContentAndSubtree()&#xa;    def resp = papa.findAll().any{it in nClones}&#xa;    return resp&#xa;}&#xa;&#xa;def getCloneNode(papa, nTask){&#xa;    def nClones = [] + nTask.getNodesSharingContent() + nTask.getNodesSharingContentAndSubtree()&#xa;    //println &quot;  getCloneNode: nClones   $nClones&quot;&#xa;//    def clonedTaskNode = papa.children.find{it in nClones}?: papa.appendAsCloneWithoutSubtree(nTask) // OJO&#xa;    def clonedTaskNode = papa.find{it in nClones}[0]?: papa.appendAsCloneWithoutSubtree(nTask)         // OJO&#xa;    //println &quot;  getCloneNode: clonedTaskNode   $clonedTaskNode&quot;&#xa;    return clonedTaskNode&#xa;}&#xa;&#xa;&#xa;def getTargetNode(papa , textes, boolStyles){&#xa;    def t = textes[0]&#xa;    //println &quot;$papa , $textes, $t,   $boolStyles&quot;&#xa;    if(textes.size()==0) return papa&#xa;//    def n = papa.children.find{it.text == t}?:papa.createChild(t)  // OJO&#xa;    def n = papa.find{it.text == t}[0]                               // OJO&#xa;    if(!n){&#xa;        n ?= papa.createChild(t)&#xa;        if(boolStyles[0]){&#xa;            n.style.name = projectStyle&#xa;        }&#xa;    }&#xa;    if(textes.size()&lt;=1){&#xa;        //println &quot;    $n&quot;&#xa;        //println &quot;&quot;&#xa;        return n&#xa;    } else {&#xa;        return getTargetNode(n , textes.drop(1), boolStyles.drop(1))&#xa;    }&#xa;}&#xa;&#xa;boolean isTask(n){&#xa;//    return n.style.name &amp;&amp; n.style.name?.endsWith(&apos;Task&apos;)&#xa;   return n.style.name &amp;&amp; n.style.name in tasksStyles&#xa;}&#xa;&#xa;&#xa;boolean isBucket(n){&#xa;    //return n.alias == &apos;tasksBucket&apos;  //TODO: hacer que sea un estilo. es más fácil de aplicar&#xa;    return n.style.name &amp;&amp; n.style.name == bucketStyle&#xa;}&#xa;&#xa;def isWorkInProgress(n){&#xa;    return progUtil.hasProgressIcons(n.delegate) &amp;&amp; !progUtil.hasOKIcon(n.delegate)&#xa;}&#xa;&#xa;// end:"/>
+<attribute NAME="_script3" VALUE="splitter = /(?&lt;=[a-z])(?=[A-Z])|(?=[A-Z][a-z]|\b|_)|(?&lt;=[a-z])(?=\d)/&#xa;&#xa;descartables = &apos;el,la,o,de,para,con,un,una,a,proyecto,subproyecto,es,que,se&apos;.split(&apos;,&apos;)&#xa;charsReemplazar =&apos; ,\&apos;,_,\&quot;,.&apos;.split(&apos;,&apos;)&#xa;largoMax = 20&#xa;attr = &apos;projectCode&apos;&#xa;&#xa;&#xa;def nodos = c.selecteds&#xa;def nodoSel = c.selected&#xa;&#xa;nodos.each{nodo -&gt;&#xa;    def texto = nodo.text.takeWhile{it != &apos;\n&apos;}&#xa;    def valorPropuesto = nodo[attr]?:unir(clean(mySplit(texto)))&#xa;    def valor = ui.showInputDialog(nodoSel.delegate, &quot;Input projectCode for the selected node\n$texto&quot;, valorPropuesto.toString())&#xa;    if(valor != null){&#xa;        nodo[attr] = valor?:null&#xa;    }&#xa;}&#xa;&#xa;return &apos;listo!&apos;&#xa;&#xa;&#xa;//-------------methods---------------------&#xa;&#xa;def mySplit(t){&#xa;    charsReemplazar.each{ c -&gt;&#xa;        t =  t.replace(c,&apos; &apos;)&#xa;    }&#xa;    t.split(splitter)*.trim().findAll{it}//*.capitalize()&#xa;}&#xa;&#xa;def clean(words){&#xa;    words.findAll{w -&gt; !(w.toLowerCase() in descartables)}&#xa;}&#xa;&#xa;def unir(words){&#xa;    def cantChars = words.sum{it.size()}&#xa;    def maxChars  = words.max{it.size()}.size()&#xa;    def cantWords = words.size()&#xa;    def promCharsPalabra = cantChars/cantWords&#xa;    def promMaxCharsPalabra = largoMax/ cantWords&#xa;    def palabrasBajoMax = words.findAll{it.size() &lt;= promMaxCharsPalabra }&#xa;    def cantPalabrasBajoMax = palabrasBajoMax.size()&#xa;    //println (&quot;$cantChars     $maxChars    $cantWords  $promCharsPalabra   $promMaxCharsPalabra   $palabrasBajoMax  $cantPalabrasBajoMax    &quot;)&#xa;    def largoDisponibleARepartir = largoMax - palabrasBajoMax.sum(0){it.toString().size()}&#xa;    //println (&quot;$cantChars     $maxChars    $cantWords  $promCharsPalabra   $promMaxCharsPalabra   $palabrasBajoMax  $cantPalabrasBajoMax  $largoDisponibleARepartir  &quot;)&#xa;    def maxCharsPalabras = (cantWords-cantPalabrasBajoMax)&gt;0 ? (int) (largoDisponibleARepartir / (cantWords-cantPalabrasBajoMax)) : promMaxCharsPalabra&#xa;    //println (&quot;$cantChars     $maxChars    $cantWords  $promCharsPalabra   $promMaxCharsPalabra   $palabrasBajoMax  $cantPalabrasBajoMax  $largoDisponibleARepartir  $maxCharsPalabras&quot;)&#xa;&#xa;    maxCharsPalabras = maxCharsPalabras&gt;=4? maxCharsPalabras : 4&#xa;    maxCharsPalabras = maxCharsPalabras&lt;=9? maxCharsPalabras : 9&#xa;&#xa;    return words*.take((int) maxCharsPalabras).join(&apos;.&apos;)&#xa;}&#xa;&#xa;// ----------------------tests -------------------&#xa;&#xa;&#xa;def test(){&#xa;    println splitter&#xa;    def t&#xa;&#xa;    texto = &apos;02 Proyecto Infraestructura&apos;&#xa;    println texto + &apos;  --&gt;  &apos; + (t = mySplit(texto)) + &apos;  --&gt;  &apos; + (t = clean(t))  + &apos;  --&gt;  &apos; + unir(t)&#xa;&#xa;    texto = &apos;02ProyectoInfraestructura&apos;&#xa;    println texto + &apos;  --&gt;  &apos; + (t = mySplit(texto)) + &apos;  --&gt;  &apos; + (t = clean(t))  + &apos;  --&gt;  &apos; + unir(t)&#xa;&#xa;    texto = &apos;02_Proyecto_Infraestructura&apos;&#xa;    println texto + &apos;  --&gt;  &apos; + (t = mySplit(texto)) + &apos;  --&gt;  &apos; + (t = clean(t))  + &apos;  --&gt;  &apos; + unir(t)&#xa;&#xa;    texto = &apos;02 proyecto infraestructura&apos;&#xa;    println texto + &apos;  --&gt;  &apos; + (t = mySplit(texto)) + &apos;  --&gt;  &apos; + (t = clean(t))  + &apos;  --&gt;  &apos; + unir(t)&#xa;&#xa;    texto = &apos;02_proyecto_infraestructura&apos;&#xa;    println texto + &apos;  --&gt;  &apos; + (t = mySplit(texto)) + &apos;  --&gt;  &apos; + (t = clean(t))  + &apos;  --&gt;  &apos; + unir(t)&#xa;}"/>
+<attribute NAME="_script4" VALUE="def bucketStyle = &apos;tasksBucket&apos;&#xa;def formula = &apos;=\n(node[\&apos;tasksStyles\&apos;]?:\&apos;pendingTask,nextTask\&apos;).split(\&apos;,\&apos;).collect{st -&gt; &quot;${node.find{it.style.name == st}.size()}  ${st}(s)&quot;}.join(\&apos;\\n\&apos;)&apos;.toString()&#xa;stylesAttr = &apos;tasksStyles&apos;&#xa;def tasksStyles = &apos;nextTask,pendingTask,maybeTask,discardedTask,completedTask&apos;&#xa;wipAttr =&apos;WIP filter&apos;&#xa;def wipAttrDefault = false&#xa;&#xa;def nodo =  node&#xa;&#xa;def exists = nodo.children.any{it.style.name == bucketStyle}&#xa;&#xa;if(!exists){&#xa;    def nBucket = nodo.createChild(&apos;tasksBucket&apos;)&#xa;    nBucket.style.name = bucketStyle&#xa;    nBucket.details = formula&#xa;    nBucket[stylesAttr] = tasksStyles&#xa;    nBucket[wipAttr] = wipAttrDefault&#xa;} else {&#xa;    c.statusInfo = &apos;Ya existe un nodo tasksBucket para este nivel&apos;&#xa;}"/>
+<attribute NAME="_script5" VALUE="import edofro.tutorialomatic.ToM    as tom&#xa;import edofro.pseudofreeplaneapi.UserStyles as us&#xa;&#xa;//region: opens tutorial map&#xa;&#xa;    def sep         = File.separator&#xa;    def userDir     = c.userDirectory.path&#xa;    def mapFileName = &quot;I - Tasks styles.mm&quot;&#xa;    def pathName    = userDir + sep + &quot;templates&quot; + sep + &quot;Functional Styles Base&quot; + sep + mapFileName&#xa;    def sourceMap   = tom.getMapFromPath(pathName, false) //usar mapa indicado (pero oculto)&#xa;&#xa;// return tutMap.class&#xa;    def targetMap = node.map&#xa;    us.copyUserStyles(sourceMap, targetMap)&#xa;&#xa;//Other use case examples on how to use edofro.pseudofreeplaneapi.UserStyles.copyUserStyles&#xa;/*&#xa;    def myString = &apos;ToM_goto&apos;&#xa;    def myList = &apos;ToM_nextPage,ToM_goto,ToM_showNode&apos;.split(&apos;,&apos;)&#xa;    def myClosure =  {it.text.contains(&apos;u&apos;)}&#xa;&#xa;&#xa;    us.copyUserStyles(sourceMap, targetMap, myString)&#xa;    us.copyUserStyles(sourceMap, targetMap, myList)&#xa;    us.copyUserStyles(sourceMap, targetMap, myClosure)&#xa;*/"/>
+<attribute NAME="_script6" VALUE="def taskStyle = &apos;nextTask&apos;&#xa;&#xa;if(node.style.name == taskStyle){ taskStyle = null }&#xa;&#xa;def nodos = c.selecteds&#xa;nodos*.style*.name = taskStyle"/>
+<attribute NAME="_script7" VALUE="def taskStyle = &apos;pendingTask&apos;&#xa;&#xa;if(node.style.name == taskStyle){ taskStyle = null }&#xa;&#xa;def nodos = c.selecteds&#xa;nodos*.style*.name = taskStyle"/>
+<attribute NAME="_script8" VALUE="def taskStyle = &apos;maybeTask&apos;&#xa;&#xa;if(node.style.name == taskStyle){ taskStyle = null }&#xa;&#xa;def nodos = c.selecteds&#xa;nodos*.style*.name = taskStyle"/>
+<attribute NAME="_script9" VALUE="import org.freeplane.view.swing.features.progress.mindmapmode.ProgressIcons&#xa;&#xa;def taskStyle = &apos;discardedTask&apos;&#xa;&#xa;if(node.style.name == taskStyle){ taskStyle = null }&#xa;&#xa;def nodos = c.selecteds&#xa;nodos*.style*.name = taskStyle&#xa;&#xa;if(taskStyle){&#xa;    println &apos;hh&apos;&#xa;    def progIcons = new ProgressIcons()&#xa;    nodos.each{ n -&gt;&#xa;        progIcons.removeProgressIcons(n.delegate)&#xa;    }&#xa;}"/>
+<attribute NAME="_script10" VALUE="import org.freeplane.view.swing.features.progress.mindmapmode.ProgressIcons&#xa;&#xa;def taskStyle = &apos;completedTask&apos;&#xa;&#xa;if(node.style.name == taskStyle){ taskStyle = null }&#xa;&#xa;def nodos = c.selecteds&#xa;nodos*.style*.name = taskStyle&#xa;&#xa;if(taskStyle){&#xa;    println &apos;hh&apos;&#xa;    def progIcons = new ProgressIcons()&#xa;    nodos.each{ n -&gt;&#xa;        progIcons.removeProgressIcons(n.delegate)&#xa;    }&#xa;}"/>
+<attribute NAME="_script11" VALUE="import org.freeplane.core.util.MenuUtils as menuUtils&#xa;&#xa;menuUtils.executeMenuItems([&apos;NewParentNode&apos;])&#xa;&#xa;def nodo =  c.selected&#xa;//nodo.text = &apos;v0.&apos;&#xa;nodo.style.name = &apos;milestone&apos;"/>
+<attribute NAME="_script12" VALUE="def formula = &apos;=\ndef nodo = node.parent\n(node[\&apos;tasksStyles\&apos;]?:\&apos;nextTask,pendingTask\&apos;).split(\&apos;,\&apos;).collect{st -&gt; &quot;${nodo.find{it.style.name == st &amp;&amp; !it.pathToRoot.any{it.style.name==\&apos;tasksBucket\&apos;}}.size()}  ${st}(s)&quot;}.join(\&apos;\\n\&apos;)&apos;.toString()&#xa;stylesAttr = &apos;tasksStyles&apos;&#xa;def tasksStyles = &apos;nextTask,pendingTask,maybeTask,discardedTask,completedTask&apos;&#xa;wipAttr =&apos;WIP filter&apos;&#xa;def wipAttrDefault = false&#xa;&#xa;def nodo =  node&#xa;&#xa;    def nBucket = nodo.createChild(&apos;Tasks Sums&apos;)&#xa;    nBucket.details = formula&#xa;    nBucket[stylesAttr] = tasksStyles&#xa;    nBucket[wipAttr] = wipAttrDefault&#xa;    nBucket.icons.add(&apos;emoji-0023-20E3&apos;)"/>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      customMenu&nbsp;&nbsp;
+    </p>
+    <p>
+      &nbsp;&nbsp;- icons only
+    </p>
+    <p>
+      &nbsp;&nbsp;- return to mindmap
+    </p>
+  </body>
+</html></richcontent>
 </node>
 </node>
 </node>

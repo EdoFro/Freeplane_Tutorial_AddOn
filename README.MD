@@ -21,6 +21,10 @@ edo
 # Next tasks
 
 nullPendientesnull
+   - No milestone
+      - [ ] **eliminar tareas finalizadas antiguas**
+      - [ ] **translate tasks to english**
+      - [ ] filter maybe tasks from Readme file
    - ToM v0.0.7
       - ToM addon
          - [x] actualizar changeLog
@@ -35,9 +39,6 @@ nullPendientesnull
                - [ ] ToM_showMenu
             - [x] Hacer que se copia a carpeta docs
          - [ ] script de ayuda que llame a funcionalidad MDH para copiar mapas MDH clean
-            - [ ] *debe además quitar "Crayon" de mapa?*
-            - [ ] *si mapa no tiene nodos MDH, debería copiarlo igualmente, para asegurar que todos los mapas que están en una carpeta se copian a la otra definitiva*
-            - [ ] *script que lo aplique a todos los mapas de una carpeta*
          - [ ] Delete MDH Styles from map
          - hacer.tutoria.paso.paso
             - [x] Tutorial 1: one page tutorial in a new mindmap
@@ -67,7 +68,6 @@ nullPendientesnull
                - [ ] ToM_openMap: debe usar texto de la nota del nodo
             - ToM_showNode
                - [ ] ToM_showNode: se usa el texto de los nodo hijos para armar el texto del panel (REVISAR)
-                  - [ ] *<del>revisar</del>*
             - ToM_openTutMap
                - [ ] ToM_openTutMap: debería usar texto de nota y si no existe tirar el texto por default
             - nuevas
@@ -80,15 +80,8 @@ nullPendientesnull
       - lib
          - ToM_actions.groovy
             - [ ] Manage errors (message)
-               - [ ] *ActionNode*
-               - [ ] *groovyNode*
-               - [ ] *mensaje de error*
-               - [ ] *Log a log.0*
             - nuevas
                - [ ] accion displayMarkdownFile
-                  - [ ] *desde disco*
-                  - [ ] *desde web*
-               - [ ] *acción displayWebPage*
          - ToM_ui.groovy
             - [ ] Crear nuevo buttonPanel más compacto
       - Tuts w/ MDH
@@ -108,22 +101,11 @@ nullPendientesnull
                - [ ] exe scripts
             - nuevas
                - [ ] groovy console
-               - [ ] *agregar como acceder a listado de tutoriales de mapa*
-                  - [ ] *crear estilo que inserte addTutorialsPane en página*
-                  - [ ] *como pane automáticamente en última página*
-                  - [ ] *crear estilo que agregue un buttonPane ...*
          - ToM_ui.groovy
             - [ ] Tutorial debe poder partir en toolPane o en Window propia
             - [ ] Build a buttonPanel
             - [ ] Tomar formatos panel desde userStyles
             - [ ] revisar textos UI
-               - [ ] *revisar y hacer listado*
-               - [ ] *transformar en variables*
-               - [ ] *transformar en textos traducibles*
-            - [ ] *definir Opción*
-            - [ ] *definir lógica*
-            - [ ] *Acción Editorpane*
-            - [ ] *Acción newPage*
       - doc
          - [ ] Actualizar Tutorial Sample.mm
       - Tuts w/ MDH
@@ -131,24 +113,13 @@ nullPendientesnull
    - ToM Future D
       - lib
          - ToM_actions.groovy
-            - ToM_showMenu
-               - [ ] *si dos acciones seguidas coinciden en algún menu entonces no se cierra menu completamente*
             - nuevas
-               - [ ] *Desplegar mensaje inferior a pedido*
                - [ ] - I agree with your goals of showing a mouse cursor and allowing the tutorial to execute actions. Even better, though, would be a way to wait and "listen" for the user to click on the action and have the tutorial pause until they do the right thing. If it's just showing the user what to do rather than teaching them what to do and having them do it, it's not really a tutorial, but more like a way to create instructional videos using Freeplane (which would not be a bad thing, of course!). Tutorial means the user is following along and doing stuff.
-         - [ ] *agregar comentarios en código con descripción de cda método*
       - build.gradle
          - [ ] hacer que Gradle acceda a librerías desde Freeplane o desde Maven
             - [ ] jsoup
             - [ ] markedj
             - [ ] groovyNode
       - Apuntes
-         - [ ] *hacer wiki?*
          - [ ] Lastly, the only way to get proper feedback on this addon is to ask some people to actually use it to create tutorials for things. You might use it to try to create a tutorial for something that is *not* directly related to this addon, like a tutorial on how to change node width and save that change to the standard template. Only then will you get a sense of what this type of tool must be able to do.
-   - ToM Future E
-      - lib
-         - ToM_actions.groovy
-            - nuevas
-               - [ ] *Tutorial mouse arrow moves on the screen and shows where to click (not the actual mouse arrow, a simulated one)*
-               - [ ] *imita escribir en nodo*
 
