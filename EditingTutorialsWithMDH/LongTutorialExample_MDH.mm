@@ -1,5 +1,6 @@
 <map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
+<attribute_registry SHOW_ATTRIBUTES="selected"/>
 <node TEXT="Long Tutorial example" FOLDED="false" ID="ID_1407308379" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/Tutorial-o-MaticStepByStep.mm"><hook NAME="MapStyle" background="#2e3440" zoom="0.75">
     <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" mdhCleanMindmapPath="C:\Users\Edo\Documents\GitHub\Freeplane_Tutorial_AddOn\Tutorial-o-Matic\zips\doc\Tutorial-o-Matic\LongTutorialExample.mm" save_modification_times="false" mdhCleanMindmapExportDate="2022-05-14 13:49:23.249-0400" save_last_visited_node="default" show_note_icons="true" associatedTemplateLocation="template:/dark_nord_template.mm" save_folding="default" fit_to_viewport="false"/>
 
@@ -179,7 +180,7 @@ blockquote {
 <attribute_layout NAME_WIDTH="84.75 pt" VALUE_WIDTH="81.75 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE=" Origami"/>
 <node TEXT="Cute Origami Bookmarks" ID="ID_1575387327"/>
-<node TEXT="introduction" STYLE_REF="ToM_note" FOLDED="true" ID="ID_263121425">
+<node TEXT="introduction" STYLE_REF="ToM_note" ID="ID_263121425">
 <node TEXT="Markdown document.md" STYLE_REF="MarkdownHelperNode" ID="ID_683250304">
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -1151,7 +1152,7 @@ blockquote {
 </node>
 </node>
 </node>
-<node TEXT="Step 5: Voilà!" FOLDED="true" ID="ID_864777376">
+<node TEXT="Step 5: Voilà!" FOLDED="true" ID="ID_864777376" VGAP_QUANTITY="2 pt">
 <node TEXT="Step 5: Voilà!" STYLE_REF="ToM_note" ID="ID_49219496">
 <node TEXT="# Step 5: Voilà! ..." STYLE_REF="MarkdownHelperNode" ID="ID_220500083">
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0"/>

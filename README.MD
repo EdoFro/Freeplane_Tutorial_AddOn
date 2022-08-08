@@ -18,108 +18,122 @@ Bye,
 
 edo
 
-# Next tasks
+# Currently working on
 
-nullPendientesnull
-   - No milestone
-      - [ ] **eliminar tareas finalizadas antiguas**
-      - [ ] **translate tasks to english**
-      - [ ] filter maybe tasks from Readme file
-   - ToM v0.0.7
-      - ToM addon
-         - [x] actualizar changeLog
-            - [x] cambié getMenuCommandToM
-            - [x] tuve que crear nueva versión para superar bug de children vs children()
-               - [x] actualizar texto versiones en estos nodos
-      - build.gradle
-         - [x] usar build.gradle para java 17
-      - Tuts w/ MDH
-         - [ ] Crear mapa Tutorial-o-MaticStepByStepActions.mm
-            - Tutoriale.acciones
-               - [ ] ToM_showMenu
-            - [x] Hacer que se copia a carpeta docs
-         - [ ] script de ayuda que llame a funcionalidad MDH para copiar mapas MDH clean
-         - [ ] Delete MDH Styles from map
-         - hacer.tutoria.paso.paso
-            - [x] Tutorial 1: one page tutorial in a new mindmap
-            - [x] Tutorial 2: one page tutorial in an existing mindmap
-            - [ ] Tutorial Crayon
-            - [ ] **Tutorial : organizing a tutorial in multiple pages (working on it)**
-               - [x] create example tutorial map one long page
-                  - [x] crear mapa nuevo
-                  - [x] agregarle ToM Styles
-                  - [x] copiarle Origami tut
-                  - [x] exportable a carpeta zip sin MDH
-               - [ ] **Ojo:<br>puede ser que requiera que sea copiado pra poder usar opción "select node"**
-            - [ ] Link a tutoriales Acciones en WIP
-      - [ ] Mejorar ReadMe.MD
-   - ToM Future A
-      - lib
-         - ToM_actions.groovy
-            - ToM_showMenu
-               - [ ] ToM_showMenu: tras un par de segundos debe desaparecer
-            - ToM_groovy
-               - [ ] ToM_groovy: usa texto de nodos para panel
-            - ToM_copy
-               - [ ] ToM_copy: debe usar texto de la nota del nodo tom_copy
-            - ToM_select
-               - [ ] ToM_select: debe usar texto de la nota del nodo tom_select
-            - ToM_openMap
-               - [ ] ToM_openMap: debe usar texto de la nota del nodo
-            - ToM_showNode
-               - [ ] ToM_showNode: se usa el texto de los nodo hijos para armar el texto del panel (REVISAR)
-            - ToM_openTutMap
-               - [ ] ToM_openTutMap: debería usar texto de nota y si no existe tirar el texto por default
-            - nuevas
-               - [ ] botón Previous page
-      - icons
-         - [ ] agregar icono Tutorial-o-Matic
-      - Tuts w/ MDH
-         - [ ] Agregar mapa con nodos ejemplos
-   - ToM Future B
-      - lib
-         - ToM_actions.groovy
-            - [ ] Manage errors (message)
-            - nuevas
-               - [ ] accion displayMarkdownFile
-         - ToM_ui.groovy
-            - [ ] Crear nuevo buttonPanel más compacto
-      - Tuts w/ MDH
-         - [ ] copiar panel de MoM
-      - Apuntes
-         - [ ] definir si un mapa para practica:<br>¿se permite sobreescribir (para guardar avance)?
-         - [ ] Funcionalidad MDH:<br>Comando para 'actualizar' la nota a un nodo con link a un nodo MDH y copia su contenido
-   - ToM Future C
-      - lib
-         - ToM_actions.groovy
-            - ToM_groovy
-               - [ ] agregar botón opcional en groovyPanel que permita abrir script en groovyConsole
-                  - [ ] Agregar comado que abra console con script en texto pero sin asociar nodo y que fuente sea opcional
-               - [ ] incluye dentro del marco
-               - [ ] incluir permisos aceptados en preferencias
-               - [ ] encapsular ejecución de script sólo con permisos aceptados
-               - [ ] exe scripts
-            - nuevas
-               - [ ] groovy console
-         - ToM_ui.groovy
-            - [ ] Tutorial debe poder partir en toolPane o en Window propia
-            - [ ] Build a buttonPanel
-            - [ ] Tomar formatos panel desde userStyles
-            - [ ] revisar textos UI
-      - doc
-         - [ ] Actualizar Tutorial Sample.mm
-      - Tuts w/ MDH
-         - [ ] modificar MoM
-   - ToM Future D
-      - lib
-         - ToM_actions.groovy
-            - nuevas
-               - [ ] - I agree with your goals of showing a mouse cursor and allowing the tutorial to execute actions. Even better, though, would be a way to wait and "listen" for the user to click on the action and have the tutorial pause until they do the right thing. If it's just showing the user what to do rather than teaching them what to do and having them do it, it's not really a tutorial, but more like a way to create instructional videos using Freeplane (which would not be a bad thing, of course!). Tutorial means the user is following along and doing stuff.
-      - build.gradle
-         - [ ] hacer que Gradle acceda a librerías desde Freeplane o desde Maven
-            - [ ] jsoup
-            - [ ] markedj
-            - [ ] groovyNode
-      - Apuntes
-         - [ ] Lastly, the only way to get proper feedback on this addon is to ask some people to actually use it to create tutorials for things. You might use it to try to create a tutorial for something that is *not* directly related to this addon, like a tutorial on how to change node width and save that change to the standard template. Only then will you get a sense of what this type of tool must be able to do.
+- **No milestone**
+   - [ ] **Redefine Add-on menu and Add-on tutorials links for better user experience (working on it: ~75%)**
+- **ToM v0.0.7**
+   - Add-on tutorials (w/MDH)
+      - StepByStep Tutorial
+         - [ ] **Update "Introduction" tutorial in StepByStep map (working on it: ~0%)**
+
+# Tasks
+
+- **No milestone**
+   - [ ] **Redefine Add-on menu and Add-on tutorials links for better user experience (working on it: ~75%)**
+   - [x] Translate tasks to english  <br>and make it easy understandable
+   - [x] Filter 'maybeTasks' from Readme file
+- **ToM v0.0.7**
+   - scripts
+      - [x] getMenuCommand renamed to "getMenuCommandToM.groovy"
+   - build.gradle
+      - [x] using build.gradle for java 17
+      - [x] update it to FP 1.10.4
+   - Add-on tutorials (w/MDH)
+      - StepByStep Tutorial
+         - [x] Tutorial 1: one page tutorial in a new mindmap
+         - [x] Tutorial 2: one page tutorial in an existing mindmap
+         - [x] Tutorial 3: "Organizing a tutorial in multiple pages"
+         - [x] Add "Crayon" functionality to add-on's tutorial
+         - [ ] **Update "Introduction" tutorial in StepByStep map (working on it: ~0%)**
+         - [ ] Add links to StepbyStepActions tutorial (to WIP repository for this stage)
+      - StepByStepActions Tutorial
+         - [ ] Create basic version of "Tutorial-o-MaticStepByStepActions.mm" mindmap where ToM actions styles will be explained
+      - practice.maps
+         - [ ] Delete MDH Styles from "myExistingMindMap.mm" map
+         - [ ] Delete MDH Styles from "LongTutorialExample_MDH.mm" map
+   - README.MD
+      - [ ] Redefine instructions
+      - [ ] Improve ReadMe.MD
+- **ToM v0.0.8**
+   - lib
+      - ToM_actions.grvy
+         - ToM_showMenu
+            - [ ] Explain that ToM_showMenu accepts the modifier "Fire"
+            - [ ] ToM_showMenu must use the modifier "candle" too (when using "Fire"). So that if it can be executed only once if wanted.
+      - ToM.grvy
+         - [ ] Improve "TutorialsPane" so it can have a title, text and images.
+   - Add-on tutorials (w/MDH)
+      - [ ] Help script that calls "Save as MDH clean mindmap" (MDH add-on) to automatize updating process
+      - StepByStepActions Tutorial
+         - [ ] Create "Tutorial-o-MaticStepByStepActions.mm" mindmap where all ToM actions styles are explained
+- **ToM xFuture A**
+   - lib
+      - ToM_actions.grvy
+         - ToM_showMenu
+            - [ ] ToM_showMenu: After a few seconds opened menus should automatically close
+         - ToM_groovy
+            - [ ] ToM_groovy: should use node text for the panel
+         - ToM_copy
+            - [ ] ToM_copy: should use note text from tom_copy node for the panel
+         - ToM_select
+            - [ ] ToM_select: should use note text from tom_select node for the panel
+         - ToM_openMap
+            - [ ] ToM_openMap: should use note text from node for the panel
+         - ToM_showNode
+            - [ ] ToM_showNode:<br>should use childnodes text for the panel? check this
+         - ToM_openTutMap
+            - [ ] ToM_openTutMap: should use note text from node for the panel. and if not available, it should use default text
+         - new
+            - [ ] implement "Previous page" button
+      - ToM_ui.grvy
+         - [ ] ToM_buttonBoard: create a new style  that creates a panel that simulates a toolbar (like Menu-o-Matic)
+   - icons
+      - [ ] Create and add a "**Tutorial-o-Matic**" icon
+   - doc
+      - [ ] Change current links to tutorialmaps into links to a second demo map
+   - Add-on tutorials (w/MDH)
+      - [ ] Add to tutorial map (or create a new one) sample nodes with the different ToM styles, so the user can insert them and modify them to learn
+- **ToM xFuture B**
+   - lib
+      - ToM_actions.grvy
+         - [ ] poner try catch<br>y que catch despliege mensaje de error
+         - new
+            - [ ] nodo con link a file .md<br>--><br>lo despliega en panel de editor
+      - ToM_ui.grvy
+         - [ ] Improve buttonPanel layout to make it more compact
+   - Add-on tutorials (w/MDH)
+      - Commands
+         - [ ] add buttonBoards to map
+   - Apuntes
+      - [ ] practice maps: Should the user be able to save changes or should the user have to use "save as" option?
+      - [ ] new MDH feature:<br>Command to 'update' the note of a node that has a link to a MDH node and it copy/pastes its contain (from another map)  <br>desde otro mapa
+   - scripts
+      - [ ] init Script  that reacts to the opening of mindmaps that have tutorials and automatically shows the Tutorials dialog
+- **ToM xFuture C**
+   - lib
+      - ToM_actions.grvy
+         - ToM_groovy
+            - [ ] add an optional **button** to **groovyPanel** that opens the script in **Groovy Console**
+            - [ ] improve **groovyPanel** with more features  <br>posibilidades
+            - [ ] make sure that scripts apply security levels defined in Freeplane preferences
+         - new
+            - [ ] add Groovy Output Console to groovyPanel?
+      - ToM_ui.grvy
+         - [ ] Option to start Tutorial in TabPanel or in own window (dialog)
+         - [ ] Panel style should be read from a special userStyles (including css)
+         - [ ] Transform al UI texts in variables that can be translated
+   - doc
+      - [ ] Update **Tutorial Sample.mm** so it includes all the features changes
+- **ToM xFuture D**
+   - lib
+      - ToM_actions.grvy
+         - new
+            - [ ] "Listen" to user actions and verify if he/she did the steps as explained in the tutorial (or if the user's result is equivalent to the expected result)
+      - [ ] Add comments to all groovy files (a description to each method)
+   - build.gradle
+      - [ ] Make that Gradle access libraries from Freeplane or from Maven when building the add-on
+         - [ ] jsoup
+         - [ ] markedj
+         - [ ] groovyNode
 

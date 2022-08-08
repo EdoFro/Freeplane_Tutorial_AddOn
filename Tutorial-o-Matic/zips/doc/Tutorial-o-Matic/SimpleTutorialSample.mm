@@ -1,6 +1,28 @@
 <map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
-<node TEXT="Simple Tutorial Sample" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_258304564"><hook NAME="MapStyle" background="#c4e1ff">
+<node TEXT="Simple Tutorial Sample" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_258304564"><hook NAME="MapStyle" background="#c4e1ff" zoom="0.8">
+    <conditional_styles>
+        <conditional_style ACTIVE="true" STYLE_REF="containsNextTasks" LAST="true">
+            <script_condition>
+                <script>(node.findAll() - node)?.any{it.style.name == &apos;nextTask&apos;}</script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="false" STYLE_REF="containsNextTasks" LAST="true">
+            <script_condition>
+                <script>(node.findAll() - node)?.any{it.style.name == &apos;Siguiente tarea&apos;} </script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="true" STYLE_REF="containsPendingTasks" LAST="true">
+            <script_condition>
+                <script>(node.findAll() - node)?.any{it.style.name == &apos;pendingTask&apos;}</script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="false" STYLE_REF="containsPendingTasks" LAST="true">
+            <script_condition>
+                <script>(node.findAll() - node)?.any{it.style.name == &apos;Tarea pendiente&apos;} </script>
+            </script_condition>
+        </conditional_style>
+    </conditional_styles>
     <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" save_folding="save_folding_if_map_is_changed" fit_to_viewport="false"/>
 
 <map_styles>
@@ -133,6 +155,21 @@ code {
 </stylenode>
 <stylenode TEXT="containsPendingTasks" BACKGROUND_COLOR="#b5d7d7">
 <icon BUILTIN="emoji-23F9"/>
+</stylenode>
+<stylenode TEXT="maybeTask" BACKGROUND_COLOR="#cefcfc">
+<icon BUILTIN="emoji-23FA"/>
+</stylenode>
+<stylenode TEXT="project" COLOR="#e1e19c" BACKGROUND_COLOR="#1c1c63">
+<icon BUILTIN="emoji-1F5C2"/>
+<attribute NAME="projectCode" VALUE=""/>
+</stylenode>
+<stylenode TEXT="tasksBucket">
+<icon BUILTIN="emoji-1F5C3"/>
+<font BOLD="true"/>
+</stylenode>
+<stylenode TEXT="milestone">
+<icon BUILTIN="emoji-1F6A9"/>
+<font BOLD="true"/>
 </stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
@@ -1894,7 +1931,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 </node>
 <node TEXT="html note" ID="ID_1092689747">
-<arrowlink COLOR="#cc0000" WIDTH="6" TRANSPARENCY="255" DESTINATION="ID_1287893974" MIDDLE_LABEL="Change their order &#xa;and reload the page &#xa;to see how the TOC updates" STARTINCLINATION="195.74999 pt;6.75 pt;" ENDINCLINATION="188.99999 pt;-46.5 pt;" STARTARROW="DEFAULT" ENDARROW="DEFAULT"/>
+<arrowlink COLOR="#cc0000" WIDTH="6" TRANSPARENCY="255" DESTINATION="ID_1287893974" MIDDLE_LABEL="Change their order &#xa;and reload the page &#xa;to see how the TOC updates" STARTINCLINATION="196.0851 pt;6.89362 pt;" ENDINCLINATION="189.19149 pt;-45.95745 pt;" STARTARROW="DEFAULT" ENDARROW="DEFAULT"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
 <node TEXT="HTML example" STYLE_REF="ToM_newPage" ID="ID_1391525027"/>
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_774731236">
@@ -2160,11 +2197,17 @@ To jump to the **&apos;SimpleDemo&apos;s TOC page&apos;** page click on the butt
 </richcontent>
 </node>
 <node TEXT="Current features" ID="ID_307404226" LINK="#ID_1118821725"/>
-<node TEXT="HowToTutorial-o-Matic.mm" ID="ID_9460935" LINK="file:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm"/>
-<node TEXT="tut intro" ID="ID_754880983" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/Tutorial-o-Matic%20Intro.mm#ID_1522236279"/>
+<node TEXT="HowToTutorial-o-Matic.mm" ID="ID_9460935" LINK="file:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm">
+<node TEXT="Change this link to a another demo tutorial map" STYLE_REF="nextTask" ID="ID_1862638121"/>
+</node>
+<node TEXT="tut intro" ID="ID_754880983" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/Tutorial-o-Matic%20Intro.mm#ID_1522236279">
+<node TEXT="Change this link to a another demo tutorial map" STYLE_REF="nextTask" ID="ID_769301832"/>
+</node>
 <node TEXT="history.md" ID="ID_713918886" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/history.md"/>
 <node TEXT="Add actions to a tutorial" ID="ID_444821637" LINK="menuitem:_addons.tutorialOMatic.openTutorialPageFromLink_on_single_node">
+<attribute_layout NAME_WIDTH="93.44681 pt" VALUE_WIDTH="541.5319 pt"/>
 <attribute NAME="ToM_LinkToPage" VALUE="tutorial:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm#ID_1128437346" OBJECT="java.net.URI|tutorial:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm#ID_1128437346"/>
+<node TEXT="Change this link to a another demo tutorial map" STYLE_REF="nextTask" ID="ID_81424380"/>
 </node>
 </node>
 </node>

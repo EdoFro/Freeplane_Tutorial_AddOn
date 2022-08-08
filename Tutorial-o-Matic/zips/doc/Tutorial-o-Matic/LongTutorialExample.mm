@@ -150,10 +150,8 @@
 <node TEXT="Cute Origami Bookmarks" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_688502853">
 <attribute_layout NAME_WIDTH="84.75 pt" VALUE_WIDTH="81.75 pt"/>
 <node TEXT="Cute Origami Bookmarks" ID="ID_1575387327"/>
-<node TEXT="introduction" STYLE_REF="ToM_note" FOLDED="true" ID="ID_263121425">
-<node TEXT="Markdown document.md" ID="ID_683250304">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="introduction" STYLE_REF="ToM_note" ID="ID_263121425">
+<node TEXT="Markdown document.md" ID="ID_683250304"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -166,12 +164,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="web Image" ID="ID_740204247">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="web Image" ID="ID_740204247"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -181,12 +176,9 @@
       ![image Origami Bookmarks](https://content.instructables.com/ORIG/FEG/OIPK/L06PT77G/FEGOIPKL06PT77G.jpg?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Markdown document.md" ID="ID_963852895">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Markdown document.md" ID="ID_963852895"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -199,12 +191,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Markdown document.md" ID="ID_1406169313">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Markdown document.md" ID="ID_1406169313"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -217,12 +206,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Markdown document.md" ID="ID_109121502">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Markdown document.md" ID="ID_109121502"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -235,15 +221,12 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="Supplies" ID="ID_1686943517"/>
 <node TEXT="Supplies" STYLE_REF="ToM_note" FOLDED="true" ID="ID_1385038564">
-<node TEXT="# Supplies ..." ID="ID_1853123878">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="# Supplies ..." ID="ID_1853123878"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -256,12 +239,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="web Image" ID="ID_318833000">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="web Image" ID="ID_318833000"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -271,12 +251,9 @@
       ![image Origami Bookmarks](https://content.instructables.com/ORIG/FDD/YAIK/L06PT6OG/FDDYAIKL06PT6OG.jpg?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="To make these bookmarks you ..." ID="ID_1922664816">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="To make these bookmarks you ..." ID="ID_1922664816"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -313,12 +290,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Optional: ..." ID="ID_1673643812">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Optional: ..." ID="ID_1673643812"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -343,15 +317,12 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="Step 1: Decide Your Design" FOLDED="true" ID="ID_951257386">
 <node TEXT="Step 1: Decide Your Design" STYLE_REF="ToM_note" ID="ID_37098714">
-<node TEXT="# Step 1: Decide Your ..." ID="ID_390199617">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="# Step 1: Decide Your ..." ID="ID_390199617"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -364,12 +335,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="First, decide what design you ..." ID="ID_1494000720">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="First, decide what design you ..." ID="ID_1494000720"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -382,12 +350,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Make sure that you have ..." ID="ID_781344733">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Make sure that you have ..." ID="ID_781344733"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -400,16 +365,13 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
 <node TEXT="Step 2: Measure and Cut Paper" FOLDED="true" ID="ID_28252139">
 <node TEXT="Step 2: Measure and Cut Paper" STYLE_REF="ToM_note" ID="ID_1292507038">
-<node TEXT="# Step 2: Measure and ..." ID="ID_496934883">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="# Step 2: Measure and ..." ID="ID_496934883"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -422,12 +384,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="We are now going to ..." ID="ID_31704274">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="We are now going to ..." ID="ID_31704274"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -440,12 +399,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="To do this, you need ..." ID="ID_683632142">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="To do this, you need ..." ID="ID_683632142"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -458,12 +414,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Use your ruler to measure ..." ID="ID_1168372988">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Use your ruler to measure ..." ID="ID_1168372988"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -482,12 +435,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Draw two faint lines connecting ..." ID="ID_179596623">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Draw two faint lines connecting ..." ID="ID_179596623"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -506,12 +456,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Cut through the lines as ..." ID="ID_610056273">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Cut through the lines as ..." ID="ID_610056273"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -530,12 +477,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Realise that the end size ..." ID="ID_95682560">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Realise that the end size ..." ID="ID_95682560"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -548,16 +492,13 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
 <node TEXT="Step 3: Fold Paper" FOLDED="true" ID="ID_800957929">
 <node TEXT="Fold Paper" STYLE_REF="ToM_note" ID="ID_1219511013">
-<node TEXT="# Fold Paper ..." ID="ID_331335372">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="# Fold Paper ..." ID="ID_331335372"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -570,12 +511,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="We now have to fold ..." ID="ID_1914437748">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="We now have to fold ..." ID="ID_1914437748"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -588,12 +526,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Fold the square into quarters ..." ID="ID_1448411681">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Fold the square into quarters ..." ID="ID_1448411681"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -612,14 +547,11 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="Fold Paper" STYLE_REF="ToM_note" ID="ID_1199745232">
-<node TEXT="Fold your paper diagonally once ..." ID="ID_166678504">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Fold your paper diagonally once ..." ID="ID_166678504"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -638,14 +570,11 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="Fold Paper" STYLE_REF="ToM_note" ID="ID_508136367">
-<node TEXT="Fold the bottom corner upwards ..." ID="ID_1941704684">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Fold the bottom corner upwards ..." ID="ID_1941704684"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -664,14 +593,11 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="Fold Paper" STYLE_REF="ToM_note" ID="ID_1423209740">
-<node TEXT="Fold the left and right ..." ID="ID_94933072">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Fold the left and right ..." ID="ID_94933072"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -690,14 +616,11 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="Fold Paper" STYLE_REF="ToM_note" ID="ID_364258375">
-<node TEXT="Tuck the left and right ..." ID="ID_274473014">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Tuck the left and right ..." ID="ID_274473014"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -716,12 +639,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="If you are using card, ..." ID="ID_206258478">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="If you are using card, ..." ID="ID_206258478"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -734,16 +654,13 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
 <node TEXT="Step 4: Decorate Bookmark" FOLDED="true" ID="ID_1252874774">
 <node TEXT="Step 4: Decorate Bookmark" STYLE_REF="ToM_note" ID="ID_1901201606">
-<node TEXT="# Step 4: Decorate Bookmark ..." ID="ID_1590106780">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="# Step 4: Decorate Bookmark ..." ID="ID_1590106780"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -756,12 +673,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="web Image" ID="ID_1826203025">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="web Image" ID="ID_1826203025"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -771,12 +685,9 @@
       ![image Origami Bookmarks](https://content.instructables.com/ORIG/FMV/XRZC/L06PT9QS/FMVXRZCL06PT9QS.jpg?auto=webp&amp;frame=1&amp;fit=bounds&amp;md=d0b67e4507fddf246d311ff018cd22a8)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="We have now reached the ..." ID="ID_1766164678">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="We have now reached the ..." ID="ID_1766164678"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -789,12 +700,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="As you can see, I ..." ID="ID_1537078655">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="As you can see, I ..." ID="ID_1537078655"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -807,12 +715,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Tips for decorating your bookmarks: ..." ID="ID_1978243443">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Tips for decorating your bookmarks: ..." ID="ID_1978243443"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -840,12 +745,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="If you are adding extra ..." ID="ID_1438996820">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="If you are adding extra ..." ID="ID_1438996820"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -858,16 +760,13 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
 <node TEXT="Step 5: Voilà!" FOLDED="true" ID="ID_864777376">
 <node TEXT="Step 5: Voilà!" STYLE_REF="ToM_note" ID="ID_49219496">
-<node TEXT="# Step 5: Voilà! ..." ID="ID_220500083">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="# Step 5: Voilà! ..." ID="ID_220500083"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -880,12 +779,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="web Image" ID="ID_1765689165">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="web Image" ID="ID_1765689165"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -895,12 +791,9 @@
       ![image Origami Bookmarks](https://content.instructables.com/ORIG/FTG/QP3N/L06PT76P/FTGQP3NL06PT76P.jpg?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds&amp;md=c7ed44f4d0772f0e72a8e37abc3e6924)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Congratulations! You have created a ..." ID="ID_1269412138">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Congratulations! You have created a ..." ID="ID_1269412138"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -913,12 +806,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="I also made a fox ..." ID="ID_1690349168">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="I also made a fox ..." ID="ID_1690349168"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -931,12 +821,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Now you could gift your ..." ID="ID_612634017">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Now you could gift your ..." ID="ID_612634017"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -949,12 +836,9 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Thanks for reading my instructable ..." ID="ID_1354090317">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Thanks for reading my instructable ..." ID="ID_1354090317"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -967,8 +851,7 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
