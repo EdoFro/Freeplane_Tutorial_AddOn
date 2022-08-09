@@ -7,14 +7,14 @@
 <node TEXT="Tutorial-o-Matic" FOLDED="false" ID="ID_1090958577" CREATED="1658784107461" MODIFIED="1658784107461" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node" VGAP_QUANTITY="3 pt">
 <hook NAME="accessories/plugins/AutomaticLayout.properties" VALUE="ALL"/>
 <hook NAME="MapStyle" background="#3c3836" zoom="0.8">
-    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" mdhCleanMindmapPath="C:\Users\Edo\Documents\GitHub\Freeplane_Tutorial_AddOn\Tutorial-o-Matic\zips\doc\Tutorial-o-Matic\Tutorial-o-Matic Intro.mm" save_modification_times="false" mdhCleanMindmapExportDate="2022-07-25 17:23:19.530-0400" save_last_visited_node="default" show_note_icons="true" associatedTemplateLocation="template:/dark_gruvbox_template.mm" save_folding="default" fit_to_viewport="false"/>
+    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" mdhCleanMindmapPath="C:\Users\Edo\Documents\GitHub\Freeplane_Tutorial_AddOn\Tutorial-o-Matic\zips\doc\Tutorial-o-Matic\Tutorial-o-Matic Intro.mm" save_modification_times="false" mdhCleanMindmapExportDate="2022-08-08 20:49:51.152-0400" save_last_visited_node="default" show_note_icons="true" associatedTemplateLocation="template:/dark_gruvbox_template.mm" save_folding="default" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1012000487" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_602083445" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#3c3836" BACKGROUND_COLOR="#fbf1c7" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="8 pt" SHAPE_VERTICAL_MARGIN="5 pt" NUMBERED="false" FORMAT="STANDARD_FORMAT" TEXT_ALIGN="DEFAULT" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="true" BORDER_COLOR="#f0f0f0" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="3 pt" MAX_WIDTH="10 cm" MIN_WIDTH="0 cm">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#a89984" WIDTH="2" TRANSPARENCY="255" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_602083445" STARTINCLINATION="102.6383 pt;-5.3617 pt;" ENDINCLINATION="102.6383 pt;3.06383 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#a89984" WIDTH="2" TRANSPARENCY="255" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_602083445" STARTINCLINATION="102.6383 pt;-3.82979 pt;" ENDINCLINATION="102.6383 pt;3.06383 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="SansSerif" SIZE="11" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="bezier" COLOR="#93a1a1" WIDTH="3" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -208,8 +208,7 @@ blockquote {
 <node TEXT="Introduction" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_839819820" CREATED="1658784107466" MODIFIED="1658784107466">
 <icon BUILTIN="emoji-1F58D"/>
 <attribute_layout NAME_WIDTH="91.5 pt" VALUE_WIDTH="132 pt"/>
-<node TEXT="greetings" ID="ID_26985145" CREATED="1658784107466" MODIFIED="1658784107466">
-<node TEXT="Welcome to Tutorial-o-Matic !!" STYLE_REF="ToM_newPage" ID="ID_1522236279" CREATED="1658784107466" MODIFIED="1658784107466"/>
+<node TEXT="Welcome to Tutorial-o-Matic !!" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1522236279" CREATED="1658784107466" MODIFIED="1658784107466">
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_365713608" CREATED="1658784107466" MODIFIED="1658784107466">
 <node TEXT="Greetings" STYLE_REF="MarkdownHelperNode" ID="ID_1402723528" CREATED="1658784107466" MODIFIED="1658784107466">
 <attribute_layout NAME_WIDTH="135 pt" VALUE_WIDTH="40.5 pt"/>
@@ -259,6 +258,25 @@ I hope you enjoy this!
 </richcontent>
 </node>
 </node>
+<node TEXT="Markdown document.md" STYLE_REF="MarkdownHelperNode" ID="ID_1284799224" CREATED="1658784107466" MODIFIED="1658784107466">
+<attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
+<attribute NAME="hideFolded" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="true"/>
+<attribute NAME="topHeadersNumbered" VALUE="false"/>
+<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
+<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="lineOverHeader" VALUE="true"/>
+<attribute NAME="ignoreHeaderDetails" VALUE="true"/>
+<attribute NAME="ignoreHeaderNotes" VALUE="true"/>
+<attribute NAME="ignoreLeafDetails" VALUE="false"/>
+<attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>=edofro.MarkDownHelper.MDH.document(node)</text>
+</richcontent>
+<node TEXT="Attention:" ID="ID_1833235863" CREATED="1659973953297" MODIFIED="1659974051117">
+<node TEXT="## I highly recommend to start with the &quot;**Step by Step**&quot; tutorials" ID="ID_1748208789" CREATED="1659973872750" MODIFIED="1659973932697"/>
+</node>
+</node>
 <node TEXT="Markdown document.md" STYLE_REF="MarkdownHelperNode" ID="ID_1968204511" CREATED="1658784107466" MODIFIED="1658784107466">
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -278,11 +296,18 @@ I hope you enjoy this!
 <node TEXT="Content" ID="ID_1146926472" CREATED="1658784107466" MODIFIED="1658784107466">
 <node TEXT="" STYLE_REF="markdownNote" ID="ID_1654820041" CREATED="1658784107466" MODIFIED="1658784107466"/>
 </node>
-<node TEXT="----" ID="ID_1456524296" CREATED="1658784107466" MODIFIED="1658784107466"/>
+</node>
+</node>
+<node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_1285573962" CREATED="1660000004538" MODIFIED="1660000012917"/>
+</node>
+<node TEXT="ToM add-on Tutorials" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1367198030" CREATED="1659999946428" MODIFIED="1660000168508">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_213116655" CREATED="1658784107466" MODIFIED="1658784107466">
+<node ID="ID_1645954787" TREE_ID="ID_1284799224">
+<node ID="ID_124307167" TREE_ID="ID_1833235863">
+<node ID="ID_1455410504" TREE_ID="ID_1748208789"/>
 </node>
 </node>
 </node>
-<node TEXT="about the tutorials" ID="ID_518514585" CREATED="1658784107466" MODIFIED="1658784107466">
 <node TEXT="open Tutorial page" STYLE_REF="ToM_openTutPage" ID="ID_1175739617" CREATED="1658784107466" MODIFIED="1658784107466">
 <node STYLE_REF="MarkdownHelperNode" ID="ID_1051131428" CREATED="1658784107466" MODIFIED="1658784107466" LINK="Tutorial-o-MaticStepByStep.mm"><richcontent TYPE="NODE">
 
@@ -332,61 +357,11 @@ I hope you enjoy this!
 <node TEXT="new map with a basic tutorial" ID="ID_1603808704" CREATED="1658784107466" MODIFIED="1658784107466"/>
 <node TEXT="adding a tutorial to an existing map" ID="ID_1951675340" CREATED="1658784107466" MODIFIED="1658784107466"/>
 <node TEXT="a tutorial with multiple pages" ID="ID_1051360951" CREATED="1658784107466" MODIFIED="1658784107466"/>
-<node TEXT="adding acctions" ID="ID_546147165" CREATED="1658784107466" MODIFIED="1658784107466"/>
+<node TEXT="adding acctions (pending)" ID="ID_546147165" CREATED="1658784107466" MODIFIED="1659973840949"/>
 </node>
 </node>
 </node>
-<node TEXT="Tutorial 2" STYLE_REF="MarkdownHelperNode" ID="ID_1354819536" CREATED="1658784107466" MODIFIED="1658784107466">
-<attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
-<attribute NAME="hideFolded" VALUE="false"/>
-<attribute NAME="headerNumbering" VALUE="false"/>
-<attribute NAME="topHeadersNumbered" VALUE="false"/>
-<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
-<attribute NAME="lineOverHeader" VALUE="true"/>
-<attribute NAME="ignoreHeaderDetails" VALUE="true"/>
-<attribute NAME="ignoreHeaderNotes" VALUE="true"/>
-<attribute NAME="ignoreLeafDetails" VALUE="false"/>
-<attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.document(node)
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="Tutorial 2" ID="ID_1658972090" CREATED="1658784107466" MODIFIED="1658784107466"/>
-</node>
-<node TEXT="Tutorial 3" STYLE_REF="MarkdownHelperNode" ID="ID_96154856" CREATED="1658784107466" MODIFIED="1658784107466">
-<attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
-<attribute NAME="hideFolded" VALUE="false"/>
-<attribute NAME="headerNumbering" VALUE="false"/>
-<attribute NAME="topHeadersNumbered" VALUE="false"/>
-<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
-<attribute NAME="lineOverHeader" VALUE="true"/>
-<attribute NAME="ignoreHeaderDetails" VALUE="true"/>
-<attribute NAME="ignoreHeaderNotes" VALUE="true"/>
-<attribute NAME="ignoreLeafDetails" VALUE="false"/>
-<attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.document(node)
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="Tutorial 3" ID="ID_1208564371" CREATED="1658784107466" MODIFIED="1658784107466"/>
-</node>
-<node STYLE_REF="MarkdownHelperNode" ID="ID_1882849769" CREATED="1658784107466" MODIFIED="1658784107466" LINK="HowToTutorial-o-Matic.mm"><richcontent TYPE="NODE">
+<node STYLE_REF="MarkdownHelperNode" ID="ID_1882849769" CREATED="1658784107466" MODIFIED="1660000389867" LINK="HowToTutorial-o-Matic.mm"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -397,10 +372,11 @@ I hope you enjoy this!
       '<b>How to ToM</b>'
     </p>
     <p style="text-align: center">
-      panel
+      guide
     </p>
   </body>
 </html>
+
 </richcontent>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -430,6 +406,72 @@ I hope you enjoy this!
 </node>
 </node>
 </node>
+<node TEXT="Tutorial 2" STYLE_REF="MarkdownHelperNode" ID="ID_1354819536" CREATED="1658784107466" MODIFIED="1658784107466">
+<attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
+<attribute NAME="hideFolded" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="false"/>
+<attribute NAME="topHeadersNumbered" VALUE="false"/>
+<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
+<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="lineOverHeader" VALUE="true"/>
+<attribute NAME="ignoreHeaderDetails" VALUE="true"/>
+<attribute NAME="ignoreHeaderNotes" VALUE="true"/>
+<attribute NAME="ignoreLeafDetails" VALUE="false"/>
+<attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.document(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Tutorial 2" ID="ID_1658972090" CREATED="1658784107466" MODIFIED="1658784107466"/>
+</node>
+</node>
+</node>
+<node TEXT="ToM Demos" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_944703234" CREATED="1659999960934" MODIFIED="1660000154713">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_226337772" CREATED="1658784107466" MODIFIED="1658784107466">
+<node ID="ID_786340916" TREE_ID="ID_1284799224">
+<node ID="ID_1355996421" TREE_ID="ID_1833235863">
+<node ID="ID_222941121" TREE_ID="ID_1748208789"/>
+</node>
+</node>
+</node>
+<node TEXT="open Tutorial page" STYLE_REF="ToM_openTutPage" ID="ID_100315550" CREATED="1658784107466" MODIFIED="1658784107466">
+<node TEXT="SimpleTutorialSample.mm" STYLE_REF="MarkdownHelperNode" ID="ID_205162521" CREATED="1658784107466" MODIFIED="1660005866714" LINK="SimpleTutorialSample.mm">
+<attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
+<attribute NAME="hideFolded" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="false"/>
+<attribute NAME="topHeadersNumbered" VALUE="false"/>
+<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
+<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="lineOverHeader" VALUE="true"/>
+<attribute NAME="ignoreHeaderDetails" VALUE="true"/>
+<attribute NAME="ignoreHeaderNotes" VALUE="true"/>
+<attribute NAME="ignoreLeafDetails" VALUE="false"/>
+<attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.document(node)</text>
+</richcontent>
+<node TEXT="Tutorial demos" ID="ID_223675091" CREATED="1660005873848" MODIFIED="1660005913043">
+<node TEXT="This file showcases the features of Tutorial-o-Matic" ID="ID_1481781368" CREATED="1660005920339" MODIFIED="1660006016543"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="ToM add-on commands" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_14515417" CREATED="1660006034839" MODIFIED="1660006053145">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_566483182" CREATED="1658784107466" MODIFIED="1658784107466">
+<node ID="ID_1514874639" TREE_ID="ID_1284799224">
+<node ID="ID_1352874766" TREE_ID="ID_1833235863">
+<node ID="ID_839452461" TREE_ID="ID_1748208789"/>
+</node>
+</node>
+</node>
+<node TEXT="open Tutorial page" STYLE_REF="ToM_openTutPage" ID="ID_597756100" CREATED="1658784107466" MODIFIED="1658784107466">
 <node STYLE_REF="MarkdownHelperNode" ID="ID_1769844741" CREATED="1658784107466" MODIFIED="1658784107466" LINK="Tutorial-o-MaticCommands.mm"><richcontent TYPE="NODE">
 
 <html>

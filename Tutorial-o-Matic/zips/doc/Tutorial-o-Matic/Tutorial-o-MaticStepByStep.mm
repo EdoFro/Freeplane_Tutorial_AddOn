@@ -3,8 +3,29 @@
 <attribute_registry SHOW_ATTRIBUTES="selected">
     <attribute_name VISIBLE="true" NAME="ToM_TabLabel"/>
 </attribute_registry>
-<node TEXT="Tutorial-o-Matic&#xa;Step by Step" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_1090958577" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node"><hook NAME="MapStyle" background="#2e3440" zoom="0.75">
-    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" associatedTemplateLocation="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/Tutorial-o-MaticStepByStep.mm" save_folding="default" fit_to_viewport="false"/>
+<node TEXT="Tutorial-o-Matic&#xa;Step by Step" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_1090958577" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node"><hook NAME="MapStyle" background="#2e3440" zoom="0.798">
+    <conditional_styles>
+        <conditional_style ACTIVE="true" STYLE_REF="GroovyNode" LAST="false">
+            <script_condition>
+                <script>try { edofro.freeplane.groovynode.GN.isGroovyNode(node) } catch(e) { false }</script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="true" STYLE_REF="hasGroovyNode" LAST="false">
+            <script_condition>
+                <script>(node.findAll() - node).any{
+    edofro.freeplane.groovynode.GN.isGroovyNode(it)
+}</script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="false" STYLE_REF="hasGroovyNode" LAST="false">
+            <any_descendant_condition>
+                <script_condition>
+                    <script>try { edofro.freeplane.groovynode.GN.isGroovyNode(node) } catch(e) { false }</script>
+                </script_condition>
+            </any_descendant_condition>
+        </conditional_style>
+    </conditional_styles>
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" associatedTemplateLocation="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/Tutorial-o-MaticStepByStep.mm" show_icon_for_attributes="true" show_notes_in_map="false" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" save_folding="save_folding_if_map_is_changed" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_1059101550" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -115,27 +136,6 @@
 <icon BUILTIN="emoji-1F4D6"/>
 <cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
-<stylenode TEXT="nextTask" ID="ID_586564045" BACKGROUND_COLOR="#ffff33">
-<icon BUILTIN="yes"/>
-<icon BUILTIN="unchecked"/>
-</stylenode>
-<stylenode TEXT="pendingTask" ID="ID_1556373004" BACKGROUND_COLOR="#99ffff">
-<icon BUILTIN="unchecked"/>
-</stylenode>
-<stylenode TEXT="completedTask" ID="ID_1763705856" COLOR="#333333" BACKGROUND_COLOR="#cccccc">
-<icon BUILTIN="checked"/>
-<font ITALIC="true"/>
-</stylenode>
-<stylenode TEXT="discardedTask" ID="ID_1018166202" COLOR="#666666" BACKGROUND_COLOR="#cccccc">
-<icon BUILTIN="Descartado"/>
-<font ITALIC="true"/>
-</stylenode>
-<stylenode TEXT="containsNextTasks" ID="ID_1568408403" BACKGROUND_COLOR="#eaea86">
-<icon BUILTIN="emoji-1F7E5"/>
-</stylenode>
-<stylenode TEXT="containsPendingTasks" ID="ID_1166882073" BACKGROUND_COLOR="#b5d7d7">
-<icon BUILTIN="emoji-23F9"/>
-</stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" ID="ID_1397792216" COLOR="#ffffff" BACKGROUND_COLOR="#484747" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="10 pt">
@@ -179,8 +179,7 @@
 <font BOLD="true"/>
 <attribute_layout NAME_WIDTH="84.75 pt" VALUE_WIDTH="99 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE="ToM Step by step"/>
-<node TEXT="Introduction" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_839819820">
-<icon BUILTIN="emoji-1F58D"/>
+<node TEXT="Introduction" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_839819820">
 <attribute_layout NAME_WIDTH="84.75 pt" VALUE_WIDTH="88.5 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE="ToM Step by step"/>
 <node TEXT="greetings" ID="ID_26985145">
@@ -217,7 +216,7 @@
       1. a tutorial with multiple pages
     </p>
     <p>
-      1. adding actions
+      1. adding actions (pending)
     </p>
     <p>
       
@@ -233,33 +232,32 @@
 <node TEXT="Tutorial 1" STYLE_REF="markdownNote" ID="ID_927293905" LINK="#ID_511509268"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>## 1. Create a basic tutorial in a new mindmap&#xd;
 &#xd;
-In this tutorial you will learn how to create a new map containing a one page tutorial.</text>
+In this tutorial you will learn how to create a &#xd;
+new map containing a one page tutorial.</text>
 </richcontent>
 </node>
-<node TEXT="Tutorial 2" STYLE_REF="markdownNote" ID="ID_1658972090" LINK="#ID_243365661"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>## 2. xx&#xd;
+<node TEXT="Tutorial 2" STYLE_REF="markdownNote" ID="ID_1208564371" LINK="#ID_1138179206"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>## 2. Adding a basic tutorial to an existing mindmap&#xd;
 &#xd;
-xx&#xd;
-</text>
+In this tutorial you will learn how to set &#xd;
+an existing mindmap to contain a one page tutorial.</text>
 </richcontent>
-<node TEXT="editar" STYLE_REF="pendingTask" ID="ID_1919904400"/>
 </node>
-<node TEXT="Tutorial 3" STYLE_REF="markdownNote" ID="ID_1208564371" LINK="#ID_1923758960"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>## 3. xx&#xd;
+<node TEXT="Tutorial 3" STYLE_REF="markdownNote" ID="ID_1658972090" LINK="#ID_243365661"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>## 3.  Organizing a tutorial in multiple pages&#xd;
 &#xd;
-xx&#xd;
+In this tutorial you will learn how &#xd;
+to divide a long tutorial into pages.&#xd;
 </text>
 </richcontent>
-<node TEXT="editar" STYLE_REF="pendingTask" ID="ID_643354489"/>
 </node>
 </node>
 </node>
 </node>
 <node TEXT="Tutorial 1: one page tutorial in a new mindmap" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_511509268">
-<icon BUILTIN="emoji-1F58D"/>
 <attribute NAME="ToM_TabLabel" VALUE=" ToM tut 1"/>
 <node TEXT="one page tutorial in a new mindmap" ID="ID_1377645550">
-<node TEXT="Create a new mind map ready to contain tutorials" STYLE_REF="ToM_newPage" ID="ID_357294588">
+<node TEXT="Create a new mind map ready to contain tutorials" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_357294588">
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_581981021">
 <node TEXT="in this tutorial ..." ID="ID_763888244">
 <icon BUILTIN="emoji-1F4D5"/>
@@ -398,7 +396,7 @@ or click the &apos;Execute&apos; button to let ToM do it for you.
 </node>
 </node>
 </node>
-<node TEXT="What&apos;s different with this new map?" STYLE_REF="ToM_newPage" ID="ID_1720201285">
+<node TEXT="What&apos;s different with this new map?" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1720201285">
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_399360723">
 <node TEXT="Edit styles" ID="ID_543660174" LINK="menuitem:_EditStylesAction">
 <icon BUILTIN="emoji-1F525"/>
@@ -412,7 +410,7 @@ To close the **Styles manager** just press **escape** or click &quot;**OK**&quot
 </node>
 </node>
 </node>
-<node TEXT="Add a new tutorial to a map" STYLE_REF="ToM_newPage" ID="ID_1782530448">
+<node TEXT="Add a new tutorial to a map" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1782530448">
 <node TEXT="add new node" ID="ID_1936431863">
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_868537680">
 <node TEXT="MDH.md" ID="ID_840411831">
@@ -763,7 +761,7 @@ Let&apos;s see our first tutorial!!&#xd;
 </node>
 </node>
 </node>
-<node TEXT="Some examples" STYLE_REF="ToM_newPage" ID="ID_1365241462">
+<node TEXT="Some examples" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1365241462">
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_1133084422">
 <node TEXT="MDH.md" ID="ID_1570132324">
 <icon BUILTIN="emoji-1F4D5"/>
@@ -774,7 +772,13 @@ Let&apos;s see our first tutorial!!&#xd;
   </head>
   <body>
     <p>
-      Now we will copy to the tutorial some othr 'ToM_note' nodes as examples so you can see other use cases
+      Now we will copy to the tutorial some other&nbsp;
+    </p>
+    <p>
+      'ToM_note' nodes as examples so you can&nbsp;
+    </p>
+    <p>
+      see other use cases
     </p>
     <p>
       
@@ -904,7 +908,7 @@ Let&apos;s see our first tutorial!!&#xd;
 </node>
 </node>
 </node>
-<node TEXT="Reordering the panels" STYLE_REF="ToM_newPage" ID="ID_1186004780">
+<node TEXT="Reordering the panels" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1186004780">
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_170068006">
 <node TEXT="MDH.md" ID="ID_249291415">
 <icon BUILTIN="emoji-1F4D5"/>
@@ -955,6 +959,24 @@ Let&apos;s see our first tutorial!!&#xd;
     </p>
     <p>
       Test each change any times you want!
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="MDH.md" ID="ID_1809112777">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      ## Tip: You can use the &quot;Execute&quot; button to see the changes faster
     </p>
     <p>
       
@@ -1036,13 +1058,12 @@ Let&apos;s see our first tutorial!!&#xd;
 </node>
 </node>
 </node>
-<node TEXT="Tutorial 2: one page tutorial in an existing mindmap" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_1138179206">
-<icon BUILTIN="emoji-1F58D"/>
+<node TEXT="Tutorial 2: one page tutorial in an existing mindmap" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_1138179206" VGAP_QUANTITY="2 pt">
 <attribute NAME="ToM_TabLabel" VALUE=" ToM tut 2"/>
 <node TEXT="one page tutorial in an existing mindmap" ID="ID_423737988">
-<node TEXT="Making an existing mindmap able for Tutorial-o-Matic" STYLE_REF="ToM_newPage" ID="ID_477284126">
+<node TEXT="Making an existing mindmap able for Tutorial-o-Matic" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_477284126">
 <node TEXT="intro" ID="ID_115453742">
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_838552835">
+<node TEXT="text" STYLE_REF="ToM_note" FOLDED="true" ID="ID_838552835">
 <node TEXT="MDH.md" ID="ID_65885838">
 <icon BUILTIN="emoji-1F4D5"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
@@ -1109,7 +1130,7 @@ Let&apos;s see our first tutorial!!&#xd;
 <node TEXT="openMap" STYLE_REF="ToM_openMap" ID="ID_95629705">
 <node TEXT="myExistingMindMap.mm" ID="ID_450006924"/>
 </node>
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1181833724">
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" FOLDED="true" ID="ID_1181833724">
 <node TEXT="Edit styles" ID="ID_1916382005" LINK="menuitem:_EditStylesAction">
 <icon BUILTIN="emoji-1F525"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
@@ -1123,7 +1144,7 @@ To close the **Styles manager** just press **escape** or click &quot;**OK**&quot
 </node>
 </node>
 <node TEXT="adding styles" ID="ID_1436812287">
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_896951874">
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" FOLDED="true" ID="ID_896951874">
 <node TEXT="Import Tutorial-o-Matic Styles" ID="ID_1004900986" LINK="menuitem:_addons.tutorialOMatic.importToMStyles_on_single_node">
 <icon BUILTIN="emoji-1F525"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -1139,7 +1160,7 @@ To close the **Styles manager** just press **escape** or click &quot;**OK**&quot
 </html></richcontent>
 </node>
 </node>
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1052702502">
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" FOLDED="true" ID="ID_1052702502">
 <node TEXT="Edit styles" ID="ID_1754854711" LINK="menuitem:_EditStylesAction">
 <icon BUILTIN="emoji-1F525"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
@@ -1152,7 +1173,7 @@ To close the **Styles manager** just press **escape** or click &quot;**OK**&quot
 </node>
 </node>
 </node>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1068827047">
+<node TEXT="text" STYLE_REF="ToM_note" FOLDED="true" ID="ID_1068827047">
 <node TEXT="MDH.md" ID="ID_1397373189">
 <icon BUILTIN="emoji-1F4D5"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
@@ -1185,8 +1206,8 @@ To close the **Styles manager** just press **escape** or click &quot;**OK**&quot
 </node>
 </node>
 </node>
-<node TEXT="Adding a sample tutorial" STYLE_REF="ToM_newPage" ID="ID_395689813">
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_684621059">
+<node TEXT="Adding a sample tutorial" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_395689813">
+<node TEXT="text" STYLE_REF="ToM_note" FOLDED="true" ID="ID_684621059">
 <node TEXT="MDH.md" ID="ID_1620228237">
 <icon BUILTIN="emoji-1F4D5"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
@@ -1347,17 +1368,162 @@ Let&apos;s see our first tutorial!!&#xd;
 </node>
 </node>
 </node>
-<node TEXT="Tutorial 3: organizing a tutorial in multiple pages" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_243365661">
-<icon BUILTIN="emoji-1F58D"/>
-<attribute NAME="ToM_TabLabel" VALUE=" ToM tut 2"/>
+<node TEXT="Tutorial 3: organizing a tutorial in multiple pages" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_243365661">
+<attribute NAME="ToM_TabLabel" VALUE=" ToM tut 3"/>
 <node TEXT="Source" ID="ID_1059972748">
-<node TEXT="https://www.instructables.com/Cute-Origami-Bookmarks/" ID="ID_746617258" LINK="https://www.instructables.com/Cute-Origami-Bookmarks/"/>
-<node TEXT="Cute Origami Bookmarks" ID="ID_688502853">
-<node TEXT="intro" STYLE_REF="ToM_newPage" ID="ID_1575387327"/>
-<node TEXT="introduction" STYLE_REF="ToM_note" ID="ID_263121425">
-<node TEXT="Markdown document.md" ID="ID_683250304">
+<node TEXT="LongTutorialExample_MDH.mm" ID="ID_290639313" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/LongTutorialExample_MDH.mm">
+<attribute NAME="lastModifiedTime" VALUE="17-05-22 23:04" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-17T23:04-0400|datetime"/>
+<attribute NAME="lastAccessTime" VALUE="19-05-22 16:11" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-19T16:11-0400|datetime"/>
+<attribute NAME="creationTime" VALUE="14-05-22 13:40" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-14T13:40-0400|datetime"/>
+<attribute NAME="fileSize" VALUE="58.353" OBJECT="org.freeplane.features.format.FormattedNumber|58353|#,##0"/>
+</node>
+<node TEXT="Long Tutorial example" ID="ID_1524816866" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/LongTutorialExample.mm"/>
+</node>
+<node TEXT="temas" ID="ID_1725860032">
+<node TEXT="Organizing a tutorial in multiple pages" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_225308234">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_720282044">
+<node TEXT="Introduction ..." ID="ID_443561544">
 <icon BUILTIN="emoji-1F4D5"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Introduction
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      In this tutorial, we are going to take a long one-page tutorial and divide it in multiple pages for better navigation and usability.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      The example tutorial, we are going to use for this exercise, is an origami tutorial.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      The creator is [lalabananas](https://www.instructables.com/member/lalabananas/) and it was published as [Cute-Origami-Bookmarks in Instructables](https://www.instructables.com/Cute-Origami-Bookmarks/).
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="For this, we are going ..." ID="ID_1029768630">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      For this, we are going to create a new mindmap and insert the example tutorial to it.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      **Let's start!!**
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="Let&apos;s create new map" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_327085949">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_446660121">
+<node TEXT="new mind map" ID="ID_1243137693">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Creating a new mind map
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      To create a new mindmap that has the styles
+    </p>
+    <p>
+      needed to build a tutorial using **Tutorial-o-Matic** , you can use&nbsp;
+    </p>
+    <p>
+      the command &quot;**Create new tutorial mind map**&quot;.&nbsp;&nbsp;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      You can get the same result by creating a new map using the &quot;tutorial_styles_template&quot;&nbsp;&nbsp;as template map.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1658580503"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+<node TEXT="Create new tutorial mind map" ID="ID_1192679453" LINK="menuitem:_addons.tutorialOMatic.createNewTutorialMindMap_on_single_node">
+<icon BUILTIN="emoji-1F525"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>## Step 1: create a new tutorial able mind map
+
+You can do it yourself by clicking the menu command, 
+or click the &apos;Execute&apos; button to let ToM do it for you.
+</text>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="Getting our loooong tutorial" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_173971205">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1533746085">
+<node TEXT="Markdown document.md" ID="ID_1133894882">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Now we are ready to insert the **Origami tutorial** in our new map
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="nodes to copy" STYLE_REF="ToM_copy" ID="ID_1204018080">
+<icon BUILTIN="closed"/>
+<node TEXT="Cute Origami Bookmarks" STYLE_REF="ToM-Tutorial" ID="ID_688502853">
+<attribute_layout NAME_WIDTH="84.75 pt" VALUE_WIDTH="81.75 pt"/>
+<node TEXT="Cute Origami Bookmarks" ID="ID_1575387327"/>
+<node TEXT="introduction" STYLE_REF="ToM_note" ID="ID_263121425">
+<node TEXT="# Cute Origami Bookmarks ..." ID="ID_683250304"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1370,12 +1536,14 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
+</html></richcontent>
+</node>
+<node TEXT="The original creator ..." ID="ID_1547246564"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>The original creator of this tutorial is [lalabananas](https://www.instructables.com/member/lalabananas/) 
+and it was published as [Cute-Origami-Bookmarks in Instructables](https://www.instructables.com/Cute-Origami-Bookmarks/).</text>
 </richcontent>
 </node>
-<node TEXT="web Image" ID="ID_740204247">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="web Image" ID="ID_740204247"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1385,12 +1553,9 @@ Let&apos;s see our first tutorial!!&#xd;
       ![image Origami Bookmarks](https://content.instructables.com/ORIG/FEG/OIPK/L06PT77G/FEGOIPKL06PT77G.jpg?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Markdown document.md" ID="ID_963852895">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Hello internet people, today I ..." ID="ID_963852895"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1403,12 +1568,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Markdown document.md" ID="ID_1406169313">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Although these are very easy ..." ID="ID_1406169313"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1421,12 +1583,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Markdown document.md" ID="ID_109121502">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="I made the bookmarks shown ..." ID="ID_109121502"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1439,15 +1598,13 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
+<node TEXT="toc" ID="ID_1246643633"/>
 <node TEXT="Supplies" ID="ID_1686943517"/>
-<node TEXT="Supplies" STYLE_REF="ToM_note" ID="ID_1385038564">
-<node TEXT="# Supplies ..." ID="ID_1853123878">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Supplies" STYLE_REF="ToM_note" FOLDED="true" ID="ID_1385038564">
+<node TEXT="# Supplies ..." ID="ID_1853123878"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1460,12 +1617,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="web Image" ID="ID_318833000">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="web Image" ID="ID_318833000"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1475,12 +1629,9 @@ Let&apos;s see our first tutorial!!&#xd;
       ![image Origami Bookmarks](https://content.instructables.com/ORIG/FDD/YAIK/L06PT6OG/FDDYAIKL06PT6OG.jpg?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="To make these bookmarks you ..." ID="ID_1922664816">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="To make these bookmarks you ..." ID="ID_1922664816"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1517,12 +1668,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Optional: ..." ID="ID_1673643812">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Optional: ..." ID="ID_1673643812"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1547,15 +1695,12 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
-<node TEXT="Step 1: Decide Your Design" ID="ID_951257386">
+<node TEXT="Step 1: Decide Your Design" FOLDED="true" ID="ID_951257386">
 <node TEXT="Step 1: Decide Your Design" STYLE_REF="ToM_note" ID="ID_37098714">
-<node TEXT="# Step 1: Decide Your ..." ID="ID_390199617">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="# Step 1: Decide Your ..." ID="ID_390199617"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1568,12 +1713,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="First, decide what design you ..." ID="ID_1494000720">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="First, decide what design you ..." ID="ID_1494000720"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1586,12 +1728,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Make sure that you have ..." ID="ID_781344733">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Make sure that you have ..." ID="ID_781344733"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1604,16 +1743,13 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
-<node TEXT="Step 2: Measure and Cut Paper" ID="ID_28252139">
+<node TEXT="Step 2: Measure and Cut Paper" FOLDED="true" ID="ID_28252139" VGAP_QUANTITY="2 pt">
 <node TEXT="Step 2: Measure and Cut Paper" STYLE_REF="ToM_note" ID="ID_1292507038">
-<node TEXT="# Step 2: Measure and ..." ID="ID_496934883">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="# Step 2: Measure and ..." ID="ID_496934883"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1626,12 +1762,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="We are now going to ..." ID="ID_31704274">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="We are now going to ..." ID="ID_31704274"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1644,12 +1777,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="To do this, you need ..." ID="ID_683632142">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="To do this, you need ..." ID="ID_683632142"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1662,12 +1792,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Use your ruler to measure ..." ID="ID_1168372988">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Use your ruler to measure ..." ID="ID_1168372988"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1686,12 +1813,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Draw two faint lines connecting ..." ID="ID_179596623">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Draw two faint lines connecting ..." ID="ID_179596623"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1710,12 +1834,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Cut through the lines as ..." ID="ID_610056273">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Cut through the lines as ..." ID="ID_610056273"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1734,12 +1855,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Realise that the end size ..." ID="ID_95682560">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Realise that the end size ..." ID="ID_95682560"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1752,16 +1870,14 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
-<node TEXT="Step 3: Fold Paper" ID="ID_800957929">
+<node TEXT="Step 3: Fold Paper" FOLDED="true" ID="ID_800957929">
+<node TEXT="3.1." ID="ID_1066289224">
 <node TEXT="Fold Paper" STYLE_REF="ToM_note" ID="ID_1219511013">
-<node TEXT="# Fold Paper ..." ID="ID_331335372">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="# Fold Paper ..." ID="ID_331335372"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1774,12 +1890,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="We now have to fold ..." ID="ID_1914437748">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="We now have to fold ..." ID="ID_1914437748"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1792,12 +1905,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Fold the square into quarters ..." ID="ID_1448411681">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Fold the square into quarters ..." ID="ID_1448411681"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1816,12 +1926,13 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Fold your paper diagonally once ..." ID="ID_166678504">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+</node>
+</node>
+<node TEXT="3.2." ID="ID_1405037635">
+<node TEXT="Fold Paper" STYLE_REF="ToM_note" ID="ID_1199745232">
+<node TEXT="Fold your paper diagonally once ..." ID="ID_166678504"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1840,12 +1951,13 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Fold the bottom corner upwards ..." ID="ID_1941704684">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+</node>
+</node>
+<node TEXT="3.3." ID="ID_51534369">
+<node TEXT="Fold Paper" STYLE_REF="ToM_note" ID="ID_508136367">
+<node TEXT="Fold the bottom corner upwards ..." ID="ID_1941704684"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1864,12 +1976,13 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Fold the left and right ..." ID="ID_94933072">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+</node>
+</node>
+<node TEXT="3.4." ID="ID_1141027629">
+<node TEXT="Fold Paper" STYLE_REF="ToM_note" ID="ID_1423209740">
+<node TEXT="Fold the left and right ..." ID="ID_94933072"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1888,12 +2001,13 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Tuck the left and right ..." ID="ID_274473014">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+</node>
+</node>
+<node TEXT="3.5." ID="ID_1181068961">
+<node TEXT="Fold Paper" STYLE_REF="ToM_note" ID="ID_364258375">
+<node TEXT="Tuck the left and right ..." ID="ID_274473014"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1912,12 +2026,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="If you are using card, ..." ID="ID_206258478">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="If you are using card, ..." ID="ID_206258478"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1930,16 +2041,14 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
-<node TEXT="Step 4: Decorate Bookmark" ID="ID_1252874774">
+</node>
+<node TEXT="Step 4: Decorate Bookmark" FOLDED="true" ID="ID_1252874774">
 <node TEXT="Step 4: Decorate Bookmark" STYLE_REF="ToM_note" ID="ID_1901201606">
-<node TEXT="# Step 4: Decorate Bookmark ..." ID="ID_1590106780">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="# Step 4: Decorate Bookmark ..." ID="ID_1590106780"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1952,12 +2061,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="web Image" ID="ID_1826203025">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="web Image" ID="ID_1826203025"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1967,12 +2073,9 @@ Let&apos;s see our first tutorial!!&#xd;
       ![image Origami Bookmarks](https://content.instructables.com/ORIG/FMV/XRZC/L06PT9QS/FMVXRZCL06PT9QS.jpg?auto=webp&amp;frame=1&amp;fit=bounds&amp;md=d0b67e4507fddf246d311ff018cd22a8)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="We have now reached the ..." ID="ID_1766164678">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="We have now reached the ..." ID="ID_1766164678"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -1985,12 +2088,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="As you can see, I ..." ID="ID_1537078655">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="As you can see, I ..." ID="ID_1537078655"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -2003,12 +2103,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Tips for decorating your bookmarks: ..." ID="ID_1978243443">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Tips for decorating your bookmarks: ..." ID="ID_1978243443"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -2036,12 +2133,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="If you are adding extra ..." ID="ID_1438996820">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="If you are adding extra ..." ID="ID_1438996820"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -2054,16 +2148,13 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
-<node TEXT="Step 5: Voilà!" ID="ID_864777376">
+<node TEXT="Step 5: Voilà!" FOLDED="true" ID="ID_864777376">
 <node TEXT="Step 5: Voilà!" STYLE_REF="ToM_note" ID="ID_49219496">
-<node TEXT="# Step 5: Voilà! ..." ID="ID_220500083">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="# Step 5: Voilà! ..." ID="ID_220500083"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -2076,12 +2167,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="web Image" ID="ID_1765689165">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="web Image" ID="ID_1765689165"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -2091,12 +2179,9 @@ Let&apos;s see our first tutorial!!&#xd;
       ![image Origami Bookmarks](https://content.instructables.com/ORIG/FTG/QP3N/L06PT76P/FTGQP3NL06PT76P.jpg?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds&amp;md=c7ed44f4d0772f0e72a8e37abc3e6924)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Congratulations! You have created a ..." ID="ID_1269412138">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Congratulations! You have created a ..." ID="ID_1269412138"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -2109,12 +2194,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="I also made a fox ..." ID="ID_1690349168">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="I also made a fox ..." ID="ID_1690349168"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -2127,12 +2209,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Now you could gift your ..." ID="ID_612634017">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Now you could gift your ..." ID="ID_612634017"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -2145,12 +2224,9 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="Thanks for reading my instructable ..." ID="ID_1354090317">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Thanks for reading my instructable ..." ID="ID_1354090317"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -2163,702 +2239,1289 @@ Let&apos;s see our first tutorial!!&#xd;
       
     </p>
   </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_386330869">
+<node TEXT="MDH.md" ID="ID_601938412">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # The tutorial branch
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      As you can see, a new branch of nodes was copied into the map.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      This branch has the whole information to display an **Origami** tutorial in Freeplane.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      It has multiple nodes that contains the different parts of the tutorial
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      If you want you can **navigate the map** to have a first impression on how it's build.
+    </p>
+    <p>
+      But **please, don't modify it yet**.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      When ready, go to the **next page**
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="MDH.md" ID="ID_989143185">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Save the mindmap
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Save the mindmap in your drive now.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      This is useful for the editing options that are shown later.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_680338330"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+<node TEXT="Save map" ID="ID_1723599211" LINK="menuitem:_SaveAction">
+<icon BUILTIN="emoji-1F525"/>
+</node>
+</node>
+</node>
+<node TEXT="Let&apos;s take a look to the tutorial" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_890668765">
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_832237492"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+<node TEXT="Show tutorials from active map" ID="ID_1230247311" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node">
+<icon BUILTIN="emoji-1F525"/>
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Opening the tutorial
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Follow the instructions to take a **look at the origami tutorial**
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      After that, please **return here** to continue the tutorial.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      You can come back by:
+    </p>
+    <p>
+      - clicking the &quot;**Stop Tutorial**&quot; at the bottom of the origami tutorial
+    </p>
+    <p>
+      - or by selecting this Tab again (&quot;**ToM tut 3**&quot;)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1362875076">
+<node TEXT="As you can see The ..." ID="ID_1206492811">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      As you can see **The Origami Tutorial** has **many steps** and it's pretty **long**.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Maybe it's **better to divide it** in multiple pages.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## Let's do it!!
+    </p>
+    <p>
+      
+    </p>
+  </body>
 </html>
 </richcontent>
 </node>
 </node>
 </node>
+<node TEXT="Creating the first pages" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1905053985">
+<node TEXT="introduction to newPage" ID="ID_28669197">
+<node TEXT="using one newPage at the top" ID="ID_1833893138"/>
+<node TEXT="testing how it looks" ID="ID_561338865"/>
+<node TEXT="using a second one newPage" ID="ID_1736521174"/>
+<node TEXT="testing" ID="ID_311174179"/>
 </node>
-<node TEXT="help scripts" ID="ID_607149913">
-<node TEXT="formatting web image links" ID="ID_817361496"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_467781327">
+<node TEXT="MDH.md" ID="ID_1265587878">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      def nodos = c.selecteds
+      # Introduction
     </p>
     <p>
       
     </p>
     <p>
-      nodos.each{n -&gt;
+      If you want to **divide** your tutorial **in multiple pages**
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;n.text = 'image Origami Bookmarks'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;n.link.text = n.link.text.takeBefore('?') + '?auto=webp&amp;frame=1&amp;width=500&amp;height=500&amp;fit=bounds'
-    </p>
-    <p>
-      }
-    </p>
-  </body>
-</html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      .groovy
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="renaming the MDH nodes" ID="ID_1698589334"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      def nodos = node.find{n -&gt; n.style.name &amp;&amp; n.style.name == 'MarkdownHelperNode' &amp;&amp; n.text == 'Markdown document.md'}
+      &nbsp;you have two different options:
     </p>
     <p>
       
     </p>
     <p>
-      //def n = node
+      &nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&quot;**New page**&quot; nodes
     </p>
     <p>
-      nodos.each{ n -&gt;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;def newText = n.children.first().text.split(' ').take(5).join(' ') + ' ...'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;n.text = newText
-    </p>
-    <p>
-      }
-    </p>
-  </body>
-</html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      .groovy
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-</node>
-<node TEXT="second tutorial" ID="ID_168997337"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      information
-    </p>
-    <p>
-      multiple pages
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="inserts example node" ID="ID_172850433">
-<node TEXT="add a new Tutorial node" ID="ID_1709360018"/>
-<node TEXT="change tutorials tab" ID="ID_738150415"/>
-<node TEXT="inserts example Tom Text nodes" ID="ID_1350622851"/>
-</node>
-<node TEXT="test &quot;show map tutorials&quot;" ID="ID_62778532">
-<node TEXT="--&gt; looooong panel ---&gt; new pages!!" ID="ID_1846650812"/>
-</node>
-<node TEXT="user inserts new pages" ID="ID_728549756"/>
-<node TEXT="tests" ID="ID_1167506653"/>
-<node TEXT="TOC" ID="ID_880677163"/>
-<node TEXT="new pages vs next pages" ID="ID_1446789719"/>
-<node TEXT="tests" ID="ID_4750947"/>
-</node>
-<node TEXT="temas" FOLDED="true" ID="ID_1725860032">
-<node TEXT="Prepare existing Mind Map to contain tutorials" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_684529600">
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_536639979">
-<node TEXT="to prepare new mind map" ID="ID_69634468"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      To prepare any existing mindmap to contain a tutorial, you have to add the special Tutorial-o-Matic styles to it.
+      &nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&quot;**Next page**&quot; nodes
     </p>
     <p>
       
     </p>
     <p>
-      You get that by using the command &quot;<b>Import Tutorial-o-Matic Styles</b>&quot;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_481555312">
-<node TEXT="Import Tutorial-o-Matic Styles" ID="ID_448420335" LINK="menuitem:_addons.tutorialOMatic.importToMStyles_on_single_node"/>
-</node>
-<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_769821910">
-<icon BUILTIN="emoji-1F507"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= &quot;${node?.children[0]?.text} directly&quot;.toString()</text>
-</richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &quot;$0 directly&quot;
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="Import Tutorial-o-Matic Styles" ID="ID_1577703665" LINK="menuitem:_addons.tutorialOMatic.importToMStyles_on_single_node"/>
-</node>
-</node>
-<node TEXT="Add new pages to a tutorial" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1103556669">
-<node TEXT="Text" STYLE_REF="ToM_note" ID="ID_138655137">
-<node TEXT="to insert titles ..." ID="ID_1679725055"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      If you want to <b>divide</b>&nbsp;your tutorial <b>in</b>&nbsp;multiple <b>pages</b>&nbsp;&nbsp;you have two different options:
-    </p>
-    <ul>
-      <li>
-        inserting &quot;<b>New page</b>&quot; nodes
-      </li>
-      <li>
-        inserting &quot;<b>Next page</b>&quot; nodes
-      </li>
-    </ul>
-    <p>
-      You have to insert these nodes to indicate where the next page starts.
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="new pages" ID="ID_1319478346"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &quot;<b>New page</b>&quot; nodes are used to indicate where a new page starts <u>AND</u>&nbsp;the <b>title</b>&nbsp;of this new page.
+      You have to **insert** these nodes **between the others**
     </p>
     <p>
-      This title gets shown at the top of the page
+      &nbsp;to indicate where the next page starts.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &quot;**New page**&quot; nodes are used to indicate&nbsp;
+    </p>
+    <p>
+      where a **new page starts** AND the **title** of this new page.
+    </p>
+    <p>
+      This title gets shown at the **top of the page**
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &gt; for example, &quot;**Creating the first pages**&quot; in this very page
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &quot;**Next page**&quot; nodes only indicates where a **new page** starts&nbsp;
+    </p>
+    <p>
+      but **doesn't insert** a new **title** to the tutorial
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      With the same logic, when showing the&nbsp;
+    </p>
+    <p>
+      **Table of Content** only **&quot;New page&quot; titles** are listed there.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      These nodes can be set **between** the other nodes&nbsp;
+    </p>
+    <p>
+      **or as parents** of them. They just have to be&nbsp;
+    </p>
+    <p>
+      &quot;**before**&quot; the others (&quot;in **breadth-first order**&quot;)
     </p>
     <p>
       
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
-<node TEXT="next pages" ID="ID_705942210"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+</node>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_833158668">
+<node TEXT="MDH.md" ID="ID_1681497712">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      &quot;<b>Next page</b>&quot; nodes only indicates where a new page starts but doesn't insert a new title to the tutorial
+      # Let's create our first pages
     </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="Toc" ID="ID_455795919"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
     <p>
-      With the same logic, when showing the <b>Table of Content</b>&nbsp;only &quot;<b>New page</b>&quot; titles are listed there.
+      
     </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="between or as parents" ID="ID_302208893"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
     <p>
-      These nodes can be set between the other nodes or as parents of them. They just have to be &quot;before&quot; the others&nbsp;(&quot;in breadth-first order&quot;)
+      As a first step, we are going to define the first page of the tutorial.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      For this, we are going to define the title to the first page and for the second one. This way Tutorial-o-Matic will understand where the first page starts and ends.
     </p>
     <p>
       
     </p>
   </body>
-</html></richcontent>
-</node>
-</node>
-<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_380278884">
-<node TEXT="Text" STYLE_REF="ToM_note" ID="ID_785052107">
-<node TEXT="NP" ID="ID_1571520526"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <font color="#ff0000" size="6"><b>New Pages</b></font><font size="6">&nbsp;nodes</font>
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="to add information ..." ID="ID_156985246"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      To insert &quot;New page&quot; nodes, you have to
-    </p>
-    <ul>
-      <li>
-        Select the desired node (its text will be used as title for that page)
-      </li>
-      <li>
-        Assign the style &quot;ToM_newPage&quot; to that node
-      </li>
-    </ul>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_665606564">
-<node TEXT="ToM_newPage" ID="ID_167697290" LINK="menuitem:_AssignStyleAction.ToM_newPage"/>
-</node>
-<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_468825075">
-<icon BUILTIN="emoji-1F507"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= &quot;Assign **${node?.children[0]?.text}** style to selected node(s) directly&quot;.toString()</text>
-</richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &quot;Assign $0 style to selected node(s) directly&quot;
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="ToM_newPage" ID="ID_1052481796" LINK="menuitem:_AssignStyleAction.ToM_newPage"/>
-</node>
-<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1269055193">
-<icon BUILTIN="emoji-1F507"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= &quot;Insert new **${node?.children[1]?.text}** node directly&quot;.toString()</text>
-</richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &quot;Insert new $1 node directly&quot;
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="New child node" ID="ID_1504802253" LINK="menuitem:_NewChildAction"/>
-<node TEXT="ToM_newPage" ID="ID_887173466" LINK="menuitem:_AssignStyleAction.ToM_newPage"/>
-<node TEXT="Edit node core in-line" ID="ID_1503870337" LINK="menuitem:_EditAction"/>
-</node>
-</node>
-<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_1412367638">
-<node TEXT="Text" STYLE_REF="ToM_note" ID="ID_988697035">
-<node TEXT="NP" ID="ID_550417382"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <font color="#ff0000" size="6"><b>Next Pages</b></font><font size="6">&nbsp;nodes</font>
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="xx" ID="ID_1801635673"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <font color="#ff0000" size="6"><b>Edo</b></font>
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node TEXT="to add information ..." ID="ID_1211667658"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      To insert &quot;Next page&quot; nodes, you have to
-    </p>
-    <ul>
-      <li>
-        Select the desired node (its text doesn't affect the tutorial)
-      </li>
-      <li>
-        Assign the style &quot;ToM_nextPage&quot; to that node
-      </li>
-    </ul>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_653456457">
-<node TEXT="ToM_nextPage" ID="ID_1177334016" LINK="menuitem:_AssignStyleAction.ToM_nextPage"/>
-</node>
-<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1492336664">
-<icon BUILTIN="emoji-1F507"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= &quot;Assign **${node?.children[0]?.text}** style to selected node(s) directly&quot;.toString()</text>
-</richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &quot;Assign $0 style to selected node(s) directly&quot;
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="ToM_nextPage" ID="ID_954026517" LINK="menuitem:_AssignStyleAction.ToM_nextPage"/>
-</node>
-<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1487453285">
-<icon BUILTIN="emoji-1F507"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= &quot;Insert new **${node?.children[1]?.text}** node directly&quot;.toString()</text>
-</richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &quot;Insert new $1 node directly&quot;
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="New child node" ID="ID_751344793" LINK="menuitem:_NewChildAction"/>
-<node TEXT="ToM_nextPage" ID="ID_1882082816" LINK="menuitem:_AssignStyleAction.ToM_nextPage"/>
-<node TEXT="Edit node core in-line" ID="ID_1390557300" LINK="menuitem:_EditAction"/>
-</node>
-<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_564268625">
-<font NAME="SansSerif"/>
-<node TEXT="Insert new &apos;next page&apos; node directly" ID="ID_1651008337">
-<attribute NAME="script1" VALUE="def nodo = node.createChild(&apos;next page&apos;)&#xd;&#xa;nodo.style.name = &apos;ToM_nextPage&apos;&#xd;&#xa;c.select(nodo)"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="Add a Table of Content" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1128972113">
-<node TEXT="Text" STYLE_REF="ToM_note" ID="ID_1562455441">
-<node TEXT="about toc" ID="ID_476186879"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      To add a Table of Content (TOC) to your tutorial, you just have to:
-    </p>
-    <ul>
-      <li>
-        Add a node
-      </li>
-      <li>
-        Assign the style &quot;ToM-TOC&quot; to that node
-      </li>
-    </ul>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_744715051">
-<node TEXT="ToM_TOC" ID="ID_1980094199" LINK="menuitem:_AssignStyleAction.ToM_TOC"/>
-</node>
-<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_178853266">
-<icon BUILTIN="emoji-1F507"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= &quot;Assign **${node?.children[0]?.text}** style to selected node(s) directly&quot;.toString()</text>
-</richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &quot;Assign $0 style to selected node(s) directly&quot;
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="ToM_TOC" ID="ID_1543130227" LINK="menuitem:_AssignStyleAction.ToM_TOC"/>
-</node>
-<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1241876862">
-<icon BUILTIN="emoji-1F507"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= &quot;Insert new **${node?.children[1]?.text}** node directly&quot;.toString()</text>
-</richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &quot;Insert new $1 node directly&quot;
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="New child node" ID="ID_192375071" LINK="menuitem:_NewChildAction"/>
-<node TEXT="ToM_TOC" ID="ID_165538597" LINK="menuitem:_AssignStyleAction.ToM_TOC"/>
-<node TEXT="Edit node core in-line" ID="ID_786537750" LINK="menuitem:_EditAction"/>
-</node>
-<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1682312530">
-<font NAME="SansSerif"/>
-<node TEXT="Insert new &apos;TOC&apos; node directly" ID="ID_492228565">
-<attribute NAME="script1" VALUE="def nodo = node.createChild(&apos;TOC&apos;)&#xd;&#xa;nodo.style.name = &apos;ToM_TOC&apos;&#xd;&#xa;c.select(nodo)"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="Map" FOLDED="true" ID="ID_428964073">
-<node TEXT="Preparing the Map" LOCALIZED_STYLE_REF="default" ID="ID_1755629514">
-<node TEXT="xx" STYLE_REF="ToM_newPage" ID="ID_1626916593"/>
-<node TEXT="first of all, you need to have a map that contains the ToM userstyles" ID="ID_1303039462"/>
-<node TEXT="three ways" ID="ID_169709994">
-<node TEXT="create new  map using the tutorial template map" ID="ID_1582359519"/>
-<node TEXT="this can easy done by command" ID="ID_624317746"/>
-<node TEXT="existing map -&gt; copy styles from template map" ID="ID_1081740068"/>
-</node>
-<node TEXT="xx" STYLE_REF="ToM_newPage" ID="ID_89316864"/>
-<node TEXT="alternative 1: new map using template" ID="ID_1431796937">
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1017184644">
-<node TEXT="bla" ID="ID_1232873551"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      bla bla bla
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1732138663">
-<node TEXT="New map from template…" ID="ID_500023793" LINK="menuitem:_new_map_from_user_templates"/>
-</node>
-</node>
-<node TEXT="alternative 2: existing map" ID="ID_228734099">
-<node TEXT="copying styles from template" ID="ID_1767464751">
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1257563799">
-<node TEXT="bla" ID="ID_633620711"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      bla bla bla
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_47769102">
-<node TEXT="Copy map styles from…" ID="ID_1740589456" LINK="menuitem:_CopyMapStylesAction"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="Tutorial 3" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_1923758960">
-<icon BUILTIN="emoji-1F58D"/>
-<attribute NAME="ToM_TabLabel" VALUE=" ToM tut 3"/>
-<node TEXT="Third tutorial" ID="ID_591282400"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      actions
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="inserts branch like previous result" ID="ID_1378956267"/>
-</node>
-</node>
-<node TEXT="repartir en otros" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_249465755">
-<node TEXT="Crayon" STYLE_REF="ToM_newPage" ID="ID_1068500559">
-<node TEXT="reordenar y editar" STYLE_REF="pendingTask" ID="ID_43345443">
-<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_821896465">
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_824895741">
-<node TEXT="NP" ID="ID_827790025"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <font color="#ff0000" size="6"><b>Editing mode</b></font>
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="Crayon" STYLE_REF="markdownNote" ID="ID_504376254"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>To see a tutorial in &quot;***Editing Mode***&quot;
-you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
-</text>
+</html>
 </richcontent>
 </node>
-</node>
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1203589980">
-<node TEXT="crayon" ID="ID_684192337" LINK="menuitem:_IconAction.emoji-1F58D"/>
-</node>
-<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1492837625">
-<icon BUILTIN="emoji-1F507"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= &quot;Add a &apos;**${node?.children[0]?.text}**&apos; icon to the selected node(s) directly&quot;.toString()</text>
-</richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="MDH.md" ID="ID_1774559280">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      &quot;Add a '$0' icon to the selected node(s) directly&quot;
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="crayon" ID="ID_1034832612" LINK="menuitem:_IconAction.emoji-1F58D"/>
-</node>
-</node>
-<node TEXT="Adding content" ID="ID_504737716">
-<node TEXT="text" ID="ID_1289880689">
-<node TEXT="Adding a text tom node" ID="ID_1839811522"/>
-<node TEXT="adding a child" ID="ID_1839797198"/>
-<node TEXT="using the note&apos;s panel" ID="ID_1992349296"/>
-<node TEXT="plain" ID="ID_530909850">
-<node TEXT="single child" ID="ID_1519407966"/>
-</node>
-</node>
-</node>
-<node TEXT="using crayon" ID="ID_723858661"/>
-<node TEXT="Adding content" ID="ID_6046814">
-<node TEXT="text" FOLDED="true" ID="ID_1881671144">
-<node TEXT="plain" ID="ID_664244403">
-<node TEXT="multiple childs" ID="ID_1088944615"/>
-</node>
-<node TEXT="HTML" ID="ID_335918225"/>
-<node TEXT="Markdown" ID="ID_241499732"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="Changing tab label" STYLE_REF="ToM_newPage" ID="ID_1353888099">
-<node TEXT="reordenar y editar" STYLE_REF="pendingTask" ID="ID_57805532">
-<node TEXT="Changing tutorials Tab" ID="ID_662986118">
-<node TEXT="note that tutorial Tab is &quot;Tutorial&quot;" ID="ID_1683158991"/>
-<node TEXT="Stop Tutorial" ID="ID_1133628303"/>
-<node TEXT="add attribute in Tutorials node" ID="ID_1411285992">
-<node TEXT="and add value" ID="ID_74973349"/>
-</node>
-<node TEXT="test &quot;show map tutorials&quot;" ID="ID_1184523339">
-<node TEXT="now new tab text" ID="ID_1596207225"/>
-</node>
-</node>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_184513713">
-<node TEXT="NP" ID="ID_1648836907"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <font color="#ff0000" size="6"><b>Tab Title</b></font>
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="tab-name" ID="ID_717868040"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      You can assign the <b>title of the tab</b>&nbsp;where your tutorial will be shown.
+      For this you have to apply the &quot;**Tom_newPage**&quot; style to the following nodes:
     </p>
     <p>
-      To do this you have to add an <u>attribute</u>&nbsp;named &quot;<b>ToM_TabLabel</b>&quot; to your <b>ToM-Tutorial node</b>.
+      
     </p>
     <p>
-      The value of that attribute will be shown as the tutorial's tab title.
+      - Cute Origami Bookmarks
     </p>
     <p>
-      You can add that attribute by yourself or <b>copy it </b>from the <b>ToM-Tutorial</b>&nbsp;style.
+      - Supplies
     </p>
     <p>
       
     </p>
   </body>
-</html></richcontent>
-</node>
-</node>
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1758692586">
-<node TEXT="Attributes from style" ID="ID_1855206314" LINK="menuitem:_AddStyleAttributes"/>
-</node>
-<node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_253845961">
-<icon BUILTIN="emoji-1F507"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= &quot;${node?.children[0]?.text} directly&quot;.toString()</text>
+</html>
 </richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+</node>
+<node TEXT="MDH.md" ID="ID_809884277">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      &quot;$0 directly&quot;
+      You can also click on the following buttons to make ToM do it for you
+    </p>
+    <p>
+      
     </p>
   </body>
-</html></richcontent>
-<node TEXT="Attributes from style" ID="ID_42318902" LINK="menuitem:_AddStyleAttributes"/>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="nodes to select" STYLE_REF="ToM_select" ID="ID_1428813543">
+<node ID="ID_79309176" CONTENT_ID="ID_1575387327"/>
+<node ID="ID_427797296" CONTENT_ID="ID_1686943517"/>
+</node>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1571881611"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+<node TEXT="ToM_newPage" ID="ID_483692205" LINK="menuitem:_AssignStyleAction.ToM_newPage">
+<icon BUILTIN="emoji-1F525"/>
+</node>
+</node>
+</node>
+<node TEXT="Let&apos;s take a new look to the tutorial" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1279647106">
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_501293168"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+<node TEXT="Show tutorials from active map" ID="ID_327961193" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node">
+<icon BUILTIN="emoji-1F525"/>
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Opening the tutorial (again)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Follow the instructions to take a **look at the origami tutorial**
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      After that, please **return here** to continue the tutorial.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      You can come back by:
+    </p>
+    <p>
+      - clicking the &quot;**Stop Tutorial**&quot; at the bottom of the origami tutorial
+    </p>
+    <p>
+      - or by selecting this Tab again (&quot;**ToM tut 3**&quot;)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1248960374">
+<node TEXT="Now you can see that ..." ID="ID_1726513394">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Now you can see that it has two pages:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      - A first one with an origami image and some welcome words
+    </p>
+    <p>
+      - And a second long one with all the steps
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="Let&apos;s add a &quot;Table of Contents&quot;" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1562258507" VGAP_QUANTITY="2 pt">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_640732047">
+<node TEXT="MDH.md" ID="ID_893863494">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      We can add a **Table of contents** to any page in our tutorial.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      To do so we have to just insert a node that has the &quot;**ToM_TOC**&quot; style.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="MDH.md" ID="ID_337639126">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      We will add one in the Origami tutorial in its first page.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      If you look at its map there is node with the text &quot;toc&quot;.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      We will insert there a ToM_note that shows a &quot;Table of contents&quot; title
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      And a node that we can use to create the TOC
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="nodes to select" STYLE_REF="ToM_select" ID="ID_1830587960">
+<node ID="ID_1612406557" CONTENT_ID="ID_1246643633"/>
+</node>
+<node TEXT="nodes to copy" STYLE_REF="ToM_copy" ID="ID_427964114">
+<icon BUILTIN="closed"/>
+<node TEXT="TOC title" STYLE_REF="ToM_note" ID="ID_1456784340">
+<node TEXT="Table of Contents" ID="ID_1978205230"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>---&#xd;
+## Table of contents:&#xd;
+---</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="TOC" ID="ID_1644473983"/>
+</node>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_933706428">
+<node TEXT="MDH.md" ID="ID_1099638759">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Let's select now the new &quot;TOC&quot; node adn apply it the &quot;**ToM_TOC**&quot; style
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="nodes to select" STYLE_REF="ToM_select" ID="ID_137089524">
+<node ID="ID_779651769" CONTENT_ID="ID_1644473983"/>
+</node>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1605542849"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+<node TEXT="ToM_TOC" ID="ID_169903102" LINK="menuitem:_AssignStyleAction.ToM_TOC">
+<icon BUILTIN="emoji-1F525"/>
+</node>
+</node>
+<node TEXT="menu actions" STYLE_REF="ToM_menuAction" ID="ID_1408582855">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>### Let&apos;s look at the changes.&#xd;
+&#xd;
+Click at the button to show how the page looks now:</text>
+</richcontent>
+<node TEXT="Show tutorials from active map" ID="ID_64065753" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node"/>
+</node>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1994172099">
+<node TEXT="MDH.md" ID="ID_38903687">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      As you can see, now the first page has a &quot;Table of contents&quot; in it.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Currently it shows only **two** titles, but this will change soon.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="Creating the other pages" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_314553183">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1813777605">
+<node TEXT="MDH.md" ID="ID_860056939">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Now we can create new pages for every step.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      For doing this, you have to:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      1. select the folowing nodes
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- Step 1: Decide Your Design
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- Step 2: Measure and Cut Paper
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- Step 3: Fold Paper
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- Step 4: Decorate Bookmark
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- Step 5: Voilà!
+    </p>
+    <p>
+      1. apply them the **ToM_newPage** style
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="MDH.md" ID="ID_79095911">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      As usual, you can use the following buttons to let ToM do it for you:
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="nodes to select" STYLE_REF="ToM_select" ID="ID_1831167080">
+<node ID="ID_246587906" CONTENT_ID="ID_951257386"/>
+<node ID="ID_778235393" CONTENT_ID="ID_28252139"/>
+<node ID="ID_582871915" CONTENT_ID="ID_800957929"/>
+<node ID="ID_1313693351" CONTENT_ID="ID_1252874774"/>
+<node ID="ID_1365943703" CONTENT_ID="ID_864777376"/>
+</node>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1232633324"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+<node TEXT="ToM_newPage" ID="ID_7640898" LINK="menuitem:_AssignStyleAction.ToM_newPage">
+<icon BUILTIN="emoji-1F525"/>
+</node>
+</node>
+<node TEXT="menu actions" STYLE_REF="ToM_menuAction" ID="ID_1583264379">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>### Let&apos;s look at the changes.&#xd;
+&#xd;
+Click at the button to show how the page looks now:</text>
+</richcontent>
+<node TEXT="Show tutorials from active map" ID="ID_542902004" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node"/>
+</node>
+</node>
+<node TEXT="Deleting redundant titles" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_556959153">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1421942684">
+<node TEXT="MDH.md" ID="ID_665017460">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Now the tutorial has multiple pages, but each of them has its title repited.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      This is because we added the newPages titles, but they were also as part of the text of the tutorial.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Just follow these steps to get rid of the repeated titles:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      1. select these nodes that are inside the ToM_note nodes:
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- \# Cute Origami Bookmarks ...
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- \# Supplies ...
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- \# Step 2: Measure and ...
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- \# Fold Paper ...
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- \# Step 4: Decorate Bookmark ...
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- \# Step 5: Voilà! ...
+    </p>
+    <p>
+      1. delete them
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="MDH.md" ID="ID_831169592">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      ## Tip: This time, I think, it will be useful to use the next button to get that nodes selected. jmho.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="nodes to select" STYLE_REF="ToM_select" ID="ID_610071998">
+<node ID="ID_531422891" CONTENT_ID="ID_683250304"/>
+<node ID="ID_1771014104" CONTENT_ID="ID_1853123878"/>
+<node ID="ID_50728113" CONTENT_ID="ID_496934883"/>
+<node ID="ID_320950573" CONTENT_ID="ID_331335372"/>
+<node ID="ID_954129150" CONTENT_ID="ID_1590106780"/>
+<node ID="ID_1554482694" CONTENT_ID="ID_220500083"/>
+</node>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1959686418"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+<node TEXT="Remove node" ID="ID_1365458740" LINK="menuitem:_DeleteAction">
+<icon BUILTIN="emoji-1F525"/>
+<icon BUILTIN="emoji-1F56F"/>
+</node>
+</node>
+<node TEXT="menu actions" STYLE_REF="ToM_menuAction" ID="ID_272518462">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>### Let&apos;s look at the changes.&#xd;
+&#xd;
+Click at the button to show how the page looks now:</text>
+</richcontent>
+<node TEXT="Show tutorials from active map" ID="ID_662457062" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node"/>
+</node>
+</node>
+<node TEXT="Extra: The &quot;CRAYON&quot;" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_416662590">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_844992773">
+<node TEXT="MDH.md" ID="ID_1041461339">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      While editing a tutorial, it is very common that you want to see how the changes, that you have done in the tutorial's map, look in the tutorial pane itself.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Other times, while looking at the tutorial in the pane, you see something you want to change.
+    </p>
+    <p>
+      For this you have to go to the nodes where the current page was defined.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      All this can be a little tricky, but .. There is another solution:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      # the crayon modifier
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ![ToM Modifiers 010.png](https://raw.githubusercontent.com/EdoFro/Freeplane_Tutorial_AddOn/wip/resources/Tutorial-o-Matic/ToM%20Modifiers%20010.png)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      You can use the &quot;editing&quot; mode when reviewing and/or editing a tutorial.
+    </p>
+    <p>
+      This way you can have access to some extra buttons.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      To indicate that a tutorial is in &quot;editing mode&quot; you have to add a crayon icon to its &quot;tutorial node&quot; (the base node with &quot;ToM-Tutorial&quot; style) and launch the tutorial.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="MDH.md" ID="ID_843522657">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      ---
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      # Atention
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## The &quot; editing&quot; mode works only if the mindmap containing the tutorial has been saved.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ---
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="MDH.md" ID="ID_1762962881">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Let's set our &quot;Origami&quot; tutorial in &quot;editing&quot; mode
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      All we have to do is:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      1. select its base tutorial node.
+    </p>
+    <p>
+      1. add the &quot;crayon&quot; icon to it
+    </p>
+    <p>
+      1. refresh the tutorial's pane&nbsp;&nbsp;&lt;br&gt; (you can do any of these:)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- relaunch the tutorial
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- go to the next page
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- go to the Table of Contents
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="MDH.md" ID="ID_1449916648">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      You can also click the following buttons to look how it works:
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="nodes to select" STYLE_REF="ToM_select" ID="ID_244401289">
+<icon BUILTIN="closed"/>
+<node ID="ID_1087098419" CONTENT_ID="ID_688502853"/>
+</node>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1995278658"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+<node TEXT="crayon" ID="ID_41361748" LINK="menuitem:_IconAction.emoji-1F58D">
+<icon BUILTIN="emoji-1F525"/>
+</node>
+</node>
+<node TEXT="menu actions" STYLE_REF="ToM_menuAction" ID="ID_758135202">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>### Let&apos;s look at the changes.&#xd;
+&#xd;
+Click at the button to show how the page looks now:</text>
+</richcontent>
+<node TEXT="Show tutorials from active map" ID="ID_862595344" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node"/>
+</node>
+</node>
+<node TEXT="&quot;CRAYON&quot; ON" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_209964785">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1934921567">
+<node TEXT="MDH.md" ID="ID_1002412276">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # The &quot;extra&quot; buttons
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      After refreshing the tutorial you can note that there are three buttons on the left from the page's title.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      They are very useful when editing a tutorial.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## Description:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      |Button|Functionality|
+    </p>
+    <p>
+      |----|----|
+    </p>
+    <p>
+      |![ToM Modifiers 002.png](https://raw.githubusercontent.com/EdoFro/Freeplane_Tutorial_AddOn/wip/resources/Tutorial-o-Matic/ToM%20Modifiers%20002.png)|This button takes you to the nodes in the tutorial mindmap that defines the current page.&lt;br&gt;(the &quot;source nodes&quot;)|
+    </p>
+    <p>
+      |![ToM Modifiers 003.png](https://raw.githubusercontent.com/EdoFro/Freeplane_Tutorial_AddOn/wip/resources/Tutorial-o-Matic/ToM%20Modifiers%20003.png)|this button updates the current page and shows all changes made to the &quot;source nodes&quot;.&lt;br&gt;This is very handy to easily preview all modifications.|
+    </p>
+    <p>
+      |![ToM Modifiers 001.png](https://raw.githubusercontent.com/EdoFro/Freeplane_Tutorial_AddOn/wip/resources/Tutorial-o-Matic/ToM%20Modifiers%20001.png)|This button creates a link to the current tutorial page in your map.&lt;br&gt;This can be very handy to come back to a tutorialpage you found interesting from one of your own maps.|
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="Using the &quot;editing&quot; mode" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_680334571">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_665942424">
+<node TEXT="MDH.md" ID="ID_1658330839">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Let's do a little exercise.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      1. In the Origami tutorial panel click on the &quot;**Table of Contents**&quot; button&lt;br&gt;(At the very bottom)
+    </p>
+    <p>
+      1. Click on the &quot;**Step 1: Decide Your Design**&quot; button
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      As you can see, here the title appears two times.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="MDH.md" ID="ID_1093630418">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Let's correct this:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      1. Click on the microscope button
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &nbsp;&nbsp;- ![ToM Modifiers 002.png](https://raw.githubusercontent.com/EdoFro/Freeplane_Tutorial_AddOn/wip/resources/Tutorial-o-Matic/ToM%20Modifiers%20002.png)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      1. It selected the page's node
+    </p>
+    <p>
+      1. select its descendant node
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- \# Step 1: Decide Your ...
+    </p>
+    <p>
+      1. delete it
+    </p>
+    <p>
+      1. click on the arrows button to update the page
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &nbsp;&nbsp;- ![ToM Modifiers 003.png](https://raw.githubusercontent.com/EdoFro/Freeplane_Tutorial_AddOn/wip/resources/Tutorial-o-Matic/ToM%20Modifiers%20003.png)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="MDH.md" ID="ID_1512134598">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      As easy as that!!
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="Splitting some Steps into more pages" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_682693126">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1016103280">
+<node TEXT="MDH.md" ID="ID_994297740">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      We will use some nextPages nodes now to split one of the steps into multiple pages.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      As said before, nextPages are very similar to newPages, but they don't insert a title in the page.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="MDH.md" ID="ID_1769704723">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Exercise: Let's split Step 3
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      1. select nodes
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- 3.2.
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- 3.3.
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- 3.4.
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- 3.5.
+    </p>
+    <p>
+      1. apply them the **ToM_nextPage** style
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="MDH.md" ID="ID_1666163197">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      As usual, you can use the following buttons to let ToM do it for you:
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="nodes to select" STYLE_REF="ToM_select" ID="ID_1860519216">
+<node ID="ID_296529603" CONTENT_ID="ID_1405037635"/>
+<node ID="ID_1707656010" CONTENT_ID="ID_51534369"/>
+<node ID="ID_119583016" CONTENT_ID="ID_1141027629"/>
+<node ID="ID_1343196966" CONTENT_ID="ID_1181068961"/>
+</node>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1564064205"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+<node TEXT="ToM_nextPage" ID="ID_1175005899" LINK="menuitem:_AssignStyleAction.ToM_nextPage">
+<icon BUILTIN="emoji-1F525"/>
+</node>
+</node>
+<node TEXT="menu actions" STYLE_REF="ToM_menuAction" ID="ID_787385055">
+<icon BUILTIN="emoji-1F507"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>### Let&apos;s look at the changes.&#xd;
+&#xd;
+Click at the button to show how the page looks now:</text>
+</richcontent>
+<node TEXT="Show tutorials from active map" ID="ID_1955803667" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node"/>
+</node>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_169426981">
+<node TEXT="MDH.md" ID="ID_468900901">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Go to the &quot;Step 3&quot; page and now you can see it's divided into shorter pages that have no extra title
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Look at the &quot;Table of Contens&quot;. It has no new titles in there.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_679203066">
+<node TEXT="MDH.md" ID="ID_184744395">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Congratulations!!
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## You have completed this tutorial!!
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      (you can save your test map if you want, but you don't need to)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 </node>
 </node>
 </node>

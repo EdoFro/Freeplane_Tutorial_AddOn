@@ -153,7 +153,6 @@
 </map_styles>
 </hook>
 <node TEXT="ToM commands" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_554808418">
-<icon BUILTIN="emoji-1F58D"/>
 <attribute_layout NAME_WIDTH="81.75 pt" VALUE_WIDTH="89.25 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE=" ToM commands"/>
 <node TEXT="About this map" STYLE_REF="ToM_newPage" ID="ID_1470567500">
@@ -179,8 +178,7 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_642163741"/>

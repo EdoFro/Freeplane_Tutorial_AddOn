@@ -1,6 +1,6 @@
 <map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
-<node TEXT="Simple Tutorial Sample" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_258304564"><hook NAME="MapStyle" background="#c4e1ff" zoom="0.8">
+<node TEXT="Simple Tutorial Sample" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_258304564" LINK="menuitem:_addons.tutorialOMatic.showTutorialsFromActiveMap_on_single_node"><hook NAME="MapStyle" background="#c4e1ff" zoom="0.8">
     <conditional_styles>
         <conditional_style ACTIVE="true" STYLE_REF="containsNextTasks" LAST="true">
             <script_condition>
@@ -210,7 +210,7 @@ code {
     </p>
   </body>
 </html></richcontent>
-<attribute_layout NAME_WIDTH="86.25 pt" VALUE_WIDTH="87 pt"/>
+<attribute_layout NAME_WIDTH="82.7234 pt" VALUE_WIDTH="83.48936 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE="ToM - Samples"/>
 <node TEXT="SIMPLE DEMO" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_390003608">
 <node TEXT="greetings" FOLDED="true" ID="ID_659572764">
@@ -821,13 +821,25 @@ You can find more information about this in the following links:
 </node>
 </node>
 </node>
-<node TEXT="Current features" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_1118821725">
-<node TEXT="Introduction" FOLDED="true" ID="ID_1042686150">
-<node TEXT="Introduction" STYLE_REF="ToM_newPage" ID="ID_1727993127">
-<node TEXT="nodes with style newPage defines the title for the page and indicates where the page starts" ID="ID_1377188476"/>
+<node TEXT="Current features" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_1589322139">
+<node TEXT="content" ID="ID_881504878">
+<node TEXT="Introduction" FOLDED="true" ID="ID_1317588213">
+<node TEXT="Introduction" STYLE_REF="ToM_newPage" ID="ID_86483344">
+<node TEXT="nodes with style newPage defines the title for the page and indicates where the page starts" ID="ID_142675858"/>
 </node>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1894984288">
-<node TEXT="intro" STYLE_REF="markdownNote" ID="ID_148001089"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_857279432"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      nodes with style ToM_Note look at the notes of their children to build text panes
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="intro" STYLE_REF="markdownNote" ID="ID_1664601777"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>In the following pages you can see the different content that the **Tutorial-o-Matic(ToM)** AddOn can show.
 
 New features may be added in the future.</text>
@@ -835,10 +847,11 @@ New features may be added in the future.</text>
 </node>
 </node>
 </node>
-<node TEXT="markdown note" FOLDED="true" ID="ID_1476835349">
-<node TEXT="Markdown content examples" STYLE_REF="ToM_newPage" ID="ID_207140003"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_928588147">
-<node TEXT="calvin and hobbes" ID="ID_1660497594"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+<node TEXT="information" FOLDED="true" ID="ID_1019945079" VGAP_QUANTITY="3 cm">
+<node TEXT="markdown note" FOLDED="true" ID="ID_1647218309">
+<node TEXT="Markdown content examples" STYLE_REF="ToM_newPage" ID="ID_253802449"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_550789542">
+<node TEXT="calvin and hobbes" ID="ID_1648208570"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text># Calvin and Hobbes
 
 -----
@@ -936,9 +949,9 @@ An officially licensed children&apos;s textbook entitled [Teaching with Calvin a
 </richcontent>
 </node>
 </node>
-<node TEXT="more Markdown examples" STYLE_REF="ToM_newPage" ID="ID_378617313"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1780563592">
-<node TEXT="text with animated gif" ID="ID_516166101"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+<node TEXT="more Markdown examples" STYLE_REF="ToM_newPage" ID="ID_970162966"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1420937665">
+<node TEXT="text with animated gif" ID="ID_162164353"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>## How to xxxx&#xd;
 &#xd;
 Sopose this is an introductio paragraph that explains a problem and next it comes an explanation of the possible solution:&#xd;
@@ -953,7 +966,7 @@ In the following animation you can see how this can be done:&#xd;
 </text>
 </richcontent>
 </node>
-<node TEXT="MD-ex01_03.md" ID="ID_1558955205"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+<node TEXT="MD-ex01_03.md" ID="ID_1623105048"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text># My Document
 
 ## Introduction
@@ -1072,10 +1085,12 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 </node>
 </node>
-<node TEXT="html note" FOLDED="true" ID="ID_119868581"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
-<node TEXT="HTML example" STYLE_REF="ToM_newPage" ID="ID_1823082437"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1323947649">
-<node TEXT="hi! this is a demo" ID="ID_492205689"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="html note" FOLDED="true" ID="ID_610489636">
+<arrowlink COLOR="#cc0000" WIDTH="6" TRANSPARENCY="255" DESTINATION="ID_1875993485" MIDDLE_LABEL="Change their order &#xa;and reload the page &#xa;to see how the TOC updates" STARTINCLINATION="196.0851 pt;6.89362 pt;" ENDINCLINATION="189.19149 pt;-45.19149 pt;" STARTARROW="DEFAULT" ENDARROW="DEFAULT"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+<node TEXT="HTML example" STYLE_REF="ToM_newPage" ID="ID_106260080"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_879389054">
+<node TEXT="hi! this is a demo" ID="ID_468182203"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -1092,10 +1107,25 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 </node>
 </node>
-<node TEXT="menu show" FOLDED="true" ID="ID_254021615">
-<node TEXT="Show menu comands" STYLE_REF="ToM_newPage" ID="ID_466777016"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1362724111">
-<node TEXT="feature &quot;show menu&quot;" STYLE_REF="markdownNote" ID="ID_1703775557"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+<node TEXT="TOC" FOLDED="true" ID="ID_1875993485">
+<node TEXT="Table of Content" STYLE_REF="ToM_newPage" ID="ID_1568365816"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1115323619">
+<node TEXT="TOC example" STYLE_REF="markdownNote" ID="ID_1532424984"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>**ToM** builds automatically the tutorial&apos;s table of content using the titles of each new page
+
+  
+Here is the current tutorial&apos;s TOC:</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_186879075"/>
+</node>
+</node>
+<node TEXT="Actions" ID="ID_212855247">
+<node TEXT="menu show" FOLDED="true" ID="ID_1349603898">
+<node TEXT="Show menu comands" STYLE_REF="ToM_newPage" ID="ID_401463049"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_446911196">
+<node TEXT="feature &quot;show menu&quot;" STYLE_REF="markdownNote" ID="ID_1302793222"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>You can make that **ToM** shows where in the menu the user can find a specific command.
 
   
@@ -1103,15 +1133,15 @@ Here are some examples:</text>
 </richcontent>
 </node>
 </node>
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_144202026">
-<node TEXT="Bold" ID="ID_1864965740" LINK="menuitem:_BoldAction"/>
-<node TEXT="elephant" ID="ID_769768215" LINK="menuitem:_IconAction.emoji-1F418"/>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_857811179">
+<node TEXT="Bold" ID="ID_312281538" LINK="menuitem:_BoldAction"/>
+<node TEXT="elephant" ID="ID_1156977146" LINK="menuitem:_IconAction.emoji-1F418"/>
 </node>
 </node>
-<node TEXT="menu action" FOLDED="true" ID="ID_1961064109">
-<node TEXT="Executing actions on selected nodes" STYLE_REF="ToM_newPage" ID="ID_1326854347"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_904121337">
-<node TEXT="execute actions" ID="ID_1270423480"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="menu action" FOLDED="true" ID="ID_1680868625">
+<node TEXT="Executing actions on selected nodes" STYLE_REF="ToM_newPage" ID="ID_1527841582"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_349781308">
+<node TEXT="execute actions" ID="ID_671264621"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -1124,7 +1154,7 @@ Here are some examples:</text>
 </html></richcontent>
 </node>
 </node>
-<node TEXT="example with menu" STYLE_REF="ToM_menuAction" ID="ID_332913214">
+<node TEXT="example with menu" STYLE_REF="ToM_menuAction" ID="ID_1234983337">
 <icon BUILTIN="emoji-1F56F"/>
 <icon BUILTIN="emoji-1F5B1"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -1161,10 +1191,10 @@ Here are some examples:</text>
     </p>
   </body>
 </html></richcontent>
-<node TEXT="New child node" ID="ID_270468047" LINK="menuitem:_NewChildAction"/>
-<node TEXT="I am happy" ID="ID_1851402163" LINK="menuitem:_IconAction.ksmiletris"/>
+<node TEXT="New child node" ID="ID_572971566" LINK="menuitem:_NewChildAction"/>
+<node TEXT="I am happy" ID="ID_95525811" LINK="menuitem:_IconAction.ksmiletris"/>
 </node>
-<node TEXT="example with keyboard" STYLE_REF="ToM_menuAction" ID="ID_1811491607">
+<node TEXT="example with keyboard" STYLE_REF="ToM_menuAction" ID="ID_39633251">
 <icon BUILTIN="emoji-1F56F"/>
 <icon BUILTIN="emoji-2328"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -1200,10 +1230,10 @@ Here are some examples:</text>
     </p>
   </body>
 </html></richcontent>
-<node TEXT="Bold" ID="ID_1268497175" LINK="menuitem:_BoldAction"/>
-<node TEXT="Filter toolbar" ID="ID_808838378" LINK="menuitem:_ShowFilterToolbarAction"/>
+<node TEXT="Bold" ID="ID_1725459151" LINK="menuitem:_BoldAction"/>
+<node TEXT="Filter toolbar" ID="ID_287372459" LINK="menuitem:_ShowFilterToolbarAction"/>
 </node>
-<node TEXT="example muted" STYLE_REF="ToM_menuAction" ID="ID_1144874815">
+<node TEXT="example muted" STYLE_REF="ToM_menuAction" ID="ID_1992752537">
 <icon BUILTIN="emoji-1F507"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -1235,35 +1265,24 @@ Here are some examples:</text>
     </p>
   </body>
 </html></richcontent>
-<node TEXT="Map overview" ID="ID_1546319421" LINK="menuitem:_ToggleMapOverviewAction"/>
+<node TEXT="Map overview" ID="ID_1454425279" LINK="menuitem:_ToggleMapOverviewAction"/>
 </node>
 </node>
-<node TEXT="TOC" FOLDED="true" ID="ID_1316498950">
-<node TEXT="Table of Content" STYLE_REF="ToM_newPage" ID="ID_1113604691"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1429376364">
-<node TEXT="TOC example" STYLE_REF="markdownNote" ID="ID_615277253"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>**ToM** builds automatically the tutorial&apos;s table of content using the titles of each new page
-
-  
-Here is the current tutorial&apos;s TOC:</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_1798970949"/>
-</node>
-<node TEXT="goto" FOLDED="true" ID="ID_450207715">
-<node TEXT="Linking other Tutorial&apos;s pages" STYLE_REF="ToM_newPage" ID="ID_487634563"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1081829880">
-<node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_1294401049"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+<node TEXT="goto" FOLDED="true" ID="ID_687440488">
+<node TEXT="Linking other Tutorial&apos;s pages" STYLE_REF="ToM_newPage" ID="ID_633627771"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1515905195">
+<node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_1293398576"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>You can add  buttons to jump to other tutorial pages
 
   
-Here is an example:</text>
+Here are two examples with option &quot;goBack&quot; selected 
+that adds a &quot;return panel&quot; to the visited page:</text>
 </richcontent>
 </node>
 </node>
-<node TEXT="GOTO" STYLE_REF="ToM_goto" ID="ID_1892721742">
-<node TEXT="HTML example" STYLE_REF="markdownNote" ID="ID_1376459415" LINK="#ID_1823082437"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="GOTO" STYLE_REF="ToM_goto" ID="ID_618422826">
+<icon BUILTIN="emoji-1F519"/>
+<node TEXT="HTML example" STYLE_REF="markdownNote" ID="ID_1982781285" LINK="#ID_1391525027"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -1275,37 +1294,84 @@ Here is an example:</text>
   </body>
 </html></richcontent>
 </node>
-<node TEXT="TOC in Simple Demo" STYLE_REF="markdownNote" ID="ID_937044893" LINK="#ID_374851820"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+<node TEXT="TOC in Simple Demo" STYLE_REF="markdownNote" ID="ID_523160596" LINK="#ID_374851820"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>You can also jump to another tutorial&apos;s page.
 
   
 To jump to the **&apos;SimpleDemo&apos;s TOC page&apos;** page click on the button bellow:</text>
 </richcontent>
 </node>
+<node TEXT="Current features" ID="ID_1067522524"/>
+<node TEXT="HowToTutorial-o-Matic.mm" ID="ID_1201372687" LINK="file:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm"/>
+<node TEXT="tut intro" ID="ID_478610666" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/Tutorial-o-Matic%20Intro.mm#ID_1522236279"/>
+<node TEXT="history.md" ID="ID_793859711" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/history.md"/>
 </node>
-</node>
-<node TEXT="show Node from Map" FOLDED="true" ID="ID_474896897">
-<node TEXT="show Node from Map" STYLE_REF="ToM_newPage" ID="ID_1073584612"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_907476785">
-<node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_1824304681"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add  buttons to jump to other nodes (in this or other mindmap)
-
-  
-Here is an example:</text>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1246717066">
+<node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_538787874"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>  
+Here is the same first example without option &quot;goBack&quot; selected:
+</text>
 </richcontent>
 </node>
 </node>
-<node TEXT="select" STYLE_REF="ToM_showNode" ID="ID_1873597517">
-<node TEXT="&apos;caso USS&apos; en mapa scripts" STYLE_REF="Organizador" ID="ID_975705067" LINK="file:/C:/Respaldo%20EF/ef/Documentos%20con%20macros/08%20Freemind%20Groovy/scripts/Scripts%20Groovy%20v1.9.mm#ID_975705067"/>
-<node TEXT="node &apos;GOTO example&apos; in tutorial map" ID="ID_498715353" LINK="#ID_1294401049"/>
+<node TEXT="GOTO" STYLE_REF="ToM_goto" ID="ID_1282839571">
+<node TEXT="HTML example" STYLE_REF="markdownNote" ID="ID_1276808846" LINK="#ID_1391525027"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      To jump to the **'HTML example'** page click on the button bellow:
+    </p>
+  </body>
+</html></richcontent>
 </node>
 </node>
-<node TEXT="example scripts" FOLDED="true" ID="ID_192065243">
+</node>
+<node TEXT="openTutPage" FOLDED="true" ID="ID_17985442">
+<node TEXT="Linking other Tutorial&apos;s pages (same or other maps)" STYLE_REF="ToM_newPage" ID="ID_1996959489"/>
+<node TEXT="ToM_openTutPage" STYLE_REF="ToM_openTutPage" ID="ID_1980480329">
+<node TEXT="HTML example" STYLE_REF="markdownNote" ID="ID_616057911" LINK="#ID_1391525027"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      To jump to the **'HTML example'** page click on the button bellow:
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="TOC in Simple Demo" STYLE_REF="markdownNote" ID="ID_1475933414" LINK="#ID_374851820"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can also jump to another tutorial&apos;s page.
+
+  
+To jump to the **&apos;SimpleDemo&apos;s TOC page&apos;** page click on the button bellow:</text>
+</richcontent>
+</node>
+<node TEXT="Current features" ID="ID_1891787602"/>
+<node TEXT="HowToTutorial-o-Matic.mm" ID="ID_1368779302" LINK="file:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm">
+<node TEXT="Change this link to a another demo tutorial map" STYLE_REF="nextTask" ID="ID_1680307402"/>
+</node>
+<node TEXT="tut intro" ID="ID_291335786" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/Tutorial-o-Matic%20Intro.mm#ID_1522236279">
+<node TEXT="Change this link to a another demo tutorial map" STYLE_REF="nextTask" ID="ID_948480581"/>
+</node>
+<node TEXT="history.md" ID="ID_1078210816" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/history.md"/>
+<node TEXT="Add actions to a tutorial" ID="ID_1903955029" LINK="menuitem:_addons.tutorialOMatic.openTutorialPageFromLink_on_single_node">
+<attribute_layout NAME_WIDTH="93.44681 pt" VALUE_WIDTH="541.5319 pt"/>
+<attribute NAME="ToM_LinkToPage" VALUE="tutorial:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm#ID_1128437346" OBJECT="java.net.URI|tutorial:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm#ID_1128437346"/>
+<node TEXT="Change this link to a another demo tutorial map" STYLE_REF="nextTask" ID="ID_103873734"/>
+</node>
+</node>
+</node>
+<node TEXT="example scripts" FOLDED="true" ID="ID_1202494869">
 <font NAME="SansSerif"/>
-<node TEXT="page 1" FOLDED="true" ID="ID_1609042150">
-<node TEXT="Executing Scripts on selected nodes" STYLE_REF="ToM_newPage" ID="ID_579678731"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_11309586">
-<node TEXT="execute actions" STYLE_REF="markdownNote" ID="ID_1344677856"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="page 1" FOLDED="true" ID="ID_862191583">
+<node TEXT="Executing Scripts on selected nodes" STYLE_REF="ToM_newPage" ID="ID_1317437011"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_346328137">
+<node TEXT="execute actions" STYLE_REF="markdownNote" ID="ID_1039608324"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -1317,11 +1383,34 @@ Here is an example:</text>
   </body>
 </html></richcontent>
 </node>
-<node TEXT="one time vs multiple times execution" STYLE_REF="markdownNote" ID="ID_1518028432"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>The first example shows two times the same groovy script.
-
-  
-This script will reverse the text of the selected node.
+<node TEXT="one time vs multiple times execution" STYLE_REF="markdownNote" ID="ID_588384189"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>The first example shows two times the following groovy script:
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_305226009">
+<font NAME="SansSerif"/>
+<node TEXT="Groovy script: reverse node&apos;s text" ID="ID_399360252">
+<icon BUILTIN="emoji-1F453"/>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+<attribute NAME="script1" VALUE="def texto = node.text&#xa;node.text = texto.reverse()"/>
+<node TEXT="the glasses icon indicates that the groovy script is to be seen, but it can&apos;t be executed (no button)" ID="ID_515045348"/>
+</node>
+</node>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1024635600">
+<node TEXT="one time vs multiple times execution" STYLE_REF="markdownNote" ID="ID_629545943"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>This script will reverse the text of the selected node.
 
   
 The difference between both scripts is that after clicking the button, the first one will disable itself (one time execution) and the second button will stay enabled (for multiple time uses)
@@ -1332,7 +1421,7 @@ Select a node with a text and try them.
 </richcontent>
 </node>
 </node>
-<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_116816777">
+<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_633338177">
 <icon BUILTIN="emoji-1F56F"/>
 <font NAME="SansSerif"/>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
@@ -1346,7 +1435,7 @@ Select a node with a text and try them.
     </p>
   </body>
 </html></richcontent>
-<node TEXT="reverse node&apos;s text" ID="ID_899678699">
+<node TEXT="Groovy script: reverse node&apos;s text" ID="ID_1745703012">
 <icon BUILTIN="emoji-1F50D"/>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
@@ -1365,9 +1454,9 @@ Select a node with a text and try them.
 <attribute NAME="script1" VALUE="def texto = node.text&#xa;node.text = texto.reverse()"/>
 </node>
 </node>
-<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_730816410">
+<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_481722825">
 <font NAME="SansSerif"/>
-<node TEXT="reverse node&apos;s text" ID="ID_426655557">
+<node TEXT="Groovy script: reverse node&apos;s text" ID="ID_1715154607">
 <icon BUILTIN="emoji-1F50D"/>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
@@ -1384,13 +1473,13 @@ Select a node with a text and try them.
 </node>
 </node>
 </node>
-<node TEXT="page 2" FOLDED="true" ID="ID_1294827098">
+<node TEXT="page 2" FOLDED="true" ID="ID_1093551225">
 <font NAME="SansSerif"/>
-<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_1864780595">
-<node TEXT="nodes with style nextPage indicates where a new page starts, but don´t define a new title. It means that the new page is part of the previous section." ID="ID_1016217412"/>
+<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_779808052">
+<node TEXT="nodes with style nextPage indicates where a new page starts, but don´t define a new title. It means that the new page is part of the previous section." ID="ID_1851542335"/>
 </node>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_603268734">
-<node TEXT="showing the code" STYLE_REF="markdownNote" ID="ID_723143822"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1402632117">
+<node TEXT="showing the code" STYLE_REF="markdownNote" ID="ID_456805126"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>This example shows also two times the same groovy script.
 
   
@@ -1405,9 +1494,9 @@ Try them.
 </richcontent>
 </node>
 </node>
-<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1494580712">
+<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_506169828">
 <font NAME="SansSerif"/>
-<node TEXT="displaying an optionPane in groovy" ID="ID_535064399">
+<node TEXT="displaying an optionPane in groovy" ID="ID_1966457372">
 <icon BUILTIN="emoji-1F50D"/>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
@@ -1425,7 +1514,7 @@ Try them.
 </html></richcontent>
 <attribute NAME="script1" VALUE="import groovy.swing.SwingBuilder&#xa;&#xa;import javax.swing.*&#xa;&#xa;&#xa;def swingBuilder = new SwingBuilder()&#xa;def options = [&apos;Kung Fu Panda&apos;, &apos;Madagascar&apos;, &apos;Shrek&apos;, &apos;How to Train Your Dragon&apos;,&apos;The Croods&apos;,&apos;Trolls&apos;,&apos;The Boss Baby&apos;].sort()&#xa;def pane = swingBuilder.optionPane(&#xa;                            message:&apos;Which Dreamworks movie franchise like you most: &apos;,&#xa;                            selectionValues:options,&#xa;                            optionType:JOptionPane.CLOSED_OPTION&#xa;                        )&#xa;def dialog = pane.createDialog(ui.frame, &apos;Tutorial-o-Matic&apos;)&#xa;dialog.show()&#xa;&#xa;ui.informationMessage(&quot;the selected string was: &apos;${pane.inputValue}&apos;&quot;.toString())"/>
 </node>
-<node TEXT="displaying an optionPane in groovy" ID="ID_1876349419"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="displaying an optionPane in groovy" ID="ID_1484801629"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
     
@@ -1441,10 +1530,10 @@ Try them.
 </node>
 </node>
 </node>
-<node TEXT="copy/paste" FOLDED="true" ID="ID_820133815">
-<node TEXT="Inserting example nodes" STYLE_REF="ToM_newPage" ID="ID_1575942659"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1110366880">
-<node TEXT="inserting nodes" STYLE_REF="markdownNote" ID="ID_1362808732"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+<node TEXT="copy/paste" FOLDED="true" ID="ID_1302213066">
+<node TEXT="Inserting example nodes" STYLE_REF="ToM_newPage" ID="ID_1777948634"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1333325734">
+<node TEXT="inserting nodes" STYLE_REF="markdownNote" ID="ID_1442300729"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>When building a tutorial you can add nodes that the user can insert in his/her own map.&#xd;
 &#xd;
   &#xd;
@@ -1452,39 +1541,39 @@ Select a node in your map and click the button to insert a branch containing the
 </richcontent>
 </node>
 </node>
-<node TEXT="insert Madagascar characters" STYLE_REF="ToM_copy" ID="ID_835652050">
-<node TEXT="Madagascar" ID="ID_396510469">
-<node TEXT="main" ID="ID_484087720">
-<node TEXT="Alex" ID="ID_1937688049"/>
-<node TEXT="Marty the Zebra" ID="ID_532268628"/>
-<node TEXT="Melman the Giraffe" ID="ID_566683842"/>
-<node TEXT="Gloria the Hippo" ID="ID_1824318693"/>
+<node TEXT="insert Madagascar characters" STYLE_REF="ToM_copy" ID="ID_337428998">
+<node TEXT="Madagascar" ID="ID_1334587546">
+<node TEXT="main" ID="ID_1258011434">
+<node TEXT="Alex" ID="ID_1708368534"/>
+<node TEXT="Marty the Zebra" ID="ID_1928587181"/>
+<node TEXT="Melman the Giraffe" ID="ID_958662254"/>
+<node TEXT="Gloria the Hippo" ID="ID_355688105"/>
 </node>
-<node TEXT="Penguins" ID="ID_717646164">
-<node TEXT="Skipper" ID="ID_263167159"/>
-<node TEXT="Private" ID="ID_1052150504"/>
-<node TEXT="Kowalski" ID="ID_420676948"/>
-<node TEXT="Rico" ID="ID_1125383509"/>
+<node TEXT="Penguins" ID="ID_681955891">
+<node TEXT="Skipper" ID="ID_798650562"/>
+<node TEXT="Private" ID="ID_1281976680"/>
+<node TEXT="Kowalski" ID="ID_331678206"/>
+<node TEXT="Rico" ID="ID_91348109"/>
 </node>
-<node TEXT="Lemurs" ID="ID_1552214909">
-<node TEXT="Julien" ID="ID_1152340168"/>
-<node TEXT="Maurice" ID="ID_1121060773"/>
-<node TEXT="Mort" ID="ID_756852835"/>
-<node TEXT="Willie" ID="ID_539673618"/>
+<node TEXT="Lemurs" ID="ID_1124144407">
+<node TEXT="Julien" ID="ID_1873609454"/>
+<node TEXT="Maurice" ID="ID_126438584"/>
+<node TEXT="Mort" ID="ID_444905973"/>
+<node TEXT="Willie" ID="ID_380020870"/>
 </node>
-<node TEXT="Antagonists" ID="ID_1639272744">
-<node TEXT="Fossa" ID="ID_1009452075"/>
+<node TEXT="Antagonists" ID="ID_846788488">
+<node TEXT="Fossa" ID="ID_482000405"/>
 </node>
-<node TEXT="Others" ID="ID_269596407">
-<node TEXT="Mason" ID="ID_513042645"/>
-</node>
-</node>
+<node TEXT="Others" ID="ID_630276169">
+<node TEXT="Mason" ID="ID_1311660765"/>
 </node>
 </node>
-<node TEXT="select" FOLDED="true" ID="ID_985006709">
-<node TEXT="Selecting example nodes" STYLE_REF="ToM_newPage" ID="ID_167785468"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_355357590">
-<node TEXT="selecting nodes" STYLE_REF="markdownNote" ID="ID_1958257873"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+</node>
+</node>
+<node TEXT="select" FOLDED="true" ID="ID_705451325">
+<node TEXT="Selecting example nodes" STYLE_REF="ToM_newPage" ID="ID_886846632"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1463807409">
+<node TEXT="selecting nodes" STYLE_REF="markdownNote" ID="ID_1452131324"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>After inserting an example branch, you can have a button that selects the nodes that you want so the user can easily go further with the tutorial.&#xd;
 &#xd;
 &#xd;
@@ -1495,7 +1584,7 @@ Click the button to see how the selection changes:&#xd;
 </richcontent>
 </node>
 </node>
-<node TEXT="select" STYLE_REF="ToM_select" ID="ID_1884219610"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="select" STYLE_REF="ToM_select" ID="ID_1463853043"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
     
@@ -1506,11 +1595,11 @@ Click the button to see how the selection changes:&#xd;
     </p>
   </body>
 </html></richcontent>
-<node ID="ID_1586173303" CONTENT_ID="ID_1937688049"/>
-<node ID="ID_106315566" CONTENT_ID="ID_420676948"/>
-<node ID="ID_1431206192" CONTENT_ID="ID_1152340168"/>
+<node ID="ID_550435477" CONTENT_ID="ID_1708368534"/>
+<node ID="ID_1579433568" CONTENT_ID="ID_331678206"/>
+<node ID="ID_546323847" CONTENT_ID="ID_1873609454"/>
 </node>
-<node TEXT="example muted" STYLE_REF="ToM_menuAction" ID="ID_306649517">
+<node TEXT="example muted" STYLE_REF="ToM_menuAction" ID="ID_554207690">
 <icon BUILTIN="emoji-1F507"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -1531,14 +1620,14 @@ Click the button to see how the selection changes:&#xd;
     </p>
   </body>
 </html></richcontent>
-<node TEXT="Blinking node" ID="ID_1127818017" LINK="menuitem:_BlinkingNodeHookAction"/>
-<node TEXT="Bold" ID="ID_1479820671" LINK="menuitem:_BoldAction"/>
+<node TEXT="Blinking node" ID="ID_894633887" LINK="menuitem:_BlinkingNodeHookAction"/>
+<node TEXT="Bold" ID="ID_434347462" LINK="menuitem:_BoldAction"/>
 </node>
 </node>
-<node TEXT="openMap" FOLDED="true" ID="ID_1074669360">
-<node TEXT="Open another Mindmap" STYLE_REF="ToM_newPage" ID="ID_1369303093"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_634621430">
-<node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_25527076"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+<node TEXT="openMap" FOLDED="true" ID="ID_30678558">
+<node TEXT="Open another Mindmap" STYLE_REF="ToM_newPage" ID="ID_1702966235"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_354845138">
+<node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_1053273923"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>You can add a button to open other maps needed for the tutorial.
 
 Currently that map must be in the same directory as the tutorial map
@@ -1549,14 +1638,33 @@ Currently that map must be in the same directory as the tutorial map
 </richcontent>
 </node>
 </node>
-<node TEXT="openMap" STYLE_REF="ToM_openMap" ID="ID_185964011">
-<node TEXT="ExercisingMap.mm" ID="ID_1051753819"/>
+<node TEXT="openMap" STYLE_REF="ToM_openMap" ID="ID_1098374020">
+<node TEXT="ExercisingMap.mm" ID="ID_22547532"/>
 </node>
 </node>
-<node TEXT="inspect" FOLDED="true" ID="ID_1861234056">
-<node TEXT="Inspecting the tutorial map" STYLE_REF="ToM_newPage" ID="ID_1130451496"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_697584694">
-<node TEXT="inspecting" STYLE_REF="markdownNote" ID="ID_1574327682"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+<node TEXT="showNode" FOLDED="true" ID="ID_1933123138">
+<node TEXT="Show specific node in the same or another MindMap" STYLE_REF="ToM_newPage" ID="ID_523894547"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1491064272">
+<node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_1342797326"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>You can add a button to show nodes in the same or in another MindMaps.
+
+It may be any node. It doesn&apos;t need to be in a tutorial.
+
+</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="showNode" STYLE_REF="ToM_showNode" ID="ID_1070420463">
+<node TEXT="node with link to a mindmap in your drive" ID="ID_577940079" LINK="file:/C:/Users/Edo/Documents/Mochila/Freeplane/Mochila.mm#ID_632024907">
+<node TEXT="Change this link to a another demo tutorial map" STYLE_REF="nextTask" ID="ID_1041324499"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="inspect" FOLDED="true" ID="ID_896909962">
+<node TEXT="Inspecting the tutorial map" STYLE_REF="ToM_newPage" ID="ID_849438176"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_246665400">
+<node TEXT="inspecting" STYLE_REF="markdownNote" ID="ID_534382608"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>I added a button to directly go to the map that contains the tutorial information and select the node that defines the current page.  
   
 Click the following button to go to the node that has this page information:
@@ -1564,14 +1672,12 @@ Click the following button to go to the node that has this page information:
 </richcontent>
 </node>
 </node>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_323764920">
-<font NAME="SansSerif"/>
+<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1531417724"/>
 </node>
-</node>
-<node TEXT="Bye" FOLDED="true" ID="ID_1419449785">
-<node TEXT="Bye!!" STYLE_REF="ToM_newPage" ID="ID_36395868"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_224912928">
-<node TEXT="bye" ID="ID_1318489932"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="Bye" FOLDED="true" ID="ID_623257946">
+<node TEXT="Bye!!" STYLE_REF="ToM_newPage" ID="ID_25494712"/>
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_945502750">
+<node TEXT="bye" ID="ID_240586433"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -1591,6 +1697,7 @@ Click the following button to go to the node that has this page information:
     </p>
   </body>
 </html></richcontent>
+</node>
 </node>
 </node>
 </node>
@@ -1620,9 +1727,9 @@ Click the following button to go to the node that has this page information:
     </p>
   </body>
 </html></richcontent>
-<attribute_layout NAME_WIDTH="86.25 pt" VALUE_WIDTH="66.75 pt"/>
+<attribute_layout NAME_WIDTH="82.7234 pt" VALUE_WIDTH="76.59574 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE="Crayon mode"/>
-<node TEXT="Crayon Mode" ID="ID_1549930271">
+<node TEXT="Crayon Mode" FOLDED="true" ID="ID_1549930271">
 <node TEXT="Crayon Mode" STYLE_REF="ToM_newPage" ID="ID_67374880">
 <font BOLD="false"/>
 </node>
@@ -1669,884 +1776,230 @@ There are also comments in the map that explain some of the configuration option
 </node>
 </node>
 </node>
-<node TEXT="Introduction" FOLDED="true" ID="ID_791969447">
-<node TEXT="Introduction" STYLE_REF="ToM_newPage" ID="ID_615110223">
-<node TEXT="nodes with style newPage defines the title for the page and indicates where the page starts" ID="ID_963032450"/>
-</node>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_137035593"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      nodes with style ToM_Note look at the notes of their children to build text panes
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="intro" STYLE_REF="markdownNote" ID="ID_382044586"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>In the following pages you can see the different content that the **Tutorial-o-Matic(ToM)** AddOn can show.
-
-New features may be added in the future.</text>
-</richcontent>
-</node>
-</node>
-</node>
-<node TEXT="information" ID="ID_1980982395" VGAP_QUANTITY="3 cm">
-<node TEXT="markdown note" FOLDED="true" ID="ID_1010028624">
-<node TEXT="Markdown content examples" STYLE_REF="ToM_newPage" ID="ID_921291072"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1280186470">
-<node TEXT="calvin and hobbes" ID="ID_953339948"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text># Calvin and Hobbes
-
------
-
-## 1. Preface
-
------
-
-I made this markdown document and its source mindmap as an example to show how the **Markdown Helper AddOn** works and to show some of its features.
-
-This document isn&apos;t an official source of information about the **Calvin and Hobbes** comic strip. I made this document about it because I like **Mr. Watterson** work very much and I think that any extra showroom for it is well deserved.
-
-All information in this document comes from the [&apos;Calvin and Hobbes&apos; wiki page available in FANDOM.com](https://calvinandhobbes.fandom.com/wiki/Main_Page)
-
-Please look in there if you want to know more about **Calvin and Hobbes**.
-
-## 2. Content
-
------
-
-[Calvin and Hobbes](#Calvin-and-Hobbes)
-
-[1. Preface](#1-Preface)
-
-[2. Content](#2-Content)
-
-[3. Story Arcs](#3-Story-Arcs)
-
-[4. Characters](#4-Characters)
-
-[5. Watterson](#5-Watterson)
-
-[6. Books](#6-Books)
-
-## 3. Story Arcs
-
------
-
-In [Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Calvin_and_Hobbes), story arcs are a theme or plotline that lasts longer than a day. They can range from a few days to a month, such as the arc with [Calvin](https://calvinandhobbes.fandom.com/wiki/Calvin) accidentally pushing [his parents&apos; car](https://calvinandhobbes.fandom.com/wiki/Car) into a ditch.
-
-Generally, the strip had week-long story arcs for the first couple of years and had its longest arcs in the middle of the its life. Later on, the arcs became fewer and farther between as [Bill Watterson](https://calvinandhobbes.fandom.com/wiki/Bill_Watterson) focused more on [Sunday strips](https://calvinandhobbes.fandom.com/wiki/Sunday_comics).
-
-Story arcs are used mainly to develop characters, introduce new devices, or investigate new artistic directions.
-
-## 4. Characters
-
------
-
-The principal characters of this strip are the followings:
-
-|Name|Image|Link|Description|
-|----|:----:|:----:|----|
-|Calvin|![https://static.wikia.nocookie.net/candh/images/7/78/Image.jpg/revision/latest/scale-to-width-down/139?cb=20130902154949](https://static.wikia.nocookie.net/candh/images/7/78/Image.jpg/revision/latest/scale-to-width-down/139?cb=20130902154949)|[Calvin](https://calvinandhobbes.fandom.com/wiki/Calvin)|
-|Hobbes|![https://static.wikia.nocookie.net/candh/images/3/36/61D_hobbes.jpg/revision/latest/scale-to-width-down/133?cb=20121112232636](https://static.wikia.nocookie.net/candh/images/3/36/61D_hobbes.jpg/revision/latest/scale-to-width-down/133?cb=20121112232636)|[Hobbes](https://calvinandhobbes.fandom.com/wiki/Hobbes)|
-|Susie Derkins|![https://static.wikia.nocookie.net/candh/images/a/a4/Susie_lalal.jpg/revision/latest/scale-to-width-down/140?cb=20130902161428](https://static.wikia.nocookie.net/candh/images/a/a4/Susie_lalal.jpg/revision/latest/scale-to-width-down/140?cb=20130902161428)|[Susie Derkins](https://calvinandhobbes.fandom.com/wiki/Susie_Derkins)|
-|Calvin&apos;s mother|![https://static.wikia.nocookie.net/candh/images/3/32/Cmom_mainpage.jpeg/revision/latest/scale-to-width-down/150?cb=20170703031759](https://static.wikia.nocookie.net/candh/images/3/32/Cmom_mainpage.jpeg/revision/latest/scale-to-width-down/150?cb=20170703031759)|[Calvin&apos;s mother](https://calvinandhobbes.fandom.com/wiki/Calvin%27s_mother)|
-|Calvin&apos;s father|![https://static.wikia.nocookie.net/candh/images/c/ca/Dad.jpg/revision/latest/scale-to-width-down/150?cb=20200108212915](https://static.wikia.nocookie.net/candh/images/c/ca/Dad.jpg/revision/latest/scale-to-width-down/150?cb=20200108212915)|[Calvin&apos;s father](https://calvinandhobbes.fandom.com/wiki/Calvin%27s_father)|
-|Rosalyn|![https://static.wikia.nocookie.net/candh/images/2/20/Rosalyn.png/revision/latest/scale-to-width-down/49?cb=20200108212824](https://static.wikia.nocookie.net/candh/images/2/20/Rosalyn.png/revision/latest/scale-to-width-down/49?cb=20200108212824)|[Rosalyn](https://calvinandhobbes.fandom.com/wiki/Rosalyn)|
-|Moe|![https://static.wikia.nocookie.net/candh/images/8/81/Moe.jpg/revision/latest/scale-to-width-down/150?cb=20090401050911](https://static.wikia.nocookie.net/candh/images/8/81/Moe.jpg/revision/latest/scale-to-width-down/150?cb=20090401050911)|[Moe](https://calvinandhobbes.fandom.com/wiki/Moe)|
-|Miss Wormwood|![https://static.wikia.nocookie.net/candh/images/7/79/Wormwoodmainpagepic.png/revision/latest/scale-to-width-down/121?cb=20170713194559](https://static.wikia.nocookie.net/candh/images/7/79/Wormwoodmainpagepic.png/revision/latest/scale-to-width-down/121?cb=20170713194559)|[Miss Wormwood](https://calvinandhobbes.fandom.com/wiki/Miss_Wormwood)|
-|Alter Egos|![https://static.wikia.nocookie.net/candh/images/e/e7/Unknown-5.jpeg/revision/latest/scale-to-width-down/111?cb=20110320025133](https://static.wikia.nocookie.net/candh/images/e/e7/Unknown-5.jpeg/revision/latest/scale-to-width-down/111?cb=20110320025133)|[Alter Egos](https://calvinandhobbes.fandom.com/wiki/Category:Alter_egos)|
-
-## 5. Watterson
-
------
-
-William Boyd &quot;Bill&quot; Watterson II (born July 5, 1958) is the author of [Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Calvin_and_Hobbes). He was author and artist during the strip&apos;s decade-long run. Calvin and Hobbes abruptly ceased publication in 1995, when Watterson decided to retire. He is now removed completely from the public eye, and is reluctant to take interviews, preferring to let his work speak for itself. He drew Calvin&apos;s father to look exactly like himself, for symbolism. Bill is currently 62 years old.
-
-## 6. Books
-
------
-
-Despite [ Bill Watterson](https://calvinandhobbes.fandom.com/wiki/Bill_Watterson)&apos;s reluctance to sell [merchandise](https://calvinandhobbes.fandom.com/wiki/Licensing) based on [merchandise](https://calvinandhobbes.fandom.com/wiki/Licensing) or its characters, he still allowed some merchandise to reach the public, one of the few was books. There have so far been eighteen books (including one three-volume set) published in the United States.
-
-The books, referred to as &quot;Collections&quot;, form a complete archive of the newspaper strips, except for a [single daily strip](https://calvinandhobbes.fandom.com/wiki/Alternate_strip) from November 28, 1985 (The collections do contain a strip for this date, but it is not the same strip that appeared in some newspapers). &quot;Treasuries&quot; combine the two preceding collections with bonus material and include color reprints of Sunday comics, and irregular printed collections reprint already published comics with a particular intent, such as providing original sketches or commentary.
-
-A complete collection of Calvin and Hobbes strips, in three hardcover volumes, with a total 1440 pages, was released on October 4, 2005, by [Andrews &amp; McMeel](https://calvinandhobbes.fandom.com/wiki/Andrews_%26_McMeel) Publishing. It also includes color prints of the art used on paperback covers, the Treasuries&apos; extra illustrated stories and poems, and an original 14-page introduction by Bill Watterson. Unfortunately, the alternate 1985 strip is still omitted, and two other strips (January 7, 1987, and November 25, 1988) have altered dialogue.
-
-To celebrate the release, Calvin and Hobbes reruns were made available to newspapers from Sunday, September 4, 2005, through Saturday, December 31, 2005, and Bill Watterson answered a select dozen questions submitted by readers. ([[1]](http://www.amuniversal.com/ups/features/thereturn/) [[2]](http://www.andrewsmcmeel.com/calvinandhobbes/returning.html)) Like current contemporary strips, weekday Calvin and Hobbes strips now appear in color print when available, instead of black and white as in their first run.
-
-|Title|Cover|Date|ISBN|Notes|
-|----|----|:----:|----|----|
-|[Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Calvin_and_Hobbes_(book))|![https://static.wikia.nocookie.net/candh/images/b/b2/Calvin_and_Hobbes_Original.png/revision/latest/scale-to-width-down/100?cb=20060314024407](https://static.wikia.nocookie.net/candh/images/b/b2/Calvin_and_Hobbes_Original.png/revision/latest/scale-to-width-down/100?cb=20060314024407)|April 1987|ISBN 0836220889|Collection covering strips from first strip on Nov 18, 1985 to Aug 17, 1986. Original content: Foreword by [Garry Trudeau](http://en.wikipedia.org/wiki/Garry_Trudeau).|
-|[Something Under the Bed Is Drooling](https://calvinandhobbes.fandom.com/wiki/Something_Under_the_Bed_Is_Drooling)|![https://static.wikia.nocookie.net/candh/images/2/24/Something_Under_the_Bed_Is_Drooling.jpg/revision/latest/scale-to-width-down/100?cb=20060316165419](https://static.wikia.nocookie.net/candh/images/2/24/Something_Under_the_Bed_Is_Drooling.jpg/revision/latest/scale-to-width-down/100?cb=20060316165419)|April 1988|ISBN 0836218256|Collection covering strips from Aug 18, 1986 to May 22, 1987. Original content: Foreword by [Pat Oliphant](http://en.wikipedia.org/wiki/Pat_Oliphant).|
-|[The Essential Calvin and Hobbes: A Calvin and Hobbes Treasury](https://calvinandhobbes.fandom.com/wiki/The_Essential_Calvin_and_Hobbes)|![https://static.wikia.nocookie.net/candh/images/d/dd/The_Essential_Calvin_and_Hobbes.png/revision/latest/scale-to-width-down/100?cb=20060316165656](https://static.wikia.nocookie.net/candh/images/d/dd/The_Essential_Calvin_and_Hobbes.png/revision/latest/scale-to-width-down/100?cb=20060316165656)|September 1988|ISBN 0836218051|Treasury including cartoons from Calvin and Hobbes, Something Under the Bed is Drooling, &amp; a strip from May 23, 1987 not published in Drooling. Original content: Foreword by [Charles M. Schulz](http://en.wikipedia.org/wiki/Charles_M._Schulz), original illustrated poem &quot;[A Nauseous Nocturne](https://calvinandhobbes.fandom.com/wiki/A_Nauseous_Nocturne)&quot; and artwork on back cover of a giant rampaging Calvin.|
-|....|....|....|....|....|
-|....|....|....|
-
-Early books were printed in a smaller format, and the Sunday strips appeared in black and white. They were then reprinted, in color for the Sundays, in the three &quot;Treasuries&quot; (Essential, Authoritative, and Indispensable). The contents of Attack of the Deranged Mutant Killer Monster Snow Goons were not reprinted, and its Sunday comics were in black and white. As a result, those Sunday strips were never reprinted in color until the Complete collection was published in 2005. Every book since Snow Goons had been printed in a larger format with Sundays in color and weekday and Saturday strips larger than they appeared in most newspapers.
-
-Remaining books do contain some additional content; for instance, The Calvin and Hobbes Lazy Sunday Book contains a long watercolor Spaceman Spiff epic not seen elsewhere until Complete, and The Calvin and Hobbes Tenth Anniversary Book contains much original commentary from Watterson. Calvin and Hobbes: Sunday Pages 1985-1995 contains 36 Sunday strips in color alongside Watterson&apos;s original sketches, prepared for an exhibition at The Ohio State University Cartoon Research Library.
-
-An officially licensed children&apos;s textbook entitled [Teaching with Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Teaching_with_Calvin_and_Hobbes) ([ISBN 1878849158](https://calvinandhobbes.fandom.com/wiki/ISBN_1878849158?action=edit&amp;redlink=1)) was published in 1993. It reprints 57 comic strips comprising 5 [story arcs](https://calvinandhobbes.fandom.com/wiki/Story_arcs).
-</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="more Markdown examples" STYLE_REF="ToM_newPage" ID="ID_1249506511"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1761773516">
-<node TEXT="text with animated gif" ID="ID_1072030700"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>## How to xxxx&#xd;
-&#xd;
-Sopose this is an introductio paragraph that explains a problem and next it comes an explanation of the possible solution:&#xd;
-&#xd;
-In the following animation you can see how this can be done:&#xd;
-&#xd;
-### my animated webimage&#xd;
-&#xd;
-*(I just took any image. I think for this kind of tutorials you should include smaller ones (not so wide)) *&#xd;
-&#xd;
-![https://github.com/EdoFro/hello-world/raw/master/testFormulaNodeChange.gif](https://github.com/EdoFro/hello-world/raw/master/testFormulaNodeChange.gif)&#xd;
-</text>
-</richcontent>
-</node>
-<node TEXT="MD-ex01_03.md" ID="ID_419715138"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text># My Document
-
-## Introduction
-
-This is just a test
-
-I don`t have much more to say
-
-## List examples
-
-### Simple list
-
-1. apples
-1. bananas
-1. oranges
-1. lettuce
-1. cucumber
-1. tomatos
-1. carrots
-
-1. apples
-1. bananas
-1. oranges
-1. lettuce
-1. cucumber
-1. tomatos
-1. carrots
-
-### Structured list
-
-1. fruits
-   1. apples
-   1. bananas
-   1. oranges
-   1. tomatoes
-1. salats
-   * lettuce
-   * cucumber
-   * tomatoes
-   * carrots
-
-### List with links
-
-* links
-   * [Freeplane Homepage](https://www.freeplane.org/wiki/index.php/Home)
-   * [MarkdownHelper-icon.svg](file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper-icon.svg)
-* images
-   * ![What is Mindmapping (thumb)](https://www.freeplane.org/wiki/images/thumb/7/7b/WhatIsMindMapping.jpg/300px-WhatIsMindMapping.jpg)
-   * ![Corgi.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png)
-
-## My plain task list
-
-- [x] walk the dog
-- [x] do the dishes
-- [ ] cancer cure
-- [ ] laundry
-
-## Structured tasks lists
-
-They work the same as plain tasks lists, but they can see subtasks inside of tasks.
-
-- [ ] task 1
-- [ ] task 2
-   - [x] task 2.1
-   - [ ] task 2.2
-- [x] task 3
-   - [x] subtask 3.1
-
-## Table example
-
-|Name|this is the Age column|Badge|
-|----|:----:|----|
-|Piotr|25|![Corgi.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png)|
-|Maria|33|![Deer.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Deer.png)|
-|Alex|45|![Bear.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Bear.png)|
-
-## Code block
-
-Code: **&apos;example code&apos;**
-
-```groovy
-// example code
-// the node&apos;s details must start with a dot and then the language of the code
-
-def text = node.text
-
-def msg = &quot;the text of the selected node is ${text}&quot;
-
-ui.informationMessage(msg.toString())
-```
-
-## Text block
-
-The ![Bear.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Bear.png), the ![Corgi.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png) and the ![Deer.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Deer.png) are from **[Graphic Burger](https://graphicburger.com/)** and can be found [here](https://graphicburger.com/71-free-animal-icons/).
-
-## Comment
-
-&gt; Anything inside this node gets commented
-&gt;
-&gt; The ![Bear.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Bear.png), the ![Corgi.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png) and the ![Deer.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Deer.png) are from **[Graphic Burger](https://graphicburger.com/)** and can be found [here](https://graphicburger.com/71-free-animal-icons/).
-&gt;
-&gt;
-&gt;
-&gt; |Name|this is the Age column|Badge|
-&gt; |----|:----:|----|
-&gt; |Piotr|25|![Corgi.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png)|
-&gt; |Maria|33|![Deer.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Deer.png)|
-&gt; |Alex|45|![Bear.png](https://github.com/EdoFro/hello-world/raw/master/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Bear.png)|
-&gt;
-&gt;
-
-## Conclusions
-
-Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blablah  blah, Blah  blah blablah blablablah blablah. Blablah  blablah blablablah blah blablah blablablah blablablah blablablah.</text>
-</richcontent>
-</node>
-</node>
-</node>
-<node TEXT="html note" ID="ID_1092689747">
-<arrowlink COLOR="#cc0000" WIDTH="6" TRANSPARENCY="255" DESTINATION="ID_1287893974" MIDDLE_LABEL="Change their order &#xa;and reload the page &#xa;to see how the TOC updates" STARTINCLINATION="196.0851 pt;6.89362 pt;" ENDINCLINATION="189.19149 pt;-45.95745 pt;" STARTARROW="DEFAULT" ENDARROW="DEFAULT"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
-<node TEXT="HTML example" STYLE_REF="ToM_newPage" ID="ID_1391525027"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_774731236">
-<node TEXT="hi! this is a demo" ID="ID_968392070"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body style="font-size: 20; font-family: Calibri">
-    <h1>
-      Welcome to the <u><font color="red" face="Elephant">Tutorial-o-Matic</font></u>&nbsp;demo!!
-    </h1>
-    <p>
-      This is a <b>demo version </b>of an addon that can be used to build tutorials in <strong style="font-size: x-large; text-decoration: underline"><font size="x-large"><u>Freeplane</u></font></strong>.
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-</node>
-<node TEXT="TOC" FOLDED="true" ID="ID_1287893974">
-<node TEXT="Table of Content" STYLE_REF="ToM_newPage" ID="ID_317005214"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_313629830">
-<node TEXT="TOC example" STYLE_REF="markdownNote" ID="ID_858995451"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>**ToM** builds automatically the tutorial&apos;s table of content using the titles of each new page
-
-  
-Here is the current tutorial&apos;s TOC:</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_322671847"/>
-</node>
-</node>
-<node TEXT="Actions" ID="ID_999105259">
-<node TEXT="menu show" FOLDED="true" ID="ID_497849919">
-<node TEXT="Show menu comands" STYLE_REF="ToM_newPage" ID="ID_1893827717"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1872906921">
-<node TEXT="feature &quot;show menu&quot;" STYLE_REF="markdownNote" ID="ID_487821147"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can make that **ToM** shows where in the menu the user can find a specific command.
-
-  
-Here are some examples:</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_103528684">
-<node TEXT="Bold" ID="ID_71518855" LINK="menuitem:_BoldAction"/>
-<node TEXT="elephant" ID="ID_130921367" LINK="menuitem:_IconAction.emoji-1F418"/>
-</node>
-</node>
-<node TEXT="menu action" FOLDED="true" ID="ID_68931919">
-<node TEXT="Executing actions on selected nodes" STYLE_REF="ToM_newPage" ID="ID_651572577"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_453526600">
-<node TEXT="execute actions" ID="ID_305144913"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Here are some example on how you can apply some menu actions on the selected nodes:
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node TEXT="example with menu" STYLE_REF="ToM_menuAction" ID="ID_579985305">
-<icon BUILTIN="emoji-1F56F"/>
-<icon BUILTIN="emoji-1F5B1"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      This example shows some menu actions applied using the menus:
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      it creates a new child node and it adds an icon to it
-    </p>
-  </body>
-</html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      added icons:
-    </p>
-    <p>
-      candle: indicates it executes only one time and get disabled
-    </p>
-    <p>
-      mouse: should show the menu location
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="New child node" ID="ID_324247474" LINK="menuitem:_NewChildAction"/>
-<node TEXT="I am happy" ID="ID_1611890492" LINK="menuitem:_IconAction.ksmiletris"/>
-</node>
-<node TEXT="example with keyboard" STYLE_REF="ToM_menuAction" ID="ID_301177281">
-<icon BUILTIN="emoji-1F56F"/>
-<icon BUILTIN="emoji-2328"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      This example shows some actions applied using Hotkeys (or the menus commands):
-    </p>
-    <p>
-      
-    </p>
-    <ol>
-      <li>
-        applies BOLD to selected node
-      </li>
-      <li>
-        shows(or hides) the Filter Toolbar
-      </li>
-    </ol>
-  </body>
-</html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      keyboard icon (or no icon) indicates it should show the Hotkeys (if it hasn't a defined hotkey, then it shows the menu position)
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="Bold" ID="ID_656336114" LINK="menuitem:_BoldAction"/>
-<node TEXT="Filter toolbar" ID="ID_1230352676" LINK="menuitem:_ShowFilterToolbarAction"/>
-</node>
-<node TEXT="example muted" STYLE_REF="ToM_menuAction" ID="ID_1620605763">
-<icon BUILTIN="emoji-1F507"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      This example shows some actions applied without showing any message (muted):
-    </p>
-    <p>
-      
-    </p>
-    <ul>
-      <li>
-        shows/hides the &quot;map overview&quot; window
-      </li>
-    </ul>
-  </body>
-</html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      muted icon indicates it should execute the command without showing menus or hotkeys
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="Map overview" ID="ID_731370847" LINK="menuitem:_ToggleMapOverviewAction"/>
-</node>
-</node>
-<node TEXT="goto" ID="ID_484246232">
-<node TEXT="Linking other Tutorial&apos;s pages" STYLE_REF="ToM_newPage" ID="ID_1997494948"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1158810723">
-<node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_1509887457"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add  buttons to jump to other tutorial pages
-
-  
-Here are two examples with option &quot;goBack&quot; selected 
-that adds a &quot;return panel&quot; to the visited page:</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="GOTO" STYLE_REF="ToM_goto" ID="ID_907987260">
-<icon BUILTIN="emoji-1F519"/>
-<node TEXT="HTML example" STYLE_REF="markdownNote" ID="ID_30588849" LINK="#ID_1391525027"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      To jump to the **'HTML example'** page click on the button bellow:
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="TOC in Simple Demo" STYLE_REF="markdownNote" ID="ID_1473049471" LINK="#ID_374851820"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can also jump to another tutorial&apos;s page.
-
-  
-To jump to the **&apos;SimpleDemo&apos;s TOC page&apos;** page click on the button bellow:</text>
-</richcontent>
-</node>
-<node TEXT="Current features" ID="ID_1694264341" LINK="#ID_1118821725"/>
-<node TEXT="HowToTutorial-o-Matic.mm" ID="ID_1220341838" LINK="file:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm"/>
-<node TEXT="tut intro" ID="ID_1111859697" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/Tutorial-o-Matic%20Intro.mm#ID_1522236279"/>
-<node TEXT="history.md" ID="ID_905757638" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/history.md"/>
-</node>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_105473316">
-<node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_180933093"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>  
-Here is the same first example without option &quot;goBack&quot; selected:
-</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="GOTO" STYLE_REF="ToM_goto" ID="ID_870922428">
-<node TEXT="HTML example" STYLE_REF="markdownNote" ID="ID_1923396828" LINK="#ID_1391525027"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      To jump to the **'HTML example'** page click on the button bellow:
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-</node>
-<node TEXT="openTutPage" ID="ID_465839936">
-<node TEXT="Linking other Tutorial&apos;s pages (same or other maps)" STYLE_REF="ToM_newPage" ID="ID_1198131451"/>
-<node TEXT="ToM_openTutPage" STYLE_REF="ToM_openTutPage" ID="ID_1482753376">
-<node TEXT="HTML example" STYLE_REF="markdownNote" ID="ID_1859838036" LINK="#ID_1391525027"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      To jump to the **'HTML example'** page click on the button bellow:
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="TOC in Simple Demo" STYLE_REF="markdownNote" ID="ID_20134486" LINK="#ID_374851820"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can also jump to another tutorial&apos;s page.
-
-  
-To jump to the **&apos;SimpleDemo&apos;s TOC page&apos;** page click on the button bellow:</text>
-</richcontent>
-</node>
-<node TEXT="Current features" ID="ID_307404226" LINK="#ID_1118821725"/>
-<node TEXT="HowToTutorial-o-Matic.mm" ID="ID_9460935" LINK="file:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm">
-<node TEXT="Change this link to a another demo tutorial map" STYLE_REF="nextTask" ID="ID_1862638121"/>
-</node>
-<node TEXT="tut intro" ID="ID_754880983" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/Tutorial-o-Matic%20Intro.mm#ID_1522236279">
-<node TEXT="Change this link to a another demo tutorial map" STYLE_REF="nextTask" ID="ID_769301832"/>
-</node>
-<node TEXT="history.md" ID="ID_713918886" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/history.md"/>
-<node TEXT="Add actions to a tutorial" ID="ID_444821637" LINK="menuitem:_addons.tutorialOMatic.openTutorialPageFromLink_on_single_node">
-<attribute_layout NAME_WIDTH="93.44681 pt" VALUE_WIDTH="541.5319 pt"/>
-<attribute NAME="ToM_LinkToPage" VALUE="tutorial:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm#ID_1128437346" OBJECT="java.net.URI|tutorial:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm#ID_1128437346"/>
-<node TEXT="Change this link to a another demo tutorial map" STYLE_REF="nextTask" ID="ID_81424380"/>
-</node>
-</node>
-</node>
-<node TEXT="example scripts" FOLDED="true" ID="ID_50552230">
-<font NAME="SansSerif"/>
-<node TEXT="page 1" ID="ID_572001331">
-<node TEXT="Executing Scripts on selected nodes" STYLE_REF="ToM_newPage" ID="ID_1109424992"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1966749824">
-<node TEXT="execute actions" STYLE_REF="markdownNote" ID="ID_105315653"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Here are some examples of **groovy scripts** as part of the tutorial
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="one time vs multiple times execution" STYLE_REF="markdownNote" ID="ID_825444908"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>The first example shows two times the following groovy script:
-</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1532900946">
-<font NAME="SansSerif"/>
-<node TEXT="Groovy script: reverse node&apos;s text" ID="ID_1885028087">
-<icon BUILTIN="emoji-1F453"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      .groovy
-    </p>
-  </body>
-</html></richcontent>
-<attribute NAME="script1" VALUE="def texto = node.text&#xa;node.text = texto.reverse()"/>
-<node TEXT="the glasses icon indicates that the groovy script is to be seen, but it can&apos;t be executed (no button)" ID="ID_1213214637"/>
-</node>
-</node>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_435897808">
-<node TEXT="one time vs multiple times execution" STYLE_REF="markdownNote" ID="ID_1820999570"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>This script will reverse the text of the selected node.
-
-  
-The difference between both scripts is that after clicking the button, the first one will disable itself (one time execution) and the second button will stay enabled (for multiple time uses)
-
-  
-Select a node with a text and try them.
-</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1638935334">
-<icon BUILTIN="emoji-1F56F"/>
-<font NAME="SansSerif"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      candle indicates that executes only one time (then button gets disabled)
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="Groovy script: reverse node&apos;s text" ID="ID_944865147">
-<icon BUILTIN="emoji-1F50D"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      .groovy
-    </p>
-    <p>
-      magnifier icon indicates that the script code must be shown in the tutorial
-    </p>
-  </body>
-</html></richcontent>
-<attribute NAME="script1" VALUE="def texto = node.text&#xa;node.text = texto.reverse()"/>
-</node>
-</node>
-<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1280809414">
-<font NAME="SansSerif"/>
-<node TEXT="Groovy script: reverse node&apos;s text" ID="ID_1364715204">
-<icon BUILTIN="emoji-1F50D"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      .groovy
-    </p>
-  </body>
-</html></richcontent>
-<attribute NAME="script1" VALUE="def texto = node.text&#xa;node.text = texto.reverse()"/>
-</node>
-</node>
-</node>
-<node TEXT="page 2" ID="ID_472679117">
-<font NAME="SansSerif"/>
-<node TEXT="next page" STYLE_REF="ToM_nextPage" ID="ID_1567350639">
-<node TEXT="nodes with style nextPage indicates where a new page starts, but don´t define a new title. It means that the new page is part of the previous section." ID="ID_279341226"/>
-</node>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_651902817">
-<node TEXT="showing the code" STYLE_REF="markdownNote" ID="ID_146747072"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>This example shows also two times the same groovy script.
-
-  
-This script will show a dialog and ask the user to pick an option and show it. That&apos;s all.
-
-  
-The difference between both panels is that one shows the groovy script and the other doesn&apos;t.
-
-  
-Try them.
-</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1076249595">
-<font NAME="SansSerif"/>
-<node TEXT="displaying an optionPane in groovy" ID="ID_14983481">
-<icon BUILTIN="emoji-1F50D"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      .groovy
-    </p>
-    <p>
-      magnifier icon indicates that the script code must be shown in the tutorial
-    </p>
-  </body>
-</html></richcontent>
-<attribute NAME="script1" VALUE="import groovy.swing.SwingBuilder&#xa;&#xa;import javax.swing.*&#xa;&#xa;&#xa;def swingBuilder = new SwingBuilder()&#xa;def options = [&apos;Kung Fu Panda&apos;, &apos;Madagascar&apos;, &apos;Shrek&apos;, &apos;How to Train Your Dragon&apos;,&apos;The Croods&apos;,&apos;Trolls&apos;,&apos;The Boss Baby&apos;].sort()&#xa;def pane = swingBuilder.optionPane(&#xa;                            message:&apos;Which Dreamworks movie franchise like you most: &apos;,&#xa;                            selectionValues:options,&#xa;                            optionType:JOptionPane.CLOSED_OPTION&#xa;                        )&#xa;def dialog = pane.createDialog(ui.frame, &apos;Tutorial-o-Matic&apos;)&#xa;dialog.show()&#xa;&#xa;ui.informationMessage(&quot;the selected string was: &apos;${pane.inputValue}&apos;&quot;.toString())"/>
-</node>
-<node TEXT="displaying an optionPane in groovy" ID="ID_142016258"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      .groovy
-    </p>
-  </body>
-</html></richcontent>
-<attribute NAME="script1" VALUE="import groovy.swing.SwingBuilder&#xa;&#xa;import javax.swing.*&#xa;&#xa;&#xa;def swingBuilder = new SwingBuilder()&#xa;def options = [&apos;Kung Fu Panda&apos;, &apos;Madagascar&apos;, &apos;Shrek&apos;, &apos;How to Train Your Dragon&apos;,&apos;The Croods&apos;,&apos;Trolls&apos;,&apos;The Boss Baby&apos;].sort()&#xa;def pane = swingBuilder.optionPane(&#xa;                            message:&apos;Which Dreamworks movie franchise like you most: &apos;,&#xa;                            selectionValues:options,&#xa;                            optionType:JOptionPane.CLOSED_OPTION&#xa;                        )&#xa;def dialog = pane.createDialog(ui.frame, &apos;Tutorial-o-Matic&apos;)&#xa;dialog.show()&#xa;&#xa;ui.informationMessage(&quot;the selected string was: &apos;${pane.inputValue}&apos;&quot;.toString())"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="copy/paste" FOLDED="true" ID="ID_1094483965">
-<node TEXT="Inserting example nodes" STYLE_REF="ToM_newPage" ID="ID_511628636"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_9035295">
-<node TEXT="inserting nodes" STYLE_REF="markdownNote" ID="ID_32974307"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>When building a tutorial you can add nodes that the user can insert in his/her own map.&#xd;
-&#xd;
-  &#xd;
-Select a node in your map and click the button to insert a branch containing the &quot;Madagascar characters&quot;.</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="insert Madagascar characters" STYLE_REF="ToM_copy" ID="ID_594844887">
-<node TEXT="Madagascar" ID="ID_1938489976">
-<node TEXT="main" ID="ID_1116200239">
-<node TEXT="Alex" ID="ID_1713074567"/>
-<node TEXT="Marty the Zebra" ID="ID_1090784618"/>
-<node TEXT="Melman the Giraffe" ID="ID_1149630126"/>
-<node TEXT="Gloria the Hippo" ID="ID_1623227187"/>
-</node>
-<node TEXT="Penguins" ID="ID_796806180">
-<node TEXT="Skipper" ID="ID_1891351713"/>
-<node TEXT="Private" ID="ID_817305983"/>
-<node TEXT="Kowalski" ID="ID_414651683"/>
-<node TEXT="Rico" ID="ID_1166475951"/>
-</node>
-<node TEXT="Lemurs" ID="ID_77212927">
-<node TEXT="Julien" ID="ID_1588546276"/>
-<node TEXT="Maurice" ID="ID_36310164"/>
-<node TEXT="Mort" ID="ID_1910496616"/>
-<node TEXT="Willie" ID="ID_1660745815"/>
-</node>
-<node TEXT="Antagonists" ID="ID_982868346">
-<node TEXT="Fossa" ID="ID_18706179"/>
-</node>
-<node TEXT="Others" ID="ID_1703138904">
-<node TEXT="Mason" ID="ID_1789336025"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="select" FOLDED="true" ID="ID_1935443905">
-<node TEXT="Selecting example nodes" STYLE_REF="ToM_newPage" ID="ID_1908012538"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1065287558">
-<node TEXT="selecting nodes" STYLE_REF="markdownNote" ID="ID_615540997"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>After inserting an example branch, you can have a button that selects the nodes that you want so the user can easily go further with the tutorial.&#xd;
-&#xd;
-&#xd;
-In this example I added a button that selects the nodes &quot;Alex&quot;, &quot;Kowalski&quot; and &quot;Julien&quot;.&#xd;
-&#xd;
-Click the button to see how the selection changes:&#xd;
-</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="select" STYLE_REF="ToM_select" ID="ID_628254330"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      to indicate which are the nodes you want to select just paste clones of them here as childs
-    </p>
-  </body>
-</html></richcontent>
-<node ID="ID_1375639542" CONTENT_ID="ID_1713074567"/>
-<node ID="ID_1328739290" CONTENT_ID="ID_414651683"/>
-<node ID="ID_1277707261" CONTENT_ID="ID_1588546276"/>
-</node>
-<node TEXT="example muted" STYLE_REF="ToM_menuAction" ID="ID_382731363">
-<icon BUILTIN="emoji-1F507"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Now we can apply them some command, like
-    </p>
-    <ul>
-      <li>
-        &quot;Blinking node&quot; + &quot;Bold&quot;
-      </li>
-    </ul>
-    <p>
-      click again to turn it on/off
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="Blinking node" ID="ID_610073096" LINK="menuitem:_BlinkingNodeHookAction"/>
-<node TEXT="Bold" ID="ID_1616783604" LINK="menuitem:_BoldAction"/>
-</node>
-</node>
-<node TEXT="openMap" ID="ID_1262554737">
-<node TEXT="Open another Mindmap" STYLE_REF="ToM_newPage" ID="ID_290935296"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1077909247">
-<node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_162869244"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add a button to open other maps needed for the tutorial.
-
-Currently that map must be in the same directory as the tutorial map
-  
-  
-**Open the ExercisingMap.mm** by clicking the following button
-</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="openMap" STYLE_REF="ToM_openMap" ID="ID_1521222289">
-<node TEXT="ExercisingMap.mm" ID="ID_409802639"/>
-</node>
-</node>
-<node TEXT="showNode" ID="ID_1112845607">
-<node TEXT="Show specific node in the same or another MindMap" STYLE_REF="ToM_newPage" ID="ID_834518884"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_547205938">
-<node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_1625216932"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add a button to show nodes in the same or in another MindMaps.
-
-It may be any node. It doesn&apos;t need to be in a tutorial.
-
-</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="showNode" STYLE_REF="ToM_showNode" ID="ID_1798961377">
-<node TEXT="los datos de mami" ID="ID_632024907" LINK="file:/C:/Users/Edo/Documents/Mochila/Freeplane/Mochila.mm#ID_632024907"/>
-</node>
-</node>
-</node>
-<node TEXT="inspect" ID="ID_1583607778">
-<node TEXT="Inspecting the tutorial map" STYLE_REF="ToM_newPage" ID="ID_864051170"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1060242433">
-<node TEXT="inspecting" STYLE_REF="markdownNote" ID="ID_1135096340"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>I added a button to directly go to the map that contains the tutorial information and select the node that defines the current page.  
-  
-Click the following button to go to the node that has this page information:
-</text>
-</richcontent>
-</node>
-</node>
-<node TEXT="inspect" STYLE_REF="ToM_openTutMap" ID="ID_1484510128"/>
-</node>
-<node TEXT="Bye" FOLDED="true" ID="ID_228475519">
-<node TEXT="Bye!!" STYLE_REF="ToM_newPage" ID="ID_1454993384"/>
-<node TEXT="text" STYLE_REF="ToM_note" ID="ID_1876121346">
-<node TEXT="bye" ID="ID_614851129"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body style="font-size: 20; font-family: Calibri">
-    <p>
-      Ok. that was the features demo.
-    </p>
-    <p>
-      I hope you enjoyed it. bye!
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      edo
-    </p>
-  </body>
-</html></richcontent>
+<node ID="ID_2888752" TREE_ID="ID_881504878">
+<node ID="ID_791969447" TREE_ID="ID_1317588213">
+<node ID="ID_615110223" TREE_ID="ID_86483344">
+<node ID="ID_963032450" TREE_ID="ID_142675858"/>
+</node>
+<node ID="ID_137035593" TREE_ID="ID_857279432">
+<node ID="ID_382044586" TREE_ID="ID_1664601777"/>
+</node>
+</node>
+<node ID="ID_1980982395" TREE_ID="ID_1019945079">
+<node ID="ID_1010028624" TREE_ID="ID_1647218309">
+<node ID="ID_921291072" TREE_ID="ID_253802449"/>
+<node ID="ID_1280186470" TREE_ID="ID_550789542">
+<node ID="ID_953339948" TREE_ID="ID_1648208570"/>
+</node>
+<node ID="ID_1249506511" TREE_ID="ID_970162966"/>
+<node ID="ID_1761773516" TREE_ID="ID_1420937665">
+<node ID="ID_1072030700" TREE_ID="ID_162164353"/>
+<node ID="ID_419715138" TREE_ID="ID_1623105048"/>
+</node>
+</node>
+<node ID="ID_1092689747" TREE_ID="ID_610489636">
+<node ID="ID_1391525027" TREE_ID="ID_106260080"/>
+<node ID="ID_774731236" TREE_ID="ID_879389054">
+<node ID="ID_968392070" TREE_ID="ID_468182203"/>
+</node>
+</node>
+<node ID="ID_1287893974" TREE_ID="ID_1875993485">
+<node ID="ID_317005214" TREE_ID="ID_1568365816"/>
+<node ID="ID_313629830" TREE_ID="ID_1115323619">
+<node ID="ID_858995451" TREE_ID="ID_1532424984"/>
+</node>
+<node ID="ID_322671847" TREE_ID="ID_186879075"/>
+</node>
+</node>
+<node ID="ID_999105259" TREE_ID="ID_212855247">
+<node ID="ID_497849919" TREE_ID="ID_1349603898">
+<node ID="ID_1893827717" TREE_ID="ID_401463049"/>
+<node ID="ID_1872906921" TREE_ID="ID_446911196">
+<node ID="ID_487821147" TREE_ID="ID_1302793222"/>
+</node>
+<node ID="ID_103528684" TREE_ID="ID_857811179">
+<node ID="ID_71518855" TREE_ID="ID_312281538"/>
+<node ID="ID_130921367" TREE_ID="ID_1156977146"/>
+</node>
+</node>
+<node ID="ID_68931919" TREE_ID="ID_1680868625">
+<node ID="ID_651572577" TREE_ID="ID_1527841582"/>
+<node ID="ID_453526600" TREE_ID="ID_349781308">
+<node ID="ID_305144913" TREE_ID="ID_671264621"/>
+</node>
+<node ID="ID_579985305" TREE_ID="ID_1234983337">
+<node ID="ID_324247474" TREE_ID="ID_572971566"/>
+<node ID="ID_1611890492" TREE_ID="ID_95525811"/>
+</node>
+<node ID="ID_301177281" TREE_ID="ID_39633251">
+<node ID="ID_656336114" TREE_ID="ID_1725459151"/>
+<node ID="ID_1230352676" TREE_ID="ID_287372459"/>
+</node>
+<node ID="ID_1620605763" TREE_ID="ID_1992752537">
+<node ID="ID_731370847" TREE_ID="ID_1454425279"/>
+</node>
+</node>
+<node ID="ID_484246232" TREE_ID="ID_687440488">
+<node ID="ID_1997494948" TREE_ID="ID_633627771"/>
+<node ID="ID_1158810723" TREE_ID="ID_1515905195">
+<node ID="ID_1509887457" TREE_ID="ID_1293398576"/>
+</node>
+<node ID="ID_907987260" TREE_ID="ID_618422826">
+<node ID="ID_30588849" TREE_ID="ID_1982781285"/>
+<node ID="ID_1473049471" TREE_ID="ID_523160596"/>
+<node ID="ID_1694264341" TREE_ID="ID_1067522524"/>
+<node ID="ID_1220341838" TREE_ID="ID_1201372687"/>
+<node ID="ID_1111859697" TREE_ID="ID_478610666"/>
+<node ID="ID_905757638" TREE_ID="ID_793859711"/>
+</node>
+<node ID="ID_105473316" TREE_ID="ID_1246717066">
+<node ID="ID_180933093" TREE_ID="ID_538787874"/>
+</node>
+<node ID="ID_870922428" TREE_ID="ID_1282839571">
+<node ID="ID_1923396828" TREE_ID="ID_1276808846"/>
+</node>
+</node>
+<node ID="ID_465839936" TREE_ID="ID_17985442">
+<node ID="ID_1198131451" TREE_ID="ID_1996959489"/>
+<node ID="ID_1482753376" TREE_ID="ID_1980480329">
+<node ID="ID_1859838036" TREE_ID="ID_616057911"/>
+<node ID="ID_20134486" TREE_ID="ID_1475933414"/>
+<node ID="ID_307404226" TREE_ID="ID_1891787602"/>
+<node ID="ID_9460935" TREE_ID="ID_1368779302">
+<node ID="ID_1862638121" TREE_ID="ID_1680307402"/>
+</node>
+<node ID="ID_754880983" TREE_ID="ID_291335786">
+<node ID="ID_769301832" TREE_ID="ID_948480581"/>
+</node>
+<node ID="ID_713918886" TREE_ID="ID_1078210816"/>
+<node ID="ID_444821637" TREE_ID="ID_1903955029">
+<node ID="ID_81424380" TREE_ID="ID_103873734"/>
+</node>
+</node>
+</node>
+<node ID="ID_50552230" TREE_ID="ID_1202494869">
+<node ID="ID_572001331" TREE_ID="ID_862191583">
+<node ID="ID_1109424992" TREE_ID="ID_1317437011"/>
+<node ID="ID_1966749824" TREE_ID="ID_346328137">
+<node ID="ID_105315653" TREE_ID="ID_1039608324"/>
+<node ID="ID_825444908" TREE_ID="ID_588384189"/>
+</node>
+<node ID="ID_1532900946" TREE_ID="ID_305226009">
+<node ID="ID_1885028087" TREE_ID="ID_399360252">
+<node ID="ID_1213214637" TREE_ID="ID_515045348"/>
+</node>
+</node>
+<node ID="ID_435897808" TREE_ID="ID_1024635600">
+<node ID="ID_1820999570" TREE_ID="ID_629545943"/>
+</node>
+<node ID="ID_1638935334" TREE_ID="ID_633338177">
+<node ID="ID_944865147" TREE_ID="ID_1745703012"/>
+</node>
+<node ID="ID_1280809414" TREE_ID="ID_481722825">
+<node ID="ID_1364715204" TREE_ID="ID_1715154607"/>
+</node>
+</node>
+<node ID="ID_472679117" TREE_ID="ID_1093551225">
+<node ID="ID_1567350639" TREE_ID="ID_779808052">
+<node ID="ID_279341226" TREE_ID="ID_1851542335"/>
+</node>
+<node ID="ID_651902817" TREE_ID="ID_1402632117">
+<node ID="ID_146747072" TREE_ID="ID_456805126"/>
+</node>
+<node ID="ID_1076249595" TREE_ID="ID_506169828">
+<node ID="ID_14983481" TREE_ID="ID_1966457372"/>
+<node ID="ID_142016258" TREE_ID="ID_1484801629"/>
+</node>
+</node>
+</node>
+<node ID="ID_1094483965" TREE_ID="ID_1302213066">
+<node ID="ID_511628636" TREE_ID="ID_1777948634"/>
+<node ID="ID_9035295" TREE_ID="ID_1333325734">
+<node ID="ID_32974307" TREE_ID="ID_1442300729"/>
+</node>
+<node ID="ID_594844887" TREE_ID="ID_337428998">
+<node ID="ID_1938489976" TREE_ID="ID_1334587546">
+<node ID="ID_1116200239" TREE_ID="ID_1258011434">
+<node ID="ID_1713074567" TREE_ID="ID_1708368534"/>
+<node ID="ID_1090784618" TREE_ID="ID_1928587181"/>
+<node ID="ID_1149630126" TREE_ID="ID_958662254"/>
+<node ID="ID_1623227187" TREE_ID="ID_355688105"/>
+</node>
+<node ID="ID_796806180" TREE_ID="ID_681955891">
+<node ID="ID_1891351713" TREE_ID="ID_798650562"/>
+<node ID="ID_817305983" TREE_ID="ID_1281976680"/>
+<node ID="ID_414651683" TREE_ID="ID_331678206"/>
+<node ID="ID_1166475951" TREE_ID="ID_91348109"/>
+</node>
+<node ID="ID_77212927" TREE_ID="ID_1124144407">
+<node ID="ID_1588546276" TREE_ID="ID_1873609454"/>
+<node ID="ID_36310164" TREE_ID="ID_126438584"/>
+<node ID="ID_1910496616" TREE_ID="ID_444905973"/>
+<node ID="ID_1660745815" TREE_ID="ID_380020870"/>
+</node>
+<node ID="ID_982868346" TREE_ID="ID_846788488">
+<node ID="ID_18706179" TREE_ID="ID_482000405"/>
+</node>
+<node ID="ID_1703138904" TREE_ID="ID_630276169">
+<node ID="ID_1789336025" TREE_ID="ID_1311660765"/>
+</node>
+</node>
+</node>
+</node>
+<node ID="ID_1935443905" TREE_ID="ID_705451325">
+<node ID="ID_1908012538" TREE_ID="ID_886846632"/>
+<node ID="ID_1065287558" TREE_ID="ID_1463807409">
+<node ID="ID_615540997" TREE_ID="ID_1452131324"/>
+</node>
+<node ID="ID_628254330" TREE_ID="ID_1463853043">
+<node ID="ID_1375639542" CONTENT_ID="ID_1708368534"/>
+<node ID="ID_1328739290" CONTENT_ID="ID_331678206"/>
+<node ID="ID_1277707261" CONTENT_ID="ID_1873609454"/>
+</node>
+<node ID="ID_382731363" TREE_ID="ID_554207690">
+<node ID="ID_610073096" TREE_ID="ID_894633887"/>
+<node ID="ID_1616783604" TREE_ID="ID_434347462"/>
+</node>
+</node>
+<node ID="ID_1262554737" TREE_ID="ID_30678558">
+<node ID="ID_290935296" TREE_ID="ID_1702966235"/>
+<node ID="ID_1077909247" TREE_ID="ID_354845138">
+<node ID="ID_162869244" TREE_ID="ID_1053273923"/>
+</node>
+<node ID="ID_1521222289" TREE_ID="ID_1098374020">
+<node ID="ID_409802639" TREE_ID="ID_22547532"/>
+</node>
+</node>
+<node ID="ID_1112845607" TREE_ID="ID_1933123138">
+<node ID="ID_834518884" TREE_ID="ID_523894547"/>
+<node ID="ID_547205938" TREE_ID="ID_1491064272">
+<node ID="ID_1625216932" TREE_ID="ID_1342797326"/>
+</node>
+<node ID="ID_1798961377" TREE_ID="ID_1070420463">
+<node ID="ID_632024907" TREE_ID="ID_577940079">
+<node ID="ID_772463524" TREE_ID="ID_1041324499"/>
+</node>
+</node>
+</node>
+</node>
+<node ID="ID_1583607778" TREE_ID="ID_896909962">
+<node ID="ID_864051170" TREE_ID="ID_849438176"/>
+<node ID="ID_1060242433" TREE_ID="ID_246665400">
+<node ID="ID_1135096340" TREE_ID="ID_534382608"/>
+</node>
+<node ID="ID_1484510128" TREE_ID="ID_1531417724"/>
+</node>
+<node ID="ID_228475519" TREE_ID="ID_623257946">
+<node ID="ID_1454993384" TREE_ID="ID_25494712"/>
+<node ID="ID_1876121346" TREE_ID="ID_945502750">
+<node ID="ID_614851129" TREE_ID="ID_240586433"/>
 </node>
 </node>
 </node>
 </node>
 <node TEXT="An empty tutorial" STYLE_REF="ToM-Tutorial" FOLDED="true" POSITION="right" ID="ID_346385320">
 <font NAME="SansSerif"/>
-<node TEXT="Madagascar" FOLDED="true" ID="ID_581007689">
+<node TEXT="Madagascar" ID="ID_581007689">
 <edge COLOR="#ff0000"/>
 <node TEXT="main" ID="ID_1056414760">
 <node TEXT="Alex" ID="ID_1323247747">

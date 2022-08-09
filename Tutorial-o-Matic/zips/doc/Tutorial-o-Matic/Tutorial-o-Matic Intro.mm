@@ -14,7 +14,7 @@
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_602083445" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#3c3836" BACKGROUND_COLOR="#fbf1c7" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="8 pt" SHAPE_VERTICAL_MARGIN="5 pt" NUMBERED="false" FORMAT="STANDARD_FORMAT" TEXT_ALIGN="DEFAULT" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="true" BORDER_COLOR="#f0f0f0" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="3 pt" MAX_WIDTH="10 cm" MIN_WIDTH="0 cm">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#a89984" WIDTH="2" TRANSPARENCY="255" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_602083445" STARTINCLINATION="102.6383 pt;-4.59574 pt;" ENDINCLINATION="102.6383 pt;3.06383 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#a89984" WIDTH="2" TRANSPARENCY="255" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_602083445" STARTINCLINATION="102.6383 pt;-3.06383 pt;" ENDINCLINATION="102.6383 pt;3.06383 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="SansSerif" SIZE="11" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="bezier" COLOR="#93a1a1" WIDTH="3" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -114,27 +114,6 @@
 <icon BUILTIN="emoji-1F4D6"/>
 <cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
-<stylenode TEXT="nextTask" BACKGROUND_COLOR="#ffff33">
-<icon BUILTIN="yes"/>
-<icon BUILTIN="unchecked"/>
-</stylenode>
-<stylenode TEXT="pendingTask" BACKGROUND_COLOR="#99ffff">
-<icon BUILTIN="unchecked"/>
-</stylenode>
-<stylenode TEXT="completedTask" COLOR="#333333" BACKGROUND_COLOR="#cccccc">
-<icon BUILTIN="checked"/>
-<font ITALIC="true"/>
-</stylenode>
-<stylenode TEXT="discardedTask" COLOR="#666666" BACKGROUND_COLOR="#cccccc">
-<icon BUILTIN="Descartado"/>
-<font ITALIC="true"/>
-</stylenode>
-<stylenode TEXT="containsNextTasks" BACKGROUND_COLOR="#eaea86">
-<icon BUILTIN="emoji-1F7E5"/>
-</stylenode>
-<stylenode TEXT="containsPendingTasks" BACKGROUND_COLOR="#b5d7d7">
-<icon BUILTIN="emoji-23F9"/>
-</stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#fdf6e3" BACKGROUND_COLOR="#282828" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="10 pt" BORDER_WIDTH="3.1 px" BORDER_COLOR_LIKE_EDGE="true" BORDER_COLOR="#2c2b29" BORDER_DASH_LIKE_EDGE="true">
@@ -178,10 +157,8 @@
 <attribute_layout NAME_WIDTH="81.75 pt" VALUE_WIDTH="83.25 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE="Tutorial-o-Matic"/>
 <node TEXT="Introduction" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_839819820">
-<icon BUILTIN="emoji-1F58D"/>
 <attribute_layout NAME_WIDTH="91.5 pt" VALUE_WIDTH="132 pt"/>
-<node TEXT="greetings" ID="ID_26985145">
-<node TEXT="Welcome to Tutorial-o-Matic !!" STYLE_REF="ToM_newPage" ID="ID_1522236279"/>
+<node TEXT="Welcome to Tutorial-o-Matic !!" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1522236279">
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_365713608">
 <node TEXT="Greetings" ID="ID_1402723528">
 <icon BUILTIN="emoji-1F4D5"/>
@@ -232,6 +209,30 @@
 </html>
 </richcontent>
 </node>
+<node TEXT="Markdown document.md" ID="ID_1284799224">
+<icon BUILTIN="emoji-1F4D5"/>
+<icon BUILTIN="emoji-1F4D5"/>
+<icon BUILTIN="emoji-1F4D5"/>
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Attention:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## I highly recommend to start with the &quot;**Step by Step**&quot; tutorials
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 <node TEXT="Markdown document.md" ID="ID_1968204511">
 <icon BUILTIN="emoji-1F4D5"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
@@ -258,19 +259,17 @@
     <p>
       
     </p>
-    <p>
-      ----
-    </p>
-    <p>
-      
-    </p>
   </body>
 </html>
 </richcontent>
 </node>
 </node>
+<node TEXT="TOC" STYLE_REF="ToM_TOC" ID="ID_1285573962"/>
 </node>
-<node TEXT="about the tutorials" ID="ID_518514585">
+<node TEXT="ToM add-on Tutorials" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_1367198030">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_213116655">
+<node ID="ID_1645954787" TREE_ID="ID_1284799224"/>
+</node>
 <node TEXT="open Tutorial page" STYLE_REF="ToM_openTutPage" ID="ID_1175739617">
 <node ID="ID_1051131428" LINK="Tutorial-o-MaticStepByStep.mm">
 <icon BUILTIN="emoji-1F4D5"/>
@@ -318,43 +317,7 @@
       1. a tutorial with multiple pages
     </p>
     <p>
-      1. adding acctions
-    </p>
-    <p>
-      
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Tutorial 2" ID="ID_1354819536">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Tutorial 2
-    </p>
-    <p>
-      
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="Tutorial 3" ID="ID_96154856">
-<icon BUILTIN="emoji-1F4D5"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Tutorial 3
+      1. adding acctions (pending)
     </p>
     <p>
       
@@ -376,7 +339,7 @@
       '<b>How to ToM</b>'
     </p>
     <p style="text-align: center">
-      panel
+      guide
     </p>
   </body>
 </html>
@@ -412,6 +375,62 @@
 </html>
 </richcontent>
 </node>
+<node TEXT="Tutorial 2" ID="ID_1354819536">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Tutorial 2
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="ToM Demos" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_944703234">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_226337772">
+<node ID="ID_786340916" TREE_ID="ID_1284799224"/>
+</node>
+<node TEXT="open Tutorial page" STYLE_REF="ToM_openTutPage" ID="ID_100315550">
+<node TEXT="SimpleTutorialSample.mm" ID="ID_205162521" LINK="SimpleTutorialSample.mm">
+<icon BUILTIN="emoji-1F4D5"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Tutorial demos
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      This file showcases the features of Tutorial-o-Matic
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="ToM add-on commands" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_14515417">
+<node TEXT="text" STYLE_REF="ToM_note" ID="ID_566483182">
+<node ID="ID_1514874639" TREE_ID="ID_1284799224"/>
+</node>
+<node TEXT="open Tutorial page" STYLE_REF="ToM_openTutPage" ID="ID_597756100">
 <node ID="ID_1769844741" LINK="Tutorial-o-MaticCommands.mm">
 <icon BUILTIN="emoji-1F4D5"/>
 <richcontent TYPE="NODE">

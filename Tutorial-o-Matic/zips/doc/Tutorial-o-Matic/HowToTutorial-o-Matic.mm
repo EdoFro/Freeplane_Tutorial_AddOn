@@ -116,27 +116,6 @@ code {
 <icon BUILTIN="emoji-1F4D6"/>
 <cloud COLOR="#f9f9b9" SHAPE="ROUND_RECT"/>
 </stylenode>
-<stylenode TEXT="nextTask" BACKGROUND_COLOR="#ffff33">
-<icon BUILTIN="yes"/>
-<icon BUILTIN="unchecked"/>
-</stylenode>
-<stylenode TEXT="pendingTask" BACKGROUND_COLOR="#99ffff">
-<icon BUILTIN="unchecked"/>
-</stylenode>
-<stylenode TEXT="completedTask" COLOR="#333333" BACKGROUND_COLOR="#cccccc">
-<icon BUILTIN="checked"/>
-<font ITALIC="true"/>
-</stylenode>
-<stylenode TEXT="discardedTask" COLOR="#666666" BACKGROUND_COLOR="#cccccc">
-<icon BUILTIN="Descartado"/>
-<font ITALIC="true"/>
-</stylenode>
-<stylenode TEXT="containsNextTasks" BACKGROUND_COLOR="#eaea86">
-<icon BUILTIN="emoji-1F7E5"/>
-</stylenode>
-<stylenode TEXT="containsPendingTasks" BACKGROUND_COLOR="#b5d7d7">
-<icon BUILTIN="emoji-23F9"/>
-</stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" ID="ID_1618325545" COLOR="#000000" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 pt" SHAPE_VERTICAL_MARGIN="10 pt" UNIFORM_SHAPE="true" MAX_WIDTH="4 cm" MIN_WIDTH="1 cm">
@@ -168,7 +147,6 @@ code {
 <attribute_layout NAME_WIDTH="86.25 pt" VALUE_WIDTH="87 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE="ToM How to"/>
 <node TEXT="Introduction" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_839819820">
-<icon BUILTIN="emoji-1F58D"/>
 <attribute_layout NAME_WIDTH="81.75 pt" VALUE_WIDTH="83.25 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE="ToM How to"/>
 <node TEXT="greetings" ID="ID_26985145">
@@ -251,12 +229,11 @@ code {
 </node>
 </node>
 <node TEXT="How to create a tutorial" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_899848243">
-<icon BUILTIN="emoji-1F58D"/>
 <font NAME="SansSerif"/>
 <attribute_layout NAME_WIDTH="81.75 pt" VALUE_WIDTH="89.25 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE=" ToM - How to (1)"/>
 <node TEXT="temas" ID="ID_1725860032">
-<node TEXT="General explanation" STYLE_REF="ToM_newPage" ID="ID_224410103">
+<node TEXT="General explanation" STYLE_REF="ToM_newPage" FOLDED="true" ID="ID_224410103">
 <node TEXT="text" STYLE_REF="ToM_note" ID="ID_581981021">
 <node TEXT="general..." ID="ID_986725795">
 <icon BUILTIN="emoji-1F4D5"/>
@@ -342,16 +319,16 @@ code {
       
     </p>
     <p>
-      * see where in Freeplane's menu you can find the command to apply that style
+      - see where in Freeplane's menu you can find the command to apply that style
     </p>
     <p>
-      * apply the style directly to the currently selected node
+      - apply the style directly to the currently selected node
     </p>
     <p>
-      * insert a new node with that style as a child of the currently selected node.&lt;br&gt;The node has no text and it's ready to type in it.
+      - insert a new node with that style as a child of the currently selected node.&lt;br&gt;The node has no text and it's ready to type in it.
     </p>
     <p>
-      * insert a new node with a predefined style and text as a child of the currently selected node
+      - insert a new node with a predefined style and text as a child of the currently selected node
     </p>
     <p>
       
@@ -485,12 +462,9 @@ This guide&apos;s &quot;**Table of Contents**&quot; :
         Its text will be used as the title of the new tutorial
       </li>
       <li>
-        Assign the style &quot;ToM-Tutorial&quot; to that node
+        Assign the style &quot;<b>ToM-Tutorial</b>&quot; to that node
       </li>
     </ul>
-    <p>
-      
-    </p>
   </body>
 </html></richcontent>
 </node>
@@ -658,13 +632,13 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
         Select a node (its text doesn't affect the tutorial)
       </li>
       <li>
-        Assign the style &quot;ToM_note&quot; to that node
+        Assign the style &quot;<b>ToM_note</b>&quot; to that node
       </li>
       <li>
         Add one or more child nodes to that node
       </li>
       <li>
-        The notes of that child nodes will be used as the text to be shown in the tutorial
+        The <b>notes</b>&nbsp;of that child nodes will be used as the text to be shown in the tutorial
       </li>
     </ul>
   </body>
@@ -810,10 +784,7 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
   </head>
   <body>
     <p>
-      These nodes can be set between the other nodes or as parents of them. They just have to be &quot;before&quot; the others&nbsp;(&quot;in breadth-first order&quot;)
-    </p>
-    <p>
-      
+      These nodes can be set <b>between</b>&nbsp;the other nodes <b>or as parents</b>&nbsp;&nbsp;of them. They just have to be &quot;before&quot; the others&nbsp;(&quot;<b>in breadth-first order</b>&quot;)
     </p>
   </body>
 </html></richcontent>
@@ -847,7 +818,7 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
         Select the desired node (its text will be used as title for that page)
       </li>
       <li>
-        Assign the style &quot;ToM_newPage&quot; to that node
+        Assign the style &quot;<b>ToM_newPage</b>&quot; to that node
       </li>
     </ul>
   </body>
@@ -936,7 +907,7 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
         Select the desired node (its text doesn't affect the tutorial)
       </li>
       <li>
-        Assign the style &quot;ToM_nextPage&quot; to that node
+        Assign the style &quot;<b>ToM_nextPage</b>&quot; to that node
       </li>
     </ul>
   </body>
@@ -986,7 +957,19 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
 </node>
 <node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_564268625">
 <font NAME="SansSerif"/>
-<node TEXT="Insert new &apos;next page&apos; node directly" ID="ID_1651008337">
+<node ID="ID_1651008337"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Insert new '<b>next page</b>' node directly
+    </p>
+  </body>
+</html>
+</richcontent>
 <attribute NAME="script1" VALUE="def nodo = node.createChild(&apos;next page&apos;)&#xd;&#xa;nodo.style.name = &apos;ToM_nextPage&apos;&#xd;&#xa;c.select(nodo)"/>
 </node>
 </node>
@@ -1058,7 +1041,19 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
 </node>
 <node TEXT="script" STYLE_REF="ToM_groovy" ID="ID_1682312530">
 <font NAME="SansSerif"/>
-<node TEXT="Insert new &apos;TOC&apos; node directly" ID="ID_492228565">
+<node ID="ID_492228565"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Insert new '<b>TOC</b>' node directly
+    </p>
+  </body>
+</html>
+</richcontent>
 <attribute NAME="script1" VALUE="def nodo = node.createChild(&apos;TOC&apos;)&#xd;&#xa;nodo.style.name = &apos;ToM_TOC&apos;&#xd;&#xa;c.select(nodo)"/>
 </node>
 </node>
@@ -1066,7 +1061,6 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
 </node>
 </node>
 <node TEXT="How to add actions to a tutorial" STYLE_REF="ToM-Tutorial" POSITION="right" ID="ID_373851194">
-<icon BUILTIN="emoji-1F58D"/>
 <font NAME="SansSerif"/>
 <attribute_layout NAME_WIDTH="81.75 pt" VALUE_WIDTH="89.25 pt"/>
 <attribute NAME="ToM_TabLabel" VALUE=" ToM - How to (2)"/>
@@ -1212,16 +1206,16 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
       
     </p>
     <p>
-      * see where in Freeplane's menu you can find the command to apply that style
+      - see where in Freeplane's menu you can find the command to apply that style
     </p>
     <p>
-      * apply the style directly to the currently selected node
+      - apply the style directly to the currently selected node
     </p>
     <p>
-      * insert a new node with that style as a child of the currently selected node.&lt;br&gt;The node has no text and it's ready to type in it.
+      - insert a new node with that style as a child of the currently selected node.&lt;br&gt;The node has no text and it's ready to type in it.
     </p>
     <p>
-      * insert a new node with a predefined style and text as a child of the currently selected node
+      - insert a new node with a predefined style and text as a child of the currently selected node
     </p>
     <p>
       
@@ -1351,6 +1345,30 @@ you need to add a &quot;**crayon**&quot; icon to the **Tutorial base node**.
 <attribute NAME="script1" VALUE="def nodo = node.createChild(&apos;show menu commands&apos;)&#xd;&#xa;nodo.style.name = &apos;ToM_showMenu&apos;&#xd;&#xa;c.select(nodo)"/>
 </node>
 </node>
+<node TEXT="Text" STYLE_REF="ToM_note" ID="ID_1353773418">
+<node TEXT="modifiers" STYLE_REF="markdownNote" ID="ID_1575607896"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>## Modifiers&#xd;
+&#xd;
+You can use icons as modifiers when using the **ToM_showMenu** node.&#xd;
+&#xd;
+* Icons in nodes with links to menu commands:&#xd;
+   * **fire:** &lt;br&gt;&#xd;
+when present it shows a **second button** &#xd;
+with a **rocket** image. &lt;br&gt;&#xd;
+This button shows the menu &#xd;
+AND **executes the command**.&#xd;
+&#xd;
+The following &quot;**showMenu**&quot; panels serve as example. The second has an additional&#xd;
+ &quot;Fire&quot; icon in the node in the map, that&apos;s why it has the two buttons.</text>
+</richcontent>
+</node>
+</node>
+<node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_501559187">
+<node TEXT="fire" ID="ID_214135455" LINK="menuitem:_IconAction.emoji-1F525"/>
+<node TEXT="fire" ID="ID_212925020" LINK="menuitem:_IconAction.emoji-1F525">
+<icon BUILTIN="emoji-1F525"/>
+</node>
+</node>
 <node TEXT="add link manually" STYLE_REF="ToM_nextPage" ID="ID_1740562329">
 <node TEXT="Text" STYLE_REF="ToM_note" ID="ID_721621371">
 <node TEXT="add link manually" ID="ID_939168211"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -1384,7 +1402,9 @@ Manual:&#xd;
 </node>
 </node>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1519457109">
-<node TEXT="Add hyperlink to menu item…" ID="ID_1574576203" LINK="menuitem:_AddMenuItemLinkAction"/>
+<node TEXT="Add hyperlink to menu item…" ID="ID_1574576203" LINK="menuitem:_AddMenuItemLinkAction">
+<icon BUILTIN="emoji-1F525"/>
+</node>
 </node>
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_828593240">
 <icon BUILTIN="emoji-1F507"/>
@@ -1466,7 +1486,7 @@ Steps:&#xd;
 </node>
 </node>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_422688415">
-<node TEXT="Get menu command" ID="ID_1828701758" LINK="menuitem:_addons.tutorialOMatic.getMenuCommand_on_single_node"/>
+<node TEXT="Get menu command" ID="ID_733111368" LINK="menuitem:_addons.tutorialOMatic.getMenuCommandToM_on_single_node"/>
 </node>
 </node>
 </node>
@@ -1506,7 +1526,9 @@ The steps are very similar to the &quot;showMenu&quot; case:&#xd;
 </node>
 </node>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1203137006">
-<node TEXT="ToM_menuAction" ID="ID_770031619" LINK="menuitem:_AssignStyleAction.ToM_menuAction"/>
+<node TEXT="ToM_menuAction" ID="ID_770031619" LINK="menuitem:_AssignStyleAction.ToM_menuAction">
+<icon BUILTIN="emoji-1F525"/>
+</node>
 </node>
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1846606094">
 <icon BUILTIN="emoji-1F507"/>
@@ -1576,10 +1598,18 @@ commands without showing menus or hotkeys&#xd;
 </node>
 </node>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_213185593">
-<node TEXT="candle" ID="ID_1369644441" LINK="menuitem:_IconAction.emoji-1F56F"/>
-<node TEXT="muted speaker" ID="ID_1075471179" LINK="menuitem:_IconAction.emoji-1F507"/>
-<node TEXT="keyboard" ID="ID_1997271199" LINK="menuitem:_IconAction.emoji-2328"/>
-<node TEXT="computer mouse" ID="ID_56301631" LINK="menuitem:_IconAction.emoji-1F5B1"/>
+<node TEXT="candle" ID="ID_1369644441" LINK="menuitem:_IconAction.emoji-1F56F">
+<icon BUILTIN="emoji-1F525"/>
+</node>
+<node TEXT="muted speaker" ID="ID_1075471179" LINK="menuitem:_IconAction.emoji-1F507">
+<icon BUILTIN="emoji-1F525"/>
+</node>
+<node TEXT="keyboard" ID="ID_1997271199" LINK="menuitem:_IconAction.emoji-2328">
+<icon BUILTIN="emoji-1F525"/>
+</node>
+<node TEXT="computer mouse" ID="ID_56301631" LINK="menuitem:_IconAction.emoji-1F5B1">
+<icon BUILTIN="emoji-1F525"/>
+</node>
 </node>
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_287414593">
 <icon BUILTIN="emoji-1F507"/>
@@ -1707,7 +1737,9 @@ The steps are very similar to the &quot;menuAction&quot; case:&#xd;
 </node>
 </node>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_363143172">
-<node TEXT="ToM_groovy" ID="ID_1045963058" LINK="menuitem:_AssignStyleAction.ToM_groovy"/>
+<node TEXT="ToM_groovy" ID="ID_1045963058" LINK="menuitem:_AssignStyleAction.ToM_groovy">
+<icon BUILTIN="emoji-1F525"/>
+</node>
 </node>
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_273003756">
 <icon BUILTIN="emoji-1F507"/>
@@ -1774,9 +1806,15 @@ gets disabled</text>
 </node>
 </node>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1009158596">
-<node TEXT="glasses" ID="ID_796975933" LINK="menuitem:_IconAction.emoji-1F453"/>
-<node TEXT="magnifying glass tilted left" ID="ID_1118448471" LINK="menuitem:_IconAction.emoji-1F50D"/>
-<node TEXT="candle" ID="ID_1148396735" LINK="menuitem:_IconAction.emoji-1F56F"/>
+<node TEXT="glasses" ID="ID_796975933" LINK="menuitem:_IconAction.emoji-1F453">
+<icon BUILTIN="emoji-1F525"/>
+</node>
+<node TEXT="magnifying glass tilted left" ID="ID_1118448471" LINK="menuitem:_IconAction.emoji-1F50D">
+<icon BUILTIN="emoji-1F525"/>
+</node>
+<node TEXT="candle" ID="ID_1148396735" LINK="menuitem:_IconAction.emoji-1F56F">
+<icon BUILTIN="emoji-1F525"/>
+</node>
 </node>
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_510716979">
 <icon BUILTIN="emoji-1F507"/>
@@ -1882,7 +1920,9 @@ can add a &quot;**Return back**&quot; button
 </node>
 </node>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1310600169">
-<node TEXT="ToM_goto" ID="ID_506905969" LINK="menuitem:_AssignStyleAction.ToM_goto"/>
+<node TEXT="ToM_goto" ID="ID_506905969" LINK="menuitem:_AssignStyleAction.ToM_goto">
+<icon BUILTIN="emoji-1F525"/>
+</node>
 </node>
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1619313717">
 <icon BUILTIN="emoji-1F507"/>
@@ -1946,7 +1986,9 @@ modifiers&#xd;
 </node>
 </node>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1780720123">
-<node TEXT="BACK arrow" ID="ID_464746731" LINK="menuitem:_IconAction.emoji-1F519"/>
+<node TEXT="BACK arrow" ID="ID_464746731" LINK="menuitem:_IconAction.emoji-1F519">
+<icon BUILTIN="emoji-1F525"/>
+</node>
 </node>
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_404957224">
 <icon BUILTIN="emoji-1F507"/>
@@ -2043,7 +2085,9 @@ as descendants of that node&#xd;
 </node>
 </node>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_874317382">
-<node TEXT="ToM_copy" ID="ID_1577432459" LINK="menuitem:_AssignStyleAction.ToM_copy"/>
+<node TEXT="ToM_copy" ID="ID_1577432459" LINK="menuitem:_AssignStyleAction.ToM_copy">
+<icon BUILTIN="emoji-1F525"/>
+</node>
 </node>
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_573206576">
 <icon BUILTIN="emoji-1F507"/>
@@ -2150,7 +2194,9 @@ as descendants of the &quot;ToM_select&quot; node&#xd;
 </node>
 </node>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_880196186">
-<node TEXT="ToM_select" ID="ID_1563852084" LINK="menuitem:_AssignStyleAction.ToM_select"/>
+<node TEXT="ToM_select" ID="ID_1563852084" LINK="menuitem:_AssignStyleAction.ToM_select">
+<icon BUILTIN="emoji-1F525"/>
+</node>
 </node>
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1743896936">
 <icon BUILTIN="emoji-1F507"/>
@@ -2213,7 +2259,9 @@ as descendants of the &quot;ToM_select&quot; node&#xd;
 </node>
 </node>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1860373457">
-<node TEXT="Copy node (single)" ID="ID_1150853122" LINK="menuitem:_CopySingleAction"/>
+<node TEXT="Copy node (single)" ID="ID_1150853122" LINK="menuitem:_CopySingleAction">
+<icon BUILTIN="emoji-1F525"/>
+</node>
 </node>
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1082513562">
 <icon BUILTIN="emoji-1F507"/>
@@ -2251,7 +2299,9 @@ as descendants of the &quot;ToM_select&quot; node&#xd;
 </node>
 </node>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_250389708">
-<node TEXT="Paste Clone" ID="ID_1515489315" LINK="menuitem:_CloneAction"/>
+<node TEXT="Paste Clone" ID="ID_1515489315" LINK="menuitem:_CloneAction">
+<icon BUILTIN="emoji-1F525"/>
+</node>
 </node>
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1045895672">
 <icon BUILTIN="emoji-1F507"/>
@@ -2332,7 +2382,9 @@ the mindmap&apos;s name in its text&#xd;
 </node>
 </node>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1649501119">
-<node TEXT="ToM_openMap" ID="ID_307503825" LINK="menuitem:_AssignStyleAction.ToM_openMap"/>
+<node TEXT="ToM_openMap" ID="ID_307503825" LINK="menuitem:_AssignStyleAction.ToM_openMap">
+<icon BUILTIN="emoji-1F525"/>
+</node>
 </node>
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1239430216">
 <icon BUILTIN="emoji-1F507"/>
@@ -2430,7 +2482,9 @@ contains the current tutorial information and selects the node where the current
 </node>
 </node>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_795725197">
-<node TEXT="ToM_openTutMap" ID="ID_1075569919" LINK="menuitem:_AssignStyleAction.ToM_openTutMap"/>
+<node TEXT="ToM_openTutMap" ID="ID_1075569919" LINK="menuitem:_AssignStyleAction.ToM_openTutMap">
+<icon BUILTIN="emoji-1F525"/>
+</node>
 </node>
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1363761950">
 <icon BUILTIN="emoji-1F507"/>
@@ -2535,7 +2589,9 @@ The steps are very similar to the &quot;goto&quot; case:&#xd;
 </node>
 </node>
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1644377465">
-<node TEXT="ToM_showNode" ID="ID_520069530" LINK="menuitem:_AssignStyleAction.ToM_showNode"/>
+<node TEXT="ToM_showNode" ID="ID_520069530" LINK="menuitem:_AssignStyleAction.ToM_showNode">
+<icon BUILTIN="emoji-1F525"/>
+</node>
 </node>
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_1862013698">
 <icon BUILTIN="emoji-1F507"/>
@@ -2679,7 +2735,9 @@ ToM nodes in the same or to other Mindmaps&#xd;
 </node>
 <node TEXT="create a ToM_openTutPage node" LOCALIZED_STYLE_REF="default" ID="ID_699720817">
 <node TEXT="show menu commands" STYLE_REF="ToM_showMenu" ID="ID_1943689326">
-<node TEXT="ToM_openTutPage" ID="ID_637621697" LINK="menuitem:_AssignStyleAction.ToM_openTutPage"/>
+<node TEXT="ToM_openTutPage" ID="ID_637621697" LINK="menuitem:_AssignStyleAction.ToM_openTutPage">
+<icon BUILTIN="emoji-1F525"/>
+</node>
 </node>
 <node TEXT="menu action" STYLE_REF="ToM_menuAction" ID="ID_688981874">
 <icon BUILTIN="emoji-1F507"/>

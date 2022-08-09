@@ -4,7 +4,7 @@
 <hook NAME="accessories/plugins/AutomaticLayout.properties" VALUE="ALL"/>
 <font BOLD="true"/>
 <hook NAME="MapStyle" background="#f9f9f8" zoom="0.909">
-    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_note_icons="true" associatedTemplateLocation="template:/light_nord_template.mm" fit_to_viewport="false" mdhCleanMindmapPath="C:\Users\Edo\Documents\GitHub\Freeplane_Tutorial_AddOn\Tutorial-o-Matic\zips\doc\Tutorial-o-Matic\myExistingMindMap.mm" mdhCleanMindmapExportDate="2022-05-06 11:12:47.322-0400"/>
+    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mdhCleanMindmapPath="C:\Users\Edo\Documents\GitHub\Freeplane_Tutorial_AddOn\Tutorial-o-Matic\zips\doc\Tutorial-o-Matic\myExistingMindMap.mm" mdhCleanMindmapExportDate="2022-08-08 15:15:19.476-0400" show_note_icons="true" associatedTemplateLocation="template:/light_nord_template.mm" fit_to_viewport="false" mapUsesOwnSaveOptions="true" save_folding="save_folding_if_map_is_changed" save_last_visited_node="default" save_modification_times="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_114153828" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -40,34 +40,7 @@
 <font NAME="Ubuntu" SIZE="14"/>
 <edge COLOR="#bf616a"/>
 </stylenode>
-<stylenode TEXT="MarkdownHelperNode" COLOR="#dbffdb" BACKGROUND_COLOR="#333333" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
-<icon BUILTIN="emoji-1F343"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
-</stylenode>
-<stylenode TEXT="MarkdownHelperLink" COLOR="#dbffdb" BACKGROUND_COLOR="#4c4c7f" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
-<icon BUILTIN="emoji-1F517"/>
-</stylenode>
-<stylenode TEXT="MarkdownHelperPreview" COLOR="#333333" BACKGROUND_COLOR="#ffffff">
-<font NAME="Tahoma" SIZE="14"/>
-<hook NAME="NodeCss">pre {
-    background-color: #e5e7ff;
-    border-left: 5px solid #ccc;
-    display: block;
-    padding: 8px;
-    margin: 5px;
-}
-code {
-    font-family: Consolas,&quot;courier new&quot;;
-    font-size: 11px;
-    color: #999;
-}
-
-blockquote {
-    border-left: 5px solid #cccccc;
-    background-color: #eeeeee;
-    padding: 8px;
-}</hook>
-</stylenode>
+<stylenode TEXT="MarkdownHelperNode" ID="ID_366400146"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#ffffff" BACKGROUND_COLOR="#484747" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="10 pt">
@@ -203,12 +176,12 @@ blockquote {
 </node>
 </node>
 </node>
-<node TEXT="N.1.2 bla bla bla bla" STYLE_REF="MarkdownHelperNode" ID="ID_1643367542" CREATED="1649806832017" MODIFIED="1651849912709"/>
+<node TEXT="N.1.2 bla bla bla bla" ID="ID_1643367542" CREATED="1649806832017" MODIFIED="1659985717269"/>
 <node TEXT="N.1.3 bla bla bla" ID="ID_741805604" CREATED="1649806832044" MODIFIED="1649806832073">
 <node TEXT="N.1.3.1 bla bla bla bla bla" ID="ID_1154708887" CREATED="1649806832073" MODIFIED="1649806832090">
 <node TEXT="N.1.3.1.1 bla bla bla bla" ID="ID_1393449491" CREATED="1649806832091" MODIFIED="1649806832107"/>
 <node TEXT="N.1.3.1.2 bla bla bla" ID="ID_669739275" CREATED="1649806832108" MODIFIED="1649806832119">
-<node TEXT="N.1.3.1.2.1 bla bla bla bla bla" ID="ID_117376197" CREATED="1649806832119" MODIFIED="1649806832122"/>
+<node TEXT="N.1.3.1.2.1 bla bla bla bla bla" STYLE_REF="MarkdownHelperNode" ID="ID_117376197" CREATED="1649806832119" MODIFIED="1659986094333"/>
 <node TEXT="N.1.3.1.2.2 bla" ID="ID_1430349179" CREATED="1649806832122" MODIFIED="1649806832149"/>
 <node TEXT="N.1.3.1.2.3 bla bla bla bla" ID="ID_1211776395" CREATED="1649806832149" MODIFIED="1649806832173"/>
 </node>

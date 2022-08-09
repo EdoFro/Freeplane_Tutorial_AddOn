@@ -10,7 +10,7 @@ Look under [Releases](https://github.com/EdoFro/Freeplane_Tutorial_AddOn/release
 
 1. Download the addon.mm file, open it in Freeplane and install it.
 1. Relaunch Freeplane
-1. go to menu Edo Tools/Tutorial-o-Matic and click on 'Tutorial-o-Matic Demo'
+1. Go to menu **Edo Tools/Tutorial-o-Matic** and click on **'Tutorial-o-Matic Intro'**
 
 enjoy the demo!
 
@@ -22,10 +22,6 @@ edo
 
 - **No milestone**
    - [ ] **Redefine Add-on menu and Add-on tutorials links for better user experience (working on it: ~75%)**
-- **ToM v0.0.7**
-   - Add-on tutorials (w/MDH)
-      - StepByStep Tutorial
-         - [ ] **Update "Introduction" tutorial in StepByStep map (working on it: ~0%)**
 
 # Tasks
 
@@ -45,16 +41,11 @@ edo
          - [x] Tutorial 2: one page tutorial in an existing mindmap
          - [x] Tutorial 3: "Organizing a tutorial in multiple pages"
          - [x] Add "Crayon" functionality to add-on's tutorial
-         - [ ] **Update "Introduction" tutorial in StepByStep map (working on it: ~0%)**
-         - [ ] Add links to StepbyStepActions tutorial (to WIP repository for this stage)
-      - StepByStepActions Tutorial
-         - [ ] Create basic version of "Tutorial-o-MaticStepByStepActions.mm" mindmap where ToM actions styles will be explained
-      - practice.maps
-         - [ ] Delete MDH Styles from "myExistingMindMap.mm" map
-         - [ ] Delete MDH Styles from "LongTutorialExample_MDH.mm" map
+         - [x] Update "Introduction" tutorial in StepByStep map
+      - [x] Delete Crayon from al add-on tutorial map
    - README.MD
-      - [ ] Redefine instructions
-      - [ ] Improve ReadMe.MD
+      - [x] Redefine instructions
+      - [x] Improve ReadMe.MD
 - **ToM v0.0.8**
    - lib
       - ToM_actions.grvy
@@ -67,6 +58,8 @@ edo
       - [ ] Help script that calls "Save as MDH clean mindmap" (MDH add-on) to automatize updating process
       - StepByStepActions Tutorial
          - [ ] Create "Tutorial-o-MaticStepByStepActions.mm" mindmap where all ToM actions styles are explained
+      - StepByStep Tutorial
+         - [ ] Add links to StepbyStepActions tutorial (to WIP repository for this stage)
 - **ToM xFuture A**
    - lib
       - ToM_actions.grvy
@@ -102,14 +95,14 @@ edo
             - [ ] nodo con link a file .md<br>--><br>lo despliega en panel de editor
       - ToM_ui.grvy
          - [ ] Improve buttonPanel layout to make it more compact
+   - scripts
+      - [ ] init Script  that reacts to the opening of mindmaps that have tutorials and automatically shows the Tutorials dialog
    - Add-on tutorials (w/MDH)
       - Commands
          - [ ] add buttonBoards to map
    - Apuntes
       - [ ] practice maps: Should the user be able to save changes or should the user have to use "save as" option?
       - [ ] new MDH feature:<br>Command to 'update' the note of a node that has a link to a MDH node and it copy/pastes its contain (from another map)  <br>desde otro mapa
-   - scripts
-      - [ ] init Script  that reacts to the opening of mindmaps that have tutorials and automatically shows the Tutorials dialog
 - **ToM xFuture C**
    - lib
       - ToM_actions.grvy

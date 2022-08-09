@@ -1,6 +1,6 @@
 <map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
-<attribute_registry SHOW_ATTRIBUTES="selected">
+<attribute_registry>
     <attribute_name VISIBLE="true" NAME="menuLocation"/>
     <attribute_name VISIBLE="true" NAME="menuTitleKey"/>
 </attribute_registry>
@@ -88,7 +88,8 @@
       </li>
     </ul>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <hook NAME="MapStyle" background="#f9f9f8" zoom="0.9">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" associatedTemplateLocation="file:/C:/Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/Menu-o-Matic/Menu-o-Matic.mm" show_note_icons="true" save_folding="save_folding_if_map_is_changed" fit_to_viewport="false"/>
 
@@ -174,7 +175,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<node TEXT="description" POSITION="left" ID="ID_1678998363"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="description" FOLDED="true" POSITION="left" ID="ID_1678998363"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -190,10 +191,11 @@
       To translate the description you have to define a translation for the key 'addons.${name}.description'.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="Tutorial-o-Matic for Freeplane!!&#xa;Tutorial-o-Matic is an AddOn for Freeplane that gives the user the possibility to create his/her own tutorials." ID="ID_1642042079"/>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_461119253"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="changes" FOLDED="true" POSITION="left" ID="ID_461119253"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -203,7 +205,8 @@
       Change log of this add-on: append one node for each noteworthy version and put the details for each version into a child node.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="v0.0.1" FOLDED="true" ID="ID_1147464075">
 <node TEXT="Demo version" ID="ID_1739689712"/>
 </node>
@@ -261,9 +264,10 @@
 <node TEXT="Updated gotoPane to open in corresponding Tab and use withGoBack modifier" ID="ID_1912254700"/>
 <node TEXT="Added openTutorialPage style and pane" ID="ID_1158869821"/>
 </node>
-<node TEXT="v0.0.7" ID="ID_144067667">
+<node TEXT="v0.0.7" FOLDED="true" ID="ID_144067667">
 <node TEXT="getMenuCommand renamed to getMenuCommandToM.groovy" ID="ID_1910643500"/>
-<node TEXT="bugs fix" ID="ID_1389797512"/>
+<node TEXT="bugs fixes" ID="ID_1389797512"/>
+<node TEXT="Improved Step by Step Tutorials" ID="ID_345569965"/>
 </node>
 </node>
 <node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -282,7 +286,8 @@
       The License text has to be entered as a child of the <i>'license'</i>&nbsp;node, either as plain text or as HTML.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="MIT License&#xa;&#xa;Copyright (c) 2021 Eduardo Frohlich.&#xa;&#xa;Permission is hereby granted, free of charge, to any person obtaining a copy&#xa;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xa;in the Software without restriction, including without limitation the rights&#xa;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xa;copies of the Software, and to permit persons to whom the Software is&#xa;furnished to do so, subject to the following conditions:&#xa;&#xa;The above copyright notice and this permission notice shall be included in all&#xa;copies or substantial portions of the Software.&#xa;&#xa;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xa;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xa;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xa;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xa;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xa;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE&#xa;SOFTWARE." ID="ID_444630498"/>
 </node>
 <node TEXT="preferences.xml" POSITION="left" ID="ID_1967714695"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -391,7 +396,8 @@
       </tr>
     </table>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 <node TEXT="default.properties" POSITION="left" ID="ID_1398497950"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -411,7 +417,8 @@
       </li>
     </ul>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 <node TEXT="translations" POSITION="left" ID="ID_546877695"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -443,47 +450,37 @@
       </li>
     </ul>
   </body>
-</html></richcontent>
-<node TEXT="en" ID="ID_835667055">
+</html>
+</richcontent>
+<node TEXT="en" ID="ID_643789068">
 <attribute_layout NAME_WIDTH="194.55319 pt" VALUE_WIDTH="245.87234 pt"/>
 <attribute NAME="addons.${name}.createNewTutorialMindMap" VALUE="Create new tutorial mind map"/>
-<attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;&lt;h3&gt;Instructions:&lt;/h3&gt;In submenu &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;click on &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
 <attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
-<attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;You can also use de keyboard shortcut &lt;b&gt;{0}&lt;/b&gt; for this command&lt;/html&gt;"/>
-<attribute NAME="addons.${name}.openDemoMap" VALUE="open Demo map"/>
-<attribute NAME="addons.${name}.getMenuCommandToM" VALUE="Get menu command"/>
-<attribute NAME="addons.${name}.showTutorialsFromActiveMap" VALUE="Show tutorials from active map"/>
 <attribute NAME="addons.${name}.ToMDemo" VALUE="Tutorial-o-Matic Demo"/>
 <attribute NAME="addons.${name}.ToMTutorial" VALUE="Tutorial-o-Matic Intro"/>
 <attribute NAME="addons.${name}.importToMStyles" VALUE="Import Tutorial-o-Matic Styles"/>
+<attribute NAME="addons.${name}.getMenuCommandToM" VALUE="Get menu command"/>
 <attribute NAME="addons.${name}.executeTutorial" VALUE="execute Demo tutorial"/>
+<attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;&lt;h3&gt;Instructions:&lt;/h3&gt;In submenu &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;click on &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
 <attribute NAME="addons.${name}.openTutorialPageFromLink" VALUE="Open tutorial page from link"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <h3>
-      Instructions:
-    </h3>
-    In submenu <b>{0}</b><br/>click on <b>{1}</b>
-  </body>
-</html></richcontent>
+<attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;You can also use de keyboard shortcut &lt;b&gt;{0}&lt;/b&gt; for this command&lt;/html&gt;"/>
+<attribute NAME="addons.${name}.openDemoMap" VALUE="open Demo map"/>
+<attribute NAME="addons.${name}.showTutorialsFromActiveMap" VALUE="Show tutorials from active map"/>
 </node>
-<node TEXT="es" ID="ID_370825255">
-<attribute_layout NAME_WIDTH="205.49999 pt" VALUE_WIDTH="228.74999 pt"/>
+<node TEXT="es" ID="ID_1100466604">
+<attribute_layout NAME_WIDTH="194.55319 pt" VALUE_WIDTH="214.46808 pt"/>
 <attribute NAME="addons.${name}.createNewTutorialMindMap" VALUE="Crear nuevo mapa para tutoriales"/>
-<attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;&lt;h3&gt;Instrucciones:&lt;/h3&gt;En submenu  &lt;b&gt;{0}&lt;/b&gt; &lt;br&gt;has click en  &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
 <attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
-<attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;Puedes usar también el atajo &lt;b&gt;{0}&lt;/b&gt; para este comando&lt;/html&gt;"/>
-<attribute NAME="addons.${name}.openDemoMap" VALUE="abrir mapa demo"/>
-<attribute NAME="addons.${name}.getMenuCommandToM" VALUE="Obtener comando desde el menú"/>
-<attribute NAME="addons.${name}.showTutorialsFromActiveMap" VALUE="Mostrar tutoriales de mapa activo"/>
 <attribute NAME="addons.${name}.ToMDemo" VALUE="Tutorial-o-Matic Demo"/>
 <attribute NAME="addons.${name}.ToMTutorial" VALUE="Intro Tutorial-o-Matic"/>
 <attribute NAME="addons.${name}.importToMStyles" VALUE="Importar estilos Tutorial-o-Matic"/>
+<attribute NAME="addons.${name}.getMenuCommandToM" VALUE="Obtener comando desde el menú"/>
 <attribute NAME="addons.${name}.executeTutorial" VALUE="ejecutar Demo tutorial"/>
+<attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;&lt;h3&gt;Instrucciones:&lt;/h3&gt;En submenu  &lt;b&gt;{0}&lt;/b&gt; &lt;br&gt;has click en  &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
+<attribute NAME="addons.${name}.openTutorialPageFromLink" VALUE="Abrir página de tutorial desde enlace"/>
+<attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;Puedes usar también el atajo &lt;b&gt;{0}&lt;/b&gt; para este comando&lt;/html&gt;"/>
+<attribute NAME="addons.${name}.openDemoMap" VALUE="abrir mapa demo"/>
+<attribute NAME="addons.${name}.showTutorialsFromActiveMap" VALUE="Mostrar tutoriales de mapa activo"/>
 </node>
 </node>
 <node TEXT="deinstall" POSITION="left" ID="ID_378917294"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -496,7 +493,8 @@
       List of files and/or directories to remove on uninstall
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute_layout NAME_WIDTH="42.75 pt" VALUE_WIDTH="295.49999 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/Tutorial-o-Matic.jar"/>
@@ -639,9 +637,10 @@
       &nbsp;&nbsp;- In any case set execute_scripts_without_asking to true unless you want to annoy users.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="getMenuCommandToM.groovy" ID="ID_863849079">
-<attribute_layout NAME_WIDTH="72 pt" VALUE_WIDTH="186.89361 pt"/>
+<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="186.89361 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.getMenuCommandToM"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Commands"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -653,7 +652,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 <node TEXT="showTutorialsFromActiveMap.groovy" ID="ID_484672073">
-<attribute_layout NAME_WIDTH="72 pt" VALUE_WIDTH="194.55319 pt"/>
+<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="194.55319 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showTutorialsFromActiveMap"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Commands"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -665,7 +664,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 <node TEXT="createNewTutorialMindMap.groovy" ID="ID_1471194194">
-<attribute_layout NAME_WIDTH="72 pt" VALUE_WIDTH="187.65957 pt"/>
+<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="187.65957 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.createNewTutorialMindMap"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Commands"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -677,7 +676,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 <node TEXT="importToMStyles.groovy" ID="ID_1858810414">
-<attribute_layout NAME_WIDTH="72 pt" VALUE_WIDTH="186.89361 pt"/>
+<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="186.89361 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.importToMStyles"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Commands"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -689,7 +688,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 <node TEXT="openTutorialPageFromLink.groovy" ID="ID_1316819334">
-<attribute_layout NAME_WIDTH="72 pt" VALUE_WIDTH="186.89361 pt"/>
+<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="186.89361 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.openTutorialPageFromLink"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Commands"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -701,7 +700,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 <node TEXT="ToMDemo.groovy" ID="ID_513310589">
-<attribute_layout NAME_WIDTH="72 pt" VALUE_WIDTH="170.80851 pt"/>
+<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="170.80851 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.ToMDemo"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Demos"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -713,7 +712,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 <node TEXT="openDemoMap.groovy" ID="ID_1629939217">
-<attribute_layout NAME_WIDTH="72 pt" VALUE_WIDTH="170.80851 pt"/>
+<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="170.80851 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.openDemoMap"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Demos"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -725,7 +724,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 <node TEXT="ToMTutorial.groovy" ID="ID_1001747286">
-<attribute_layout NAME_WIDTH="72 pt" VALUE_WIDTH="141.70212 pt"/>
+<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="141.70212 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.ToMTutorial"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -771,7 +770,8 @@
       &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="Tutorial-o-Matic.jar" ID="ID_1864463328"/>
 <node TEXT="markedj-1.0.16.jar" ID="ID_1060333872"/>
 <node TEXT="jsoup-1.10.2.jar" ID="ID_1151792763"/>
@@ -810,7 +810,8 @@
       &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="doc" ID="ID_281158802"/>
 <node TEXT="icons" ID="ID_211861022"/>
 <node TEXT="templates" ID="ID_553385296"/>
@@ -845,7 +846,8 @@
       Images can be added automatically by releaseAddOn.groovy or must be uploaded into the map via the script <i>Tools-&gt;Scripts-&gt;Insert Binary</i>&nbsp;since they have to be (base64) encoded as simple strings.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="tutorialOMatic.svg" ID="ID_863225553"/>
 <node TEXT="tutorialOMatic-icon.svg" ID="ID_1901205001"/>
 <node TEXT="tutorialOMatic-screenshot-1.png" ID="ID_791135029"/>
@@ -858,30 +860,12 @@
   <body>
     Direct links to menu commands
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="Build add-on" ID="ID_295578710" LINK="menuitem:_addons.devtools.checkAddOn_on_single_node"/>
 <node TEXT="Package add-on for publication" ID="ID_776080324" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node"/>
 <node TEXT="Export Translations" ID="ID_743273714" LINK="menuitem:_addons.devtools.exportTranslations_on_single_node"/>
 <node TEXT="Import Translations" ID="ID_190005721" LINK="menuitem:_addons.devtools.importTranslations_on_single_node"/>
-<node TEXT="loadAndExecuteTutorial.groovy" ID="ID_1523867671" LINK="menuitem:_ExecuteScriptForSelectionAction"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      .groovy
-    </p>
-    <p>
-      opens tutorial defined in first child node
-    </p>
-  </body>
-</html></richcontent>
-<attribute_layout VALUE_WIDTH="115.5 pt"/>
-<attribute NAME="script1" VALUE="import edofro.tutorialomatic.ToM    as tom&#xa;&#xa;//opens demo map&#xa;def mapFileName = node.children[0].text&#xa;&#xa;//para que use el que estoy modificando&#xa;pathName=&quot;C:\\Users\\Edo\\Documents\\GitHub\\Freeplane_Tutorial_AddOn\\Tutorial-o-Matic\\zips\\doc\\Tutorial-o-Matic\\${mapFileName}&quot;&#xa;&#xa;//def mapa = node.map //usar mapa activo&#xa;def mapa    = tom.getMapFromPath(pathName, true) //usar mapa indicado (true: visible, false: oculto)&#xa;&#xa;tom.showTutorials( mapa )&#xa;&#xa;return &apos;tutorial started&apos;"/>
-<node TEXT="SimpleTutorialSample.mm" ID="ID_1123728779"/>
-<node TEXT="Tutorial Sample.mm" ID="ID_1495047992"/>
-</node>
 </node>
 </node>
 </map>
