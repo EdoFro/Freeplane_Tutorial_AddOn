@@ -12,6 +12,7 @@ import java.awt.Insets
 import java.awt.GridBagConstraints
 import java.awt.Dimension
 import java.awt.GridBagLayout
+import java.awt.GridLayout
 import java.awt.Point
 import java.awt.event.*
 
@@ -35,6 +36,10 @@ import org.freeplane.core.ui.components.UITools as ui
 
 import io.github.gitbucket.markedj.Marked
 import io.github.gitbucket.markedj.Options
+
+import org.jsoup.Jsoup
+import org.jsoup.nodes.Document
+
 //end:
 
 class ToM_ui{
@@ -155,6 +160,14 @@ class ToM_ui{
         return html
     }
 
+    def static mergeHtml(baseHtml, addedHtml){
+        if(!baseHtml) return addedHtml
+        if(!addedHtml) return baseHtml
+        Document doc = Jsoup.parse(baseHtml)
+        doc.body().append('<p/>').append(addedHtml)
+        return doc.html()        
+    }
+    
     //end:
 
     //region: creating panes
@@ -211,9 +224,52 @@ class ToM_ui{
         sp.viewport.add(panel)
         return sp
     }
-
+    
+    def static createPageTitlePane(String htmlMsg, botones){
+        def panel = swing.panel() {
+            borderLayout()
+            editorPane(
+                editable    : false,
+                contentType : "text/html",
+                text        : htmlMsg,
+                margin      : new Insets(30,10,30,10),
+                border      : new EmptyBorder(5, 10, 5, 10),  // <------- éste
+                //border: new CompoundBorder(new LineBorder(Color.green, 1),new EmptyBorder(5, 10, 5, 10)),  // éste es de prueba poder ver el borde
+                constraints : CENTER,
+                clientProperties: [(JEditorPane.HONOR_DISPLAY_PROPERTIES):true]
+            )
+            if(botones.size()>0){
+                vbox(constraints:WEST) {
+                    botones.each{b ->
+                        button(
+                            label           : b[0],
+                            // constraints : WEST,
+                            margin          : new Insets(0,2,0,2),
+                            toolTipText     : b[1],
+                            actionPerformed : b[2],
+                            icon            : b[3],
+                        )
+                    }
+                    // button(
+                        // label       : bttnText2,
+                        // // constraints : EAST,
+                        // // margin      : new Insets(10,15,10,15),
+                        // toolTipText : bttnToolTip2,
+                        // actionPerformed : bttnAction2,
+                    // )
+                }
+            }
+        }
+        return panel
+    }
+    
 // genera panel con botón
-    def static createButtonPanel(htmlMsg, buttonLabel, buttonToolTip, buttonAction, boolean isToggleButton = false){
+    def static createButtonPanel(String htmlMsg, buttonLabel, buttonToolTip, buttonAction, boolean isToggleButton = false){
+        def botones = [] << [buttonLabel, buttonToolTip, buttonAction, null, isToggleButton]
+        createButtonPanel(htmlMsg, botones)
+    }
+
+    def static createButtonPanel(String htmlMsg, botones){
         def panel = swing.panel(
             border      : new LineBorder(Color.gray, 1),
             name        : myButtonPanelName,
@@ -229,40 +285,52 @@ class ToM_ui{
                     constraints : CENTER,
                     clientProperties: [(JEditorPane.HONOR_DISPLAY_PROPERTIES):true]
               )
-              vbox(constraints:SOUTH) {
+            if(botones.size()>0){
+                panel(
+                    constraints:EAST,
+                    background: Color.white,
+                ) {
+                    borderLayout()
                     panel(
-                           // border      : new LineBorder(Color.black, 1),
-                            border      : new EmptyBorder(2, 10, 2, 10),  // <------- éste
-                            //border: new CompoundBorder(new LineBorder(Color.red, 1),new EmptyBorder(5, 10, 5, 10))  // éste es de prueba poder ver el borde
-                            //insets      : new Insets(30,10,30,10),
-                        ) {
-                            borderLayout()
-                            if (isToggleButton){
+                        constraints:SOUTH,
+                        background: Color.white,
+                       // // border      : new LineBorder(Color.black, 1),
+                        border      : new EmptyBorder(2, 2, 2, 2),  // <------- éste
+                        // //border: new CompoundBorder(new LineBorder(Color.red, 1),new EmptyBorder(5, 10, 5, 10))  // éste es de prueba poder ver el borde
+                        // //insets      : new Insets(30,10,30,10),
+                    ) {
+                        gridLayout(new GridLayout(0,1))
+                        botones.each{ b ->
+                            if ( b[4] == true ){
                                 toggleButton(
-                                    label       : buttonLabel,
-                                    constraints : EAST,
-                                    margin      : new Insets(10,15,10,15),
-                                    toolTipText : buttonToolTip,
-                                    actionPerformed : buttonAction,
+                                    label       :  b[0],
+                                    // constraints : EAST,
+                                    margin      : new Insets(3,6,3,6),
+                                    toolTipText : b[1],
+                                    actionPerformed : b[2],
+                                    icon            : b[3],
                                 )
                             } else {
                                 button(
-                                    label       : buttonLabel,
-                                    constraints : EAST,
-                                    margin      : new Insets(10,15,10,15),
-                                    toolTipText : buttonToolTip,
-                                    actionPerformed : buttonAction,
+                                    label       : b[0],
+                                    // constraints : EAST,
+                                    margin      : new Insets(3,6,3,6),
+                                    toolTipText : b[1],
+                                    actionPerformed : b[2],
+                                    icon            : b[3],
                                 )
                             }
                         }
-              }
+                    }
+                }
+            }
         }
         return panel
     }
 
 // genera panel close - next page
         //nextButtonAction == null --> no 'Next page' button
-    def static createNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip, nextButtonAction, tocLabel = '', tocToolTip = '', tocButtonAction = null ){
+    def static createNextButtonPanel(closeLabel, closeToolTip, nextLabel, nextToolTip, nextButtonAction, tocLabel = '', tocToolTip = '', tocButtonAction = null ){
         def panel = swing.panel(
             //border      : new LineBorder(Color.gray, 1),
             name        : myNextPanelName,
@@ -278,7 +346,7 @@ class ToM_ui{
                             constraints : WEST,
                             margin      : new Insets(10,15,10,15),
                             toolTipText : closeToolTip,
-                            actionPerformed : {closeTab(tabName)},
+                            actionPerformed : { e -> closeTab(e.source) },
                         )
                         if(tocButtonAction /* && nextButtonAction */ ){
                             button(
@@ -382,8 +450,15 @@ class ToM_ui{
 
     //region: other methods
 
-    def static closeTab(tabName, boolean hideTabPane = false) {
+    def static closeTab(String tabName, boolean hideTabPane = false) {
         TabPane.removeTab(tabName, hideTabPane)
+    }
+
+    def static closeTab(javax.swing.JComponent comp, boolean hideTabPane = false) {
+        //msg(comp.class)
+        def componente = getScrollPaneViewport(comp).parent
+        //msg(componente.class)
+        TabPane.removeTab(componente, hideTabPane)
     }
 
     def static setNextPagePanelEnabled(JPanel myP, boolean isEnabled){
@@ -409,6 +484,10 @@ class ToM_ui{
         getScrollPaneViewport(comp).setViewPosition(new Point(0,0))
     }
 
+    def static msg(texto){
+        ui.informationMessage(texto.toString())
+    }
+    
     //end:
 
 

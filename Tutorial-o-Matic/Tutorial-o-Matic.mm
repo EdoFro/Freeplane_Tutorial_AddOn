@@ -1,14 +1,21 @@
 <map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
+<attribute_registry>
+    <attribute_name VISIBLE="true" NAME="menuLocation"/>
+    <attribute_name VISIBLE="true" NAME="menuTitleKey"/>
+</attribute_registry>
 <node TEXT="Tutorial-o-Matic" FOLDED="false" ID="ID_696401721" LINK="https://github.com/EdoFro/Freeplane_Tutorial_AddOn" BACKGROUND_COLOR="#97c7dc">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
-<attribute_layout NAME_WIDTH="111.75 pt" VALUE_WIDTH="165.75 pt"/>
+<attribute_layout NAME_WIDTH="101.87234 pt" VALUE_WIDTH="242.80851 pt"/>
 <attribute NAME="name" VALUE="tutorialOMatic"/>
-<attribute NAME="version" VALUE="v0.0.5"/>
+<attribute NAME="version" VALUE="v0.0.7"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.9"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
-<attribute NAME="updateUrl" VALUE="https://github.com/EdoFro/Freeplane_Tutorial_AddOn/raw/main/Tutorial-o-Matic/version.properties"/>
+<attribute NAME="addonsMenu" VALUE="/menu_bar/edoTools"/>
+<attribute NAME="updateUrl" VALUE="${homepage}/releases/latest/download/version.properties"/>
+<attribute NAME="downloadUrl" VALUE="${homepage}/releases/download/${version}/"/>
+<attribute NAME="changelogUrl" VALUE="${homepage}/releases/latest/download/history.md"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -23,27 +30,67 @@
     </p>
     <ul>
       <li>
-        name: The name of the add-on, normally a technically one (no spaces, no special characters except _.-).
+        <b>name</b>: The name of the add-on, normally a technically one (no spaces, no special characters except _.-).
       </li>
       <li>
-        author: Author's name(s) and (optionally) email adresses.
+        <b>author</b>: Author's name(s) and (optionally) email adresses.
       </li>
       <li>
-        version: Since it's difficult to protect numbers like 1.0 from Freeplane's number parser it's advised to prepend a 'v' to the number, e.g. 'v1.0'.
+        <b>version</b>: Since it's difficult to protect numbers like 1.0 from Freeplane's number parser it's advised to prepend a 'v' to the number, e.g. 'v1.0'.
       </li>
       <li>
-        freeplane-version-from: The oldest compatible Freeplane version. The add-on will not be installed if the Freeplane version is too old.
+        <b>freeplane-version-from</b>: The oldest compatible Freeplane version. The add-on will not be installed if the Freeplane version is too old.
       </li>
       <li>
-        freeplane-version-to: Normally empty: The newest compatible Freeplane version. The add-on will not be installed if the Freeplane version is too new.
+        <b>freeplane-version-to</b>: Normally empty: The newest compatible Freeplane version. The add-on will not be installed if the Freeplane version is too new.
       </li>
       <li>
-        updateUrl: URL of the file containing information (version, download url) on the latest version of this add-on. By default: &quot;${homepage}/version.properties&quot;
+        <b>updateUrl</b>: URL of the file containing information (version, download url) on the latest version of this add-on.<br/>By default: &quot;${homepage}/version.properties&quot;<br/>Examples:
+
+        <ul>
+          <li>
+            <b>For GitHub releases</b>: &quot;${homepage}/releases/latest/download/version.properties&quot;
+          </li>
+          <li>
+            <b>For Github in a folder named like the add-on&nbsp;(in the main repository branch)</b>: &quot;${homepage}/raw/main/${name}/version.properties
+          </li>
+          <li>
+            <b>For Github in a folder named like the add-on&nbsp;(in a repository branch named as the add-on version)</b>: &quot;${homepage}/raw/${version}/${name}/version.properties&quot;
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>addonsMenu</b>: Defines the addon's main menu location, defaults menu 'main_menu_scripting'.<br/>Use developer tool menuItemInfo to inspect menu location keys.<br/>This attribute is mandatory.<br/>Example: '/menu_bar/myAddons'
+      </li>
+      <li>
+        <b>downloadUrl</b>: URL from the place where the AddOn file will be available for downloading.<br/>By default is the same as the homepage.<br/>You can define a different place or a subfolder of the homepage.<br/>Examples:
+
+        <ul>
+          <li>
+            <b>homepage subfolder 'files'</b>: &quot;${homepage}/files/&quot;
+          </li>
+          <li>
+            <b>For GitHub releases (release named as the add-on version)</b>: ${homepage}/releases/download/${version}/
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>changelogUrl</b>: URL from the place where the history file will be available for downloading.<br/>By default is &quot;${homepage}/history.md&quot;<br/>You can define a different place or a subfolder of the homepage and a different file name and extension if wanted.<br/>Examples:
+
+        <ul>
+          <li>
+            <b>txt file</b>: &quot;${homepage}/history.md&quot;
+          </li>
+          <li>
+            <b>For GitHub releases as Markdown file</b>: &quot;${homepage}/releases/latest/download/history.md&quot;
+          </li>
+        </ul>
       </li>
     </ul>
   </body>
-</html></richcontent>
-<hook NAME="MapStyle" background="#f9f9f8">
+</html>
+</richcontent>
+<hook NAME="MapStyle" background="#f9f9f8" zoom="0.9">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" associatedTemplateLocation="file:/C:/Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/Menu-o-Matic/Menu-o-Matic.mm" show_note_icons="true" save_folding="save_folding_if_map_is_changed" fit_to_viewport="false"/>
 
 <map_styles>
@@ -51,7 +98,7 @@
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px" MAX_WIDTH="15 cm" MIN_WIDTH="3.5 cm">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;0 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45.19149 pt;0 pt;" ENDINCLINATION="56.68085 pt;29.87234 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#ff0000" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -128,10 +175,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="13" RULE="ON_BRANCH_CREATION"/>
-<node TEXT="description" POSITION="left" ID="ID_1678998363">
-<edge COLOR="#ff0000"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="description" FOLDED="true" POSITION="left" ID="ID_1678998363"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -147,12 +191,11 @@
       To translate the description you have to define a translation for the key 'addons.${name}.description'.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="Tutorial-o-Matic for Freeplane!!&#xa;Tutorial-o-Matic is an AddOn for Freeplane that gives the user the possibility to create his/her own tutorials." ID="ID_1642042079"/>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_461119253">
-<edge COLOR="#0000ff"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="changes" FOLDED="true" POSITION="left" ID="ID_461119253"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -162,26 +205,72 @@
       Change log of this add-on: append one node for each noteworthy version and put the details for each version into a child node.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="v0.0.1" FOLDED="true" ID="ID_1147464075">
 <node TEXT="Demo version" ID="ID_1739689712"/>
 </node>
 <node TEXT="v0.0.2" FOLDED="true" ID="ID_945484309">
-<node TEXT="Bugs corrections:&#xa;- License as plain text&#xa;- Updated version of Demo map" ID="ID_621408353"/>
+<node TEXT="Bugs corrections:" ID="ID_621408353"/>
+<node TEXT="License as plain text" ID="ID_1923412145"/>
+<node TEXT="Updated version of Demo map" ID="ID_555307095"/>
 </node>
 <node TEXT="v0.0.3" FOLDED="true" ID="ID_1106405456">
-<node TEXT="- better scrollspeed&#xa;- message when command no present in Menu for active map&#xa;- added execute_scripts_without_network_restriction: true so web images could be loaded&#xa;- improved showMenu to show actions in extended submenus&#xa;- changed &apos;Close tutorial&apos; to &apos;Stop tutorial&apos;&#xa;- tables have now black borders&#xa;- Codeblocks have special style in EditorPanes&#xa;- links in EditorPanes are now clickeable and open the default web browser&#xa;- added a listener to resize height of content panel when tabpanel width changes&#xa;- added newPage styles and functionality&#xa;- added Table of Contents styles and functionality&#xa;- added Table of Contents button to &apos;next page&apos; panel&#xa;- added GOTO style and its functionality&#xa;- added Action style and its functionality&#xa;- added groovy style and its functionality&#xa;- enables multiple tutorials in one map&#xa;- added &apos;copy&apos; style and its functionality&#xa;- added &apos;select&apos; style and its functionality&#xa;- added &apos;openMap&apos; style and its functionality&#xa;- added &apos;inspect tutorial map&apos; functionality" ID="ID_1550125378"/>
+<node TEXT="better scrollspeed" ID="ID_1550125378"/>
+<node TEXT="message when command no present in Menu for active map" ID="ID_626495090"/>
+<node TEXT="added execute_scripts_without_network_restriction: true so web images could be loaded" ID="ID_1874391134"/>
+<node TEXT="improved showMenu to show actions in extended submenus" ID="ID_303812795"/>
+<node TEXT="changed &apos;Close tutorial&apos; to &apos;Stop tutorial&apos;" ID="ID_1486491261"/>
+<node TEXT="tables have now black borders" ID="ID_9530218"/>
+<node TEXT="Codeblocks have special style in EditorPanes" ID="ID_56423716"/>
+<node TEXT="links in EditorPanes are now clickeable and open the default web browser" ID="ID_1062322075"/>
+<node TEXT="added a listener to resize height of content panel when tabpanel width changes" ID="ID_1925205902"/>
+<node TEXT="added newPage styles and functionality" ID="ID_1487877110"/>
+<node TEXT="added Table of Contents styles and functionality" ID="ID_1255937279"/>
+<node TEXT="added Table of Contents button to &apos;next page&apos; panel" ID="ID_466351229"/>
+<node TEXT="added GOTO style and its functionality" ID="ID_675441735"/>
+<node TEXT="added Action style and its functionality" ID="ID_85218736"/>
+<node TEXT="added groovy style and its functionality" ID="ID_450544179"/>
+<node TEXT="enables multiple tutorials in one map" ID="ID_1662787389"/>
+<node TEXT="added &apos;copy&apos; style and its functionality" ID="ID_397511938"/>
+<node TEXT="added &apos;select&apos; style and its functionality" ID="ID_219465291"/>
+<node TEXT="added &apos;openMap&apos; style and its functionality" ID="ID_1187322608"/>
+<node TEXT="added &apos;inspect tutorial map&apos; functionality" ID="ID_1384096554"/>
 </node>
 <node TEXT="v0.0.4" FOLDED="true" ID="ID_1654795865">
-<node TEXT="- corrected link to version.properties&#xa;- information of pasted nodes now is saved in each map for later exercises and multiple exercising maps&#xa;- added &apos;go back&apos; when using &apos;GOTO&apos; panes&#xa;- added &apos;show node from map&apos;&#xa;- added &apos;Show Tutorials&apos; in tutorial&apos;s last page&#xa;- added markedj.Options for Markdown" ID="ID_312985717"/>
+<node TEXT="corrected link to version.properties" ID="ID_312985717"/>
+<node TEXT="information of pasted nodes now is saved in each map for later exercises and multiple exercising maps" ID="ID_1625675097"/>
+<node TEXT="added &apos;go back&apos; when using &apos;GOTO&apos; panes" ID="ID_1206483462"/>
+<node TEXT="added &apos;show node from map&apos;" ID="ID_1070307973"/>
+<node TEXT="added &apos;Show Tutorials&apos; in tutorial&apos;s last page" ID="ID_1065728970"/>
+<node TEXT="added markedj.Options for Markdown" ID="ID_1245727594"/>
 </node>
-<node TEXT="v0.0.5" ID="ID_1381773414">
-<node TEXT="- use look and feel specific colors (dpolivaev)" ID="ID_1429862191"/>
+<node TEXT="v0.0.5" FOLDED="true" ID="ID_1381773414">
+<node TEXT="use look and feel specific colors (dpolivaev)" ID="ID_1429862191"/>
+</node>
+<node TEXT="v0.0.6" FOLDED="true" ID="ID_1444474192">
+<node TEXT="using devtools v0.9.31" ID="ID_1084561560"/>
+<node TEXT="added &quot;editing status&quot; to tutorial node (crayon icon)" ID="ID_710909877"/>
+<node TEXT="Added command &quot;get menu command&quot;" ID="ID_498503125"/>
+<node TEXT="Tab name can be set for each tutorial individually" ID="ID_1916947069"/>
+<node TEXT="List of Tutorials in Map can be shown in its own Tab. Its text can be set as a root node attribute." ID="ID_1159122569"/>
+<node TEXT="Added command: &quot;Show tutorials from active map&quot;" ID="ID_624798635"/>
+<node TEXT="Added command: &quot;Create new tutorial mind map&quot;" ID="ID_977756201"/>
+<node TEXT=" addGroovyPane method updated" ID="ID_1786257563"/>
+<node TEXT="Added Tutorial-o-Matic How to" ID="ID_1345715664"/>
+<node TEXT="Added command &quot;import Tutorial-o-Matic Styles&quot;" ID="ID_1154840216"/>
+<node TEXT="Added command &quot;Open tutorial page from link&quot;" ID="ID_940962261"/>
+<node TEXT="Added button that creates a link to current page" ID="ID_698142202"/>
+<node TEXT="Updated gotoPane to open in corresponding Tab and use withGoBack modifier" ID="ID_1912254700"/>
+<node TEXT="Added openTutorialPage style and pane" ID="ID_1158869821"/>
+</node>
+<node TEXT="v0.0.7" FOLDED="true" ID="ID_144067667">
+<node TEXT="getMenuCommand renamed to getMenuCommandToM.groovy" ID="ID_1910643500"/>
+<node TEXT="bugs fixes" ID="ID_1389797512"/>
+<node TEXT="Improved Step by Step Tutorials" ID="ID_345569965"/>
 </node>
 </node>
-<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795">
-<edge COLOR="#00ff00"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -197,12 +286,11 @@
       The License text has to be entered as a child of the <i>'license'</i>&nbsp;node, either as plain text or as HTML.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="MIT License&#xa;&#xa;Copyright (c) 2021 Eduardo Frohlich.&#xa;&#xa;Permission is hereby granted, free of charge, to any person obtaining a copy&#xa;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xa;in the Software without restriction, including without limitation the rights&#xa;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xa;copies of the Software, and to permit persons to whom the Software is&#xa;furnished to do so, subject to the following conditions:&#xa;&#xa;The above copyright notice and this permission notice shall be included in all&#xa;copies or substantial portions of the Software.&#xa;&#xa;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xa;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xa;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xa;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xa;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xa;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE&#xa;SOFTWARE." ID="ID_444630498"/>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_1967714695">
-<edge COLOR="#ff00ff"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_1967714695"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -212,14 +300,106 @@
       <font color="#000000" face="SansSerif, sans-serif">The child node contains the add-on configuration as an extension to mindmapmodemenu.xml (in Tools-&gt;Preferences-&gt;Add-ons). </font>
     </p>
     <p>
-      <font color="#000000" face="SansSerif, sans-serif">Every property in the configuration should receive a default value in <i>default.properties</i>&nbsp;node.</font>
+      <font color="#000000" face="SansSerif, sans-serif">&nbsp;</font>
     </p>
+    <p>
+      <font color="#000000" face="SansSerif, sans-serif">Every property in the configuration should receive a default value in <i>default.properties</i>&nbsp;node. </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <b>Automatic way (new since v0.9.30): </b>
+    </p>
+    <p>
+      you can add the preferences parameters as attributes to this node and then, by checking AddOn it will:
+    </p>
+    <ul>
+      <li>
+        create the child node containing <font color="#000000" face="SansSerif, sans-serif">the add-on configuration as an extension to mindmapmodemenu.xml</font>
+      </li>
+      <li>
+        add the properties to the <font color="#000000" face="SansSerif, sans-serif"><i>default.properties</i>&nbsp;node</font>
+      </li>
+      <li>
+        add the properties to the <i>translations</i><font color="#000000" face="SansSerif, sans-serif">&nbsp;node</font>
+      </li>
+    </ul>
+    <p>
+      
+    </p>
+    <p>
+      <b>How? </b>
+    </p>
+    <ul>
+      <li>
+        Add an attribute for each preference.
+      </li>
+      <li>
+        the attribute name should be the preference name.
+      </li>
+      <li>
+        as attribute value you should specify if it is a <b>boolean</b>, <b>string</b>&nbsp;or <b>number</b>&nbsp;preference
+      </li>
+      <li>
+        if it is a <b>number</b>&nbsp;preference. you should add the min and max value for it (separed by comma)
+      </li>
+    </ul>
+    <p>
+      
+    </p>
+    <p>
+      <b>Example: </b>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Attributes:
+    </p>
+    <table border="0" style="width: 80%; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0">
+      <tr>
+        <td valign="top" style="width: 50%; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1; border-right-width: 1; border-bottom-width: 1; border-left-width: 1">
+          <p style="margin-top: 1; margin-right: 1; margin-bottom: 1; margin-left: 1">
+            isStudent
+          </p>
+        </td>
+        <td valign="top" style="width: 50%; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1; border-right-width: 1; border-bottom-width: 1; border-left-width: 1">
+          <p style="margin-top: 1; margin-right: 1; margin-bottom: 1; margin-left: 1">
+            boolean
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" style="width: 50%; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1; border-right-width: 1; border-bottom-width: 1; border-left-width: 1">
+          <p style="margin-top: 1; margin-right: 1; margin-bottom: 1; margin-left: 1">
+            userName
+          </p>
+        </td>
+        <td valign="top" style="width: 50%; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1; border-right-width: 1; border-bottom-width: 1; border-left-width: 1">
+          <p style="margin-top: 1; margin-right: 1; margin-bottom: 1; margin-left: 1">
+            string
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" style="width: 50%; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1; border-right-width: 1; border-bottom-width: 1; border-left-width: 1">
+          <p style="margin-top: 1; margin-right: 1; margin-bottom: 1; margin-left: 1">
+            birthMonth
+          </p>
+        </td>
+        <td valign="top" style="width: 50%; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1; border-right-width: 1; border-bottom-width: 1; border-left-width: 1">
+          <p style="margin-top: 1; margin-right: 1; margin-bottom: 1; margin-left: 1">
+            number,1,12
+          </p>
+        </td>
+      </tr>
+    </table>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_1398497950">
-<edge COLOR="#00ffff"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="default.properties" POSITION="left" ID="ID_1398497950"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -237,11 +417,10 @@
       </li>
     </ul>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_546877695">
-<edge COLOR="#7c0000"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="translations" POSITION="left" ID="ID_546877695"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -260,22 +439,51 @@
       <li>
         'addons.${name}.&lt;scriptname&gt;' for each script since it will be the menu title.
       </li>
+      <li>
+        'OptionPanel.separator.${name}' for the add-on's name in the preferences panel
+      </li>
+      <li>
+        'OptionPanel.&lt;property&gt;' for the label of the property in the preferences panel
+      </li>
+      <li>
+        'OptionPanel.&lt;property&gt;.tooltip' for the tooltip message for the property in the preferences panel (whwn hovering on it with the mouse)
+      </li>
     </ul>
   </body>
-</html></richcontent>
-<node TEXT="en" ID="ID_1998059292">
-<attribute_layout NAME_WIDTH="162 pt" VALUE_WIDTH="281.24999 pt"/>
+</html>
+</richcontent>
+<node TEXT="en" ID="ID_643789068">
+<attribute_layout NAME_WIDTH="194.55319 pt" VALUE_WIDTH="245.87234 pt"/>
+<attribute NAME="addons.${name}.createNewTutorialMindMap" VALUE="Create new tutorial mind map"/>
 <attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
-<attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;In submenu  &lt;b&gt;{0}&lt;/b&gt; &lt;br&gt;click on  &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
-<attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;You can also use de keyboard shortcut &lt;b&gt;{0}&lt;/b&gt; for this command&lt;/html&gt;"/>
-<attribute NAME="addons.${name}.executeTutorial" VALUE="execute Demo tutorial"/>
-<attribute NAME="addons.${name}.openDemoMap" VALUE="open Demo map"/>
 <attribute NAME="addons.${name}.ToMDemo" VALUE="Tutorial-o-Matic Demo"/>
+<attribute NAME="addons.${name}.ToMTutorial" VALUE="Tutorial-o-Matic Intro"/>
+<attribute NAME="addons.${name}.importToMStyles" VALUE="Import Tutorial-o-Matic Styles"/>
+<attribute NAME="addons.${name}.getMenuCommandToM" VALUE="Get menu command"/>
+<attribute NAME="addons.${name}.executeTutorial" VALUE="execute Demo tutorial"/>
+<attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;&lt;h3&gt;Instructions:&lt;/h3&gt;In submenu &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;click on &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
+<attribute NAME="addons.${name}.openTutorialPageFromLink" VALUE="Open tutorial page from link"/>
+<attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;You can also use de keyboard shortcut &lt;b&gt;{0}&lt;/b&gt; for this command&lt;/html&gt;"/>
+<attribute NAME="addons.${name}.openDemoMap" VALUE="open Demo map"/>
+<attribute NAME="addons.${name}.showTutorialsFromActiveMap" VALUE="Show tutorials from active map"/>
+</node>
+<node TEXT="es" ID="ID_1100466604">
+<attribute_layout NAME_WIDTH="194.55319 pt" VALUE_WIDTH="214.46808 pt"/>
+<attribute NAME="addons.${name}.createNewTutorialMindMap" VALUE="Crear nuevo mapa para tutoriales"/>
+<attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
+<attribute NAME="addons.${name}.ToMDemo" VALUE="Tutorial-o-Matic Demo"/>
+<attribute NAME="addons.${name}.ToMTutorial" VALUE="Intro Tutorial-o-Matic"/>
+<attribute NAME="addons.${name}.importToMStyles" VALUE="Importar estilos Tutorial-o-Matic"/>
+<attribute NAME="addons.${name}.getMenuCommandToM" VALUE="Obtener comando desde el menú"/>
+<attribute NAME="addons.${name}.executeTutorial" VALUE="ejecutar Demo tutorial"/>
+<attribute NAME="addons.${name}.ActionInstruction1" VALUE="&lt;html&gt;&lt;h3&gt;Instrucciones:&lt;/h3&gt;En submenu  &lt;b&gt;{0}&lt;/b&gt; &lt;br&gt;has click en  &lt;b&gt;{1}&lt;/b&gt;&lt;/html&gt;"/>
+<attribute NAME="addons.${name}.openTutorialPageFromLink" VALUE="Abrir página de tutorial desde enlace"/>
+<attribute NAME="addons.${name}.ActionInstruction2" VALUE="&lt;html&gt;Puedes usar también el atajo &lt;b&gt;{0}&lt;/b&gt; para este comando&lt;/html&gt;"/>
+<attribute NAME="addons.${name}.openDemoMap" VALUE="abrir mapa demo"/>
+<attribute NAME="addons.${name}.showTutorialsFromActiveMap" VALUE="Mostrar tutoriales de mapa activo"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_378917294">
-<edge COLOR="#00007c"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="deinstall" POSITION="left" ID="ID_378917294"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -285,7 +493,8 @@
       List of files and/or directories to remove on uninstall
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute_layout NAME_WIDTH="42.75 pt" VALUE_WIDTH="295.49999 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/Tutorial-o-Matic.jar"/>
@@ -298,10 +507,22 @@
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/tutorialOMatic.svg"/>
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/tutorialOMatic-icon.svg"/>
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/tutorialOMatic-screenshot-1.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/templates/Tutorial-o-Matic/tutorial_styles_template.mm"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/getMenuCommand.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/showTutorialsFromActiveMap.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/createNewTutorialMindMap.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/ToMTutorial.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/importToMStyles.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/Tutorial-o-Matic Intro.mm"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/Tutorial-o-MaticCommands.mm"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/Tutorial-o-MaticStepByStep.mm"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/openTutorialPageFromLink.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/myExistingMindMap.mm"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/getMenuCommandToM.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/LongTutorialExample.mm"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1037882722">
-<edge COLOR="#007c00"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="scripts" POSITION="right" ID="ID_1037882722"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -416,11 +637,84 @@
       &nbsp;&nbsp;- In any case set execute_scripts_without_asking to true unless you want to annoy users.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
+<node TEXT="getMenuCommandToM.groovy" ID="ID_863849079">
+<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="186.89361 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.getMenuCommandToM"/>
+<attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Commands"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE="control shift F3"/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+</node>
+<node TEXT="showTutorialsFromActiveMap.groovy" ID="ID_484672073">
+<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="194.55319 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.showTutorialsFromActiveMap"/>
+<attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Commands"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
+</node>
+<node TEXT="createNewTutorialMindMap.groovy" ID="ID_1471194194">
+<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="187.65957 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.createNewTutorialMindMap"/>
+<attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Commands"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+</node>
+<node TEXT="importToMStyles.groovy" ID="ID_1858810414">
+<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="186.89361 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.importToMStyles"/>
+<attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Commands"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+</node>
+<node TEXT="openTutorialPageFromLink.groovy" ID="ID_1316819334">
+<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="186.89361 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.openTutorialPageFromLink"/>
+<attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Commands"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+</node>
+<node TEXT="ToMDemo.groovy" ID="ID_513310589">
+<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="170.80851 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.ToMDemo"/>
+<attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Demos"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
+</node>
 <node TEXT="openDemoMap.groovy" ID="ID_1629939217">
-<attribute_layout NAME_WIDTH="200.24999 pt" VALUE_WIDTH="200.24999 pt"/>
+<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="170.80851 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.openDemoMap"/>
-<attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
+<attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Demos"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
@@ -429,10 +723,10 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="ToMDemo.groovy" ID="ID_513310589">
-<attribute_layout NAME_WIDTH="200.24999 pt" VALUE_WIDTH="200.24999 pt"/>
-<attribute NAME="menuTitleKey" VALUE="addons.${name}.ToMDemo"/>
-<attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
+<node TEXT="ToMTutorial.groovy" ID="ID_1001747286">
+<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="141.70212 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.ToMTutorial"/>
+<attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
@@ -442,9 +736,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_1814812956">
-<edge COLOR="#7c007c"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="lib" POSITION="right" ID="ID_1814812956"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -478,14 +770,13 @@
       &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="Tutorial-o-Matic.jar" ID="ID_1864463328"/>
 <node TEXT="markedj-1.0.16.jar" ID="ID_1060333872"/>
 <node TEXT="jsoup-1.10.2.jar" ID="ID_1151792763"/>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_1623122610" VGAP_QUANTITY="2 px">
-<edge COLOR="#007c7c"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="zips" POSITION="right" ID="ID_1623122610" VGAP_QUANTITY="2 px"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -519,14 +810,13 @@
       &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="doc" ID="ID_281158802"/>
 <node TEXT="icons" ID="ID_211861022"/>
 <node TEXT="templates" ID="ID_553385296"/>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_1856886559">
-<edge COLOR="#7c7c00"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="images" POSITION="right" ID="ID_1856886559"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -556,61 +846,26 @@
       Images can be added automatically by releaseAddOn.groovy or must be uploaded into the map via the script <i>Tools-&gt;Scripts-&gt;Insert Binary</i>&nbsp;since they have to be (base64) encoded as simple strings.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="tutorialOMatic.svg" ID="ID_863225553"/>
 <node TEXT="tutorialOMatic-icon.svg" ID="ID_1901205001"/>
 <node TEXT="tutorialOMatic-screenshot-1.png" ID="ID_791135029"/>
 </node>
-<node TEXT="shortcuts" POSITION="right" ID="ID_989188638">
-<edge COLOR="#ff0000"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="actions" POSITION="right" ID="ID_742010356"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
   </head>
   <body>
-    <p>
-      some nodes to build AddOn and test changes easily and fast
-    </p>
+    Direct links to menu commands
   </body>
-</html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Edo
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="Build add-on" ID="ID_1016684737" LINK="menuitem:_addons.devtools.checkAddOn_on_single_node">
-<icon BUILTIN="emoji-1F527"/>
-</node>
-<node TEXT="Package add-on for publication" ID="ID_806418866" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node">
-<icon BUILTIN="emoji-1F5DC"/>
-</node>
-<node TEXT="Tutorial-o-Matic-v0.0.4.addon.mm" ID="ID_819625175" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/Tutorial-o-Matic-v0.0.4.addon.mm"/>
-<node TEXT="loadAndExecuteTutorial.groovy" ID="ID_1523867671" LINK="menuitem:_ExecuteScriptForSelectionAction"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      .groovy
-    </p>
-    <p>
-      opens tutorial defined in first child node
-    </p>
-  </body>
-</html></richcontent>
-<attribute_layout VALUE_WIDTH="115.5 pt"/>
-<attribute NAME="script1" VALUE="import edofro.tutorialomatic.ToM    as tom&#xa;&#xa;//opens demo map&#xa;def mapFileName = node.children[0].text&#xa;&#xa;//para que use el que estoy modificando&#xa;pathName=&quot;C:\\Users\\Edo\\Documents\\GitHub\\Freeplane_Tutorial_AddOn\\Tutorial-o-Matic\\zips\\doc\\Tutorial-o-Matic\\${mapFileName}&quot;&#xa;&#xa;//def mapa = node.map //usar mapa activo&#xa;def mapa    = tom.getMapFromPath(pathName, true) //usar mapa indicado (true: visible, false: oculto)&#xa;&#xa;tom.showTutorials( mapa )&#xa;&#xa;return &apos;tutorial started&apos;"/>
-<node TEXT="SimpleTutorialSample.mm" ID="ID_1123728779"/>
-<node TEXT="Tutorial Sample.mm" ID="ID_1495047992"/>
-</node>
+</html>
+</richcontent>
+<node TEXT="Build add-on" ID="ID_295578710" LINK="menuitem:_addons.devtools.checkAddOn_on_single_node"/>
+<node TEXT="Package add-on for publication" ID="ID_776080324" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node"/>
+<node TEXT="Export Translations" ID="ID_743273714" LINK="menuitem:_addons.devtools.exportTranslations_on_single_node"/>
+<node TEXT="Import Translations" ID="ID_190005721" LINK="menuitem:_addons.devtools.importTranslations_on_single_node"/>
 </node>
 </node>
 </map>

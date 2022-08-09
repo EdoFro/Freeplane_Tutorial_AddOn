@@ -1,17 +1,18 @@
 //Tutorial-o-Matic
 
+
+
 apply plugin: 'groovy'
 
 targetCompatibility='1.8'
 
 // 1. I have to define which freeplane version is going to be used to look at the libreries (freeplane and groovy)
-def FPversion = 'v10_x'
+def FPversion = 'v9_15'
 def freeplaneDirs = [
         instaled     : "C:/Program Files/Freeplane",
         protableApps : "C:/PortableApps/FreeplanePortable/App/Freeplane",
         v9_15         : "C:/Freeplane/freeplane-1.9.15-pre01",
-        v10_1         : "C:/Freeplane/freeplane-1.10.2",
-        v10_x         : "C:/Freeplane/freeplane-1.10.x"
+        v10_1         : "C:/Freeplane/freeplane-1.10.1-pre05"
     ]
 def freeplaneDir = freeplaneDirs[FPversion]
 
@@ -45,32 +46,19 @@ dependencies {
     implementation name : 'freeplanelauncher'
     implementation name : 'freeplaneviewer'
     implementation group: 'org.freeplane.core',   name: 'freeplaneeditor', version:"+"
-    implementation group: 'org.freeplane.script', name: 'plugin', version: '+'
+    implementation group: 'org.freeplane.script', name: 'plugin', version: '+' 
     implementation name : 'markedj', version: '+' //<---- para markedj
     implementation name : 'jsoup'  , version: '+' //<---- para jsoup
     //Freeplane now comes with groovy 3.0.8
-    if(FPversion.startsWith('v10')){
-        implementation platform ("${groovyGroupId}:groovy-all:${groovyVersion}".toString()) {
-            exclude group:groovyGroupId, module:'groovy-test'
-            exclude group:groovyGroupId, module:'groovy-test-junit5'
-            exclude group:groovyGroupId, module:'groovy-testng'
-            exclude group:groovyGroupId, module:'groovy-ant'
-            exclude group:groovyGroupId, module:'groovy-docgenerator'
-            exclude group:groovyGroupId, module:'groovy-groovydoc'
-            exclude group:groovyGroupId, module:'groovy-cli-commons'
-            exclude group:groovyGroupId, module:'groovy-cli-picocli'
-        }
-    } else {
-        implementation ("${groovyGroupId}:groovy-all:${groovyVersion}".toString()) {
-            exclude group:groovyGroupId, module:'groovy-test'
-            exclude group:groovyGroupId, module:'groovy-test-junit5'
-            exclude group:groovyGroupId, module:'groovy-testng'
-            exclude group:groovyGroupId, module:'groovy-ant'
-            exclude group:groovyGroupId, module:'groovy-docgenerator'
-            exclude group:groovyGroupId, module:'groovy-groovydoc'
-            exclude group:groovyGroupId, module:'groovy-cli-commons'
-            exclude group:groovyGroupId, module:'groovy-cli-picocli'
-        }    
+    implementation ("${groovyGroupId}:groovy-all:${groovyVersion}".toString()) {
+        exclude group:groovyGroupId, module:'groovy-test'
+        exclude group:groovyGroupId, module:'groovy-test-junit5'
+        exclude group:groovyGroupId, module:'groovy-testng'
+        exclude group:groovyGroupId, module:'groovy-ant'
+        exclude group:groovyGroupId, module:'groovy-docgenerator'
+        exclude group:groovyGroupId, module:'groovy-groovydoc'
+        exclude group:groovyGroupId, module:'groovy-cli-commons'
+        exclude group:groovyGroupId, module:'groovy-cli-picocli'
     }
     implementation "${groovyGroupId}:groovy-dateutil:${groovyVersion}".toString()
 }

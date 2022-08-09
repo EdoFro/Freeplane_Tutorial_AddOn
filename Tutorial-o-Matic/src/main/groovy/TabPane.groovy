@@ -12,8 +12,19 @@ class TabPane{
 //region: methods
 
     def static removeTab(String tabName, boolean hideTabPane = false){
-        def index   = tabPane.indexOfTab(tabName)
-        //eliminar
+        int index = tabPane.indexOfTab(tabName)
+        //msg("removeTab String - index: $index")
+        removeTab(index, hideTabPane)
+    }
+    
+    def static removeTab(javax.swing.JComponent comp, boolean hideTabPane = false){
+        int index = tabPane.indexOfComponent(comp)
+        //msg("removeTab Component - index: $index")
+        removeTab(index, hideTabPane)
+    }
+    
+    def static removeTab(int index, boolean hideTabPane = false){
+        //msg("removeTab index - index: $index")
         if (index >= 0) {
             tabPane.removeTabAt(index)
             def previousTab = tabPane.hasProperty('previousTab')? tabPane.previousTab : 0
@@ -66,6 +77,10 @@ class TabPane{
 
     def static repaint(){
         tabPane.repaint()
+    }
+    
+    def static msg(texto){
+        ui.informationMessage(texto.toString())
     }
 //end:
 }

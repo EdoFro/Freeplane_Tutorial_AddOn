@@ -7,7 +7,12 @@ import edofro.menuomatic.WSE_redux              as WSE
 
 import org.freeplane.core.ui.components.UITools as ui
 import org.freeplane.plugin.script.proxy.ScriptUtils
+import org.freeplane.core.util.MenuUtils            as menuUtils
+//import org.freeplane.core.util.HtmlUtils            as htmlUtils
 
+
+import org.freeplane.api.Node as ApiNode
+import org.freeplane.api.MindMap as ApiMindMap
 
 
 class ToM{
@@ -15,10 +20,13 @@ class ToM{
     // region: properties
         // this region has all the properties for the ToM class
 
-    static final String version        = '0.0.4'
-    static final c                     = ScriptUtils.c()
-    static final String tabName        = 'Tutorial'
-    static final String idDictStorage  = 'ToM_idDictionary'
+    static final String version           = '0.0.6'
+    static final c                        = ScriptUtils.c()
+    static final String idDictStorage     = 'ToM_idDictionary'
+    static final String attributeTabLabel = 'ToM_TabLabel'
+    static final String defaultTabLabel   = 'Tutorial'
+    static final String defaultMapTutorialsTabLabel = 'Tutorials'
+    static final String attributeNewPageLink        = 'ToM_LinkToPage'
 
     static final Map styles = [
         tutorial  : 'ToM-Tutorial'  ,
@@ -36,6 +44,7 @@ class ToM{
         openMap   : 'ToM_openMap'   ,
         openTutMap: 'ToM_openTutMap',
         showNode  : 'ToM_showNode'  ,
+        openTutorialPage : 'ToM_openTutPage',
     ]
 
     static final exeHowIcons = ['emoji-1F507', 'emoji-2328', 'emoji-1F5B1']
@@ -45,23 +54,44 @@ class ToM{
     // region: getting tutorial components nodes
         //The methods in this region get the nodes from the mindmap that contain the information needed to build the tutorial
 
-    def static getNextTutNodes(n, boolean included = false){
+    def static getNextTutNodes( n, boolean included = false){
         def tutNodes  = getTutNodes(getTutorialNode(n))
         def pos = tutNodes.indexOf(n)
         def t = included?0:1
         return tutNodes.drop(pos + t)
     }
 
-    def static getTutNodes(nTutorial){
-        return nTutorial.find{it.style.name?.startsWith(styles.ini)?:false}
+    def static getTutNodes( nTutorial){
+        return nTutorial.find{isTutNode(it) && !isBlocked(it)}
+    }
+    
+    def static isTutNode( n){
+        return n?.style?.name?.startsWith(styles.ini)?:false
+    }
+    
+    def static isBlocked(n){
+        return (n && (n.pathToRoot - n).any{it.icons.icons.contains('closed')})
     }
 
-    def static getTutorialNode(n){
-        return n.pathToRoot.find{it.style.name == styles.tutorial}
+    def static getTutorialNode( n){
+        return n.pathToRoot.find{isTutorialNode(it)}
     }
 
-    def static getNewPageNodes(nTutorial){
-        return nTutorial.find{it.style.name == styles.newPage}
+    def static isTutorialNode( n){
+        return n.style.name == styles.tutorial
+    }
+
+    def static getNewPageNodes( nTutorial){
+        return nTutorial.find{isNewPageNode(it)}
+    }
+    
+    def static isNewPageNode( n){
+        return n.style.name == styles.newPage
+    }
+
+    def static isEditingMode( n){
+        def nodo = getTutorialNode(n)
+        return nodo.icons.contains('emoji-1F58D')
     }
 
     // end:
@@ -93,13 +123,16 @@ class ToM{
                     }
                     break
                 case styles.showMenu:
-                    addShowMenuItemPane(myPanel, tutNode.children)
+                    addShowMenuItemPane(myPanel, tutNode.children, options)
                     break
                 case styles.toc:
                     addTOCPane(myPanel, tutNode)
                     break
                 case styles.goto:
-                    addGotoPane(myPanel, tutNode.children, nextTutNodes[0], options)
+                    addGotoPane(myPanel, tutNode, nextTutNodes[0], options)
+                    break
+                case styles.openTutorialPage:
+                    addOpenTutorialPage(myPanel, tutNode, options)
                     break
                 case styles.action:
                     addActionPane(myPanel, tutNode, options)
@@ -133,7 +166,7 @@ class ToM{
         tomui.adjustHeight(myPanel, doClear)
     }
 
-    def static fillPage(myP, nodo, included, doClear){
+    def static fillPage(myP,  nodo, boolean included, boolean doClear){
         def nextNodes = getNextTutNodes(nodo, included)
         fillContentPane(myP, nextNodes, doClear)
     }
@@ -151,16 +184,67 @@ class ToM{
         }
     }
 
+    def static htmlTitle(String texto){
+        return "<html><style>h1 {color: rgb(240, 240, 240);background-color: rgb(100, 100, 150);display: block;padding: 10px;}</style><body><h1>${texto}</h1></body></html>"
+    }
+
     def static addPageTitle(myP, String texto){
-        def html = "<html><style>h1 {color: rgb(240, 240, 240);background-color: rgb(100, 100, 150);display: block;padding: 10px;}</style><body><h1>${texto}</h1></body></html>"
+        def html = htmlTitle(texto)
         myP.add(tomui.createInstructionsPane(html), tomui.GBC)
     }
+        
+    def static addPageTitle(myP,  ApiNode nodo){
+        def html = htmlTitle(nodo.text)
+        def bttnText   
+        def bttnToolTip
+        def bttnAction 
+        def bttnIcon
+        def botones = []
 
-    def static addPageTitle(myP, nodo){
-        addPageTitle(myP, nodo.text)
+        bttnText    = null //'link'
+        bttnToolTip = "Click to insert node with link to '${nodo.text}' section"
+        bttnAction  = { e -> 
+            def newPageNode = nodo
+            def selectedNode = c.selected
+            def linkNode = selectedNode.createChild(newPageNode.text)
+            linkNode[attributeNewPageLink] = getUriFromNode(newPageNode)
+            linkNode.link.uri = new URI('menuitem:_addons.tutorialOMatic.openTutorialPageFromLink_on_single_node')
+        }
+        bttnIcon    = menuUtils.getMenuItemIcon('IconAction.emoji-1F517')
+        botones << [bttnText, bttnToolTip, bttnAction, bttnIcon]
+        
+        if (isEditingMode(nodo)) {
+            bttnText    = null //"inspect"
+            bttnToolTip = "Click to select the page's source nodes"
+            bttnAction  = { e ->
+                def pageNode = nodo   //.parent
+                def m = c.mapLoader(nodo.map.file).withView()//.selectNodeById(pageNodeId)
+                m.load()
+                pageNode.pathToRoot*.folded = false
+                c.select(pageNode)
+            }
+            bttnIcon    = menuUtils.getMenuItemIcon('IconAction.emoji-1F52C')
+            botones << [bttnText, bttnToolTip, bttnAction, bttnIcon]
+            
+            bttnText    = null //'reload'
+            bttnToolTip = "Click to reload '${nodo.text}' section"
+            bttnAction  = { e -> fillPage(myP, nodo, true, true)}
+            bttnIcon    = menuUtils.getMenuItemIcon('IconAction.emoji-1F504')
+            botones << [bttnText, bttnToolTip, bttnAction, bttnIcon]
+        } 
+        // else {
+            // addPageTitle(myP, nodo.text)
+        // }
+        myP.add(tomui.createPageTitlePane(html, botones), tomui.GBC)
+    }
+    
+    def static getUriFromNode(ApiNode nodo, String sch = 'tutorial'){
+        def ssp = nodo.map.file.toURI().schemeSpecificPart
+        def frg = nodo.id
+        return new URI(sch, ssp, frg)
     }
 
-    def static addNextPagePane(myP, lastNode, boolean included = false, boolean showNextButton = true){
+    def static addNextPagePane(myP, ApiNode lastNode, boolean included = false, boolean showNextButton = true){
         def closeLabel   = 'Stop tutorial'
         def closeToolTip = 'Click to stop the tutorial and close the tutorial tab'
         def nextLabel    = showNextButton?'Next page':'Show tutorials'
@@ -170,18 +254,26 @@ class ToM{
         def tocToolTip   = 'Click to show the Table of Contents of the tutorial'
         def tocBttnAction   = { e -> showTOC(myP,lastNode) }
 
-        def nextButtonPanel = tomui.createNextButtonPanel(tabName, closeLabel, closeToolTip, nextLabel, nextToolTip , bttnAction, tocLabel, tocToolTip, tocBttnAction)
+        def nextButtonPanel = tomui.createNextButtonPanel(closeLabel, closeToolTip, nextLabel, nextToolTip , bttnAction, tocLabel, tocToolTip, tocBttnAction)
         myP.add(nextButtonPanel, tomui.GBC)
     }
 
-    def static addShowMenuItemPane(myP, nodos){
+    def static addShowMenuItemPane(myP, nodos, options){
         nodos.findAll{n -> toma.hasAction(n)}.each{nodo ->
             def infoAccion  = toma.getActionInfoMap(nodo)
             if (infoAccion){
-                def msgHtml     = infoAccion.instructions
-                def bttnText    = 'Show it in the menu'
-                def bttnToolTip = "Click to see where is ${toma.apos(infoAccion.label)} in Freeplane Menu"
-                def bttnAction  = { e ->
+                def msgHtmlA    = nodo.note?tomui.getHtmlFromNote(nodo, options):null
+                def msgHtmlB    = infoAccion.instructions
+                def msgHtml     = tomui.mergeHtml(msgHtmlA,msgHtmlB)
+                def botones = []
+                def bttnText    
+                def bttnToolTip 
+                def bttnAction  
+                def bttnIcon
+                
+                bttnText    = null //'Show me'
+                bttnToolTip = "Click to see where is ${toma.apos(infoAccion.label)} in Freeplane Menu"
+                bttnAction  = { e ->
                         def bttn = e.source
                         def sel = bttn.isSelected()
                         def bttnPanel = tomui.getButtonPanel(bttn)
@@ -192,12 +284,33 @@ class ToM{
                             bttn.label = 'Close menu'
                             tomui.setNextPagePanelEnabled(myP, false)
                         } else {
-                            bttn.label = 'Show me'
+                            bttn.label = null // 'Show me'
                             if(! tomui.anyCompPending(myP) ) tomui.setNextPagePanelEnabled(myP, true)
                         }
                     }
+                bttnIcon = menuUtils.getMenuItemIcon('IconAction.emoji-1F50D')
+                
+                botones << [bttnText, bttnToolTip, bttnAction, bttnIcon, true]
+                
+                if(withExecute(nodo)){
+                    def enabled = !disableBttn(nodo)
+                    def exeHow  = exeActionsHow(nodo)
+                    bttnText    = null // 'Execute'
+                    bttnToolTip =  "Click to execute the command on the selected nodes"
+                    bttnAction  = { e ->
+                            def bttn = e.source
+                            bttn.setEnabled(enabled)
+                            toma.executeActions([] << infoAccion, exeHow)
+                        }
+                    bttnIcon = menuUtils.getMenuItemIcon('IconAction.launch')
 
-                def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, true)
+                    botones << [bttnText, bttnToolTip, bttnAction, bttnIcon, true]
+                }
+
+                
+                def buttonPanel = tomui.createButtonPanel(msgHtml, botones)
+                
+                
                 buttonPanel.metaClass.pending = false
                 myP.add(buttonPanel, tomui.GBC)
             } else {
@@ -206,53 +319,93 @@ class ToM{
             }
         }
     }
+    
+    def static withExecute( ApiNode nodo){
+        return nodo.icons.icons.contains('emoji-1F525')
+    }
+    
+    
 
-    def static addGotoPane(myP, nodos, backNode, options){
+    def static addGotoPane(myP, ApiNode tNode, ApiNode backNode, options){
+        backNode = withGoBack(tNode)?backNode:null
+        def nodos = tNode.children
         nodos.findAll{n -> n.link.node?true:false}.each{nodo ->
             def targetNode  = nodo.link.node
             def msgHtml     = nodo.note?tomui.getHtmlFromNote(nodo, options):null
-            def bttnText    = nodo.text
-            def bttnToolTip = "Click to go to '${bttnText}' section"
-            def bttnAction  = { e -> gotoAction(myP, targetNode, backNode) }
-            def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+            def bttnText    = nodo.htmlText
+            def bttnToolTip = "Click to go to '${nodo.plainText.replace('\n',' ')}' section"
+            def bttnAction  = { e -> 
+                if(targetNode.style.name == styles.tutorial){
+                    def tutorialTabName = targetNode[attributeTabLabel] ?: defaultTabLabel
+                    def myP_thisTutorial = tomui.getContentPaneFromMyTab(tutorialTabName.toString(), true)
+                    gotoAction(myP_thisTutorial, targetNode, myP.equals(myP_thisTutorial) ? backNode : null) 
+                } else {
+                    gotoAction(myP, targetNode, backNode) 
+                }            
+             }
+            def buttonPanel = tomui.createButtonPanel(msgHtml, bttnText, bttnToolTip, bttnAction, false)
             myP.add(buttonPanel, tomui.GBC)
         }
     }
     
-     def static gotoAction(myP,targetNode, backNode){
+    def static withGoBack( ApiNode nodo){
+        return nodo.icons.icons.contains('emoji-1F519')
+    }
+    
+     def static gotoAction(myP, ApiNode targetNode, ApiNode backNode){
          myP.removeAll()
-         addReturnPane(myP, backNode)
+         if (backNode) addReturnPane(myP, backNode)
          fillPage(myP, targetNode, true, false)
-         addReturnPane(myP, backNode)
+         if (backNode) addReturnPane(myP, backNode)
      }
     
-    def static addReturnPane(myP, backNode){
+    def static addReturnPane(myP,  ApiNode backNode){
         def msgHtml     = "Return to '${backNode.text}' page"
         def bttnText    = 'go back'
-        def bttnToolTip = "Click to go to '${backNode.text}' section"
+        def bttnToolTip = "Click to go to '${backNode.plainText.replace('\n',' ')}' section"
         def bttnAction  = { e -> fillPage(myP, backNode, true, true)}
         def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
         myP.add(buttonPanel, tomui.GBC)
     }
+    
+    def static addOpenTutorialPage(myP, ApiNode tNode, options){
+        def nodos = tNode.children.findAll{ n -> isValidUri(n.link?.uri) || isValidUri(n[attributeNewPageLink].uri)}
+        nodos.each{nodo ->
+            def msgHtml     = nodo.note?tomui.getHtmlFromNote(nodo, options):null
+            def bttnText    = nodo.htmlText
+            def bttnToolTip = "Click to go to '${nodo.plainText.replace('\n',' ')}' section"
+            def bttnAction  = { e -> 
+                openTutorialPage(nodo)
+            }
+            def buttonPanel = tomui.createButtonPanel(msgHtml, bttnText, bttnToolTip, bttnAction, false)
+            myP.add(buttonPanel, tomui.GBC)
+        }
+    }
 
-    def static addGroovyPane(myP, nodoT){
-        def enabled = !disableBttn(nodoT)
+    def static addGroovyPane(myP, ApiNode nodoT){
+        def parentEnabled = !disableBttn(nodoT)
+        def parentReadOnly = isReadOnly(nodoT)
         nodoT.children.findAll{n -> WSE.isGroovyNode(n)}.each{nodo ->
+            def enabled = parentEnabled && !disableBttn(nodo)
+            def readOnly = parentReadOnly || isReadOnly(nodo)
             def script = WSE.scriptFromNode(nodo)
             if (script){
                 def scrText     = script + "\n c.statusInfo = '---- ready ----'".toString()
                 def msgHtml     = getGroovyHtml(nodo, script)
-                def bttnText    = 'Execute'
-                def bttnToolTip = "Click to execute script on selected nodes"
-                def bttnAction  = { e ->
-                        def bttn = e.source
-                        bttn.setEnabled(enabled)
-                        c.script(scrText, "groovy").executeOn(c.selected)
-                    }
-
-                def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
-                buttonPanel.metaClass.pending = false
-                myP.add(buttonPanel, tomui.GBC)
+                if(readOnly){
+                    myP.add(tomui.createInstructionsPane(msgHtml), tomui.GBC)
+                } else {
+                    def bttnText    = enabled ? 'Execute' : 'Execute 1 time'
+                    def bttnToolTip = "Click to execute script on selected nodes"
+                    def bttnAction  = { e ->
+                            def bttn = e.source
+                            bttn.setEnabled(enabled)
+                            c.script(scrText, "groovy").executeOn(c.selected)
+                        }
+                    def buttonPanel = tomui.createButtonPanel(msgHtml,bttnText,bttnToolTip, bttnAction, false)
+                    buttonPanel.metaClass.pending = false
+                    myP.add(buttonPanel, tomui.GBC)
+                }
             } else {
                 def textoHtml = '<html><body><p>No script encountered in tutorial node</p></body></html>'
                 myP.add(tomui.createInstructionsPane(textoHtml), tomui.GBC)
@@ -260,15 +413,15 @@ class ToM{
         }
     }
 
-     def static getGroovyHtml(nodo, script){
-         def showScript = nodo.icons.icons.contains('emoji-1F50D')
+     def static getGroovyHtml( ApiNode nodo, script){
+         def showScript = nodo.icons.icons.contains('emoji-1F50D')  ||  nodo.icons.icons.contains('emoji-1F453') 
          uiMsg("showScript ${showScript}")
-         def html = showScript? tomui.getHtmlFromGroovyNode(nodo, script) : nodo.text
+         def html = showScript? tomui.getHtmlFromGroovyNode(nodo, script) : nodo.htmlText
          uiMsg("html ${html}")
          return html
      }
 
-    def static addActionPane(myP, nodo, options){
+    def static addActionPane(myP, ApiNode nodo, options){
         def infoAcciones = []
         nodo.children.findAll{n -> toma.hasAction(n)}.each{n ->
             def infoAccion = toma.getActionInfoMap(n)
@@ -289,7 +442,7 @@ class ToM{
         myP.add(buttonPanel, tomui.GBC)
     }
 
-     def static exeActionsHow(nodo){
+     def static exeActionsHow( ApiNode nodo){
          def iconos = nodo.icons.icons
          def iconitos = iconos.intersect(exeHowIcons)
          if(iconitos){
@@ -300,12 +453,17 @@ class ToM{
          }
      }
 
-     def static disableBttn(nodo){
+     def static disableBttn( ApiNode nodo){
          def iconos = nodo.icons.icons
          return iconos.contains('emoji-1F56F')
      }
+     
+     def static isReadOnly( ApiNode nodo){
+         def iconos = nodo.icons.icons
+         return iconos.contains('emoji-1F453')
+     }
 
-    def static addPastePane(myP, nodoSource){
+    def static addPastePane(myP, ApiNode nodoSource){
         def enabled     = !disableBttn(nodoSource)
         def msgHtml     = "Click to paste the example nodes to the selected node"
         def bttnText    = "Insert nodes"
@@ -334,7 +492,7 @@ class ToM{
         myP.add(buttonPanel, tomui.GBC)
     }
 
-    def static addSelectPane(myP, nodo){
+    def static addSelectPane(myP, ApiNode nodo){
         def enabled     = !disableBttn(nodo)
         def msgHtml     = "Click to select the node(s)"
         def bttnText    = "Select node(s)"
@@ -374,7 +532,7 @@ class ToM{
         myP.add(buttonPanel, tomui.GBC)
     }
 
-     def static getIdDictionary(mapa){
+     def static getIdDictionary(ApiMindMap mapa){
          def dict = [:]
          def textoDict = mapa.storage[idDictStorage]
          if(textoDict){
@@ -386,7 +544,7 @@ class ToM{
          return dict
      }
 
-     def static setIdDictionary(mapa, dict){
+     def static setIdDictionary(ApiMindMap mapa, dict){
          def texto = new StringBuilder()
          dict.each{k,v ->
              texto << "${k}:${v};"
@@ -394,7 +552,7 @@ class ToM{
          mapa.storage[idDictStorage] = texto
      }
 
-    def static addOpenMapPane(myP, tutNode, options){
+    def static addOpenMapPane(myP,  ApiNode tutNode, options){
         def sep         = File.separator
         def nodoMapa    = tutNode.children.find{it.text.endsWith('.mm')}
         def mapFileName = nodoMapa?.text
@@ -413,7 +571,7 @@ class ToM{
         myP.add(buttonPanel, tomui.GBC)
     }
 
-    def static addInspectPane(myP, nodo){
+    def static addInspectPane(myP,  ApiNode nodo){
         def msgHtml     = "Click to inspect this page in the tutorial map"
         def bttnText    = "inspect"
         def bttnToolTip = "Click to select the page's source nodes"
@@ -428,12 +586,12 @@ class ToM{
         myP.add(buttonPanel, tomui.GBC)
     }
 
-    def static addShowNodePane(myP, nodo){
+    def static addShowNodePane(myP, ApiNode nodo){
         def nodos = nodo.children.findAll{ n -> n.link && (n.link.node || (!n.link.node && !n.link.file && n.link.uri.scheme == 'file'))}
         nodos.each{ n ->
-            def msgHtml     = "Click to show ${n.text}"
+            def msgHtml     = "Click to show ${n.plainText.replace('\n',' ')}"
             def bttnText    = "goto Node"
-            def bttnToolTip = "Click to show ${n.text}"
+            def bttnToolTip = "Click to show ${n.plainText.replace('\n',' ')}"
             def bttnAction  
             if(n.link.node){
                 bttnAction = { e ->
@@ -461,11 +619,11 @@ class ToM{
         }
     }
 
-    def static addTOCPane(myP,nodo){
+    def static addTOCPane(myP, ApiNode nodo){
         def titleNodes  = getNewPageNodes(getTutorialNode(nodo))
         def pane = tomui.createEmptyGridBagPanel()
         titleNodes.each{ tn ->
-            def title = tn.text
+            def title = tn.htmlText
             def bttnAction   = { e -> fillPage(myP, tn, true, true) }
             def button = tomui.createButton(title, bttnAction)
             pane.add(button, tomui.GBC)
@@ -473,18 +631,20 @@ class ToM{
         myP.add(pane, tomui.GBC)
     }
 
-    def static addTutorialsPane(myP, mapa){
-        def nodosTutoriales = mapa.root.find{it.style.name == styles.tutorial}
+    def static addTutorialsPane(myP, ApiMindMap mapa, nodosTutoriales){
+        //def nodosTutoriales = mapa.root.find{it.style.name == styles.tutorial && !isBlocked(it) }
         if ( nodosTutoriales.size() != 1 ){
             def pane = tomui.createEmptyGridBagPanel()
             def pre  = nodosTutoriales.size() == 0 ? "No t" : "T"
             addPageTitle(myP, "${pre}utorials present in '${mapa.name}' map".toString())
             nodosTutoriales.each{ nT ->
-                def title = nT.text
+                def title = nT.htmlText
                 def bttnAction   = { e ->
                     def tutNodes = getTutNodes(nT)
                     if(tutNodes) {
-                        fillContentPane(myP, tutNodes)
+                        def tutorialTabName = nT[attributeTabLabel] ?: defaultTabLabel
+                        def myP_thisTutorial = tomui.getContentPaneFromMyTab(tutorialTabName.toString(), true)
+                        fillContentPane(myP_thisTutorial, tutNodes)
                     } else {
                         ui.informationMessage( "no tutorial components(nodes) found for tutorial '${nT.text}'".toString() )
                     }
@@ -492,7 +652,7 @@ class ToM{
                 def button = tomui.createButton(title, bttnAction)
                 pane.add(button, tomui.GBC)
             }
-            def stopButton = tomui.createButton('Exit tutorial', {tomui.closeTab(tabName)})
+            def stopButton = tomui.createButton('CLOSE', { e -> tomui.closeTab(e.source)})
             pane.add(stopButton, tomui.GBC)
             myP.add(pane, tomui.GBC)
         } else {
@@ -519,10 +679,19 @@ class ToM{
     }
 
     def static showTutorials(mapa){
-        def myP = tomui.getContentPaneFromMyTab(tabName, true)
+        def nodosTutoriales = mapa.root.find{it.style.name == styles.tutorial && !isBlocked(it) }
+        if (!nodosTutoriales){
+            ui.informationMessage( "no tutorials found for mindmap '${mapa.name}'".toString() )
+        }
+        def tutorialTabName
+        if ( nodosTutoriales.size()==1 ) {
+                tutorialTabName = nodosTutoriales[0][attributeTabLabel]
+        }
+        tutorialTabName ?= mapa.root[attributeTabLabel] ?: defaultMapTutorialsTabLabel
+        def myP = tomui.getContentPaneFromMyTab(tutorialTabName.toString(), true)
         myP.removeAll()
         tomui.resizeContentPanel(myP,tomui.maxContentPaneHeigth)
-        addTutorialsPane(myP, mapa)
+        addTutorialsPane(myP, mapa, nodosTutoriales)
         tomui.adjustHeight(myP, true)
     }
 
@@ -540,14 +709,84 @@ class ToM{
         }
     }
 
-    def static exists(String path){new File(path).isFile()}
+    def static exists(String path){
+        exists(new File(path))
+    }
+
+    def static exists(File file){
+        file.isFile()
+    }
 
     // end:
 
+    // region: Linking tutorial pages from other mindmaps
+    
+    def static openTutorialPage(nodeDirection , ApiMindMap mapa = null){
+        if(nodeDirection instanceof java.net.URI) {
+            return openTutorialPageUri(nodeDirection, mapa)
+        }
+        if(nodeDirection instanceof java.lang.String) {
+            return openTutorialPageString(nodeDirection, mapa)
+        }
+        if(nodeDirection instanceof ApiNode) {
+            def newPageFile= nodeDirection.link?.file // TODO: probar que tome link de nodo si no existe el del attributo
+            def newPageUri = nodeDirection[attributeNewPageLink].uri ?: nodeDirection.link?.uri // TODO: probar que tome link de nodo si no existe el del attributo
+            mapa           = mapa ?: (newPageFile && !newPageUri.absolute && !newPageUri.scheme && newPageUri.path.endsWith('.mm'))? getMapFromPath(newPageFile.path, false) : null
+            mapa           = mapa ?: nodeDirection.map
+            return openTutorialPage(newPageUri, mapa)
+        }
+        return 'No tutorial node found'
+    }
+
+
+    def static openTutorialPageUri(URI uri, ApiMindMap mapa){
+    //    if(!uri) return null
+        def isMM = isMindmap(uri)
+        def nodeId = (!uri.scheme || isMM) && uri.fragment?.startsWith('ID_')?
+                        uri.fragment
+                        : null
+        // if (!nodeId) return 'No node ID defined in URI'
+        def tutMapPath = /* nodeId && */ isMM ?
+                            uri.path.drop(1)
+                            :null
+        def tutMap = tutMapPath ?
+                        getMapFromPath(tutMapPath, false)    //open mind map not visible
+                        : mapa
+        openTutorialPageString(nodeId, tutMap)
+    }
+    
+    def static isMindmap(uri){
+        uri && uri.scheme in ['file','tutorial']  && uri.path.endsWith('.mm')
+    }
+
+    def static isValidUri(uri){
+        return uri && (!uri.scheme && (uri.fragment?.startsWith('ID_') || uri.path?.endsWith('.mm'))|| isMindmap(uri)) 
+    }
+
+    def static openTutorialPageString(String nodeId, ApiMindMap tutMap){
+        if(!tutMap) return 'No tutorial mindmap defined'
+        def targetNode = nodeId ? tutMap.node(nodeId) : null
+        // if(!targetNode) return 'No tutorial node found'
+
+        if(targetNode){
+            if(!(isTutNode(targetNode) || isTutorialNode(targetNode) )) return 'Indicated node is not part of a tutorial'
+            def tutorialTabName = getTutorialNode(targetNode)[attributeTabLabel] ?: tutMap.root[attributeTabLabel] ?: defaultMapTutorialsTabLabel
+            //uiMsg(tutorialTabName)
+            def myP = tomui.getContentPaneFromMyTab(tutorialTabName.toString(), true)
+            fillPage(myP, targetNode, true, true)
+        } else {
+            showTutorials(tutMap)
+        }
+        return 'tutorial displayed'
+    }
+        
+    
+    // end:
+    
     // region: help / debug
 
     def static uiMsg(texto){
-       //ui.informationMessage(texto.toString())
+        // ui.informationMessage(texto.toString())
     }
 
     // end:
