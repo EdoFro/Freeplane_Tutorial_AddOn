@@ -106,7 +106,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" NUMBERED="false" FORMAT="STANDARD_FORMAT" TEXT_ALIGN="DEFAULT" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px" MAX_WIDTH="10 cm" MIN_WIDTH="0 cm">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45.19149 pt;-3.06383 pt;" ENDINCLINATION="56.68085 pt;29.87234 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45.19149 pt;-2.29787 pt;" ENDINCLINATION="56.68085 pt;29.87234 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -1153,272 +1153,6 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="creationTime" VALUE="12-09-21 15:43" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:43-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="2.642" OBJECT="org.freeplane.features.format.FormattedNumber|2642|#,##0"/>
 <attribute NAME="projectCode" VALUE="TabPane.grvy"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      package edofro.tutorialomatic
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      import org.freeplane.core.ui.components.UITools as ui
-    </p>
-    <p>
-      import org.freeplane.core.util.MenuUtils&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as menuUtils
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      class TabPane{
-    </p>
-    <p>
-      //region: properties
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static tabPane = ui.freeplaneTabbedPanel
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //end:
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //region: methods
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static removeTab(String tabName, boolean hideTabPane = false){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int index = tabPane.indexOfTab(tabName)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//msg(&quot;removeTab String - index: $index&quot;)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;removeTab(index, hideTabPane)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static removeTab(javax.swing.JComponent comp, boolean hideTabPane = false){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int index = tabPane.indexOfComponent(comp)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//msg(&quot;removeTab Component - index: $index&quot;)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;removeTab(index, hideTabPane)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static removeTab(int index, boolean hideTabPane = false){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//msg(&quot;removeTab index - index: $index&quot;)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (index &gt;= 0) {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabPane.removeTabAt(index)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def previousTab = tabPane.hasProperty('previousTab')? tabPane.previousTab : 0
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;previousTab = previousTab &gt;= tabPane.tabCount? 0 : previousTab
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabPane.setSelectedIndex(previousTab)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(hideTabPane &amp;&amp; tabPane.isShowing()) {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menuUtils.executeMenuItems(['ShowFormatPanel'])
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else return false
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static showTab(String tabName){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//if tabPanel is not showing --&gt; show
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(!tabPane.isShowing()) {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menuUtils.executeMenuItems(['ShowFormatPanel'])
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// remembers selected tab number
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def previousTab = tabPane.selectedIndex
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (tabPane.hasProperty('previousTab')){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabPane.previousTab = previousTab
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabPane.metaClass.previousTab = previousTab
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// look if tab exists
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def index = tabPane.indexOfTab(tabName)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (index&gt;=0) {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabPane.selectedIndex = index
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else return false
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static addTab(String tabName, componente){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabPane.addTab(tabName, componente)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static hasTab(String tabName){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def index = tabPane.indexOfTab(tabName)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return ( index &gt;= 0 )
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static getTab(String tabName){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def index = tabPane.indexOfTab(tabName)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (index&gt;=0) {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return tabPane.getComponentAt(index)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return null
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static repaint(){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabPane.repaint()
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static msg(texto){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ui.informationMessage(texto.toString())
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      //end:
-    </p>
-    <p>
-      }
-    </p>
-  </body>
-</html></richcontent>
 <node TEXT="TabPannel" FOLDED="true" ID="ID_566681188">
 <node TEXT="listo!!" FOLDED="true" ID="ID_830035512"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
@@ -2744,7 +2478,8 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       }
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="tests" FOLDED="true" ID="ID_1250833748">
 <node TEXT="tests ToM_actions" FOLDED="true" ID="ID_144232268" VGAP_QUANTITY="2 px">
 <node TEXT="nodo tiene link a menu action" ID="ID_1137418963"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
@@ -5695,7 +5430,8 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       }
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="**ToM xFuture A**" STYLE_REF="milestone" ID="ID_360145498">
 <node TEXT="ToM_buttonBoard: create a new style  that creates a panel that simulates a toolbar (like Menu-o-Matic)" STYLE_REF="pendingTask" ID="ID_443917831">
 <node TEXT="toma todos los hijos y crea panel de menu (al igual que MoM)" ID="ID_1047058341"/>
@@ -10598,7 +10334,8 @@ I tried also to translate some of the texts to German. Please help me correct th
       }
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="crear otra clase que arme el tutorial desde el mapa: ToM" ID="ID_866747677"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -11256,251 +10993,6 @@ I tried also to translate some of the texts to German. Please help me correct th
 <attribute NAME="creationTime" VALUE="06-11-21 23:04" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-06T23:04-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="2.412" OBJECT="org.freeplane.features.format.FormattedNumber|2412|#,##0"/>
 <attribute NAME="projectCode" VALUE="WSE_redux.grvy"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      package edofro.menuomatic
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      import org.freeplane.plugin.script.FreeplaneScriptBaseClass.ConfigProperties
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      class WSE_redux{
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;static final String attributeForExtensions =&nbsp;&nbsp;new ConfigProperties().getProperty('wikdShellExtension_attributeForExtensions','file_ext')
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //region: get/set/is extension from selected node
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static extensionFromNode(n){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extensionFromAttribute(n)?:extensionFromDetails(n)?:extensionFromText(n)?:null
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static extensionFromAttribute(n){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n[attributeForExtensions]?:null
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static extensionFromDetails(n){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n.details?.size()&gt;1?n.details?[0]=='.'?n.details.drop(1).takeBefore(' ').takeBefore('\n')?:n.details.drop(1).takeBefore('\n')?:n.details.drop(1).takeBefore(' ')?:n.details.drop(1):null:null
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static extensionFromText(n){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n.text.reverse().takeBefore('.').reverse()
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static extensionFromFilePath(filepath){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return filepath.reverse().split(&quot;\\.&quot;)[0].reverse().toLowerCase()
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static setExtension(n, ext){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// If it's allready defined --&gt; do nothing
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(extensionFromAttribute(n)==ext || extensionFromDetails(n)==ext) return
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//I prefer it in this order:
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// only details
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// if details are beeing Used --&gt; attribute
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(!n.details){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n.details = '.' + ext
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n[attributeForExtensions] = ext
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static extensionFromNodeFile(n){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(n.link &amp;&amp; n.link.uri &amp;&amp; n.link.uri.scheme == 'file')?extensionFromFilePath(n.link.uri.path):null
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static isExtensionNode(n, extension){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def ext = extensionFromNodeFile(n)?:extensionFromNode(n)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return ext?ext==extension:false
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //end:
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //region: groovy Node
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static isGroovyNode(n){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return (isExtensionNode(n, 'groovy') || n['script1']?true:false)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static scriptFromNode(n){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def input = null
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (isGroovyNode(n)){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ( extensionFromNodeFile(n) == 'groovy' ) {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;input&nbsp;&nbsp;&nbsp;= n.link.file.text
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else if ( n['script1']?true:false ){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;input&nbsp;&nbsp;&nbsp;= n['script1'].plain.toString().trim()
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else if ( n.note ){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;input&nbsp;&nbsp;&nbsp;= n.note.toString()
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return input
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //end:
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      }
-    </p>
-    <p>
-      
-    </p>
-  </body>
-</html></richcontent>
 </node>
 <node TEXT="MenuAction.groovy" ID="ID_304459899" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/src/main/groovy/MenuAction.groovy">
 <attribute NAME="lastModifiedTime" VALUE="09-03-22 00:06" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-09T00:06-0300|datetime"/>
@@ -11508,290 +11000,6 @@ I tried also to translate some of the texts to German. Please help me correct th
 <attribute NAME="creationTime" VALUE="08-03-22 22:36" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-08T22:36-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="2.987" OBJECT="org.freeplane.features.format.FormattedNumber|2987|#,##0"/>
 <attribute NAME="projectCode" VALUE="MenuAction.grvy"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      package edofro.menuomatic
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      import java.awt.Component
-    </p>
-    <p>
-      import java.awt.Point
-    </p>
-    <p>
-      import java.awt.Window
-    </p>
-    <p>
-      import javax.swing.SwingUtilities
-    </p>
-    <p>
-      import javax.swing.JComponent
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      import org.freeplane.plugin.script.proxy.ScriptUtils
-    </p>
-    <p>
-      import org.freeplane.core.util.TextUtils&nbsp;&nbsp;as textUtils
-    </p>
-    <p>
-      import org.freeplane.core.util.LogUtils&nbsp;&nbsp;&nbsp;as logger
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      class MenuAction{
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;static final int maxTextLength = {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try{
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;edofro.menuomatic.PackMenu.maxTextLen
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;catch(e){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}()
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;static final c = ScriptUtils.c()
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static menuCommandToNode(n){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def nodo
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def action
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JComponent component = (JComponent) getComponent()
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;action = getAction(component)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} catch (e){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nodo = n.createChild(e.toString())
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nodo.note = e.printStackTrace()
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(action){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nodo = n.createChild(getLabelText(action))
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nodo.link.text = &quot;menuitem:_${action.key}&quot;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.statusInfo = 'No menu or toolbar command encountered under mouse pointer'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static getLabelText(action){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return getActionText(action.key,'text')?:getActionText(action.key,'tooltip')?:action.rawText?:action.key
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static getActionText(acc,tipo){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def texto = textUtils.getText(&quot;${acc}.${tipo}&quot;, null)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;texto = (texto &amp;&amp; texto!='null')?textUtils.getShortText(texto, maxTextLength,'.'):null
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return texto
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static getAction(component){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(component.properties.containsKey('action') &amp;&amp; component.action!=null){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def accion
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(component.action.properties.containsKey('originalAction')){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;accion = component.action.originalAction
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}else{
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;accion = component.action
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return accion
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}else{
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return null
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static getComponent(){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (Window window : Window.getWindows()) {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Point mousePositionA = window.getMousePosition(true)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(!mousePositionA)continue
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def compo = window.getLayeredPane()
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Point mousePosition
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mousePosition = SwingUtilities.convertPoint(window,mousePositionA,compo)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} catch (e){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logger.warn('menuAction',e)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logger.warn('window:&nbsp;&nbsp;' + window.toString())
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logger.warn('mousePosition:&nbsp;&nbsp;' + mousePositionA.toString())
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logger.warn('LayeredPane:&nbsp;&nbsp;' + compo.toString())
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw e
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (mousePosition != null) {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Component componentUnderMouse = SwingUtilities.getDeepestComponentAt(compo, (int) mousePosition.x,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(int)&nbsp;&nbsp;mousePosition.y);
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return componentUnderMouse
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-    </p>
-    <p>
-      }
-    </p>
-  </body>
-</html></richcontent>
 </node>
 <node TEXT="UserStyles.groovy" ID="ID_6903769" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/src/main/groovy/UserStyles.groovy">
 <attribute NAME="lastModifiedTime" VALUE="17-03-22 10:13" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-17T10:13-0300|dd-MM-yy HH:mm"/>
@@ -11799,416 +11007,6 @@ I tried also to translate some of the texts to German. Please help me correct th
 <attribute NAME="creationTime" VALUE="17-03-22 09:08" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-17T09:08-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="4.838" OBJECT="org.freeplane.features.format.FormattedNumber|4838|#,##0"/>
 <attribute NAME="projectCode" VALUE="UserStyles.grvy"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      package edofro.pseudofreeplaneapi
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //region: imports
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      import org.freeplane.api.MindMap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as ApiMindMap
-    </p>
-    <p>
-      //import org.freeplane.api.Node&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as ProxyNode
-    </p>
-    <p>
-      //import org.freeplane.plugin.script.proxy.Proxy.Node&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as ProxyNode
-    </p>
-    <p>
-      import org.freeplane.plugin.script.proxy.NodeProxy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as ProxyNode
-    </p>
-    <p>
-      import org.freeplane.core.ui.components.UITools as ui
-    </p>
-    <p>
-      import org.freeplane.features.map.MapModel;
-    </p>
-    <p>
-      import org.freeplane.features.map.NodeModel;
-    </p>
-    <p>
-      import org.freeplane.features.mode.Controller;
-    </p>
-    <p>
-      import org.freeplane.features.styles.MapStyleModel;
-    </p>
-    <p>
-      import org.freeplane.plugin.script.ScriptContext
-    </p>
-    <p>
-      import org.freeplane.plugin.script.proxy.ScriptUtils
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      class UserStyles {
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //region: properties
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //end:
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //region: copyUserStyles
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static copyUserStyles(sourceMap, targetMap, boolean showMessage, groovy.lang.Closure closure){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def stylesToImport = getUserDefinedStylesParentNode(sourceMap).children.findAll(closure)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def styleNamesToImport = stylesToImport*.text
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def texto = new StringBuilder(&quot;The following styles were imported \n from map '${sourceMap.name}.mm' \n into current map '${targetMap.name}.mm':\n\n&quot;)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;styleNamesToImport.each{styleName -&gt;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetMap.copyStyleFrom(sourceMap, styleName)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def sourceStyleNode = getUserStyleNode(sourceMap, styleName )
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def targetStyleNode = getUserStyleNode(targetMap, styleName )
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copyIcons(sourceStyleNode, targetStyleNode)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copyAttributes(sourceStyleNode, targetStyleNode)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;texto &lt;&lt; &quot;&nbsp;&nbsp;&nbsp;- $styleName\n&quot;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;texto &lt;&lt; &quot;\n\n&quot;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(showMessage) ui.informationMessage(texto.toString())
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static copyUserStyles(sourceMap, targetMap, boolean showMessage = true){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copyUserStyles(sourceMap, targetMap, showMessage, {true})
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static copyUserStyles(sourceMap, targetMap, groovy.lang.Closure closure){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copyUserStyles(sourceMap, targetMap, true, closure)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static copyUserStyles(sourceMap, targetMap, String[] lista){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copyUserStyles(sourceMap, targetMap, true, lista)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static copyUserStyles(sourceMap, targetMap, boolean showMessage, String[] lista){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def closure = {it.text in lista}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copyUserStyles(sourceMap, targetMap, showMessage, closure)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static copyUserStyles(sourceMap, targetMap, String texto){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copyUserStyles(sourceMap, targetMap, true, texto)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static copyUserStyles(sourceMap, targetMap, boolean showMessage, String texto){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def closure = {it.text == texto}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copyUserStyles(sourceMap, targetMap, showMessage, closure)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //end:
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //region: copy other things from node to node
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static copyIcons(sourceNode, targetNode, boolean doClear = true){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(doClear) targetNode.icons.clear()
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetNode.icons.addAll(sourceNode.icons.icons)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static copyAttributes(sourceNode, targetNode, boolean doClear = true){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(doClear) targetNode.attributes.clear()
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sourceNode.attributes.each{a -&gt;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetNode.attributes.add(a.key, a.value)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //end:
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //region: getting an UserStyleNode as ProxyNode from active map
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      // public
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static getUserStyleNode( String userStyle ){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return getUserStyleNode( null, userStyle )
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static getUserStyleNode(ApiMindMap mapaProxy, String userStyle ){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return getUserDefinedStylesParentNode(mapaProxy).children.find{it.text == userStyle}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static getUserDefinedStylesParentNode(x = null){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return getUserDefinedStylesParentNode((ScriptContext) null)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static getUserDefinedStylesParentNode(MapModel mapa){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return getUserDefinedStylesParentNode(mapa, null)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static getUserDefinedStylesParentNode(ApiMindMap mapaProxy){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return getUserDefinedStylesParentNode(mapaProxy.delegate, null)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static getUserDefinedStylesParentNode(ScriptContext scriptContext){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MapModel mapa = Controller.getCurrentController().getMap();
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return getUserDefinedStylesParentNode(mapa, scriptContext)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static getUserDefinedStylesParentNode(ApiMindMap mapaProxy, ScriptContext scriptContext){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return getUserDefinedStylesParentNode(mapaProxy.delegate, scriptContext)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def static getUserDefinedStylesParentNode(MapModel mapa, ScriptContext scriptContext){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(!mapa) {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return getUserDefinedStylesParentNode(scriptContext)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MapStyleModel styleModel = MapStyleModel.getExtension(mapa);
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MapModel styleMap = styleModel.getStyleMap();
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NodeModel userStyleParentNode = styleModel.getStyleNodeGroup(styleMap, MapStyleModel.STYLES_USER_DEFINED);
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def userDefinedParentNode = new ProxyNode(userStyleParentNode, scriptContext)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return userDefinedParentNode
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-    </p>
-    <p>
-      //end:
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      }
-    </p>
-    <p>
-      
-    </p>
-  </body>
-</html></richcontent>
 </node>
 <node TEXT="**ToM xFuture D**" STYLE_REF="milestone" ID="ID_1702310071">
 <node TEXT="Add comments to all groovy files (a description to each method)" STYLE_REF="pendingTask" ID="ID_600379606"/>
@@ -12259,7 +11057,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 </node>
-<node TEXT="scripts" STYLE_REF="file_folder" FOLDED="true" ID="ID_1091793016" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/scripts/" VGAP_QUANTITY="2 px">
+<node TEXT="scripts" STYLE_REF="file_folder" ID="ID_1091793016" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/scripts/" VGAP_QUANTITY="2 px">
 <attribute NAME="lastModifiedTime" VALUE="20-03-22 22:16" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:16-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
@@ -16471,8 +15269,228 @@ I tried also to translate some of the texts to German. Please help me correct th
 <node TEXT="**ToM xFuture B**" STYLE_REF="milestone" ID="ID_1262563838">
 <node TEXT="init Script  that reacts to the opening of mindmaps that have tutorials and automatically shows the Tutorials dialog" STYLE_REF="pendingTask" ID="ID_418033123"/>
 </node>
+<node TEXT="getMenuHelp.groovy" ID="ID_328256964" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/scripts/getMenuHelp.groovy"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      import javax.swing.JComponent
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      import edofro.menuomatic.MenuAction as MA
+    </p>
+    <p>
+      import edofro.tutorialomatic.ToM&nbsp;&nbsp;&nbsp;&nbsp;as tom
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def newPageStyle = 'ToM_newPage'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;MenuHelperFolderName =&nbsp;&nbsp;'Tutorial-o-Matic'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;//get command under mouse pointer
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def action = getAction()
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;if(!action)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msgAndExit(&quot;No command found under mouse arrow&quot;)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;//open menuHelp Tutorial mindmap
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def mapa = getMap()
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;if(!mapa)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msgAndExit(&quot;Help map couldn't be found&quot;)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;//obtener nodo de acción
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def linkAccion = &quot;menuitem:_${action.key}&quot;.toString()
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def actionNode = mapa.root.find{n -&gt; n.link.text ==&nbsp;&nbsp;linkAccion}.take(1)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;// abrir tutorial en página de nodo de acción
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;if(!actionNode)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msgAndExit(&quot;Command '${MA.getLabelText(action)}' was not found in '${mapa.name}'&quot;)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def newPageNode = actionNode[0].pathToRoot.reverse().find{it.style.name == newPageStyle}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;if(!newPageNode)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msg(&quot;Command '${MA.getLabelText(action)}' has no helping page in '${mapa.name}'&quot;)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;tom.openTutorialPage(newPageNode.id, mapa)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      println &quot;Done&quot;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      // methods
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def getAction(){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JComponent component = (JComponent) MA.getComponent()
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return MA.getAction(component)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def msg(t){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ui.informationMessage(t.toString())
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def msgAndExit(t){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msg(t)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 'NOK'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //region: opens tutorial map
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def getMap(){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def m = c.openMaps.find{it.name == 'menuHelp'}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return m ?: getMapFromUserdirectory(MenuHelperFolderName, 'menuHelp.mm')
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def getMapFromUserdirectory(addonFolderName,mapFileName){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def sep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= File.separator
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def userDir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= c.userDirectory.path
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def pathName&nbsp;&nbsp;&nbsp;&nbsp;= userDir + sep + &quot;doc&quot; + sep + addonFolderName + sep + mapFileName
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def tutMap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= tom.getMapFromPath(pathName, false)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return tutMap
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+  </body>
+</html>
+</richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
-<node TEXT="zips" STYLE_REF="file_folder" ID="ID_447769735" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/">
+</node>
+<node TEXT="zips" STYLE_REF="file_folder" FOLDED="true" ID="ID_447769735" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/">
 <attribute NAME="lastModifiedTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
@@ -16570,6 +15588,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 <attribute NAME="creationTime" VALUE="20-03-22 10:16" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T10:16-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="43.550" OBJECT="org.freeplane.features.format.FormattedNumber|43550|#,##0"/>
 </node>
+<node TEXT="menuHelp.mm" ID="ID_333787591" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/menuHelp.mm"/>
 </node>
 </node>
 <node TEXT="templates" STYLE_REF="file_folder" FOLDED="true" ID="ID_669661056" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/templates/"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
@@ -17129,7 +16148,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </html></richcontent>
 </node>
 </node>
-<node TEXT="EditingTutorialsWithMDH" FOLDED="true" ID="ID_1175655998" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/">
+<node TEXT="EditingTutorialsWithMDH" ID="ID_1175655998" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/">
 <attribute NAME="lastModifiedTime" VALUE="14-05-22 13:48" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-14T13:48-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="23-07-22 08:31" OBJECT="org.freeplane.features.format.FormattedDate|2022-07-23T08:31-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="01-04-22 08:54" OBJECT="org.freeplane.features.format.FormattedDate|2022-04-01T08:54-0300|datetime"/>
@@ -17161,7 +16180,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 <node TEXT="ToM Demos" STYLE_REF="Organizador" ID="ID_1052974246"/>
-<node TEXT="ToM Tutorial" STYLE_REF="Organizador" ID="ID_1748311809" VGAP_QUANTITY="2 px">
+<node TEXT="ToM Tutorial" STYLE_REF="Organizador" FOLDED="true" ID="ID_1748311809" VGAP_QUANTITY="2 px">
 <node TEXT="Tutorial-o-MaticStepByStepActions.mm" ID="ID_114182378">
 <attribute NAME="projectCode" VALUE="StepByStepActions Tutorial"/>
 <node TEXT="**ToM v0.0.8**" STYLE_REF="milestone" ID="ID_1193572499">
@@ -17521,8 +16540,7 @@ contains the current tutorial information and selects the node where the current
       &nbsp;&nbsp;&nbsp;&nbsp;}
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -17535,6 +16553,7 @@ contains the current tutorial information and selects the node where the current
   </body>
 </html></richcontent>
 </node>
+<node TEXT="menuHelp.mm" ID="ID_830469558" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/menuHelp.mm"/>
 </node>
 <node TEXT="resources" STYLE_REF="file_folder" FOLDED="true" ID="ID_484815634" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/">
 <attribute NAME="lastModifiedTime" VALUE="18-03-22 23:50" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-18T23:50-0300|dd-MM-yy HH:mm"/>
@@ -18427,20 +17446,20 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="Tutorials" ID="ID_1847569001" VGAP_QUANTITY="27.57447 pt">
 <node TEXT="SimpleTutorialSample.mm" FOLDED="true" ID="ID_230501881" BACKGROUND_COLOR="#cdd0f6">
-<arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_182355635" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="120.25532 pt;-6.89362 pt;"/>
-<arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_214626079" STARTINCLINATION="27.57447 pt;2.29787 pt;" ENDINCLINATION="26.80851 pt;0 pt;"/>
 <arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_791393290" STARTINCLINATION="55.14894 pt;5.3617 pt;" ENDINCLINATION="43.65957 pt;0 pt;"/>
+<arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_182355635" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="120.25532 pt;-6.12766 pt;"/>
+<arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_214626079" STARTINCLINATION="27.57447 pt;2.29787 pt;" ENDINCLINATION="26.80851 pt;0 pt;"/>
 </node>
 <node TEXT="ExercisingMap.mm" FOLDED="true" ID="ID_791393290" BACKGROUND_COLOR="#b6fc01"/>
 <node TEXT="Tutorial-o-Matic Intro.mm" FOLDED="true" ID="ID_182355635" BACKGROUND_COLOR="#08acd1">
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_660860081" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-10.7234 pt;"/>
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_1179881449" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-10.7234 pt;"/>
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_214626079" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-10.7234 pt;"/>
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_214626079" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-9.95745 pt;"/>
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_660860081" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-9.95745 pt;"/>
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_1179881449" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-9.95745 pt;"/>
 </node>
 <node TEXT="HowToTutorial-o-Matic.mm" FOLDED="true" ID="ID_214626079" BACKGROUND_COLOR="#ba2ed1"/>
 <node TEXT="Tutorial-o-MaticCommands.mm" FOLDED="true" ID="ID_660860081" VSHIFT_QUANTITY="-1.53191 pt" BACKGROUND_COLOR="#ee8e05"/>
 <node TEXT="Tutorial-o-MaticStepByStep.mm" FOLDED="true" ID="ID_1179881449" BACKGROUND_COLOR="#54fef3">
-<arrowlink COLOR="#54fef3" TRANSPARENCY="255" DESTINATION="ID_1829012653" STARTINCLINATION="43.65957 pt;3.06383 pt;" ENDINCLINATION="36.76596 pt;-0.76596 pt;"/>
+<arrowlink COLOR="#54fef3" TRANSPARENCY="255" DESTINATION="ID_1829012653" STARTINCLINATION="43.65957 pt;3.06383 pt;" ENDINCLINATION="36.76596 pt;0 pt;"/>
 </node>
 <node TEXT="myExistingMindMap.mm" FOLDED="true" ID="ID_1829012653" BACKGROUND_COLOR="#6bf708"/>
 <node TEXT="LongTutorialExample.mm" FOLDED="true" ID="ID_338095058" BACKGROUND_COLOR="#d541ec"/>
@@ -18472,15 +17491,15 @@ contains the current tutorial information and selects the node where the current
 </node>
 </node>
 <node TEXT="ToMTutorial" ID="ID_1882207830">
-<arrowlink DESTINATION="ID_315096252" MIDDLE_LABEL="Creado" STARTINCLINATION="271.91489 pt;0 pt;" ENDINCLINATION="377.61701 pt;-7.65957 pt;"/>
+<arrowlink DESTINATION="ID_315096252" MIDDLE_LABEL="Creado" STARTINCLINATION="271.91489 pt;0 pt;" ENDINCLINATION="377.61701 pt;-6.89362 pt;"/>
 </node>
 </node>
 <node TEXT="Tutorials" ID="ID_37813074" VGAP_QUANTITY="18.38298 pt">
 <node TEXT="demo" ID="ID_1458344822" VGAP_QUANTITY="14 px">
 <node TEXT="SimpleTutorialSample.mm" FOLDED="true" ID="ID_90091810" BACKGROUND_COLOR="#cdd0f6">
 <arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_1804718842" STARTINCLINATION="55.14894 pt;5.3617 pt;" ENDINCLINATION="43.65957 pt;0 pt;"/>
-<arrowlink COLOR="#ff9900" TRANSPARENCY="255" DESTINATION="ID_315096252" MIDDLE_LABEL="quitar" STARTINCLINATION="284.17021 pt;-75.82979 pt;" ENDINCLINATION="251.23404 pt;-97.27659 pt;"/>
-<arrowlink COLOR="#ff9900" TRANSPARENCY="255" DESTINATION="ID_271832651" MIDDLE_LABEL="quitar" STARTINCLINATION="500.93616 pt;-155.48936 pt;" ENDINCLINATION="314.8085 pt;-144.76595 pt;"/>
+<arrowlink COLOR="#ff9900" TRANSPARENCY="255" DESTINATION="ID_271832651" MIDDLE_LABEL="quitar" STARTINCLINATION="500.93616 pt;-154.7234 pt;" ENDINCLINATION="314.8085 pt;-144 pt;"/>
+<arrowlink COLOR="#ff9900" TRANSPARENCY="255" DESTINATION="ID_315096252" MIDDLE_LABEL="quitar" STARTINCLINATION="284.17021 pt;-75.06383 pt;" ENDINCLINATION="251.23404 pt;-96.51064 pt;"/>
 <node TEXT="simple demo" ID="ID_1450176090" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
 <node TEXT="Introduction" ID="ID_1843423512" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 <node TEXT="SIMPLE DEMO" ID="ID_1649465485" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
@@ -18499,9 +17518,9 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="tutorial" ID="ID_160180737" VGAP_QUANTITY="14 px">
 <node TEXT="Tutorial-o-Matic Intro.mm" ID="ID_315096252" BACKGROUND_COLOR="#08acd1">
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_271832651" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-9.95745 pt;"/>
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_806121553" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-9.95745 pt;"/>
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_612275579" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-9.95745 pt;"/>
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_271832651" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-9.19149 pt;"/>
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_612275579" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-9.19149 pt;"/>
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_806121553" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-9.19149 pt;"/>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -18587,7 +17606,7 @@ contains the current tutorial information and selects the node where the current
   </head>
   <body>
     <p>
-      Inated:&nbsp;&nbsp;&nbsp;2022-08-07&nbsp;&nbsp;19:45:21
+      Inated:&nbsp;&nbsp;&nbsp;2022-08-13&nbsp;&nbsp;17:46:30
     </p>
     <p>
       
@@ -18602,10 +17621,10 @@ contains the current tutorial information and selects the node where the current
       &nbsp;0 link(s) corrected in nodes
     </p>
     <p>
-      &nbsp;0 new file(s) imported as node(s)&nbsp;
+      &nbsp;1 new file(s) imported as node(s)&nbsp;
     </p>
     <p>
-      &nbsp;14 node(s) moved/renamed in drive
+      &nbsp;0 node(s) moved/renamed in drive
     </p>
     <p>
       
@@ -18614,10 +17633,7 @@ contains the current tutorial information and selects the node where the current
       ------- Folders: --------&nbsp;
     </p>
     <p>
-      22 folders didn't need to be moved&nbsp;
-    </p>
-    <p>
-      1 folders were created in new position and deleted in old one&nbsp;
+      24 folders didn't need to be moved&nbsp;
     </p>
     <p>
       1 folders were not found&nbsp;
@@ -18629,7 +17645,7 @@ contains the current tutorial information and selects the node where the current
       
     </p>
     <p>
-      7.3 seconds
+      6.2 seconds
     </p>
     <p>
       
@@ -18641,10 +17657,17 @@ contains the current tutorial information and selects the node where the current
       
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="Tutorial-o-Matic" ID="ID_1109044857" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/">
 <node TEXT="images" ID="ID_117957740" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/images/"/>
+<node TEXT="zips" ID="ID_849570960" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/">
+<node TEXT="doc" ID="ID_1450313289" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/">
+<node TEXT="Tutorial-o-Matic" STYLE_REF="BotonMenu" ID="ID_1891043661" LINK="#ID_1178743529"/>
 </node>
+</node>
+</node>
+<node TEXT="EditingTutorialsWithMDH" STYLE_REF="BotonMenu" ID="ID_1156521253" LINK="#ID_1175655998"/>
 </node>
 <node TEXT="Apuntes y tareas finalizadas" STYLE_REF="Organizador" FOLDED="true" ID="ID_1147908346"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
@@ -23609,7 +22632,25 @@ def setNoteMarkdown(n){&#xd;
   </head>
   <body>
     <p>
-      def nodos = node.find{n -&gt; n.style.name &amp;&amp; n.style.name == 'MarkdownHelperNode' &amp;&amp; n.text == 'Markdown document.md'}
+      def nodos = node.find{n -&gt;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n.style.name&nbsp;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp; n.style.name == 'MarkdownHelperNode'&nbsp;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp; n.text == 'Markdown document.md'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      println nodos
     </p>
     <p>
       
@@ -23630,7 +22671,8 @@ def setNoteMarkdown(n){&#xd;
       }
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -24072,8 +23114,7 @@ def setNoteMarkdown(n){&#xd;
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -24084,8 +23125,7 @@ def setNoteMarkdown(n){&#xd;
       .groovy
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>

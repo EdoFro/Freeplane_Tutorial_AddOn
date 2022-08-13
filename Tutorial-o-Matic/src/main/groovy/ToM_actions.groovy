@@ -110,6 +110,10 @@ class ToM_actions{
         mME.label
     }
 
+    def static getIcon(mME){
+        mME.icon
+    }
+
     def static getToolTip(mME){
         mME.toolTipText
     }
@@ -139,6 +143,7 @@ class ToM_actions{
                  << [ label      : getLabel(miPath[-1])          ]
                  << [ menuPath   : getMenuPath(miPath)           ]
                  << [ toolTip    : getToolTip(miPath[-1])        ]
+                 << [ icon       : getIcon(miPath[-1])           ]
         def instr1    = textUtils.format(actionInstruction1, apos(myAction.menuPath), apos(myAction.label))
         def instr2    = myAction.keyStroke?textUtils.format(actionInstruction2, apos(myAction.keyStroke)):""
         myAction << [ instructions : instr2?htmlUtils.join(instr1,"", instr2).replace('\n',''):instr1 ]

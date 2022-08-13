@@ -6,9 +6,9 @@
 </attribute_registry>
 <node TEXT="Tutorial-o-Matic" FOLDED="false" ID="ID_696401721" LINK="https://github.com/EdoFro/Freeplane_Tutorial_AddOn" BACKGROUND_COLOR="#97c7dc">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
-<attribute_layout NAME_WIDTH="101.87234 pt" VALUE_WIDTH="242.80851 pt"/>
+<attribute_layout NAME_WIDTH="99.9403 pt" VALUE_WIDTH="245.01492 pt"/>
 <attribute NAME="name" VALUE="tutorialOMatic"/>
-<attribute NAME="version" VALUE="v0.0.7"/>
+<attribute NAME="version" VALUE="v0.0.8"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.9"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -98,7 +98,7 @@
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px" MAX_WIDTH="15 cm" MIN_WIDTH="3.5 cm">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45.19149 pt;0 pt;" ENDINCLINATION="56.68085 pt;29.87234 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45.13433 pt;0 pt;" ENDINCLINATION="56.95522 pt;30.08955 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#ff0000" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -195,7 +195,7 @@
 </richcontent>
 <node TEXT="Tutorial-o-Matic for Freeplane!!&#xa;Tutorial-o-Matic is an AddOn for Freeplane that gives the user the possibility to create his/her own tutorials." ID="ID_1642042079"/>
 </node>
-<node TEXT="changes" FOLDED="true" POSITION="left" ID="ID_461119253"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="changes" POSITION="left" ID="ID_461119253"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -268,6 +268,9 @@
 <node TEXT="getMenuCommand renamed to getMenuCommandToM.groovy" ID="ID_1910643500"/>
 <node TEXT="bugs fixes" ID="ID_1389797512"/>
 <node TEXT="Improved Step by Step Tutorials" ID="ID_345569965"/>
+</node>
+<node TEXT="v0.0.8" ID="ID_1932824258">
+<node TEXT="Test: Using Tutorial-o-Matic as Menu Help" ID="ID_1349453896"/>
 </node>
 </node>
 <node TEXT="license" FOLDED="true" POSITION="left" ID="ID_624388795"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -452,9 +455,10 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="en" ID="ID_643789068">
-<attribute_layout NAME_WIDTH="194.55319 pt" VALUE_WIDTH="245.87234 pt"/>
+<node TEXT="en" ID="ID_647184303">
+<attribute_layout NAME_WIDTH="197.73134 pt" VALUE_WIDTH="246.08955 pt"/>
 <attribute NAME="addons.${name}.createNewTutorialMindMap" VALUE="Create new tutorial mind map"/>
+<attribute NAME="addons.${name}.getMenuHelp" VALUE="Get menu help"/>
 <attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
 <attribute NAME="addons.${name}.ToMDemo" VALUE="Tutorial-o-Matic Demo"/>
 <attribute NAME="addons.${name}.ToMTutorial" VALUE="Tutorial-o-Matic Intro"/>
@@ -467,9 +471,10 @@
 <attribute NAME="addons.${name}.openDemoMap" VALUE="open Demo map"/>
 <attribute NAME="addons.${name}.showTutorialsFromActiveMap" VALUE="Show tutorials from active map"/>
 </node>
-<node TEXT="es" ID="ID_1100466604">
+<node TEXT="es" ID="ID_89536389">
 <attribute_layout NAME_WIDTH="194.55319 pt" VALUE_WIDTH="214.46808 pt"/>
 <attribute NAME="addons.${name}.createNewTutorialMindMap" VALUE="Crear nuevo mapa para tutoriales"/>
+<attribute NAME="addons.${name}.getMenuHelp" VALUE="Obtener ayuda para menu"/>
 <attribute NAME="addons.${name}" VALUE="Tutorial-o-Matic"/>
 <attribute NAME="addons.${name}.ToMDemo" VALUE="Tutorial-o-Matic Demo"/>
 <attribute NAME="addons.${name}.ToMTutorial" VALUE="Intro Tutorial-o-Matic"/>
@@ -521,6 +526,8 @@
 <attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/myExistingMindMap.mm"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/getMenuCommandToM.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/LongTutorialExample.mm"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/getMenuHelp.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/Tutorial-o-Matic/menuHelp.mm"/>
 </node>
 <node TEXT="scripts" POSITION="right" ID="ID_1037882722"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -640,7 +647,7 @@
 </html>
 </richcontent>
 <node TEXT="getMenuCommandToM.groovy" ID="ID_863849079">
-<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="186.89361 pt"/>
+<attribute_layout NAME_WIDTH="199.88059 pt" VALUE_WIDTH="191.28358 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.getMenuCommandToM"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Commands"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -652,7 +659,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 <node TEXT="showTutorialsFromActiveMap.groovy" ID="ID_484672073">
-<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="194.55319 pt"/>
+<attribute_layout NAME_WIDTH="199.88059 pt" VALUE_WIDTH="197.73134 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showTutorialsFromActiveMap"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Commands"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -664,7 +671,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 <node TEXT="createNewTutorialMindMap.groovy" ID="ID_1471194194">
-<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="187.65957 pt"/>
+<attribute_layout NAME_WIDTH="199.88059 pt" VALUE_WIDTH="191.28358 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.createNewTutorialMindMap"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Commands"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -676,7 +683,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 <node TEXT="importToMStyles.groovy" ID="ID_1858810414">
-<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="186.89361 pt"/>
+<attribute_layout NAME_WIDTH="199.88059 pt" VALUE_WIDTH="191.28358 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.importToMStyles"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Commands"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -688,7 +695,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 <node TEXT="openTutorialPageFromLink.groovy" ID="ID_1316819334">
-<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="186.89361 pt"/>
+<attribute_layout NAME_WIDTH="199.88059 pt" VALUE_WIDTH="191.28358 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.openTutorialPageFromLink"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Commands"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -700,7 +707,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 <node TEXT="ToMDemo.groovy" ID="ID_513310589">
-<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="170.80851 pt"/>
+<attribute_layout NAME_WIDTH="199.88059 pt" VALUE_WIDTH="177.31343 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.ToMDemo"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Demos"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -712,7 +719,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 <node TEXT="openDemoMap.groovy" ID="ID_1629939217">
-<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="170.80851 pt"/>
+<attribute_layout NAME_WIDTH="199.88059 pt" VALUE_WIDTH="177.31343 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.openDemoMap"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Demos"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -724,7 +731,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 <node TEXT="ToMTutorial.groovy" ID="ID_1001747286">
-<attribute_layout NAME_WIDTH="187.65957 pt" VALUE_WIDTH="141.70212 pt"/>
+<attribute_layout NAME_WIDTH="199.88059 pt" VALUE_WIDTH="147.22388 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.ToMTutorial"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -734,6 +741,18 @@
 <attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
+</node>
+<node TEXT="getMenuHelp.groovy" ID="ID_1905569645">
+<attribute_layout NAME_WIDTH="199.88059 pt" VALUE_WIDTH="174.08955 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.getMenuHelp"/>
+<attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}/Tests"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE="control shift F1"/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 </node>
 <node TEXT="lib" POSITION="right" ID="ID_1814812956"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">

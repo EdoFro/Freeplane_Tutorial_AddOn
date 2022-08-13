@@ -490,7 +490,6 @@ class ToM_ui{
     
     //end:
 
-
     //region: Listeners
     
     // Listener for Tutorial Tab pane so it gets resized (enough length) each time its width gets modified

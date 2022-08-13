@@ -1,5 +1,9 @@
 # History
 
+## v0.0.8
+
+* Test: Using Tutorial-o-Matic as Menu Help
+
 ## v0.0.7
 
 * getMenuCommand renamed to getMenuCommandToM.groovy
