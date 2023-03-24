@@ -1,7 +1,7 @@
 <map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <attribute_registry SHOW_ATTRIBUTES="selected"/>
-<node TEXT="Tutorial -o- Matic" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_1356277378" LINK="file:/C:/Respaldo%20EF/ef/Documentos%20con%20macros/08%20Freemind%20Groovy/scripts/ScriptsEnComputadorYDesarrollosEdo%20v1.9.mm" MAX_WIDTH="5.5 cm"><hook NAME="MapStyle" background="#f9f9f8" zoom="0.8">
+<node TEXT="Tutorial -o- Matic" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_1356277378" LINK="file:/C:/Respaldo%20EF/ef/Documentos%20con%20macros/08%20Freemind%20Groovy/scripts/ScriptsEnComputadorYDesarrollosEdo%20v1.9.mm" MAX_WIDTH="5.5 cm"><hook NAME="MapStyle" background="#f9f9f8">
     <conditional_styles>
         <conditional_style ACTIVE="true" STYLE_REF="file" LAST="false">
             <script_condition>
@@ -13,10 +13,10 @@
         </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="file_folder" LAST="false">
             <script_condition>
-                <script>{node.link?.uri?.scheme == &apos;file&apos; &amp;&amp; (node.link.file?.exists()? node.link.file.directory : node.link.uri.path?.reverse()[0] == &apos;/&apos;)}</script>
+                <script>(node.link?.uri?.scheme == &apos;file&apos; &amp;&amp; node.link.uri.path.takeRight(1) == &apos;/&apos;)</script>
             </script_condition>
         </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="file_folder_with_icon" LAST="false">
+        <conditional_style ACTIVE="false" STYLE_REF="file_folder_with_icon" LAST="false">
             <conjunct_condition>
                 <style_contains_condition TEXT="file_folder"/>
                 <script_condition>
@@ -28,21 +28,8 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
         <conditional_style ACTIVE="true" STYLE_REF="Warning" LAST="false">
             <node_contains_condition VALUE=".EXIT_ON_CLOSE" ITEM="filter_any_text"/>
         </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="BotonMenu" LAST="false">
-            <hyper_link_contains TEXT="menuitem:"/>
-        </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="menuButton" LAST="false">
             <hyper_link_contains TEXT="menuitem:"/>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="Siguiente tarea" LAST="false">
-            <script_condition>
-                <script>node.children.any{it.style.name == &apos;Siguiente tarea&apos;}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="nextTask" LAST="false">
-            <script_condition>
-                <script>node.children.any{it.style.name == &apos;nextTask&apos;}</script>
-            </script_condition>
         </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="GroovyNode" LAST="false">
             <script_condition>
@@ -56,17 +43,19 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 }</script>
             </script_condition>
         </conditional_style>
+        <conditional_style ACTIVE="false" STYLE_REF="hasGroovyNode" LAST="false">
+            <any_descendant_condition>
+                <script_condition>
+                    <script>try { edofro.freeplane.groovynode.GN.isGroovyNode(node) } catch(e) { false }</script>
+                </script_condition>
+            </any_descendant_condition>
+        </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="containsNextTasks" LAST="true">
             <script_condition>
                 <script>(node.findAll() - node)?.any{it.style.name == &apos;nextTask&apos;}</script>
             </script_condition>
         </conditional_style>
         <conditional_style ACTIVE="false" STYLE_REF="containsNextTasks" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.style.name == &apos;Siguiente tarea&apos;} </script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="contieneSigTareas" LAST="true">
             <script_condition>
                 <script>(node.findAll() - node)?.any{it.style.name == &apos;Siguiente tarea&apos;} </script>
             </script_condition>
@@ -81,32 +70,15 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
                 <script>(node.findAll() - node)?.any{it.style.name == &apos;Tarea pendiente&apos;} </script>
             </script_condition>
         </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="contieneTareaPend" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.style.name == &apos;Tarea pendiente&apos;} </script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="customMenuPackage" LAST="false">
-            <attribute_exists_condition ATTRIBUTE="tbActions"/>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="file_folder_with_icon" LAST="false">
-            <conjunct_condition>
-                <script_condition>
-                    <script>import org.freeplane.core.util.FreeplaneVersion&#xd;
-return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) || !(node.link?.uri?.scheme == &apos;file&apos;) )</script>
-                </script_condition>
-                <style_equals_condition TEXT="file_folder"/>
-            </conjunct_condition>
-        </conditional_style>
     </conditional_styles>
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" BookmarksKeys="{}" followedTemplateLocation="file:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/templates/DFGHI%20Proyecto-Groovy-Tareas-MDI-menuButton%20(vis01).mm" pruebaDiccionario="ID_311366985|:|idDictionary|-|ID_323296041|:|ToM Actions|-|" show_icon_for_attributes="true" show_notes_in_map="false" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" mdhFreeMindmapPath="hhgf" save_folding="save_folding_if_map_is_changed" followedMapLastTime="1634692874154" fit_to_viewport="false"/>
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" BookmarksKeys="{}" followedTemplateLocation="template:/DFGHI%20Proyecto-Groovy-Tareas-MDI-menuButton%20(vis01).mm" pruebaDiccionario="ID_311366985|:|idDictionary|-|ID_323296041|:|ToM Actions|-|" show_icon_for_attributes="true" show_notes_in_map="false" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" mdhFreeMindmapPath="hhgf" save_folding="save_folding_if_map_is_changed" followedMapLastTime="1661362125221" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" NUMBERED="false" FORMAT="STANDARD_FORMAT" TEXT_ALIGN="DEFAULT" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px" MAX_WIDTH="10 cm" MIN_WIDTH="0 cm">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45.19149 pt;-2.29787 pt;" ENDINCLINATION="56.68085 pt;29.87234 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45.19149 pt;-12.25532 pt;" ENDINCLINATION="56.68085 pt;29.87234 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -120,13 +92,13 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </stylenode>
 <stylenode LOCALIZED_TEXT="defaultstyle.note" ID="ID_810825098" COLOR="#004600" BACKGROUND_COLOR="#e8e8c8" TEXT_ALIGN="LEFT">
 <icon BUILTIN="clock2"/>
-<font NAME="Consolas" SIZE="10"/>
+<font NAME="Consolas" SIZE="11"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="defaultstyle.floating" ID="ID_608497754">
 <edge STYLE="hide_edge"/>
 <cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="defaultstyle.selection" COLOR="#eceff4" BACKGROUND_COLOR="#bf616a" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#bf616a"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.selection" ID="ID_358779365" COLOR="#eceff4" BACKGROUND_COLOR="#bf616a" STYLE="bubble" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#bf616a"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="styles.important" ID="ID_915433779" BORDER_COLOR="#bf616a">
@@ -135,151 +107,117 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <font NAME="Ubuntu" SIZE="14"/>
 <edge COLOR="#bf616a"/>
 </stylenode>
-<stylenode TEXT="baseFolder" ID="ID_1803757085" ICON_SIZE="20 pt" BACKGROUND_COLOR="#ffeca9">
+<stylenode TEXT="baseFolder" ID="ID_1246743661" ICON_SIZE="20 pt" BACKGROUND_COLOR="#ffeca9">
 <icon BUILTIN="emoji-1F4BD"/>
 <font BOLD="true"/>
 </stylenode>
-<stylenode TEXT="newFolderImport" ID="ID_1891404637" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ffeca9">
+<stylenode TEXT="newFolderImport" ID="ID_175940221" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ffeca9">
 <icon BUILTIN="emoji-1F4BE"/>
 <font BOLD="true"/>
 </stylenode>
-<stylenode TEXT="freshNew" ID="ID_1333755930" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ace500">
+<stylenode TEXT="freshNew" ID="ID_1804698977" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ace500">
 <icon BUILTIN="emoji-1F195"/>
 </stylenode>
-<stylenode TEXT="movedRenamed" ID="ID_152421968" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ace500">
+<stylenode TEXT="movedRenamed" ID="ID_851444256" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ace500">
 <icon BUILTIN="emoji-1F500"/>
 </stylenode>
-<stylenode TEXT="file" ID="ID_1056721864" BORDER_WIDTH="2.5 px" BACKGROUND_COLOR="#bcc6e0" FORMAT="NO_FORMAT">
+<stylenode TEXT="file" ID="ID_1717966522" BORDER_WIDTH="2.5 px" BACKGROUND_COLOR="#bcc6e0" FORMAT="NO_FORMAT">
 <font NAME="Consolas"/>
 </stylenode>
-<stylenode TEXT="file_folder" ID="ID_974414569" BORDER_WIDTH="3 px"/>
-<stylenode TEXT="missing" ID="ID_340464737" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="3 px">
+<stylenode TEXT="file_folder" ID="ID_1554270070" BORDER_WIDTH="3 px"/>
+<stylenode TEXT="missing" ID="ID_1068634079" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="3 px">
 <icon BUILTIN="broken-line"/>
 </stylenode>
-<stylenode TEXT="modifiedFile" ID="ID_386547706" BACKGROUND_COLOR="#ffcc00" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#00659b">
+<stylenode TEXT="modifiedFile" ID="ID_1027988377" BACKGROUND_COLOR="#ffcc00" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#00659b">
 <icon BUILTIN="emoji-002A-20E3"/>
 <font ITALIC="true"/>
 </stylenode>
-<stylenode TEXT="locked" ID="ID_1276559700" COLOR="#e1e1e1" BACKGROUND_COLOR="#6f4e4e" BORDER_WIDTH="2.5 px">
+<stylenode TEXT="locked" ID="ID_936671747" COLOR="#e1e1e1" BACKGROUND_COLOR="#6f4e4e" BORDER_WIDTH="2.5 px">
 <icon BUILTIN="emoji-1F512"/>
 </stylenode>
-<stylenode TEXT="file_folder_with_icon" ID="ID_1530415124">
+<stylenode TEXT="file_folder_with_icon" ID="ID_927144007">
 <icon BUILTIN="emoji-1F4C2"/>
 </stylenode>
-<stylenode TEXT="GroovyNode" ID="ID_390969093" ICON_SIZE="16 pt" COLOR="#286b86" BACKGROUND_COLOR="#92c5d7" STYLE="bubble" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#286b86">
+<stylenode TEXT="GroovyNode" ID="ID_647184451" ICON_SIZE="16 pt" COLOR="#286b86" BACKGROUND_COLOR="#92c5d7" STYLE="bubble" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#286b86">
 <icon BUILTIN="groovyNode/groovy-G"/>
 <font NAME="Harlow Solid Italic" SIZE="12"/>
 </stylenode>
-<stylenode TEXT="Warning" ID="ID_151447265" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="6 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#990000">
+<stylenode TEXT="Warning" ID="ID_191105537" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="6 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#990000">
 <icon BUILTIN="closed"/>
 </stylenode>
-<stylenode TEXT="hasGroovyNode" ID="ID_430505112">
+<stylenode TEXT="hasGroovyNode" ID="ID_547619512">
 <icon BUILTIN="groovyNode/groovy-G"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.topic" ID="ID_772533012" COLOR="#18898b" STYLE="fork">
+<stylenode LOCALIZED_TEXT="styles.topic" ID="ID_1141135899" COLOR="#18898b" STYLE="fork">
 <font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.subtopic" ID="ID_53045809" COLOR="#cc3300" STYLE="fork">
+<stylenode LOCALIZED_TEXT="styles.subtopic" ID="ID_738828078" COLOR="#cc3300" STYLE="fork">
 <font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.subsubtopic" ID="ID_1313723148" COLOR="#669900">
+<stylenode LOCALIZED_TEXT="styles.subsubtopic" ID="ID_1196215838" COLOR="#669900">
 <font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
 </stylenode>
-<stylenode TEXT="Siguiente tarea" ID="ID_975465148" BACKGROUND_COLOR="#ffff33">
-<icon BUILTIN="yes"/>
-<icon BUILTIN="unchecked"/>
-<font NAME="MV Boli"/>
-</stylenode>
-<stylenode TEXT="nextTask" ID="ID_542130416" BACKGROUND_COLOR="#ffff33">
+<stylenode TEXT="nextTask" ID="ID_507772011" BACKGROUND_COLOR="#ffff33">
 <icon BUILTIN="yes"/>
 <icon BUILTIN="unchecked"/>
 </stylenode>
-<stylenode TEXT="Tarea pendiente" ID="ID_113937740" BACKGROUND_COLOR="#99ffff">
-<icon BUILTIN="unchecked"/>
-<font NAME="MV Boli"/>
-</stylenode>
-<stylenode TEXT="pendingTask" ID="ID_968429526" BACKGROUND_COLOR="#99ffff">
+<stylenode TEXT="pendingTask" ID="ID_1278203117" BACKGROUND_COLOR="#99ffff">
 <icon BUILTIN="unchecked"/>
 </stylenode>
-<stylenode TEXT="Tarea finalizada" ID="ID_761736598" COLOR="#333333" BACKGROUND_COLOR="#cccccc">
-<icon BUILTIN="checked"/>
-<font NAME="MV Boli" ITALIC="true"/>
-</stylenode>
-<stylenode TEXT="completedTask" ID="ID_896009247" COLOR="#333333" BACKGROUND_COLOR="#cccccc">
+<stylenode TEXT="completedTask" ID="ID_263222449" COLOR="#333333" BACKGROUND_COLOR="#cccccc">
 <icon BUILTIN="checked"/>
 <font ITALIC="true"/>
 </stylenode>
-<stylenode TEXT="Tarea Descartada" ID="ID_786208026" COLOR="#666666" BACKGROUND_COLOR="#cccccc">
-<icon BUILTIN="Descartado"/>
-<font NAME="MV Boli" ITALIC="true"/>
-</stylenode>
-<stylenode TEXT="discardedTask" ID="ID_73139650" COLOR="#666666" BACKGROUND_COLOR="#cccccc">
+<stylenode TEXT="discardedTask" ID="ID_1726907748" COLOR="#666666" BACKGROUND_COLOR="#cccccc">
 <icon BUILTIN="Descartado"/>
 <font ITALIC="true"/>
 </stylenode>
-<stylenode TEXT="contieneSigTareas" ID="ID_1485847107" BACKGROUND_COLOR="#eaea86">
-<icon BUILTIN="emoji-1F7E5"/>
-<font NAME="MV Boli"/>
-</stylenode>
-<stylenode TEXT="containsNextTasks" ID="ID_51976239" BACKGROUND_COLOR="#eaea86">
+<stylenode TEXT="containsNextTasks" ID="ID_661211039" BACKGROUND_COLOR="#eaea86">
 <icon BUILTIN="emoji-1F7E5"/>
 </stylenode>
-<stylenode TEXT="contieneTareaPend" ID="ID_1336123578" BACKGROUND_COLOR="#b5d7d7">
-<icon BUILTIN="emoji-23F9"/>
-<font NAME="MV Boli"/>
-</stylenode>
-<stylenode TEXT="containsPendingTasks" ID="ID_400770977" BACKGROUND_COLOR="#b5d7d7">
+<stylenode TEXT="containsPendingTasks" ID="ID_1486748518" BACKGROUND_COLOR="#b5d7d7">
 <icon BUILTIN="emoji-23F9"/>
 </stylenode>
-<stylenode TEXT="Proyecto" ID="ID_375411389" COLOR="#003399">
+<stylenode TEXT="Proyecto" ID="ID_643179356" COLOR="#003399">
 <font NAME="SansSerif" SIZE="12" BOLD="true" ITALIC="false"/>
 <edge COLOR="#003399" WIDTH="6"/>
 </stylenode>
-<stylenode TEXT="Grupito" ID="ID_1846275050">
+<stylenode TEXT="Grupito" ID="ID_1085570108">
 <cloud COLOR="#e4e6ff" SHAPE="ROUND_RECT"/>
 </stylenode>
-<stylenode TEXT="Iniciativa" ID="ID_1412484620">
+<stylenode TEXT="Iniciativa" ID="ID_604763806">
 <icon BUILTIN="attach"/>
 <font BOLD="true"/>
 </stylenode>
-<stylenode TEXT="Organizador" ID="ID_925943476">
+<stylenode TEXT="Organizador" ID="ID_235021673">
 <icon BUILTIN="folder"/>
 <font BOLD="true"/>
 </stylenode>
-<stylenode TEXT="Minuta" ID="ID_1804751247">
+<stylenode TEXT="Minuta" ID="ID_461928519">
 <icon BUILTIN="list"/>
 <cloud COLOR="#69a1f8" SHAPE="ROUND_RECT"/>
 </stylenode>
-<stylenode TEXT="Acuerdo" ID="ID_1723187143" BACKGROUND_COLOR="#66ff33">
+<stylenode TEXT="Acuerdo" ID="ID_1601320744" BACKGROUND_COLOR="#66ff33">
 <icon BUILTIN="flag-black"/>
 </stylenode>
-<stylenode TEXT="numerado" ID="ID_275647364" BACKGROUND_COLOR="#add1ea" STYLE="bubble" NUMBERED="true" MAX_WIDTH="200 px" MIN_WIDTH="200 px"/>
-<stylenode TEXT="con duda" ID="ID_87204236" BACKGROUND_COLOR="#ffff66">
+<stylenode TEXT="numerado" ID="ID_1268287532" BACKGROUND_COLOR="#add1ea" STYLE="bubble" NUMBERED="true" MAX_WIDTH="200 px" MIN_WIDTH="200 px"/>
+<stylenode TEXT="con duda" ID="ID_801703559" BACKGROUND_COLOR="#ffff66">
 <icon BUILTIN="help"/>
 <font BOLD="false" ITALIC="true"/>
 </stylenode>
-<stylenode TEXT="BotonMenu" ID="ID_973394045" ICON_SIZE="16 pt" COLOR="#b2dfff" BACKGROUND_COLOR="#3f657f" STYLE="bubble" BORDER_WIDTH="3 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#0097ff"/>
-<stylenode TEXT="menuButton" ID="ID_585316311" COLOR="#b2dfff" BACKGROUND_COLOR="#3f657f" STYLE="bubble" BORDER_WIDTH="3 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#0097ff"/>
-<stylenode TEXT="project" ID="ID_401996053" COLOR="#e1e19c" BACKGROUND_COLOR="#1c1c63">
+<stylenode TEXT="menuButton" ID="ID_398428156" COLOR="#b2dfff" BACKGROUND_COLOR="#3f657f" STYLE="bubble" BORDER_WIDTH="3 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#0097ff"/>
+<stylenode TEXT="maybeTask" BACKGROUND_COLOR="#cefcfc">
+<icon BUILTIN="emoji-23FA"/>
+</stylenode>
+<stylenode TEXT="project" COLOR="#e1e19c" BACKGROUND_COLOR="#1c1c63">
 <icon BUILTIN="emoji-1F5C2"/>
 <attribute NAME="projectCode" VALUE=""/>
-</stylenode>
-<stylenode TEXT="MarkdownHelperNode" ID="ID_1601600239" COLOR="#dbffdb" BACKGROUND_COLOR="#333333" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
-<icon BUILTIN="emoji-1F343"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
-</stylenode>
-<stylenode TEXT="customMenuPackage" ID="ID_113647305" ICON_SIZE="20 pt" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" BORDER_WIDTH="3 px" BORDER_COLOR="#ae5528">
-<icon BUILTIN="emoji-1F4E6"/>
-<font BOLD="true" ITALIC="true"/>
 </stylenode>
 <stylenode TEXT="tasksBucket">
 <icon BUILTIN="emoji-1F5C3"/>
 <font BOLD="true"/>
 </stylenode>
-<stylenode TEXT="maybeTask" BACKGROUND_COLOR="#cefcfc">
-<icon BUILTIN="emoji-23FA"/>
-</stylenode>
-<stylenode TEXT="milestone" ID="ID_1871867242" FORMAT="markdownPatternFormat">
+<stylenode TEXT="milestone">
 <icon BUILTIN="emoji-1F6A9"/>
 <font BOLD="true"/>
 </stylenode>
@@ -508,7 +446,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<node TEXT="otras ubicaciones posibles" STYLE_REF="locked" FOLDED="true" ID="ID_399374123"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="otras ubicaciones posibles" STYLE_REF="locked" ID="ID_399374123"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
     
@@ -519,7 +457,9 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<node TEXT="Freeplane_Tutorial_AddOn" ID="ID_1010951240" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Freeplane_Tutorial_AddOn" ID="ID_1010951240" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/">
+<icon BUILTIN="emoji-27A1"/>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
     
@@ -535,7 +475,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="creationTime" VALUE="12-09-21 15:08" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:08-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
 </node>
-<node TEXT="Freeplane_Tutorial_AddOn" STYLE_REF="missing" ID="ID_437551640" LINK="file:/D:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Freeplane_Tutorial_AddOn" ID="ID_437551640" LINK="file:/D:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
     
@@ -543,6 +483,18 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   <body>
     <p>
       disco externo D:
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="Freeplane_Tutorial_AddOn" ID="ID_1653601943" LINK="file:/E:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      disco externo E:
     </p>
   </body>
 </html></richcontent>
@@ -1129,7 +1081,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:29" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:29-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
-<node TEXT="lib" STYLE_REF="Organizador" ID="ID_1868195332">
+<node TEXT="lib" STYLE_REF="Organizador" FOLDED="true" ID="ID_1868195332">
 <attribute NAME="projectCode" VALUE="lib"/>
 <node TEXT="src" STYLE_REF="file_folder" ID="ID_776042065" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/src/">
 <attribute NAME="lastModifiedTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
@@ -2478,8 +2430,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="tests" FOLDED="true" ID="ID_1250833748">
 <node TEXT="tests ToM_actions" FOLDED="true" ID="ID_144232268" VGAP_QUANTITY="2 px">
 <node TEXT="nodo tiene link a menu action" ID="ID_1137418963"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
@@ -3397,7 +3348,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="node with link to user directory" ID="ID_1128548582"/>
 <node TEXT="node with link to user directory" ID="ID_1457223190"/>
 <node TEXT="node with link to user directory" ID="ID_1341172214"/>
-<node TEXT="node with link to user directory" STYLE_REF="missing" ID="ID_1974192334" LINK="file:/C:/Users/eduardo.frohlich/PortableApps/FreeplanePortable/Data/Freeplane/1.9.x/"/>
+<node TEXT="node with link to user directory" STYLE_REF="missing" ID="ID_1974192334" LINK="file:/C:/Users/eduardo.frohlich/PortableApps/FreeplanePortable/Data/Freeplane/1.9.x"/>
 </node>
 <node TEXT="prueba" ID="ID_1106588081"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -5430,8 +5381,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="**ToM xFuture A**" STYLE_REF="milestone" ID="ID_360145498">
 <node TEXT="ToM_buttonBoard: create a new style  that creates a panel that simulates a toolbar (like Menu-o-Matic)" STYLE_REF="pendingTask" ID="ID_443917831">
 <node TEXT="toma todos los hijos y crea panel de menu (al igual que MoM)" ID="ID_1047058341"/>
@@ -10334,8 +10284,7 @@ I tried also to translate some of the texts to German. Please help me correct th
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="crear otra clase que arme el tutorial desde el mapa: ToM" ID="ID_866747677"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -11057,7 +11006,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 </node>
-<node TEXT="scripts" STYLE_REF="file_folder" ID="ID_1091793016" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/scripts/" VGAP_QUANTITY="2 px">
+<node TEXT="scripts" STYLE_REF="file_folder" FOLDED="true" ID="ID_1091793016" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/scripts/" VGAP_QUANTITY="2 px">
 <attribute NAME="lastModifiedTime" VALUE="20-03-22 22:16" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:16-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
@@ -15474,8 +15423,7 @@ I tried also to translate some of the texts to German. Please help me correct th
       &nbsp;&nbsp;&nbsp;&nbsp;}
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -15486,8 +15434,7 @@ I tried also to translate some of the texts to German. Please help me correct th
       .groovy
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="zips" STYLE_REF="file_folder" FOLDED="true" ID="ID_447769735" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/">
@@ -16933,7 +16880,7 @@ contains the current tutorial information and selects the node where the current
 <attribute NAME="ignoreHeaderNotes" VALUE="true"/>
 <attribute NAME="ignoreLeafDetails" VALUE="false"/>
 <attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)</text>
 </richcontent>
 <node TEXT="Tutorial-o-Matic" ID="ID_817659443">
@@ -17056,7 +17003,7 @@ contains the current tutorial information and selects the node where the current
     <text>= edofro.MarkDownHelper.MDH.list(node) 
 //xx</text>
 </richcontent>
-<node TEXT="wip" STYLE_REF="tasksBucket" FOLDED="true" ID="ID_1757016865">
+<node TEXT="wip" STYLE_REF="tasksBucket" ID="ID_1757016865">
 <icon BUILTIN="emoji-1F648"/>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
@@ -17074,11 +17021,7 @@ contains the current tutorial information and selects the node where the current
 </html></richcontent>
 <attribute NAME="tasksStyles" VALUE="nextTask,pendingTask,maybeTask,discardedTask,completedTask"/>
 <attribute NAME="WIP filter" VALUE="true"/>
-<node TEXT="**No milestone**" STYLE_REF="milestone" FOLDED="true" ID="ID_541075632">
-<node TEXT="Redefine Add-on menu and Add-on tutorials links for better user experience" STYLE_REF="nextTask" FOLDED="true" ID="ID_1214786567">
-<icon BUILTIN="75%"/>
-</node>
-</node>
+<attribute NAME="groupingLevels" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 </node>
 </node>
 </node>
@@ -17087,7 +17030,7 @@ contains the current tutorial information and selects the node where the current
     <text>= edofro.MarkDownHelper.MDH.list(node)
 //xx</text>
 </richcontent>
-<node TEXT="tasks w/o maybeTasks" STYLE_REF="tasksBucket" FOLDED="true" ID="ID_1288720582">
+<node TEXT="tasks w/o maybeTasks" STYLE_REF="tasksBucket" ID="ID_1288720582">
 <icon BUILTIN="emoji-1F648"/>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
@@ -17105,184 +17048,7 @@ contains the current tutorial information and selects the node where the current
 </html></richcontent>
 <attribute NAME="tasksStyles" VALUE="nextTask,pendingTask,discardedTask,completedTask"/>
 <attribute NAME="WIP filter" VALUE="false"/>
-<node TEXT="**No milestone**" STYLE_REF="milestone" ID="ID_94556052">
-<node ID="ID_1655504281" CONTENT_ID="ID_1214786567"/>
-<node TEXT="Translate tasks to english" STYLE_REF="completedTask" ID="ID_370469094"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      and make it easy understandable
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="Filter &apos;maybeTasks&apos; from Readme file" STYLE_REF="completedTask" ID="ID_360508734"/>
-</node>
-<node TEXT="**ToM v0.0.7**" STYLE_REF="milestone" FOLDED="true" ID="ID_1112225077">
-<node TEXT="scripts" STYLE_REF="project" ID="ID_83472857">
-<node ID="ID_1261262006" CONTENT_ID="ID_325043197"/>
-</node>
-<node TEXT="build.gradle" STYLE_REF="project" ID="ID_1770614628">
-<node ID="ID_1003413440" CONTENT_ID="ID_550611630"/>
-<node ID="ID_1886689841" CONTENT_ID="ID_1225771658"/>
-</node>
-<node TEXT="Add-on tutorials (w/MDH)" STYLE_REF="project" ID="ID_1480942684">
-<node TEXT="StepByStep Tutorial" STYLE_REF="project" ID="ID_352767653">
-<node ID="ID_1643822613" CONTENT_ID="ID_1629420773"/>
-<node ID="ID_1814209379" CONTENT_ID="ID_1038231214"/>
-<node ID="ID_1459063046" CONTENT_ID="ID_74602107"/>
-<node ID="ID_292974321" CONTENT_ID="ID_32274263"/>
-<node ID="ID_116438426" CONTENT_ID="ID_1370002038"/>
-</node>
-<node ID="ID_1399321114" CONTENT_ID="ID_1426813923"/>
-</node>
-<node TEXT="README.MD" STYLE_REF="project" ID="ID_185903144">
-<node ID="ID_1789058385" CONTENT_ID="ID_427683929"/>
-<node ID="ID_1305427499" CONTENT_ID="ID_1360342935"/>
-</node>
-</node>
-<node TEXT="**ToM v0.0.8**" STYLE_REF="milestone" FOLDED="true" ID="ID_1899069843">
-<node TEXT="lib" STYLE_REF="project" ID="ID_1362768509">
-<node TEXT="ToM_actions.grvy" STYLE_REF="project" ID="ID_665072731">
-<node TEXT="ToM_showMenu" STYLE_REF="project" ID="ID_1223070366">
-<node ID="ID_292473433" CONTENT_ID="ID_717689189"/>
-<node ID="ID_1380479132" CONTENT_ID="ID_154816468"/>
-</node>
-</node>
-<node TEXT="ToM.grvy" STYLE_REF="project" ID="ID_654906817">
-<node ID="ID_905715697" CONTENT_ID="ID_614348581"/>
-</node>
-</node>
-<node TEXT="Add-on tutorials (w/MDH)" STYLE_REF="project" ID="ID_643814184">
-<node ID="ID_354598707" CONTENT_ID="ID_240259315"/>
-<node TEXT="StepByStepActions Tutorial" STYLE_REF="project" ID="ID_893676291">
-<node ID="ID_641563923" CONTENT_ID="ID_961780522"/>
-</node>
-<node TEXT="StepByStep Tutorial" STYLE_REF="project" ID="ID_803220979">
-<node ID="ID_1388647650" CONTENT_ID="ID_1114642776"/>
-</node>
-</node>
-</node>
-<node TEXT="**ToM xFuture A**" STYLE_REF="milestone" FOLDED="true" ID="ID_554778437">
-<node TEXT="lib" STYLE_REF="project" ID="ID_1276040523">
-<node TEXT="ToM_actions.grvy" STYLE_REF="project" ID="ID_1436386049">
-<node TEXT="ToM_showMenu" STYLE_REF="project" ID="ID_1607846838">
-<node ID="ID_838935611" CONTENT_ID="ID_55129515"/>
-</node>
-<node TEXT="ToM_groovy" STYLE_REF="project" ID="ID_1333088073">
-<node ID="ID_439381042" CONTENT_ID="ID_164174875"/>
-</node>
-<node TEXT="ToM_copy" STYLE_REF="project" ID="ID_537937984">
-<node ID="ID_922661952" CONTENT_ID="ID_820486783"/>
-</node>
-<node TEXT="ToM_select" STYLE_REF="project" ID="ID_1092393672">
-<node ID="ID_1450738272" CONTENT_ID="ID_1466466101"/>
-</node>
-<node TEXT="ToM_openMap" STYLE_REF="project" ID="ID_315930705">
-<node ID="ID_609543046" CONTENT_ID="ID_205879366"/>
-</node>
-<node TEXT="ToM_showNode" STYLE_REF="project" ID="ID_746548956">
-<node ID="ID_1854447329" CONTENT_ID="ID_1862773774"/>
-</node>
-<node TEXT="ToM_openTutMap" STYLE_REF="project" ID="ID_1047708501">
-<node ID="ID_1848468189" CONTENT_ID="ID_1678860903"/>
-</node>
-<node TEXT="new" STYLE_REF="project" ID="ID_838759208">
-<node ID="ID_755541578" CONTENT_ID="ID_1806231140"/>
-</node>
-</node>
-<node TEXT="ToM_ui.grvy" STYLE_REF="project" ID="ID_29356764">
-<node ID="ID_1747266544" CONTENT_ID="ID_443917831"/>
-</node>
-</node>
-<node TEXT="icons" STYLE_REF="project" ID="ID_552646795">
-<node ID="ID_128832859" CONTENT_ID="ID_1895927375"/>
-</node>
-<node TEXT="doc" STYLE_REF="project" ID="ID_544600836">
-<node ID="ID_845211951" CONTENT_ID="ID_833774296"/>
-</node>
-<node TEXT="Add-on tutorials (w/MDH)" STYLE_REF="project" ID="ID_1188125215">
-<node ID="ID_314039581" CONTENT_ID="ID_366513202"/>
-</node>
-</node>
-<node TEXT="**ToM xFuture B**" STYLE_REF="milestone" FOLDED="true" ID="ID_574357219">
-<node TEXT="lib" STYLE_REF="project" ID="ID_27445364">
-<node TEXT="ToM_actions.grvy" STYLE_REF="project" ID="ID_1909791423">
-<node ID="ID_702143845" CONTENT_ID="ID_141287878"/>
-<node TEXT="new" STYLE_REF="project" ID="ID_531319596">
-<node ID="ID_619376071" CONTENT_ID="ID_762507140"/>
-</node>
-</node>
-<node TEXT="ToM_ui.grvy" STYLE_REF="project" ID="ID_1304975660">
-<node ID="ID_541759427" CONTENT_ID="ID_46207761"/>
-</node>
-</node>
-<node TEXT="scripts" STYLE_REF="project" ID="ID_1164901174">
-<node ID="ID_660875105" CONTENT_ID="ID_418033123"/>
-</node>
-<node TEXT="Add-on tutorials (w/MDH)" STYLE_REF="project" ID="ID_617657422">
-<node TEXT="Commands" STYLE_REF="project" ID="ID_1973595040">
-<node ID="ID_1960514573" CONTENT_ID="ID_1855496898"/>
-</node>
-</node>
-<node TEXT="Apuntes" STYLE_REF="project" ID="ID_1905619353">
-<node TEXT="practice maps: Should the user be able to save changes or should the user have to use &quot;save as&quot; option?" STYLE_REF="pendingTask" ID="ID_996424176"/>
-<node TEXT="new MDH feature:&#xa;Command to &apos;update&apos; the note of a node that has a link to a MDH node and it copy/pastes its contain (from another map)" STYLE_REF="pendingTask" ID="ID_389959330"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      desde otro mapa
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-</node>
-<node TEXT="**ToM xFuture C**" STYLE_REF="milestone" FOLDED="true" ID="ID_779101178">
-<node TEXT="lib" STYLE_REF="project" ID="ID_952412043">
-<node TEXT="ToM_actions.grvy" STYLE_REF="project" ID="ID_1119275667">
-<node TEXT="ToM_groovy" STYLE_REF="project" ID="ID_1642699554">
-<node ID="ID_562627471" CONTENT_ID="ID_1676865459"/>
-<node ID="ID_571035217" CONTENT_ID="ID_263975475"/>
-<node ID="ID_561376590" CONTENT_ID="ID_229034055"/>
-</node>
-<node TEXT="new" STYLE_REF="project" ID="ID_1417889636">
-<node ID="ID_442923145" CONTENT_ID="ID_1414909465"/>
-</node>
-</node>
-<node TEXT="ToM_ui.grvy" STYLE_REF="project" ID="ID_1457434720">
-<node ID="ID_292084347" CONTENT_ID="ID_537401280"/>
-<node ID="ID_925823016" CONTENT_ID="ID_989055975"/>
-<node ID="ID_1705907747" CONTENT_ID="ID_505394382"/>
-</node>
-</node>
-<node TEXT="doc" STYLE_REF="project" ID="ID_311404228">
-<node ID="ID_667015019" CONTENT_ID="ID_1364359640"/>
-</node>
-</node>
-<node TEXT="**ToM xFuture D**" STYLE_REF="milestone" FOLDED="true" ID="ID_1155325996">
-<node TEXT="lib" STYLE_REF="project" ID="ID_1720566625">
-<node TEXT="ToM_actions.grvy" STYLE_REF="project" ID="ID_1976621059">
-<node TEXT="new" STYLE_REF="project" ID="ID_697743609">
-<node ID="ID_714229245" CONTENT_ID="ID_1759096571"/>
-</node>
-</node>
-<node ID="ID_718574514" CONTENT_ID="ID_600379606"/>
-</node>
-<node TEXT="build.gradle" STYLE_REF="project" ID="ID_283285659">
-<node ID="ID_663318781" CONTENT_ID="ID_1363993016">
-<node ID="ID_1370126953" CONTENT_ID="ID_198568528"/>
-<node ID="ID_225952399" CONTENT_ID="ID_578653272"/>
-<node ID="ID_843780751" CONTENT_ID="ID_857096425"/>
-</node>
-</node>
-</node>
+<attribute NAME="groupingLevels" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1|#0.####"/>
 </node>
 </node>
 </node>
@@ -17403,7 +17169,7 @@ contains the current tutorial information and selects the node where the current
   </body>
 </html></richcontent>
 </node>
-<node TEXT="Tutorial-o-Matic project.mm" ID="ID_1496137192" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic%20project.mm"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Tutorial-o-Matic project.mm" ID="ID_1496137192" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic%20project.mm" VGAP_QUANTITY="2 px"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
     
@@ -17414,11 +17180,11 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<node TEXT="xxx" ID="ID_1619262706"/>
 </node>
 </node>
 <node TEXT="additional tasks" ID="ID_450197086">
-<node ID="ID_918601029" CONTENT_ID="ID_1214786567">
+<node TEXT="Redefine Add-on menu and Add-on tutorials links for better user experience" STYLE_REF="nextTask" FOLDED="true" ID="ID_918601029">
+<icon BUILTIN="75%"/>
 <node TEXT="currently" FOLDED="true" ID="ID_1690784300" VGAP_QUANTITY="36 pt">
 <node TEXT="Menu" ID="ID_1551202987">
 <node TEXT="" ID="ID_1700557911">
@@ -17446,15 +17212,15 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="Tutorials" ID="ID_1847569001" VGAP_QUANTITY="27.57447 pt">
 <node TEXT="SimpleTutorialSample.mm" FOLDED="true" ID="ID_230501881" BACKGROUND_COLOR="#cdd0f6">
+<arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_182355635" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="120.25532 pt;-3.06383 pt;"/>
 <arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_791393290" STARTINCLINATION="55.14894 pt;5.3617 pt;" ENDINCLINATION="43.65957 pt;0 pt;"/>
-<arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_182355635" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="120.25532 pt;-6.12766 pt;"/>
 <arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_214626079" STARTINCLINATION="27.57447 pt;2.29787 pt;" ENDINCLINATION="26.80851 pt;0 pt;"/>
 </node>
 <node TEXT="ExercisingMap.mm" FOLDED="true" ID="ID_791393290" BACKGROUND_COLOR="#b6fc01"/>
 <node TEXT="Tutorial-o-Matic Intro.mm" FOLDED="true" ID="ID_182355635" BACKGROUND_COLOR="#08acd1">
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_214626079" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-9.95745 pt;"/>
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_660860081" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-9.95745 pt;"/>
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_1179881449" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-9.95745 pt;"/>
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_214626079" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-6.89362 pt;"/>
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_1179881449" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-6.89362 pt;"/>
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_660860081" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-6.89362 pt;"/>
 </node>
 <node TEXT="HowToTutorial-o-Matic.mm" FOLDED="true" ID="ID_214626079" BACKGROUND_COLOR="#ba2ed1"/>
 <node TEXT="Tutorial-o-MaticCommands.mm" FOLDED="true" ID="ID_660860081" VSHIFT_QUANTITY="-1.53191 pt" BACKGROUND_COLOR="#ee8e05"/>
@@ -17491,15 +17257,15 @@ contains the current tutorial information and selects the node where the current
 </node>
 </node>
 <node TEXT="ToMTutorial" ID="ID_1882207830">
-<arrowlink DESTINATION="ID_315096252" MIDDLE_LABEL="Creado" STARTINCLINATION="271.91489 pt;0 pt;" ENDINCLINATION="377.61701 pt;-6.89362 pt;"/>
+<arrowlink DESTINATION="ID_315096252" MIDDLE_LABEL="Creado" STARTINCLINATION="271.91489 pt;0 pt;" ENDINCLINATION="377.61701 pt;-3.82979 pt;"/>
 </node>
 </node>
 <node TEXT="Tutorials" ID="ID_37813074" VGAP_QUANTITY="18.38298 pt">
 <node TEXT="demo" ID="ID_1458344822" VGAP_QUANTITY="14 px">
 <node TEXT="SimpleTutorialSample.mm" FOLDED="true" ID="ID_90091810" BACKGROUND_COLOR="#cdd0f6">
+<arrowlink COLOR="#ff9900" TRANSPARENCY="255" DESTINATION="ID_315096252" MIDDLE_LABEL="quitar" STARTINCLINATION="284.17021 pt;-72 pt;" ENDINCLINATION="251.23404 pt;-93.44681 pt;"/>
 <arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_1804718842" STARTINCLINATION="55.14894 pt;5.3617 pt;" ENDINCLINATION="43.65957 pt;0 pt;"/>
-<arrowlink COLOR="#ff9900" TRANSPARENCY="255" DESTINATION="ID_271832651" MIDDLE_LABEL="quitar" STARTINCLINATION="500.93616 pt;-154.7234 pt;" ENDINCLINATION="314.8085 pt;-144 pt;"/>
-<arrowlink COLOR="#ff9900" TRANSPARENCY="255" DESTINATION="ID_315096252" MIDDLE_LABEL="quitar" STARTINCLINATION="284.17021 pt;-75.06383 pt;" ENDINCLINATION="251.23404 pt;-96.51064 pt;"/>
+<arrowlink COLOR="#ff9900" TRANSPARENCY="255" DESTINATION="ID_271832651" MIDDLE_LABEL="quitar" STARTINCLINATION="500.93616 pt;-151.65957 pt;" ENDINCLINATION="314.8085 pt;-140.93617 pt;"/>
 <node TEXT="simple demo" ID="ID_1450176090" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
 <node TEXT="Introduction" ID="ID_1843423512" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 <node TEXT="SIMPLE DEMO" ID="ID_1649465485" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
@@ -17518,9 +17284,9 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="tutorial" ID="ID_160180737" VGAP_QUANTITY="14 px">
 <node TEXT="Tutorial-o-Matic Intro.mm" ID="ID_315096252" BACKGROUND_COLOR="#08acd1">
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_271832651" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-9.19149 pt;"/>
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_612275579" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-9.19149 pt;"/>
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_806121553" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-9.19149 pt;"/>
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_612275579" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-6.12766 pt;"/>
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_806121553" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-6.12766 pt;"/>
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_271832651" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-6.12766 pt;"/>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -17594,8 +17360,213 @@ contains the current tutorial information and selects the node where the current
 </node>
 </node>
 </node>
-<node ID="ID_312032152" CONTENT_ID="ID_370469094"/>
-<node ID="ID_400805" CONTENT_ID="ID_360508734"/>
+<node TEXT="Translate tasks to english" STYLE_REF="completedTask" ID="ID_312032152"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      and make it easy understandable
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="Filter &apos;maybeTasks&apos; from Readme file" STYLE_REF="completedTask" ID="ID_400805"/>
+</node>
+<node TEXT="script tests" ID="ID_1689658751">
+<node TEXT="get icon from node" STYLE_REF="nextTask" ID="ID_183357924">
+<node TEXT="get first icon from node and insert it into an html" ID="ID_901278280"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      def nodo = node
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def iconName = nodo.icons.first
+    </p>
+    <p>
+      def menuItemKey = 'IconAction.' + iconName
+    </p>
+    <p>
+      def icono = menuUtils.getMenuItemIcon(menuItemKey)
+    </p>
+    <p>
+      def html = htmlUtils.iconToHtml(icono)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def html2 =&nbsp;&nbsp;&quot;&lt;html&gt;&lt;body&gt;&lt;p&gt;icon ${html} is named '${iconName}'&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&quot;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def resultNode = nodo.createChild(html2)
+    </p>
+    <p>
+      resultNode.note = html2
+    </p>
+    <p>
+      resultNode.details = html2
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="example:" ID="ID_125383300">
+<icon BUILTIN="emoji-1F525"/>
+<node ID="ID_1079805888"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      icon <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAACNklEQVR4XpWTz0sVURTHb9rKuWOJRrgwIqJwkaJhiYIgGUWvdoW0tU3gSlq5EKxNLYKZESUQQRcSIYX0AyNsUWgLs/9AV0YZUm/hzNXnzHtzOmecH3fuTFkHvjDn3PP93DP3zjD2H+GY2tCucfSkWv+nQHOLPcaPyTVh6AOOyX9tW3qXXD8wYJQdRuMGQo/LddvivVgH1E9h1DTKa38Nx9KuktE2+E25Lix+NwSitIfyWia2x/X66Dl8NTJ+t03eQzWEN2P+NQHqq4lbieKjuiOOoQ9HOe5+JTEGEkpO+iEzUoGvMoITPIjyYAOTV3Igsr7JjDgA2CFc3MSppuPaKKvC3MmBxBImX5I5dEnEYmKspi1ssOlT2b9h7Z4KUIVnOykDMe8nFnMM7bbSXFLNe8+bYXfmhALVH8tAHOgFsej2BlWAKgLC6nUoPTuT1A3+AeZYdTjdLaz5xMqbMKO9ubMAX24gtABioi6u41Tr+M2uJJvghDtm7UXZvDPVCKXZUymgt3BhH4gqPT2d2TD2IovR2JhsBUVLh8rHXii/746b6DUjGMmdb0kmfNIgA7eiI2B0wFSkg4+MleU+8Jcvp2Ck8mJXDHFftqKnKcylS6LfDotFalABeSKo964zuCh3/hwBi/KvG4QwagveQoevmg+S97bDJ28KFoX7un0cPhcypj8Ke8mjclLhvmq7U1m6JDJmRdRDvao/N/CfrPLenL9fXuxe8z/1ubByzSfRM9VojXpUH8VvYsKxE+49pcgAAAAASUVORK5CYII="/>&nbsp;is named 'emoji-1F525'
+    </p>
+  </body>
+</html>
+</richcontent>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      icon <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAACNklEQVR4XpWTz0sVURTHb9rKuWOJRrgwIqJwkaJhiYIgGUWvdoW0tU3gSlq5EKxNLYKZESUQQRcSIYX0AyNsUWgLs/9AV0YZUm/hzNXnzHtzOmecH3fuTFkHvjDn3PP93DP3zjD2H+GY2tCucfSkWv+nQHOLPcaPyTVh6AOOyX9tW3qXXD8wYJQdRuMGQo/LddvivVgH1E9h1DTKa38Nx9KuktE2+E25Lix+NwSitIfyWia2x/X66Dl8NTJ+t03eQzWEN2P+NQHqq4lbieKjuiOOoQ9HOe5+JTEGEkpO+iEzUoGvMoITPIjyYAOTV3Igsr7JjDgA2CFc3MSppuPaKKvC3MmBxBImX5I5dEnEYmKspi1ssOlT2b9h7Z4KUIVnOykDMe8nFnMM7bbSXFLNe8+bYXfmhALVH8tAHOgFsej2BlWAKgLC6nUoPTuT1A3+AeZYdTjdLaz5xMqbMKO9ubMAX24gtABioi6u41Tr+M2uJJvghDtm7UXZvDPVCKXZUymgt3BhH4gqPT2d2TD2IovR2JhsBUVLh8rHXii/746b6DUjGMmdb0kmfNIgA7eiI2B0wFSkg4+MleU+8Jcvp2Ck8mJXDHFftqKnKcylS6LfDotFalABeSKo964zuCh3/hwBi/KvG4QwagveQoevmg+S97bDJ28KFoX7un0cPhcypj8Ke8mjclLhvmq7U1m6JDJmRdRDvao/N/CfrPLenL9fXuxe8z/1ubByzSfRM9VojXpUH8VvYsKxE+49pcgAAAAASUVORK5CYII="/>&nbsp;is named 'emoji-1F525'
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      icon <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAACNklEQVR4XpWTz0sVURTHb9rKuWOJRrgwIqJwkaJhiYIgGUWvdoW0tU3gSlq5EKxNLYKZESUQQRcSIYX0AyNsUWgLs/9AV0YZUm/hzNXnzHtzOmecH3fuTFkHvjDn3PP93DP3zjD2H+GY2tCucfSkWv+nQHOLPcaPyTVh6AOOyX9tW3qXXD8wYJQdRuMGQo/LddvivVgH1E9h1DTKa38Nx9KuktE2+E25Lix+NwSitIfyWia2x/X66Dl8NTJ+t03eQzWEN2P+NQHqq4lbieKjuiOOoQ9HOe5+JTEGEkpO+iEzUoGvMoITPIjyYAOTV3Igsr7JjDgA2CFc3MSppuPaKKvC3MmBxBImX5I5dEnEYmKspi1ssOlT2b9h7Z4KUIVnOykDMe8nFnMM7bbSXFLNe8+bYXfmhALVH8tAHOgFsej2BlWAKgLC6nUoPTuT1A3+AeZYdTjdLaz5xMqbMKO9ubMAX24gtABioi6u41Tr+M2uJJvghDtm7UXZvDPVCKXZUymgt3BhH4gqPT2d2TD2IovR2JhsBUVLh8rHXii/746b6DUjGMmdb0kmfNIgA7eiI2B0wFSkg4+MleU+8Jcvp2Ck8mJXDHFftqKnKcylS6LfDotFalABeSKo964zuCh3/hwBi/KvG4QwagveQoevmg+S97bDJ28KFoX7un0cPhcypj8Ke8mjclLhvmq7U1m6JDJmRdRDvao/N/CfrPLenL9fXuxe8z/1ubByzSfRM9VojXpUH8VvYsKxE+49pcgAAAAASUVORK5CYII="/>&nbsp;is named 'emoji-1F525'
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node TEXT="otro" ID="ID_1649044303">
+<icon BUILTIN="emoji-1F995"/>
+<node ID="ID_982039172"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      icon <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAACDUlEQVR4XmNgQALVGyJkyzaFzizfHHqneE3Qg4pNoYsqtkQJIqshGlRsDFUp3xT6Eoj/g3B8n8v/vKX+QHbISnS1hMF/BkagIWdghgHxZyC+D8YbQ1ejKycIKjaGhEIN+gPEUejyJIOKzaEbIQaS4z0sAGjYC7CBG0Mi0OXIAkDDfoEMLNsYbIIuRxaARsL/qi3hOuhyZAFg2nsEDcN0dDmyANCw02ADN4d+ANLtFZvDMoB0XdnmkIaSjUFNJetDaoGW+TesCuVB14sVlG8KmwdNNmBcsNLvf8m6wP8Fq/3/l24I/p+1yON/zlLv/4Wr/X9WbAppatjvwIJuBgoA2p6LbCDU+//zlvkADQ76X7I+6H/pxmCwONBQYOSFTEc3AwWUbQuSAeaIv5iG4sZlG0P90M1BAUCbz6FrIoCv4/V60kyH5Vg04ccbQzPRzYGDwHb9dRgaCOMXJTtjudHNYvDMVWF3qVZ5DVOISJeouGhtIIz9E4i/gtgVm8LK0c1jsCuSi3OvVYNrBEUSMNDVQQFftjEsvnJzmJdXg+aioA4DmJrfpZtCfEA0EH+sWhskiWpgoezaQIRijDztkCXKA7T0U0S/GVxN6dZQCWD6DQOyfwDx/ob9CRxwDbbFsruDu43+wRVvDjdCMo/BoVDWxK5I9n/sFGtY0vpXtTFSHCRXtiVcE8hfCsQnQaUVAEdHtHKb5atxAAAAAElFTkSuQmCC"/>&nbsp;is named 'emoji-1F995'
+    </p>
+  </body>
+</html>
+</richcontent>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      icon <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAACDUlEQVR4XmNgQALVGyJkyzaFzizfHHqneE3Qg4pNoYsqtkQJIqshGlRsDFUp3xT6Eoj/g3B8n8v/vKX+QHbISnS1hMF/BkagIWdghgHxZyC+D8YbQ1ejKycIKjaGhEIN+gPEUejyJIOKzaEbIQaS4z0sAGjYC7CBG0Mi0OXIAkDDfoEMLNsYbIIuRxaARsL/qi3hOuhyZAFg2nsEDcN0dDmyANCw02ADN4d+ANLtFZvDMoB0XdnmkIaSjUFNJetDaoGW+TesCuVB14sVlG8KmwdNNmBcsNLvf8m6wP8Fq/3/l24I/p+1yON/zlLv/4Wr/X9WbAppatjvwIJuBgoA2p6LbCDU+//zlvkADQ76X7I+6H/pxmCwONBQYOSFTEc3AwWUbQuSAeaIv5iG4sZlG0P90M1BAUCbz6FrIoCv4/V60kyH5Vg04ccbQzPRzYGDwHb9dRgaCOMXJTtjudHNYvDMVWF3qVZ5DVOISJeouGhtIIz9E4i/gtgVm8LK0c1jsCuSi3OvVYNrBEUSMNDVQQFftjEsvnJzmJdXg+aioA4DmJrfpZtCfEA0EH+sWhskiWpgoezaQIRijDztkCXKA7T0U0S/GVxN6dZQCWD6DQOyfwDx/ob9CRxwDbbFsruDu43+wRVvDjdCMo/BoVDWxK5I9n/sFGtY0vpXtTFSHCRXtiVcE8hfCsQnQaUVAEdHtHKb5atxAAAAAElFTkSuQmCC"/>&nbsp;is named 'emoji-1F995'
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      icon <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAACDUlEQVR4XmNgQALVGyJkyzaFzizfHHqneE3Qg4pNoYsqtkQJIqshGlRsDFUp3xT6Eoj/g3B8n8v/vKX+QHbISnS1hMF/BkagIWdghgHxZyC+D8YbQ1ejKycIKjaGhEIN+gPEUejyJIOKzaEbIQaS4z0sAGjYC7CBG0Mi0OXIAkDDfoEMLNsYbIIuRxaARsL/qi3hOuhyZAFg2nsEDcN0dDmyANCw02ADN4d+ANLtFZvDMoB0XdnmkIaSjUFNJetDaoGW+TesCuVB14sVlG8KmwdNNmBcsNLvf8m6wP8Fq/3/l24I/p+1yON/zlLv/4Wr/X9WbAppatjvwIJuBgoA2p6LbCDU+//zlvkADQ76X7I+6H/pxmCwONBQYOSFTEc3AwWUbQuSAeaIv5iG4sZlG0P90M1BAUCbz6FrIoCv4/V60kyH5Vg04ccbQzPRzYGDwHb9dRgaCOMXJTtjudHNYvDMVWF3qVZ5DVOISJeouGhtIIz9E4i/gtgVm8LK0c1jsCuSi3OvVYNrBEUSMNDVQQFftjEsvnJzmJdXg+aioA4DmJrfpZtCfEA0EH+sWhskiWpgoezaQIRijDztkCXKA7T0U0S/GVxN6dZQCWD6DQOyfwDx/ob9CRxwDbbFsruDu43+wRVvDjdCMo/BoVDWxK5I9n/sFGtY0vpXtTFSHCRXtiVcE8hfCsQnQaUVAEdHtHKb5atxAAAAAElFTkSuQmCC"/>&nbsp;is named 'emoji-1F995'
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Accesando internal images de Freeplane" STYLE_REF="nextTask" ID="ID_1319646053">
+<node TEXT="ejemplo markdown" ID="ID_1423365308"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      ![image](freeplaneresource:/images/Freeplane_splash.png)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="ejemplo html" ID="ID_1642381497"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <img src="freeplaneresource:/images/Freeplane_splash.png" alt="image"/>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node ID="ID_1419835263"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      y en &lt;<b>user-config-directory</b>&gt;/resources/
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="ejemplo markdown" ID="ID_264639123"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>![image](freeplaneresource:/images/menuOMatic.png)</text>
+</richcontent>
+</node>
+<node TEXT="ejemplo html" ID="ID_38225212"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <img src="freeplaneresource:/images/menuOMatic.png" alt="image"/>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
 </node>
 <node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1957802391">
 <attribute NAME="log_MDI" VALUE="No"/>
@@ -17657,17 +17628,7 @@ contains the current tutorial information and selects the node where the current
       
     </p>
   </body>
-</html>
-</richcontent>
-<node TEXT="Tutorial-o-Matic" ID="ID_1109044857" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/">
-<node TEXT="images" ID="ID_117957740" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/images/"/>
-<node TEXT="zips" ID="ID_849570960" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/">
-<node TEXT="doc" ID="ID_1450313289" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/">
-<node TEXT="Tutorial-o-Matic" STYLE_REF="BotonMenu" ID="ID_1891043661" LINK="#ID_1178743529"/>
-</node>
-</node>
-</node>
-<node TEXT="EditingTutorialsWithMDH" STYLE_REF="BotonMenu" ID="ID_1156521253" LINK="#ID_1175655998"/>
+</html></richcontent>
 </node>
 <node TEXT="Apuntes y tareas finalizadas" STYLE_REF="Organizador" FOLDED="true" ID="ID_1147908346"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
@@ -20226,7 +20187,7 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="defniciones" STYLE_REF="Organizador" ID="ID_1567673732">
 <node TEXT="**ToM xFuture B**" STYLE_REF="milestone" ID="ID_1843564695">
-<node ID="ID_1067582345" CONTENT_ID="ID_996424176">
+<node TEXT="practice maps: Should the user be able to save changes or should the user have to use &quot;save as&quot; option?" STYLE_REF="pendingTask" ID="ID_1067582345">
 <node TEXT="para casos que no (sean tipo template):" ID="ID_798555155">
 <node TEXT="def myLoader = c.mapLoader(sourceFile)&#xa;def targetMap = myLoader.unsetMapLocation().withView().getMindMap()" ID="ID_1047640424"/>
 </node>
@@ -21935,7 +21896,18 @@ def setNoteMarkdown(n){&#xd;
 </node>
 </node>
 <node TEXT="**ToM xFuture B**" STYLE_REF="milestone" ID="ID_614447178">
-<node ID="ID_102311683" CONTENT_ID="ID_389959330"/>
+<node TEXT="new MDH feature:&#xa;Command to &apos;update&apos; the note of a node that has a link to a MDH node and it copy/pastes its contain (from another map)" STYLE_REF="pendingTask" ID="ID_102311683"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      desde otro mapa
+    </p>
+  </body>
+</html></richcontent>
+</node>
 </node>
 </node>
 <node TEXT="off" ID="ID_1385038879">
@@ -21947,7 +21919,7 @@ def setNoteMarkdown(n){&#xd;
 </node>
 </node>
 </node>
-<node TEXT="tasksBucket" STYLE_REF="tasksBucket" POSITION="right" ID="ID_1843115925"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="tasksBucket" STYLE_REF="tasksBucket" FOLDED="true" POSITION="right" ID="ID_1843115925"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
     
@@ -21963,10 +21935,13 @@ def setNoteMarkdown(n){&#xd;
 </html></richcontent>
 <attribute NAME="tasksStyles" VALUE="nextTask,pendingTask,maybeTask,discardedTask,completedTask"/>
 <attribute NAME="WIP filter" VALUE="false"/>
+<attribute NAME="groupingLevels" VALUE="10" OBJECT="org.freeplane.features.format.FormattedNumber|10"/>
 <node TEXT="**No milestone**" STYLE_REF="milestone" FOLDED="true" ID="ID_565106237">
-<node ID="ID_1718859571" CONTENT_ID="ID_1214786567"/>
-<node ID="ID_529997995" CONTENT_ID="ID_370469094"/>
-<node ID="ID_202629208" CONTENT_ID="ID_360508734"/>
+<node ID="ID_1718859571" CONTENT_ID="ID_918601029"/>
+<node ID="ID_529997995" CONTENT_ID="ID_312032152"/>
+<node ID="ID_202629208" CONTENT_ID="ID_400805"/>
+<node ID="ID_1135428861" CONTENT_ID="ID_183357924"/>
+<node ID="ID_829750413" CONTENT_ID="ID_1319646053"/>
 </node>
 <node TEXT="**ToM v0.0.7**" STYLE_REF="milestone" FOLDED="true" ID="ID_49912749">
 <node TEXT="scripts" STYLE_REF="project" ID="ID_1373715009">
@@ -22097,8 +22072,8 @@ def setNoteMarkdown(n){&#xd;
 </node>
 </node>
 <node TEXT="Apuntes" STYLE_REF="project" ID="ID_395065956">
-<node ID="ID_503618981" CONTENT_ID="ID_996424176"/>
-<node ID="ID_1657891536" CONTENT_ID="ID_389959330"/>
+<node ID="ID_503618981" CONTENT_ID="ID_1067582345"/>
+<node ID="ID_1657891536" CONTENT_ID="ID_102311683"/>
 </node>
 <node TEXT="scripts" STYLE_REF="project" ID="ID_796192165">
 <node ID="ID_856622231" CONTENT_ID="ID_418033123"/>
@@ -22180,169 +22155,9 @@ def setNoteMarkdown(n){&#xd;
 </node>
 </node>
 </node>
-<node TEXT="off" POSITION="right" ID="ID_33387891"/>
-<node POSITION="right" ID="ID_983871078" TREE_ID="ID_1757016865">
-<node ID="ID_195091208" TREE_ID="ID_541075632">
-<node ID="ID_1150807860" TREE_ID="ID_1214786567"/>
-</node>
-</node>
-<node POSITION="right" ID="ID_1190106509" TREE_ID="ID_1288720582">
-<node ID="ID_705763592" TREE_ID="ID_94556052">
-<node ID="ID_491096169" CONTENT_ID="ID_1214786567"/>
-<node ID="ID_770485373" TREE_ID="ID_370469094"/>
-<node ID="ID_1409212534" TREE_ID="ID_360508734"/>
-</node>
-<node ID="ID_17205378" TREE_ID="ID_1112225077">
-<node ID="ID_1159206644" TREE_ID="ID_83472857">
-<node ID="ID_1927402930" CONTENT_ID="ID_325043197"/>
-</node>
-<node ID="ID_415711069" TREE_ID="ID_1770614628">
-<node ID="ID_1593798455" CONTENT_ID="ID_550611630"/>
-<node ID="ID_1452797925" CONTENT_ID="ID_1225771658"/>
-</node>
-<node ID="ID_1371984697" TREE_ID="ID_1480942684">
-<node ID="ID_580608703" TREE_ID="ID_352767653">
-<node ID="ID_863181226" CONTENT_ID="ID_1629420773"/>
-<node ID="ID_1083756050" CONTENT_ID="ID_1038231214"/>
-<node ID="ID_773192279" CONTENT_ID="ID_74602107"/>
-<node ID="ID_48691835" CONTENT_ID="ID_32274263"/>
-<node ID="ID_854595168" CONTENT_ID="ID_1370002038"/>
-</node>
-<node ID="ID_1997683887" CONTENT_ID="ID_1426813923"/>
-</node>
-<node ID="ID_1284745531" TREE_ID="ID_185903144">
-<node ID="ID_1638265935" CONTENT_ID="ID_427683929"/>
-<node ID="ID_432505518" CONTENT_ID="ID_1360342935"/>
-</node>
-</node>
-<node ID="ID_715913406" TREE_ID="ID_1899069843">
-<node ID="ID_1397816599" TREE_ID="ID_1362768509">
-<node ID="ID_1367774295" TREE_ID="ID_665072731">
-<node ID="ID_359579409" TREE_ID="ID_1223070366">
-<node ID="ID_1732806758" CONTENT_ID="ID_717689189"/>
-<node ID="ID_1335780939" CONTENT_ID="ID_154816468"/>
-</node>
-</node>
-<node ID="ID_1051701501" TREE_ID="ID_654906817">
-<node ID="ID_1287711563" CONTENT_ID="ID_614348581"/>
-</node>
-</node>
-<node ID="ID_1672541043" TREE_ID="ID_643814184">
-<node ID="ID_293821820" CONTENT_ID="ID_240259315"/>
-<node ID="ID_725948829" TREE_ID="ID_893676291">
-<node ID="ID_1664962586" CONTENT_ID="ID_961780522"/>
-</node>
-<node ID="ID_1664221585" TREE_ID="ID_803220979">
-<node ID="ID_586300814" CONTENT_ID="ID_1114642776"/>
-</node>
-</node>
-</node>
-<node ID="ID_1962278336" TREE_ID="ID_554778437">
-<node ID="ID_1929506288" TREE_ID="ID_1276040523">
-<node ID="ID_564238745" TREE_ID="ID_1436386049">
-<node ID="ID_1099071600" TREE_ID="ID_1607846838">
-<node ID="ID_1093849980" CONTENT_ID="ID_55129515"/>
-</node>
-<node ID="ID_1559127948" TREE_ID="ID_1333088073">
-<node ID="ID_1309610004" CONTENT_ID="ID_164174875"/>
-</node>
-<node ID="ID_892978720" TREE_ID="ID_537937984">
-<node ID="ID_1517640673" CONTENT_ID="ID_820486783"/>
-</node>
-<node ID="ID_1301049495" TREE_ID="ID_1092393672">
-<node ID="ID_856231813" CONTENT_ID="ID_1466466101"/>
-</node>
-<node ID="ID_1064476785" TREE_ID="ID_315930705">
-<node ID="ID_383831988" CONTENT_ID="ID_205879366"/>
-</node>
-<node ID="ID_1493728223" TREE_ID="ID_746548956">
-<node ID="ID_1919611985" CONTENT_ID="ID_1862773774"/>
-</node>
-<node ID="ID_1661398177" TREE_ID="ID_1047708501">
-<node ID="ID_1125176352" CONTENT_ID="ID_1678860903"/>
-</node>
-<node ID="ID_952264837" TREE_ID="ID_838759208">
-<node ID="ID_1791226289" CONTENT_ID="ID_1806231140"/>
-</node>
-</node>
-<node ID="ID_1321610896" TREE_ID="ID_29356764">
-<node ID="ID_427059753" CONTENT_ID="ID_443917831"/>
-</node>
-</node>
-<node ID="ID_77192558" TREE_ID="ID_552646795">
-<node ID="ID_796284869" CONTENT_ID="ID_1895927375"/>
-</node>
-<node ID="ID_1347588720" TREE_ID="ID_544600836">
-<node ID="ID_782131213" CONTENT_ID="ID_833774296"/>
-</node>
-<node ID="ID_426023936" TREE_ID="ID_1188125215">
-<node ID="ID_115599554" CONTENT_ID="ID_366513202"/>
-</node>
-</node>
-<node ID="ID_1201938185" TREE_ID="ID_574357219">
-<node ID="ID_126367430" TREE_ID="ID_27445364">
-<node ID="ID_563416904" TREE_ID="ID_1909791423">
-<node ID="ID_220234407" CONTENT_ID="ID_141287878"/>
-<node ID="ID_1200004525" TREE_ID="ID_531319596">
-<node ID="ID_236865006" CONTENT_ID="ID_762507140"/>
-</node>
-</node>
-<node ID="ID_1158932431" TREE_ID="ID_1304975660">
-<node ID="ID_208831649" CONTENT_ID="ID_46207761"/>
-</node>
-</node>
-<node ID="ID_88000056" TREE_ID="ID_1164901174">
-<node ID="ID_138499035" CONTENT_ID="ID_418033123"/>
-</node>
-<node ID="ID_177286975" TREE_ID="ID_617657422">
-<node ID="ID_699581830" TREE_ID="ID_1973595040">
-<node ID="ID_207483364" CONTENT_ID="ID_1855496898"/>
-</node>
-</node>
-<node ID="ID_893737835" TREE_ID="ID_1905619353">
-<node ID="ID_460867742" TREE_ID="ID_996424176"/>
-<node ID="ID_631511013" TREE_ID="ID_389959330"/>
-</node>
-</node>
-<node ID="ID_1229503534" TREE_ID="ID_779101178">
-<node ID="ID_923800133" TREE_ID="ID_952412043">
-<node ID="ID_1576578019" TREE_ID="ID_1119275667">
-<node ID="ID_1398823865" TREE_ID="ID_1642699554">
-<node ID="ID_579715771" CONTENT_ID="ID_1676865459"/>
-<node ID="ID_473815312" CONTENT_ID="ID_263975475"/>
-<node ID="ID_341716970" CONTENT_ID="ID_229034055"/>
-</node>
-<node ID="ID_1249338991" TREE_ID="ID_1417889636">
-<node ID="ID_700411287" CONTENT_ID="ID_1414909465"/>
-</node>
-</node>
-<node ID="ID_798968710" TREE_ID="ID_1457434720">
-<node ID="ID_1761001857" CONTENT_ID="ID_537401280"/>
-<node ID="ID_986718614" CONTENT_ID="ID_989055975"/>
-<node ID="ID_1150466458" CONTENT_ID="ID_505394382"/>
-</node>
-</node>
-<node ID="ID_847345712" TREE_ID="ID_311404228">
-<node ID="ID_1281046943" CONTENT_ID="ID_1364359640"/>
-</node>
-</node>
-<node ID="ID_1412737570" TREE_ID="ID_1155325996">
-<node ID="ID_735905511" TREE_ID="ID_1720566625">
-<node ID="ID_304060867" TREE_ID="ID_1976621059">
-<node ID="ID_1314530484" TREE_ID="ID_697743609">
-<node ID="ID_1827986013" CONTENT_ID="ID_1759096571"/>
-</node>
-</node>
-<node ID="ID_1986596238" CONTENT_ID="ID_600379606"/>
-</node>
-<node ID="ID_1500564503" TREE_ID="ID_283285659">
-<node ID="ID_94268700" CONTENT_ID="ID_1363993016">
-<node ID="ID_1578584171" CONTENT_ID="ID_198568528"/>
-<node ID="ID_834353745" CONTENT_ID="ID_578653272"/>
-<node ID="ID_1727125184" CONTENT_ID="ID_857096425"/>
-</node>
-</node>
-</node>
+<node TEXT="off" POSITION="right" ID="ID_33387891">
+<node ID="ID_983871078" TREE_ID="ID_1757016865"/>
+<node ID="ID_1190106509" TREE_ID="ID_1288720582"/>
 </node>
 <node TEXT="custom Menus" POSITION="left" ID="ID_303397654">
 <icon BUILTIN="emoji-1F4E6"/>
@@ -22404,7 +22219,7 @@ def setNoteMarkdown(n){&#xd;
 </html></richcontent>
 </node>
 <node TEXT="taskmanager" ID="ID_1956032584">
-<node TEXT="Tasks v2" ID="ID_69662058" LINK="menuitem:_addons.menuOMatic.launchCustomDialog_on_single_node">
+<node TEXT="Tasks v4" ID="ID_165496099" LINK="menuitem:_addons.menuOMatic.launchCustomDialog_on_single_node">
 <attribute NAME="tbActions" VALUE="[_script1, _script2, _script3, _script4, _script5, _script6, _script7, _script8, _script9, _script10, _script11, _script12, IconProgressIconDownAction, IconProgressIconUpAction, _script13, _script14]"/>
 <attribute NAME="tbIcons" VALUE="[IconAction.emoji-1F411, IconAction.emoji-1F40F, IconAction.emoji-1F999, IconAction.emoji-1F4E5, IconAction.emoji-1F5C3, IconAction.emoji-0023-20E3, IconAction.emoji-1F7E5, IconAction.unchecked, IconAction.emoji-23FA, IconAction.Descartado, IconAction.checked, IconAction.emoji-1F3A9, IconAction.0%, IconAction.75%, IconAction.emoji-1F6A9, IconAction.emoji-1F194]"/>
 <attribute NAME="tbLabels" VALUE="[goto next free clone (not in bucket), goto next bucket clone, goto next visible clone, collect tasks into bucket, add tasksBucket as child node, insert sums node (it counts the tasks inside its parent node. Ignores tasks in tasksBuckets), apply nextTask style to selected node(s), apply pendingTask style to selected node(s), apply maybeTask style to selected node(s), apply discardedTask style to selected node(s), apply completedTask style to selected node(s), import tasks styles, Progress down, Progress up, insert milestone as parent, add &apos;projectCode&apos; attribute to node]"/>
@@ -22412,12 +22227,12 @@ def setNoteMarkdown(n){&#xd;
 <attribute NAME="tbShowIcons" VALUE="true"/>
 <attribute NAME="tbShowLabels" VALUE="false"/>
 <attribute NAME="tbFocusToMap" VALUE="true"/>
-<attribute NAME="tbTitle" VALUE="Tasks v2"/>
+<attribute NAME="tbTitle" VALUE="Tasks v4"/>
 <attribute NAME="_script1" VALUE="bucketStyle = &apos;tasksBucket&apos;&#xa;&#xa;def nTask = node&#xa;&#xa;def allClones = ([] + nTask.getNodesSharingContent() + nTask.getNodesSharingContentAndSubtree() + nTask).unique()//.sort{it.id}&#xa;//println allClones*.id&#xa;&#xa;def clones = (allClones.findAll{n -&gt; !inBucket(n)} + nTask).unique().sort{it.id}&#xa;//println clones*.id&#xa;//return&#xa;&#xa;if(clones.size()&gt;1) {&#xa;    def nPos = clones.indexOf(nTask)&#xa;    tgtPos = nPos &lt; clones.size()-1 ? nPos + 1 : 0&#xa;    get(clones[tgtPos])&#xa;}&#xa;&#xa;def get(n){&#xa;    n.pathToRoot*.folded = false&#xa;    c.centerOnNode(n)&#xa;    c.select(n)&#xa;}&#xa;&#xa;def inBucket(n){&#xa;    return n.pathToRoot*.style*.name.any{it == bucketStyle}&#xa;}"/>
 <attribute NAME="_script2" VALUE="bucketStyle = &apos;tasksBucket&apos;&#xa;&#xa;def nTask = node&#xa;&#xa;def allClones = ([] + nTask.getNodesSharingContent() + nTask.getNodesSharingContentAndSubtree() + nTask).unique()//.sort{it.id}&#xa;//println allClones*.id&#xa;&#xa;def clones = (allClones.findAll{n -&gt; inBucket(n)} + nTask).unique().sort{it.id}&#xa;//println clones*.id&#xa;//return&#xa;&#xa;if(clones.size()&gt;1) {&#xa;    def nPos = clones.indexOf(nTask)&#xa;    tgtPos = nPos &lt; clones.size()-1 ? nPos + 1 : 0&#xa;    get(clones[tgtPos])&#xa;}&#xa;&#xa;def get(n){&#xa;    n.pathToRoot*.folded = false&#xa;    c.centerOnNode(n)&#xa;    c.select(n)&#xa;}&#xa;&#xa;def inBucket(n){&#xa;    return n.pathToRoot*.style*.name.any{it == bucketStyle}&#xa;}"/>
 <attribute NAME="_script3" VALUE="bucketStyle = &apos;tasksBucket&apos;&#xa;&#xa;def nTask = node&#xa;&#xa;def allClones = ([] + nTask.getNodesSharingContent() + nTask.getNodesSharingContentAndSubtree() + nTask).unique().sort{it.id}&#xa;//println allClones*.id&#xa;&#xa;def clones = (allClones.findAll{n -&gt; !isInsideFolded(n)} + nTask).unique().sort{it.id}&#xa;//println clones*.id&#xa;//return&#xa;&#xa;if(clones.size()&gt;1) {&#xa;    def nPos = clones.indexOf(nTask)&#xa;    tgtPos = nPos &lt; clones.size()-1 ? nPos + 1 : 0&#xa;    get(clones[tgtPos])&#xa;}&#xa;&#xa;def get(n){&#xa;    n.pathToRoot*.folded = false&#xa;    c.centerOnNode(n)&#xa;    c.select(n)&#xa;}&#xa;&#xa;def inBucket(n){&#xa;    return n.pathToRoot*.style*.name.any{it == bucketStyle}&#xa;}&#xa;&#xa;def isInsideFolded(n){&#xa;    if(n.isRoot()) return false&#xa;    def lista = n.pathToRoot*.folded[0 .. -2]&#xa;    def resp = lista.any{it == true}&#xa;    //println n.id + &quot;   &quot; + n.pathToRoot*.text[0 .. -2] + &quot;   &quot; + lista + &quot;   &quot; + resp&#xa;    return  resp&#xa;}"/>
-<attribute NAME="_script4" VALUE="// OJO: lo cambié para que pudiera encontrar subcarpetas. No sé si es buena idea. marque las líneas con // OJO&#xa;import org.freeplane.view.swing.features.progress.mindmapmode.ProgressUtilities&#xa;&#xa;progUtil  = new ProgressUtilities()&#xa;&#xa;// region: properties&#xa;def attr = &apos;projectCode&apos;&#xa;projectStyle = &apos;project&apos;&#xa;bucketStyle  = &apos;tasksBucket&apos;&#xa;milestoneStyle = &apos;milestone&apos;&#xa;noMilestone = &apos;**No milestone**&apos;&#xa;defaultTasksStyles = &apos;pendingTask,nextTask&apos;&#xa;&#xa;//tasksStyles = &apos;pendingTask,nextTask&apos;.split(&apos;,&apos;)&#xa;stylesAttr = &apos;tasksStyles&apos;&#xa;wipAttr =&apos;WIP filter&apos;&#xa;&#xa;// end: properties&#xa;&#xa;def nodo = node&#xa;def nBuckets&#xa;&#xa;//1. search for tasksbuckets nodes (nBuckets). the closer to the selected node as possible&#xa;for (n in nodo.pathToRoot.reverse()){&#xa;    if( n.children.any{isBucket(it)}){&#xa;        nodo = n&#xa;        nBuckets = n.children.findAll{isBucket(it)}&#xa;        // println nBuckets&#xa;        break&#xa;    }&#xa;}&#xa;// println nodo&#xa;&#xa;&#xa;if (!nBuckets){&#xa;    c.statusInfo = &quot;No &apos;tasks bucket&apos; found related to selected node&quot;&#xa;    return &apos;aborted&apos;&#xa;}&#xa;&#xa;//2. collects list of used milestones&#xa;def milestones = nodo.find{n -&gt; n.style.name == milestoneStyle}.collect{it.text}.unique() + noMilestone&#xa;// println milestones&#xa;&#xa;//2. for each tasksBucket node&#xa;nBuckets.each{nBucket -&gt;&#xa;    tasksStyles = (nBucket[stylesAttr]?:defaultTasksStyles).split(&apos;,&apos;) as ArrayList&#xa;    // println tasksStyles&#xa;    // println tasksStyles.class&#xa;    // println tasksStyles*.class&#xa;&#xa;    def nTasks = nodo.find{n -&gt; isTask(n) &amp;&amp; !n.pathToRoot.any{isBucket(it)}}&#xa;&#xa;    // println &quot;&quot;&#xa;    // println nTasks.size()&#xa;&#xa;    nTasks = nBucket[wipAttr].bool? nTasks.findAll{n -&gt; isWorkInProgress(n)} : nTasks&#xa;    // println nTasks.size()&#xa;&#xa;    nTasks.each{n-&gt;&#xa;        // println &quot;  isAnyClone:  $n --&gt; ${isAnyClone(nBucket, n)}&quot;&#xa;        if(!isAnyClone(nBucket, n)){&#xa;            //println &apos;         adding it&apos;&#xa;            //def projPath&#xa;            def milestoneNode = n.pathToRoot.reverse().find{it.style.name == milestoneStyle}&#xa;            def milestone = milestoneNode ? milestoneNode.text : noMilestone&#xa;            def nProjects = (n.pathToRoot - nodo.pathToRoot).findAll{it.attributes.containsKey(attr) || isTask(it) } - n&#xa;            def txtProjects = [milestone] + nProjects.collect{it.attributes.getFirst(attr)?:it.text}&#xa;            def styleProjects = [false] + nProjects.collect{it.attributes.containsKey(attr)}&#xa;            //println &quot;txtProjects  $txtProjects&quot;&#xa;            def nTarget = getTargetNode(nBucket , txtProjects, styleProjects)&#xa;            //println &quot;nTarget   $nTarget&quot;&#xa;            def taskClone = getCloneNode(nTarget, n)&#xa;            //println &quot;&quot;&#xa;        }&#xa;    }&#xa;    nBucket.children*.folded = true&#xa;    c.select(nBucket)&#xa;    menuUtils.executeMenuItems([&apos;SortNodes&apos;])&#xa;}&#xa;&#xa;def nBucket = nBuckets[-1]&#xa;(nBucket.pathToRoot - nBucket)*.folded = false&#xa;//c.centerOnNode(nBucket)&#xa;c.select(nBucket)&#xa;&#xa;c.statusInfo = &apos;---------------- tasks collected! -----------------------&apos;&#xa;&#xa;&#xa;// region: -----------------------methods-----------------&#xa;&#xa;def isAnyClone(papa, nTask){&#xa;    def nClones = [] + nTask.getNodesSharingContent() + nTask.getNodesSharingContentAndSubtree()&#xa;    def resp = papa.findAll().any{it in nClones}&#xa;    return resp&#xa;}&#xa;&#xa;def getCloneNode(papa, nTask){&#xa;    def nClones = [] + nTask.getNodesSharingContent() + nTask.getNodesSharingContentAndSubtree()&#xa;    //println &quot;  getCloneNode: nClones   $nClones&quot;&#xa;//    def clonedTaskNode = papa.children.find{it in nClones}?: papa.appendAsCloneWithoutSubtree(nTask) // OJO&#xa;    def clonedTaskNode = papa.find{it in nClones}[0]?: papa.appendAsCloneWithoutSubtree(nTask)         // OJO&#xa;    //println &quot;  getCloneNode: clonedTaskNode   $clonedTaskNode&quot;&#xa;    return clonedTaskNode&#xa;}&#xa;&#xa;&#xa;def getTargetNode(papa , textes, boolStyles){&#xa;    def t = textes[0]&#xa;    //println &quot;$papa , $textes, $t,   $boolStyles&quot;&#xa;    if(textes.size()==0) return papa&#xa;//    def n = papa.children.find{it.text == t}?:papa.createChild(t)  // OJO&#xa;    def n = papa.find{it.text == t}[0]                               // OJO&#xa;    if(!n){&#xa;        n ?= papa.createChild(t)&#xa;        if(boolStyles[0]){&#xa;            n.style.name = projectStyle&#xa;        } else {&#xa;            n.style.name = milestoneStyle&#xa;        }&#xa;    }&#xa;    if(textes.size()&lt;=1){&#xa;        //println &quot;    $n&quot;&#xa;        //println &quot;&quot;&#xa;        return n&#xa;    } else {&#xa;        //if(!boolStyles[0] &amp;&amp; !n.folded){ n.folded = true }&#xa;        return getTargetNode(n , textes.drop(1), boolStyles.drop(1))&#xa;    }&#xa;}&#xa;&#xa;boolean isTask(n){&#xa;  //  println n.text&#xa;//    return n.style.name &amp;&amp; n.style.name?.endsWith(&apos;Task&apos;)&#xa;//   return n.style.name &amp;&amp; n.style.name in tasksStyles&#xa;//   return n.style.allActiveStyles.size()&gt;=1 &amp;&amp; !n.style.allActiveStyles.disjoint(tasksStyles)&#xa;   return !n.style.allActiveStyles.disjoint(tasksStyles)&#xa;}&#xa;&#xa;&#xa;boolean isBucket(n){&#xa;    //return n.alias == &apos;tasksBucket&apos;  //TODO: hacer que sea un estilo. es más fácil de aplicar&#xa;    return n.style.name &amp;&amp; n.style.name == bucketStyle&#xa;}&#xa;&#xa;def isWorkInProgress(n){&#xa;    return progUtil.hasProgressIcons(n.delegate) &amp;&amp; !progUtil.hasOKIcon(n.delegate)&#xa;}&#xa;&#xa;// end:"/>
-<attribute NAME="_script5" VALUE="def bucketStyle = &apos;tasksBucket&apos;&#xa;def formula = &apos;=\n(node[\&apos;tasksStyles\&apos;]?:\&apos;pendingTask,nextTask\&apos;).split(\&apos;,\&apos;).collect{st -&gt; &quot;${node.find{it.style.name == st}.size()}  ${st}(s)&quot;}.join(\&apos;\\n\&apos;)&apos;.toString()&#xa;stylesAttr = &apos;tasksStyles&apos;&#xa;def tasksStyles = &apos;nextTask,pendingTask,maybeTask,discardedTask,completedTask&apos;&#xa;wipAttr =&apos;WIP filter&apos;&#xa;def wipAttrDefault = false&#xa;&#xa;def nodo =  node&#xa;&#xa;def exists = nodo.children.any{it.style.name == bucketStyle}&#xa;&#xa;if(!exists){&#xa;    def nBucket = nodo.createChild(&apos;tasksBucket&apos;)&#xa;    nBucket.style.name = bucketStyle&#xa;    nBucket.details = formula&#xa;    nBucket[stylesAttr] = tasksStyles&#xa;    nBucket[wipAttr] = wipAttrDefault&#xa;} else {&#xa;    c.statusInfo = &apos;Ya existe un nodo tasksBucket para este nivel&apos;&#xa;}"/>
+<attribute NAME="_script4" VALUE="// OJO: lo cambié para que pudiera encontrar subcarpetas. No sé si es buena idea. marque las líneas con // OJO&#xa;import org.freeplane.view.swing.features.progress.mindmapmode.ProgressUtilities&#xa;&#xa;progUtil  = new ProgressUtilities()&#xa;&#xa;// region: properties&#xa;def attrProjectCode = &apos;projectCode&apos;&#xa;def attrGroupByProjectsLevels = &apos;groupingLevels&apos;&#xa;projectStyle = &apos;project&apos;&#xa;bucketStyle  = &apos;tasksBucket&apos;&#xa;milestoneStyle = &apos;milestone&apos;&#xa;noMilestone = &apos;**No milestone**&apos;&#xa;defaultTasksStyles = &apos;pendingTask,nextTask&apos;&#xa;&#xa;//tasksStyles = &apos;pendingTask,nextTask&apos;.split(&apos;,&apos;)&#xa;stylesAttr = &apos;tasksStyles&apos;&#xa;wipAttr =&apos;WIP filter&apos;&#xa;&#xa;// end: properties&#xa;&#xa;def nodo = node&#xa;def nBuckets&#xa;&#xa;//1. search for tasksbuckets nodes (nBuckets). the closer to the selected node as possible&#xa;for (n in nodo.pathToRoot.reverse()){&#xa;    if( n.children.any{isBucket(it)}){&#xa;        nodo = n&#xa;        nBuckets = n.children.findAll{isBucket(it)}&#xa;        //println nBuckets&#xa;        break&#xa;    }&#xa;}&#xa;//println nodo&#xa;&#xa;&#xa;if (!nBuckets){&#xa;    c.statusInfo = &quot;No &apos;tasks bucket&apos; found related to selected node&quot;&#xa;    return &apos;aborted&apos;&#xa;}&#xa;&#xa;//2. collects list of used milestones&#xa;def milestones = (nodo.find{n -&gt; n.style.name == milestoneStyle}.collect{it.text} + noMilestone).unique()&#xa; //println milestones&#xa;&#xa;//2. for each tasksBucket node&#xa;nBuckets.each{nBucket -&gt;&#xa;    def groupLevels = nBucket[attrGroupByProjectsLevels].class.simpleName==&apos;ConvertibleNumber&apos; ? nBucket[attrGroupByProjectsLevels].num.toInteger() : 0&#xa;    tasksStyles = (nBucket[stylesAttr]?:defaultTasksStyles).split(&apos;,&apos;) as ArrayList&#xa;     //println tasksStyles&#xa;    //println tasksStyles.class&#xa;    //println tasksStyles*.class&#xa;&#xa;    def nTasks = nodo.find{n -&gt; isTask(n) &amp;&amp; !n.pathToRoot.any{isBucket(it)}}&#xa;&#xa;    //println &quot;&quot;&#xa;    //println nTasks.size()&#xa;&#xa;    nTasks = nBucket[wipAttr].bool? nTasks.findAll{n -&gt; isWorkInProgress(n)} : nTasks&#xa;     //println nTasks.size()&#xa;&#xa;    nTasks.each{n-&gt;&#xa;         //println &quot;  isAnyClone:  $n --&gt; ${isAnyClone(nBucket, n)}&quot;&#xa;        if(!isAnyClone(nBucket, n)){&#xa;             //println &apos;         adding it&apos;&#xa;            //def projPath&#xa;            def milestoneNode = n.pathToRoot.reverse().find{it.style.name == milestoneStyle}&#xa;            def milestone = milestoneNode ? milestoneNode.text : noMilestone&#xa;             //println &quot;milestone:  $milestone&quot;&#xa;            def nProjects = ((n.pathToRoot - nodo.pathToRoot).findAll{it.attributes.containsKey(attrProjectCode) || isTask(it) } - n ).take(groupLevels)&#xa;            //println &quot;nProjects  $nProjects&quot;&#xa;            def txtProjects = [milestone] + nProjects.collect{it.attributes.getFirst(attrProjectCode)?:it.text}&#xa;             //println &quot;txtProjects:  $txtProjects&quot;&#xa;            def styleProjects = [false] + nProjects.collect{it.attributes.containsKey(attrProjectCode)}&#xa;             //println &quot;styleProjects:  $styleProjects&quot;&#xa;            def nTarget = getTargetNode(nBucket , txtProjects, styleProjects)&#xa;             //println &quot;nTarget:   $nTarget&quot;&#xa;            def taskClone = getCloneNode(nTarget, n)&#xa;             //println &quot;&quot;&#xa;        }&#xa;    }&#xa;    nBucket.children*.folded = true&#xa;    c.select(nBucket)&#xa;    menuUtils.executeMenuItems([&apos;SortNodes&apos;])&#xa;}&#xa;&#xa;def nBucket = nBuckets[-1]&#xa;(nBucket.pathToRoot - nBucket)*.folded = false&#xa;//c.centerOnNode(nBucket)&#xa;c.select(nBucket)&#xa;&#xa;c.statusInfo = &apos;---------------- tasks collected! -----------------------&apos;&#xa;&#xa;&#xa;// region: -----------------------methods-----------------&#xa;&#xa;def isAnyClone(papa, nTask){&#xa;    def nClones = [] + nTask.getNodesSharingContent() + nTask.getNodesSharingContentAndSubtree()&#xa;    def resp = papa.findAll().any{it in nClones}&#xa;    return resp&#xa;}&#xa;&#xa;def getCloneNode(papa, nTask){&#xa;     //println &quot;-&gt; getCloneNode($papa, $nTask)&quot;&#xa;    def nClones = [] + nTask.getNodesSharingContent() + nTask.getNodesSharingContentAndSubtree()&#xa;     //println &quot;     getCloneNode: nClones   $nClones&quot;&#xa;//    def clonedTaskNode = papa.children.find{it in nClones}?: papa.appendAsCloneWithoutSubtree(nTask) // OJO&#xa;    def clonedTaskNode = papa.find{it in nClones}[0]?: papa.appendAsCloneWithoutSubtree(nTask)         // OJO&#xa;     //println &quot;     getCloneNode: clonedTaskNode   $clonedTaskNode&quot;&#xa;    return clonedTaskNode&#xa;}&#xa;&#xa;&#xa;def getTargetNode(papa , textes, boolStyles){&#xa;    //println &quot;-&gt; getTargetNode($papa , $textes, $boolStyles)&quot;&#xa;    def t = textes[0]&#xa;     //println &quot;     $papa , $textes, $t,   $boolStyles&quot;&#xa;    if(textes.size()==0) return papa&#xa;//    def n = papa.children.find{it.text == t}?:papa.createChild(t)  // OJO&#xa;    def n = papa.find{it.text == t}[0]                               // OJO&#xa;    if(!n){&#xa;        n ?= papa.createChild(t)&#xa;        if(boolStyles[0]){&#xa;            n.style.name = projectStyle&#xa;        } else {&#xa;            n.style.name = milestoneStyle&#xa;        }&#xa;    }&#xa;    if(textes.size()&lt;=1){&#xa;         //println &quot;    $n&quot;&#xa;         //println &quot;&quot;&#xa;        return n&#xa;    } else {&#xa;        //if(!boolStyles[0] &amp;&amp; !n.folded){ n.folded = true }&#xa;        return getTargetNode(n , textes.drop(1), boolStyles.drop(1))&#xa;    }&#xa;}&#xa;&#xa;boolean isTask(n){&#xa;  //   //println n.text&#xa;//    return n.style.name &amp;&amp; n.style.name?.endsWith(&apos;Task&apos;)&#xa;//   return n.style.name &amp;&amp; n.style.name in tasksStyles&#xa;//   return n.style.allActiveStyles.size()&gt;=1 &amp;&amp; !n.style.allActiveStyles.disjoint(tasksStyles)&#xa;   return !n.style.allActiveStyles.disjoint(tasksStyles)&#xa;}&#xa;&#xa;&#xa;boolean isBucket(n){&#xa;    //return n.alias == &apos;tasksBucket&apos;  //TODO: hacer que sea un estilo. es más fácil de aplicar&#xa;    return n.style.name &amp;&amp; n.style.name == bucketStyle&#xa;}&#xa;&#xa;def isWorkInProgress(n){&#xa;    return progUtil.hasProgressIcons(n.delegate) &amp;&amp; !progUtil.hasOKIcon(n.delegate)&#xa;}&#xa;&#xa;// end:"/>
+<attribute NAME="_script5" VALUE="def bucketStyle = &apos;tasksBucket&apos;&#xa;def formula = &apos;=\n(node[\&apos;tasksStyles\&apos;]?:\&apos;pendingTask,nextTask\&apos;).split(\&apos;,\&apos;).collect{st -&gt; &quot;${node.find{it.style.name == st}.size()}  ${st}(s)&quot;}.join(\&apos;\\n\&apos;)&apos;.toString()&#xa;stylesAttr = &apos;tasksStyles&apos;&#xa;def tasksStyles = &apos;nextTask,pendingTask,maybeTask,discardedTask,completedTask&apos;&#xa;wipAttr =&apos;WIP filter&apos;&#xa;def wipAttrDefault = false&#xa;groupByProjectsLevelsAttr = &apos;groupingLevels&apos;&#xa;def groupByProjectsLevelsAttrDefault = 10&#xa;&#xa;def nodo =  node&#xa;&#xa;def exists = nodo.children.any{it.style.name == bucketStyle}&#xa;&#xa;if(!exists){&#xa;    def nBucket = nodo.createChild(&apos;tasksBucket&apos;)&#xa;    nBucket.style.name = bucketStyle&#xa;    nBucket.details = formula&#xa;    nBucket[stylesAttr] = tasksStyles&#xa;    nBucket[wipAttr] = wipAttrDefault&#xa;    nBucket[groupByProjectsLevelsAttr] = groupByProjectsLevelsAttrDefault&#xa;} else {&#xa;    c.setStatusInfo(&quot;Tasks&quot;,&apos;Ya existe un nodo tasksBucket para este nivel&apos;,&apos;emoji-1F5C3&apos;)&#xa;    def timer = new Timer()&#xa;    timer.runAfter(8000){&#xa;        c.setStatusInfo(&quot;Tasks&quot;,null)&#xa;    }&#xa;}&#xa;&#xa;//node.icons.icons"/>
 <attribute NAME="_script6" VALUE="def formula = &apos;=\ndef nodo = node.parent\n(node[\&apos;tasksStyles\&apos;]?:\&apos;nextTask,pendingTask\&apos;).split(\&apos;,\&apos;).collect{st -&gt; &quot;${nodo.find{it.style.name == st &amp;&amp; !it.pathToRoot.any{it.style.name==\&apos;tasksBucket\&apos;}}.size()}  ${st}(s)&quot;}.join(\&apos;\\n\&apos;)&apos;.toString()&#xa;stylesAttr = &apos;tasksStyles&apos;&#xa;def tasksStyles = &apos;nextTask,pendingTask,maybeTask,discardedTask,completedTask&apos;&#xa;wipAttr =&apos;WIP filter&apos;&#xa;def wipAttrDefault = false&#xa;&#xa;def nodo =  node&#xa;&#xa;    def nBucket = nodo.createChild(&apos;Tasks Sums&apos;)&#xa;    nBucket.details = formula&#xa;    nBucket[stylesAttr] = tasksStyles&#xa;    nBucket[wipAttr] = wipAttrDefault&#xa;    nBucket.icons.add(&apos;emoji-0023-20E3&apos;)"/>
 <attribute NAME="_script7" VALUE="def taskStyle = &apos;nextTask&apos;&#xa;&#xa;if(node.style.name == taskStyle){ taskStyle = null }&#xa;&#xa;def nodos = c.selecteds&#xa;nodos*.style*.name = taskStyle"/>
 <attribute NAME="_script8" VALUE="def taskStyle = &apos;pendingTask&apos;&#xa;&#xa;if(node.style.name == taskStyle){ taskStyle = null }&#xa;&#xa;def nodos = c.selecteds&#xa;nodos*.style*.name = taskStyle"/>
@@ -22494,6 +22309,8 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
+<node TEXT="tasksBucket" ID="ID_82456838"/>
+<node TEXT="tasksBucket" ID="ID_869839483"/>
 </node>
 <node TEXT="Scripts" POSITION="left" ID="ID_1640984956">
 <node TEXT="Tasks" ID="ID_1098566525">
@@ -22671,8 +22488,7 @@ def setNoteMarkdown(n){&#xd;
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
