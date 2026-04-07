@@ -1,30 +1,8 @@
-<map version="freeplane 1.9.13">
+<map version="freeplane 1.11.5">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <attribute_registry SHOW_ATTRIBUTES="selected"/>
 <node TEXT="Tutorial -o- Matic" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_1356277378" LINK="file:/C:/Respaldo%20EF/ef/Documentos%20con%20macros/08%20Freemind%20Groovy/scripts/ScriptsEnComputadorYDesarrollosEdo%20v1.9.mm" MAX_WIDTH="5.5 cm"><hook NAME="MapStyle" background="#f9f9f8">
     <conditional_styles>
-        <conditional_style ACTIVE="true" STYLE_REF="file" LAST="false">
-            <script_condition>
-                <script>{node.link?.uri?.scheme == &apos;file&apos;}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="modifiedFile" LAST="false">
-            <attribute_contains_condition ATTRIBUTE="modifiedFile" VALUE="true"/>
-        </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="file_folder" LAST="false">
-            <script_condition>
-                <script>(node.link?.uri?.scheme == &apos;file&apos; &amp;&amp; node.link.uri.path.takeRight(1) == &apos;/&apos;)</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="file_folder_with_icon" LAST="false">
-            <conjunct_condition>
-                <style_contains_condition TEXT="file_folder"/>
-                <script_condition>
-                    <script>import org.freeplane.core.util.FreeplaneVersion&#xd;
-return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) || !(node.link?.uri?.scheme == &apos;file&apos;) )</script>
-                </script_condition>
-            </conjunct_condition>
-        </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="Warning" LAST="false">
             <node_contains_condition VALUE=".EXIT_ON_CLOSE" ITEM="filter_any_text"/>
         </conditional_style>
@@ -70,18 +48,26 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
                 <script>(node.findAll() - node)?.any{it.style.name == &apos;Tarea pendiente&apos;} </script>
             </script_condition>
         </conditional_style>
+        <conditional_style ACTIVE="true" STYLE_REF="file" LAST="false">
+            <script_condition>
+                <script>{node.link.file &amp;&amp; !node.link.uri?.fragment}</script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="true" STYLE_REF="modifiedFile" LAST="false">
+            <attribute_contains_condition ATTRIBUTE="modifiedFile" VALUE="true"/>
+        </conditional_style>
     </conditional_styles>
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" BookmarksKeys="{}" followedTemplateLocation="template:/DFGHI%20Proyecto-Groovy-Tareas-MDI-menuButton%20(vis01).mm" pruebaDiccionario="ID_311366985|:|idDictionary|-|ID_323296041|:|ToM Actions|-|" show_icon_for_attributes="true" show_notes_in_map="false" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" mdhFreeMindmapPath="hhgf" save_folding="save_folding_if_map_is_changed" followedMapLastTime="1661362125221" fit_to_viewport="false"/>
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" BookmarksKeys="{}" followedTemplateLocation="template:/DFGHI%20Proyecto-Groovy-Tareas-MDI-menuButton%20(vis01).mm" pruebaDiccionario="ID_311366985|:|idDictionary|-|ID_323296041|:|ToM Actions|-|" show_icon_for_attributes="true" show_notes_in_map="false" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" mdhFreeMindmapPath="hhgf" save_folding="save_folding_if_map_is_changed" followedMapLastTime="1661362125221" fit_to_viewport="false" MDI_template="v0.0.13"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
-<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="bottom_or_right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" NUMBERED="false" FORMAT="STANDARD_FORMAT" TEXT_ALIGN="DEFAULT" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px" MAX_WIDTH="10 cm" MIN_WIDTH="0 cm">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45.19149 pt;-12.25532 pt;" ENDINCLINATION="56.68085 pt;29.87234 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-11.25 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
-<richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
+<richcontent TYPE="DETAILS" CONTENT-TYPE="plain/auto"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/auto"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="defaultstyle.details" ID="ID_861824498" COLOR="#006666" BACKGROUND_COLOR="#a5cece" BACKGROUND_ALPHA="204" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#f0f0f0" BORDER_DASH_LIKE_EDGE="true">
@@ -100,7 +86,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </stylenode>
 <stylenode LOCALIZED_TEXT="defaultstyle.selection" ID="ID_358779365" COLOR="#eceff4" BACKGROUND_COLOR="#bf616a" STYLE="bubble" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#bf616a"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="bottom_or_right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="styles.important" ID="ID_915433779" BORDER_COLOR="#bf616a">
 <icon BUILTIN="yes"/>
 <arrowlink COLOR="#bf616a" TRANSPARENCY="255" DESTINATION="ID_915433779"/>
@@ -121,10 +107,12 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <stylenode TEXT="movedRenamed" ID="ID_851444256" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ace500">
 <icon BUILTIN="emoji-1F500"/>
 </stylenode>
-<stylenode TEXT="file" ID="ID_1717966522" BORDER_WIDTH="2.5 px" BACKGROUND_COLOR="#bcc6e0" FORMAT="NO_FORMAT">
+<stylenode TEXT="file" ID="ID_1717966522" BACKGROUND_COLOR="#bcc6e0" FORMAT="NO_FORMAT" BORDER_WIDTH="2.5 px">
 <font NAME="Consolas"/>
 </stylenode>
-<stylenode TEXT="file_folder" ID="ID_1554270070" BORDER_WIDTH="3 px"/>
+<stylenode TEXT="file_folder" ID="ID_1554270070" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F4C1"/>
+</stylenode>
 <stylenode TEXT="missing" ID="ID_1068634079" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="3 px">
 <icon BUILTIN="broken-line"/>
 </stylenode>
@@ -136,7 +124,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <icon BUILTIN="emoji-1F512"/>
 </stylenode>
 <stylenode TEXT="file_folder_with_icon" ID="ID_927144007">
-<icon BUILTIN="emoji-1F4C2"/>
+<icon BUILTIN="emoji-1F4CD"/>
 </stylenode>
 <stylenode TEXT="GroovyNode" ID="ID_647184451" ICON_SIZE="16 pt" COLOR="#286b86" BACKGROUND_COLOR="#92c5d7" STYLE="bubble" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#286b86">
 <icon BUILTIN="groovyNode/groovy-G"/>
@@ -221,8 +209,11 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <icon BUILTIN="emoji-1F6A9"/>
 <font BOLD="true"/>
 </stylenode>
+<stylenode TEXT="notMovedRenamed" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-26D4"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="bottom_or_right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" ID="ID_1209359852" COLOR="#ffffff" BACKGROUND_COLOR="#484747" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="15 pt" TEXT_ALIGN="CENTER" MAX_WIDTH="5 cm" MIN_WIDTH="3 cm">
 <font SIZE="18"/>
 </stylenode>
@@ -260,7 +251,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </stylenode>
 </map_styles>
 </hook>
-<node TEXT="Freeplane_Tutorial_AddOn" STYLE_REF="baseFolder" POSITION="right" ID="ID_1318548517" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/" VGAP_QUANTITY="2 px">
+<node TEXT="Freeplane_Tutorial_AddOn" STYLE_REF="baseFolder" POSITION="bottom_or_right" ID="ID_1318548517" LINK="." VGAP_QUANTITY="2 px">
 <icon BUILTIN="emoji-1F4B2"/>
 <attribute NAME="nameFilter" VALUE=""/>
 <attribute NAME="maxDepth" VALUE="-1" OBJECT="org.freeplane.features.format.FormattedNumber|-1|#0.####"/>
@@ -270,183 +261,83 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="lastAccessTime" VALUE="02-03-22 19:06" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-02T19:06-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:08" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:08-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      null
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      ================ MDI =====================
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      The import of files and folders can be adapted by providing various options in the attributes of the BaseFolder node:
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      -----------------------------------------------------
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;-- nameFilter:
-    </p>
-    <p>
-      -----------------------------------------------------
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A filter to perform on the name of traversed files. If set, only files which match are brought.
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This option allowes four types of inputs:
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. nothing (empty) means no filtering (default)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. regex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- example:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~/.*\.mp3/
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. 'simplified' regex&nbsp;&nbsp;&nbsp;&nbsp;- example:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~.*\.mp3
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. string with *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- example:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*.mp3&nbsp;&nbsp;&nbsp;&nbsp;(equivalent to regex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~/(?i).*\.mp3/&nbsp;&nbsp;)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. list of strings with * and ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- example:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*.mp3;*.png&nbsp;&nbsp;&nbsp;(equivalent to regex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~/(?i)(.*\.mp3|.*\.png)/&nbsp;&nbsp;)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      -----------------------------------------------------
-    </p>
-    <p>
-      &nbsp;&nbsp;-- maxDepth:
-    </p>
-    <p>
-      -----------------------------------------------------
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The maximum number of directory levels when recursing
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(default is -1 which means no limit, set to 0 for no recursion)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      -----------------------------------------------------
-    </p>
-    <p>
-      &nbsp;&nbsp;-- markWhenMoved:
-    </p>
-    <p>
-      -----------------------------------------------------
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;change styles to moved/renamed file Nodes
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;set to:
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;0 : to change style only if node hasn't a previous one (default),
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;1 : to allways change the style,
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;-1 : to never change the style
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      -----------------------------------------------------
-    </p>
-    <p>
-      &nbsp;&nbsp;-- checkIfReallyBroken:
-    </p>
-    <p>
-      -----------------------------------------------------
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check if existing nodes pointing to filtered files still exist.&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This option is only useful if you defined a nameFilter before&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;but in the map there are also some files that doesn't match&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this filter definition&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(for example if you brought them manually or import them&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;before the actual namefilter setting)&nbsp;&nbsp;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;- default is 0 which means don't check --&gt; Mark node as missing also if it doesn't match the current filter,
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;- set to 1 to extra check if a not matching file still exists in drive&nbsp;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      ==========================================
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="otras ubicaciones posibles" STYLE_REF="locked" ID="ID_399374123"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<attribute NAME="linkType" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1|#0.####"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+<text>
+# MDI:  parameters
+The import of files and folders can be adapted by providing various options in the attributes of the BaseFolder node:
+
+-----------------------------------------------------
+# MDI: nameFilter:
+A filter to perform on the name of traversed files. If set, only files which match are brought. 
+This option allowes four types of inputs:
+1. nothing (empty) means no filtering (default) 
+2. regex
+  - example: `~/.*\.mp3/ `
+3. 'simplified' regex
+  - example: `~.*\.mp3` 
+4. string with *
+  - example: `*.mp3`   
+    (equivalent to regex      `~/(?i).*\.mp3/`  )
+5. list of strings with '*' and ';'
+  - example: ` *.mp3;*.png `   
+    (equivalent to regex: ` ~/(?i)(.*\.mp3|.*\.png)/ `  )
+
+-----------------------------------------------------
+
+# MDI:  maxDepth:
+
+The maximum number of directory levels when recursing   
+(default is -1 which means no limit, set to 0 for no recursion)
+
+
+-----------------------------------------------------
+
+# MDI:  linkType:
+
+Define if you want to use Absolute or Relative   
+links for files and folders.
+
+ set to:   
+
+0 : to use Absolute links
+
+1 : to use Relative links
+
+-----------------------------------------------------
+   
+# MDI:  markWhenMoved:
+
+change styles to moved/renamed file Nodes 
+
+set to:   
+ 
+0  : to change style only if node hasn't a previous one (default),
+
+1  : to allways change the style,
+
+-1 : to never change the style
+
+-----------------------------------------------------
+
+ 
+# MDI:  checkIfReallyBroken:
+Check if existing nodes pointing to filtered files still exist.   
+This option is only useful if you defined a nameFilter before 
+but in the map there are also some files that doesn't match 
+this filter definition 
+(for example if you brought them manually or import them 
+before the actual namefilter setting)  
+
+- default is 0 which means don't check --&gt; Mark node as missing also if it doesn't match the current filter,
+
+- set to 1 to extra check if a not matching file still exists in drive 
+
+
+-----------------------------------------------------
+
+</text></richcontent>
+<node TEXT="otras ubicaciones posibles" STYLE_REF="locked" ID="ID_399374123"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -459,7 +350,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </html></richcontent>
 <node TEXT="Freeplane_Tutorial_AddOn" ID="ID_1010951240" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/">
 <icon BUILTIN="emoji-27A1"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -475,7 +366,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="creationTime" VALUE="12-09-21 15:08" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:08-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
 </node>
-<node TEXT="Freeplane_Tutorial_AddOn" ID="ID_437551640" LINK="file:/D:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Freeplane_Tutorial_AddOn" ID="ID_437551640" LINK="file:/D:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -487,7 +378,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 </node>
-<node TEXT="Freeplane_Tutorial_AddOn" ID="ID_1653601943" LINK="file:/E:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Freeplane_Tutorial_AddOn" ID="ID_1653601943" LINK="file:/E:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -501,18 +392,18 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 <node TEXT="files" ID="ID_1937875223">
-<node TEXT=".gitattributes" ID="ID_1628624218" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/.gitattributes">
+<node TEXT=".gitattributes" ID="ID_1628624218" LINK=".gitattributes">
 <attribute NAME="lastModifiedTime" VALUE="13-09-21 18:07" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-13T18:07-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="18-03-22 23:52" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-18T23:52-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="13-09-21 18:07" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-13T18:07-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="66" OBJECT="org.freeplane.features.format.FormattedNumber|66|#,##0"/>
 </node>
-<node TEXT="delete" STYLE_REF="file_folder" FOLDED="true" ID="ID_350607696" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/delete/">
+<node TEXT="delete" STYLE_REF="file_folder" FOLDED="true" ID="ID_350607696" LINK="delete/">
 <attribute NAME="lastModifiedTime" VALUE="24-12-21 11:45" OBJECT="org.freeplane.features.format.FormattedDate|2021-12-24T11:45-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="24-12-21 11:45" OBJECT="org.freeplane.features.format.FormattedDate|2021-12-24T11:45-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#,##0"/>
-<node TEXT="MarkdownPreviewOld.groovy" ID="ID_453738727" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/delete/MarkdownPreviewOld.groovy"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="MarkdownPreviewOld.groovy" ID="ID_453738727" LINK="delete/MarkdownPreviewOld.groovy"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -1075,7 +966,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="fileSize" VALUE="4.986" OBJECT="org.freeplane.features.format.FormattedNumber|4986|#,##0"/>
 </node>
 </node>
-<node TEXT="Tutorial-o-Matic" STYLE_REF="file_folder" ID="ID_198136364" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/">
+<node TEXT="Tutorial-o-Matic" STYLE_REF="file_folder" ID="ID_198136364" LINK="Tutorial-o-Matic/">
 <attribute NAME="script1" VALUE="def nodo = node&#xd;&#xa;def texto = nodo.text&#xd;&#xa;&#xd;&#xa;def nodos = nodo.find{it.text.contains(texto)}&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;def cambiarA = ui.showInputDialog(&#xd;&#xa;        nodo.delegate, &#xd;&#xa;        &apos;input new AddOn name (it will CamelCase it and delete spaces)&apos;, &#xd;&#xa;        &apos; my new add on example   &apos;&#xd;&#xa;    )?.trim()&#xd;&#xa;&#xd;&#xa;cambiarA = cambiarA.split(&apos; &apos;)*.capitalize().join()&#xd;&#xa;&#xd;&#xa;nodos.each{n -&gt;&#xd;&#xa;    n.text = n.text.replace(texto,cambiarA)&#xd;&#xa;}"/>
 <attribute NAME="lastModifiedTime" VALUE="08-03-22 22:20" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-08T22:20-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:29" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:29-0300|dd-MM-yy HH:mm"/>
@@ -1083,22 +974,22 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
 <node TEXT="lib" STYLE_REF="Organizador" FOLDED="true" ID="ID_1868195332">
 <attribute NAME="projectCode" VALUE="lib"/>
-<node TEXT="src" STYLE_REF="file_folder" ID="ID_776042065" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/src/">
+<node TEXT="src" STYLE_REF="file_folder" ID="ID_776042065" LINK="Tutorial-o-Matic/src/">
 <attribute NAME="lastModifiedTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#,##0"/>
-<node TEXT="main" STYLE_REF="file_folder" ID="ID_1231327159" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/src/main/">
+<node TEXT="main" STYLE_REF="file_folder" ID="ID_1231327159" LINK="Tutorial-o-Matic/src/main/">
 <attribute NAME="lastModifiedTime" VALUE="20-09-21 10:00" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-20T10:00-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#,##0"/>
-<node TEXT="groovy" STYLE_REF="file_folder" ID="ID_1868302349" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/src/main/groovy/">
+<node TEXT="groovy" STYLE_REF="file_folder" ID="ID_1868302349" LINK="Tutorial-o-Matic/src/main/groovy/">
 <attribute NAME="lastModifiedTime" VALUE="17-03-22 09:08" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-17T09:08-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
-<node TEXT="TabPane.groovy" FOLDED="true" ID="ID_736919810" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/src/main/groovy/TabPane.groovy">
+<node TEXT="TabPane.groovy" FOLDED="true" ID="ID_736919810" LINK="Tutorial-o-Matic/src/main/groovy/TabPane.groovy">
 <icon BUILTIN="bookmarks/Bookmark 1"/>
 <attribute NAME="lastModifiedTime" VALUE="10-03-22 11:33" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-10T11:33-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:33" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:33-0300|dd-MM-yy HH:mm"/>
@@ -1106,7 +997,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="fileSize" VALUE="2.642" OBJECT="org.freeplane.features.format.FormattedNumber|2642|#,##0"/>
 <attribute NAME="projectCode" VALUE="TabPane.grvy"/>
 <node TEXT="TabPannel" FOLDED="true" ID="ID_566681188">
-<node TEXT="listo!!" FOLDED="true" ID="ID_830035512"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="listo!!" FOLDED="true" ID="ID_830035512"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -1117,7 +1008,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<node TEXT="eliminar tab de tabbed pannel" ID="ID_34964401"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="eliminar tab de tabbed pannel" ID="ID_34964401"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -1152,7 +1043,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -1164,7 +1055,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 </node>
-<node TEXT="mostrar Tabbed panel y mostrar tab" ID="ID_705029529"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="mostrar Tabbed panel y mostrar tab" ID="ID_705029529"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -1205,7 +1096,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -1217,7 +1108,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 </node>
-<node TEXT="agregar tab a freeplaneTabbedPanel" ID="ID_990420067"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="agregar tab a freeplaneTabbedPanel" ID="ID_990420067"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -1291,7 +1182,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -1304,7 +1195,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </html></richcontent>
 </node>
 </node>
-<node TEXT="descartado" FOLDED="true" ID="ID_342909155"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="descartado" FOLDED="true" ID="ID_342909155"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -1315,7 +1206,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<node TEXT="cambiar ancho de Tabbed Pannel" ID="ID_1758313692"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="cambiar ancho de Tabbed Pannel" ID="ID_1758313692"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -1356,7 +1247,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -1371,7 +1262,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 <node TEXT="tests TabPane" FOLDED="true" ID="ID_1853958363">
-<node TEXT="agregar tab Tutorial" ID="ID_112539979"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="agregar tab Tutorial" ID="ID_112539979"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -1382,7 +1273,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -1448,7 +1339,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 </node>
-<node TEXT="eliminar tab tutorial" ID="ID_1761460802"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="eliminar tab tutorial" ID="ID_1761460802"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -1468,7 +1359,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -1480,7 +1371,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 </node>
-<node TEXT="hacer visible tab tutorial" ID="ID_914736270"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="hacer visible tab tutorial" ID="ID_914736270"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -1500,7 +1391,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -1514,13 +1405,13 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="ToM_actions.groovy" FOLDED="true" ID="ID_974445068" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/src/main/groovy/ToM_actions.groovy">
+<node TEXT="ToM_actions.groovy" FOLDED="true" ID="ID_974445068" LINK="Tutorial-o-Matic/src/main/groovy/ToM_actions.groovy">
 <attribute NAME="lastModifiedTime" VALUE="29-11-21 11:23" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-29T11:23-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:33" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:33-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 17:06" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T17:06-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="9.883" OBJECT="org.freeplane.features.format.FormattedNumber|9883|#,##0"/>
 <attribute NAME="projectCode" VALUE="ToM_actions.grvy"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2433,7 +2324,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </html></richcontent>
 <node TEXT="tests" FOLDED="true" ID="ID_1250833748">
 <node TEXT="tests ToM_actions" FOLDED="true" ID="ID_144232268" VGAP_QUANTITY="2 px">
-<node TEXT="nodo tiene link a menu action" ID="ID_1137418963"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="nodo tiene link a menu action" ID="ID_1137418963"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -2444,7 +2335,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2474,7 +2365,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 </node>
-<node TEXT="obtener string de accion de nodo" ID="ID_1393077049"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="obtener string de accion de nodo" ID="ID_1393077049"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2503,7 +2394,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -2515,7 +2406,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 </node>
-<node TEXT="test de varios puntos" ID="ID_794192290"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="test de varios puntos" ID="ID_794192290"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2577,7 +2468,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -2589,7 +2480,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 </node>
-<node TEXT="ejecutar accion" ID="ID_1788628038"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="ejecutar accion" ID="ID_1788628038"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2624,7 +2515,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -2636,7 +2527,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 </node>
-<node TEXT="ejecutar acciones" ID="ID_1511018833"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="ejecutar acciones" ID="ID_1511018833"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2686,7 +2577,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -2698,7 +2589,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 </node>
-<node TEXT="mostrar menu" ID="ID_464419371"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="mostrar menu" ID="ID_464419371"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2775,7 +2666,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -2791,7 +2682,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 <node TEXT="nodos para pruebas" FOLDED="true" ID="ID_1824790726">
 <node TEXT="taco" FOLDED="true" ID="ID_641861336" LINK="menuitem:_IconAction.emoji-1F32E">
-<node TEXT="IconAction.emoji-1F32E" ID="ID_1075260808"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="IconAction.emoji-1F32E" ID="ID_1075260808"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2805,7 +2696,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 </node>
-<node TEXT="IconAction.emoji-1F32E" ID="ID_1217959614"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="IconAction.emoji-1F32E" ID="ID_1217959614"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2820,7 +2711,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </html></richcontent>
 <font BOLD="false"/>
 </node>
-<node TEXT="IconAction.emoji-1F32E" ID="ID_1295544150"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="IconAction.emoji-1F32E" ID="ID_1295544150"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2834,7 +2725,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 </node>
-<node TEXT="IconAction.emoji-1F32E" ID="ID_912517607"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="IconAction.emoji-1F32E" ID="ID_912517607"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2852,7 +2743,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 <node TEXT="Bold" FOLDED="true" ID="ID_351287230" LINK="menuitem:_BoldAction">
 <font BOLD="true"/>
-<node TEXT="BoldAction" ID="ID_1200795601"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="BoldAction" ID="ID_1200795601"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2867,7 +2758,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 </node>
-<node TEXT="BoldAction" ID="ID_1398901752"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="BoldAction" ID="ID_1398901752"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2883,7 +2774,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </html></richcontent>
 <font BOLD="false"/>
 </node>
-<node TEXT="BoldAction" ID="ID_890072020"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="BoldAction" ID="ID_890072020"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2901,7 +2792,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 <node TEXT="xxxx" ID="ID_1747487252"/>
 <node TEXT="Move" FOLDED="true" ID="ID_714261614" LINK="menuitem:_MoveAction">
-<node TEXT="MoveAction" ID="ID_754667878"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="MoveAction" ID="ID_754667878"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2918,7 +2809,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 <node TEXT="Blinking node" FOLDED="true" ID="ID_792954353" LINK="menuitem:_BlinkingNodeHookAction">
-<node TEXT="BlinkingNodeHookAction" ID="ID_1839637075"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="BlinkingNodeHookAction" ID="ID_1839637075"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2933,7 +2824,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </html></richcontent>
 <font BOLD="false"/>
 </node>
-<node TEXT="BlinkingNodeHookAction" ID="ID_1482021560"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="BlinkingNodeHookAction" ID="ID_1482021560"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2948,7 +2839,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </html></richcontent>
 <font BOLD="false"/>
 </node>
-<node TEXT="BlinkingNodeHookAction" ID="ID_1911949902"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="BlinkingNodeHookAction" ID="ID_1911949902"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -2983,7 +2874,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="pends" ID="ID_1986977161">
 <node TEXT="modificar" ID="ID_1679664642" VGAP_QUANTITY="2 px">
 <node TEXT="**ToM xFuture B**" STYLE_REF="milestone" FOLDED="true" ID="ID_372498707">
-<node TEXT="Manage errors (message)" STYLE_REF="pendingTask" ID="ID_141287878"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="Manage errors (message)" STYLE_REF="pendingTask" ID="ID_141287878"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -3030,16 +2921,16 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="Icons" ID="ID_785703531">
 <node TEXT="Emoji collection" ID="ID_1769316628">
 <node TEXT="Animals &amp; Nature" ID="ID_1661820875" VGAP_QUANTITY="41.25 pt">
-<arrowlink DESTINATION="ID_868273401" STARTINCLINATION="0 pt;42.89362 pt;" ENDINCLINATION="0 pt;26.04255 pt;"/>
+<arrowlink DESTINATION="ID_868273401" STARTINCLINATION="0 pt;42.75 pt;" ENDINCLINATION="0 pt;26.25 pt;"/>
 <node TEXT="animal-mammal" ID="ID_456541776">
 <arrowlink DESTINATION="ID_1661820875" STARTINCLINATION="0 pt;0 pt;" ENDINCLINATION="0 pt;0 pt;"/>
 <node TEXT="gorilla" ID="ID_1620344177">
 <icon BUILTIN="emoji-1F98D"/>
-<arrowlink DESTINATION="ID_456541776" STARTINCLINATION="0 pt;0 pt;" ENDINCLINATION="8.42553 pt;0 pt;"/>
+<arrowlink DESTINATION="ID_456541776" STARTINCLINATION="0 pt;0 pt;" ENDINCLINATION="8.25 pt;0 pt;"/>
 </node>
 </node>
 <node TEXT="plant-other" ID="ID_868273401">
-<arrowlink DESTINATION="ID_1994178119" STARTINCLINATION="8.42553 pt;29.10638 pt;" ENDINCLINATION="0 pt;32.17021 pt;"/>
+<arrowlink DESTINATION="ID_1994178119" STARTINCLINATION="8.25 pt;29.25 pt;" ENDINCLINATION="0 pt;32.25 pt;"/>
 <node TEXT="palm tree" ID="ID_1994178119">
 <icon BUILTIN="emoji-1F334"/>
 </node>
@@ -3058,7 +2949,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 <node TEXT="ToM_menuAction" ID="ID_990722707">
 <attribute NAME="projectCode" VALUE="ToM_menuAction"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3101,7 +2992,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="improve **groovyPanel** with more features" STYLE_REF="pendingTask" ID="ID_263975475"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="improve **groovyPanel** with more features" STYLE_REF="pendingTask" ID="ID_263975475"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3117,7 +3008,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <hook NAME="FirstGroupNode"/>
 </node>
 <node TEXT="visualizar código" ID="ID_479112213">
-<node TEXT="visualización del código en cuadro con formato especial" ID="ID_1487450397"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="visualización del código en cuadro con formato especial" ID="ID_1487450397"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3133,7 +3024,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="y tamaño máximo" ID="ID_779765500"/>
 </node>
 </node>
-<node TEXT="botón que muestra/oculta código de script" ID="ID_614101320"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="botón que muestra/oculta código de script" ID="ID_614101320"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3147,7 +3038,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="en diálogo aparte" ID="ID_819743411"/>
 </node>
 </node>
-<node TEXT="botón que abre script en Groovy Console" ID="ID_1757190560"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="botón que abre script en Groovy Console" ID="ID_1757190560"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3160,7 +3051,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </html></richcontent>
 <node TEXT="para que usuario pueda jugar con él" ID="ID_965012004"/>
 </node>
-<node TEXT="Botón que ejecuta" ID="ID_987661355"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Botón que ejecuta" ID="ID_987661355"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3172,7 +3063,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 <node TEXT="opcional para el caso que sólo se quiere mostrar código pero no que se ejecute" ID="ID_937009491"/>
-<node TEXT="opción si se puede ejecutar más de una vez" ID="ID_1798666029"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="opción si se puede ejecutar más de una vez" ID="ID_1798666029"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3192,7 +3083,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 <node TEXT="make sure that scripts apply security levels defined in Freeplane preferences" STYLE_REF="pendingTask" ID="ID_229034055">
-<node TEXT="execute a script on the selected node" ID="ID_675165031"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="execute a script on the selected node" ID="ID_675165031"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3206,11 +3097,11 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 <node TEXT="encapsular ejecución de script sólo con permisos aceptados" ID="ID_1165022650"/>
 <node TEXT="Si requiere más debe solicitarlos expresamente al usuario" ID="ID_108270129"/>
-<node TEXT="prueba permisos scripts" ID="ID_992947958">
+<node TEXT="prueba permisos scripts" STYLE_REF="locked" ID="ID_992947958">
 <node TEXT="exe scripts" ID="ID_1831666849">
 <node TEXT="execute" ID="ID_945978112">
 <icon BUILTIN="emoji-1F3F4"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -3251,7 +3142,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3265,7 +3156,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 <node TEXT="execute with readingFiles" ID="ID_1822913359">
 <icon BUILTIN="emoji-1F3F3"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -3306,7 +3197,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3319,7 +3210,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </html></richcontent>
 </node>
 </node>
-<node TEXT="script de prueba que requiere permiso readingFiles" ID="ID_917088007"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="script de prueba que requiere permiso readingFiles" ID="ID_917088007"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -3333,7 +3224,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3348,9 +3239,9 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="node with link to user directory" ID="ID_1128548582"/>
 <node TEXT="node with link to user directory" ID="ID_1457223190"/>
 <node TEXT="node with link to user directory" ID="ID_1341172214"/>
-<node TEXT="node with link to user directory" STYLE_REF="missing" ID="ID_1974192334" LINK="file:/C:/Users/eduardo.frohlich/PortableApps/FreeplanePortable/Data/Freeplane/1.9.x"/>
+<node TEXT="node with link to user directory" ID="ID_1974192334" LINK="../../../eduardo.frohlich/PortableApps/FreeplanePortable/Data/Freeplane/1.9.x"/>
 </node>
-<node TEXT="prueba" ID="ID_1106588081"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba" ID="ID_1106588081"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -3364,7 +3255,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3382,7 +3273,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 <node TEXT="ToM_goto" ID="ID_55838353">
 <attribute NAME="projectCode" VALUE="ToM_goto"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3453,7 +3344,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 <node TEXT="new" ID="ID_1904035689">
 <attribute NAME="projectCode" VALUE="new"/>
-<node TEXT="Botón PREVIEW" FOLDED="true" ID="ID_1369271441"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Botón PREVIEW" FOLDED="true" ID="ID_1369271441"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3482,7 +3373,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="panel final sólo muestra botón &quot;Close preview&quot;" ID="ID_297926957"/>
 </node>
 </node>
-<node TEXT="botón inspect" FOLDED="true" ID="ID_1620040275"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="botón inspect" FOLDED="true" ID="ID_1620040275"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3504,7 +3395,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="- For people creating tutorials (but not for those just learning from them) it would be useful (not essential) to see the content of the notes panels as the tutorial is running. Currently, it does not show." ID="ID_1217265366"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="- For people creating tutorials (but not for those just learning from them) it would be useful (not essential) to see the content of the notes panels as the tutorial is running. Currently, it does not show." ID="ID_1217265366"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3522,7 +3413,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 <node TEXT="**ToM xFuture A**" STYLE_REF="milestone" ID="ID_890282248">
 <node TEXT="implement &quot;Previous page&quot; button" STYLE_REF="pendingTask" FOLDED="true" ID="ID_1806231140">
-<node TEXT="- Might be useful to have a &quot;Previous Step&quot; button at the bottom." ID="ID_392579366"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="- Might be useful to have a &quot;Previous Step&quot; button at the bottom." ID="ID_392579366"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3538,7 +3429,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 <node TEXT="**ToM xFuture B**" STYLE_REF="milestone" ID="ID_542740869">
-<node TEXT="create &quot;**displayMarkdownFile**&quot; that reads a MarkDown file directly from disk" STYLE_REF="pendingTask" FOLDED="true" ID="ID_762507140"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="create &quot;**displayMarkdownFile**&quot; that reads a MarkDown file directly from disk" STYLE_REF="pendingTask" FOLDED="true" ID="ID_762507140"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -3566,7 +3457,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="Información no requiere estar en el mapa" ID="ID_1290848585"/>
 <node TEXT="Siempre carga la versión actualizada desde el disco (o pag. web)" ID="ID_1025366782"/>
 </node>
-<node TEXT="create &quot;**displayWebPage**&quot; that shows a webpage in the panel (using jsoup safelist)" STYLE_REF="maybeTask" FOLDED="true" ID="ID_1892592727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="create &quot;**displayWebPage**&quot; that shows a webpage in the panel (using jsoup safelist)" STYLE_REF="maybeTask" FOLDED="true" ID="ID_1892592727"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -3594,7 +3485,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="evitar jscript?" ID="ID_722033474"/>
 <node TEXT="jSoup Whitelist" ID="ID_804928768">
 <node TEXT="https://jsoup.org/apidocs/org/jsoup/safety/Safelist.html" ID="ID_1550270041" LINK="https://jsoup.org/apidocs/org/jsoup/safety/Safelist.html">
-<node TEXT="https://jsoup.org/apidocs/org/jsoup/safety/Whitelist.html" ID="ID_931819837" LINK="https://jsoup.org/apidocs/org/jsoup/safety/Whitelist.html"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="https://jsoup.org/apidocs/org/jsoup/safety/Whitelist.html" ID="ID_931819837" LINK="https://jsoup.org/apidocs/org/jsoup/safety/Whitelist.html"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3608,7 +3499,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 <node TEXT="https://jsoup.org/apidocs/org/jsoup/safety/class-use/Safelist.html" ID="ID_811246065" LINK="https://jsoup.org/apidocs/org/jsoup/safety/class-use/Safelist.html">
-<node TEXT="https://jsoup.org/apidocs/org/jsoup/safety/class-use/Whitelist.html" ID="ID_1542496988" LINK="https://jsoup.org/apidocs/org/jsoup/safety/class-use/Whitelist.html"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="https://jsoup.org/apidocs/org/jsoup/safety/class-use/Whitelist.html" ID="ID_1542496988" LINK="https://jsoup.org/apidocs/org/jsoup/safety/class-use/Whitelist.html"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3645,7 +3536,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="" ID="ID_1453961498">
 <hook NAME="SummaryNode"/>
 <hook NAME="AlwaysUnfoldedNode"/>
-<node TEXT="mismo estilo pero con ícono para diferenciar?" ID="ID_1767133865"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="mismo estilo pero con ícono para diferenciar?" ID="ID_1767133865"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3670,7 +3561,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="tui.showTextMessage(texto,3000)" ID="ID_279107994"/>
 </node>
 <node TEXT="&quot;Listen&quot; to user actions and verify if he/she did the steps as explained in the tutorial (or if the user&apos;s result is equivalent to the expected result)" STYLE_REF="pendingTask" FOLDED="true" ID="ID_1759096571">
-<node TEXT="- I agree with your goals of showing a mouse cursor and allowing the tutorial to execute actions. Even better, though, would be a way to wait and &quot;listen&quot; for the user to click on the action and have the tutorial pause until they do the right thing. If it&apos;s just showing the user what to do rather than teaching them what to do and having them do it, it&apos;s not really a tutorial, but more like a way to create instructional videos using Freeplane (which would not be a bad thing, of course!). Tutorial means the user is following along and doing stuff." STYLE_REF="maybeTask" ID="ID_121918204"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="- I agree with your goals of showing a mouse cursor and allowing the tutorial to execute actions. Even better, though, would be a way to wait and &quot;listen&quot; for the user to click on the action and have the tutorial pause until they do the right thing. If it&apos;s just showing the user what to do rather than teaching them what to do and having them do it, it&apos;s not really a tutorial, but more like a way to create instructional videos using Freeplane (which would not be a bad thing, of course!). Tutorial means the user is following along and doing stuff." STYLE_REF="maybeTask" ID="ID_121918204"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3686,7 +3577,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="mirar si nodo modificado por usuario equivale a resultado esperado" ID="ID_141367381">
 <node TEXT="revisar scripts en GIT-ish" ID="ID_359705329"/>
 </node>
-<node TEXT="prueba validación de datos" ID="ID_115991570"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba validación de datos" ID="ID_115991570"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -3718,7 +3609,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3733,7 +3624,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 <node TEXT="**ToM xFuture E**" STYLE_REF="milestone" ID="ID_1280870567">
-<node TEXT="Tutorial mouse arrow moves on the screen and shows where to click (not the actual mouse arrow, a simulated one)" STYLE_REF="maybeTask" ID="ID_335359267"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Tutorial mouse arrow moves on the screen and shows where to click (not the actual mouse arrow, a simulated one)" STYLE_REF="maybeTask" ID="ID_335359267"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3745,7 +3636,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 </node>
-<node TEXT="imita escribir nodo usando Timer" FOLDED="true" ID="ID_269599563"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="imita escribir nodo usando Timer" FOLDED="true" ID="ID_269599563"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -3786,7 +3677,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -3817,13 +3708,13 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="ToM_ui.groovy" FOLDED="true" ID="ID_164714230" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/src/main/groovy/ToM_ui.groovy">
+<node TEXT="ToM_ui.groovy" FOLDED="true" ID="ID_164714230" LINK="Tutorial-o-Matic/src/main/groovy/ToM_ui.groovy">
 <attribute NAME="lastModifiedTime" VALUE="10-03-22 12:18" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-10T12:18-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:33" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:33-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="02-03-22 19:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-02T19:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="19.483" OBJECT="org.freeplane.features.format.FormattedNumber|19483|#,##0"/>
 <attribute NAME="projectCode" VALUE="ToM_ui.grvy"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -5419,7 +5310,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="¿cuántos formatos se requieren?" ID="ID_1611246012"/>
 <node TEXT="crear userStyles para esos formatos" ID="ID_1403824088">
 <node TEXT="revisar" ID="ID_1300432263" VGAP_QUANTITY="2 px"/>
-<node TEXT="ejemplo CSS" ID="ID_156884547" VGAP_QUANTITY="2 px"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="ejemplo CSS" ID="ID_156884547" VGAP_QUANTITY="2 px"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -5524,7 +5415,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 <node TEXT="tests ToM_ui" FOLDED="true" ID="ID_1606292974">
-<node TEXT="Muestra mensaje inferior de ejemplo" ID="ID_1801164158"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="Muestra mensaje inferior de ejemplo" ID="ID_1801164158"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -5547,7 +5438,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -5559,7 +5450,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 </node>
-<node TEXT="prueba markedj" FOLDED="true" ID="ID_1374176569" VGAP_QUANTITY="2 px"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba markedj" FOLDED="true" ID="ID_1374176569" VGAP_QUANTITY="2 px"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -5585,7 +5476,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -5597,15 +5488,14 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 <node TEXT="nota igual" FOLDED="true" ID="ID_829795008"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text># titulo
+<text># titulo
 **hola** como
 estás?
 
 -------
 
-*listo!*</text>
-</richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+*listo!*</text></richcontent>
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -5626,7 +5516,7 @@ estás?
 <node TEXT="string" ID="ID_647642266"/>
 </node>
 </node>
-<node TEXT="mostrar texto en Tabbed Pane" FOLDED="true" ID="ID_410215706" VGAP_QUANTITY="2 px"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="mostrar texto en Tabbed Pane" FOLDED="true" ID="ID_410215706" VGAP_QUANTITY="2 px"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -5688,7 +5578,7 @@ estás?
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -5699,7 +5589,7 @@ estás?
     </p>
   </body>
 </html></richcontent>
-<node TEXT="nota desde fórmula" FOLDED="true" ID="ID_1565950379"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="nota desde fórmula" FOLDED="true" ID="ID_1565950379"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -5710,7 +5600,7 @@ estás?
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -5732,15 +5622,14 @@ estás?
 </node>
 </node>
 <node TEXT="nota igual" FOLDED="true" ID="ID_917299597"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text># titulo
+<text># titulo
 **hola** como
 estás?
 
 -------
 
-*listo!*</text>
-</richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+*listo!*</text></richcontent>
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -5760,7 +5649,7 @@ estás?
 <node TEXT="text" ID="ID_1809941807"/>
 <node TEXT="string" ID="ID_865343857"/>
 </node>
-<node TEXT="otra" FOLDED="true" ID="ID_1825155592"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="otra" FOLDED="true" ID="ID_1825155592"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -5771,7 +5660,7 @@ estás?
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -5788,7 +5677,7 @@ estás?
 <node TEXT="string" ID="ID_472698543"/>
 <node TEXT="html" ID="ID_213706967"/>
 </node>
-<node TEXT="otro ejemplo" ID="ID_890480656"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="otro ejemplo" ID="ID_890480656"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -5825,9 +5714,8 @@ estás?
 </html></richcontent>
 </node>
 <node TEXT="nota desde formula" FOLDED="true" ID="ID_1719452350"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>=node.children*.text.join(&apos;\n&apos;)</text>
-</richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<text>=node.children*.text.join(&apos;\n&apos;)</text></richcontent>
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -5856,7 +5744,7 @@ estás?
 <node TEXT="README.md" ID="ID_1401614979" STYLE="bubble">
 <edge COLOR="#ff0000"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text># Markdown Helper Add On for Freeplane
+<text># Markdown Helper Add On for Freeplane
 
 -----
 
@@ -5940,12 +5828,11 @@ I&apos;m not very good at writing in english, so if you find any error please te
 
 -----
 
-[Freeplane](https://www.freeplane.org/wiki/index.php/Home) is a free and open source software application that supports thinking, sharing information and getting things done at work, in school and at home. The software can be used for [mind mapping](https://secure.wikimedia.org/wikipedia/en/wiki/Mind_map) and analyzing the information contained in mind maps. Freeplane runs on any operating system that has a current version of Java installed. It can be run locally or [portably](https://en.wikipedia.org/wiki/Portable_application) from removable storage like an USB drive.</text>
-</richcontent>
+[Freeplane](https://www.freeplane.org/wiki/index.php/Home) is a free and open source software application that supports thinking, sharing information and getting things done at work, in school and at home. The software can be used for [mind mapping](https://secure.wikimedia.org/wikipedia/en/wiki/Mind_map) and analyzing the information contained in mind maps. Freeplane runs on any operating system that has a current version of Java installed. It can be run locally or [portably](https://en.wikipedia.org/wiki/Portable_application) from removable storage like an USB drive.</text></richcontent>
 <attribute_layout NAME_WIDTH="93 pt" VALUE_WIDTH="56.25 pt"/>
 </node>
 <node TEXT="readme Map Saving Options AddOn.md" ID="ID_549041658"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text># Description
+<text># Description
 
 **&apos;Map Saving Options&apos;** is a **Freeplane AddOn** that gives you the possibility to add **saving preferences** to **each** of your **maps**.
 
@@ -6045,11 +5932,10 @@ I tried also to translate some of the texts to German. Please help me correct th
 # About Freeplane
 
 [Freeplane](https://www.freeplane.org/wiki/index.php/Home) is a free and open source software application that supports thinking, sharing information and getting things done at work, in school and at home. The software can be used for [mind mapping](https://secure.wikimedia.org/wikipedia/en/wiki/Mind_map) and analyzing the information contained in mind maps. Freeplane runs on any operating system that has a current version of Java installed. It can be run locally or [portably](https://en.wikipedia.org/wiki/Portable_application) from removable storage like an USB drive.
-</text>
-</richcontent>
+</text></richcontent>
 </node>
 </node>
-<node TEXT="test ButtonPanel ejemplo en dialogo" ID="ID_18930833"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="test ButtonPanel ejemplo en dialogo" ID="ID_18930833"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -6153,7 +6039,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -6165,7 +6051,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="test agrega buttonPanel ejemplo en TabPanel" ID="ID_603203538"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="test agrega buttonPanel ejemplo en TabPanel" ID="ID_603203538"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -6302,7 +6188,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -6314,7 +6200,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="test toggleButtonPanel ejemplo en dialogo" ID="ID_939721809"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="test toggleButtonPanel ejemplo en dialogo" ID="ID_939721809"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -6424,7 +6310,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -6437,7 +6323,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </html></richcontent>
 </node>
 </node>
-<node TEXT="Way to execute menu commands on the selected node (almost ready)" FOLDED="true" ID="ID_464675686"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Way to execute menu commands on the selected node (almost ready)" FOLDED="true" ID="ID_464675686"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -6451,7 +6337,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<node TEXT="prueba timer repite" ID="ID_1309174471"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba timer repite" ID="ID_1309174471"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -6498,7 +6384,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -6511,7 +6397,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </html></richcontent>
 </node>
 <node TEXT="acciones buttonPanel" FOLDED="true" ID="ID_536457281">
-<node TEXT="mostrar menú de acción" ID="ID_690196556"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="mostrar menú de acción" ID="ID_690196556"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -6639,7 +6525,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -6654,7 +6540,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="mostrar menu accion v2" ID="ID_1582313267"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="mostrar menu accion v2" ID="ID_1582313267"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -6782,7 +6668,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -6797,7 +6683,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="botón finalizar tutorial" ID="ID_642443847"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="botón finalizar tutorial" ID="ID_642443847"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -6874,7 +6760,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -6889,7 +6775,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="botón ejecutar acción en seleccionados" ID="ID_1861989441"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="botón ejecutar acción en seleccionados" ID="ID_1861989441"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -6990,7 +6876,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -7002,7 +6888,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="botón ejecutar acciones en seleccionados" ID="ID_644789956"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="botón ejecutar acciones en seleccionados" ID="ID_644789956"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -7100,7 +6986,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -7113,7 +6999,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </html></richcontent>
 </node>
 </node>
-<node TEXT="ejecutar acción de menu" FOLDED="true" ID="ID_1896062148"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="ejecutar acción de menu" FOLDED="true" ID="ID_1896062148"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -7140,7 +7026,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 <node TEXT=" opciones" FOLDED="true" ID="ID_1056296857">
 <node TEXT="rapidez" ID="ID_326577918"/>
 </node>
-<node TEXT="abre menu y submenus" ID="ID_679824150"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="abre menu y submenus" ID="ID_679824150"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -7152,7 +7038,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="marca / indica / resalta menus y submenus a abrir" ID="ID_478151305"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="marca / indica / resalta menus y submenus a abrir" ID="ID_478151305"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -7165,7 +7051,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </html></richcontent>
 </node>
 <node TEXT="ejecuta acción" ID="ID_1712727373"/>
-<node TEXT="cierra menús y submenús" ID="ID_544561306"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="cierra menús y submenús" ID="ID_544561306"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -7181,7 +7067,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 <node TEXT="botón se inhabilita" ID="ID_1668490912" BACKGROUND_COLOR="#ff9bbc"/>
 </node>
 </node>
-<node TEXT="crear panel &apos;next page&apos;" FOLDED="true" ID="ID_966189410"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="crear panel &apos;next page&apos;" FOLDED="true" ID="ID_966189410"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -7201,7 +7087,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 <node TEXT="avanza a la siguiente página del tutorial" FOLDED="true" ID="ID_1420015115">
 <node TEXT="closure incluye valor de próximo nodo" ID="ID_227777663"/>
 </node>
-<node TEXT="si no hay siguiente página" FOLDED="true" ID="ID_199835912"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="si no hay siguiente página" FOLDED="true" ID="ID_199835912"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -7216,7 +7102,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 </node>
-<node TEXT="siguiente página v2 versión tab" ID="ID_1746337909"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="siguiente página v2 versión tab" ID="ID_1746337909"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -7371,7 +7257,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -7386,7 +7272,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="test agrega nextPagePanel en Tab panel" ID="ID_1666249607"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="test agrega nextPagePanel en Tab panel" ID="ID_1666249607"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -7667,7 +7553,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -7682,7 +7568,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="test agrega nextPagePanel en Tab panel" ID="ID_1067143947"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="test agrega nextPagePanel en Tab panel" ID="ID_1067143947"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -7783,7 +7669,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -7796,7 +7682,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </html></richcontent>
 </node>
 </node>
-<node TEXT="setPanel Enabled" ID="ID_145411582"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="setPanel Enabled" ID="ID_145411582"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -7873,7 +7759,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -7886,13 +7772,13 @@ I tried also to translate some of the texts to German. Please help me correct th
 </html></richcontent>
 </node>
 </node>
-<node TEXT="ToM.groovy" FOLDED="true" ID="ID_1127648491" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/src/main/groovy/ToM.groovy">
+<node TEXT="ToM.groovy" FOLDED="true" ID="ID_1127648491" LINK="Tutorial-o-Matic/src/main/groovy/ToM.groovy">
 <attribute NAME="lastModifiedTime" VALUE="20-03-22 22:32" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:32-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:33" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:33-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="26-11-21 12:46" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-26T12:46-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="27.627" OBJECT="org.freeplane.features.format.FormattedNumber|27627|#,##0"/>
 <attribute NAME="projectCode" VALUE="ToM.grvy"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10285,7 +10171,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<node TEXT="crear otra clase que arme el tutorial desde el mapa: ToM" ID="ID_866747677"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="crear otra clase que arme el tutorial desde el mapa: ToM" ID="ID_866747677"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -10298,7 +10184,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </html></richcontent>
 </node>
 <node TEXT="listar tutoriales de mapa" ID="ID_1140285523">
-<node TEXT="listar tutoriales" FOLDED="true" ID="ID_367550967"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="listar tutoriales" FOLDED="true" ID="ID_367550967"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -10311,7 +10197,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </html></richcontent>
 <node TEXT="nodos marcados como titules de tutorial" ID="ID_593050591"/>
 </node>
-<node TEXT="permitir seleccionar uno" ID="ID_1899552584"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="permitir seleccionar uno" ID="ID_1899552584"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -10323,7 +10209,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="devuelve nodo titulo de tutorial" ID="ID_546870031"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="devuelve nodo titulo de tutorial" ID="ID_546870031"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -10337,7 +10223,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 <node TEXT="listar nodos de contenido de tutorial" FOLDED="true" ID="ID_1431650565">
-<node TEXT="- listado de nodos ComponentesTut&#xa;- obtener siguiente a seleccionado" ID="ID_1822601023"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="- listado de nodos ComponentesTut&#xa;- obtener siguiente a seleccionado" ID="ID_1822601023"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10435,7 +10321,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -10451,7 +10337,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </html></richcontent>
 </node>
 <node TEXT="contenido" FOLDED="true" ID="ID_519119446">
-<node TEXT="mostrar menus" ID="ID_1147789993"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="mostrar menus" ID="ID_1147789993"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10501,7 +10387,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -10516,7 +10402,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 <node TEXT="armar página (nodo inicial)" ID="ID_1448780006"/>
-<node TEXT="mostrar tutorial" ID="ID_1205546270"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="mostrar tutorial" ID="ID_1205546270"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10788,7 +10674,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -10803,7 +10689,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="mostrar tutorial WIP" ID="ID_179297944"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="mostrar tutorial WIP" ID="ID_179297944"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10865,7 +10751,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -10877,7 +10763,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="xxx" ID="ID_1039835137"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="xxx" ID="ID_1039835137"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10903,7 +10789,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -10936,21 +10822,21 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 </node>
-<node TEXT="WSE_redux.groovy" ID="ID_998866205" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/src/main/groovy/WSE_redux.groovy">
+<node TEXT="WSE_redux.groovy" ID="ID_998866205" LINK="Tutorial-o-Matic/src/main/groovy/WSE_redux.groovy">
 <attribute NAME="lastModifiedTime" VALUE="25-06-21 10:05" OBJECT="org.freeplane.features.format.FormattedDate|2021-06-25T10:05-0400|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:33" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:33-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="06-11-21 23:04" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-06T23:04-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="2.412" OBJECT="org.freeplane.features.format.FormattedNumber|2412|#,##0"/>
 <attribute NAME="projectCode" VALUE="WSE_redux.grvy"/>
 </node>
-<node TEXT="MenuAction.groovy" ID="ID_304459899" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/src/main/groovy/MenuAction.groovy">
+<node TEXT="MenuAction.groovy" ID="ID_304459899" LINK="Tutorial-o-Matic/src/main/groovy/MenuAction.groovy">
 <attribute NAME="lastModifiedTime" VALUE="09-03-22 00:06" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-09T00:06-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:33" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:33-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="08-03-22 22:36" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-08T22:36-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="2.987" OBJECT="org.freeplane.features.format.FormattedNumber|2987|#,##0"/>
 <attribute NAME="projectCode" VALUE="MenuAction.grvy"/>
 </node>
-<node TEXT="UserStyles.groovy" ID="ID_6903769" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/src/main/groovy/UserStyles.groovy">
+<node TEXT="UserStyles.groovy" ID="ID_6903769" LINK="Tutorial-o-Matic/src/main/groovy/UserStyles.groovy">
 <attribute NAME="lastModifiedTime" VALUE="17-03-22 10:13" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-17T10:13-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:33" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:33-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="17-03-22 09:08" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-17T09:08-0300|datetime"/>
@@ -10963,42 +10849,42 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 </node>
-<node TEXT="build" STYLE_REF="file_folder" FOLDED="true" ID="ID_1398864453" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/build/">
+<node TEXT="build" FOLDED="true" ID="ID_1398864453" LINK="Tutorial-o-Matic/build/">
 <attribute NAME="lastModifiedTime" VALUE="12-09-21 15:57" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:57-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#,##0"/>
-<node TEXT="classes" STYLE_REF="locked" ID="ID_602876971" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/build/classes/">
+<node TEXT="classes" STYLE_REF="locked" ID="ID_602876971" LINK="Tutorial-o-Matic/build/classes/">
 <attribute NAME="lastModifiedTime" VALUE="12-09-21 15:57" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:57-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:33" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:33-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:57" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:57-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#,##0"/>
 </node>
-<node TEXT="tmp" STYLE_REF="locked" ID="ID_434865879" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/build/tmp/">
+<node TEXT="tmp" STYLE_REF="locked" ID="ID_434865879" LINK="Tutorial-o-Matic/build/tmp/">
 <attribute NAME="lastModifiedTime" VALUE="12-09-21 16:09" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T16:09-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:33" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:33-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:57" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:57-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#,##0"/>
 </node>
 </node>
-<node TEXT="lib" STYLE_REF="file_folder" FOLDED="true" ID="ID_804495675" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/lib/">
+<node TEXT="lib" STYLE_REF="file_folder" ID="ID_804495675" LINK="Tutorial-o-Matic/lib/">
 <attribute NAME="lastModifiedTime" VALUE="20-09-21 11:57" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-20T11:57-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#,##0"/>
-<node TEXT="Tutorial-o-Matic.jar" ID="ID_1116501145" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/lib/Tutorial-o-Matic.jar">
+<node TEXT="Tutorial-o-Matic.jar" ID="ID_1116501145" LINK="Tutorial-o-Matic/lib/Tutorial-o-Matic.jar">
 <attribute NAME="lastModifiedTime" VALUE="20-03-22 22:33" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:33-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 16:09" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T16:09-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="202.408" OBJECT="org.freeplane.features.format.FormattedNumber|202408|#,##0"/>
 </node>
-<node TEXT="jsoup-1.10.2.jar" ID="ID_1743397377" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/lib/jsoup-1.10.2.jar">
+<node TEXT="jsoup-1.10.2.jar" ID="ID_1743397377" LINK="Tutorial-o-Matic/lib/jsoup-1.10.2.jar">
 <attribute NAME="lastModifiedTime" VALUE="12-09-21 19:13" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T19:13-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="20-09-21 11:57" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-20T11:57-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="350.645" OBJECT="org.freeplane.features.format.FormattedNumber|350645|#,##0"/>
 </node>
-<node TEXT="markedj-1.0.16.jar" ID="ID_1098441946" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/lib/markedj-1.0.16.jar">
+<node TEXT="markedj-1.0.16.jar" ID="ID_1098441946" LINK="Tutorial-o-Matic/lib/markedj-1.0.16.jar">
 <attribute NAME="lastModifiedTime" VALUE="12-09-21 19:13" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T19:13-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="20-09-21 11:46" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-20T11:46-0300|datetime"/>
@@ -11006,13 +10892,13 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 </node>
-<node TEXT="scripts" STYLE_REF="file_folder" FOLDED="true" ID="ID_1091793016" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/scripts/" VGAP_QUANTITY="2 px">
+<node TEXT="scripts" STYLE_REF="file_folder" FOLDED="true" ID="ID_1091793016" LINK="Tutorial-o-Matic/scripts/" VGAP_QUANTITY="2 px">
 <attribute NAME="lastModifiedTime" VALUE="20-03-22 22:16" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:16-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
 <attribute NAME="projectCode" VALUE="scripts"/>
-<node TEXT="ToMDemo.groovy" ID="ID_1175524753" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/scripts/ToMDemo.groovy"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="ToMDemo.groovy" ID="ID_1175524753" LINK="Tutorial-o-Matic/scripts/ToMDemo.groovy"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -11027,7 +10913,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="09-11-21 18:06" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-09T18:06-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="440" OBJECT="org.freeplane.features.format.FormattedNumber|440|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11075,12 +10961,12 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="ToMTutorial.groovy" ID="ID_1959944517" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/scripts/ToMTutorial.groovy">
+<node TEXT="ToMTutorial.groovy" ID="ID_1959944517" LINK="Tutorial-o-Matic/scripts/ToMTutorial.groovy">
 <attribute NAME="lastModifiedTime" VALUE="14-03-22 17:16" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-14T17:16-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="14-03-22 17:16" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-14T17:16-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="441" OBJECT="org.freeplane.features.format.FormattedNumber|441|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11128,12 +11014,12 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="openDemoMap.groovy" ID="ID_563223042" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/scripts/openDemoMap.groovy">
+<node TEXT="openDemoMap.groovy" ID="ID_563223042" LINK="Tutorial-o-Matic/scripts/openDemoMap.groovy">
 <attribute NAME="lastModifiedTime" VALUE="29-11-21 11:04" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-29T11:04-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="02-10-21 13:58" OBJECT="org.freeplane.features.format.FormattedDate|2021-10-02T13:58-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="489" OBJECT="org.freeplane.features.format.FormattedNumber|489|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11208,12 +11094,12 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="getMenuCommandToM.groovy" ID="ID_159231843" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/scripts/getMenuCommandToM.groovy">
+<node TEXT="getMenuCommandToM.groovy" ID="ID_159231843" LINK="Tutorial-o-Matic/scripts/getMenuCommandToM.groovy">
 <attribute NAME="lastModifiedTime" VALUE="25-06-21 10:21" OBJECT="org.freeplane.features.format.FormattedDate|2021-06-25T10:21-0400|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="08-03-22 22:31" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-08T22:31-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="73" OBJECT="org.freeplane.features.format.FormattedNumber|73|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11234,13 +11120,13 @@ I tried also to translate some of the texts to German. Please help me correct th
 <node TEXT="getMenuCommand renamed to &quot;getMenuCommandToM.groovy&quot;" STYLE_REF="completedTask" ID="ID_325043197"/>
 </node>
 </node>
-<node TEXT="createNewTutorialMindMap.groovy" ID="ID_1981337646" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/scripts/createNewTutorialMindMap.groovy">
+<node TEXT="createNewTutorialMindMap.groovy" ID="ID_1981337646" LINK="Tutorial-o-Matic/scripts/createNewTutorialMindMap.groovy">
 <icon BUILTIN="emoji-1F50D"/>
 <attribute NAME="lastModifiedTime" VALUE="11-03-22 20:48" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-11T20:48-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="11-03-22 20:48" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-11T20:48-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="310" OBJECT="org.freeplane.features.format.FormattedNumber|310|#,##0"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -11251,7 +11137,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11284,7 +11170,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="showTutorialsFromActiveMap.groovy" ID="ID_1523867671" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/scripts/showTutorialsFromActiveMap.groovy"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="showTutorialsFromActiveMap.groovy" ID="ID_1523867671" LINK="Tutorial-o-Matic/scripts/showTutorialsFromActiveMap.groovy"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -11299,7 +11185,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="10-03-22 12:26" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-10T12:26-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="74" OBJECT="org.freeplane.features.format.FormattedNumber|74|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11317,12 +11203,12 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="importToMStyles.groovy" ID="ID_1579306528" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/scripts/importToMStyles.groovy">
+<node TEXT="importToMStyles.groovy" ID="ID_1579306528" LINK="Tutorial-o-Matic/scripts/importToMStyles.groovy">
 <attribute NAME="lastModifiedTime" VALUE="20-03-22 10:31" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T10:31-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="17-03-22 09:02" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-17T09:02-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="977" OBJECT="org.freeplane.features.format.FormattedNumber|977|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11418,7 +11304,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="openTutorialPageFromLink.groovy" ID="ID_586075980" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/scripts/openTutorialPageFromLink.groovy"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="openTutorialPageFromLink.groovy" ID="ID_586075980" LINK="Tutorial-o-Matic/scripts/openTutorialPageFromLink.groovy"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -11433,7 +11319,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|datetime"/>
 <attribute NAME="creationTime" VALUE="20-03-22 22:15" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:15-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="224" OBJECT="org.freeplane.features.format.FormattedNumber|224|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11453,7 +11339,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 <node TEXT="agregar/administrar contenido de panel tutorial" STYLE_REF="Organizador" FOLDED="true" ID="ID_182298875">
 <node TEXT="containers" FOLDED="true" ID="ID_1978491641">
-<node TEXT="siguiente página" ID="ID_214419229"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="siguiente página" ID="ID_214419229"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11767,7 +11653,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -11779,7 +11665,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="siguiente página v2" FOLDED="true" ID="ID_1566358905"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="siguiente página v2" FOLDED="true" ID="ID_1566358905"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -12129,7 +12015,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -12142,7 +12028,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </html></richcontent>
 <node TEXT="tratar con para reemplazar la acción del botón" FOLDED="true" ID="ID_757108645">
 <arrowlink DESTINATION="ID_227581941"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -12160,7 +12046,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 <node ID="ID_227581941" TREE_ID="ID_1746337909"/>
 </node>
-<node TEXT="siguiente página vC" FOLDED="true" ID="ID_1552064026"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="siguiente página vC" FOLDED="true" ID="ID_1552064026"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -12435,7 +12321,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -12452,7 +12338,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 <node TEXT="• Se debe analizar la existencia del control de gestión y su grado de efectividad." ID="ID_1808479239"/>
 <node TEXT="• Se debe evaluar el contenido del control de gestión que tiene la empresa en ese momento." ID="ID_1916786565"/>
 <node TEXT="• Identificar las áreas de responsabilidad, las funciones y tareas a realizar por cada responsable, relacionadas con el control de gestión." ID="ID_336242868"/>
-<node TEXT="resultado" ID="ID_1338405829"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="resultado" ID="ID_1338405829"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -12854,7 +12740,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="sacar de este ejemplo el uso de metaClass" ID="ID_1639264077"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="sacar de este ejemplo el uso de metaClass" ID="ID_1639264077"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -12870,7 +12756,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 <node TEXT="scripts apoyo" STYLE_REF="Organizador" ID="ID_1152146496">
-<node TEXT="obtener metodos de clases (methods) para revisarlos en excel" FOLDED="true" ID="ID_207666705"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="obtener metodos de clases (methods) para revisarlos en excel" FOLDED="true" ID="ID_207666705"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -12983,7 +12869,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -12994,7 +12880,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<node TEXT="result" ID="ID_801170361"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="result" ID="ID_801170361"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -14117,7 +14003,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </html></richcontent>
 </node>
 </node>
-<node TEXT="obtener properties actuales de Tabbed pane" FOLDED="true" ID="ID_594338705"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="obtener properties actuales de Tabbed pane" FOLDED="true" ID="ID_594338705"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -14143,7 +14029,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -14154,7 +14040,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<node TEXT="properties of Tabbed panel" ID="ID_1813849367"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="properties of Tabbed panel" ID="ID_1813849367"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -14508,7 +14394,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="properties of Tabbed panel" ID="ID_1710268280"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="properties of Tabbed panel" ID="ID_1710268280"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -14862,7 +14748,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="properties of Tabbed panel" ID="ID_877809214"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="properties of Tabbed panel" ID="ID_877809214"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -15218,7 +15104,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 <node TEXT="**ToM xFuture B**" STYLE_REF="milestone" ID="ID_1262563838">
 <node TEXT="init Script  that reacts to the opening of mindmaps that have tutorials and automatically shows the Tutorials dialog" STYLE_REF="pendingTask" ID="ID_418033123"/>
 </node>
-<node TEXT="getMenuHelp.groovy" ID="ID_328256964" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/scripts/getMenuHelp.groovy"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="getMenuHelp.groovy" ID="ID_328256964" LINK="Tutorial-o-Matic/scripts/getMenuHelp.groovy"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -15424,7 +15310,7 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -15437,18 +15323,18 @@ I tried also to translate some of the texts to German. Please help me correct th
 </html></richcontent>
 </node>
 </node>
-<node TEXT="zips" STYLE_REF="file_folder" FOLDED="true" ID="ID_447769735" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/">
+<node TEXT="zips" STYLE_REF="file_folder" FOLDED="true" ID="ID_447769735" LINK="Tutorial-o-Matic/zips/">
 <attribute NAME="lastModifiedTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#,##0"/>
-<node TEXT="icons" STYLE_REF="file_folder" ID="ID_1032090580" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/icons/">
+<node TEXT="icons" STYLE_REF="file_folder" ID="ID_1032090580" LINK="Tutorial-o-Matic/zips/icons/">
 <attribute NAME="lastModifiedTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#,##0"/>
 <attribute NAME="projectCode" VALUE="icons"/>
-<node TEXT="Tutorial-o-Matic" STYLE_REF="file_folder" ID="ID_1945717197" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/icons/Tutorial-o-Matic/">
+<node TEXT="Tutorial-o-Matic" STYLE_REF="file_folder" ID="ID_1945717197" LINK="Tutorial-o-Matic/zips/icons/Tutorial-o-Matic/">
 <attribute NAME="lastModifiedTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
@@ -15458,7 +15344,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 </node>
-<node TEXT="doc" STYLE_REF="file_folder" ID="ID_694658276" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="doc" STYLE_REF="file_folder" ID="ID_694658276" LINK="Tutorial-o-Matic/zips/doc/"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -15474,33 +15360,33 @@ I tried also to translate some of the texts to German. Please help me correct th
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#,##0"/>
 <attribute NAME="projectCode" VALUE="doc"/>
-<node TEXT="Tutorial-o-Matic" STYLE_REF="file_folder" ID="ID_1178743529" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/">
+<node TEXT="Tutorial-o-Matic" STYLE_REF="file_folder" ID="ID_1178743529" LINK="Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/">
 <attribute NAME="lastModifiedTime" VALUE="08-08-22 15:16" OBJECT="org.freeplane.features.format.FormattedDate|2022-08-08T15:16-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-08-22 20:50" OBJECT="org.freeplane.features.format.FormattedDate|2022-08-08T20:50-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
 <node TEXT="Tutorials" ID="ID_117135884">
-<node TEXT="Tutorial-o-Matic Intro.mm" ID="ID_404866605" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/Tutorial-o-Matic%20Intro.mm">
+<node TEXT="Tutorial-o-Matic Intro.mm" ID="ID_404866605" LINK="Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/Tutorial-o-Matic%20Intro.mm">
 <attribute NAME="lastModifiedTime" VALUE="08-08-22 20:50" OBJECT="org.freeplane.features.format.FormattedDate|2022-08-08T20:50-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-08-22 20:50" OBJECT="org.freeplane.features.format.FormattedDate|2022-08-08T20:50-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="20-03-22 10:26" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T10:26-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="15.860" OBJECT="org.freeplane.features.format.FormattedNumber|15860|#,##0"/>
 </node>
 <node TEXT="StepByStep" ID="ID_1343531412">
-<node TEXT="Tutorial-o-MaticStepByStep.mm" ID="ID_1604259491" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/Tutorial-o-MaticStepByStep.mm">
+<node TEXT="Tutorial-o-MaticStepByStep.mm" ID="ID_1604259491" LINK="Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/Tutorial-o-MaticStepByStep.mm">
 <attribute NAME="lastModifiedTime" VALUE="08-08-22 13:35" OBJECT="org.freeplane.features.format.FormattedDate|2022-08-08T13:35-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-08-22 18:17" OBJECT="org.freeplane.features.format.FormattedDate|2022-08-08T18:17-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="20-03-22 10:12" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T10:12-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="96.357" OBJECT="org.freeplane.features.format.FormattedNumber|96357|#,##0"/>
 </node>
-<node TEXT="myExistingMindMap.mm" ID="ID_437423850" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/myExistingMindMap.mm">
+<node TEXT="myExistingMindMap.mm" ID="ID_437423850" LINK="Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/myExistingMindMap.mm">
 <attribute NAME="lastModifiedTime" VALUE="08-08-22 15:15" OBJECT="org.freeplane.features.format.FormattedDate|2022-08-08T15:15-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-08-22 18:17" OBJECT="org.freeplane.features.format.FormattedDate|2022-08-08T18:17-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-04-22 19:44" OBJECT="org.freeplane.features.format.FormattedDate|2022-04-12T19:44-0400|datetime"/>
 <attribute NAME="fileSize" VALUE="27.697" OBJECT="org.freeplane.features.format.FormattedNumber|27697|#,##0"/>
 </node>
 </node>
-<node TEXT="HowToTutorial-o-Matic.mm" ID="ID_623573854" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm">
+<node TEXT="HowToTutorial-o-Matic.mm" ID="ID_623573854" LINK="Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/HowToTutorial-o-Matic.mm">
 <attribute NAME="lastModifiedTime" VALUE="08-08-22 19:01" OBJECT="org.freeplane.features.format.FormattedDate|2022-08-08T19:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-08-22 19:02" OBJECT="org.freeplane.features.format.FormattedDate|2022-08-08T19:02-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="14-03-22 16:04" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-14T16:04-0300|datetime"/>
@@ -15508,13 +15394,13 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 <node TEXT="demos" ID="ID_807605985">
-<node TEXT="ExercisingMap.mm" ID="ID_1404708437" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/ExercisingMap.mm">
+<node TEXT="ExercisingMap.mm" ID="ID_1404708437" LINK="Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/ExercisingMap.mm">
 <attribute NAME="lastModifiedTime" VALUE="21-11-21 17:38" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-21T17:38-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-08-22 19:17" OBJECT="org.freeplane.features.format.FormattedDate|2022-08-08T19:17-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="09-11-21 19:03" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-09T19:03-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="5.556" OBJECT="org.freeplane.features.format.FormattedNumber|5556|#,##0"/>
 </node>
-<node TEXT="SimpleTutorialSample.mm" ID="ID_794848990" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/SimpleTutorialSample.mm">
+<node TEXT="SimpleTutorialSample.mm" ID="ID_794848990" LINK="Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/SimpleTutorialSample.mm">
 <attribute NAME="lastModifiedTime" VALUE="08-08-22 20:42" OBJECT="org.freeplane.features.format.FormattedDate|2022-08-08T20:42-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-08-22 20:42" OBJECT="org.freeplane.features.format.FormattedDate|2022-08-08T20:42-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="10-11-21 11:03" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-10T11:03-0300|datetime"/>
@@ -15529,16 +15415,16 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 </node>
-<node TEXT="Tutorial-o-MaticCommands.mm" ID="ID_1407224112" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/Tutorial-o-MaticCommands.mm">
+<node TEXT="Tutorial-o-MaticCommands.mm" ID="ID_1407224112" LINK="Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/Tutorial-o-MaticCommands.mm">
 <attribute NAME="lastModifiedTime" VALUE="07-05-22 23:13" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-07T23:13-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-08-22 18:17" OBJECT="org.freeplane.features.format.FormattedDate|2022-08-08T18:17-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="20-03-22 10:16" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T10:16-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="43.550" OBJECT="org.freeplane.features.format.FormattedNumber|43550|#,##0"/>
 </node>
-<node TEXT="menuHelp.mm" ID="ID_333787591" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/menuHelp.mm"/>
+<node TEXT="menuHelp.mm" ID="ID_333787591" LINK="Tutorial-o-Matic/zips/doc/Tutorial-o-Matic/menuHelp.mm"/>
 </node>
 </node>
-<node TEXT="templates" STYLE_REF="file_folder" FOLDED="true" ID="ID_669661056" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/templates/"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="templates" STYLE_REF="file_folder" FOLDED="true" ID="ID_669661056" LINK="Tutorial-o-Matic/zips/templates/"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -15554,12 +15440,12 @@ I tried also to translate some of the texts to German. Please help me correct th
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#,##0"/>
 <attribute NAME="projectCode" VALUE="templates"/>
-<node TEXT="Tutorial-o-Matic" STYLE_REF="file_folder" ID="ID_707320745" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/templates/Tutorial-o-Matic/">
+<node TEXT="Tutorial-o-Matic" STYLE_REF="file_folder" ID="ID_707320745" LINK="Tutorial-o-Matic/zips/templates/Tutorial-o-Matic/">
 <attribute NAME="lastModifiedTime" VALUE="08-03-22 22:01" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-08T22:01-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#,##0"/>
-<node TEXT="tutorial_styles_template.mm" ID="ID_650963904" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/zips/templates/Tutorial-o-Matic/tutorial_styles_template.mm">
+<node TEXT="tutorial_styles_template.mm" ID="ID_650963904" LINK="Tutorial-o-Matic/zips/templates/Tutorial-o-Matic/tutorial_styles_template.mm">
 <attribute NAME="lastModifiedTime" VALUE="18-03-22 12:05" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-18T12:05-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="08-03-22 21:55" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-08T21:55-0300|datetime"/>
@@ -15568,43 +15454,38 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 </node>
-<node TEXT="images" STYLE_REF="file_folder" FOLDED="true" ID="ID_103652210" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/images/">
+<node TEXT="images" STYLE_REF="file_folder" FOLDED="true" ID="ID_103652210" LINK="Tutorial-o-Matic/images/">
 <attribute NAME="lastModifiedTime" VALUE="29-11-21 16:41" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-29T16:41-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#,##0"/>
 <attribute NAME="projectCode" VALUE="images"/>
-<node TEXT="tutorialOMatic.svg" ID="ID_1986265564" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/images/tutorialOMatic.svg">
+<node TEXT="tutorialOMatic.svg" ID="ID_1986265564" LINK="Tutorial-o-Matic/images/tutorialOMatic.svg">
 <attribute NAME="lastModifiedTime" VALUE="29-11-21 16:28" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-29T16:28-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="29-11-21 13:28" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-29T13:28-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="2.923" OBJECT="org.freeplane.features.format.FormattedNumber|2923|#,##0"/>
 </node>
-<node TEXT="tutorialOMatic-icon.svg" ID="ID_1901205001" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/images/tutorialOMatic-icon.svg">
+<node TEXT="tutorialOMatic-icon.svg" ID="ID_1901205001" LINK="Tutorial-o-Matic/images/tutorialOMatic-icon.svg">
 <attribute NAME="lastModifiedTime" VALUE="24-04-21 11:49" OBJECT="org.freeplane.features.format.FormattedDate|2021-04-24T11:49-0400|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="29-11-21 15:43" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-29T15:43-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="2.729" OBJECT="org.freeplane.features.format.FormattedNumber|2729|#,##0"/>
 </node>
-<node TEXT="tutorialOMatic-screenshot-1.png" ID="ID_791135029" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/images/tutorialOMatic-screenshot-1.png">
+<node TEXT="tutorialOMatic-screenshot-1.png" ID="ID_791135029" LINK="Tutorial-o-Matic/images/tutorialOMatic-screenshot-1.png">
 <attribute NAME="lastModifiedTime" VALUE="29-11-21 16:41" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-29T16:41-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="29-11-21 16:41" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-29T16:41-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="63.603" OBJECT="org.freeplane.features.format.FormattedNumber|63603|#,##0"/>
 </node>
 </node>
-<node TEXT="translations" FOLDED="true" ID="ID_1283195457" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/translations/">
-<attribute NAME="lastModifiedTime" VALUE="02-03-22 19:40" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-02T19:40-0300|dd-MM-yy HH:mm"/>
-<attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
-<attribute NAME="creationTime" VALUE="02-03-22 19:40" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-02T19:40-0300|dd-MM-yy HH:mm"/>
-<attribute NAME="fileSize" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#,##0"/>
-<attribute NAME="projectCode" VALUE="translations"/>
-<node TEXT="en.properties" ID="ID_522735173" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/translations/en.properties">
+<node TEXT="translations" ID="ID_301761401" LINK="Tutorial-o-Matic/translations/">
+<node TEXT="en.properties" ID="ID_522735173" LINK="Tutorial-o-Matic/translations/en.properties">
 <attribute NAME="lastModifiedTime" VALUE="20-03-22 22:18" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:18-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="02-03-22 19:40" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-02T19:40-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="794" OBJECT="org.freeplane.features.format.FormattedNumber|794|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -15634,7 +15515,7 @@ I tried also to translate some of the texts to German. Please help me correct th
   </body>
 </html></richcontent>
 </node>
-<node TEXT="es.properties" ID="ID_768508110" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/translations/es.properties"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="es.properties" ID="ID_768508110" LINK="Tutorial-o-Matic/translations/es.properties"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -15651,14 +15532,14 @@ I tried also to translate some of the texts to German. Please help me correct th
 <attribute NAME="fileSize" VALUE="751" OBJECT="org.freeplane.features.format.FormattedNumber|751|#,##0"/>
 </node>
 </node>
-<node TEXT="Tutorial-o-Matic.mm" ID="ID_1949890509" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/Tutorial-o-Matic.mm">
+<node TEXT="Tutorial-o-Matic.mm" ID="ID_1949890509" LINK="Tutorial-o-Matic/Tutorial-o-Matic.mm">
 <attribute NAME="lastModifiedTime" VALUE="20-03-22 22:33" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:33-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="21-03-22 12:26" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:26-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="02-03-22 19:47" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-02T19:47-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="42.757" OBJECT="org.freeplane.features.format.FormattedNumber|42757|#,##0"/>
 <attribute NAME="projectCode" VALUE="ToM addon"/>
 </node>
-<node TEXT="generados automáticamente" STYLE_REF="Organizador" FOLDED="true" ID="ID_293036189"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="generados automáticamente" STYLE_REF="Organizador" ID="ID_293036189"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -15672,56 +15553,57 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<node TEXT="Tutorial-o-Matic-v0.0.7.addon.mm" STYLE_REF="freshNew" ID="ID_1679699221" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/Tutorial-o-Matic-v0.0.7.addon.mm"/>
-<node TEXT="Tutorial-o-Matic-v0.0.6.addon.mm" ID="ID_1565520683" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/Tutorial-o-Matic-v0.0.6.addon.mm">
+<node TEXT="Tutorial-o-Matic-v0.0.8.addon.mm" ID="ID_301954928" LINK="Tutorial-o-Matic/Tutorial-o-Matic-v0.0.8.addon.mm"/>
+<node TEXT="Tutorial-o-Matic-v0.0.7.addon.mm" STYLE_REF="freshNew" ID="ID_1679699221" LINK="Tutorial-o-Matic/Tutorial-o-Matic-v0.0.7.addon.mm"/>
+<node TEXT="Tutorial-o-Matic-v0.0.6.addon.mm" ID="ID_1565520683" LINK="Tutorial-o-Matic/Tutorial-o-Matic-v0.0.6.addon.mm">
 <attribute NAME="lastModifiedTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="02-03-22 21:32" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-02T21:32-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="1.075.347" OBJECT="org.freeplane.features.format.FormattedNumber|1075347|#,##0"/>
 </node>
-<node TEXT="Tutorial-o-Matic-v0.0.5.addon.mm" ID="ID_944467493" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/Tutorial-o-Matic-v0.0.5.addon.mm">
+<node TEXT="Tutorial-o-Matic-v0.0.5.addon.mm" ID="ID_944467493" LINK="Tutorial-o-Matic/Tutorial-o-Matic-v0.0.5.addon.mm">
 <attribute NAME="lastModifiedTime" VALUE="02-03-22 19:05" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-02T19:05-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-03-22 09:50" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-08T09:50-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="27-02-22 18:09" OBJECT="org.freeplane.features.format.FormattedDate|2022-02-27T18:09-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="972.715" OBJECT="org.freeplane.features.format.FormattedNumber|972715|#,##0"/>
 </node>
-<node TEXT="Tutorial-o-Matic-v0.0.4.addon.mm" ID="ID_819625175" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/Tutorial-o-Matic-v0.0.4.addon.mm">
+<node TEXT="Tutorial-o-Matic-v0.0.4.addon.mm" ID="ID_819625175" LINK="Tutorial-o-Matic/Tutorial-o-Matic-v0.0.4.addon.mm">
 <attribute NAME="lastModifiedTime" VALUE="27-02-22 18:06" OBJECT="org.freeplane.features.format.FormattedDate|2022-02-27T18:06-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="01-03-22 08:39" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-01T08:39-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="26-11-21 12:57" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-26T12:57-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="978.860" OBJECT="org.freeplane.features.format.FormattedNumber|978860|#,##0"/>
 </node>
-<node TEXT="Tutorial-o-Matic-v0.0.3.addon.mm" ID="ID_1586148750" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/Tutorial-o-Matic-v0.0.3.addon.mm">
+<node TEXT="Tutorial-o-Matic-v0.0.3.addon.mm" ID="ID_1586148750" LINK="Tutorial-o-Matic/Tutorial-o-Matic-v0.0.3.addon.mm">
 <attribute NAME="lastModifiedTime" VALUE="26-11-21 12:54" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-26T12:54-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="23-12-21 11:20" OBJECT="org.freeplane.features.format.FormattedDate|2021-12-23T11:20-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="21-10-21 22:22" OBJECT="org.freeplane.features.format.FormattedDate|2021-10-21T22:22-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="847.639" OBJECT="org.freeplane.features.format.FormattedNumber|847639|#,##0"/>
 </node>
-<node TEXT="Tutorial-o-Matic-v0.0.2.addon.mm" ID="ID_1189824084" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/Tutorial-o-Matic-v0.0.2.addon.mm">
+<node TEXT="Tutorial-o-Matic-v0.0.2.addon.mm" ID="ID_1189824084" LINK="Tutorial-o-Matic/Tutorial-o-Matic-v0.0.2.addon.mm">
 <attribute NAME="lastModifiedTime" VALUE="03-10-21 13:22" OBJECT="org.freeplane.features.format.FormattedDate|2021-10-03T13:22-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="17-10-21 19:45" OBJECT="org.freeplane.features.format.FormattedDate|2021-10-17T19:45-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="03-10-21 12:53" OBJECT="org.freeplane.features.format.FormattedDate|2021-10-03T12:53-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="717.248" OBJECT="org.freeplane.features.format.FormattedNumber|717248|#,##0"/>
 </node>
-<node TEXT="Tutorial-o-Matic-v0.0.1.addon.mm" ID="ID_1151712019" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/Tutorial-o-Matic-v0.0.1.addon.mm">
+<node TEXT="Tutorial-o-Matic-v0.0.1.addon.mm" ID="ID_1151712019" LINK="Tutorial-o-Matic/Tutorial-o-Matic-v0.0.1.addon.mm">
 <attribute NAME="lastModifiedTime" VALUE="02-10-21 19:27" OBJECT="org.freeplane.features.format.FormattedDate|2021-10-02T19:27-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="17-10-21 19:45" OBJECT="org.freeplane.features.format.FormattedDate|2021-10-17T19:45-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 16:11" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T16:11-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="715.882" OBJECT="org.freeplane.features.format.FormattedNumber|715882|#,##0"/>
 </node>
-<node TEXT="Tutorial-o-Matic.mm.bak" ID="ID_1618368094" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/Tutorial-o-Matic.mm.bak">
+<node TEXT="Tutorial-o-Matic.mm.bak" ID="ID_1618368094" LINK="Tutorial-o-Matic/Tutorial-o-Matic.mm.bak">
 <attribute NAME="lastModifiedTime" VALUE="20-03-22 22:33" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:33-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:33" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:33-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 16:10" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T16:10-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="42.745" OBJECT="org.freeplane.features.format.FormattedNumber|42745|#,##0"/>
 </node>
-<node TEXT="history.md" ID="ID_1658704033" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/history.md">
+<node TEXT="history.md" ID="ID_1658704033" LINK="Tutorial-o-Matic/history.md">
 <attribute NAME="lastModifiedTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="08-03-22 22:20" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-08T22:20-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="2.044" OBJECT="org.freeplane.features.format.FormattedNumber|2044|#,##0"/>
 </node>
-<node TEXT="version.properties" ID="ID_709991496" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/version.properties">
+<node TEXT="version.properties" ID="ID_709991496" LINK="Tutorial-o-Matic/version.properties">
 <attribute NAME="lastModifiedTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:34-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="02-03-22 19:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-02T19:34-0300|dd-MM-yy HH:mm"/>
@@ -15729,13 +15611,13 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 <node TEXT="versiones anteriores" STYLE_REF="Organizador" ID="ID_797397458"/>
 </node>
-<node TEXT="build.gradle" FOLDED="true" ID="ID_718391436" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/build.gradle">
+<node TEXT="build.gradle" FOLDED="true" ID="ID_718391436" LINK="Tutorial-o-Matic/build.gradle">
 <attribute NAME="lastModifiedTime" VALUE="02-03-22 19:00" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-02T19:00-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="20-03-22 22:33" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T22:33-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:13" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:13-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="2.750" OBJECT="org.freeplane.features.format.FormattedNumber|2750|#,##0"/>
 <attribute NAME="projectCode" VALUE="build.gradle"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -15978,7 +15860,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 <node TEXT="using build.gradle for java 17" STYLE_REF="completedTask" ID="ID_550611630"/>
 <node TEXT="update it to FP 1.10.4" STYLE_REF="completedTask" ID="ID_1225771658"/>
 </node>
-<node TEXT="respaldos antes de hacer los cambios" FOLDED="true" ID="ID_1102578888"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="respaldos antes de hacer los cambios" FOLDED="true" ID="ID_1102578888"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -15989,8 +15871,8 @@ I tried also to translate some of the texts to German. Please help me correct th
     </p>
   </body>
 </html></richcontent>
-<node TEXT="build - copia (2).gradle" ID="ID_1068918139" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/build%20-%20copia%20(2).gradle"/>
-<node TEXT="build - copia.gradle" ID="ID_1240846240" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/build%20-%20copia.gradle"/>
+<node TEXT="build - copia (2).gradle" ID="ID_1068918139" LINK="Tutorial-o-Matic/build%20-%20copia%20(2).gradle"/>
+<node TEXT="build - copia.gradle" ID="ID_1240846240" LINK="Tutorial-o-Matic/build%20-%20copia.gradle"/>
 </node>
 <node TEXT="**ToM xFuture D**" STYLE_REF="milestone" ID="ID_1814265833">
 <node TEXT="Make that Gradle access libraries from Freeplane or from Maven when building the add-on" STYLE_REF="pendingTask" ID="ID_1363993016">
@@ -16000,7 +15882,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 </node>
-<node TEXT=".gitignore" ID="ID_203633501" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic/.gitignore"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT=".gitignore" ID="ID_203633501" LINK="Tutorial-o-Matic/.gitignore"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -16016,7 +15898,7 @@ I tried also to translate some of the texts to German. Please help me correct th
 <attribute NAME="creationTime" VALUE="26-11-21 12:46" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-26T12:46-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="428" OBJECT="org.freeplane.features.format.FormattedNumber|428|#,##0"/>
 <attribute NAME="projectCode" VALUE="gitignore"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -16095,15 +15977,372 @@ I tried also to translate some of the texts to German. Please help me correct th
 </html></richcontent>
 </node>
 </node>
-<node TEXT="EditingTutorialsWithMDH" ID="ID_1175655998" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/">
-<attribute NAME="lastModifiedTime" VALUE="14-05-22 13:48" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-14T13:48-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="lastAccessTime" VALUE="23-07-22 08:31" OBJECT="org.freeplane.features.format.FormattedDate|2022-07-23T08:31-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="creationTime" VALUE="01-04-22 08:54" OBJECT="org.freeplane.features.format.FormattedDate|2022-04-01T08:54-0300|datetime"/>
+<node TEXT="resources" STYLE_REF="file_folder" ID="ID_484815634" LINK="resources/">
+<attribute NAME="lastModifiedTime" VALUE="18-03-22 23:50" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-18T23:50-0300|dd-MM-yy HH:mm"/>
+<attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
+<attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
+<attribute NAME="fileSize" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#,##0"/>
+<attribute NAME="projectCode" VALUE="resources"/>
+<node TEXT="arreglar nombres de iconos" ID="ID_1948232735"><richcontent TYPE="NOTE">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      //había algunos con minúsculas entremedio que hacían que no funcionara
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //def nodo=node
+    </p>
+    <p>
+      def nodos=c.selecteds
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      nodos.each{nodo -&gt;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def t = nodo.text
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def newT = &quot;emoji-${t.takeAfter('-').takeBefore('.').toUpperCase()}.svg&quot;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;nodo.text = newT
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html></richcontent>
+<richcontent TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="nodo con fórmula para ver iconos" ID="ID_1060443792">
+<icon BUILTIN="emoji-1F989"/>
+<richcontent TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =node.icons.icons
+    </p>
+  </body>
+</html></richcontent>
+<richcontent TYPE="NOTE">
+<text>=node.icons.icons</text></richcontent>
+</node>
+<node TEXT="modifiers.png" ID="ID_1837719712" LINK="resources/modifiers.png">
+<attribute NAME="lastModifiedTime" VALUE="18-03-22 23:50" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-18T23:50-0300|datetime"/>
+<attribute NAME="lastAccessTime" VALUE="20-03-22 11:11" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T11:11-0300|datetime"/>
+<attribute NAME="creationTime" VALUE="18-03-22 23:50" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-18T23:50-0300|datetime"/>
+<attribute NAME="fileSize" VALUE="7.775" OBJECT="org.freeplane.features.format.FormattedNumber|7775|#,##0"/>
+</node>
+<node TEXT="Tutorial-o-Matic" STYLE_REF="file_folder" FOLDED="true" ID="ID_1225274132" LINK="resources/Tutorial-o-Matic/">
+<node TEXT="ToM Modifiers 001.png" ID="ID_547268364" LINK="resources/Tutorial-o-Matic/ToM%20Modifiers%20001.png"><richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="ToM Modifiers 002.png" ID="ID_1111353649" LINK="resources/Tutorial-o-Matic/ToM%20Modifiers%20002.png"><richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="ToM Modifiers 003.png" ID="ID_1146605001" LINK="resources/Tutorial-o-Matic/ToM%20Modifiers%20003.png"><richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="ToM Modifiers 004.png" ID="ID_1456239498" LINK="resources/Tutorial-o-Matic/ToM%20Modifiers%20004.png"><richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="ToM Modifiers 005.png" ID="ID_1821454867" LINK="resources/Tutorial-o-Matic/ToM%20Modifiers%20005.png"><richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="ToM Modifiers 006.png" ID="ID_514822748" LINK="resources/Tutorial-o-Matic/ToM%20Modifiers%20006.png"><richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="ToM Modifiers 007.png" ID="ID_1055927205" LINK="resources/Tutorial-o-Matic/ToM%20Modifiers%20007.png"><richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="ToM Modifiers 008.png" ID="ID_689785129" LINK="resources/Tutorial-o-Matic/ToM%20Modifiers%20008.png"><richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="ToM Modifiers 009.png" ID="ID_1499706150" LINK="resources/Tutorial-o-Matic/ToM%20Modifiers%20009.png"><richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="ToM Modifiers 010.png" ID="ID_1310770998" LINK="resources/Tutorial-o-Matic/ToM%20Modifiers%20010.png"><richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="ToM Modifiers 011.png" ID="ID_369397129" LINK="resources/Tutorial-o-Matic/ToM%20Modifiers%20011.png"><richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="ToM Modifiers 012.png" ID="ID_509914635" LINK="resources/Tutorial-o-Matic/ToM%20Modifiers%20012.png"><richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="ToM Modifiers 013.png" ID="ID_1003431212" LINK="resources/Tutorial-o-Matic/ToM%20Modifiers%20013.png"><richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="ToM Modifiers 014.png" ID="ID_692628451" LINK="resources/Tutorial-o-Matic/ToM%20Modifiers%20014.png"><richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node TEXT="ToM_getMenuHelp.gif" POSITION="bottom_or_right" ID="ID_1612034326" LINK="resources/ToM_getMenuHelp.gif"/>
+</node>
+<node TEXT="ignoredByGitHub" STYLE_REF="file_folder" FOLDED="true" ID="ID_653295432" LINK="ignoredByGitHub/">
+<attribute NAME="lastModifiedTime" VALUE="21-03-22 12:29" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:29-0300|dd-MM-yy HH:mm"/>
+<attribute NAME="lastAccessTime" VALUE="21-03-22 12:29" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:29-0300|dd-MM-yy HH:mm"/>
+<attribute NAME="creationTime" VALUE="10-11-21 10:39" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-10T10:39-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
-<attribute NAME="projectCode" VALUE="Add-on tutorials (w/MDH)"/>
-<node TEXT="**ToM v0.0.8**" STYLE_REF="milestone" ID="ID_1309095130">
-<node TEXT="Help script that calls &quot;Save as MDH clean mindmap&quot; (MDH add-on) to automatize updating process" STYLE_REF="pendingTask" FOLDED="true" ID="ID_240259315">
-<node TEXT="Save as MDH clean mindmap" ID="ID_24648502" LINK="menuitem:_addons.markdownHelper.saveAsMDHClean_on_single_node"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<attribute NAME="projectCode" VALUE="ignored.By.GitHub"/>
+<node TEXT="Tutorial builder WIP.mm" FOLDED="true" ID="ID_241856912" LINK="ignoredByGitHub/Tutorial%20builder%20WIP.mm">
+<attribute NAME="lastModifiedTime" VALUE="12-09-21 15:36" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:36-0300|datetime"/>
+<attribute NAME="lastAccessTime" VALUE="22-10-21 10:24" OBJECT="org.freeplane.features.format.FormattedDate|2021-10-22T10:24-0300|dd-MM-yy HH:mm"/>
+<attribute NAME="creationTime" VALUE="12-09-21 15:36" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:36-0300|datetime"/>
+<attribute NAME="fileSize" VALUE="32.301" OBJECT="org.freeplane.features.format.FormattedNumber|32301|#,##0"/>
+<node TEXT="éste fue la primera versión de lo que sería el AddOn" ID="ID_369211444"/>
+</node>
+<node TEXT="Tutorial Sample.mm" ID="ID_640803167" LINK="ignoredByGitHub/Tutorial%20Sample.mm">
+<attribute NAME="lastModifiedTime" VALUE="24-11-21 14:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-24T14:12-0300|dd-MM-yy HH:mm"/>
+<attribute NAME="lastAccessTime" VALUE="14-01-22 15:25" OBJECT="org.freeplane.features.format.FormattedDate|2022-01-14T15:25-0300|dd-MM-yy HH:mm"/>
+<attribute NAME="creationTime" VALUE="29-09-21 09:00" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-29T09:00-0300|datetime"/>
+<attribute NAME="fileSize" VALUE="71.332" OBJECT="org.freeplane.features.format.FormattedNumber|71332|#,##0"/>
+</node>
+<node TEXT="executeTutorial.groovy" ID="ID_1310867641" LINK="ignoredByGitHub/executeTutorial.groovy">
+<attribute NAME="lastModifiedTime" VALUE="08-11-21 09:21" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-08T09:21-0300|dd-MM-yy HH:mm"/>
+<attribute NAME="lastAccessTime" VALUE="14-01-22 15:24" OBJECT="org.freeplane.features.format.FormattedDate|2022-01-14T15:24-0300|dd-MM-yy HH:mm"/>
+<attribute NAME="creationTime" VALUE="02-10-21 14:05" OBJECT="org.freeplane.features.format.FormattedDate|2021-10-02T14:05-0300|datetime"/>
+<attribute NAME="fileSize" VALUE="693" OBJECT="org.freeplane.features.format.FormattedNumber|693|#,##0"/>
+<richcontent TYPE="NOTE">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      import edofro.tutorialomatic.ToM_ui as tomui
+    </p>
+    <p>
+      import edofro.tutorialomatic.ToM&nbsp;&nbsp;&nbsp;&nbsp;as tom
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //acceder mapa
+    </p>
+    <p>
+      def mapa = node.map
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //saca listado de tutotiales de mapa
+    </p>
+    <p>
+      def nodosTutoriales = mapa.root.find{it.style.name == tom.styles.tutorial}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      // se elige tutorial
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;//TODO: hacer que usuario elija tutorial a realizar
+    </p>
+    <p>
+      def nTutorial = nodosTutoriales?nodosTutoriales.get(0):null
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      // listado de componentes de tutorial
+    </p>
+    <p>
+      def tutNodes = tom.getTutNodes(nTutorial)
+    </p>
+    <p>
+      if(!tutNodes) ui.informationMessage( 'no tutorial components(nodes) found')
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      // ---- crear / abrir panel -----
+    </p>
+    <p>
+      def myPanel = tomui.getContentPaneFromMyTab(tom.tabName, true)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      tom.fillContentPane(myPanel, tutNodes)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="testing Link to Tutorial page.mm" ID="ID_1668547174" LINK="ignoredByGitHub/testing%20Link%20to%20Tutorial%20page.mm">
+<attribute NAME="lastModifiedTime" VALUE="20-03-22 23:21" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T23:21-0300|datetime"/>
+<attribute NAME="lastAccessTime" VALUE="21-03-22 12:26" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:26-0300|datetime"/>
+<attribute NAME="creationTime" VALUE="20-03-22 10:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T10:34-0300|datetime"/>
+<attribute NAME="fileSize" VALUE="18.776" OBJECT="org.freeplane.features.format.FormattedNumber|18776|#,##0"/>
+</node>
+<node TEXT="README-Tutorial-o-Matic-MDH.mm" ID="ID_1163940665" LINK="ignoredByGitHub/README-Tutorial-o-Matic-MDH.mm">
+<attribute NAME="lastModifiedTime" VALUE="14-01-22 15:49" OBJECT="org.freeplane.features.format.FormattedDate|2022-01-14T15:49-0300|dd-MM-yy HH:mm"/>
+<attribute NAME="lastAccessTime" VALUE="26-02-22 17:36" OBJECT="org.freeplane.features.format.FormattedDate|2022-02-26T17:36-0300|dd-MM-yy HH:mm"/>
+<attribute NAME="creationTime" VALUE="02-10-21 19:07" OBJECT="org.freeplane.features.format.FormattedDate|2021-10-02T19:07-0300|datetime"/>
+<attribute NAME="fileSize" VALUE="32.790" OBJECT="org.freeplane.features.format.FormattedNumber|32790|#,##0"/>
+</node>
+</node>
+<node TEXT="EditingTutorialsWithMDH" ID="ID_548236835" LINK="EditingTutorialsWithMDH/">
+<node TEXT="**ToM v0.0.8**" STYLE_REF="milestone" FOLDED="true" POSITION="bottom_or_right" ID="ID_1309095130">
+<node TEXT="Help script that calls &quot;Save as MDH clean mindmap&quot; (MDH add-on) to automatize updating process" STYLE_REF="pendingTask" ID="ID_240259315">
+<node TEXT="Save as MDH clean mindmap" ID="ID_24648502" LINK="menuitem:_addons.markdownHelper.saveAsMDHClean_on_single_node"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -16126,13 +16365,13 @@ I tried also to translate some of the texts to German. Please help me correct th
 </node>
 </node>
 </node>
-<node TEXT="ToM Demos" STYLE_REF="Organizador" ID="ID_1052974246"/>
-<node TEXT="ToM Tutorial" STYLE_REF="Organizador" FOLDED="true" ID="ID_1748311809" VGAP_QUANTITY="2 px">
+<node TEXT="ToM Demos" STYLE_REF="Organizador" POSITION="bottom_or_right" ID="ID_1052974246"/>
+<node TEXT="ToM Tutorial" STYLE_REF="Organizador" FOLDED="true" POSITION="bottom_or_right" ID="ID_1748311809" VGAP_QUANTITY="2 px">
 <node TEXT="Tutorial-o-MaticStepByStepActions.mm" ID="ID_114182378">
 <attribute NAME="projectCode" VALUE="StepByStepActions Tutorial"/>
 <node TEXT="**ToM v0.0.8**" STYLE_REF="milestone" ID="ID_1193572499">
 <node TEXT="Create &quot;Tutorial-o-MaticStepByStepActions.mm&quot; mindmap where all ToM actions styles are explained" STYLE_REF="pendingTask" ID="ID_961780522">
-<node TEXT="Tutoriales acciones" ID="ID_1341433018"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Tutoriales acciones" ID="ID_1341433018"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -16146,94 +16385,84 @@ I tried also to translate some of the texts to German. Please help me correct th
 <attribute NAME="projectCode" VALUE="Tutoriale.acciones"/>
 <node TEXT="a" ID="ID_1451309530">
 <node TEXT="ToM_showMenu" FOLDED="true" ID="ID_630750100">
-<node TEXT="feature &quot;show menu&quot;" STYLE_REF="markdownNote" ID="ID_1810486551"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can make that **ToM** shows **where in the menu** the user can find a specific command.
+<node TEXT="feature &quot;show menu&quot;" STYLE_REF="markdownNote" ID="ID_1810486551"><richcontent TYPE="NOTE">
+<text>You can make that **ToM** shows **where in the menu** the user can find a specific command.
 
-</text>
-</richcontent>
+</text></richcontent>
 </node>
 </node>
 </node>
 <node TEXT="b" ID="ID_803897281">
 <node TEXT="ToM_menuAction" FOLDED="true" ID="ID_999505444">
-<node TEXT="execute actions" STYLE_REF="markdownNote" ID="ID_50807142"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add to your tutorial buttons that **apply menu actions**.</text>
-</richcontent>
+<node TEXT="execute actions" STYLE_REF="markdownNote" ID="ID_50807142"><richcontent TYPE="NOTE">
+<text>You can add to your tutorial buttons that **apply menu actions**.</text></richcontent>
 </node>
 </node>
 </node>
 <node TEXT="e" ID="ID_426065436">
 <node TEXT="ToM_goto" FOLDED="true" ID="ID_1106564468">
-<node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_569933291"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add  buttons to **jump to other tutorial pages** in the same mindmap (and jump back).
+<node TEXT="GOTO example" STYLE_REF="markdownNote" ID="ID_569933291"><richcontent TYPE="NOTE">
+<text>You can add  buttons to **jump to other tutorial pages** in the same mindmap (and jump back).
 
-</text>
-</richcontent>
+</text></richcontent>
 </node>
 </node>
 <node TEXT="ToM_openTutPage" FOLDED="true" ID="ID_1641638859">
-<node TEXT="open tutorial pages" STYLE_REF="markdownNote" ID="ID_1242121941"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add buttons to **open other tutorials** or **tutorial&apos;s pages** from the same or another mindmap.
+<node TEXT="open tutorial pages" STYLE_REF="markdownNote" ID="ID_1242121941"><richcontent TYPE="NOTE">
+<text>You can add buttons to **open other tutorials** or **tutorial&apos;s pages** from the same or another mindmap.
 
-</text>
-</richcontent>
+</text></richcontent>
 </node>
 </node>
 </node>
 <node TEXT="f" ID="ID_222975088">
 <node TEXT="ToM_showNode" FOLDED="true" ID="ID_973339075">
-<node TEXT="show nodes" STYLE_REF="markdownNote" ID="ID_933716278"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add a button to **show nodes** in the same or in another MindMap.
+<node TEXT="show nodes" STYLE_REF="markdownNote" ID="ID_933716278"><richcontent TYPE="NOTE">
+<text>You can add a button to **show nodes** in the same or in another MindMap.
 
 It may be any node. It doesn&apos;t need to be in a tutorial.
 
-</text>
-</richcontent>
+</text></richcontent>
 </node>
 </node>
 </node>
 <node TEXT="c" ID="ID_154190342">
 <node TEXT="ToM_openMap" FOLDED="true" ID="ID_39076661">
-<node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_720478207"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add a button to **open other mindmaps** needed for the tutorial.
-</text>
-</richcontent>
+<node TEXT="opening maps" STYLE_REF="markdownNote" ID="ID_720478207"><richcontent TYPE="NOTE">
+<text>You can add a button to **open other mindmaps** needed for the tutorial.
+</text></richcontent>
 </node>
 </node>
 <node TEXT="ToM_copy" FOLDED="true" ID="ID_1585763006">
-<node TEXT="inserting nodes" STYLE_REF="markdownNote" ID="ID_1407539372"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add actions to **insert example nodes** or specific node structures **to the user&apos;s mindmap**.&#xd;
+<node TEXT="inserting nodes" STYLE_REF="markdownNote" ID="ID_1407539372"><richcontent TYPE="NOTE">
+<text>You can add actions to **insert example nodes** or specific node structures **to the user&apos;s mindmap**.&#xd;
 &#xd;
-</text>
-</richcontent>
+</text></richcontent>
 </node>
 </node>
 <node TEXT="ToM_select" FOLDED="true" ID="ID_1218700395">
-<node TEXT="selecting nodes" STYLE_REF="markdownNote" ID="ID_1699563716"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>After inserting an example branch, you can have a **button that selects the nodes** that you want so the user can easily go further with the tutorial.&#xd;
+<node TEXT="selecting nodes" STYLE_REF="markdownNote" ID="ID_1699563716"><richcontent TYPE="NOTE">
+<text>After inserting an example branch, you can have a **button that selects the nodes** that you want so the user can easily go further with the tutorial.&#xd;
 &#xd;
-</text>
-</richcontent>
+</text></richcontent>
 </node>
 </node>
 </node>
 <node TEXT="d" ID="ID_626093870">
 <node TEXT="ToM_groovy" FOLDED="true" ID="ID_1018557597">
-<node TEXT="execute groovy" STYLE_REF="markdownNote" ID="ID_1707777349"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add to your tutorial panels that show blocks of **groovy code ** 
+<node TEXT="execute groovy" STYLE_REF="markdownNote" ID="ID_1707777349"><richcontent TYPE="NOTE">
+<text>You can add to your tutorial panels that show blocks of **groovy code ** 
 and / or 
-**buttons** that apply those **groovy scripts** to the selected nodes.</text>
-</richcontent>
+**buttons** that apply those **groovy scripts** to the selected nodes.</text></richcontent>
 </node>
 </node>
 </node>
 <node TEXT="g" ID="ID_1036982728">
 <node TEXT="ToM_openTutMap" FOLDED="true" ID="ID_968944606">
-<node TEXT="inspecting" STYLE_REF="markdownNote" ID="ID_785047555"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>You can add an &quot;_**inspect**_&quot; button to the tutorial that directly goes to the map that 
+<node TEXT="inspecting" STYLE_REF="markdownNote" ID="ID_785047555"><richcontent TYPE="NOTE">
+<text>You can add an &quot;_**inspect**_&quot; button to the tutorial that directly goes to the map that 
 contains the current tutorial information and selects the node where the current page starts. 
-</text>
-</richcontent>
+</text></richcontent>
 </node>
 </node>
 </node>
@@ -16243,7 +16472,7 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="Tutorial-o-Matic Intro.mm" ID="ID_257634878">
 <attribute NAME="projectCode" VALUE="Intro"/>
-<node TEXT="Tutorial-o-Matic Intro.mm" ID="ID_1756731030" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/Tutorial-o-Matic%20Intro.mm">
+<node TEXT="Tutorial-o-Matic Intro.mm" ID="ID_1756731030" LINK="EditingTutorialsWithMDH/Tutorial-o-Matic%20Intro.mm">
 <attribute NAME="lastModifiedTime" VALUE="07-05-22 23:14" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-07T23:14-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-05-22 00:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-08T00:34-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="01-04-22 08:56" OBJECT="org.freeplane.features.format.FormattedDate|2022-04-01T08:56-0300|datetime"/>
@@ -16258,7 +16487,7 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="Tutorial-o-MaticStepByStep.mm" ID="ID_891279613">
 <attribute NAME="projectCode" VALUE="StepByStep Tutorial"/>
-<node TEXT="Tutorial-o-MaticStepByStep.mm" ID="ID_575180318" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/Tutorial-o-MaticStepByStep.mm">
+<node TEXT="Tutorial-o-MaticStepByStep.mm" ID="ID_575180318" LINK="EditingTutorialsWithMDH/Tutorial-o-MaticStepByStep.mm">
 <attribute NAME="lastModifiedTime" VALUE="14-05-22 13:54" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-14T13:54-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="17-05-22 10:10" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-17T10:10-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="01-04-22 08:56" OBJECT="org.freeplane.features.format.FormattedDate|2022-04-01T08:56-0300|datetime"/>
@@ -16276,7 +16505,7 @@ contains the current tutorial information and selects the node where the current
 </node>
 </node>
 <node TEXT="Add &quot;Crayon&quot; functionality to add-on&apos;s tutorial" STYLE_REF="completedTask" ID="ID_32274263">
-<arrowlink DESTINATION="ID_190121028" MIDDLE_LABEL="¿dónde?" STARTINCLINATION="487.14893 pt;0 pt;" ENDINCLINATION="562.21275 pt;0 pt;" STARTARROW="DEFAULT" ENDARROW="DEFAULT"/>
+<arrowlink DESTINATION="ID_190121028" MIDDLE_LABEL="¿dónde?" STARTINCLINATION="487.49999 pt;0 pt;" ENDINCLINATION="562.49998 pt;0 pt;" STARTARROW="DEFAULT" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="Update &quot;Introduction&quot; tutorial in StepByStep map" STYLE_REF="completedTask" ID="ID_1370002038"/>
 </node>
@@ -16290,12 +16519,12 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="HowToTutorial-o-Matic.mm" ID="ID_1736350384">
 <attribute NAME="projectCode" VALUE="HowTo"/>
-<node TEXT="HowToTutorial-o-Matic.mm" ID="ID_198625316" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/HowToTutorial-o-Matic.mm">
+<node TEXT="HowToTutorial-o-Matic.mm" ID="ID_198625316" LINK="EditingTutorialsWithMDH/HowToTutorial-o-Matic.mm">
 <attribute NAME="lastModifiedTime" VALUE="06-05-22 11:54" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-06T11:54-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-05-22 00:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-08T00:34-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="01-04-22 08:56" OBJECT="org.freeplane.features.format.FormattedDate|2022-04-01T08:56-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="101.434" OBJECT="org.freeplane.features.format.FormattedNumber|101434|#,##0"/>
-<node TEXT="Agregar tutorial para aprender a usar el Tutorial Builder" ID="ID_1157726827"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Agregar tutorial para aprender a usar el Tutorial Builder" ID="ID_1157726827"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -16311,7 +16540,7 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="Tutorial-o-MaticCommands.mm" ID="ID_1866650129">
 <attribute NAME="projectCode" VALUE="Commands"/>
-<node TEXT="Tutorial-o-MaticCommands.mm" ID="ID_757615419" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/Tutorial-o-MaticCommands.mm">
+<node TEXT="Tutorial-o-MaticCommands.mm" ID="ID_757615419" LINK="EditingTutorialsWithMDH/Tutorial-o-MaticCommands.mm">
 <attribute NAME="lastModifiedTime" VALUE="07-05-22 23:13" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-07T23:13-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="09-05-22 18:24" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-09T18:24-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="01-04-22 08:56" OBJECT="org.freeplane.features.format.FormattedDate|2022-04-01T08:56-0300|datetime"/>
@@ -16323,13 +16552,13 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="practice maps" STYLE_REF="Organizador" ID="ID_68776392">
 <attribute NAME="projectCode" VALUE="practice.maps"/>
-<node TEXT="myExistingMindMap.mm" ID="ID_1082660053" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/myExistingMindMap.mm">
+<node TEXT="myExistingMindMap.mm" ID="ID_1082660053" LINK="EditingTutorialsWithMDH/myExistingMindMap.mm">
 <attribute NAME="lastModifiedTime" VALUE="06-05-22 11:16" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-06T11:16-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="13-05-22 22:53" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-13T22:53-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="12-04-22 19:47" OBJECT="org.freeplane.features.format.FormattedDate|2022-04-12T19:47-0400|datetime"/>
 <attribute NAME="fileSize" VALUE="47.072" OBJECT="org.freeplane.features.format.FormattedNumber|47072|#,##0"/>
 </node>
-<node TEXT="LongTutorialExample_MDH.mm" ID="ID_290639313" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/LongTutorialExample_MDH.mm">
+<node TEXT="LongTutorialExample_MDH.mm" ID="ID_290639313" LINK="EditingTutorialsWithMDH/LongTutorialExample_MDH.mm">
 <attribute NAME="lastModifiedTime" VALUE="17-05-22 23:04" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-17T23:04-0400|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="19-05-22 16:11" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-19T16:11-0400|datetime"/>
 <attribute NAME="creationTime" VALUE="14-05-22 13:40" OBJECT="org.freeplane.features.format.FormattedDate|2022-05-14T13:40-0400|datetime"/>
@@ -16342,10 +16571,10 @@ contains the current tutorial information and selects the node where the current
 </node>
 </node>
 </node>
-<node TEXT="**ToM v0.0.7**" STYLE_REF="milestone" ID="ID_627787477">
+<node TEXT="**ToM v0.0.7**" STYLE_REF="milestone" POSITION="bottom_or_right" ID="ID_627787477">
 <node TEXT="Delete Crayon from al add-on tutorial map" STYLE_REF="completedTask" ID="ID_1426813923"/>
 </node>
-<node TEXT="Cleaning other styles and crayon from tutorial mindmap" ID="ID_492920449"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="Cleaning other styles and crayon from tutorial mindmap" POSITION="bottom_or_right" ID="ID_492920449"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -16488,7 +16717,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -16500,373 +16729,11 @@ contains the current tutorial information and selects the node where the current
   </body>
 </html></richcontent>
 </node>
-<node TEXT="menuHelp.mm" ID="ID_830469558" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/EditingTutorialsWithMDH/menuHelp.mm"/>
-</node>
-<node TEXT="resources" STYLE_REF="file_folder" FOLDED="true" ID="ID_484815634" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/">
-<attribute NAME="lastModifiedTime" VALUE="18-03-22 23:50" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-18T23:50-0300|dd-MM-yy HH:mm"/>
-<attribute NAME="lastAccessTime" VALUE="21-03-22 12:27" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:27-0300|dd-MM-yy HH:mm"/>
-<attribute NAME="creationTime" VALUE="12-09-21 15:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:12-0300|datetime"/>
-<attribute NAME="fileSize" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#,##0"/>
-<attribute NAME="projectCode" VALUE="resources"/>
-<node TEXT="arreglar nombres de iconos" ID="ID_1948232735"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      //había algunos con minúsculas entremedio que hacían que no funcionara
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //def nodo=node
-    </p>
-    <p>
-      def nodos=c.selecteds
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      nodos.each{nodo -&gt;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def t = nodo.text
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def newT = &quot;emoji-${t.takeAfter('-').takeBefore('.').toUpperCase()}.svg&quot;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;nodo.text = newT
-    </p>
-    <p>
-      }
-    </p>
-  </body>
-</html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      .groovy
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="nodo con fórmula para ver iconos" ID="ID_1060443792">
-<icon BUILTIN="emoji-1F989"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      =node.icons.icons
-    </p>
-  </body>
-</html></richcontent>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>=node.icons.icons</text>
-</richcontent>
-</node>
-<node TEXT="modifiers.png" ID="ID_1837719712" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/modifiers.png">
-<attribute NAME="lastModifiedTime" VALUE="18-03-22 23:50" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-18T23:50-0300|datetime"/>
-<attribute NAME="lastAccessTime" VALUE="20-03-22 11:11" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T11:11-0300|datetime"/>
-<attribute NAME="creationTime" VALUE="18-03-22 23:50" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-18T23:50-0300|datetime"/>
-<attribute NAME="fileSize" VALUE="7.775" OBJECT="org.freeplane.features.format.FormattedNumber|7775|#,##0"/>
-</node>
-<node TEXT="Tutorial-o-Matic" STYLE_REF="file_folder" FOLDED="true" ID="ID_1225274132" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/Tutorial-o-Matic/">
-<node TEXT="ToM Modifiers 001.png" ID="ID_547268364" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/Tutorial-o-Matic/ToM%20Modifiers%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      =&quot;![](${node.link.uri})&quot;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="ToM Modifiers 002.png" ID="ID_1111353649" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/Tutorial-o-Matic/ToM%20Modifiers%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      =&quot;![](${node.link.uri})&quot;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="ToM Modifiers 003.png" ID="ID_1146605001" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/Tutorial-o-Matic/ToM%20Modifiers%20003.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      =&quot;![](${node.link.uri})&quot;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="ToM Modifiers 004.png" ID="ID_1456239498" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/Tutorial-o-Matic/ToM%20Modifiers%20004.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      =&quot;![](${node.link.uri})&quot;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="ToM Modifiers 005.png" ID="ID_1821454867" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/Tutorial-o-Matic/ToM%20Modifiers%20005.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      =&quot;![](${node.link.uri})&quot;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="ToM Modifiers 006.png" ID="ID_514822748" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/Tutorial-o-Matic/ToM%20Modifiers%20006.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      =&quot;![](${node.link.uri})&quot;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="ToM Modifiers 007.png" ID="ID_1055927205" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/Tutorial-o-Matic/ToM%20Modifiers%20007.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      =&quot;![](${node.link.uri})&quot;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="ToM Modifiers 008.png" ID="ID_689785129" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/Tutorial-o-Matic/ToM%20Modifiers%20008.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      =&quot;![](${node.link.uri})&quot;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="ToM Modifiers 009.png" ID="ID_1499706150" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/Tutorial-o-Matic/ToM%20Modifiers%20009.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      =&quot;![](${node.link.uri})&quot;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="ToM Modifiers 010.png" ID="ID_1310770998" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/Tutorial-o-Matic/ToM%20Modifiers%20010.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      =&quot;![](${node.link.uri})&quot;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="ToM Modifiers 011.png" ID="ID_369397129" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/Tutorial-o-Matic/ToM%20Modifiers%20011.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      =&quot;![](${node.link.uri})&quot;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="ToM Modifiers 012.png" ID="ID_509914635" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/Tutorial-o-Matic/ToM%20Modifiers%20012.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      =&quot;![](${node.link.uri})&quot;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="ToM Modifiers 013.png" ID="ID_1003431212" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/Tutorial-o-Matic/ToM%20Modifiers%20013.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      =&quot;![](${node.link.uri})&quot;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="ToM Modifiers 014.png" ID="ID_692628451" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/resources/Tutorial-o-Matic/ToM%20Modifiers%20014.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      =&quot;![](${node.link.uri})&quot;
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-</node>
-<node TEXT="ignoredByGitHub" STYLE_REF="file_folder" FOLDED="true" ID="ID_653295432" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/ignoredByGitHub/">
-<attribute NAME="lastModifiedTime" VALUE="21-03-22 12:29" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:29-0300|dd-MM-yy HH:mm"/>
-<attribute NAME="lastAccessTime" VALUE="21-03-22 12:29" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:29-0300|dd-MM-yy HH:mm"/>
-<attribute NAME="creationTime" VALUE="10-11-21 10:39" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-10T10:39-0300|datetime"/>
-<attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
-<attribute NAME="projectCode" VALUE="ignored.By.GitHub"/>
-<node TEXT="Tutorial builder WIP.mm" FOLDED="true" ID="ID_241856912" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/ignoredByGitHub/Tutorial%20builder%20WIP.mm">
-<attribute NAME="lastModifiedTime" VALUE="12-09-21 15:36" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:36-0300|datetime"/>
-<attribute NAME="lastAccessTime" VALUE="22-10-21 10:24" OBJECT="org.freeplane.features.format.FormattedDate|2021-10-22T10:24-0300|dd-MM-yy HH:mm"/>
-<attribute NAME="creationTime" VALUE="12-09-21 15:36" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:36-0300|datetime"/>
-<attribute NAME="fileSize" VALUE="32.301" OBJECT="org.freeplane.features.format.FormattedNumber|32301|#,##0"/>
-<node TEXT="éste fue la primera versión de lo que sería el AddOn" ID="ID_369211444"/>
-</node>
-<node TEXT="Tutorial Sample.mm" ID="ID_640803167" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/ignoredByGitHub/Tutorial%20Sample.mm">
-<attribute NAME="lastModifiedTime" VALUE="24-11-21 14:12" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-24T14:12-0300|dd-MM-yy HH:mm"/>
-<attribute NAME="lastAccessTime" VALUE="14-01-22 15:25" OBJECT="org.freeplane.features.format.FormattedDate|2022-01-14T15:25-0300|dd-MM-yy HH:mm"/>
-<attribute NAME="creationTime" VALUE="29-09-21 09:00" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-29T09:00-0300|datetime"/>
-<attribute NAME="fileSize" VALUE="71.332" OBJECT="org.freeplane.features.format.FormattedNumber|71332|#,##0"/>
-</node>
-<node TEXT="executeTutorial.groovy" ID="ID_1310867641" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/ignoredByGitHub/executeTutorial.groovy">
-<attribute NAME="lastModifiedTime" VALUE="08-11-21 09:21" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-08T09:21-0300|dd-MM-yy HH:mm"/>
-<attribute NAME="lastAccessTime" VALUE="14-01-22 15:24" OBJECT="org.freeplane.features.format.FormattedDate|2022-01-14T15:24-0300|dd-MM-yy HH:mm"/>
-<attribute NAME="creationTime" VALUE="02-10-21 14:05" OBJECT="org.freeplane.features.format.FormattedDate|2021-10-02T14:05-0300|datetime"/>
-<attribute NAME="fileSize" VALUE="693" OBJECT="org.freeplane.features.format.FormattedNumber|693|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      import edofro.tutorialomatic.ToM_ui as tomui
-    </p>
-    <p>
-      import edofro.tutorialomatic.ToM&nbsp;&nbsp;&nbsp;&nbsp;as tom
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //acceder mapa
-    </p>
-    <p>
-      def mapa = node.map
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //saca listado de tutotiales de mapa
-    </p>
-    <p>
-      def nodosTutoriales = mapa.root.find{it.style.name == tom.styles.tutorial}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      // se elige tutorial
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;//TODO: hacer que usuario elija tutorial a realizar
-    </p>
-    <p>
-      def nTutorial = nodosTutoriales?nodosTutoriales.get(0):null
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      // listado de componentes de tutorial
-    </p>
-    <p>
-      def tutNodes = tom.getTutNodes(nTutorial)
-    </p>
-    <p>
-      if(!tutNodes) ui.informationMessage( 'no tutorial components(nodes) found')
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      // ---- crear / abrir panel -----
-    </p>
-    <p>
-      def myPanel = tomui.getContentPaneFromMyTab(tom.tabName, true)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      tom.fillContentPane(myPanel, tutNodes)
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="testing Link to Tutorial page.mm" ID="ID_1668547174" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/ignoredByGitHub/testing%20Link%20to%20Tutorial%20page.mm">
-<attribute NAME="lastModifiedTime" VALUE="20-03-22 23:21" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T23:21-0300|datetime"/>
-<attribute NAME="lastAccessTime" VALUE="21-03-22 12:26" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-21T12:26-0300|datetime"/>
-<attribute NAME="creationTime" VALUE="20-03-22 10:34" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-20T10:34-0300|datetime"/>
-<attribute NAME="fileSize" VALUE="18.776" OBJECT="org.freeplane.features.format.FormattedNumber|18776|#,##0"/>
-</node>
-<node TEXT="README-Tutorial-o-Matic-MDH.mm" ID="ID_1163940665" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/ignoredByGitHub/README-Tutorial-o-Matic-MDH.mm">
-<attribute NAME="lastModifiedTime" VALUE="14-01-22 15:49" OBJECT="org.freeplane.features.format.FormattedDate|2022-01-14T15:49-0300|dd-MM-yy HH:mm"/>
-<attribute NAME="lastAccessTime" VALUE="26-02-22 17:36" OBJECT="org.freeplane.features.format.FormattedDate|2022-02-26T17:36-0300|dd-MM-yy HH:mm"/>
-<attribute NAME="creationTime" VALUE="02-10-21 19:07" OBJECT="org.freeplane.features.format.FormattedDate|2021-10-02T19:07-0300|datetime"/>
-<attribute NAME="fileSize" VALUE="32.790" OBJECT="org.freeplane.features.format.FormattedNumber|32790|#,##0"/>
-</node>
+<node TEXT="menuHelp.mm" POSITION="bottom_or_right" ID="ID_830469558" LINK="EditingTutorialsWithMDH/menuHelp.mm"/>
 </node>
 <node TEXT="README.MD" ID="ID_509239493">
 <attribute NAME="projectCode" VALUE="README.MD"/>
-<node TEXT="README.MD" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_634612698" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/README.MD">
+<node TEXT="README.MD" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_634612698" LINK="README.MD">
 <edge COLOR="#00007c"/>
 <attribute_layout NAME_WIDTH="135 pt" VALUE_WIDTH="135 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -16881,10 +16748,9 @@ contains the current tutorial information and selects the node where the current
 <attribute NAME="ignoreLeafDetails" VALUE="false"/>
 <attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= edofro.MarkDownHelper.MDH.document(node)</text>
-</richcontent>
+<text>= edofro.MarkDownHelper.MDH.document(node)</text></richcontent>
 <node TEXT="Tutorial-o-Matic" ID="ID_817659443">
-<node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_1655169059"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_1655169059"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -16895,7 +16761,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<node TEXT="description" ID="ID_723426932"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="description" ID="ID_723426932"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -16921,7 +16787,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_253168814"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_253168814"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -16934,7 +16800,7 @@ contains the current tutorial information and selects the node where the current
 </html></richcontent>
 <node TEXT="Freeplane AddOn" ID="ID_1481337960" LINK="https://www.freeplane.org/wiki/index.php/Add-ons_(install)"/>
 </node>
-<node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_1051472494"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_1051472494"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -16947,7 +16813,7 @@ contains the current tutorial information and selects the node where the current
 </html></richcontent>
 <node TEXT="Freeplane" ID="ID_686425414" LINK="https://www.freeplane.org/wiki/index.php/Home"/>
 </node>
-<node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_88579910"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_88579910"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -16965,10 +16831,9 @@ contains the current tutorial information and selects the node where the current
 <node TEXT="Instructions:" ID="ID_719440148">
 <node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1803918266">
 <icon BUILTIN="emoji-1F522"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.list(node)
-// xx</text>
-</richcontent>
+<richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.list(node)
+// xx</text></richcontent>
 <node TEXT="Download the addon.mm file, open it in Freeplane and install it." ID="ID_757042021"/>
 <node TEXT="Relaunch Freeplane" ID="ID_1084220841"/>
 <node TEXT="Go to menu **Edo Tools/Tutorial-o-Matic** and click on **&apos;Tutorial-o-Matic Intro&apos;**" ID="ID_1043324219">
@@ -16999,13 +16864,12 @@ contains the current tutorial information and selects the node where the current
 </node>
 </node>
 <node TEXT="Currently working on" ID="ID_38783593">
-<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1462320218"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.list(node) 
-//xx</text>
-</richcontent>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1462320218"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.list(node) 
+//xx</text></richcontent>
 <node TEXT="wip" STYLE_REF="tasksBucket" ID="ID_1757016865">
 <icon BUILTIN="emoji-1F648"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -17026,13 +16890,12 @@ contains the current tutorial information and selects the node where the current
 </node>
 </node>
 <node TEXT="Tasks" ID="ID_1094884343">
-<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_660622649"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.list(node)
-//xx</text>
-</richcontent>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_660622649"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.list(node)
+//xx</text></richcontent>
 <node TEXT="tasks w/o maybeTasks" STYLE_REF="tasksBucket" ID="ID_1288720582">
 <icon BUILTIN="emoji-1F648"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -17054,18 +16917,18 @@ contains the current tutorial information and selects the node where the current
 </node>
 </node>
 </node>
-<node TEXT="LICENSE.md" ID="ID_1946703521" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/LICENSE.md">
+<node TEXT="LICENSE.md" ID="ID_1946703521" LINK="LICENSE.md">
 <attribute NAME="lastModifiedTime" VALUE="12-09-21 15:13" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:13-0300|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="02-10-21 19:09" OBJECT="org.freeplane.features.format.FormattedDate|2021-10-02T19:09-0300|datetime"/>
 <attribute NAME="creationTime" VALUE="12-09-21 15:13" OBJECT="org.freeplane.features.format.FormattedDate|2021-09-12T15:13-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="1.073" OBJECT="org.freeplane.features.format.FormattedNumber|1073|#,##0"/>
 </node>
-<node TEXT=".gitignore" ID="ID_1437180143" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/.gitignore">
+<node TEXT=".gitignore" ID="ID_1437180143" LINK=".gitignore">
 <attribute NAME="lastModifiedTime" VALUE="24-12-21 11:41" OBJECT="org.freeplane.features.format.FormattedDate|2021-12-24T11:41-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="18-03-22 23:52" OBJECT="org.freeplane.features.format.FormattedDate|2022-03-18T23:52-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="26-11-21 12:46" OBJECT="org.freeplane.features.format.FormattedDate|2021-11-26T12:46-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="484" OBJECT="org.freeplane.features.format.FormattedNumber|484|#,##0"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -17076,7 +16939,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -17169,7 +17032,7 @@ contains the current tutorial information and selects the node where the current
   </body>
 </html></richcontent>
 </node>
-<node TEXT="Tutorial-o-Matic project.mm" ID="ID_1496137192" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Tutorial_AddOn/Tutorial-o-Matic%20project.mm" VGAP_QUANTITY="2 px"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Tutorial-o-Matic project.mm" ID="ID_1496137192" LINK="Tutorial-o-Matic%20project.mm" VGAP_QUANTITY="2 px"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -17180,6 +17043,9 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
+<node TEXT="Tutorial-o-Matic project_files" POSITION="bottom_or_right" ID="ID_460523851" LINK="Tutorial-o-Matic%20project_files/">
+<node TEXT="image-1470565722378639735.png" ID="ID_58976847" LINK="Tutorial-o-Matic%20project_files/image-1470565722378639735.png"/>
+</node>
 </node>
 </node>
 <node TEXT="additional tasks" ID="ID_450197086">
@@ -17212,20 +17078,20 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="Tutorials" ID="ID_1847569001" VGAP_QUANTITY="27.57447 pt">
 <node TEXT="SimpleTutorialSample.mm" FOLDED="true" ID="ID_230501881" BACKGROUND_COLOR="#cdd0f6">
-<arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_182355635" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="120.25532 pt;-3.06383 pt;"/>
-<arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_791393290" STARTINCLINATION="55.14894 pt;5.3617 pt;" ENDINCLINATION="43.65957 pt;0 pt;"/>
-<arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_214626079" STARTINCLINATION="27.57447 pt;2.29787 pt;" ENDINCLINATION="26.80851 pt;0 pt;"/>
+<arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_791393290" STARTINCLINATION="55.5 pt;5.25 pt;" ENDINCLINATION="43.5 pt;0 pt;"/>
+<arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_182355635" STARTINCLINATION="153 pt;15 pt;" ENDINCLINATION="120 pt;-2.25 pt;"/>
+<arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_214626079" STARTINCLINATION="27.75 pt;2.25 pt;" ENDINCLINATION="27 pt;0 pt;"/>
 </node>
 <node TEXT="ExercisingMap.mm" FOLDED="true" ID="ID_791393290" BACKGROUND_COLOR="#b6fc01"/>
 <node TEXT="Tutorial-o-Matic Intro.mm" FOLDED="true" ID="ID_182355635" BACKGROUND_COLOR="#08acd1">
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_214626079" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-6.89362 pt;"/>
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_1179881449" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-6.89362 pt;"/>
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_660860081" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-6.89362 pt;"/>
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_214626079" STARTINCLINATION="153 pt;15 pt;" ENDINCLINATION="153 pt;-6 pt;"/>
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_660860081" STARTINCLINATION="153 pt;15 pt;" ENDINCLINATION="153 pt;-6 pt;"/>
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_1179881449" STARTINCLINATION="153 pt;15 pt;" ENDINCLINATION="153 pt;-6 pt;"/>
 </node>
 <node TEXT="HowToTutorial-o-Matic.mm" FOLDED="true" ID="ID_214626079" BACKGROUND_COLOR="#ba2ed1"/>
 <node TEXT="Tutorial-o-MaticCommands.mm" FOLDED="true" ID="ID_660860081" VSHIFT_QUANTITY="-1.53191 pt" BACKGROUND_COLOR="#ee8e05"/>
 <node TEXT="Tutorial-o-MaticStepByStep.mm" FOLDED="true" ID="ID_1179881449" BACKGROUND_COLOR="#54fef3">
-<arrowlink COLOR="#54fef3" TRANSPARENCY="255" DESTINATION="ID_1829012653" STARTINCLINATION="43.65957 pt;3.06383 pt;" ENDINCLINATION="36.76596 pt;0 pt;"/>
+<arrowlink COLOR="#54fef3" TRANSPARENCY="255" DESTINATION="ID_1829012653" STARTINCLINATION="43.5 pt;3 pt;" ENDINCLINATION="36.75 pt;0 pt;"/>
 </node>
 <node TEXT="myExistingMindMap.mm" FOLDED="true" ID="ID_1829012653" BACKGROUND_COLOR="#6bf708"/>
 <node TEXT="LongTutorialExample.mm" FOLDED="true" ID="ID_338095058" BACKGROUND_COLOR="#d541ec"/>
@@ -17257,15 +17123,15 @@ contains the current tutorial information and selects the node where the current
 </node>
 </node>
 <node TEXT="ToMTutorial" ID="ID_1882207830">
-<arrowlink DESTINATION="ID_315096252" MIDDLE_LABEL="Creado" STARTINCLINATION="271.91489 pt;0 pt;" ENDINCLINATION="377.61701 pt;-3.82979 pt;"/>
+<arrowlink DESTINATION="ID_315096252" MIDDLE_LABEL="Creado" STARTINCLINATION="272.24999 pt;0 pt;" ENDINCLINATION="377.24999 pt;-3 pt;"/>
 </node>
 </node>
 <node TEXT="Tutorials" ID="ID_37813074" VGAP_QUANTITY="18.38298 pt">
 <node TEXT="demo" ID="ID_1458344822" VGAP_QUANTITY="14 px">
 <node TEXT="SimpleTutorialSample.mm" FOLDED="true" ID="ID_90091810" BACKGROUND_COLOR="#cdd0f6">
-<arrowlink COLOR="#ff9900" TRANSPARENCY="255" DESTINATION="ID_315096252" MIDDLE_LABEL="quitar" STARTINCLINATION="284.17021 pt;-72 pt;" ENDINCLINATION="251.23404 pt;-93.44681 pt;"/>
-<arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_1804718842" STARTINCLINATION="55.14894 pt;5.3617 pt;" ENDINCLINATION="43.65957 pt;0 pt;"/>
-<arrowlink COLOR="#ff9900" TRANSPARENCY="255" DESTINATION="ID_271832651" MIDDLE_LABEL="quitar" STARTINCLINATION="500.93616 pt;-151.65957 pt;" ENDINCLINATION="314.8085 pt;-140.93617 pt;"/>
+<arrowlink COLOR="#ff9900" TRANSPARENCY="255" DESTINATION="ID_271832651" MIDDLE_LABEL="quitar" STARTINCLINATION="500.99999 pt;-150.75 pt;" ENDINCLINATION="314.99999 pt;-140.25 pt;"/>
+<arrowlink COLOR="#cdd0f6" TRANSPARENCY="255" DESTINATION="ID_1804718842" STARTINCLINATION="55.5 pt;5.25 pt;" ENDINCLINATION="43.5 pt;0 pt;"/>
+<arrowlink COLOR="#ff9900" TRANSPARENCY="255" DESTINATION="ID_315096252" MIDDLE_LABEL="quitar" STARTINCLINATION="284.24999 pt;-71.25 pt;" ENDINCLINATION="251.24999 pt;-93 pt;"/>
 <node TEXT="simple demo" ID="ID_1450176090" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm">
 <node TEXT="Introduction" ID="ID_1843423512" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
 <node TEXT="SIMPLE DEMO" ID="ID_1649465485" MAX_WIDTH="3 cm" MIN_WIDTH="3 cm"/>
@@ -17284,10 +17150,10 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="tutorial" ID="ID_160180737" VGAP_QUANTITY="14 px">
 <node TEXT="Tutorial-o-Matic Intro.mm" ID="ID_315096252" BACKGROUND_COLOR="#08acd1">
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_612275579" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-6.12766 pt;"/>
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_806121553" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-6.12766 pt;"/>
-<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_271832651" STARTINCLINATION="153.19149 pt;15.31915 pt;" ENDINCLINATION="153.19149 pt;-6.12766 pt;"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_806121553" STARTINCLINATION="153 pt;15 pt;" ENDINCLINATION="153 pt;-5.25 pt;"/>
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_271832651" STARTINCLINATION="153 pt;15 pt;" ENDINCLINATION="153 pt;-5.25 pt;"/>
+<arrowlink COLOR="#08acd1" TRANSPARENCY="255" DESTINATION="ID_612275579" STARTINCLINATION="153 pt;15 pt;" ENDINCLINATION="153 pt;-5.25 pt;"/>
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -17301,8 +17167,8 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="1" OBJECT="java.lang.Long|1" ID="ID_273993651">
 <node TEXT="Tutorial-o-MaticStepByStep.mm" ID="ID_806121553" BACKGROUND_COLOR="#54fef3">
-<arrowlink COLOR="#54fef3" TRANSPARENCY="255" DESTINATION="ID_671876743" STARTINCLINATION="43.65957 pt;3.06383 pt;" ENDINCLINATION="36.76596 pt;0 pt;"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<arrowlink COLOR="#54fef3" TRANSPARENCY="255" DESTINATION="ID_671876743" STARTINCLINATION="43.5 pt;3 pt;" ENDINCLINATION="36.75 pt;0 pt;"/>
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -17360,7 +17226,7 @@ contains the current tutorial information and selects the node where the current
 </node>
 </node>
 </node>
-<node TEXT="Translate tasks to english" STYLE_REF="completedTask" ID="ID_312032152"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Translate tasks to english" STYLE_REF="completedTask" ID="ID_312032152"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -17376,7 +17242,7 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="script tests" ID="ID_1689658751">
 <node TEXT="get icon from node" STYLE_REF="nextTask" ID="ID_183357924">
-<node TEXT="get first icon from node and insert it into an html" ID="ID_901278280"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="get first icon from node and insert it into an html" ID="ID_901278280"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -17420,7 +17286,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -17446,7 +17312,7 @@ contains the current tutorial information and selects the node where the current
   </body>
 </html>
 </richcontent>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -17457,7 +17323,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -17485,7 +17351,7 @@ contains the current tutorial information and selects the node where the current
   </body>
 </html>
 </richcontent>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -17496,7 +17362,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -17524,7 +17390,7 @@ contains the current tutorial information and selects the node where the current
   </body>
 </html></richcontent>
 </node>
-<node TEXT="ejemplo html" ID="ID_1642381497"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="ejemplo html" ID="ID_1642381497"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -17550,10 +17416,9 @@ contains the current tutorial information and selects the node where the current
 </html>
 </richcontent>
 <node TEXT="ejemplo markdown" ID="ID_264639123"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>![image](freeplaneresource:/images/menuOMatic.png)</text>
-</richcontent>
+<text>![image](freeplaneresource:/images/menuOMatic.png)</text></richcontent>
 </node>
-<node TEXT="ejemplo html" ID="ID_38225212"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="ejemplo html" ID="ID_38225212"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -17569,54 +17434,57 @@ contains the current tutorial information and selects the node where the current
 </node>
 </node>
 <node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1957802391">
-<attribute NAME="log_MDI" VALUE="No"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<attribute NAME="log_MDI" VALUE="2" OBJECT="org.freeplane.features.format.FormattedObject|org.freeplane.plugin.script.proxy.ConvertibleText&amp;#x7c;2|number:decimal:#0.####"/>
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      Inated:&nbsp;&nbsp;&nbsp;2022-08-13&nbsp;&nbsp;17:46:30
+      Inated:&#xa0;&#xa0;&#xa0;2023-07-03&#xa0;&#xa0;18:21:18
     </p>
     <p>
       
     </p>
     <p>
-      ------- Files: --------&nbsp;
+      ------- Files: --------&#xa0;
     </p>
     <p>
-      &nbsp;0 node(s) pointing to unexisting/filtered files (marked as 'broken')
+      &#xa0;0 node(s) pointing to unexisting/filtered files (marked as 'broken')
     </p>
     <p>
-      &nbsp;0 link(s) corrected in nodes
+      &#xa0;0 link(s) corrected in nodes
     </p>
     <p>
-      &nbsp;1 new file(s) imported as node(s)&nbsp;
+      &#xa0;0 new file(s) imported as node(s)&#xa0;
     </p>
     <p>
-      &nbsp;0 node(s) moved/renamed in drive
+      &#xa0;0 node(s) moved/renamed in drive
     </p>
     <p>
-      
-    </p>
-    <p>
-      ------- Folders: --------&nbsp;
-    </p>
-    <p>
-      24 folders didn't need to be moved&nbsp;
-    </p>
-    <p>
-      1 folders were not found&nbsp;
+      &#xa0;0 node(s) couldn't be moved/renamed in drive (marked as 'notMovedRenamed')
     </p>
     <p>
       
     </p>
     <p>
+      ------- Folders: --------&#xa0;
+    </p>
+    <p>
+      22 folders didn't need to be moved&#xa0;
+    </p>
+    <p>
       
     </p>
     <p>
-      6.2 seconds
+      
+    </p>
+    <p>
+      0.5 seconds
+    </p>
+    <p>
+      
     </p>
     <p>
       
@@ -17627,10 +17495,14 @@ contains the current tutorial information and selects the node where the current
     <p>
       
     </p>
+    <p>
+      No failed operation in drive
+    </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
-<node TEXT="Apuntes y tareas finalizadas" STYLE_REF="Organizador" FOLDED="true" ID="ID_1147908346"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Apuntes y tareas finalizadas" STYLE_REF="Organizador" FOLDED="true" ID="ID_1147908346"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -17645,7 +17517,7 @@ contains the current tutorial information and selects the node where the current
 <node TEXT="scripts apoyo" FOLDED="true" ID="ID_328090287">
 <node TEXT="ToM 2" ID="ID_1124916633"/>
 <node TEXT="pruebas" FOLDED="true" ID="ID_1068329892">
-<node TEXT="prueba guardar tab seleccionada" ID="ID_259527760"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba guardar tab seleccionada" ID="ID_259527760"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -17686,7 +17558,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -17698,7 +17570,7 @@ contains the current tutorial information and selects the node where the current
   </body>
 </html></richcontent>
 </node>
-<node TEXT="prueba volver a tab guardada" ID="ID_1692441793"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba volver a tab guardada" ID="ID_1692441793"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -17727,7 +17599,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -17739,7 +17611,7 @@ contains the current tutorial information and selects the node where the current
   </body>
 </html></richcontent>
 </node>
-<node TEXT="prueba idDictionary" ID="ID_595114201"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba idDictionary" ID="ID_595114201"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -17765,7 +17637,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -17780,7 +17652,7 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="Probar" FOLDED="true" ID="ID_1595318979">
 <icon BUILTIN="emoji-1F9EA"/>
-<node TEXT="prueba: agrega NotePane de note de nodos seleccionados" ID="ID_482299495"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba: agrega NotePane de note de nodos seleccionados" ID="ID_482299495"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -17815,7 +17687,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -17827,7 +17699,7 @@ contains the current tutorial information and selects the node where the current
   </body>
 </html></richcontent>
 </node>
-<node TEXT="prueba: agrega buttonPane que toma el texto del nodo seleccionado cuando se presiona el botón" ID="ID_474023496"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba: agrega buttonPane que toma el texto del nodo seleccionado cuando se presiona el botón" ID="ID_474023496"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -17916,7 +17788,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -17928,7 +17800,7 @@ contains the current tutorial information and selects the node where the current
   </body>
 </html></richcontent>
 </node>
-<node TEXT="prueba: agrega buttonPane que activa selectionChangeListener" ID="ID_1760724744"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba: agrega buttonPane que activa selectionChangeListener" ID="ID_1760724744"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -18149,7 +18021,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -18161,7 +18033,7 @@ contains the current tutorial information and selects the node where the current
   </body>
 </html></richcontent>
 </node>
-<node TEXT="Prueba: agrega buttonPane que se actualiza cada vez que cambia texto de un nodo" FOLDED="true" ID="ID_989916102"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="Prueba: agrega buttonPane que se actualiza cada vez que cambia texto de un nodo" FOLDED="true" ID="ID_989916102"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -18388,7 +18260,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -18399,7 +18271,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<node TEXT="ejemplo NodeChangeListeners.groovy" ID="ID_862587206"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="ejemplo NodeChangeListeners.groovy" ID="ID_862587206"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -18554,7 +18426,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -18567,7 +18439,7 @@ contains the current tutorial information and selects the node where the current
 </html></richcontent>
 </node>
 </node>
-<node TEXT="Prueba: agrega buttonPane que se actualiza cada vez que cambia texto del nodo que estaba seleccionado al clickear el botton" FOLDED="true" ID="ID_1746091609"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="Prueba: agrega buttonPane que se actualiza cada vez que cambia texto del nodo que estaba seleccionado al clickear el botton" FOLDED="true" ID="ID_1746091609"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -18812,7 +18684,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -18855,7 +18727,7 @@ contains the current tutorial information and selects the node where the current
 <node TEXT="errr" ID="ID_227765626"/>
 </node>
 </node>
-<node TEXT="prueba con dialogo que se actualiza cada vez que cambia la nota del nodo que estaba seleccionado al clickear el botton" ID="ID_1747449377"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba con dialogo que se actualiza cada vez que cambia la nota del nodo que estaba seleccionado al clickear el botton" ID="ID_1747449377"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -19196,7 +19068,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -19209,7 +19081,7 @@ contains the current tutorial information and selects the node where the current
 </html></richcontent>
 </node>
 </node>
-<node TEXT="scripts anteriores de referencia" STYLE_REF="Organizador" FOLDED="true" ID="ID_699660164"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="scripts anteriores de referencia" STYLE_REF="Organizador" FOLDED="true" ID="ID_699660164"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -19220,7 +19092,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<node TEXT="⁃        ver cómo acceder a toolpanel" FOLDED="true" ID="ID_579077623"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="⁃        ver cómo acceder a toolpanel" FOLDED="true" ID="ID_579077623"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -19231,7 +19103,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<node TEXT="agregar tab a Tool Panel (Format)" ID="ID_526554456"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="agregar tab a Tool Panel (Format)" ID="ID_526554456"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -19344,7 +19216,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -19356,7 +19228,7 @@ contains the current tutorial information and selects the node where the current
   </body>
 </html></richcontent>
 </node>
-<node TEXT="quitar tab a Tool Panel" ID="ID_1190714081"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="quitar tab a Tool Panel" ID="ID_1190714081"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -19442,7 +19314,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -19456,7 +19328,7 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="freeplaneTabbedPanel" FOLDED="true" ID="ID_1075969685">
 <icon BUILTIN="forward"/>
-<node TEXT="prueba freeplaneTabbedPanel" ID="ID_427280264"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba freeplaneTabbedPanel" ID="ID_427280264"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -19479,7 +19351,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -19495,7 +19367,7 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="combinado: trae primero submenu y si repite trae botones" FOLDED="true" ID="ID_1015603870">
 <icon BUILTIN="emoji-1F333"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -19647,7 +19519,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -19661,7 +19533,7 @@ contains the current tutorial information and selects the node where the current
 <node TEXT="combinar con siguiente para si mouse está sobre grupo de menus entonces descargue todos los botones baje él" ID="ID_502299675"/>
 <node TEXT="abre dialogo con boton para ir repitiendo" ID="ID_559894248"/>
 </node>
-<node TEXT="A2. cambiar texto nodo a label de acción" FOLDED="true" ID="ID_135761124"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="A2. cambiar texto nodo a label de acción" FOLDED="true" ID="ID_135761124"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -19726,7 +19598,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -19742,7 +19614,7 @@ contains the current tutorial information and selects the node where the current
 <font BOLD="false"/>
 </node>
 </node>
-<node TEXT="result menu bajo mouse 1" ID="ID_1047545164"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="result menu bajo mouse 1" ID="ID_1047545164"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20213,7 +20085,7 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="Panel" FOLDED="true" ID="ID_1770909590">
 <node TEXT="aumentar velocidad de scrolling" ID="ID_1340670018">
-<node TEXT="- My mouse wheel scrolls the Tool Panel &quot;Tutorial&quot; tab window much (10x) more slowly than it scrolls the map in the main window, which I found frustrating." FOLDED="true" ID="ID_1403511823"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="- My mouse wheel scrolls the Tool Panel &quot;Tutorial&quot; tab window much (10x) more slowly than it scrolls the map in the main window, which I found frustrating." FOLDED="true" ID="ID_1403511823"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -20232,7 +20104,7 @@ contains the current tutorial information and selects the node where the current
 <node TEXT="https://stackoverflow.com/questions/5583495/how-do-i-speed-up-the-scroll-speed-in-a-jscrollpane-when-using-the-mouse-wheel" ID="ID_1621190348" LINK="https://stackoverflow.com/questions/5583495/how-do-i-speed-up-the-scroll-speed-in-a-jscrollpane-when-using-the-mouse-wheel"/>
 <node TEXT="https://stackoverflow.com/questions/10119587/how-to-increase-the-slow-scroll-speed-on-a-jscrollpane" ID="ID_1201850983" LINK="https://stackoverflow.com/questions/10119587/how-to-increase-the-slow-scroll-speed-on-a-jscrollpane"/>
 </node>
-<node TEXT="add a listener to resize height of content panel when tabpanel width changes" ID="ID_901888411"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="add a listener to resize height of content panel when tabpanel width changes" ID="ID_901888411"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -20244,7 +20116,7 @@ contains the current tutorial information and selects the node where the current
   </body>
 </html></richcontent>
 </node>
-<node TEXT="add a listener that resize height of content panel when an image is loaded and the content gets bigger" ID="ID_395863623"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="add a listener that resize height of content panel when an image is loaded and the content gets bigger" ID="ID_395863623"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -20261,7 +20133,7 @@ contains the current tutorial information and selects the node where the current
 <node TEXT="ToM Actions" FOLDED="true" ID="ID_580637719">
 <node TEXT="listado de páginas al inicio (TOC)" FOLDED="true" ID="ID_114016130">
 <node TEXT="listado de páginas al inicio (TOC)" ID="ID_460524572"/>
-<node TEXT="- Is there a way to start the tutorial in the middle, or only at the beginning?" FOLDED="true" ID="ID_1688850117"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="- Is there a way to start the tutorial in the middle, or only at the beginning?" FOLDED="true" ID="ID_1688850117"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -20286,7 +20158,7 @@ contains the current tutorial information and selects the node where the current
 <icon BUILTIN="forward"/>
 </node>
 <node TEXT="https://github.com/gitbucket/markedj" ID="ID_1165951182" LINK="https://github.com/gitbucket/markedj"/>
-<node TEXT="Options" ID="ID_394628863"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Options" ID="ID_394628863"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -20311,7 +20183,7 @@ contains the current tutorial information and selects the node where the current
 </node>
 </node>
 <node TEXT="Hacer que links abran páginas web" ID="ID_968399462"/>
-<node TEXT="discover why it loads some images but others don&apos;t" FOLDED="true" ID="ID_977567800"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="discover why it loads some images but others don&apos;t" FOLDED="true" ID="ID_977567800"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -20329,7 +20201,7 @@ contains the current tutorial information and selects the node where the current
 </node>
 <node TEXT="Acción next Page" ID="ID_1556661247"/>
 <node TEXT="Acción ShowMenu" ID="ID_353324362">
-<node TEXT="If the active map has not the target style then the button is not visible and the Tutorial breaks!!!" ID="ID_1432008435"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="If the active map has not the target style then the button is not visible and the Tutorial breaks!!!" ID="ID_1432008435"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20342,7 +20214,7 @@ contains the current tutorial information and selects the node where the current
 </html></richcontent>
 <node ID="ID_853844408" CONTENT_ID="ID_430233099"/>
 </node>
-<node TEXT="improve &apos;show menu commands&apos; so it can get to icons that are in other pages" ID="ID_28673993"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="improve &apos;show menu commands&apos; so it can get to icons that are in other pages" ID="ID_28673993"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -20394,7 +20266,7 @@ contains the current tutorial information and selects the node where the current
 <node ID="ID_1444183211" TREE_ID="ID_1668490912"/>
 </node>
 </node>
-<node TEXT="Insert an example node structure to the example map (30%)" FOLDED="true" ID="ID_1737212092"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Insert an example node structure to the example map (30%)" FOLDED="true" ID="ID_1737212092"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -20406,7 +20278,7 @@ contains the current tutorial information and selects the node where the current
   </body>
 </html></richcontent>
 <node TEXT="copiar nodos" FOLDED="true" ID="ID_515719036" BACKGROUND_COLOR="#ccff00">
-<node TEXT="appendBranch" ID="ID_27676599"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="appendBranch" ID="ID_27676599"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20468,7 +20340,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -20489,7 +20361,7 @@ contains the current tutorial information and selects the node where the current
 <node TEXT="luego va agregando id&apos;s" ID="ID_579965795"/>
 </node>
 <node TEXT="prueba" FOLDED="true" ID="ID_1895917935">
-<node TEXT="prueba diccionario" ID="ID_751629859"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba diccionario" ID="ID_751629859"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20572,7 +20444,7 @@ contains the current tutorial information and selects the node where the current
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -20585,7 +20457,7 @@ contains the current tutorial information and selects the node where the current
 </html></richcontent>
 </node>
 <node TEXT="source" FOLDED="true" ID="ID_1183316477">
-<node TEXT="in the next pages" FOLDED="true" ID="ID_223053380"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="in the next pages" FOLDED="true" ID="ID_223053380"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20627,7 +20499,7 @@ contains the current tutorial information and selects the node where the current
 </html></richcontent>
 <node TEXT="tutorial content is taken from THIS map" ID="ID_1608091268">
 <icon BUILTIN="very_positive"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20646,7 +20518,7 @@ contains the current tutorial information and selects the node where the current
 </html></richcontent>
 </node>
 <node TEXT="text with code" ID="ID_1639145388" BACKGROUND_COLOR="#ff6666"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>## a codeBlock example&#xd;
+<text>## a codeBlock example&#xd;
 &#xd;
 Code: **&apos;pasar texto a nota e indicar formato Markdown&apos;**&#xd;
 &#xd;
@@ -20666,13 +20538,12 @@ def setNoteMarkdown(n){&#xd;
     return NoteController.getController().setNoteContentType(n.delegate, &apos;markdown&apos;)&#xd;
 }&#xd;
 ```&#xd;
-</text>
-</richcontent>
+</text></richcontent>
 </node>
 </node>
 <node TEXT="Click next page" ID="ID_983101556">
 <icon BUILTIN="very_positive"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20687,7 +20558,7 @@ def setNoteMarkdown(n){&#xd;
 </node>
 </node>
 <node TEXT="target" FOLDED="true" ID="ID_886454957">
-<node TEXT="in the next pages" FOLDED="true" ID="ID_1965653659"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="in the next pages" FOLDED="true" ID="ID_1965653659"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20729,7 +20600,7 @@ def setNoteMarkdown(n){&#xd;
 </html></richcontent>
 <node TEXT="tutorial content is taken from THIS map" ID="ID_355914519">
 <icon BUILTIN="very_positive"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20748,7 +20619,7 @@ def setNoteMarkdown(n){&#xd;
 </html></richcontent>
 </node>
 <node TEXT="text with code" ID="ID_945523300" BACKGROUND_COLOR="#ff6666"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>## a codeBlock example&#xd;
+<text>## a codeBlock example&#xd;
 &#xd;
 Code: **&apos;pasar texto a nota e indicar formato Markdown&apos;**&#xd;
 &#xd;
@@ -20768,13 +20639,12 @@ def setNoteMarkdown(n){&#xd;
     return NoteController.getController().setNoteContentType(n.delegate, &apos;markdown&apos;)&#xd;
 }&#xd;
 ```&#xd;
-</text>
-</richcontent>
+</text></richcontent>
 </node>
 </node>
 <node TEXT="Click next page" ID="ID_294153870">
 <icon BUILTIN="very_positive"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20790,7 +20660,7 @@ def setNoteMarkdown(n){&#xd;
 </node>
 </node>
 </node>
-<node TEXT="select defined nodes (30%)" FOLDED="true" ID="ID_1260385631"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="select defined nodes (30%)" FOLDED="true" ID="ID_1260385631"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -20833,7 +20703,7 @@ def setNoteMarkdown(n){&#xd;
 </node>
 <node TEXT="&quot;Pie de página&quot;" FOLDED="true" ID="ID_468810460" VGAP_QUANTITY="2 px">
 <node TEXT="botón cerrar" ID="ID_1419249528">
-<node TEXT="- The &quot;Close tutorial&quot; button is not clear. It means &quot;Stop tutorial&quot; (that is currently running) but it could also mean &quot;Close open tutorial map&quot;." FOLDED="true" ID="ID_813684182"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="- The &quot;Close tutorial&quot; button is not clear. It means &quot;Stop tutorial&quot; (that is currently running) but it could also mean &quot;Close open tutorial map&quot;." FOLDED="true" ID="ID_813684182"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -20863,7 +20733,7 @@ def setNoteMarkdown(n){&#xd;
 <node TEXT="traspasar idDictionary a variable de mapa" ID="ID_1420352635">
 <node TEXT="para que queden guardados los valores entre ejecuciones de tutoriales distintos" ID="ID_343446391"/>
 <node TEXT="para que diferentes mapas puedan tener diferentes idDictionary" ID="ID_216990480"/>
-<node TEXT="guardar y leer diccionario en map.storage" ID="ID_856146172"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="guardar y leer diccionario en map.storage" ID="ID_856146172"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20994,7 +20864,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21006,7 +20876,7 @@ def setNoteMarkdown(n){&#xd;
   </body>
 </html></richcontent>
 </node>
-<node TEXT="prueba ToM.setIdDictionary" ID="ID_477721345"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba ToM.setIdDictionary" ID="ID_477721345"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -21083,7 +20953,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21095,7 +20965,7 @@ def setNoteMarkdown(n){&#xd;
   </body>
 </html></richcontent>
 </node>
-<node TEXT="prueba ToM.getIdDictionary" ID="ID_1818737535"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba ToM.getIdDictionary" ID="ID_1818737535"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -21133,7 +21003,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21145,7 +21015,7 @@ def setNoteMarkdown(n){&#xd;
   </body>
 </html></richcontent>
 </node>
-<node TEXT="prueba set vs get idDictionary" ID="ID_256489606"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba set vs get idDictionary" ID="ID_256489606"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -21231,7 +21101,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21323,7 +21193,7 @@ def setNoteMarkdown(n){&#xd;
 <node TEXT="para abrir página de tutorial desde link" ID="ID_27650203">
 <node TEXT="reconocer mapa y link (2)" ID="ID_207709974">
 <edge COLOR="#00ff00"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -21505,7 +21375,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21519,7 +21389,7 @@ def setNoteMarkdown(n){&#xd;
 </node>
 <node TEXT="abrir newPage desde link en mapa" FOLDED="true" ID="ID_1675241597">
 <edge COLOR="#007c00"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -21563,7 +21433,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21584,7 +21454,7 @@ def setNoteMarkdown(n){&#xd;
 <node TEXT="botón en título de página" ID="ID_450140151">
 <node TEXT="crear nodo con link a newPage" ID="ID_1981335609">
 <edge COLOR="#007c7c"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -21637,7 +21507,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21657,7 +21527,7 @@ def setNoteMarkdown(n){&#xd;
 </node>
 <node TEXT="prueba con listas y diccionarios" ID="ID_61004091">
 <edge COLOR="#7c7c00"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -21701,7 +21571,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21751,7 +21621,7 @@ def setNoteMarkdown(n){&#xd;
 </node>
 </node>
 </node>
-<node TEXT="discarded" ID="ID_1187736932"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="discarded" ID="ID_1187736932"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21762,7 +21632,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<node TEXT="- Is the map that is used to create the tutorial the same map that is used to deliver the tutorial?" FOLDED="true" ID="ID_21336888"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="- Is the map that is used to create the tutorial the same map that is used to deliver the tutorial?" FOLDED="true" ID="ID_21336888"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21775,7 +21645,7 @@ def setNoteMarkdown(n){&#xd;
 </html></richcontent>
 <node TEXT="No, it isn&apos;t. When delivering the tutorial that map won&apos;t be shown, so the learning user can practice in its own maps. In fact, in the actual demo after starting the tutorial you can change the active map and it should have no problem. The tutorial sample map should not be closed, but you can work on another map while reading the tutorial. I tried it myself but one of the nodes produces an error, but that&apos;s a bug. The idea is that the tutorial map can be hidden to the user so he can practice on his own maps while navigating the tutorial." ID="ID_1866284822"/>
 </node>
-<node TEXT="The main audience for the addon is people who want to make tutorials, correct?" FOLDED="true" ID="ID_994952908"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="The main audience for the addon is people who want to make tutorials, correct?" FOLDED="true" ID="ID_994952908"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21788,7 +21658,7 @@ def setNoteMarkdown(n){&#xd;
 </html></richcontent>
 <node TEXT="Yes, but it is needed to deliver the tutorials also. My main purpose is that the addon works flawless for the users learning the tutorial. The users that make tutorials can contact me if having problems, so they are second in the priority list." ID="ID_250945555"/>
 </node>
-<node TEXT="If so, I am wondering whether there is a way to create a simplified version of the map that hides the icons and other complex types of information used to make the tutorial so that it is easier to just use the tutorial. Is it clear what I&apos;m saying? e.g. I (Jonathan) might want to create a tutorial about how to change hotkeys, but the info I need to construct that tutorial is much more complicated than the info the end-user taking that tutorial will need." FOLDED="true" ID="ID_241951816"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="If so, I am wondering whether there is a way to create a simplified version of the map that hides the icons and other complex types of information used to make the tutorial so that it is easier to just use the tutorial. Is it clear what I&apos;m saying? e.g. I (Jonathan) might want to create a tutorial about how to change hotkeys, but the info I need to construct that tutorial is much more complicated than the info the end-user taking that tutorial will need." FOLDED="true" ID="ID_241951816"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21801,7 +21671,7 @@ def setNoteMarkdown(n){&#xd;
 </html></richcontent>
 <node TEXT="Understood. As said before, the user that learns from the tutorial won&apos;t see this map." ID="ID_655667523"/>
 </node>
-<node TEXT="- It was not clear to me where I was in the tutorial as it was running. I&apos;m not sure if that&apos;s due to my settings for &quot;Selected&quot; style but the map should check for that" FOLDED="true" ID="ID_1840619097"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="- It was not clear to me where I was in the tutorial as it was running. I&apos;m not sure if that&apos;s due to my settings for &quot;Selected&quot; style but the map should check for that" FOLDED="true" ID="ID_1840619097"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21814,7 +21684,7 @@ def setNoteMarkdown(n){&#xd;
 </html></richcontent>
 <node TEXT="It doesn&apos;t depend on which node you have selected or not." ID="ID_13457980"/>
 </node>
-<node TEXT="- The tutorial map looks very different from a typical Freeplane map, and acts a bit differently, which could confuse new users." FOLDED="true" ID="ID_326619304"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="- The tutorial map looks very different from a typical Freeplane map, and acts a bit differently, which could confuse new users." FOLDED="true" ID="ID_326619304"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21827,7 +21697,7 @@ def setNoteMarkdown(n){&#xd;
 </html></richcontent>
 <node TEXT="They won&apos;t see it" ID="ID_1813694047"/>
 </node>
-<node TEXT="- Will the tutorial addon allow users to open and close map files, switch focus, create or move map windows, or at least appear to do these things as part of a tutorial? If not, it is limited to creating tutorials for actions involving the currently open map." FOLDED="true" ID="ID_436209854"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="- Will the tutorial addon allow users to open and close map files, switch focus, create or move map windows, or at least appear to do these things as part of a tutorial? If not, it is limited to creating tutorials for actions involving the currently open map." FOLDED="true" ID="ID_436209854"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21841,7 +21711,7 @@ def setNoteMarkdown(n){&#xd;
 <node TEXT="That&apos;s the idea" ID="ID_1138533661"/>
 </node>
 </node>
-<node TEXT="Temp Script" ID="ID_653603985"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="Temp Script" ID="ID_653603985"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -21867,7 +21737,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21881,7 +21751,7 @@ def setNoteMarkdown(n){&#xd;
 </node>
 </node>
 <node TEXT="**ToM xFuture D**" STYLE_REF="milestone" ID="ID_103231955">
-<node TEXT="Lastly, the only way to get proper feedback on this addon is to ask some people to actually use it to create tutorials for things. You might use it to try to create a tutorial for something that is *not* directly related to this addon, like a tutorial on how to change node width and save that change to the standard template. Only then will you get a sense of what this type of tool must be able to do." STYLE_REF="maybeTask" ID="ID_838391552"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Lastly, the only way to get proper feedback on this addon is to ask some people to actually use it to create tutorials for things. You might use it to try to create a tutorial for something that is *not* directly related to this addon, like a tutorial on how to change node width and save that change to the standard template. Only then will you get a sense of what this type of tool must be able to do." STYLE_REF="maybeTask" ID="ID_838391552"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21896,7 +21766,7 @@ def setNoteMarkdown(n){&#xd;
 </node>
 </node>
 <node TEXT="**ToM xFuture B**" STYLE_REF="milestone" ID="ID_614447178">
-<node TEXT="new MDH feature:&#xa;Command to &apos;update&apos; the note of a node that has a link to a MDH node and it copy/pastes its contain (from another map)" STYLE_REF="pendingTask" ID="ID_102311683"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="new MDH feature:&#xa;Command to &apos;update&apos; the note of a node that has a link to a MDH node and it copy/pastes its contain (from another map)" STYLE_REF="pendingTask" ID="ID_102311683"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21911,15 +21781,14 @@ def setNoteMarkdown(n){&#xd;
 </node>
 </node>
 <node TEXT="off" ID="ID_1385038879">
-<node TEXT="tasksBucket" STYLE_REF="tasksBucket" ID="ID_725633789"><richcontent CONTENT-TYPE="plain/" TYPE="DETAILS">
-    <text>= (node[&apos;tasksStyles&apos;]?:&apos;pendingTask,nextTask&apos;).split(&apos;,&apos;).collect{st -&gt; &quot;${node.find{n-&gt; st in n.style.allActiveStyles}.size()}  ${st}(s)&quot;}.join(&apos;\n&apos;)</text>
-</richcontent>
+<node TEXT="tasksBucket" STYLE_REF="tasksBucket" ID="ID_725633789"><richcontent TYPE="DETAILS">
+<text>= (node[&apos;tasksStyles&apos;]?:&apos;pendingTask,nextTask&apos;).split(&apos;,&apos;).collect{st -&gt; &quot;${node.find{n-&gt; st in n.style.allActiveStyles}.size()}  ${st}(s)&quot;}.join(&apos;\n&apos;)</text></richcontent>
 <attribute NAME="tasksStyles" VALUE="GroovyNode"/>
 <attribute NAME="WIP filter" VALUE="false"/>
 </node>
 </node>
 </node>
-<node TEXT="tasksBucket" STYLE_REF="tasksBucket" FOLDED="true" POSITION="right" ID="ID_1843115925"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="tasksBucket" STYLE_REF="tasksBucket" FOLDED="true" POSITION="bottom_or_right" ID="ID_1843115925"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -22155,11 +22024,11 @@ def setNoteMarkdown(n){&#xd;
 </node>
 </node>
 </node>
-<node TEXT="off" POSITION="right" ID="ID_33387891">
+<node TEXT="off" POSITION="bottom_or_right" ID="ID_33387891">
 <node ID="ID_983871078" TREE_ID="ID_1757016865"/>
 <node ID="ID_1190106509" TREE_ID="ID_1288720582"/>
 </node>
-<node TEXT="custom Menus" POSITION="left" ID="ID_303397654">
+<node TEXT="custom Menus" POSITION="top_or_left" ID="ID_303397654">
 <icon BUILTIN="emoji-1F4E6"/>
 <node TEXT="Packs Edo Básico" ID="ID_1019132272" LINK="menuitem:_addons.menuOMatic.launchDialogsFromBranch_on_single_node">
 <node TEXT="Menu-o-Matic" ID="ID_1360069954" LINK="menuitem:_addons.menuOMatic.launchCustomDialog_on_single_node">
@@ -22172,7 +22041,7 @@ def setNoteMarkdown(n){&#xd;
 <attribute NAME="tbShowLabels" VALUE="false"/>
 <attribute NAME="tbFocusToMap" VALUE="true"/>
 <attribute NAME="tbTitle" VALUE="Menu-o-Matic"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -22200,7 +22069,7 @@ def setNoteMarkdown(n){&#xd;
 <attribute NAME="tbShowLabels" VALUE="false"/>
 <attribute NAME="tbFocusToMap" VALUE="true"/>
 <attribute NAME="tbTitle" VALUE="Map-Drive-Inator"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -22242,7 +22111,7 @@ def setNoteMarkdown(n){&#xd;
 <attribute NAME="_script12" VALUE="import edofro.tutorialomatic.ToM    as tom&#xa;import edofro.pseudofreeplaneapi.UserStyles as us&#xa;&#xa;//region: opens tutorial map&#xa;&#xa;    def sep         = File.separator&#xa;    def userDir     = c.userDirectory.path&#xa;    def mapFileName = &quot;I - Tasks styles.mm&quot;&#xa;    def pathName    = userDir + sep + &quot;templates&quot; + sep + &quot;Functional Styles Base&quot; + sep + mapFileName&#xa;    def sourceMap   = tom.getMapFromPath(pathName, false) //usar mapa indicado (pero oculto)&#xa;&#xa;// return tutMap.class&#xa;    def targetMap = node.map&#xa;    us.copyUserStyles(sourceMap, targetMap)&#xa;&#xa;//Other use case examples on how to use edofro.pseudofreeplaneapi.UserStyles.copyUserStyles&#xa;/*&#xa;    def myString = &apos;ToM_goto&apos;&#xa;    def myList = &apos;ToM_nextPage,ToM_goto,ToM_showNode&apos;.split(&apos;,&apos;)&#xa;    def myClosure =  {it.text.contains(&apos;u&apos;)}&#xa;&#xa;&#xa;    us.copyUserStyles(sourceMap, targetMap, myString)&#xa;    us.copyUserStyles(sourceMap, targetMap, myList)&#xa;    us.copyUserStyles(sourceMap, targetMap, myClosure)&#xa;*/"/>
 <attribute NAME="_script13" VALUE="import org.freeplane.core.util.MenuUtils as menuUtils&#xa;&#xa;menuUtils.executeMenuItems([&apos;NewParentNode&apos;])&#xa;&#xa;def nodo =  c.selected&#xa;//nodo.text = &apos;v0.&apos;&#xa;nodo.style.name = &apos;milestone&apos;"/>
 <attribute NAME="_script14" VALUE="splitter = /(?&lt;=[a-z])(?=[A-Z])|(?=[A-Z][a-z]|\b|_)|(?&lt;=[a-z])(?=\d)/&#xa;&#xa;descartables = &apos;el,la,o,de,para,con,un,una,a,proyecto,subproyecto,es,que,se&apos;.split(&apos;,&apos;)&#xa;charsReemplazar =&apos; ,\&apos;,_,\&quot;,.&apos;.split(&apos;,&apos;)&#xa;largoMax = 20&#xa;attr = &apos;projectCode&apos;&#xa;&#xa;&#xa;def nodos = c.selecteds&#xa;def nodoSel = c.selected&#xa;&#xa;nodos.each{nodo -&gt;&#xa;    def texto = nodo.text.takeWhile{it != &apos;\n&apos;}&#xa;    def valorPropuesto = nodo[attr]?:unir(clean(mySplit(texto)))&#xa;    def valor = ui.showInputDialog(nodoSel.delegate, &quot;Input projectCode for the selected node\n$texto&quot;, valorPropuesto.toString())&#xa;    if(valor != null){&#xa;        nodo[attr] = valor?:null&#xa;    }&#xa;}&#xa;&#xa;return &apos;listo!&apos;&#xa;&#xa;&#xa;//-------------methods---------------------&#xa;&#xa;def mySplit(t){&#xa;    charsReemplazar.each{ c -&gt;&#xa;        t =  t.replace(c,&apos; &apos;)&#xa;    }&#xa;    t.split(splitter)*.trim().findAll{it}//*.capitalize()&#xa;}&#xa;&#xa;def clean(words){&#xa;    words.findAll{w -&gt; !(w.toLowerCase() in descartables)}&#xa;}&#xa;&#xa;def unir(words){&#xa;    def cantChars = words.sum{it.size()}&#xa;    def maxChars  = words.max{it.size()}.size()&#xa;    def cantWords = words.size()&#xa;    def promCharsPalabra = cantChars/cantWords&#xa;    def promMaxCharsPalabra = largoMax/ cantWords&#xa;    def palabrasBajoMax = words.findAll{it.size() &lt;= promMaxCharsPalabra }&#xa;    def cantPalabrasBajoMax = palabrasBajoMax.size()&#xa;    //println (&quot;$cantChars     $maxChars    $cantWords  $promCharsPalabra   $promMaxCharsPalabra   $palabrasBajoMax  $cantPalabrasBajoMax    &quot;)&#xa;    def largoDisponibleARepartir = largoMax - palabrasBajoMax.sum(0){it.toString().size()}&#xa;    //println (&quot;$cantChars     $maxChars    $cantWords  $promCharsPalabra   $promMaxCharsPalabra   $palabrasBajoMax  $cantPalabrasBajoMax  $largoDisponibleARepartir  &quot;)&#xa;    def maxCharsPalabras = (cantWords-cantPalabrasBajoMax)&gt;0 ? (int) (largoDisponibleARepartir / (cantWords-cantPalabrasBajoMax)) : promMaxCharsPalabra&#xa;    //println (&quot;$cantChars     $maxChars    $cantWords  $promCharsPalabra   $promMaxCharsPalabra   $palabrasBajoMax  $cantPalabrasBajoMax  $largoDisponibleARepartir  $maxCharsPalabras&quot;)&#xa;&#xa;    maxCharsPalabras = maxCharsPalabras&gt;=4? maxCharsPalabras : 4&#xa;    maxCharsPalabras = maxCharsPalabras&lt;=9? maxCharsPalabras : 9&#xa;&#xa;    return words*.take((int) maxCharsPalabras).join(&apos;.&apos;)&#xa;}&#xa;&#xa;// ----------------------tests -------------------&#xa;&#xa;&#xa;def test(){&#xa;    println splitter&#xa;    def t&#xa;&#xa;    texto = &apos;02 Proyecto Infraestructura&apos;&#xa;    println texto + &apos;  --&gt;  &apos; + (t = mySplit(texto)) + &apos;  --&gt;  &apos; + (t = clean(t))  + &apos;  --&gt;  &apos; + unir(t)&#xa;&#xa;    texto = &apos;02ProyectoInfraestructura&apos;&#xa;    println texto + &apos;  --&gt;  &apos; + (t = mySplit(texto)) + &apos;  --&gt;  &apos; + (t = clean(t))  + &apos;  --&gt;  &apos; + unir(t)&#xa;&#xa;    texto = &apos;02_Proyecto_Infraestructura&apos;&#xa;    println texto + &apos;  --&gt;  &apos; + (t = mySplit(texto)) + &apos;  --&gt;  &apos; + (t = clean(t))  + &apos;  --&gt;  &apos; + unir(t)&#xa;&#xa;    texto = &apos;02 proyecto infraestructura&apos;&#xa;    println texto + &apos;  --&gt;  &apos; + (t = mySplit(texto)) + &apos;  --&gt;  &apos; + (t = clean(t))  + &apos;  --&gt;  &apos; + unir(t)&#xa;&#xa;    texto = &apos;02_proyecto_infraestructura&apos;&#xa;    println texto + &apos;  --&gt;  &apos; + (t = mySplit(texto)) + &apos;  --&gt;  &apos; + (t = clean(t))  + &apos;  --&gt;  &apos; + unir(t)&#xa;}"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -22271,7 +22140,7 @@ def setNoteMarkdown(n){&#xd;
 <attribute NAME="tbShowLabels" VALUE="false"/>
 <attribute NAME="tbFocusToMap" VALUE="true"/>
 <attribute NAME="tbTitle" VALUE="navigate"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -22292,7 +22161,7 @@ def setNoteMarkdown(n){&#xd;
 </node>
 </node>
 </node>
-<node TEXT="nueva tas" POSITION="left" ID="ID_1136540602"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="nueva tas" POSITION="top_or_left" ID="ID_1136540602"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -22312,9 +22181,9 @@ def setNoteMarkdown(n){&#xd;
 <node TEXT="tasksBucket" ID="ID_82456838"/>
 <node TEXT="tasksBucket" ID="ID_869839483"/>
 </node>
-<node TEXT="Scripts" POSITION="left" ID="ID_1640984956">
+<node TEXT="Scripts" POSITION="top_or_left" ID="ID_1640984956">
 <node TEXT="Tasks" ID="ID_1098566525">
-<node TEXT="milestones to Bold" ID="ID_1142355320"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="milestones to Bold" ID="ID_1142355320"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -22340,7 +22209,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -22352,7 +22221,7 @@ def setNoteMarkdown(n){&#xd;
   </body>
 </html></richcontent>
 </node>
-<node TEXT="discarded and completed tasks --&gt; no style + tag in details" ID="ID_1467571286"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="discarded and completed tasks --&gt; no style + tag in details" ID="ID_1467571286"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -22390,7 +22259,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -22404,7 +22273,7 @@ def setNoteMarkdown(n){&#xd;
 </node>
 </node>
 <node TEXT="help scripts for Tutorial maps" ID="ID_607149913">
-<node TEXT="formatting web image links" ID="ID_817361496"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="formatting web image links" ID="ID_817361496"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -22430,7 +22299,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -22442,7 +22311,7 @@ def setNoteMarkdown(n){&#xd;
   </body>
 </html></richcontent>
 </node>
-<node TEXT="renaming the MDH nodes" ID="ID_1698589334"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="renaming the MDH nodes" ID="ID_1698589334"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -22489,7 +22358,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -22501,7 +22370,7 @@ def setNoteMarkdown(n){&#xd;
   </body>
 </html></richcontent>
 </node>
-<node TEXT="node text to note" ID="ID_1350027913"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="node text to note" ID="ID_1350027913"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -22539,7 +22408,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -22551,7 +22420,7 @@ def setNoteMarkdown(n){&#xd;
   </body>
 </html></richcontent>
 </node>
-<node TEXT="node text to **bold**" ID="ID_132944747"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="node text to **bold**" ID="ID_132944747"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -22571,7 +22440,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -22586,7 +22455,7 @@ def setNoteMarkdown(n){&#xd;
 <node ID="ID_755125555" TREE_ID="ID_492920449"/>
 </node>
 <node TEXT="tests" ID="ID_353030575">
-<node TEXT="using ArrayList.disjoint()" ID="ID_384686327"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="using ArrayList.disjoint()" ID="ID_384686327"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -22621,7 +22490,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -22633,7 +22502,7 @@ def setNoteMarkdown(n){&#xd;
   </body>
 </html></richcontent>
 </node>
-<node TEXT="test with clones and how much inside a folded branch they are&#xa;(distancia Folded, foldDistance)" ID="ID_854946699"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="test with clones and how much inside a folded branch they are&#xa;(distancia Folded, foldDistance)" ID="ID_854946699"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -22734,7 +22603,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -22746,7 +22615,7 @@ def setNoteMarkdown(n){&#xd;
   </body>
 </html></richcontent>
 </node>
-<node TEXT="Comparing if two branches in the same map are similar" ID="ID_1462848514"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="Comparing if two branches in the same map are similar" ID="ID_1462848514"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -22931,7 +22800,7 @@ def setNoteMarkdown(n){&#xd;
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
